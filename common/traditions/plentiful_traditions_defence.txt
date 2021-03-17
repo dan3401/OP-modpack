@@ -2,9 +2,6 @@
 
 tr_plentiful_defence_adopt = {
 #	cost = { unity = @cost }
-	possible = {
-		has_tradition = tr_est_militarism_5
-	}
 	modifier = {
 		starbase_defense_platform_capacity_add = 3
 	}
@@ -42,9 +39,6 @@ tr_plentiful_defence_finish = {
 
 tr_plentiful_defence_1 = {
 #	cost = { unity = @cost }
-	possible = {
-		has_tradition = tr_plentiful_defence_3
-	}
 	modifier = {
 		shipsize_corvette_hull_add = 100
 		shipsize_destroyer_hull_add = 200
@@ -60,9 +54,6 @@ tr_plentiful_defence_1 = {
 
 tr_plentiful_defence_2 = {
 #	cost = { unity = @cost }
-	possible = {
-		has_tradition = tr_plentiful_defence_4
-	}
 	modifier = {
 		army_defense_morale_mult = 0.2
 	}
@@ -74,6 +65,9 @@ tr_plentiful_defence_2 = {
 
 tr_plentiful_defence_3 = {
 #	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_plentiful_defence_1
+	}
 	
 	modifier = {
 		category_materials_research_speed_mult = 0.20
@@ -86,6 +80,9 @@ tr_plentiful_defence_3 = {
 
 tr_plentiful_defence_4 = {
 #	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_plentiful_defence_2
+	}
 	modifier = {
 		army_defense_health_mult = 0.2
 		army_defense_damage_mult = 0.2
@@ -99,7 +96,8 @@ tr_plentiful_defence_4 = {
 tr_plentiful_defence_5 = {
 #	cost = { unity = @cost }
 	possible = {
-		has_tradition = tr_plentiful_defence_2
+		has_tradition = tr_plentiful_defence_3
+		has_tradition = tr_plentiful_defence_4
 	}
 	modifier = {
 		#megastructure_build_speed_mult = 0.25

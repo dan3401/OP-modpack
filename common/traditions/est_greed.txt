@@ -1,7 +1,4 @@
 tr_est_greed_adopt = {
-	possible = {
-		has_tradition = tr_prosperity_public_works
-	}
 	modifier = {
 		country_minerals_produces_mult = 0.10
 	}
@@ -200,7 +197,8 @@ tr_est_greed_3 = {
 
 tr_est_greed_4 = {
 	possible = {
-		has_tradition = tr_est_greed_2
+		has_tradition = tr_est_greed_1
+		has_tradition = tr_est_greed_3
 	}
 	
 	tradition_swap = {
@@ -227,7 +225,7 @@ tr_est_greed_4 = {
 
 tr_est_greed_5 = {
 	possible = {
-		has_tradition = tr_est_greed_3
+		has_tradition = tr_est_greed_4
 	}
 		
 	tradition_swap = {

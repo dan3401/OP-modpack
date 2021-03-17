@@ -1,7 +1,4 @@
 tr_est_archivist_adopt = {
-	possible = {
-		has_tradition = tr_discovery_databank_uplinks
-	}
 
 	modifier = {
 		ship_anomaly_generation_chance_mult = 0.20
@@ -72,9 +69,6 @@ tr_est_archivist_1 = {
 }
 
 tr_est_archivist_2 = {
-	possible = {
-		has_tradition = tr_est_archivist_1
-	}
 	on_enabled = {
 		every_owned_leader = {
 			limit = {
@@ -736,6 +730,10 @@ tr_est_archivist_3 = {
 }
 
 tr_est_archivist_4 = {
+	possible = {
+		has_tradition = tr_est_archivist_1
+		has_tradition = tr_est_archivist_2
+	}
 
 	ai_weight = {
 		factor = 4000
@@ -744,6 +742,7 @@ tr_est_archivist_4 = {
 
 tr_est_archivist_5 = {
 	possible = {
+		has_tradition = tr_est_archivist_3
 		has_tradition = tr_est_archivist_4
 	}
 	

@@ -179,6 +179,7 @@ tr_est_natural_2 = {
 tr_est_natural_3 = {
 	possible = {
 		has_tradition = tr_est_natural_1
+		has_tradition = tr_est_natural_4
 	}
 	
 	modifier = {

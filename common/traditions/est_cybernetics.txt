@@ -1,8 +1,4 @@
 tr_est_cybernetics_adopt = {
-	possible = {
-		has_tradition = tr_plentiful_industry_1
-	}
-	
 	modifier = {
 		category_computing_research_speed_mult = 0.25
 	}
@@ -193,9 +189,6 @@ tr_est_cybernetics_finish = {
 }
 
 tr_est_cybernetics_1 = {
-	possible = {
-		has_tradition = tr_est_cybernetics_5
-	}
 	modifier = {
 		planet_jobs_energy_produces_mult = 0.10
 	}
@@ -378,9 +371,6 @@ tr_est_cybernetics_2 = {
 }
 
 tr_est_cybernetics_3 = {
-	possible = {
-		has_tradition = tr_est_cybernetics_5
-	}
 	modifier = {
 		ship_accuracy_add = 0.10
 	}
@@ -437,6 +427,7 @@ tr_est_cybernetics_3 = {
 
 tr_est_cybernetics_4 = {
 	possible = {
+		has_tradition = tr_est_cybernetics_2
 		has_tradition = tr_est_cybernetics_3
 	}
 	
@@ -539,6 +530,9 @@ tr_est_cybernetics_4 = {
 }
 
 tr_est_cybernetics_5 = {
+	possible = {
+		has_tradition = tr_est_cybernetics_4
+	}
 	
 	modifier = {
 		pop_happiness = 0.05

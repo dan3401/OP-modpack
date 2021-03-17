@@ -1,7 +1,4 @@
 tr_est_piracy_adopt = {
-	possible = {
-		has_tradition = tr_supremacy_war_games
-	}
 	modifier = {
 		piracy_growth_mult = -0.25
 	}
@@ -219,9 +216,6 @@ tr_est_piracy_3 = {
 }
 
 tr_est_piracy_4 = {
-	possible = {
-		has_tradition = tr_est_piracy_2
-	}
 	modifier = {
 		ship_fire_rate_mult = 0.05
 		ship_weapon_damage = 0.05
@@ -233,9 +227,6 @@ tr_est_piracy_4 = {
 }
 
 tr_est_piracy_5 = {
-	possible = {
-		has_tradition = tr_est_piracy_4
-	}
 	modifier = {
 		pop_cat_ruler_happiness = 0.15
 		pop_cat_worker_political_power = -0.25

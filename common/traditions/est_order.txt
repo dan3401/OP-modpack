@@ -1,7 +1,4 @@
 tr_est_order_adopt = {
-	possible = {
-		has_tradition = tr_harmony_mind_and_body
-	}
 	modifier = {
 		pop_resettlement_cost_mult = -0.20
 	}
@@ -303,9 +300,6 @@ tr_est_order_2 = {
 }
 
 tr_est_order_3 = {
-	possible = {
-		has_tradition = tr_est_order_1
-	}
 	modifier = {
 		planet_jobs_worker_food_produces_mult = 0.15
 		planet_jobs_worker_minerals_produces_mult = 0.15
@@ -468,9 +462,6 @@ tr_est_order_4 = {
 }
 
 tr_est_order_5 = {
-	possible = {
-		has_tradition = tr_est_order_2
-	}
 	modifier = {
 		job_enforcer_per_pop = 0.02857
 	}

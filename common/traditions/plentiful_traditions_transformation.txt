@@ -2,9 +2,6 @@
 
 tr_plentiful_transformation_adopt = {
 #	cost = { unity = @cost }
-	possible = {
-		has_tradition = tr_est_natural_3
-	}	
 	modifier = {
 		modify_species_cost_mult = -0.05
 	}
@@ -71,6 +68,9 @@ tr_plentiful_transformation_1 = {
 
 tr_plentiful_transformation_2 = {
 #	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_plentiful_transformation_1
+	}
 	modifier = {
 # Edict für Wechsel von Zeuch
 	}
@@ -88,9 +88,6 @@ tr_plentiful_transformation_2 = {
 
 tr_plentiful_transformation_3 = {
 #	cost = { unity = @cost }
-	possible = {
-		has_tradition = tr_plentiful_transformation_2
-	}
 	
 	modifier = {
 #Zufriedenheit bei Terraforming
@@ -110,7 +107,7 @@ tr_plentiful_transformation_3 = {
 tr_plentiful_transformation_4 = {
 #	cost = { unity = @cost }
 	possible = {
-		has_tradition = tr_plentiful_transformation_2
+		has_tradition = tr_plentiful_transformation_3
 	}
 	modifier = {
 		BIOLOGICAL_species_trait_points_add = 1
@@ -133,7 +130,7 @@ tr_plentiful_transformation_4 = {
 tr_plentiful_transformation_5 = {
 #	cost = { unity = @cost }
 	possible = {
-		has_tradition = tr_plentiful_transformation_2
+		has_tradition = tr_plentiful_transformation_1
 	}
 	modifier = {
 # Zerstörte Welt herstellen ==> Projekt oder Terraforming?

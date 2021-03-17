@@ -1,7 +1,4 @@
 tr_est_commerce_adopt = {
-	possible = {
-		has_tradition = tr_prosperity_administrative_operations
-	}
 	modifier = {
 		job_clerk_add = 3
 	}
@@ -108,9 +105,6 @@ tr_est_commerce_1 = {
 }
 
 tr_est_commerce_2 = {
-	possible = {
-		has_tradition = tr_est_commerce_1
-	}
 	modifier = {
 		trade_value_mult = 0.20
 	}
@@ -136,6 +130,10 @@ tr_est_commerce_2 = {
 }
 
 tr_est_commerce_3 = {
+	possible = {
+		has_tradition = tr_est_commerce_1
+		has_tradition = tr_est_commerce_2
+	}
 	
 	modifier = {
 		trade_value_mult = 0.25
@@ -159,7 +157,7 @@ tr_est_commerce_3 = {
 
 tr_est_commerce_4 = {
 	possible = {
-		has_tradition = tr_est_commerce_5
+		has_tradition = tr_est_commerce_1
 	}
 
 	modifier = {
@@ -187,7 +185,7 @@ tr_est_commerce_4 = {
 
 tr_est_commerce_5 = {
 	possible = {
-		has_tradition = tr_est_commerce_3
+		has_tradition = tr_est_commerce_4
 	}
 
 	modifier = {

@@ -1,8 +1,4 @@
 tr_est_mechanicum_adopt = {
-	possible = {
-		has_tradition = tr_est_spaceborn_2
-	}
-	
 	modifier = {
 		ship_hull_mult = 0.10
 		ship_armor_mult = 0.10
@@ -133,6 +129,9 @@ tr_est_mechanicum_1 = {
 }
 
 tr_est_mechanicum_2 = {
+	possible = {
+		has_tradition = tr_est_mechanicum_1
+	}
 	
 	modifier = {
 		country_engineering_tech_research_speed = 0.15
@@ -197,11 +196,6 @@ tr_est_mechanicum_2 = {
 }
 
 tr_est_mechanicum_3 = {
-	possible = {
-		has_tradition = tr_est_mechanicum_4
-		has_tradition = tr_est_mechanicum_5
-	}
-	
 	on_enabled = {
 		give_technology = {
 			tech = tech_est_mechanical_knights
@@ -220,7 +214,7 @@ tr_est_mechanicum_3 = {
 
 tr_est_mechanicum_4 = {
 	possible = {
-		has_tradition = tr_est_mechanicum_1
+		has_tradition = tr_est_mechanicum_3
 	}
 	
 	modifier = {
@@ -300,6 +294,7 @@ tr_est_mechanicum_4 = {
 tr_est_mechanicum_5 = {
 	possible = {
 		has_tradition = tr_est_mechanicum_2
+		has_tradition = tr_est_mechanicum_3
 	}
 
 	tradition_swap = {

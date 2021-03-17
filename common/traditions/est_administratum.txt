@@ -1,7 +1,4 @@
 tr_est_administratum_adopt = {
-	possible = {
-		has_tradition = tr_expansion_galactic_ambition
-	}
 	modifier = {
 		country_admin_cap_mult = 0.15
 	}
@@ -72,9 +69,6 @@ tr_est_administratum_finish = {
 }
 
 tr_est_administratum_1 = {
-	possible = {
-		has_tradition = tr_est_administratum_4
-	}
 	modifier = {
 		leaders_cost_mult = -0.25
 	}
@@ -156,9 +150,6 @@ tr_est_administratum_2 = {
 }
 
 tr_est_administratum_3 = {
-	possible = {
-		has_tradition = tr_est_administratum_4
-	}
 	modifier = {
 		starbase_shipyard_build_speed_mult = 0.10
 		planet_building_build_speed_mult = 0.25
@@ -212,8 +203,9 @@ tr_est_administratum_4 = {
 
 tr_est_administratum_5 = {
 	possible = {
-		has_tradition = tr_est_administratum_2
+		has_tradition = tr_est_administratum_1
 		has_tradition = tr_est_administratum_3
+		has_tradition = tr_est_administratum_4
 	}
 	
 	modifier = {

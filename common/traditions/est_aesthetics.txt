@@ -1,7 +1,4 @@
 tr_est_aesthetics_adopt = {
-	possible = {
-		has_tradition = tr_harmony_the_greater_good
-	}
 	on_enabled = {
 		every_owned_planet = {
 			limit = {
@@ -203,6 +200,9 @@ tr_est_aesthetics_1 = {
 }
 
 tr_est_aesthetics_2 = {
+	possible = {
+		has_tradition = tr_est_aesthetics_1
+	}
 
 	modifier = {
 		job_entertainer_per_pop = 0.025
@@ -285,9 +285,6 @@ tr_est_aesthetics_2 = {
 }
 
 tr_est_aesthetics_3 = {
-	possible = {
-		has_tradition = tr_est_aesthetics_2
-	}
 	modifier = {
 		envoy_improve_relations_mult = 0.20
 	}
@@ -378,9 +375,6 @@ tr_est_aesthetics_3 = {
 }
 
 tr_est_aesthetics_4 = {
-	possible = {
-		has_tradition = tr_est_aesthetics_3
-	}
 	modifier ={
 		planet_districts_cities_unity_produces_add = 5
 	}
@@ -406,7 +400,9 @@ tr_est_aesthetics_4 = {
 
 tr_est_aesthetics_5 = {
 	possible = {
+		has_tradition = tr_est_aesthetics_2
 		has_tradition = tr_est_aesthetics_3
+		has_tradition = tr_est_aesthetics_4
 	}
 	
 	tradition_swap = {

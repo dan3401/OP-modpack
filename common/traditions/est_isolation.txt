@@ -1,7 +1,4 @@
 tr_est_isolation_adopt = {
-	possible = {
-		has_tradition = tr_domination_judgment_corps
-	}
 	modifier = {
 		country_admin_cap_mult = 0.15
 	}	
@@ -484,9 +481,6 @@ tr_est_isolation_1 = {
 }
 
 tr_est_isolation_2 = {
-	possible = {
-		has_tradition = tr_est_isolation_1
-	}
 	modifier = {
 		army_defense_morale_mult = 0.5
 		ship_home_territory_fire_rate_mult = 0.2
@@ -529,6 +523,10 @@ tr_est_isolation_2 = {
 }
 
 tr_est_isolation_3 = {	
+	possible = {
+		has_tradition = tr_est_isolation_1
+		has_tradition = tr_est_isolation_2
+	}
 	
 	modifier = {
 		starbase_outpost_alloys_cost_mult = -0.20
@@ -561,7 +559,7 @@ tr_est_isolation_3 = {
 
 tr_est_isolation_4 = {
 	possible = {
-		has_tradition = tr_est_isolation_1
+		has_tradition = tr_est_isolation_3
 	}
 	
 	modifier = {

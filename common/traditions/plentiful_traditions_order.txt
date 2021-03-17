@@ -2,9 +2,6 @@
 
 tr_plentiful_order_adopt = {
 #	cost = { unity = @cost }
-	possible = {
-		has_tradition = tr_supremacy_great_game
-	}
 	modifier = {
 		ship_speed_mult = 0.10
 		ship_emergency_ftl_mult = -0.25
@@ -42,9 +39,6 @@ tr_plentiful_order_finish = {
 
 tr_plentiful_order_1 = {
 #	cost = { unity = @cost }
-	possible = {
-		has_tradition = tr_plentiful_order_2
-	}
 	modifier = {
 #		ship_shield_regen_mult = 0.1
 		ship_shield_mult = 0.15
@@ -85,6 +79,7 @@ tr_plentiful_order_4 = {
 #	cost = { unity = @cost }
 	possible = {
 		has_tradition = tr_plentiful_order_1
+		has_tradition = tr_plentiful_order_2
 	}
 	modifier = {
 		starbase_module_build_speed_mult = 0.15
@@ -100,6 +95,7 @@ tr_plentiful_order_5 = {
 #	cost = { unity = @cost }
 	possible = {
 		has_tradition = tr_plentiful_order_3
+		has_tradition = tr_plentiful_order_2
 	}
 	on_enabled = {
 		give_technology = { message = no tech = tech_plentiful_traditions_orbital_c_h }

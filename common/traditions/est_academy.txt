@@ -1,7 +1,4 @@
 tr_est_academy_adopt = {
-	possible = {
-		has_tradition = tr_discovery_science_division
-	}
 	on_enabled = {
 		country_event = {
 			id = est_academy.1
@@ -1051,9 +1048,6 @@ tr_est_academy_finish = {
 }
 
 tr_est_academy_1 = {
-	possible = {
-		has_tradition = tr_est_academy_3
-	}
 	modifier = {
 		country_leader_pool_size = 3
 	}
@@ -1092,6 +1086,9 @@ tr_est_academy_1 = {
 }
 
 tr_est_academy_2 = {	
+	possible = {
+		has_tradition = tr_est_academy_1
+	}
 	
 	on_enabled = {
 		every_owned_leader = {
@@ -1260,6 +1257,9 @@ tr_est_academy_3 = {
 }
 
 tr_est_academy_4 = {
+	possible = {
+		has_tradition = tr_est_academy_3
+	}
 
 	modifier = {
 		job_researcher_add = 1
@@ -1339,9 +1339,6 @@ tr_est_academy_4 = {
 }
 
 tr_est_academy_5 = {
-	possible = {
-		has_tradition = tr_est_academy_4
-	}
 	modifier = {
 		ship_starting_experience_add = 200
 		army_starting_experience_add = 200

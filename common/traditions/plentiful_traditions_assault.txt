@@ -1,9 +1,6 @@
 #@cost = 56
 
 tr_plentiful_assault_adopt = {
-	possible = {
-		has_tradition = tr_est_militarism_4
-	}
 #	cost = { unity = @cost }
 	modifier = {
 		ship_hull_damage_mult = 0.1
@@ -55,6 +52,7 @@ tr_plentiful_assault_2 = {
 #	cost = { unity = @cost }
 	possible = {
 		has_tradition = tr_plentiful_assault_1
+		has_tradition = tr_plentiful_assault_3
 	}
 	modifier = {
 		army_attack_morale_mult = 0.2
@@ -68,9 +66,6 @@ tr_plentiful_assault_2 = {
 
 tr_plentiful_assault_3 = {
 #	cost = { unity = @cost }
-	possible = {
-		has_tradition = tr_plentiful_assault_4
-	}
 	
 	modifier = {
 		country_leader_pool_size = 1
@@ -84,9 +79,6 @@ tr_plentiful_assault_3 = {
 
 tr_plentiful_assault_4 = {
 #	cost = { unity = @cost }
-	possible = {
-		has_tradition = tr_plentiful_assault_2
-	}
 	modifier = {
 		leader_skill_levels = 1
 		ruler_skill_levels = 1
@@ -100,7 +92,8 @@ tr_plentiful_assault_4 = {
 tr_plentiful_assault_5 = {
 #	cost = { unity = @cost }
 	possible = {
-		has_tradition = tr_plentiful_assault_2
+		has_tradition = tr_plentiful_assault_3
+		has_tradition = tr_plentiful_assault_4
 	}
 	modifier = {
 		ship_weapon_range_mult = 0.2

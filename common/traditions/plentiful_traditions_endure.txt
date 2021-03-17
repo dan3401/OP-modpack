@@ -3,7 +3,7 @@
 tr_plentiful_endure_adopt = {
 #	cost = { unity = @cost }
 	possible = {
-		has_tradition = tr_est_spaceborn_3
+	#	always = no
 	}
 	modifier = {
 		pop_environment_tolerance = 0.05
@@ -67,6 +67,9 @@ tr_plentiful_endure_2 = {
 
 tr_plentiful_endure_3 = {
 #	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_plentiful_endure_2
+	}
 	on_enabled = {
 		add_research_option = tech_dark_matter_power_core
 		give_technology = { message = no tech = tech_plentiful_traditions_orbital_fertilizer_array }
@@ -97,12 +100,9 @@ tr_plentiful_endure_4 = {
 
 tr_plentiful_endure_5 = {
 #	cost = { unity = @cost }
-	possible = {
-		has_tradition = tr_plentiful_endure_2
-		has_tradition = tr_plentiful_endure_4
-	}
 	modifier = {
 		megastructure_build_speed_mult = 0.25
+		country_megastructure_build_cap_add = 1
 	}
 	
 	ai_weight = {

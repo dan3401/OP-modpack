@@ -2,9 +2,6 @@
 
 tr_plentiful_kleptocracy_adopt = {
 #	cost = { unity = @cost }
-	possible = {
-		has_tradition = tr_prosperity_pursuit_of_profit
-	}
 	modifier = {
 		ship_fire_rate_mult = 0.08
 	}
@@ -40,9 +37,6 @@ tr_plentiful_kleptocracy_finish = {
 
 tr_plentiful_kleptocracy_1 = {
 #	cost = { unity = @cost }
-	possible = {
-		has_tradition = tr_plentiful_kleptocracy_4
-	}
 	modifier = {
 		country_claim_influence_cost_mult = -0.1
 		country_naval_cap_add = 20
@@ -55,6 +49,9 @@ tr_plentiful_kleptocracy_1 = {
 
 tr_plentiful_kleptocracy_2 = {
 #	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_plentiful_kleptocracy_1
+	}
 	on_enabled = {
 		give_technology = { message = no tech = tech_plentiful_traditions_orbital_trading_beacon }
 	}
@@ -71,8 +68,7 @@ tr_plentiful_kleptocracy_2 = {
 tr_plentiful_kleptocracy_3 = {
 #	cost = { unity = @cost }
 	possible = {
-		has_tradition = tr_plentiful_kleptocracy_1
-		has_tradition = tr_plentiful_kleptocracy_5
+
 	}
 	modifier = {
 # Overcharge
@@ -85,6 +81,9 @@ tr_plentiful_kleptocracy_3 = {
 
 tr_plentiful_kleptocracy_4 = {
 #	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_plentiful_kleptocracy_3
+	}
 	modifier = {
 		diplomacy_upkeep_mult = -0.15
 		country_trust_growth = 0.15
@@ -99,7 +98,7 @@ tr_plentiful_kleptocracy_4 = {
 tr_plentiful_kleptocracy_5 = {
 #	cost = { unity = @cost }
 	possible = {
-		has_tradition = tr_plentiful_kleptocracy_2
+		has_tradition = tr_plentiful_kleptocracy_1
 	}
 	modifier = {
 		starbase_shipyard_build_speed_mult = 0.15

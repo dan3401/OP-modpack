@@ -46,6 +46,9 @@ tr_plentiful_industry_1 = {
 
 tr_plentiful_industry_2 = {
 #	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_plentiful_industry_1
+	}
 	modifier = {
 		country_admin_cap_mult = 0.15
 	}
@@ -58,7 +61,7 @@ tr_plentiful_industry_2 = {
 tr_plentiful_industry_3 = {
 #	cost = { unity = @cost }
 	possible = {
-		has_tradition = tr_plentiful_industry_1
+		has_tradition = tr_plentiful_industry_2
 	}
 	modifier = {
 		country_resettlement_cost_mult = -0.3
@@ -72,7 +75,7 @@ tr_plentiful_industry_3 = {
 tr_plentiful_industry_4 = {
 #	cost = { unity = @cost }
 	possible = {
-		has_tradition = tr_plentiful_industry_1
+		has_tradition = tr_plentiful_industry_3
 	}
 	modifier = {
 		station_gatherers_minerals_produces_mult = 0.1

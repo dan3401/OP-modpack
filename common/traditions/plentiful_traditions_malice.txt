@@ -1,9 +1,6 @@
 #@cost = 56
 
 tr_plentiful_malice_adopt = {
-	possible = {
-		has_tradition = tr_domination_workplace_motivators
-	}
 #	cost = { unity = @cost }
 	modifier = {
 		country_insult_efficiency = 0.5
@@ -50,9 +47,6 @@ tr_plentiful_malice_1 = {
 }
 
 tr_plentiful_malice_2 = {
-	possible = {
-		has_tradition = tr_plentiful_malice_4
-	}
 #	cost = { unity = @cost }
 	modifier = {
 		max_rivalries = 0.4
@@ -79,6 +73,9 @@ tr_plentiful_malice_3 = {
 
 tr_plentiful_malice_4 = {
 #	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_plentiful_malice_2
+	}
 	modifier = {
 		max_rivalries = 4
 		planet_jobs_slave_minerals_produces_mult = 0.15
@@ -92,6 +89,10 @@ tr_plentiful_malice_4 = {
 
 tr_plentiful_malice_5 = {
 #	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_plentiful_malice_3
+		has_tradition = tr_plentiful_malice_4
+	}
 	modifier = {
 		
 	}

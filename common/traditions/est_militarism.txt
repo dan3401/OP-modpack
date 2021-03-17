@@ -1,7 +1,4 @@
 tr_est_militarism_adopt = {
-	possible = {
-		has_tradition = tr_supremacy_fleet_logistical_corps
-	}
 	on_enabled = {
 		if = {
 			limit = {
@@ -103,9 +100,6 @@ tr_est_militarism_finish = {
 }
 
 tr_est_militarism_1 = {
-	possible = {
-		has_tradition = tr_est_militarism_3
-	}
 	modifier = {
 		armies_cost_mult = -0.29
 		job_soldier_per_pop = 0.04
@@ -153,7 +147,7 @@ tr_est_militarism_1 = {
 
 tr_est_militarism_2 = {
 	possible = {
-		has_tradition = tr_est_militarism_5
+		has_tradition = tr_est_militarism_1
 	}
 	
 	modifier = {
@@ -199,6 +193,7 @@ tr_est_militarism_3 = {
 
 tr_est_militarism_4 = {
 	possible = {
+		has_tradition = tr_est_militarism_2
 		has_tradition = tr_est_militarism_3
 	}
 	

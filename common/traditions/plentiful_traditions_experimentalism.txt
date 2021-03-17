@@ -2,9 +2,6 @@
 
 tr_plentiful_experimentalism_adopt = {
 #	cost = { unity = @cost }
-	possible = {
-		has_tradition = tr_discovery_science_division
-	}
 	
 	modifier = {
 		
@@ -45,9 +42,6 @@ tr_plentiful_experimentalism_finish = {
 
 tr_plentiful_experimentalism_1 = {
 #	cost = { unity = @cost }
-	possible = {
-		has_tradition = tr_plentiful_experimentalism_4
-	}
 	
 	modifier = {
 
@@ -79,7 +73,7 @@ tr_plentiful_experimentalism_3 = {
 #	cost = { unity = @cost }
 	
 	possible = {
-		has_tradition = tr_plentiful_experimentalism_5
+		has_tradition = tr_plentiful_experimentalism_1
 	}
 	modifier = {
 
@@ -110,7 +104,8 @@ tr_plentiful_experimentalism_5 = {
 #	cost = { unity = @cost }
 	
 	possible = {
-		has_tradition = tr_plentiful_experimentalism_2
+		has_tradition = tr_plentiful_experimentalism_3
+		has_tradition = tr_plentiful_experimentalism_4
 	}
 	
 	modifier = {

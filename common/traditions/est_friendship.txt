@@ -1,7 +1,4 @@
 tr_est_friendship_adopt = {
-	possible = {
-		has_tradition = tr_diplomacy_insider_trading
-	}
 	on_enabled = {	
 		every_country = {
 			limit = {
@@ -287,7 +284,7 @@ tr_est_friendship_1 = {
 
 tr_est_friendship_2 = {
 	possible = {
-		has_tradition = tr_est_friendship_3
+		has_tradition = tr_est_friendship_1
 	}
 	
 	modifier = {
@@ -456,7 +453,7 @@ tr_est_friendship_3 = {
 
 tr_est_friendship_4 = {
 	possible = {
-		has_tradition = tr_est_friendship_1
+		has_tradition = tr_est_friendship_3
 	}	
 	
 	modifier = {
@@ -568,7 +565,8 @@ tr_est_friendship_4 = {
 
 tr_est_friendship_5 = {
 	possible = {
-		has_tradition = tr_est_friendship_3
+		has_tradition = tr_est_friendship_2
+		has_tradition = tr_est_friendship_4
 	}
 	
 	modifier = {

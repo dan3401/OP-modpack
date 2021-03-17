@@ -1,8 +1,4 @@
 tr_est_mysticism_adopt = {
-	possible = {
-		has_tradition = tr_est_industry_4
-		has_tradition = tr_est_cybernetics_4
-	}
 	modifier = {
 		planet_sensor_range_add = 1
 		ship_sensor_range_add = 1
@@ -335,9 +331,6 @@ tr_est_mysticism_3 = {
 }
 
 tr_est_mysticism_4 = {
-	possible = {
-		has_tradition = tr_est_mysticism_2
-	}
 	
 	modifier = {
 		ship_disengage_chance_mult = 0.33
@@ -367,6 +360,7 @@ tr_est_mysticism_4 = {
 tr_est_mysticism_5 = {
 	possible = {
 		has_tradition = tr_est_mysticism_3
+		has_tradition = tr_est_mysticism_4
 	}
 	
 	on_enabled = {	

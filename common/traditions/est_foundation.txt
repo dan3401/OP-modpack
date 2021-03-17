@@ -1,7 +1,4 @@
 tr_est_foundation_adopt = {
-	possible = {
-		has_tradition = tr_expansion_a_new_life
-	}
 	modifier = {
 		country_admin_cap_add = 20
 		pop_government_ethic_attraction = 0.15
@@ -444,7 +441,7 @@ tr_est_foundation_4 = {
 
 tr_est_foundation_5 = {
 	possible = {
-		has_tradition = tr_est_foundation_4
+		has_tradition = tr_est_foundation_1
 	}
 
 	modifier = {

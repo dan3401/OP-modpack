@@ -71,7 +71,7 @@ tr_est_spaceborn_1 = {
 
 tr_est_spaceborn_2 = {
 	possible = {
-		has_tradition = tr_est_spaceborn_5
+		has_tradition = tr_est_spaceborn_1
 	}
 	
 	modifier = {
@@ -86,7 +86,7 @@ tr_est_spaceborn_2 = {
 
 tr_est_spaceborn_3 = {
 	possible = {
-		has_tradition = tr_est_spaceborn_1
+		has_tradition = tr_est_spaceborn_2
 	}
 	
 	modifier = {
@@ -101,7 +101,6 @@ tr_est_spaceborn_3 = {
 
 tr_est_spaceborn_4 = {
 	possible = {
-		has_tradition = tr_est_spaceborn_2
 		has_tradition = tr_est_spaceborn_3
 	}
 	
@@ -138,6 +137,9 @@ tr_est_spaceborn_4 = {
 }
 
 tr_est_spaceborn_5 = {
+	possible = {
+		has_tradition = tr_est_spaceborn_3
+	}
 	
 	modifier = {		
 		starbase_buildings_cost_mult = -0.20

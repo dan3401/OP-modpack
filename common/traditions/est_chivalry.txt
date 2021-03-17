@@ -1,7 +1,4 @@
 tr_est_chivalry_adopt = {
-	possible = {
-		has_tradition = tr_domination_grand_council
-	}
 	on_enabled = {
 		every_owned_leader = {
 			limit = {
@@ -231,6 +228,9 @@ tr_est_chivalry_1 = {
 }
 
 tr_est_chivalry_2 = {
+	possible = {
+		has_tradition = tr_est_chivalry_1
+	}
 	
 	modifier = {
 		country_trust_growth = 0.30
@@ -305,7 +305,7 @@ tr_est_chivalry_3 = {
 
 tr_est_chivalry_4 = {
 	possible = {
-		has_tradition = tr_est_chivalry_1	
+		has_tradition = tr_est_chivalry_2	
 	}
 	
 	modifier = {
@@ -335,7 +335,7 @@ tr_est_chivalry_4 = {
 
 tr_est_chivalry_5 = {
 	possible = {
-		has_tradition = tr_est_chivalry_1
+		has_tradition = tr_est_chivalry_4
 	}
 	
 	tradition_swap = {

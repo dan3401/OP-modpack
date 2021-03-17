@@ -2,9 +2,6 @@
 
 tr_plentiful_anguish_adopt = {
 #	cost = { unity = @cost }
-	possible = {
-		has_tradition = tr_supremacy_master_shipwrights
-	}
 	modifier = {
 		
 	}
@@ -91,6 +88,10 @@ tr_plentiful_anguish_2 = {
 tr_plentiful_anguish_3 = {
 #	cost = { unity = @cost }
 	
+	possible = {
+		has_tradition = tr_plentiful_anguish_2
+	}
+	
 	modifier = {
 	}
 
@@ -120,8 +121,7 @@ tr_plentiful_anguish_5 = {
 #	cost = { unity = @cost }
 	
 	possible = {
-		has_tradition = tr_plentiful_anguish_2
-		has_tradition = tr_plentiful_anguish_4
+		has_tradition = tr_plentiful_anguish_1
 	}
 	
 	modifier = {
