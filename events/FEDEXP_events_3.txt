@@ -132,7 +132,7 @@ country_event = {
 			}
 		}
 	}
-
+}
 ##Increases exhaustion if no influence
 country_event = {
 	id = FEDEXP_holy_war.3

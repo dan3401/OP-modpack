@@ -426,3 +426,4 @@ tb_nanites_group = {
 		"RESOURCE_GROUP_DEFAULT_DEC" = { stored >= 1000 stored < 10000 }
 	}
 	onclick = market
+}

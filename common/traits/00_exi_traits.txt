@@ -58,5 +58,4 @@ trait_ex_ancient = {
 	
   leader_age_min = 30
   leader_age_max = 99
-  }
 }

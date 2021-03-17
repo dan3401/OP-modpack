@@ -733,9 +733,7 @@ psi_command = {
 	ai_build_at_chokepoint = yes
 	ai_build_outside_chokepoint = yes
 	ai_weight = {
-		weight = 100 
-			}
-		}
+		weight = 100
 	}
 }
 
@@ -900,7 +898,5 @@ construction_centre = {
 	ai_build_outside_chokepoint = yes
 	ai_weight = {
 		weight = 100 
-			}
-		}
 	}
 }

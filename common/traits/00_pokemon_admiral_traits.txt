@@ -560,10 +560,9 @@ leader_trait_fire_type_Instantaneous_entropy_increase_2 = {
 				any_owned_pop = {
 				pop_has_trait = trait_fire_type_mega_evolution
 			}
-			}
-			}
-
+		}
 	}
+}
 	
 leader_trait_fire_type_Instantaneous_entropy_increase_3 = {
 	cost = 0
@@ -579,13 +578,12 @@ leader_trait_fire_type_Instantaneous_entropy_increase_3 = {
 	opposites = { "leader_trait_fire_type_Instantaneous_entropy_increase_5" "leader_trait_fire_type_Instantaneous_entropy_increase_2" "leader_trait_fire_type_Instantaneous_entropy_increase_1" "leader_trait_fire_type_Instantaneous_entropy_increase_4"}
     leader_potential_add = {
 	from = {
-				any_owned_pop = {
-				pop_has_trait = trait_fire_type_mega_evolution
+			any_owned_pop = {
+			pop_has_trait = trait_fire_type_mega_evolution
 			}
-			}
-			}
-
+		}
 	}
+}
 	
 leader_trait_fire_type_Instantaneous_entropy_increase_4 = {
 	cost = 0
@@ -601,13 +599,13 @@ leader_trait_fire_type_Instantaneous_entropy_increase_4 = {
 	opposites = { "leader_trait_fire_type_Instantaneous_entropy_increase_5" "leader_trait_fire_type_Instantaneous_entropy_increase_2" "leader_trait_fire_type_Instantaneous_entropy_increase_3" "leader_trait_fire_type_Instantaneous_entropy_increase_1"}
     leader_potential_add = {
 	from = {
-				any_owned_pop = {
-				pop_has_trait = trait_fire_type_mega_evolution
+			any_owned_pop = {
+			pop_has_trait = trait_fire_type_mega_evolution
 			}
-			}
-			}
-
+		}
 	}
+
+}
 	
 leader_trait_fire_type_Instantaneous_entropy_increase_5 = {
 	cost = 0
@@ -626,7 +624,6 @@ leader_trait_fire_type_Instantaneous_entropy_increase_5 = {
 				any_owned_pop = {
 				pop_has_trait = trait_fire_type_mega_evolution
 			}
-			}
-			}
-
+		}
 	}
+}
