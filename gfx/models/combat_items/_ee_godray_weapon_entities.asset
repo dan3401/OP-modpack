@@ -1,0 +1,230 @@
+
+
+
+######## COLOSSUS GOD RAY #######
+
+# WINDUP
+
+entity = {
+	name = "colossus_god_ray_windup_3_entity"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = no state_time = 0.1
+		event = {  sound = { soundeffect = "god_ray_windup_layer_11" } }
+		event = {  sound = { soundeffect = "god_ray_windup_layer_21" } }
+		
+		event = { time = 0.0 particle = "god_ray_muzzle_windup_effect"  keep_particle = yes }
+	}
+}
+
+# MUZZLE FLASH
+
+entity = {
+	name = "colossus_god_ray_muzzle_3_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7.0 looping = no
+		event = { time = 0 particle = "god_ray_laser_muzzle_effect" keep_particle = yes  }
+		
+		event = {  sound = { soundeffect = "god_ray_fire_layer_11" } }
+		event = {  sound = { soundeffect = "god_ray_fire_layer_21" } }
+		event = {  sound = { soundeffect = "god_ray_fire_layer_31" } }
+
+		event = {  sound = { soundeffect = "distance_god_ray_fire_layer_11" } }
+		event = {  sound = { soundeffect = "distance_god_ray_fire_layer_21" } }
+		event = {  sound = { soundeffect = "distance_god_ray_fire_layer_31" } }
+	}
+}
+
+# HIT ENTITIES
+
+entity = {
+	name = "colossus_god_ray_hit_1_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 5 looping = no
+		start_event = { particle = "god_ray_laser_hit_effect" keep_particle = yes }
+
+		event = {  sound = { soundeffect = "god_ray_hit_layer_11" } }
+		event = {  sound = { soundeffect = "god_ray_hit_layer_21" } }	
+
+
+		event = {  sound = { soundeffect = "distance_god_ray_hit_layer_11" } }
+		event = {  sound = { soundeffect = "distance_god_ray_hit_layer_21" } }	
+
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+# MEGASTRUCTURE HIT ENTITIES
+
+entity = {
+	name = "colossus_god_ray_megastructure_1_hit_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 5 looping = no
+		start_event = { particle = "god_ray_laser_megastructure_hit_effect" keep_particle = yes }
+		event = {  sound = { soundeffect = "god_ray_hit_layer_11" } }
+
+		event = {  sound = { soundeffect = "distance_god_ray_hit_layer_11" } }
+		
+
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+	name = "colossus_god_ray_megastructure_2_hit_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 5 looping = no
+		start_event = { particle = "god_ray_laser_hit_o_effect" keep_particle = yes }
+
+	
+		event = {  sound = { soundeffect = "god_ray_hit_layer_21" } }	
+
+
+	
+		event = {  sound = { soundeffect = "distance_god_ray_hit_layer_21" } }	
+
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+
+entity = {
+	name = "colossus_god_ray_ee_1_muzzle_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7.0 looping = no
+		event = { time = 0 particle = "god_ray_laser_muzzle_effect" keep_particle = yes  }
+		
+		event = {  sound = { soundeffect = "god_ray_fire_layer_11" } }
+		event = {  sound = { soundeffect = "god_ray_fire_layer_21" } }
+
+		event = {  sound = { soundeffect = "distance_god_ray_fire_layer_11" } }
+		event = {  sound = { soundeffect = "distance_god_ray_fire_layer_21" } }
+
+
+		
+
+		event = {  sound = { soundeffect = "colossus_god_beam" stop_on_state_change = yes } }
+
+	}
+}
+
+entity = {
+	name = "colossus_god_ray_muzzle_1_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7.0 looping = no
+		event = { time = 0 particle = "god_ray_laser_1_muzzle_effect" keep_particle = yes  }
+		
+		event = {  sound = { soundeffect = "god_ray_fire_layer_11" } }
+
+		event = {  sound = { soundeffect = "distance_god_ray_fire_layer_11" } }
+
+		
+
+	}
+}
+
+entity = {
+	name = "colossus_god_ray_muzzle_1_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7.0 looping = no
+		event = { time = 0 particle = "god_ray_laser_1_muzzle_effect" keep_particle = yes  }
+		
+		event = {  sound = { soundeffect = "god_ray_fire_layer_21" } }
+	}
+}
+
+
+entity = {
+	name = "colossus_god_ray_windup_1_entity"
+	scale = 0.5
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = no state_time = 0.1
+		event = {  sound = { soundeffect = "god_ray_windup_layer_21" } }
+		
+	}
+	
+	
+}
+
+
+entity = {
+	name = "colossus_god_ray_sky_beam_hit_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 5 looping = no
+		start_event = { particle = "god_ray_sky_beam_effect" keep_particle = yes }
+
+		event = {  sound = { soundeffect = "god_ray_hit_layer_11" } }
+	
+		event = {  sound = { soundeffect = "distance_god_ray_hit_layer_11" } }
+
+
+	}
+	
+	
+}
+
+
+
+entity = {
+	name = "mechanist_sky_beam_hit_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 5 looping = no
+		start_event = { particle = "mechanist_sky_beam_effect" keep_particle = yes }
+	
+		event = {  sound = { soundeffect = "distance_tachyon_lance_hit" } }
+
+
+	}
+	
+	
+}mechanist_sky_beam_effect
+
+entity = {
+	name = "mechanist_titan_laser_hit_entity"
+	cull_radius = 0.5
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 2 looping = no
+		start_event = { particle = "mechanist_titan_laser_hit_effect" keep_particle = yes sound = { soundeffect = titan_laser_hit } }
+		#start_event = { trigger_once = yes sound = { soundeffect = "distance_tachyon_lance_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+	name = "mechanist_titan_laser_muzzle_entity"
+	cull_radius = 0.5
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 2 looping = no
+		start_event = { particle = "mechanist_titan_laser_muzzle_particle" keep_particle = yes sound = { soundeffect = titan_laser_fire_01 } }
+		#start_event = { trigger_once = yes sound = { soundeffect = "distance_tachyon_lance_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+
+

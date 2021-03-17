@@ -1,0 +1,951 @@
+# #################################################################################### #
+#           DM Tier			     	 
+# #################################################################################### #
+
+
+# ########################################## #
+#           DM Laser   			     	 #
+# ########################################## #
+
+# MUZZLE FLASHES
+
+entity = {
+	name = "both_eternal_dm_laser_large_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	
+	locator = { name = "root"				position = { 0	0  -5 } }	
+	attach = { "root" =  "yellow_eternal_dm_laser_small_muzzle_entity" }
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 3 looping = no
+		event = { time = 0 particle = "teal_eternal_dm_laser_large_muzzle_particle" keep_particle = yes sound = { soundeffect = dm_laser_fire } }
+		event = { time = 0 particle = "yellow_eternal_dm_laser_large_muzzle_particle" keep_particle = yes  }
+		event = { trigger_once = yes sound = { soundeffect = "distance_laser_fire" } }
+	}
+}
+
+entity = {
+	name = "both_eternal_dm_laser_medium_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	
+	locator = { name = "root"				position = { 0	0  -5 } }	
+	attach = { "root" =  "yellow_eternal_dm_laser_medium_muzzle_entity" }
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 2 looping = no
+		event = { time = 0 particle = "teal_eternal_dm_laser_medium_muzzle_particle" keep_particle = yes sound = { soundeffect = dm_laser_fire } }
+
+		event = { trigger_once = yes sound = { soundeffect = "distance_laser_fire" } }
+	}
+}
+
+entity = {
+	name = "both_eternal_dm_laser_small_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	
+	locator = { name = "root"				position = { 0	0  -5 } }	
+	attach = { "root" =  "yellow_eternal_dm_laser_large_muzzle_entity" }
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 1 looping = no
+		event = { time = 0 particle = "teal_eternal_dm_laser_small_muzzle_particle" keep_particle = yes sound = { soundeffect = dm_laser_fire } }
+
+		event = { trigger_once = yes sound = { soundeffect = "distance_laser_fire" } }
+	}
+}
+
+# HIT ENTITIES
+
+entity = {
+	name = "both_eternal_dm_laser_small_hit_entity"
+	cull_radius = 1.0
+	
+	locator = { name = "root"				position = { 0	0  -5 } }	
+	attach = { "root" =  "yellow_eternal_dm_laser_small_hit_entity" }
+	
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = teal_eternal_dm_laser_small_hit_effect sound = { soundeffect = laser_hit } }
+
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_laser_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+	name = "both_eternal_dm_laser_medium_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	
+	locator = { name = "root"				position = { 0	0  -5 } }	
+	attach = { "root" =  "yellow_eternal_dm_laser_medium_hit_entity" }
+	
+	state = { name = "idle" 
+		start_event = { particle = teal_eternal_dm_laser_medium_hit_effect sound = { soundeffect = laser_hit } }
+
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_laser_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+	name = "both_eternal_dm_laser_large_hit_entity"
+	cull_radius = 1.0
+	
+	locator = { name = "root"				position = { 0	0  -5 } }	
+	attach = { "root" =  "yellow_eternal_dm_laser_large_hit_entity" }
+	
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = teal_eternal_dm_laser_large_hit_effect sound = { soundeffect = laser_hit } }
+
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_laser_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+	name = "both_eternal_dm_laser_small_shield_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	
+	locator = { name = "root"				position = { 0	0  -5 } }	
+	attach = { "root" =  "yellow_eternal_dm_laser_small_shield_hit_entity" }
+	
+	state = { name = "idle" 
+		start_event = { particle = teal_eternal_dm_laser_small_hit_effect sound = { soundeffect = shield_hit } }
+
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+	name = "both_eternal_dm_laser_medium_shield_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	
+	locator = { name = "root"				position = { 0	0  -5 } }	
+	attach = { "root" =  "yellow_eternal_dm_laser_medium_shield_hit_entity" }
+	
+	state = { name = "idle" 
+		start_event = { particle = teal_eternal_dm_laser_medium_hit_effect sound = { soundeffect = shield_hit } }
+
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+	name = "both_eternal_dm_laser_large_shield_hit_entity"
+	cull_radius = 1.0
+	
+	locator = { name = "root"				position = { 0	0  -5 } }	
+	attach = { "root" =  "yellow_eternal_dm_laser_large_shield_hit_entity" }
+	
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = teal_eternal_dm_laser_large_hit_effect sound = { soundeffect = shield_hit } }
+
+
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+# ########################################## #
+#           DM Disruptor  			     	 #
+# ########################################## #
+
+# MUZZLE FLASHES
+
+entity = {
+	name = "both_eternal_disruptor_dm_small_muzzle_entity"
+	pdxmesh = "locator_mesh"
+		
+	locator = { name = "root"				position = { 0	0  -1 } }	
+	attach = { "root" =  "yellow_eternal_disruptor_dm_small_muzzle_entity" }
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 2 looping = no
+		event = { time = 0 particle = "teal_eternal_disruptor_dm_small_muzzle_particle" keep_particle = yes sound = { soundeffect = dm_disruptor } }
+	
+		event = { trigger_once = yes sound = { soundeffect = "distance_disruptor_fire" } }
+	}
+}
+
+entity = {
+	name = "both_eternal_disruptor_dm_medium_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	
+	locator = { name = "root"				position = { 0	0  -1 } }	
+	attach = { "root" =  "yellow_eternal_disruptor_dm_medium_muzzle_entity" }
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 2 looping = no
+		event = { time = 0 particle = "teal_eternal_disruptor_dm_medium_muzzle_particle" keep_particle = yes sound = { soundeffect = dm_disruptor } }
+
+		event = { trigger_once = yes sound = { soundeffect = "distance_disruptor_fire" } }
+	}
+}
+
+entity = {
+	name = "both_eternal_disruptor_dm_large_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	
+	locator = { name = "root"				position = { 0	0  -1 } }	
+	attach = { "root" =  "yellow_eternal_disruptor_dm_large_muzzle_entity" }
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 2 looping = no
+		event = { time = 0 particle = "teal_eternal_disruptor_dm_large_muzzle_particle" keep_particle = yes sound = { soundeffect = dm_disruptor } }
+
+		event = { trigger_once = yes sound = { soundeffect = "distance_disruptor_fire" } }
+	}
+}
+
+# HIT ENTITIES
+
+entity = {
+	name = "both_eternal_disruptor_dm_small_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	
+	locator = { name = "root"				position = { 0	0  -1 } }	
+	attach = { "root" =  "yellow_eternal_disruptor_dm_small_hit_entity" }
+	
+	state = { name = "idle"
+		start_event = { particle = teal_eternal_disruptor_dm_small_hit_effect sound = { soundeffect = disruptor_hit } }
+
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_disruptor_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+	name = "both_eternal_disruptor_dm_medium_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	
+	locator = { name = "root"				position = { 0	0  -1 } }	
+	attach = { "root" =  "yellow_eternal_disruptor_dm_medium_hit_entity" }
+	
+	state = { name = "idle"
+		start_event = { particle = teal_eternal_disruptor_dm_medium_hit_effect sound = { soundeffect = disruptor_hit } }
+	
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_disruptor_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+	name = "both_eternal_disruptor_dm_large_hit_entity"
+	cull_radius = 1.0
+	
+	locator = { name = "root"				position = { 0	0  -1 } }	
+	attach = { "root" =  "yellow_eternal_disruptor_dm_large_hit_entity" }
+	
+	default_state = "idle"
+	state = { name = "idle"
+		start_event = { particle = teal_eternal_disruptor_dm_large_hit_effect sound = { soundeffect = disruptor_hit } }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_disruptor_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+# SHIELD HIT ENTITIES
+
+entity = {
+	name = "both_eternal_disruptor_dm_small_shield_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	
+	locator = { name = "root"				position = { 0	0  -1 } }	
+	attach = { "root" =  "yellow_eternal_disruptor_dm_small_hit_entity" }
+	
+	state = { name = "idle" 
+		start_event = { particle = teal_eternal_disruptor_dm_small_hit_effect sound = { soundeffect = shield_hit } }
+
+		start_event = { particle = laser_medium_shield_hit_effect }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+	name = "both_eternal_disruptor_dm_medium_shield_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	
+	locator = { name = "root"				position = { 0	0  -1 } }	
+	attach = { "root" =  "yellow_eternal_disruptor_dm_medium_hit_entity" }
+	
+	state = { name = "idle" 
+		start_event = { particle = teal_eternal_disruptor_dm_medium_hit_effect sound = { soundeffect = shield_hit } }
+
+		start_event = { particle = laser_medium_shield_hit_effect }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+	name = "both_eternal_disruptor_dm_large_shield_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	
+	locator = { name = "root"				position = { 0	0  -1 } }	
+	attach = { "root" =  "yellow_eternal_disruptor_dm_large_hit_entity" }
+	
+	
+	state = { name = "idle" 
+		start_event = { particle = teal_eternal_disruptor_dm_large_hit_effect sound = { soundeffect = shield_hit } }
+
+		start_event = { particle = laser_medium_shield_hit_effect }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+# ########################################## #
+#           DM Arc Emitter			     	 #
+# ########################################## #
+
+entity = {
+	name = "both_eternal_arc_emitter_dm_windup_entity"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	
+	locator = { name = "root"				position = { 0	0  -5 } }	
+	attach = { "root" =  "yellow_eternal_arc_emitter_dm_windup_entity" }
+	
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		
+		
+		event = { trigger_once = yes sound = { soundeffect = "arc_emitter_windup" } }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_8 particle = "teal_eternal_arc_emitter_dm_windup_effect" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_7 particle = "teal_eternal_arc_emitter_dm_windup_effect" }
+		event = { time = 0.2 use_parent_nodes = yes node = xl_windup_6 particle = "teal_eternal_arc_emitter_dm_windup_effect" }
+		event = { time = 0.2 use_parent_nodes = yes node = xl_windup_5 particle = "teal_eternal_arc_emitter_dm_windup_effect" }
+		event = { time = 0.4 use_parent_nodes = yes node = xl_windup_4 particle = "teal_eternal_arc_emitter_dm_windup_effect" }
+		event = { time = 0.4 use_parent_nodes = yes node = xl_windup_3 particle = "teal_eternal_arc_emitter_dm_windup_effect" }
+		event = { time = 0.6 use_parent_nodes = yes node = xl_windup_2 particle = "teal_eternal_arc_emitter_dm_windup_effect" }
+		event = { time = 0.6 use_parent_nodes = yes node = xl_windup_1 particle = "teal_eternal_arc_emitter_dm_windup_effect" }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "teal_eternal_arc_emitter_dm_muzzle_windup_effect" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "humanoid_01_teal_eternal_arc_emitter_dm_windup_entity"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		event = { trigger_once = yes sound = { soundeffect = "arc_emitter_windup" } }
+	
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "teal_eternal_arc_emitter_dm_muzzle_windup_effect" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "arthropoid_01_teal_eternal_arc_emitter_dm_windup_entity"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		event = { trigger_once = yes sound = { soundeffect = "arc_emitter_windup" } }
+	
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "teal_eternal_arc_emitter_dm_muzzle_windup_effect" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "molluscoid_01_teal_eternal_arc_emitter_dm_windup_entity"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.2
+		event = { trigger_once = yes sound = { soundeffect = "arc_emitter_windup" } }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_1 particle = "teal_eternal_arc_emitter_dm_windup_effect" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_2 particle = "teal_eternal_arc_emitter_dm_windup_effect" }
+		#event = { time = 0.4 use_parent_nodes = yes node = xl_windup_2 particle = "teal_eternal_arc_emitter_dm_windup_effect" }
+		#event = { time = 0.6 use_parent_nodes = yes node = xl_windup_1 particle = "teal_eternal_arc_emitter_dm_windup_effect" }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "teal_eternal_arc_emitter_dm_muzzle_windup_effect" trigger_once = yes keep_particle = yes }
+	}
+}
+
+# MUZZLE FLASHES
+
+entity = {
+	name = "both_eternal_arc_emitter_dm_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 3 looping = no
+		event = { time = 0 particle = "teal_eternal_arc_emitter_dm_muzzle_particle" keep_particle = yes sound = { soundeffect = dm_emitter_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_xl_arc_emitter_fire" } }
+	}
+}
+
+# HIT ENTITIES
+
+entity = {
+	name = "both_eternal_arc_emitter_dm_hit_entity"
+	cull_radius = 1.0
+	
+	locator = { name = "root"				position = { 0	0  -5 } }	
+	attach = { "root" =  "yellow_eternal_arc_emitter_dm_hit_entity" }
+	
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = "teal_eternal_arc_emitter_dm_hit_effect" }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+	name = "both_eternal_arc_emitter_dm_shield_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	
+	locator = { name = "root"				position = { 0	0  -5 } }	
+	attach = { "root" =  "yellow_eternal_arc_emitter_dm_hit_entity" }
+	
+	state = { name = "idle" 
+		#event = { time = 0.0 particle = arc_emitter_hit_effect }
+		start_event = { particle = "projectile_large_shield_hit_effect" sound = { soundeffect = shield_hit } }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+
+# ########################################## #
+#           DM Lance     			     	 #
+# ########################################## #
+
+### windup
+entity = {
+	name = "both_eternal_energy_lance_dm_windup_entity"	
+	default_state = "attack"
+	
+	locator = { name = "root"				position = { 0	-1  0 } }	
+	attach = { "root" =  "yellow_eternal_energy_lance_dm_windup_entity" }
+	
+	
+	get_state_from_parent = no
+	state = {
+		name = "attack"
+		looping = yes
+		state_time = 0.8
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "dm_lance_windup" }
+		}
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = xl_windup_8
+			particle = "teal_eternal_energy_lance_dm_windup_effect"
+		}
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = xl_windup_7
+			particle = "teal_eternal_energy_lance_dm_windup_effect"
+		}
+		event = {
+			time = 0.2
+			use_parent_nodes = yes
+			node = xl_windup_6
+			particle = "teal_eternal_energy_lance_dm_windup_effect"
+		}
+		event = {
+			time = 0.2
+			use_parent_nodes = yes
+			node = xl_windup_5
+			particle = "teal_eternal_energy_lance_dm_windup_effect"
+		}
+		event = {
+			time = 0.4
+			use_parent_nodes = yes
+			node = xl_windup_4
+			particle = "teal_eternal_energy_lance_dm_windup_effect"
+		}
+		event = {
+			time = 0.4
+			use_parent_nodes = yes
+			node = xl_windup_3
+			particle = "teal_eternal_energy_lance_dm_windup_effect"
+		}
+		event = {
+			time = 0.6
+			use_parent_nodes = yes
+			node = xl_windup_2
+			particle = "teal_eternal_energy_lance_dm_windup_effect"
+		}
+		event = {
+			time = 0.6
+			use_parent_nodes = yes
+			node = xl_windup_1
+			particle = "teal_eternal_energy_lance_dm_windup_effect"
+		}
+		
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = xl_gun_01
+			particle = "teal_eternal_energy_lance_dm_muzzle_windup_effect"
+			trigger_once = yes
+			keep_particle = yes
+		}
+	}
+}
+
+entity = {
+	name = "arthropoid_01_teal_eternal_energy_lance_dm_windup_entity"
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack"
+		looping = yes
+		state_time = 0.8
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "dm_lance_windup" }
+		}
+	        event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = xl_gun_01
+			particle = "teal_eternal_energy_lance_dm_muzzle_windup_effect"
+			trigger_once = yes
+			keep_particle = yes
+		}
+	}
+}
+
+entity = {
+	name = "molluscoid_01_teal_eternal_energy_lance_dm_windup_entity"
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack"
+		looping = yes
+		state_time = 0.2
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = xl_windup_1
+			particle = "teal_eternal_energy_lance_dm_windup_effect"
+		}
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = xl_windup_2
+			particle = "teal_eternal_energy_lance_dm_windup_effect"
+		}
+		#event = { time = 0.4 use_parent_nodes = yes node = xl_windup_2 particle = "particle_lance_windup_effect" }
+		#event = { time = 0.6 use_parent_nodes = yes node = xl_windup_1 particle = "particle_lance_windup_effect" }
+		
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "dm_lance_windup" }
+		}
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = xl_gun_01
+			particle = "teal_eternal_energy_lance_dm_muzzle_windup_effect"
+			trigger_once = yes
+			keep_particle = yes
+		}
+	}
+}
+
+### Muzzle
+entity = {
+	name = "both_eternal_energy_lance_dm_muzzle_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	
+	locator = { name = "root"				position = { 0	-1  0 } }	
+	attach = { "root" =  "yellow_eternal_energy_lance_dm_muzzle_entity" }
+	
+	state = {
+		name = "idle"
+		state_time = 0.8
+		looping = no
+		event = {
+			time = 0
+			particle = "teal_eternal_energy_lance_dm_muzzle_particle"
+			keep_particle = yes
+			sound = { soundeffect = "dm_lance_fire" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "dm_lance_fire" }
+		}
+	}
+}
+
+### Hit effect normal & shield
+entity = {
+	name = "both_eternal_energy_lance_dm_hit_entity"
+	cull_radius = 1.0
+	
+	locator = { name = "root"				position = { 0	-1  0 } }	
+	attach = { "root" =  "yellow_eternal_energy_lance_dm_hit_entity" }
+	
+	default_state = "idle"
+	state = {
+		name = "idle" 
+		state_time = 2
+		looping = no
+		start_event = { 
+			particle = "teal_eternal_energy_lance_dm_hit_effect"
+			keep_particle = yes
+			sound = { soundeffect = "energy_lance_hit" }
+		}
+		start_event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_energy_lance_hit" }
+		}
+	}
+	state = {
+		name = "stop"
+		state_time = 0.5
+		looping = no
+	}
+}
+
+entity = {
+	name = "both_eternal_energy_lance_dm_shield_hit_entity"
+	cull_radius = 1.0             
+	default_state = "idle"
+	
+	locator = { name = "root"				position = { 0	-1  0 } }	
+	attach = { "root" =  "yellow_eternal_energy_lance_dm_shield_hit_entity" }
+	
+	state = {
+		name = "idle" 
+		start_event = {
+			particle = "teal_eternal_energy_lance_dm_hit_effect"
+			sound = { soundeffect = "shield_hit" }
+		}
+		start_event = {
+			particle = "projectile_large_shield_hit_effect"
+		}
+		start_event = { 
+			trigger_once = yes
+			sound = { soundeffect = "distance_shield_hit" }
+		} 
+	}
+	state = {
+		name = "stop"
+		state_time = 0.5
+		looping = no
+	}
+}
+
+# ########################################## #
+#           DM Perdition Beam		    	 #
+# ########################################## #
+
+entity = {
+	name = "both_eternal_perdition_beam_dm_windup_entity"
+	
+	locator = { name = "root"				position = { 0	-1  0 } }	
+	attach = { "root" =  "yellow_eternal_perdition_beam_dm_windup_entity" }
+	
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		event = { trigger_once = yes sound = { soundeffect = "dm_titan_windup" } }
+		event = { trigger_once = yes sound = { soundeffect = "perdition_beam_windup_layer_02" } }
+		
+	#	event = { time = 0.0 use_parent_nodes = yes node = "titan_windup_16" particle = "teal_eternal_perdition_beam_dm_windup_effect" keep_particle = yes }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = "xl_gun_01" particle = "teal_eternal_perdition_beam_dm_muzzle_windup_effect" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "both_eternal_perdition_beam_dm_muzzle_windup_entity"
+	pdxmesh = "teal_eternal_perdition_beam_dm_muzzle_windup_part1_mesh"
+	locator = { name = "root" }
+	
+	locator = { name = "boot"				position = { 0	-1  0 } }	
+	attach = { "boot" =  "yellow_eternal_perdition_beam_dm_muzzle_windup_entity" }
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+	}
+	
+	game_data = {
+		uv_animation_speed   = -0.25
+		uv_animation_direction  = { 0.0 1.0 }
+	}
+	
+	
+	attach = { "root" = "teal_eternal_perdition_beam_dm_windup_part2_entity" }
+	attach = { "root" = "teal_eternal_perdition_beam_dm_windup_part3_entity" }
+}
+
+entity = {
+	name = "both_eternal_perdition_beam_dm_windup_part2_entity"
+	pdxmesh = "teal_eternal_perdition_beam_dm_muzzle_windup_part2_mesh"
+	
+	game_data = {
+		uv_animation_speed   = -0.5
+		uv_animation_direction  = { 0.0 1.0 }
+	}
+}
+
+entity = {
+	name = "both_eternal_perdition_beam_dm_windup_part3_entity"
+	pdxmesh = "teal_eternal_perdition_beam_dm_muzzle_windup_part3_mesh"
+	
+	game_data = {
+		uv_animation_speed   = -0.75
+		uv_animation_direction  = { 0.0 1.0 }
+	}
+}
+
+
+
+# MUZZLE FLASH
+
+entity = {
+	name = "both_eternal_perdition_beam_dm_muzzle_entity"
+	cull_radius = 1.0
+	
+	locator = { name = "boot"				position = { 1	-1  1 } }	
+	attach = { "boot" =  "yellow_eternal_perdition_beam_dm_muzzle_entity" }
+	
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7.0 looping = no
+		event = { time = 0 particle = "teal_eternal_perdition_beam_dm_muzzle_effect" keep_particle = yes }
+		
+		event = { trigger_once = yes sound = { soundeffect = "dm_titan_fire" } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_perdition_beam_fire_layer_01" } }
+		
+		event = { trigger_once = yes sound = { soundeffect = "perdition_beam_fire_layer_02" } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_perdition_beam_fire_layer_02" } }
+		
+		event = { trigger_once = yes sound = { soundeffect = "perdition_beam_fire_layer_03" } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_perdition_beam_fire_layer_03" } }
+	}
+}
+
+# HIT ENTITIES
+
+entity = {
+	name = "both_eternal_perdition_beam_dm_hit_entity"
+	cull_radius = 1.0
+	
+	locator = { name = "boot"				position = { 1	-1  1 } }	
+	attach = { "boot" =  "yellow_eternal_perdition_beam_dm_hit_entity" }
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 2 looping = no
+		start_event = { particle = "teal_eternal_perdition_beam_dm_hit_effect" keep_particle = yes sound = { soundeffect = "perdition_beam_hit" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_perdition_beam_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+# SHIELD HIT ENTITIES
+
+entity = {
+	name = "both_eternal_perdition_beam_dm_shield_hit_entity"
+	cull_radius = 1.0
+	
+	locator = { name = "boot"				position = { 1	-1  1 } }	
+	attach = { "boot" =  "yellow_eternal_perdition_beam_dm_shield_hit_entity" }
+	
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = "perdition_beam_hit_effect" sound = { soundeffect = "shield_hit" } }
+		start_event = { particle = "titan_laser_shield_hit_effect" }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+
+######
+# DM AUTOCANNON
+######
+
+
+# MUZZLE FLASH
+
+entity = {
+	name = "both_eternal_auto_cannons_dm_small_muzzle_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7 looping = no
+		event = { time = 0 particle = "teal_eternal_auto_cannons_dm_small_muzzle_particle" keep_particle = yes sound = { soundeffect = dm_autocannon_fire} }
+		event = { trigger_once = yes sound = { soundeffect = "distance_auto_cannon_fire_small" } }
+	}
+}
+
+entity = {
+	name = "both_eternal_auto_cannons_dm_medium_muzzle_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7 looping = no
+		event = { time = 0 particle = "teal_eternal_auto_cannons_dm_medium_muzzle_particle" keep_particle = yes sound = { soundeffect = dm_flak_fire} }
+		event = { trigger_once = yes sound = { soundeffect = "distance_auto_cannon_fire_medium" } }
+	}
+}
+
+entity = {
+	name = "both_eternal_auto_cannons_dm_large_muzzle_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7 looping = no
+		event = { time = 0 particle = "teal_eternal_auto_cannons_dm_large_muzzle_particle" keep_particle = yes sound = { soundeffect = dm_autocannon_fire} }
+		event = { trigger_once = yes sound = { soundeffect = "distance_auto_cannon_fire_large" } }
+	}
+}
+
+# HIT EFFECT
+
+entity = {
+	name = "both_eternal_auto_cannons_dm_small_hit_entity"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 1.5 looping = no
+		event = { time = 0.0 particle = "teal_eternal_auto_cannons_dm_small_hit_effect" sound = { soundeffect = auto_cannon_hit_small } }
+		
+		event = { sound = { soundeffect = "distance_auto_cannon_hit_small" } }
+	}
+	state = { name = "explode_med_shield" state_time = 0.8 looping = no
+		event = { trigger_once = yes sound = { soundeffect = "distance_auto_cannon_hit_small" } }
+	}
+	default_state = "explode_med_hp"
+}
+
+entity = {
+	name = "both_eternal_auto_cannons_dm_medium_hit_entity"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 1.5 looping = no
+		event = { time = 0.0 particle = "teal_eternal_auto_cannons_dm_medium_hit_effect" sound = { soundeffect = auto_cannon_hit_medium } }
+		event = { sound = { soundeffect = "distance_auto_cannon_hit_medium" } }
+	}
+	state = { name = "explode_med_shield" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "medium_hit_effect_shield" }
+	}
+	default_state = "explode_med_hp"
+}
+
+entity = {
+	name = "both_eternal_auto_cannons_dm_large_hit_entity"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 1.5 looping = no
+		event = { time = 0.0 particle = "teal_eternal_auto_cannons_dm_large_hit_effect" sound = { soundeffect = auto_cannon_hit_large } }
+		
+		event = { sound = { soundeffect = "distance_auto_cannon_hit_large" } }
+	}
+	state = { name = "explode_med_shield" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "medium_hit_effect_shield" }
+	}
+	default_state = "explode_med_hp"
+}
+
+entity = {
+	name = "both_eternal_auto_cannons_dm_small_shield_hit_entity"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 1.5 looping = no
+		event = { time = 0.0 particle = "teal_eternal_auto_cannons_dm_small_hit_effect" sound = { soundeffect = auto_cannon_hit_small } }
+		
+		event = { sound = { soundeffect = "distance_auto_cannon_hit_small" } }
+	}
+	state = { name = "explode_med_shield" state_time = 0.8 looping = no
+		event = { trigger_once = yes sound = { soundeffect = "distance_auto_cannon_hit_small" } }
+	}
+	default_state = "explode_med_hp"
+}
+
+entity = {
+	name = "both_eternal_auto_cannons_dm_medium_shield_hit_entity"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 1.5 looping = no
+		event = { time = 0.0 particle = "teal_eternal_auto_cannons_dm_medium_hit_effect" sound = { soundeffect = auto_cannon_hit_medium } }
+		
+		event = { sound = { soundeffect = "distance_auto_cannon_hit_medium" } }
+	}
+	state = { name = "explode_med_shield" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "medium_hit_effect_shield" }
+	}
+	default_state = "explode_med_hp"
+}
+
+entity = {
+	name = "both_eternal_auto_cannons_dm_large_shield_hit_entity"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 1.5 looping = no
+		event = { time = 0.0 particle = "teal_eternal_auto_cannons_dm_large_hit_effect" sound = { soundeffect = auto_cannon_hit_large } }
+		event = { sound = { soundeffect = "distance_auto_cannon_hit_large" } }
+	}
+	state = { name = "explode_med_shield" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "medium_hit_effect_shield" }
+	}
+	default_state = "explode_med_hp"
+}
+
+######
+# DM Point Defense
+######
+
+# MUZZLE FLASH
+
+entity = {
+	name = "both_eternal_point_defence_laser_dm_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 0.1 looping = no
+		event = { time = 0 particle = "teal_eternal_point_defence_laser_dm_muzzle_particle" keep_particle = yes }
+		event = { trigger_once = yes sound = { soundeffect = "dm_pd_fire" } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_point_defense_fire" } }	
+	}
+}
+
+# HIT ENTITIES
+
+entity = {
+	name = "both_eternal_point_defence_laser_dm_hit_entity"
+	cull_radius = 50.0
+	default_state = "idle"
+	state = { name = "idle" 
+		event = { time = 0.0 particle = "teal_eternal_point_defence_laser_dm_hit_effect" }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+

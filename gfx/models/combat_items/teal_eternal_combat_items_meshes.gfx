@@ -1,0 +1,98 @@
+objectTypes = {
+
+########## DM Mass Driver
+
+	pdxmesh = {
+		name = "teal_eternal_mass_driver_dm_tracer_round_mesh"
+		file = "gfx/models/combat_items/tracer_round.mesh"
+		scale = 1.0
+		
+		meshsettings = {
+		texture_diffuse = "tracer_round_teal_eternal_mass_driver_dm.dds"
+		}	
+	}
+
+########## DM Kinetic Artillery
+
+	pdxmesh = {
+		name = "teal_eternal_kinetic_artillery_dm_tracer_round_mesh"
+		file = "gfx/models/combat_items/kinetic_artillery_tracer_round.mesh"
+		scale = 1.0
+		
+		meshsettings = {
+			texture_diffuse = "tracer_round_teal_eternal_kinetic_artillery_dm.dds"
+		}
+	}
+
+########## DM Perdition Beam
+
+	pdxmesh = {
+		name = "teal_eternal_perdition_beam_dm_muzzle_windup_part1_mesh"
+		file = "gfx/models/combat_items/perdition_beam_muzzle_windup_part1.mesh"
+
+		meshsettings = {
+		#	name = "pPlaneShape2"
+			index = 0
+			texture_diffuse = "teal_eternal_perdition_beam_dm_muzzle_windup.dds"
+			texture_normal = "nospec.dds"
+			texture_specular = "nospec.dds"
+			shader = "PdxMeshAlphaAdditiveAnimateUV"
+		}
+	}
+	
+	pdxmesh = {
+		name = "teal_eternal_perdition_beam_dm_muzzle_windup_part2_mesh"
+		file = "gfx/models/combat_items/perdition_beam_muzzle_windup_part2.mesh"
+
+		meshsettings = {
+		#	name = "pPlaneShape2"
+			index = 0
+			texture_diffuse = "teal_eternal_perdition_beam_dm_muzzle_windup.dds"
+			texture_normal = "nospec.dds"
+			texture_specular = "nospec.dds"
+			shader = "PdxMeshAlphaAdditiveAnimateUV"
+		}
+	}
+	
+	pdxmesh = {
+		name = "teal_eternal_perdition_beam_dm_muzzle_windup_part3_mesh"
+		file = "gfx/models/combat_items/perdition_beam_muzzle_windup_part3.mesh"
+
+		meshsettings = {
+		#	name = "pPlaneShape2"
+			index = 0
+			texture_diffuse = "teal_eternal_perdition_beam_dm_muzzle_windup.dds"
+			texture_normal = "nospec.dds"
+			texture_specular = "nospec.dds"
+			shader = "PdxMeshAlphaAdditiveAnimateUV"
+		}
+	}
+	
+########## AE Mass Driver
+
+	pdxmesh = {
+		name = "teal_eternal_mass_driver_ae_tracer_round_mesh"
+		file = "gfx/models/combat_items/tracer_round.mesh"
+		scale = 1.0
+		
+		meshsettings = {
+		texture_diffuse = "tracer_round_teal_eternal_mass_driver_ae.dds"
+		}	
+	}
+
+########## AE Kinetic Artillery
+
+	pdxmesh = {
+		name = "teal_eternal_kinetic_artillery_ae_tracer_round_mesh"
+		file = "gfx/models/combat_items/adv_kinetic_artillery_tracer_round.mesh"
+		scale = 1.0
+		
+		meshsettings = {
+			texture_diffuse = "tracer_round_teal_eternal_kinetic_artillery_ae.dds"
+		}
+	}
+
+########## AE Perdition Beam
+	
+	
+}

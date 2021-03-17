@@ -1,0 +1,673 @@
+# ################################################################################### #
+#           DM TIER STUFFS			
+# ################################################################################### #
+
+
+# ########################################## #
+#           DM Driver  			 	    	 #
+# ########################################## #
+
+# MUZZLE FLASH
+
+entity = {
+	name = "highborne_mass_driver_dm_small_muzzle_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7 looping = no
+		event = { time = 0 particle = "highborne_mass_driver_dm_small_muzzle_particle" keep_particle = yes sound = { soundeffect = dm_mass_driver_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_railgun_fire" } }
+	}
+}
+
+entity = {
+	name = "highborne_mass_driver_dm_medium_muzzle_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7 looping = no
+		event = { time = 0 particle = "highborne_mass_driver_dm_medium_muzzle_particle" keep_particle = yes sound = { soundeffect = dm_mass_driver_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_railgun_fire" } }
+	}
+}
+
+entity = {
+	name = "highborne_mass_driver_dm_large_muzzle_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7 looping = no
+		event = { time = 0 particle = "highborne_mass_driver_dm_large_muzzle_particle" keep_particle = yes sound = { soundeffect = dm_mass_driver_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_railgun_fire" } }
+	}
+}
+
+# PROJECTILE
+
+entity = {
+	name = "highborne_mass_driver_dm_tracer_round_small_entity"
+	pdxmesh = "highborne_mass_driver_dm_tracer_round_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" }
+	
+	scale = 1
+}
+
+entity = {
+	name = "highborne_mass_driver_dm_tracer_round_medium_entity"
+	pdxmesh = "highborne_mass_driver_dm_tracer_round_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" }
+	
+	scale = 1.5
+}
+
+entity = {
+	name = "highborne_mass_driver_dm_tracer_round_large_entity"
+	pdxmesh = "highborne_mass_driver_dm_tracer_round_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" }
+	
+	scale = 2
+}
+
+# HIT EFFECT
+
+entity = {
+	name = "highborne_mass_driver_dm_small_hit_entity"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 5 looping = no
+		event = { time = 0.0 particle = "highborne_mass_driver_dm_small_hit_effect" sound = { soundeffect = railgun_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_railgun_hit" } }
+	}
+	state = { name = "explode_med_shield" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "medium_hit_effect_shield" }
+	}
+	default_state = "explode_med_hp"
+}
+
+entity = {
+	name = "highborne_mass_driver_dm_medium_hit_entity"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 5 looping = no
+		event = { time = 0.0 particle = "highborne_mass_driver_dm_medium_hit_effect" sound = { soundeffect = railgun_hit } }
+		event = { sound = { soundeffect = "distance_railgun_hit" } }
+	}
+	state = { name = "explode_med_shield" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "medium_hit_effect_shield" }
+	}
+	default_state = "explode_med_hp"
+}
+
+entity = {
+	name = "highborne_mass_driver_dm_large_hit_entity"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 5 looping = no
+		event = { time = 0.0 particle = "highborne_mass_driver_dm_large_hit_effect" sound = { soundeffect = railgun_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_railgun_hit" } }
+	}
+	state = { name = "explode_med_shield" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "medium_hit_effect_shield" }
+	}
+	default_state = "explode_med_hp"
+}
+
+entity = {
+	name = "highborne_mass_driver_dm_small_shield_hit_entity"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 5 looping = no
+		event = { time = 0.0 particle = "highborne_mass_driver_dm_small_hit_effect" sound = { soundeffect = shield_hit } }
+		event = { time = 0.0 particle = "projectile_small_shield_hit_effect" }
+		event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	default_state = "explode_med_hp"
+}
+
+entity = {
+	name = "highborne_mass_driver_dm_medium_shield_hit_entity"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 5 looping = no
+		event = { time = 0.0 particle = "highborne_mass_driver_dm_medium_hit_effect" sound = { soundeffect = shield_hit } }
+		event = { time = 0.0 particle = "projectile_medium_shield_hit_effect" }
+		event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	default_state = "explode_med_hp"
+}
+
+entity = {
+	name = "highborne_mass_driver_dm_large_shield_hit_entity"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 5 looping = no
+		event = { time = 0.0 particle = "highborne_mass_driver_dm_large_hit_effect" sound = { soundeffect = shield_hit } }
+		event = { time = 0.0 particle = "projectile_large_shield_hit_effect" }
+		event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	default_state = "explode_med_hp"
+}
+
+
+# ########################################## #
+#           DM Plasma 			 	    	 #
+# ########################################## #
+
+
+# MUZZLE FLASH
+
+entity = {
+	name = "highborne_plasma_cannon_dm_small_muzzle_flash_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7 looping = no
+		event = { time = 0 particle = "highborne_plasma_cannon_dm_small_muzzle_particle" keep_particle = yes sound = { soundeffect = dm_plasma_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_plasma_fire" } }
+	}
+}
+
+entity = {
+	name = "highborne_plasma_cannon_dm_medium_muzzle_flash_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7 looping = no
+		event = { time = 0 particle = "highborne_plasma_cannon_dm_medium_muzzle_particle" keep_particle = yes sound = { soundeffect = dm_plasma_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_plasma_fire" } }
+	}
+}
+entity = {
+	name = "highborne_plasma_cannon_dm_large_muzzle_flash_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7 looping = no
+		event = { time = 0 particle = "highborne_plasma_cannon_dm_large_muzzle_particle" keep_particle = yes sound = { soundeffect = dm_plasma_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_plasma_fire" } }
+	}
+}
+
+# PROJECTILE
+
+entity = {
+	name = "highborne_plasma_cannon_dm_small_entity"
+	cull_radius = 1.0
+	
+	default_state = idle
+	state = { name = "idle"
+		event = { time = 0 particle = "small_highborne_plasma_cannon_dm_idle_particle" keep_particle = yes }
+		event = { time = 0 particle = "small_highborne_plasma_cannon_dm_idle_drops_particle" keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "highborne_plasma_cannon_dm_medium_entity"
+	cull_radius = 1.0
+	
+	default_state = idle
+	state = { name = "idle"
+		event = { time = 0 particle = "medium_highborne_plasma_cannon_dm_idle_particle" keep_particle = yes }
+		event = { time = 0 particle = "medium_highborne_plasma_cannon_dm_idle_drops_particle" keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "highborne_plasma_cannon_dm_large_entity"
+	cull_radius = 1.0
+	
+	default_state = idle
+	state = { name = "idle"
+		event = { time = 0 particle = "large_highborne_plasma_cannon_dm_idle_particle" keep_particle = yes }
+		event = { time = 0 particle = "large_highborne_plasma_cannon_dm_idle_drops_particle" keep_particle = yes }
+	}
+}
+
+# HIT EFFECT
+
+entity = {
+	name = "highborne_plasma_cannon_dm_small_hit_entity"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "highborne_plasma_cannon_dm_small_hit_effect" sound = { soundeffect = plasma_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_plasma_hit" } }
+	}
+	state = { name = "explode_med_shield" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "medium_hit_effect_shield" }
+	}
+	default_state = "explode_med_hp"
+}
+
+entity = {
+	name = "highborne_plasma_cannon_dm_medium_hit_entity"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "highborne_plasma_cannon_dm_medium_hit_effect" sound = { soundeffect = plasma_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_plasma_hit" } }
+	}
+	state = { name = "explode_med_shield" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "medium_hit_effect_shield" }
+	}
+	default_state = "explode_med_hp"
+}
+
+entity = {
+	name = "highborne_plasma_cannon_dm_large_hit_entity"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "highborne_plasma_cannon_dm_large_hit_effect" sound = { soundeffect = plasma_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_plasma_hit" } }
+	}
+	state = { name = "explode_med_shield" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "medium_hit_effect_shield" }
+	}
+	default_state = "explode_med_hp"
+}
+
+entity = {
+	name = "highborne_plasma_cannon_dm_small_shield_hit_entity"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 5 looping = no
+		event = { time = 0.0 particle = "highborne_plasma_cannon_dm_small_hit_effect"  }
+		event = { time = 0.0 particle = "projectile_small_shield_hit_effect" sound = { soundeffect = shield_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	default_state = "explode_med_hp"
+}
+
+entity = {
+	name = "highborne_plasma_cannon_dm_medium_shield_hit_entity"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 5 looping = no
+		event = { time = 0.0 particle = "highborne_plasma_cannon_dm_medium_hit_effect" }
+		event = { time = 0.0 particle = "projectile_medium_shield_hit_effect" sound = { soundeffect = shield_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	default_state = "explode_med_hp"
+}
+
+entity = {
+	name = "highborne_plasma_cannon_dm_large_shield_hit_entity"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 5 looping = no
+		event = { time = 0.0 particle = "highborne_plasma_cannon_dm_large_hit_effect" }
+		event = { time = 0.0 particle = "projectile_large_shield_hit_effect" sound = { soundeffect = shield_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	default_state = "explode_med_hp"
+}
+
+# ########################################## #
+#           DM Energy Torpedoes   	    	 #
+# ########################################## #
+
+
+# MUZZLE FLASH
+
+entity = {
+	name = "highborne_energy_torpedoes_dm_muzzle_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7 looping = no
+		event = { time = 0 particle = "highborne_energy_torpedoes_dm_muzzle_particle" keep_particle = yes sound = { soundeffect = dm_plasmapedo_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_torpedo_fire" } } 
+	}
+}
+
+# PROJECTILE
+
+entity = {
+	name = "highborne_energy_torpedoes_dm_entity"
+	cull_radius = 1.0
+	
+	default_state = idle
+	state = { name = "idle"
+		event = { time = 0 particle = "highborne_energy_torpedoes_dm_idle_particle" keep_particle = yes }
+		event = { time = 0 particle = "highborne_energy_torpedoes_dm_idle_trail_particle" keep_particle = yes }
+	}
+}
+
+
+# HIT EFFECT
+
+entity = {
+	name = "highborne_energy_torpedoes_dm_hit_entity"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 5 looping = no
+		event = { time = 0.0 particle = "highborne_energy_torpedoes_dm_hit_effect" sound = { soundeffect = energy_torpedo_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_torpedo_hit" } } 
+	}
+	default_state = "explode_med_hp"
+}
+
+
+entity = {
+	name = "highborne_energy_torpedoes_dm_shield_hit_entity"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 5 looping = no
+		event = { time = 0.0 particle = "highborne_energy_torpedoes_dm_hit_effect" }
+		event = { time = 0.0 particle = "projectile_large_shield_hit_effect" sound = { soundeffect = shield_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	default_state = "explode_med_hp"
+}
+
+# ########################################## #
+#          DM Artillery   			     	 #
+# ########################################## #
+
+
+# WINDUP
+
+entity = {
+	name = "highborne_kinetic_artillery_dm_windup_entity"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_8 particle = "highborne_kinetic_artillery_dm_windup_effect" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_7 particle = "highborne_kinetic_artillery_dm_windup_effect" }
+		event = { time = 0.2 use_parent_nodes = yes node = xl_windup_6 particle = "highborne_kinetic_artillery_dm_windup_effect" }
+		event = { time = 0.2 use_parent_nodes = yes node = xl_windup_5 particle = "highborne_kinetic_artillery_dm_windup_effect" }
+		event = { time = 0.4 use_parent_nodes = yes node = xl_windup_4 particle = "highborne_kinetic_artillery_dm_windup_effect" }
+		event = { time = 0.4 use_parent_nodes = yes node = xl_windup_3 particle = "highborne_kinetic_artillery_dm_windup_effect" }
+		event = { time = 0.6 use_parent_nodes = yes node = xl_windup_2 particle = "highborne_kinetic_artillery_dm_windup_effect" }
+		event = { time = 0.6 use_parent_nodes = yes node = xl_windup_1 particle = "highborne_kinetic_artillery_dm_windup_effect" }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "highborne_kinetic_artillery_dm_muzzle_windup_effect" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "humanoid_01_highborne_kinetic_artillery_dm_windup_entity"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "highborne_kinetic_artillery_dm_muzzle_windup_effect" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "avian_01_highborne_kinetic_artillery_dm_windup_entity"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "highborne_kinetic_artillery_dm_muzzle_windup_effect" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "reptilian_01_highborne_kinetic_artillery_dm_windup_entity"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "highborne_kinetic_artillery_dm_muzzle_windup_effect" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "arthropoid_01_highborne_kinetic_artillery_dm_windup_entity"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "highborne_kinetic_artillery_dm_muzzle_windup_effect" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "molluscoid_01_highborne_kinetic_artillery_dm_windup_entity"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.4
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_6 particle = "highborne_kinetic_artillery_dm_windup_effect" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_5 particle = "highborne_kinetic_artillery_dm_windup_effect" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_4 particle = "highborne_kinetic_artillery_dm_windup_effect" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_3 particle = "highborne_kinetic_artillery_dm_windup_effect" }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "highborne_kinetic_artillery_dm_muzzle_windup_effect" trigger_once = yes keep_particle = yes }
+	}
+}
+
+# MUZZLE FLASH
+
+entity = {
+	name = "highborne_kinetic_artillery_dm_muzzle_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7 looping = no
+		event = { time = 0 particle = "highborne_kinetic_artillery_dm_muzzle_particle" keep_particle = yes sound = { soundeffect = dm_artillery_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_kinectic_artillery_fire" } }
+	}
+}
+
+# PROJECTILE
+
+entity = {
+	name = "highborne_kinetic_artillery_dm_entity"
+	pdxmesh = "highborne_kinetic_artillery_dm_tracer_round_mesh"
+	
+	default_state = idle
+	state = { name = "idle"
+		#event = { time = 0 particle = "kinetic_artillery_idle_particle" keep_particle = yes }
+	}
+	
+	scale = 2
+}
+
+# HIT EFFECT
+
+entity = {
+	name = "highborne_kinetic_artillery_dm_hit_entity"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 5.0 looping = no
+		event = { time = 0.0 particle = "highborne_kinetic_artillery_dm_hit_effect" sound = { soundeffect = kinectic_artillery_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_kinectic_artillery_hit" } }
+	}
+	default_state = "explode_med_hp"
+	scale = 2
+}
+
+
+entity = {
+	name = "highborne_kinetic_artillery_dm_shield_hit_entity"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 5 looping = no
+		event = { time = 0.0 particle = "highborne_kinetic_artillery_dm_hit_effect" }
+		event = { time = 0.0 particle = "projectile_medium_shield_hit_effect" }
+		event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	default_state = "explode_med_hp"
+	scale = 2
+}
+
+# ########################################## #
+#          DM Giga  			     	 #
+# ########################################## #
+
+
+# WINDUP
+
+entity = {
+	name = "highborne_giga_cannon_dm_windup_entity"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_8 particle = "highborne_kinetic_artillery_dm_windup_effect" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_7 particle = "highborne_kinetic_artillery_dm_windup_effect" }
+		event = { time = 0.2 use_parent_nodes = yes node = xl_windup_6 particle = "highborne_kinetic_artillery_dm_windup_effect" }
+		event = { time = 0.2 use_parent_nodes = yes node = xl_windup_5 particle = "highborne_kinetic_artillery_dm_windup_effect" }
+		event = { time = 0.4 use_parent_nodes = yes node = xl_windup_4 particle = "highborne_kinetic_artillery_dm_windup_effect" }
+		event = { time = 0.4 use_parent_nodes = yes node = xl_windup_3 particle = "highborne_kinetic_artillery_dm_windup_effect" }
+		event = { time = 0.6 use_parent_nodes = yes node = xl_windup_2 particle = "highborne_kinetic_artillery_dm_windup_effect" }
+		event = { time = 0.6 use_parent_nodes = yes node = xl_windup_1 particle = "highborne_kinetic_artillery_dm_windup_effect" }
+		
+		event = { trigger_once = yes sound = { soundeffect = "dm_giga_cannon_windup" } }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "highborne_kinetic_artillery_dm_muzzle_windup_effect" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "humanoid_01_highborne_giga_cannon_dm_windup_entity"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { trigger_once = yes sound = { soundeffect = "dm_giga_cannon_windup" } }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "highborne_kinetic_artillery_dm_muzzle_windup_effect" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "avian_01_highborne_giga_cannon_dm_windup_entity"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { trigger_once = yes sound = { soundeffect = "dm_giga_cannon_windup" } }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "highborne_kinetic_artillery_dm_muzzle_windup_effect" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "reptilian_01_highborne_giga_cannon_dm_windup_entity"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { trigger_once = yes sound = { soundeffect = "dm_giga_cannon_windup" } }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "highborne_kinetic_artillery_dm_muzzle_windup_effect" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "arthropoid_01_highborne_giga_cannon_dm_windup_entity"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { trigger_once = yes sound = { soundeffect = "dm_giga_cannon_windup" } }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "highborne_kinetic_artillery_dm_muzzle_windup_effect" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "molluscoid_01_highborne_giga_cannon_dm_windup_entity"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.4
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_6 particle = "highborne_kinetic_artillery_dm_windup_effect" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_5 particle = "highborne_kinetic_artillery_dm_windup_effect" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_4 particle = "highborne_kinetic_artillery_dm_windup_effect" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_3 particle = "highborne_kinetic_artillery_dm_windup_effect" }
+		
+		event = { trigger_once = yes sound = { soundeffect = "dm_giga_cannon_windup" } }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "highborne_kinetic_artillery_dm_muzzle_windup_effect" trigger_once = yes keep_particle = yes }
+	}
+}
+
+# MUZZLE FLASH
+
+entity = {
+	name = "highborne_giga_cannon_dm_muzzle_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7 looping = no
+		event = { time = 0 particle = "highborne_kinetic_artillery_dm_muzzle_particle" keep_particle = yes sound = { soundeffect = dm_giga_cannon_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_kinectic_artillery_fire" } }
+	}
+}
+
+# PROJECTILE
+
+entity = {
+	name = "highborne_giga_cannon_dm_entity"
+	pdxmesh = "highborne_kinetic_artillery_dm_tracer_round_mesh"
+	
+	default_state = idle
+	state = { name = "idle"
+		#event = { time = 0 particle = "kinetic_artillery_idle_particle" keep_particle = yes }
+	}
+	
+	scale = 3
+}
+
+# HIT EFFECT
+
+entity = {
+	name = "highborne_giga_cannon_dm_hit_entity"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 5.0 looping = no
+		event = { time = 0.0 particle = "highborne_kinetic_artillery_dm_hit_effect" sound = { soundeffect = kinectic_artillery_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_kinectic_artillery_hit" } }
+	}
+	default_state = "explode_med_hp"
+	scale = 3
+}
+
+
+entity = {
+	name = "highborne_giga_cannon_dm_shield_hit_entity"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 5 looping = no
+		event = { time = 0.0 particle = "highborne_kinetic_artillery_dm_hit_effect" }
+		event = { time = 0.0 particle = "projectile_medium_shield_hit_effect" }
+		event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	default_state = "explode_med_hp"
+	scale = 3
+}
+

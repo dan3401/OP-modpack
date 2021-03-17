@@ -1,0 +1,66 @@
+@missile_scale = 1.0
+
+#################
+# Drones
+#################
+# Level 1
+
+# MUZZLE FLASH
+entity = {
+	name = "darkmatter_instant_1_entity"
+	cull_radius = 1.0
+	
+	default_state = idle
+	state = { name = "idle"
+		event = { time = 0 particle = "darkmatter_idle1_particle" keep_particle = yes }
+	}
+	scale = 0.12
+}
+
+entity = {
+	name = "darkmatter_instant_2_entity"
+	cull_radius = 1.0
+	
+	default_state = idle
+	state = { name = "idle"
+		event = { time = 0 particle = "darkmatter_idle2_particle" keep_particle = yes }
+	}
+	scale = 0.12
+}
+
+entity = {
+	name = "darkmatter_instant_3_entity"
+	cull_radius = 1.0
+	
+	default_state = idle
+	state = { name = "idle"
+		event = { time = 0 particle = "darkmatter_idle3_particle" keep_particle = yes }
+	}
+	scale = 0.12
+}
+
+entity = {
+	name = "darkmatter_instant_4_entity"
+	cull_radius = 1.0
+	
+	default_state = idle
+	state = { name = "idle"
+		event = { time = 0 particle = "darkmatter_idle4_particle" keep_particle = yes }
+	}
+	scale = 0.12
+}
+
+entity = {
+	name = "darkmatter_muzzle_flash_entity"
+	cull_radius = 0.05
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7 looping = no
+		event = { time = 0 particle = "darkmatter_muzzle_flash_particle" keep_particle = yes sound = { soundeffect = "ancient_drone_fire" } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_ancient_drone_fire" } }
+		
+	}
+}
+
+
+

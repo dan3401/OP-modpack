@@ -1,0 +1,89 @@
+objectTypes = {
+
+	pdxmesh = {
+		name = "acot_enigmopolis_ring_mesh"
+		file = "gfx/models/ships/precursors/station_gate.mesh"
+		scale = 1
+
+		animation = { id = "idle"		type = "fallen_empire_01_citadel_idle_animation" }
+		
+		meshsettings = {
+			name = "large_finished_MeshShape"
+			index = 0
+			texture_diffuse = "acot_fe_stations_02_diffuse.dds"
+			texture_normal = "fallen_empire_stations_normal.dds"
+			texture_specular = "acot_curator_station_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "secondary_ring_MeshShape"
+			index = 1
+			texture_diffuse = "acot_fe_stations_02_diffuse.dds"
+			texture_normal = "fallen_empire_stations_normal.dds"
+			texture_specular = "acot_curator_station_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+	}	
+	
+	pdxmesh = {
+		name = "acot_enigmopolis_pylon_mesh"
+		file = "gfx/models/ships/fallen_empire_01/fallen_empire_station_small.mesh"
+		scale = 1
+	
+		meshsettings = {
+			name = "MeshShape"
+			index = 0
+			texture_diffuse = "acot_fe_stations_02_diffuse.dds"
+			texture_normal = "fallen_empire_stations_normal.dds"
+			texture_specular = "acot_curator_station_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+	}
+	
+	pdxmesh = {
+		name = "acot_mem_planet_shield_ambient_mesh"
+		file = "gfx/models/planets/acot_mem_planet_shield_alt_ambient.mesh"
+		scale = 2.3
+	
+		meshsettings = {
+			#name = "golfball3:MeshShape"
+			name = "golfball_alt:MeshShape"
+			index = 0
+			texture_diffuse = "ship_mask_green.dds"
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+			shader = "PdxMeshExtraDimensionalShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "acot_mem_planet_shield_alt_ambient_mesh"
+		file = "gfx/models/planets/acot_mem_planet_shield_alt_ambient.mesh"
+		scale = 2.3
+	
+		meshsettings = {
+			name = "golfball_alt:MeshShape"
+			index = 0
+			texture_diffuse = "ship_mask_green.dds"
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+			shader = "PdxMeshExtraDimensionalShip"
+		}
+	}
+
+	pdxmesh = {
+		name = "acot_alpha_planet_shield_effect_mesh"
+		file = "gfx/models/planets/apocalypse_planet_effects/planet_shield_effect.mesh"
+		
+		meshsettings = {
+			name = "planet_geosphereShape"
+			index = 0
+			texture_diffuse = "acot_alpha_planet_shield.dds"
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+			shader = "PdxMeshAlphaAdditiveAnimateUVAlphaOverride"
+		}
+	}
+
+}

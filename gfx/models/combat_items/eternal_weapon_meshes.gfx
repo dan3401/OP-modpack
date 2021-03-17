@@ -1,0 +1,72 @@
+objectTypes = {
+
+
+
+
+
+	pdxmesh = {
+		name = "eternal_kinetic_artillery_ee_tracer_round_mesh"
+		file = "gfx/models/combat_items/kinetic_artillery_tracer_round.mesh"
+		scale = 1.0
+		
+		mesheettings = {
+			texture_diffuse = "tracer_round_eternal_kinetic_artillery_ee.dds"
+		}
+	}
+
+
+
+	pdxmesh = {
+		name = "eternal_mass_driver_ee_tracer_round_mesh"
+		file = "gfx/models/combat_items/tracer_round.mesh"
+		scale = 1.0
+	
+		mesheettings = {
+		texture_diffuse = "tracer_round_eternal_mass_driver_ee.dds"
+		}	
+	}
+
+
+
+	pdxmesh = {
+		name = "eternal_kinetic_artillery_ee_tracer_round_mesh"
+		file = "gfx/models/combat_items/kinetic_artillery_tracer_round.mesh"
+		scale = 1.0
+		
+		mesheettings = {
+			texture_diffuse = "tracer_round_eternal_kinetic_artillery_ee.dds"
+		}
+	}
+
+
+	pdxmesh = {
+		name = "eternal_mass_driver_ee_tracer_round_mesh"
+		file = "gfx/models/combat_items/tracer_round.mesh"
+		scale = 1.0
+	
+		mesheettings = {
+		texture_diffuse = "tracer_round_eternal_mass_driver_ee.dds"
+		}	
+	}
+
+
+	
+	pdxmesh = {
+		name = "eternal_missile_mesh"
+		file = "gfx/models/combat_items/arthropoid_01_missile_medium.mesh"
+		scale = 1
+		
+		animation = { id = "idle"					type = "arthropoid_01_missile_medium_idle_animation" }			
+		animation = { id = "miss"					type = "arthropoid_01_missile_medium_miss_animation" }			
+		animation = { id = "miss2"					type = "arthropoid_01_missile_medium_miss2_animation" }			
+		animation = { id = "miss_revereed"			type = "arthropoid_01_missile_medium_miss_revereed_animation" }			
+		animation = { id = "miss2_revereed"			type = "arthropoid_01_missile_medium_miss2_revereed_animation" }			
+		
+		mesheettings = {
+			texture_diffuse = "eternal_missile_diffuse.dds"
+			texture_normal = "eternal_missile_normal.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+
+}
