@@ -1,0 +1,214 @@
+
+
+#####################################################
+#####											#####
+#####				eternal_empire				#####
+#####											#####
+#####################################################
+
+
+entity = {
+	name = "eternal_empire_thinktank_part1_entity"
+	pdxmesh = "thinktank_part1_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle"
+		start_event = { trigger_once = yes sound = { soundeffect = "think_tank_core_amb" } }
+		event = { time = 0 node = "center" particle = "think_tank_core_effect" keep_particle = yes trigger_once = yes }
+	}
+
+	meshsettings = {
+		name = "body1Shape"
+		index = 0
+		texture_diffuse = "eternal_empire_think_tank_01_diffuse.dds"
+		texture_normal = "eternal_empire_think_tank_01_normal.dds"
+		texture_specular = "eternal_empire_think_tank_01_specular.dds"
+		shader = "PdxMeshShip"
+	}
+		 game_data = {
+        custom_texture = "gfx/models/ships/megastructures/think_tank/think_tank_01_construction_fadein.dds"
+    }
+	
+}
+
+
+entity = {
+	name = "eternal_empire_thinktank_part2_entity"
+	pdxmesh = "thinktank_part2_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 10
+		start_event = { trigger_once = yes sound = { soundeffect = "think_tank_structure_amb_01" stop_on_state_change = yes } }
+		event = { time = 0 node = "light_locator_1" particle = "think_tank_light_blue_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "light_locator_2" particle = "think_tank_light_blue_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "light_locator_3" particle = "think_tank_light_blue_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "light_locator_4" particle = "think_tank_light_blue_effect" keep_particle = yes trigger_once = yes }
+	}
+
+	meshsettings = {
+		name = "section_05Shape"
+		index = 0
+		texture_diffuse = "eternal_empire_think_tank_01_diffuse.dds"
+		texture_normal = "eternal_empire_think_tank_01_normal.dds"
+		texture_specular = "eternal_empire_think_tank_01_specular.dds"
+		shader = "PdxMeshShip"
+	}
+		 game_data = {
+        custom_texture = "gfx/models/ships/megastructures/think_tank/think_tank_01_construction_fadein.dds"
+    }
+	
+}
+
+
+entity = {
+	name = "eternal_empire_thinktank_part3_entity"
+	pdxmesh = "thinktank_part3_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 10
+		start_event = { trigger_once = yes sound = { soundeffect = "think_tank_structure_amb_02" stop_on_state_change = yes } }
+		event = { time = 0 node = "light_locator_5" particle = "think_tank_light_blue_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "light_locator_6" particle = "think_tank_light_blue_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "light_locator_7" particle = "think_tank_light_blue_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "light_locator_8" particle = "think_tank_light_blue_effect" keep_particle = yes trigger_once = yes }
+	}
+
+	meshsettings = {
+		name = "section_04Shape"
+		index = 0
+		texture_diffuse = "eternal_empire_think_tank_01_diffuse.dds"
+		texture_normal = "eternal_empire_think_tank_01_normal.dds"
+		texture_specular = "eternal_empire_think_tank_01_specular.dds"
+		shader = "PdxMeshShip"
+	}
+		 game_data = {
+        custom_texture = "gfx/models/ships/megastructures/think_tank/think_tank_01_construction_fadein.dds"
+    }
+	
+}
+
+entity = {
+	name = "eternal_empire_thinktank_phase_01_entity"
+	locator = { name = "root"	position = { 0 0 0 } }	
+	
+	attach = { "root" = "eternal_empire_thinktank_part1_entity" }
+
+	state = { name = "construction"
+		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_construction_ambient" } }
+	}
+
+	cull_radius = 500
+}
+
+entity = {
+	name = "eternal_empire_thinktank_phase_02_entity"
+	locator = { name = "root"	position = { 0 0 0 } }	
+	
+	attach = { "root" = "eternal_empire_thinktank_part1_entity" }
+	attach = { "root" = "eternal_empire_thinktank_part2_entity" }
+
+	state = { name = "construction"
+		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_construction_ambient" } }
+	}
+
+	cull_radius = 500
+}
+
+entity = {
+	name = "eternal_empire_thinktank_phase_03_entity"
+	locator = { name = "root"	position = { 0 0 0 } }	
+	locator = { name = "rootw"	position = { 0 0 0 } rotation = {0 0 90 }}	
+	locator = { name = "roote"	position = { 0 0 0 } rotation = {0 0 45 }}
+	locator = { name = "rootq"	position = { 0 0 0 } rotation = {0 0 135 }}	
+	
+	attach = { "root" = "eternal_empire_thinktank_part1_entity" }
+	attach = { "root" = "eternal_empire_thinktank_part2_entity" }
+	attach = { "root" = "eternal_empire_thinktank_part3_entity" }
+
+	attach = { "rootw" = "eternal_empire_thinktank_part2_entity" }
+	attach = { "rootw" = "eternal_empire_thinktank_part3_entity" }
+
+	attach = { "roote" = "eternal_empire_thinktank_part2_entity" }
+	attach = { "roote" = "eternal_empire_thinktank_part3_entity" }
+
+	attach = { "rootq" = "eternal_empire_thinktank_part2_entity" }
+	attach = { "rootq" = "eternal_empire_thinktank_part3_entity" }
+
+	state = { name = "construction"
+		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_construction_ambient" } }
+	}
+
+	scale = 0.7
+	
+	cull_radius = 500
+}
+
+entity = {
+	name = "pillar_entity"
+	locator = { name = "root"	position = { 0 0 0 } }	
+	locator = { name = "rootw"	position = { 0 0 0 } rotation = { 0 0 90 }}	
+	locator = { name = "roote"	position = { 0 0 0 } rotation = { 90 0 90 }}
+	locator = { name = "rootq"	position = { 0 0 0 } rotation = { 0 0 135 }}	
+	
+	attach = { "rootw" = "eternal_empire_thinktank_part2_entity" }
+	attach = { "rootw" = "eternal_empire_thinktank_part3_entity" }
+
+	attach = { "roote" = "eternal_empire_thinktank_part2_entity" }
+	attach = { "roote" = "eternal_empire_thinktank_part3_entity" }
+
+	state = { name = "construction"
+		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_construction_ambient" } }
+	}
+
+	scale = 0.7
+	
+	cull_radius = 500
+}
+
+entity = {
+	name = "academy_entity"
+	locator = { name = "root"	position = { 0 0 0 } }
+	locator = { name = "roota"	position = { 0 0 0 } rotation = {0 90 0 }}	
+	locator = { name = "rootw"	position = { 0 0 0 } rotation = {0 90 90 }}	
+	locator = { name = "roote"	position = { 0 0 0 } rotation = {0 90 0 }}
+	locator = { name = "rootq"	position = { 0 0 0 } rotation = {0 90 90 }}	
+	
+	attach = { "root" = "eternal_sphere_phase_05_entity" }
+	attach = { "roota" = "eternal_empire_thinktank_part2_entity" }
+	attach = { "roota" = "eternal_empire_thinktank_part3_entity" }
+
+	attach = { "rootw" = "eternal_empire_thinktank_part2_entity" }
+	attach = { "rootw" = "eternal_empire_thinktank_part3_entity" }
+
+
+	state = { name = "construction"
+		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_construction_ambient" } }
+	}
+
+	scale = 0.7
+	
+	cull_radius = 500
+}
+
+entity = {
+	name = "wrath_entity"
+	locator = { name = "root"	position = { 0 0 0 } }
+	locator = { name = "roota"	position = { 0 0 0 } }
+	locator = { name = "rootb"	position = { 0 0 0 } rotation = { 45 45 0 }}	
+	locator = { name = "rootc"	position = { 0 0 0 } rotation = { -45 -45 0 }}	
+	locator = { name = "roote"	position = { 0 0 0 } rotation = { 45 -45 0 }}
+	locator = { name = "rootq"	position = { 0 0 0 } rotation = { 45 45 0 }}	
+	
+	attach = { "root" = "eternal_sphere_open_circular_entity" }
+
+	state = { name = "construction"
+		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_construction_ambient" } }
+	}
+
+	scale = 1.4
+	
+	cull_radius = 500
+}
+
+
+

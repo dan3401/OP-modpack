@@ -1,0 +1,25 @@
+ObjectTypes = {
+
+#### SWARM TITAN
+
+	pdxparticle = {
+		name = "teal_eternal_arcane_titan_projectile_muzzle_effect"
+		type = "teal_eternal_arcane_projectile_muzzle_effect"
+		
+		scale = 6.0
+	}
+	
+	pdxparticle = {
+		name = "teal_eternal_arcane_titan_projectile_effect"
+		type = "teal_eternal_arcane_titan_projectile_effect"
+		
+		scale = 6.0
+	}
+	
+	pdxparticle = {
+		name = "teal_eternal_arcane_titan_projectile_hit_effect"
+		type = "teal_eternal_arcane_titan_projectile_hit_effect"
+		
+		scale = 6.0
+	}
+}

@@ -1,0 +1,87 @@
+@corvette_scale = 6.0
+@destroyer_scale = 7.0
+@cruiser_scale = 10.0
+@battleship_scale = 12.0
+@Battlecruiser_scale = 13.0
+@LightCarrier_scale = 15.0
+@Carrier_scale = 17.0
+@military_station_large = 20.0
+@Dreadnought_scale = 20.0
+@Superdreadnought_scale = 25.0
+@Flagship_scale = 30.0
+
+
+entity = {
+	name = "reternal_empire_onion_test_entity"
+
+
+
+	
+	locator = { name = "front"				position = { 0	0  0 } rotation = { 0 90 0 } } 
+	locator = { name = "fronte"				position = { 0	0  0 } rotation = { 0 90 90 } }
+
+	attach = { "front" =  "reternal_empire_ship_front_entity" }
+	attach = { "fronte" =  "reternal_empire_ship_front_entity" }
+	
+
+	
+	default_state = "idle"
+	state = { name = "idle"		animation = "idle"
+		start_event = { trigger_once = yes sound = { soundeffect = "fallen_empire_starbase_amb" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "fallen_empire_starbase_energy_field" } }
+	}
+	
+	scale = 1.0
+	
+	game_data = {
+		shader_type = ship
+		emissive_recolor_crunch = 0.0
+	}
+}
+
+
+entity = {
+	name = "reternal_empire_academy_test_entity"
+
+	locator = { name = "root"				position = { 0	0  0 } }
+	attach = { "root" =  "reternal_empire_ship_core_entity" }
+	attach = { "root" =  "eternal_planet_supermini_gaia_entity"  }
+	
+	locator = { name = "front"				position = { 0	0  0 } rotation = { 0 90 0 } } 
+
+
+	locator = { name = "fronta"				position = { 0	0  0 } rotation = { 0 -90 0 } } 
+	
+	locator = { name = "frontt"				position = { 0	0  0 } rotation = { 0 90 90 } } 
+
+
+	locator = { name = "frontr"				position = { 0	0  0 } rotation = { 0 -90 -90 } } 
+
+	locator = { name = "frontb"				position = { 0	10  0 } rotation = { 0 0 0 } } 
+	locator = { name = "frontc"				position = { 0	-10  0 } rotation = { 0 180 0 } } 
+	
+
+	attach = { "front" =  "reternal_empire_onion_test_entity" }
+
+	
+	attach = { "fronta" =  "reternal_empire_onion_test_entity" }
+	attach = { "fronta" =  "reternal_empire_onion_test_entity" }
+	attach = { "frontb" =  "reternal_empire_onion_test_entity" }
+	attach = { "frontc" =  "reternal_empire_onion_test_entity" }	
+	
+	attach = { "frontt" =  "reternal_empire_onion_test_entity" }
+	attach = { "frontr" =  "reternal_empire_onion_test_entity" }	
+	
+	default_state = "idle"
+	state = { name = "idle"		animation = "idle"
+		start_event = { trigger_once = yes sound = { soundeffect = "fallen_empire_starbase_amb" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "fallen_empire_starbase_energy_field" } }
+	}
+	
+	scale = 1.0
+	
+	game_data = {
+		shader_type = ship
+		emissive_recolor_crunch = 0.0
+	}
+}

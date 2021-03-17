@@ -1,0 +1,458 @@
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "godiray_beam_ee"
+	color = { 1.0 1.0 1.0 1.0 }
+	hit_entity = "colossus_god_ray_megastructure_1_hit_entity"
+	shield_hit_entity = "colossus_god_ray_megastructure_1_hit_entity"
+	muzzle_flash_entity = "colossus_god_ray_muzzle_3_entity"
+	windup_entity = "colossus_god_ray_windup_entity"
+	
+	#beam specific data
+	width = 2.0
+	texture_scroll_speed = 1.0
+	texture_tiling = 5.5
+	
+	hit = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		40.0
+			0.7		5.0
+			0.9		0.0
+			1.0 	0.0
+		}
+		duration = 3.0
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		40.0
+			0.4		5.0
+			0.6		0.0
+			1.0 	0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/god_ray_laser.dds"
+	
+	shield_impact = {
+		size = large
+		loop_duration = 0.5
+		delay = 0.2
+	}
+}
+
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "godray_sky_beam_ee"
+	color = { 1.0 1.0 1.0 1.0 }
+	hit_entity = "colossus_god_ray_sky_beam_hit_entity"
+	shield_hit_entity = "colossus_god_ray_sky_beam_hit_entity"
+	muzzle_flash_entity = "colossus_god_ray_muzzle_1_entity"
+	windup_entity = "colossus_god_ray_windup_1_entity"
+	
+	#beam specific data
+	width = 2.0
+	texture_scroll_speed = 1.0
+	texture_tiling = 5.5
+	
+	hit = {
+		alpha_curve = { 
+			0.0  0.0
+			0.1 50.0
+			0.25	 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0  0.0
+		}
+		duration = 1.0
+
+	}
+	miss = {
+		alpha_curve = { 
+			0.0  0.0
+			0.1 50.0
+			0.25	 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0  0.0
+		}
+		duration = 0.4
+
+	}
+	texture = "gfx/models/combat_items/goed_ray_laser.dds"
+	
+	shield_impact = {
+		size = large
+		loop_duration = 0.5
+		delay = 0.2
+	}
+}
+
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "godray_lance_ee"
+	color = { 1.0 1.0 1.0 1.0 }
+	hit_entity = "colossus_god_ray_megastructure_2_hit_entity"
+	shield_hit_entity = "colossus_god_ray_megastructure_2_hit_entity"
+	muzzle_flash_entity = "colossus_god_ray_muzzle_1_entity"
+	windup_entity = "colossus_god_ray_windup_1_entity"
+	
+	#beam specific data
+	width = 2.5
+	texture_scroll_speed = 1.0
+	texture_tiling = 5.5
+	
+	hit = {
+		alpha_curve = { 
+			0.0  0.0
+			0.1 50.0
+			0.25	 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0  0.0
+		}
+		duration = 1.0
+
+	}
+	miss = {
+		alpha_curve = { 
+			0.0  0.0
+			0.1 50.0
+			0.25	 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0  0.0
+		}
+		duration = 0.4
+
+	}
+	texture = "gfx/models/combat_items/god_ray_lance.dds"
+	
+	shield_impact = {
+		size = medium
+		loop_duration = 0.5
+		delay = 0.2
+	}
+}
+
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "godray_laser_ee"
+	color = { 1.0 1.0 1.0 1.0 }
+	hit_entity = "colossus_god_ray_megastructure_2_hit_entity"
+	shield_hit_entity = "colossus_god_ray_megastructure_2_hit_entity"
+	muzzle_flash_entity = "colossus_god_ray_muzzle_1_entity"
+	
+
+
+	
+	#beam specific data
+	width = 2.5
+	texture_scroll_speed = 2.0
+	texture_tiling = 5.5
+	hit = {
+		alpha_curve = { 
+			0.0  0.0
+			0.1 50.0
+			0.25	 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0  0.0
+		}
+		duration = 1.0
+
+	}
+	miss = {
+		alpha_curve = { 
+			0.0  0.0
+			0.1 50.0
+			0.25	 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0  0.0
+		}
+		duration = 0.2
+
+	}
+	texture = "gfx/models/combat_items/god_ray_small_laser.dds"
+	
+	shield_impact = {
+		size = small
+		loop_duration = 0.5
+		delay = 0.2
+	}
+}
+
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "godray_laser_ee_medium"
+	color = { 1.0 1.0 1.0 1.0 }
+	hit_entity = "colossus_god_ray_megastructure_2_hit_entity"
+	shield_hit_entity = "colossus_god_ray_megastructure_2_hit_entity"
+	muzzle_flash_entity = "colossus_god_ray_muzzle_1_entity"
+	
+
+	
+	#beam specific data
+	width = 1.5
+	texture_scroll_speed = 2.0
+	texture_tiling = 5.5
+	
+	hit = {
+		alpha_curve = { 
+			0.0  0.0
+			0.1 50.0
+			0.25	 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0  0.0
+		}
+		duration = 0.5
+
+	}
+	miss = {
+		alpha_curve = { 
+			0.0  0.0
+			0.1 50.0
+			0.25	 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0  0.0
+		}
+		duration = 05
+
+	}
+	texture = "gfx/models/combat_items/god_ray_small_laser.dds"
+	
+	shield_impact = {
+		size = small
+		loop_duration = 0.5
+		delay = 0.2
+	}
+}
+
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "godray_laser_ee_mall"
+	color = { 1.0 1.0 1.0 1.0 }
+	hit_entity = "colossus_god_ray_megastructure_2_hit_entity"
+	shield_hit_entity = "colossus_god_ray_megastructure_2_hit_entity"
+	muzzle_flash_entity = "colossus_god_ray_muzzle_1_entity"
+	
+
+
+	
+	#beam specific data
+	width = 0.5
+	texture_scroll_speed = 2.0
+	texture_tiling = 5.5
+	
+	hit = {
+		alpha_curve = { 
+			0.0  0.0
+			0.1 50.0
+			0.25	 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0  0.0
+		}
+		duration = 0.5
+
+	}
+	miss = {
+		alpha_curve = { 
+			0.0  0.0
+			0.1 50.0
+			0.25	 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0  0.0
+		}
+		duration = 05
+
+	}
+	texture = "gfx/models/combat_items/god_ray_small_laser.dds"
+	
+	shield_impact = {
+		size = small
+		loop_duration = 0.5
+		delay = 0.2
+	}
+}
+
+
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "godray_pd_ee"
+	color = { 1.0 1.0 1.0 1.0 }
+	hit_entity = "colossus_god_ray_megastructure_2_hit_entity"
+	shield_hit_entity = "colossus_god_ray_megastructure_2_hit_entity"
+	muzzle_flash_entity = "colossus_god_ray_muzzle_1_entity"
+
+	
+	#beam specific data
+	width = 0.5
+	texture_scroll_speed = 1.0
+	texture_tiling = 1.0
+	
+	hit = {
+		alpha_curve = { 
+			0.0  0.0
+			0.1 50.0
+			0.25	 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0  0.0
+		}
+		duration = 0.5
+
+	}
+	miss = {
+		alpha_curve = { 
+			0.0  0.0
+			0.1 50.0
+			0.25	 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0  0.0
+		}
+		duration = 05
+
+	}
+	texture = "gfx/models/combat_items/god_ray_swirl.dds"
+	
+	shield_impact = {
+		size = small
+		loop_duration = 0.5
+		delay = 0.2
+	}
+}
+
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "godray_dis_ee"
+	color = { 1.0 1.0 1.0 1.0 }
+	hit_entity = "colossus_god_ray_megastructure_1_hit_entity"
+	shield_hit_entity = "colossus_god_ray_megastructure_1_hit_entity"
+	muzzle_flash_entity = "colossus_god_ray_ee_1_muzzle_entity"
+	windup_entity = "colossus_god_ray_windup_1_entity"
+	
+	#beam specific data
+	width = 1.5
+	texture_scroll_speed = 1.0
+	texture_tiling = 5.5
+	
+	hit = {
+		alpha_curve = { 
+			0.0  0.0
+			0.1 50.0
+			0.25	 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0  0.0
+		}
+		duration = 0.5
+
+	}
+	miss = {
+		alpha_curve = { 
+			0.0  0.0
+			0.1 50.0
+			0.25	 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0  0.0
+		}
+		duration = 05
+
+	}
+	texture = "gfx/models/combat_items/god_ray_wave.dds"
+	
+	shield_impact = {
+		size = large
+		loop_duration = 0.5
+		delay = 0.2
+	}
+}
+
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "godray_quatra_autocannon"
+	color = { 0.4 	1.0 	1.0 	1.0 }
+	hit_entity = "colossus_god_ray_megastructure_2_hit_entity"
+	shield_hit_entity = "colossus_god_ray_megastructure_2_hit_entity"
+	muzzle_flash_entity = "colossus_god_ray_muzzle_1_entity"
+		
+	#beam specific data
+	width = 2.25
+	texture_scroll_speed = 15.5
+	texture_tiling = 12.0
+	hit = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.2		1.0
+			0.9		1.0
+			1.0 	0.0
+		}
+		duration = 1.5
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.2		1.0
+			0.9		1.0
+			1.0 	0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/eternos_quadra_cannon.dds"
+	
+	shield_impact = {
+		size = large
+		loop_duration = 1.5
+		delay = 0.0
+	}
+}
+
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "godray_autocannon_oe"
+	color = { 1.0 	0.99 	0.61 	1.1 }
+	hit_entity = "acot_autocannon_oe_hit_entity"
+	shield_hit_entity = "acot_autocannon_oe_shield_hit_entity"
+	muzzle_flash_entity = "acot_autocannon_oe_muzzle_entity"
+		
+	#beam specific data
+	width = 1.10
+	texture_scroll_speed = 25.5
+	texture_tiling = 12.0
+	hit = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.2		1.0
+			0.9		1.0
+			1.0 	0.0
+		}
+		duration = 1.5
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.2		1.0
+			0.9		1.0
+			1.0 	0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/auto_cannon_diffuse.dds"
+	
+	shield_impact = {
+		size = large
+		loop_duration = 1.5
+		delay = 0.0
+	}
+}
+
+

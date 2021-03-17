@@ -1,0 +1,18 @@
+
+
+
+
+entity = {
+	name = "light_sphere_entity"
+	pdxmesh = "technosphere_mesh"
+	
+	meshsettings = {
+		name = "polySurface61Shape"
+		index = 0
+		texture_diffuse = "ee_ship_mask.dds"
+		shader = "PdxMeshExtraDimensionalShip"
+	}
+	
+	default_state = "idle"		
+	scale = 0.1
+}

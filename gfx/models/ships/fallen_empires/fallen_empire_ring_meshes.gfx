@@ -1,0 +1,76 @@
+objectTypes = {
+	#eternal Empire
+	
+	pdxmesh = {
+		name = "fallen_empire_01_habitat_large_mesh"
+		file = "gfx/models/ships/fallen_empire_01/fallen_empire_large_warship.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "finished_MeshShape"
+			index = 0
+			texture_diffuse = "fallen_empire_01_habitable_diffuse.dds"
+			texture_normal = "fallen_empire_habitable_normal.dds"
+			texture_specular = "fallen_empire_habitable_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+	}
+	pdxmesh = {
+		name = "fallen_empire_02_habitat_large_mesh"
+		file = "gfx/models/ships/fallen_empire_01/fallen_empire_large_warship.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "finished_MeshShape"
+			index = 0
+			texture_diffuse = "fallen_empire_02_habitable_diffuse.dds"
+			texture_normal = "fallen_empire_habitable_normal.dds"
+			texture_specular = "fallen_empire_habitable_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+	}
+	pdxmesh = {
+		name = "fallen_empire_03_habitat_large_mesh"
+		file = "gfx/models/ships/fallen_empire_01/fallen_empire_large_warship.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "finished_MeshShape"
+			index = 0
+			texture_diffuse = "fallen_empire_03_habitable_diffuse.dds"
+			texture_normal = "fallen_empire_habitable_normal.dds"
+			texture_specular = "fallen_empire_habitable_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+	}
+	pdxmesh = {
+		name = "fallen_empire_04_habitat_large_mesh"
+		file = "gfx/models/ships/fallen_empire_01/fallen_empire_large_warship.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "finished_MeshShape"
+			index = 0
+			texture_diffuse = "fallen_empire_04_habitable_diffuse.dds"
+			texture_normal = "fallen_empire_habitable_normal.dds"
+			texture_specular = "fallen_empire_habitable_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+	}
+	pdxmesh = {
+		name = "fallen_machine_empire_01_habitat_large_mesh"
+		file = "gfx/models/ships/fallen_empire_01/fallen_empire_large_warship.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "finished_MeshShape"
+			index = 0
+			texture_diffuse = "fallen_machine_empire_habitable_01_diffuse.dds"
+			texture_normal = "fallen_machine_empire_habitable_01_normal.dds"
+			texture_specular = "fallen_machine_empire_habitable_01_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+	}
+	
+
+}

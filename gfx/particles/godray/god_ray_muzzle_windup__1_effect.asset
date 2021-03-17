@@ -1,0 +1,68 @@
+particle={
+	name="god_ray_muzzle_windup_1_effect"
+	subsystem={
+		name="start_flare"
+		max_amount=5
+		slave_particles=0
+		emitter_type="point"
+		invert=no
+		trail=no
+		local_space=yes
+		billboard=yes
+		hide=no
+		texture={
+			file="gfx/particles/fire05.dds"
+			x=2
+			y=2
+			shader="ParticleAdditive"
+		}
+		color={
+			x=255.000
+			y=240.000
+			z=180.000
+			alpha=50.000,start_flare_alpha
+		}
+		position={
+		}
+		duration=-1.000
+		life={ 1.500 0.500 }
+		emission=2.000
+		size={ 15.000,start_flare_size 5.000 }
+		particle_yaw=0.000
+		particle_pitch=0.000
+		rotation={ 0.000 90.000 }
+		rotation_speed=25.000
+	}
+	subsystem={
+		name="flare"
+		max_amount=10
+		slave_particles=0
+		emitter_type="point"
+		invert=no
+		trail=no
+		local_space=yes
+		billboard=yes
+		hide=no
+		texture={
+			file="gfx/particles/glow.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color={
+			x=255.000
+			y=240.000
+			z=180.000
+			alpha=150.000,fade_alpha
+		}
+		position={
+		}
+		duration=-1.000
+		life=1.000
+		emission=5.000
+		size={ 15.000,grow 2.000 }
+		particle_yaw=90.000
+		particle_pitch=90.000
+		rotation={ 90.000 0.000 }
+	}
+}

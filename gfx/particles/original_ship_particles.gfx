@@ -1,0 +1,9 @@
+objectTypes = {
+
+	pdxparticle = {
+		name = "psionic_planet_surface_effect"
+		type = "psionic_planet_surface_effect"
+		
+		scale = 1.0
+	}
+}

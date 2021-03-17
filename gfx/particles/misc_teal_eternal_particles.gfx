@@ -1,0 +1,14 @@
+objectTypes = {
+	pdxparticle = {
+		name = "teal_eternal_gateway_portal_effect"
+		type = "teal_eternal_gateway_portal_effect"
+		
+		scale = 1.0
+	}
+	pdxparticle = {
+		name = "teal_eternal_gateway_portal_death_residue_effect"
+		type = "teal_eternal_gateway_portal_death_residue_effect"
+		
+		scale = 1.0
+	}
+}

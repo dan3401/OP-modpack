@@ -1,0 +1,105 @@
+objectTypes = {
+	
+	#eternal Empire
+
+	pdxmesh = {
+		name = "eternal_empire_yellow_outpost_mesh"
+		file = "gfx/models/ships/starbases/fallen_empire_01_outpost.mesh"
+		scale = 1.0
+			
+			animation = { id = "idle"		type = "fallen_empire_station_large_idle_animation" }
+			animation = { id = "death"		type = "fallen_empire_station_large_death_animation" }
+			
+		meshsettings = {
+			name = "large_finished_MeshShape"
+			index = 0
+			texture_diffuse = "eternal_empire_yellow_stations_diffuse.dds"
+			texture_normal = "eternal_empire_yellow_stations_normal.dds"
+			texture_specular = "eternal_empire_yellow_stations_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	
+	
+	pdxmesh = {
+		name = "eternal_empire_yellow_citadel_mesh"
+		file = "gfx/models/ships/starbases/fallen_empire_01_citadel.mesh"
+		scale = 1.0
+		
+		animation = { id = "idle"		type = "fallen_empire_01_citadel_idle_animation" }
+		
+		meshsettings = {
+			name = "large_finished_MeshShape"
+			index = 0
+			texture_diffuse = "eternal_empire_yellow_stations_diffuse.dds"
+			texture_normal = "eternal_empire_yellow_stations_normal.dds"
+			texture_specular = "eternal_empire_yellow_stations_specular.dds"
+			shader = "PdxMeshShip"
+		}
+
+	}
+	
+	pdxmesh = {
+		name = "eternal_empire_yellow_ion_cannon_mesh"
+		file = "gfx/models/ships/fallen_empire_01/fallen_empire_station_small.mesh"
+		scale = 1.0
+		
+		meshsettings = {
+			name = "large_finished_MeshShape"
+			index = 0
+			texture_diffuse = "eternal_empire_yellow_stations_diffuse.dds"
+			texture_normal = "eternal_empire_yellow_stations_normal.dds"
+			texture_specular = "eternal_empire_yellow_stations_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+
+	pdxmesh = {
+		name = "eternal_empire_yellow_small_ring_mesh"
+		file = "gfx/models/ships/eternal_empire_yellow/eternal_empire_yellow_small_ring.mesh"
+		scale = 1.0
+		
+		meshsettings = {
+			name = "large_finished_MeshShape"
+			index = 0
+			texture_diffuse = "eternal_empire_yellow_stations_diffuse.dds"
+			texture_normal = "eternal_empire_yellow_stations_normal.dds"
+			texture_specular = "eternal_empire_yellow_stations_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+
+	pdxmesh = {
+		name = "eternal_empire_yellow_big_ring_mesh"
+		file = "gfx/models/ships/eternal_empire_yellow/eternal_empire_yellow_big_ring.mesh"
+		scale = 1.0
+		
+		meshsettings = {
+			name = "large_finished_MeshShape"
+			index = 0
+			texture_diffuse = "eternal_empire_yellow_stations_diffuse.dds"
+			texture_normal = "eternal_empire_yellow_stations_normal.dds"
+			texture_specular = "eternal_empire_yellow_stations_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+
+	pdxmesh = {
+		name = "eternal_empire_yellow_dae_mesh"
+		file = "gfx/models/ships/eternal_empire_yellow/eternal_empire_yellow_dae.mesh"
+		scale = 1.0
+		
+		meshsettings = {
+			name = "large_finished_MeshShape"
+			index = 0
+			texture_diffuse = "eternal_empire_yellow_stations_diffuse.dds"
+			texture_normal = "eternal_empire_yellow_stations_normal.dds"
+			texture_specular = "eternal_empire_yellow_stations_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	
+
+}

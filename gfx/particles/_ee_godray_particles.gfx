@@ -1,0 +1,106 @@
+objectTypes = {
+	
+	
+	pdxparticle = {
+		name = "god_ray_laser_hit_effect"
+		type = "god_ray_laser_hit_effect"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "god_ray_laser_megastructure_hit_effect"
+		type = "god_ray_laser_megastructure_hit_effect"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "god_ray_laser_megastructure_2_hit_effect"
+		type = "god_ray_laser_megastructure_hit_effect"
+		
+		scale = 0.5
+	}
+	
+	
+	pdxparticle = {
+		name = "god_ray_muzzle_windup_effect"
+		type = "god_ray_muzzle_windup_effect"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "god_ray_muzzle_windup_1_effect"
+		type = "god_ray_muzzle_windup_1_effect"
+		
+		scale = 0.1
+	}
+	
+	pdxparticle = {
+		name = "god_ray_laser_muzzle_effect"
+		type = "god_ray_laser_muzzle_effect"
+		
+		scale = 1.0
+	}
+
+	pdxparticle = {
+		name = "god_ray_laser_1_muzzle_effect"
+		type = "god_ray_laser_1_muzzle_effect"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "habitat_god_ray_effect"
+		type = "habitat_god_ray_effect"
+		scale = 1.0
+	}
+
+	pdxparticle = {
+		name = "god_ray_sky_beam_effect"
+		type = "god_ray_sky_beam_effect"
+		scale = 1.0
+	}
+
+	pdxparticle = {
+		name = "mechanist_sky_beam_effect"
+		type = "mechanist_sky_beam_effect"
+		scale = 1.0
+	}
+
+	pdxparticle = {
+		name = "god_ray_laser_hit_o_effect"
+		type = "god_ray_laser_hit_o_effect"
+		scale = 1.0
+	}
+
+	pdxparticle = {
+		name = "mechanist_titan_laser_muzzle_windup"
+		type = "mechanist_titan_laser_muzzle_windup"
+		
+		scale = 1.5
+	}
+
+	pdxparticle = {
+		name = "mechanist_titan_laser_muzzle_particle"
+		type = "mechanist_titan_laser_muzzle_file"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "mechanist_titan_laser_hit_effect"
+		type = "mechanist_titan_laser_hit_effect"
+		
+		scale = 3.0
+	}
+
+	pdxparticle = {
+		name = "mechanist_titan_laser_shield_hit_effect"
+		type = "mechanist_titan_laser_shield_hit_effect"
+		
+		scale = 1.0
+	}
+	
+}

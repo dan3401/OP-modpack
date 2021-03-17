@@ -1,0 +1,87 @@
+objectTypes = {
+
+########################################
+#	DM Tier
+########################################
+
+
+####################
+#	MUZZLE FLASHES
+####################
+
+	
+	pdxparticle = {
+		name = "teal_eternal_missile_small_dm_muzzle_flash_particle"
+		type = "teal_eternal_missile_dm_file"
+		
+		scale = 2.0
+	}
+	
+	pdxparticle = {
+		name = "teal_eternal_missile_medium_dm_muzzle_flash_particle"
+		type = "teal_eternal_missile_dm_file"
+		
+		scale = 2.5
+	}
+	
+	pdxparticle = {
+		name = "teal_eternal_torpedo_large_dm_muzzle_particle"
+		type = "teal_eternal_torpedo_large_dm_muzzle_file"
+		
+		scale = 3.0
+	}
+	
+	
+	
+#####
+# FLYING EFFECTS
+#####
+	
+	pdxparticle = {
+		name = "teal_eternal_missile_small_dm_idle_particle"
+		type = "teal_eternal_small_missile_idle_file"
+		
+		scale = 0.25
+	}
+	
+	pdxparticle = {
+		name = "teal_eternal_missile_small_dm_idle_flame_particle"
+		type = "teal_eternal_missile_dm_idle_flame_file"
+		
+		scale = 0.25
+	}
+	
+	
+	pdxparticle = {
+		name = "teal_eternal_swarmer_missile_dm_idle_particle"
+		type = "teal_eternal_swarmer_missile_dm_idle_file"
+		
+		scale = 1.0
+	}
+	
+#########
+# HIT EFFECTS
+#########
+
+	pdxparticle = {
+		name = "teal_eternal_missile_small_dm_hit_effect"
+		type = "teal_eternal_missile_small_dm_hit_effect"
+		
+		scale = 0.25
+	}
+	
+	pdxparticle = {
+		name = "teal_eternal_torpedo_large_dm_hit_effect"
+		type = "teal_eternal_torpedo_large_dm_hit_effect"
+		
+		scale = 0.75
+	}
+
+	pdxparticle = {
+		name = "teal_eternal_swarmer_missile_dm_hit_effect"
+		type = "teal_eternal_swarmer_missile_dm_hit_effect"
+		
+		scale = 0.5
+	}
+	
+}

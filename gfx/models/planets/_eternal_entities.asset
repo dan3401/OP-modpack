@@ -1,0 +1,951 @@
+#####    Planet attachments    ######
+
+entity = {
+	name = "eternal_planet_01_entity"
+	pdxmesh = "planet_clouded_mesh"
+
+	#planet surface texture override	
+	meshsettings = {
+	name = "planet_geosphereShape"
+	texture_diffuse = "eternal_01_diffuse.dds"
+	texture_normal = "eternal_normal.dds"
+	texture_specular = "eternal_specular.dds"
+	}
+	
+	##cloud texture override
+	meshsettings = {
+	name = "clouds_geosphereShape"
+	texture_diffuse = "clouds_eternium_diffuse.dds"
+	texture_normal = "clouds_medium_normal.dds"
+	texture_specular = "clouds_medium_specular.dds"
+	}
+	
+	##cloud shadow texture override
+	meshsettings = {
+	name = "clouds_shadow_geosphereShape"
+	texture_diffuse = "clouds_medium_shadow_diffuse.dds"
+	texture_normal = "nonormal.dds"
+	texture_specular = "nospec.dds"
+	}
+
+	meshsettings = {
+		name = "polesShape"
+		texture_diffuse = "poles_tropical_1_diffuse.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+	}
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 } 
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class_02" } }
+	}
+	
+}
+
+entity = {
+	name = "eternal_pillar_01_entity"
+	
+	locator = { name = "ray2" position = { 0 -1 0 } rotation = { 0 0 0 } }
+
+	attach = { "ray2" = "eternal_pillar_fe_entity" }
+	
+	game_data = {
+		shader_type = ship
+		emissive_recolor_crunch = 1.0
+	}
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 } 
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class_02" } }
+	}
+	
+}
+
+
+
+entity = {
+	name = "psion_ee_01_entity"
+	pdxmesh = "planet_clouded_mesh"
+
+	meshsettings = {
+		name = "polySurface61Shape"
+		index = 0
+		texture_diffuse = "psion_sphere_diffuse.dds"
+		shader = "PdxMeshExtraDimensionalShip"
+	}
+}
+
+entity = {
+	name = "shielded_ee_planet_01_entity"
+	pdxmesh = "shielded_planet_mesh"
+	
+	meshsettings = {
+	name = "planet_geosphereShape"
+	texture_diffuse = "planet_ee_shield_diffuse.dds"
+	texture_normal = "nonormal.dds"
+	texture_specular = "nospec.dds"
+	}
+	
+	##pole texture override
+	meshsettings = {
+	name = "polesShape"
+	texture_diffuse = "planet_ee_shield_diffuse.dds"
+	texture_normal = "nonormal.dds"
+	texture_specular = "nospec.dds"
+	}
+	
+	##cloud texture override
+	meshsettings = {
+	name = "clouds_geosphereShape"
+	texture_diffuse = "planet_ee_psionic_shield_clouds.dds"
+	texture_normal = "nonormal.dds"
+	texture_specular = "nospec.dds"
+	
+
+	}
+	
+	##cloud shadow texture override
+	meshsettings = {
+	name = "clouds_shadow_geosphereShape"
+	texture_diffuse = "planet_shield_clouds.dds"
+	texture_normal = "nonormal.dds"
+	texture_specular = "nospec.dds"
+	
+	
+	}
+	
+	
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class_02" } }
+	}
+	
+	#scale = 10
+}
+
+entity = {
+	name = "ee_psionic_planet_01_entity"
+	pdxmesh = "planet_clouded_mesh"
+
+	#planet surface texture override	
+	meshsettings = {
+	name = "planet_geosphereShape"
+	texture_diffuse = "eternal_psionic_diffuse.dds"
+	texture_normal = "psionic_world_normals.dds"
+	texture_specular = "psionic_world_spec.dds"
+	shader = "PdxMeshPlanetEmissive"
+	}
+	
+	##cloud texture override
+	meshsettings = {
+	name = "clouds_geosphereShape"
+	texture_diffuse = "eternal_psionic_clouds.dds"
+	texture_normal = "clouds_medium_normal.dds"
+	texture_specular = "clouds_medium_specular.dds"
+
+	}
+	
+	##cloud shadow texture override
+	meshsettings = {
+	name = "clouds_shadow_geosphereShape"
+	texture_diffuse = "clouds_medium_shadow_diffuse.dds"
+	texture_normal = "nonormal.dds"
+	texture_specular = "nospec.dds"
+
+	}
+
+	meshsettings = {
+		name = "polesShape"
+		texture_diffuse = "poles_tropical_1_diffuse.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+	
+	}
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 } 
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class_02" } }
+	}
+	locator = { name = "ray" position = { 0 0 0 } rotation = { 0 90 0 } }
+	locator = { name = "ray2" position = { 0 0 0 } rotation = { 0 0 0 } }
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 90 0 } }
+	
+	attach = { "root" = "eternal_rays_entity" }
+	attach = { "ray" = "eternal_rays_again_entity" }
+	attach = { "ray2" = "psi_ring_entity" }
+	attach = { "root" = "psionic_planet_surface_effect_entity" }
+	
+	
+
+	
+	game_data = {
+		emissive_recolor_crunch = 6.0
+	}
+}
+
+entity = {
+	name = "ee_psionica_planet_02_entity"
+	pdxmesh = "planet_clouded_mesh"
+
+	#planet surface texture override	
+	meshsettings = {
+	name = "planet_geosphereShape"
+	texture_diffuse = "eternal_psionic_diffuse.dds"
+	texture_normal = "psionic_world_normals.dds"
+	texture_specular = "psionic_world_spec.dds"
+	shader = "PdxMeshPlanetEmissive"
+	}
+	
+	##cloud texture override
+	meshsettings = {
+	name = "clouds_geosphereShape"
+	texture_diffuse = "eternal_psionic_clouds.dds"
+	texture_normal = "clouds_medium_normal.dds"
+	texture_specular = "clouds_medium_specular.dds"
+
+	}
+	
+	##cloud shadow texture override
+	meshsettings = {
+	name = "clouds_shadow_geosphereShape"
+	texture_diffuse = "clouds_medium_shadow_diffuse.dds"
+	texture_normal = "nonormal.dds"
+	texture_specular = "nospec.dds"
+
+	}
+
+	meshsettings = {
+		name = "polesShape"
+		texture_diffuse = "poles_tropical_1_diffuse.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+	
+	}
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 } 
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class_02" } }
+	}
+	locator = { name = "ray" position = { 0 0 0 } rotation = { 0 90 0 } }
+	locator = { name = "ray2" position = { 0 0 0 } rotation = { 0 0 0 } }
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 90 0 } }
+	locator = { name = "ray3" position = { 0 0 0 } rotation = { 90 0 0 } }
+	attach = { "root" = "eternal_rays_entity" }
+	attach = { "ray" = "eternal_rays_again_entity" }
+	attach = { "ray2" = "psi_ring_entity" }
+	attach = { "root" = "psionic_planet_surface_effect_entity" }
+	attach = { "ray3" = "black_hole_eternos_rings_entity" }
+	
+
+	
+	game_data = {
+		emissive_recolor_crunch = 6.0
+	}
+}
+
+entity = {
+	name = "ee_heart_planet_01_entity"
+	pdxmesh = "planet_clouded_mesh"
+
+	#planet surface texture override	
+	meshsettings = {
+	name = "planet_geosphereShape"
+	texture_diffuse = "heart_planet_diffuse.dds"
+	texture_normal = "eternal_psionic_normals.dds"
+	texture_specular = "eternal_psionic_spec.dds"
+	shader = "PdxMeshPlanetEmissive"
+	}
+	
+	##cloud texture override
+	meshsettings = {
+	name = "clouds_geosphereShape"
+	texture_diffuse = "eternal_psionic_clouds.dds"
+	texture_normal = "clouds_medium_normal.dds"
+	texture_specular = "clouds_medium_specular.dds"
+
+	}
+	
+	##cloud shadow texture override
+	meshsettings = {
+	name = "clouds_shadow_geosphereShape"
+	texture_diffuse = "clouds_medium_shadow_diffuse.dds"
+	texture_normal = "nonormal.dds"
+	texture_specular = "nospec.dds"
+
+	}
+
+	meshsettings = {
+		name = "polesShape"
+		texture_diffuse = "poles_tropical_1_diffuse.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+	
+	}
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 } 
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class_02" } }
+	}
+	locator = { name = "ray" position = { 0 0 0 } rotation = { 0 90 0 } }
+	locator = { name = "ray2" position = { 0 0 0 } rotation = { 0 0 0 } }
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 90 0 } }
+	
+	attach = { "root" = "eternal_rays_entity" }
+	attach = { "ray" = "eternal_rays_again_entity" }
+	attach = { "root" = "eternal_rays_entity" }
+	attach = { "ray" = "eternal_rays_again_entity" }
+	attach = { "root" = "eternal_rays_entity" }
+	attach = { "ray" = "eternal_rays_again_entity" }
+	
+	attach = { "ray2" = "psi_ring_entity" }
+	attach = { "root" = "psionic_planet_surface_effect_entity" }
+
+	
+	game_data = {
+		emissive_recolor_crunch = 6.0
+	}
+}
+
+
+entity = {
+	name = "ee_storm_planet_01_entity"
+	pdxmesh = "planet_clouded_mesh"
+
+	#planet surface texture override	
+	meshsettings = {
+	name = "planet_geosphereShape"
+	texture_diffuse = "heart_planet_diffuse.dds"
+	texture_normal = "eternal_psionic_normals.dds"
+	texture_specular = "eternal_psionic_spec.dds"
+	shader = "PdxMeshPlanetEmissive"
+	}
+	
+	##cloud texture override
+	meshsettings = {
+	name = "clouds_geosphereShape"
+	texture_diffuse = "eternal_psionic_clouds.dds"
+	texture_normal = "clouds_medium_normal.dds"
+	texture_specular = "clouds_medium_specular.dds"
+
+	}
+	
+	##cloud shadow texture override
+	meshsettings = {
+	name = "clouds_shadow_geosphereShape"
+	texture_diffuse = "clouds_medium_shadow_diffuse.dds"
+	texture_normal = "nonormal.dds"
+	texture_specular = "nospec.dds"
+
+	}
+
+	meshsettings = {
+		name = "polesShape"
+		texture_diffuse = "poles_tropical_1_diffuse.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+	
+	}
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 } 
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class_02" } }
+	}
+	locator = { name = "ray3" position = { 0 0 0 } rotation = { 0 0 0 } }
+
+	attach = { "ray3" = "black_hole_storm_rings_entity" }
+	attach = { "ray3" = "black_hole_stormo_rings_entity" }
+
+	
+	game_data = {
+		emissive_recolor_crunch = 6.0
+	}
+}
+
+
+entity = { 
+	name = "black_hole_astropolis_rings_entity"
+	pdxmesh = "black_hole_astropolis_rings_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 5
+		start_event = { trigger_once = yes sound = { soundeffect = "ex_dimensional_portal_idle" } }
+	}
+	
+	scale = 2.0
+	
+	game_data = {
+		uv_animation_speed   = -0.025
+		uv_animation_direction  = { 0.4 0.4 }
+	}	
+}
+
+entity = { 
+	name = "black_hole_eternos_rings_entity"
+	pdxmesh = "black_hole_eternos_rings_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 5
+		start_event = { trigger_once = yes sound = { soundeffect = "ex_dimensional_portal_idle" } }
+		event = { time = 0 particle = "black_hole_particle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "root2" particle = "portal_orange_inner_effect_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "clock_12_locator" particle = "portal_orange_effect_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "ex_dimensional_portal_thunder" } }
+		event = { time = 0 node = "clock_3_locator" particle = "portal_orange_effect_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "ex_dimensional_portal_thunder" } }
+		event = { time = 0 node = "clock_6_locator" particle = "portal_orange_effect_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "ex_dimensional_portal_thunder" } }
+		event = { time = 0 node = "clock_9_locator" particle = "portal_orange_effect_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "ex_dimensional_portal_thunder" } }
+		event = { time = 0 node = "root2" particle = "portal_green_inner_effect_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "clock_12_locator" particle = "portal_green_effect_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "ex_dimensional_portal_thunder" } }
+		event = { time = 0 node = "clock_3_locator" particle = "portal_green_effect_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "ex_dimensional_portal_thunder" } }
+		event = { time = 0 node = "clock_6_locator" particle = "portal_green_effect_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "ex_dimensional_portal_thunder" } }
+		event = { time = 0 node = "clock_9_locator" particle = "portal_green_effect_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "ex_dimensional_portal_thunder" } }
+	}
+	
+	scale = 1.0
+	
+	game_data = {
+		uv_animation_speed   = -0.025
+		uv_animation_direction  = { 0.4 0.4 }
+	}	
+}
+
+entity = { 
+	name = "black_hole_storm_rings_entity"
+	pdxmesh = "black_hole_eternos_rings_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 5
+		start_event = { trigger_once = yes sound = { soundeffect = "ex_dimensional_portal_idle" } }
+		event = { time = 0 particle = "black_hole_particle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "root2" particle = "portal_orange_inner_effect_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "clock_12_locator" particle = "portal_orange_effect_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "ex_dimensional_portal_thunder" } }
+		event = { time = 0 node = "clock_3_locator" particle = "portal_orange_effect_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "ex_dimensional_portal_thunder" } }
+		event = { time = 0 node = "clock_6_locator" particle = "portal_orange_effect_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "ex_dimensional_portal_thunder" } }
+		event = { time = 0 node = "clock_9_locator" particle = "portal_orange_effect_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "ex_dimensional_portal_thunder" } }
+		event = { time = 0 node = "root2" particle = "portal_green_inner_effect_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "clock_12_locator" particle = "portal_green_effect_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "ex_dimensional_portal_thunder" } }
+		event = { time = 0 node = "clock_3_locator" particle = "portal_green_effect_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "ex_dimensional_portal_thunder" } }
+		event = { time = 0 node = "clock_6_locator" particle = "portal_green_effect_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "ex_dimensional_portal_thunder" } }
+		event = { time = 0 node = "clock_9_locator" particle = "portal_green_effect_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "ex_dimensional_portal_thunder" } }
+	}
+	
+	scale = 20.0
+	
+	game_data = {
+		uv_animation_speed   = -0.025
+		uv_animation_direction  = { 0.4 0.4 }
+	}	
+}
+
+entity = { 
+	name = "black_hole_stormo_rings_entity"
+	pdxmesh = "black_hole_eternos_rings_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 5
+		start_event = { trigger_once = yes sound = { soundeffect = "ex_dimensional_portal_idle" } }
+		event = { time = 0 particle = "black_hole_particle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "root2" particle = "portal_orange_inner_effect_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "clock_12_locator" particle = "portal_orange_effect_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "ex_dimensional_portal_thunder" } }
+		event = { time = 0 node = "clock_3_locator" particle = "portal_orange_effect_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "ex_dimensional_portal_thunder" } }
+		event = { time = 0 node = "clock_6_locator" particle = "portal_orange_effect_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "ex_dimensional_portal_thunder" } }
+		event = { time = 0 node = "clock_9_locator" particle = "portal_orange_effect_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "ex_dimensional_portal_thunder" } }
+		event = { time = 0 node = "root2" particle = "portal_green_inner_effect_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "clock_12_locator" particle = "portal_green_effect_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "ex_dimensional_portal_thunder" } }
+		event = { time = 0 node = "clock_3_locator" particle = "portal_green_effect_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "ex_dimensional_portal_thunder" } }
+		event = { time = 0 node = "clock_6_locator" particle = "portal_green_effect_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "ex_dimensional_portal_thunder" } }
+		event = { time = 0 node = "clock_9_locator" particle = "portal_green_effect_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "ex_dimensional_portal_thunder" } }
+	}
+	
+	scale = 5.0
+	
+	game_data = {
+		uv_animation_speed   = -0.025
+		uv_animation_direction  = { 0.4 0.4 }
+	}	
+}
+
+entity = {
+	name = "psionic_planet_surface_effect_entity"
+	
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" 
+		start_event = { node = "ship_locator_1" particle = "psionic_planet_surface_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "ship_locator_2" particle = "psionic_planet_surface_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "ship_locator_3" particle = "psionic_planet_surface_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "ship_locator_4" particle = "psionic_planet_surface_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "ship_locator_5" particle = "psionic_planet_surface_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "ship_locator_6" particle = "psionic_planet_surface_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "ship_locator_7" particle = "psionic_planet_surface_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "ship_locator_8" particle = "psionic_planet_surface_effect" keep_particle = yes trigger_once = yes }
+	}
+	
+	scale = 1.0
+	
+}
+
+entity = {
+	name = "eternal_rays_entity"
+
+
+	scale = 0.02
+
+	attach = { "root" = "penta_rays_entity" }
+	attach = { "root" = "hexa_rays_entity" }	
+}
+
+entity = {
+	name = "eternal_rays_again_entity"
+
+	scale = 0.03
+
+	attach = { "root" = "penta_rays_entity" }
+	attach = { "root" = "hexa_rays_entity" }	
+}
+
+entity = {
+	name = "ee_glow_entity"
+	pdxmesh = "planet_clouded_mesh"
+
+	scale = 5.0
+	#planet surface texture override	
+	meshsettings = {
+	name = "planet_geosphereShape"
+	texture_diffuse = "ship_mask.dds"
+	shader = "PdxMeshExtraDimensionalShip"
+	}
+	
+}
+
+entity = {
+	name = "eternal_city_planet_01_entity"
+	pdxmesh = "planet_clouded_mesh"
+
+	#planet surface texture override	
+	meshsettings = {
+		name = "planet_geosphereShape"
+		texture_diffuse = "eternal_planet_diffuse.dds"
+		texture_normal = "eternal_planet_normal.dds"
+		texture_specular = "eternal_planet_specular.dds"
+		shader = "PdxMeshPlanetEmissive"
+	}
+	
+	meshsettings = {
+	name = "clouds_geosphereShape"
+		texture_diffuse = "eternal_planet_diffuse.dds"
+		texture_normal = "eternal_planet_normal.dds"
+		texture_specular = "eternal_planet_specular.dds"
+		shader = "PdxMeshPlanetEmissive"
+	}
+	
+	##pole texture override
+	meshsettings = {
+		name = "polesShape"
+		texture_diffuse = "poles_tropical_1_diffuse.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+	}
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 } 
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_city_planet" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_city_planet_flyby" } }
+	}
+	
+	attach = { planet = "city_planet_surface_ships_entity" }
+	
+}
+
+
+
+
+
+entity = { # G
+	name = "ee_star_class_star_entity"
+	pdxmesh = "star_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle"
+		event = { time = 0.0 node = "planet" particle = "g_class_star_particle"  keep_particle = no trigger_once = yes sound = { soundeffect = "amb_star_fusion" } }
+		event = { trigger_once = yes sound = { soundeffect = "space_ambient" } }
+		event = { trigger_once = yes sound = { soundeffect = "falling_star" } }
+		event = { time = 0 particle = "psi_hole_effect" trigger_once = yes keep_particle = yes }
+		event = { trigger_once = yes sound = { soundeffect = "space_ambient_layer_02" } }
+	 }
+
+
+
+	 locator = { name = "loc5" position = { 0 0 0 }}
+	 attach = { "loc5" = "extra_dimensional_01_dimensional_portal_ed_entity" }
+	scale = 1.3
+}
+
+entity = { # G
+	name = "eee_star_class_star_entity"
+	pdxmesh = "star_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle"
+		event = { time = 0.0 node = "planet" particle = "ee_class_star_particle" keep_particle = no trigger_once = yes sound = { soundeffect = "amb_star_fusion" } }
+		event = { trigger_once = yes sound = { soundeffect = "space_ambient" } }
+		event = { trigger_once = yes sound = { soundeffect = "falling_star" } }
+		event = { trigger_once = yes sound = { soundeffect = "space_ambient_layer_02" } }
+	 }
+
+	 locator = { name = "loc5" position = { 0 0 0 }}
+	 attach = { "loc5" = "extra_dimensional_01_dimensional_portal_ed_entity" }
+	scale = 1.3
+}
+
+entity = {
+	name = "astropolis_effect_entity"
+	pdxmesh = ""
+    scale = 0.4
+	
+	locator = { name = "slot1"				position = { 0	0  0 } rotation = { 0 0 0 } }
+	attach = { "slot1" = "fe02_titan_laser_muzzle_entity" }
+	
+}
+
+entity = {
+	name = "eternos_planet_entity"
+	pdxmesh = "eternal_empire_citadel_mesh"	
+
+	default_state = "idle"
+	state = { name = "idle"		animation = "idle"
+		event = { time = 0 node = "light_locator_01" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "light_locator_02" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "light_locator_03" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "light_locator_04" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "light_locator_05" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "light_locator_06" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "top_node" particle = "energy_core_white_effect" keep_particle = yes trigger_once = yes }	
+		event = { time = 0 node = "bottom_node" particle = "energy_core_white_effect" keep_particle = yes trigger_once = yes }	
+		start_event = { trigger_once = yes sound = { soundeffect = "fallen_empire_starbase_amb" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "fallen_empire_starbase_energy_field" } }
+	}
+	
+	scale = 10.0
+
+	locator = { name = "slot1"				position = { 0	0  0 } rotation = { 0 0 0 } }
+
+	attach = { "slot1" = "eternal_empire_upside_ring_entity" }
+}
+
+entity = {
+	name = "twrobot_planet_01_entity"
+	pdxmesh = "planet_clouded_mesh"
+
+	#planet surface texture override	
+	meshsettings = {
+	name = "planet_geosphereShape"
+	texture_diffuse = "robot_planet_diffuse.dds"
+	texture_normal = "robot_normal.dds"
+	texture_specular = "robot_specular.dds"
+	}
+	
+	
+	##cloud shadow texture override
+	
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 } 
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class_02" } }
+	}
+	
+}
+
+
+
+entity = {
+	name = "eternal_shield_entity"
+	pdxmesh = "shielded_planet_mesh"
+	
+	meshsettings = {
+	name = "planet_geosphereShape"
+	texture_diffuse = "eternal_shield_clouds.dds"
+	texture_normal = "nonormal.dds"
+	texture_specular = "nospec.dds"
+	}
+	
+	##pole texture override
+	meshsettings = {
+	name = "polesShape"
+	texture_diffuse = "eternal_shield_clouds.dds"
+	texture_normal = "nonormal.dds"
+	texture_specular = "nospec.dds"
+	}
+	
+	##cloud texture override
+	meshsettings = {
+	name = "clouds_geosphereShape"
+	texture_diffuse = "eternal_shield_clouds.dds"
+	texture_normal = "nonormal.dds"
+	texture_specular = "nospec.dds"
+	
+
+	}
+	
+	##cloud shadow texture override
+	meshsettings = {
+	name = "clouds_shadow_geosphereShape"
+	texture_diffuse = "eternal_shield_clouds.dds"
+	texture_normal = "nonormal.dds"
+	texture_specular = "nospec.dds"
+	
+	
+	}
+	
+	
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class_02" } }
+	}
+	
+	#scale = 20
+}
+
+entity = {
+	name = "city_planet_eternal_empire_entity"
+	pdxmesh = "planet_clouded_mesh"
+
+	#planet surface texture override	
+	meshsettings = {
+		name = "planet_geosphereShape"
+		texture_diffuse = "city_eternal_empire_diffuse.dds"
+		texture_normal = "city_planet_reptilian_01_normal.dds"
+		texture_specular = "nospec.dds"
+		shader = "PdxMeshPlanetEmissive"
+	}
+	
+	##cloud texture override
+	meshsettings = {
+		name = "clouds_geosphereShape"
+		texture_diffuse = "clouds_smog_01_diffuse.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+	}
+	
+	##cloud shadow texture override
+	meshsettings = {
+		name = "clouds_shadow_geosphereShape"
+		texture_diffuse = "clouds_smog_shadow_01_diffuse.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+	}
+		
+	##pole texture override
+	meshsettings = {
+		name = "polesShape"
+		texture_diffuse = "poles_tropical_1_diffuse.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+	}
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 } 
+	}
+	
+}
+
+entity = {
+	name = "barren_planet_ichor_entity"
+	pdxmesh = "planet_non_clouded_mesh"
+	
+	meshsettings = {
+	name = "planet_geosphereShape"
+	texture_diffuse = "barren_ichor_diffuse.dds"
+	texture_normal = "barren_01_normal.dds"
+	texture_specular = "barren_01_specular.dds"
+	}
+	
+	##pole texture override
+	meshsettings = {
+	name = "polesShape"
+	texture_diffuse = "poles_barren_1_diffuse.dds"
+	texture_normal = "poles_barren_1_normal.dds"
+	texture_specular = "poles_barren_1_specular.dds"
+	}	
+	
+	default_state = "idle"
+	playback_rate = -1.0 # Rotation is reversed
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 } 
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class_02" } }
+	}
+}
+
+entity = {
+	name = "barren_planet_yellow_entity"
+	pdxmesh = "planet_non_clouded_mesh"
+	
+	meshsettings = {
+	name = "planet_geosphereShape"
+	texture_diffuse = "barren_yellow_diffuse.dds"
+	texture_normal = "barren_01_normal.dds"
+	texture_specular = "barren_01_specular.dds"
+	}
+	
+	##pole texture override
+	meshsettings = {
+	name = "polesShape"
+	texture_diffuse = "poles_barren_1_diffuse.dds"
+	texture_normal = "poles_barren_1_normal.dds"
+	texture_specular = "poles_barren_1_specular.dds"
+	}	
+	
+	default_state = "idle"
+	playback_rate = -1.0 # Rotation is reversed
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 } 
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class_02" } }
+	}
+}
+
+entity = {
+	name = "cold_barren_planet_ichor_entity"
+	pdxmesh = "planet_non_clouded_mesh"
+
+	meshsettings = {
+	name = "planet_geosphereShape"
+	texture_diffuse = "cold_barren_ichor_diffuse.dds"
+	texture_normal = "barren_01_normal.dds"
+	texture_specular = "barren_01_specular.dds"
+	}
+		
+	##pole texture override
+	meshsettings = {
+	name = "polesShape"
+	texture_diffuse = "poles_barren_1_diffuse.dds"
+	texture_normal = "poles_barren_1_normal.dds"
+	texture_specular = "poles_barren_1_specular.dds"
+	}	
+	
+	default_state = "idle"
+	playback_rate = -1.0 # Rotation is reversed
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class_02" } }
+	}
+}
+
+entity = {
+	name = "gas_giant_ichor_entity"
+	pdxmesh = "planet_no_pole_no_clouds_mesh"
+	
+	meshsettings = {
+	name = "planet_geosphereShape"
+	texture_diffuse = "gas_giant_ichor_diffuse.dds"
+	texture_normal = "gas_giant_01_normal.dds"
+	texture_specular = "gas_giant_01_specular.dds"
+	}
+	
+	meshsettings = {
+	name = "clouds_geosphereShape"
+	texture_diffuse = "clouds_galactic_diffuse.dds"
+	texture_normal = "clouds_medium_normal.dds"
+	texture_specular = "clouds_medium_specular.dds"
+	}
+	
+	default_state = "idle"	
+	#playback_rate = -1.0 # Rotation is reversed
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 } 
+		start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+	}
+	scale = 1.2
+}
+
+entity = {
+	name = "gas_giant_yellow_entity"
+	pdxmesh = "planet_no_pole_no_clouds_mesh"
+	
+	meshsettings = {
+	name = "planet_geosphereShape"
+	texture_diffuse = "gas_giant_yellow_diffuse.dds"
+	texture_normal = "gas_giant_01_normal.dds"
+	texture_specular = "gas_giant_01_specular.dds"
+	}
+	
+	default_state = "idle"	
+	#playback_rate = -1.0 # Rotation is reversed
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 } 
+		start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+	}
+	scale = 1.2
+}
+
+
+entity = {
+	name = "planet_ichor_1_entity"	
+	pdxmesh = "planet_clouded_mesh"
+	
+	meshsettings = {
+		name = "atmosphere_geosphereShape"
+		index = 0
+		shader = "PdxMeshAtmosphere"
+	}
+	
+	meshsettings = {
+		name = "planet_geosphereShape"
+		texture_diffuse = "Ichor_1.dds"
+		texture_normal = "infected_planet_01_stage_2_normal.dds"
+		texture_specular = "infected_planet_01_stage_2_specular.dds"
+		shader = "PdxMeshPlanetEmissive"
+	}
+	
+	meshsettings = {
+		name = "clouds_geosphereShape"
+		texture_diffuse = "clouds_thin_diffuse.dds"
+		texture_normal = "clouds_thin_normal.dds"
+		texture_specular = "clouds_thin_specular.dds"
+		shader = "PdxMeshClouds"
+	}
+	
+	meshsettings = {
+		name = "clouds_shadow_geosphereShape"
+		texture_diffuse = "clouds_thin_shadow_diffuse.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+		shader = "PdxMeshClouds"
+	}
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class_02" } }
+	}
+	
+}
+
+entity = {
+	name = "molten_ichor_01_entity"
+	pdxmesh = "planet_no_pole_no_clouds_mesh"
+	
+	 
+	meshsettings = {
+	name = "planet_geosphereShape"
+	shader = "PdxMeshPlanetEmissive"
+	texture_diffuse = "molten_ichor_diffuse.dds"
+	texture_normal = "molten_01_normals.dds"
+	texture_specular = "molten_01_specular.dds"
+	}
+	
+	default_state = "idle"
+	playback_rate = -1.0 # Rotation is reversed
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_molten_world_a" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_molten_world_b" } }
+	}
+}
+
+

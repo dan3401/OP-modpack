@@ -1,0 +1,106 @@
+
+#####################################################
+#####											#####
+#####				eternal_empire				#####
+#####											#####
+#####################################################
+
+entity = {
+	name = "eternal_empire_strategic_coordination_center_stage_1_entity"
+	pdxmesh = ""
+	
+	locator = { name = "slot2"				position = { 0	0  0 } rotation = {	0	90	 0	} }
+	locator = { name = "slot3"				position = { 0	0  0 } rotation = {	0	90	 90	} }
+	locator = { name = "slot4"				position = { 0	0  0 } rotation = {	0	90	 180	} }
+	locator = { name = "slot5"				position = { 0	0  0 } rotation = {	0	90	 270	} }
+	
+	attach = { "slot2" 		 		= "eternal_empire_orbital_station_habitat_section_entity" }
+	attach = { "slot3" 		 		= "eternal_empire_orbital_station_habitat_section_entity" }
+	attach = { "slot4" 		 		= "eternal_empire_orbital_station_habitat_section_entity" }
+	attach = { "slot5" 		 		= "eternal_empire_orbital_station_habitat_section_entity" }
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 5 
+		event = { time = 0 node = "light_locator_01" particle = "ship_light_blue_effect" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "light_locator_02" particle = "ship_light_blue_effect" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "light_locator_03" particle = "ship_light_blue_effect" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "light_locator_04" particle = "ship_light_blue_effect" trigger_once = yes keep_particle = yes }
+
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_strategic_coordination_center_hum" } }
+	}
+}
+
+entity = {
+	name = "eternal_empire_strategic_coordination_center_stage_2_entity"
+	pdxmesh = ""
+	
+	locator = { name = "slot2"				position = { 0	0  0 } rotation = {	0	90	 0	} }
+	locator = { name = "slot3"				position = { 0	0  0 } rotation = {	0	90	 90	} }
+	locator = { name = "slot4"				position = { 0	0  0 } rotation = {	0	90	 180	} }
+	locator = { name = "slot5"				position = { 0	0  0 } rotation = {	0	90	 270	} }
+	
+	locator = { name = "slot6"				position = { 0	20  0 } rotation = {	0	90	 0	} }
+	locator = { name = "slot7"				position = { 0  -20  0 } rotation = { 0	270	 0	} }
+	locator = { name = "slot8"				position = { 0	0  0 } rotation = { 0	0	 0	} }
+	locator = { name = "slot9"				position = { 0	0  0 } rotation = {	0	180	 0	} }
+	
+	attach = { "slot2" 		 		= "eternal_empire_orbital_station_habitat_section_entity" }
+	attach = { "slot3" 		 		= "eternal_empire_orbital_station_habitat_section_entity" }
+	attach = { "slot4" 		 		= "eternal_empire_orbital_station_habitat_section_entity" }
+	attach = { "slot5" 		 		= "eternal_empire_orbital_station_habitat_section_entity" }
+	
+	attach = { "slot6" 		 		= "eternal_empire_construction_ship_entity" }
+	attach = { "slot7" 		 		= "eternal_empire_construction_ship_entity" }
+	attach = { "slot8" 		 		= "eternal_empire_battleship_bow_L1M1S2_entity" }
+	attach = { "slot9" 		 		= "eternal_empire_battleship_bow_L1M1S2_entity" }
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" animation_speed = 0.7 
+		start_event = { node = "part1" particle = "mega_art_core_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "part2" particle = "mega_art_core_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "part3" particle = "mega_art_core_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_mega_art_installation_hum" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_mega_art_installation_energy" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_mega_art_installation_glitches" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_strategic_coordination_center_hum" } }
+	}
+	
+	attach = { part1_upper = "mega_art_institution_01_core_effect_entity" }
+	attach = { part2_upper = "mega_art_institution_01_core_effect_entity" }
+	attach = { part3_upper = "mega_art_institution_01_core_effect_entity" }
+
+		
+	
+}
+
+entity = {
+	name = "eternal_empire_strategic_coordination_center_stage_3_entity"
+	pdxmesh = ""
+	
+	scale = 0.5
+	
+	locator = { name = "slot2"				position = { 0	0  0 } rotation = {	0	180	 0	} }
+	locator = { name = "slot3"				position = { 0	-40  0 } rotation = {	0	0	 0	} }
+	locator = { name = "slot4"				position = { 0	0  0 } rotation = {	0	90	 180	} }
+	locator = { name = "slot5"				position = { 0	0  0 } rotation = {	0	90	 270	} }
+	locator = { name = "slot22"				position = { 0	0  0 } rotation = {	0	90	 0	} }
+	locator = { name = "slot9"				position = { 0	-20  0 } rotation = {	0	180	 0	} }
+	
+	attach = { "slot2" 		 		= "eternal_empire_ring_citadel_entity" }
+	attach = { "slot3" 		 		= "eternal_empire_ring_citadel_entity" }
+	
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 5 
+		event = { time = 0 node = "light_locator_01" particle = "ship_light_blue_effect" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "light_locator_02" particle = "ship_light_blue_effect" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "light_locator_03" particle = "ship_light_blue_effect" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "light_locator_04" particle = "ship_light_blue_effect" trigger_once = yes keep_particle = yes }
+
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_strategic_coordination_center_hum" } }
+	}
+}
+
+
+

@@ -1,0 +1,17 @@
+objectTypes = {
+
+####################
+#	WINDUP
+####################
+	
+	pdxparticle = {
+		name = "g_tachyon_lance_muzzle_particle"
+		type = "g_tachyon_lance_muzzle"
+		
+		scale = 1.5
+	}
+	
+
+	
+	
+	

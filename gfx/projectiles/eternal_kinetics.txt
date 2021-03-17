@@ -1,0 +1,101 @@
+#####  DM PLASMA
+
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "eternal_kinetic_cannon_s"
+	color =  {  0.6		0.6		0.6	1.0 }
+	hit_entity = "both_eternal_plasma_cannon_dm_small_hit_entity"
+	shield_hit_entity = "both_eternal_plasma_cannon_dm_small_shield_hit_entity"
+	muzzle_flash_entity = "both_eternal_plasma_cannon_dm_small_muzzle_flash_entity"
+	
+	#ballistic specific
+	entity = "battach_both_eternal_plasma_cannon_dm_small_entity"
+	speed = 90.0			#preferred speed of the projectile
+	max_duration = 3.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = small
+		delay = 0.0
+	}
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "eternal_kinetic_cannon_m"
+	color =  { 0.6		0.6		0.6 	1.0 }
+	hit_entity = "both_eternal_plasma_cannon_dm_medium_hit_entity"
+	shield_hit_entity = "both_eternal_plasma_cannon_dm_medium_shield_hit_entity"
+	muzzle_flash_entity = "both_eternal_plasma_cannon_dm_medium_muzzle_flash_entity"
+	
+	#ballistic specific
+	entity = "battach_both_eternal_plasma_cannon_dm_medium_entity"
+	speed = 90.0			#preferred speed of the projectile
+	max_duration = 3.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "eternal_kinetic_cannon_l"
+	color =  {  0.6		0.6		0.6 	1.0 }
+	hit_entity = "both_eternal_plasma_cannon_dm_large_hit_entity"
+	shield_hit_entity = "both_eternal_plasma_cannon_dm_large_shield_hit_entity"
+	muzzle_flash_entity = "both_eternal_plasma_cannon_dm_large_muzzle_flash_entity"
+	
+	#ballistic specific
+	entity = "battach_both_eternal_plasma_cannon_dm_large_entity"
+	speed = 90.0			#preferred speed of the projectile
+	max_duration = 3.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "eternal_kinetic_cannon_XL"
+	color =  {  0.6		0.6		0.6 	1.0 }
+	hit_entity = "both_eternal_plasma_cannon_dm_large_hit_entity"
+	shield_hit_entity = "both_eternal_plasma_cannon_dm_large_shield_hit_entity"
+	muzzle_flash_entity = "both_eternal_plasma_cannon_dm_large_muzzle_flash_entity"
+	
+	#ballistic specific
+	entity = "both_eternal_super_kinetic_cannon_dm_large_entity"
+	speed = 390.0			#preferred speed of the projectile
+	max_duration = 3.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "eternal_continuum_deto_cannon_XL"
+	color =  {  0.6		0.6		0.6 	1.0 }
+	hit_entity = "super_deto_plasma_cannon_dm_large_hit_entity"
+	shield_hit_entity = "super_deto_plasma_cannon_dm_large_hit_entity"
+
+	
+	#ballistic specific
+	
+	speed = 390.0			#preferred speed of the projectile
+	max_duration = 3.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+
+

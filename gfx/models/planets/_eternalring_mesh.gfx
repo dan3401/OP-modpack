@@ -1,0 +1,71 @@
+		########################################################
+		###			ORBITALRING MESHES
+		########################################################
+
+		
+objectTypes = {
+
+		pdxmesh = {
+			name = "eternalring_habitable_mesh"
+			file = "gfx/models/planets/ringworld_habitable.mesh"
+			
+			scale = 0.554
+		}
+		
+		pdxmesh = {
+			name = "eternalring_tech_mesh"
+			file = "gfx/models/planets/ringworld_tech.mesh"
+			
+			scale = 0.554
+		}
+
+		pdxmesh = {
+			name = "eternalring_seam_mesh"
+			file = "gfx/models/planets/ringworld_seam.mesh"
+			
+			scale = 0.554
+		}
+
+		
+		pdxmesh = {
+			name = "psi_ring_01_mesh"
+			file = "gfx/models/planets/gas_giant_rings_01.mesh"
+			scale = 1
+
+			meshsettings = {
+				name = "ring"
+				index = 0
+				texture_diffuse = "psi_ring_diffuse.dds"
+				texture_normal = "psi_ring_normal.dds"
+				texture_specular = "psi_ring_specular.dds"
+				shader = "PdxMeshExtraDimensionalShip"
+			}
+
+
+			cull_distance = 99999999.0f
+	}
+	
+	pdxmesh = {
+		name = "black_hole_eternos_rings_mesh"
+		file = "gfx/models/planets/black_hole_rings.mesh"
+		scale = 1
+		cull_distance = 99999999.0f
+		meshsettings = {
+			shader = PdxMeshAlphaAdditiveAnimateUVNoDissolve
+			index = 0
+			texture_diffuse = "black_hole_eternos_rings_diffuse.dds"
+		}
+	}
+	pdxmesh = {
+		name = "black_hole_astropolis_rings_mesh"
+		file = "gfx/models/planets/black_hole_rings.mesh"
+		scale = 1
+		cull_distance = 99999999.0f
+		meshsettings = {
+			shader = PdxMeshAlphaAdditiveAnimateUVNoDissolve
+			index = 0
+			texture_diffuse = "black_hole_astropolis_rings_diffuse.dds"
+		}
+	}
+
+}

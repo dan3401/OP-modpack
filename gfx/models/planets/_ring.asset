@@ -1,0 +1,868 @@
+########################################################
+###			eternalRING - REFERENCES
+########################################################
+
+
+@ringworld_segment_size = 50
+
+entity = {
+	name = "#ee_ring_entity"
+	pdxmesh = "eternal_empire_yellow_warship_small_mesh"
+	cull_radius = 500
+
+	default_state = "idle"
+	state = { name = "idle" state_time = 5 }		
+	scale = 4.8
+			
+}
+
+
+entity = {
+	name = "ee_ring_entity"
+	pdxmesh = "eternal_empire_yellow_warship_large_mesh"
+	cull_radius = 500
+
+	default_state = "idle"
+	state = { name = "idle" state_time = 5 }		
+	scale = 2.8
+			
+}
+
+entity = {
+	name = "eternalring_habitable_entity_01_entity"
+	cull_radius = 500
+		
+	locator = { name = "feri" rotation = { 0 180 -90 } position = { 0 0 0} }
+	attach = { "feri" = "ee_ring_entity" }
+
+
+
+	
+}
+
+entity = {
+	name = "eternalring_tech_entity_01_entity"
+	cull_radius = 500
+	
+		
+	locator = { name = "feri" rotation = { 0 180 -90 } position = { 0 0 0} }
+	attach = { "feri" = "ee_ring_entity" }
+}
+
+
+entity = {
+	name = "living_ring_entity"
+	pdxmesh = "eternal_empire_yellow_habitat_large_mesh"
+	cull_radius = 500
+
+	default_state = "idle"
+	state = { name = "idle" state_time = 5 }		
+	scale = 2.8
+			
+}
+
+entity = {
+	name = "ringworld_piece_habitable_entity"
+	cull_radius = 500
+	
+	scale = 1.8
+	locator = { name = "feri" rotation = { 0 180 -90 } position = { 0 0 0} }
+	locator = { name = "feru" rotation = { 0 180 0 } position = { 0 0 1 } }
+	locator = { name = "fera" rotation = { 0 180 0 } position = { -7 0 7 } }
+	attach = { "feri" = "living_ring_entity" }
+	attach = { "feru" = "living_ring_entity" }
+
+
+	game_data = {
+		shader_type = ship
+		emissive_recolor_crunch = 1.0
+	}
+}
+
+entity = {
+	name = "ringworld_piece_entity"
+	cull_radius = 500
+	
+	scale = 1.8
+	locator = { name = "feri" rotation = { 0 180 -90 } position = { 0 0 0} }
+	attach = { "feri" = "ee_ring_entity" }
+
+	game_data = {
+		shader_type = ship
+		emissive_recolor_crunch = 1.0
+	}
+}
+
+
+ ## Eternal Ring ##
+###########################################
+entity = {
+	name = "eternal_empire_eternalring_habitable_entity_01_entity"
+	cull_radius = 500
+	
+	
+	locator = { name = "feri" rotation = { 0 180 -90 } position = { 0 0 0} }
+	attach = { "feri" = "ee_ring_entity" }
+
+
+	
+}
+
+entity = {
+	name = "eternal_empire_eternalring_tech_entity_01_entity"
+	cull_radius = 500
+
+	
+		
+	locator = { name = "feri" rotation = { 0 180 -90 } position = { 0 0 0} }
+	attach = { "feri" = "ee_ring_entity" }
+
+
+	
+}
+
+entity = {
+	name = "eternal_empire_eternalring_seam_entity_01_entity"
+	cull_radius = 500
+
+	locator = { name = "feri" rotation = { 0 180 -90 } position = { 0 0 0} }
+	attach = { "feri" = "ee_ring_entity" }
+
+
+	
+}
+
+
+
+
+
+
+########################################################
+###			eternalRING - GAME ENTITIES
+########################################################
+
+
+entity = {
+	name = "eternal_empire_diffrentthing_entity"
+	cull_radius = 500
+	
+	locator = { name = "loc101" position = { 250 0 0 } rotation = { 90 0 0 }}
+	locator = { name = "loc102" position = { 216.5 0 125 } rotation = { 60 0 0 }}
+	locator = { name = "loc103" position = { 125 0 216.5 } rotation = { 30 0 0 }}
+	locator = { name = "loc104" position = { 0 0 250 } rotation = { 0 0 0 }}
+	locator = { name = "loc105" position = { -125 0 216.5 } rotation = { -30 0 0 }}
+	locator = { name = "loc106" position = { -216.5 0 125 } rotation = { -60 0 0 }}
+	locator = { name = "loc107" position = { -250 0 0 } rotation = { -90 0 0 }}
+	locator = { name = "loc108" position = { -216.5 0 -125 } rotation = { -120 0 0 }}
+	locator = { name = "loc109" position = { -125 0 -216.5 } rotation = { -150 0 0 }}	
+	locator = { name = "loc110" position = { 0 0 -250 } rotation = { -180 0 0 }}
+	locator = { name = "loc111" position = { 125 0 -216.5 } rotation = { -210 0 0 }}
+	locator = { name = "loc112" position = { 216.5 0 -125 } rotation = { -240 0 0 }}
+ 
+	attach = { "loc101" = "eternal_empire_eternalring_habitable_entity_01_entity" }
+	attach = { "loc102" = "eternal_empire_eternalring_tech_entity_01_entity" }
+	attach = { "loc103" = "eternal_empire_eternalring_habitable_entity_01_entity" }
+	attach = { "loc104" = "eternal_empire_eternalring_tech_entity_01_entity" }
+	attach = { "loc105" = "eternal_empire_eternalring_habitable_entity_01_entity" }
+	attach = { "loc106" = "eternal_empire_eternalring_tech_entity_01_entity" }
+	attach = { "loc107" = "eternal_empire_eternalring_habitable_entity_01_entity" }
+	attach = { "loc108" = "eternal_empire_eternalring_tech_entity_01_entity" }
+	attach = { "loc109" = "eternal_empire_eternalring_habitable_entity_01_entity" }
+	attach = { "loc110" = "eternal_empire_eternalring_tech_entity_01_entity" }
+	attach = { "loc111" = "eternal_empire_eternalring_habitable_entity_01_entity" }
+	attach = { "loc112" = "eternal_empire_eternalring_tech_entity_01_entity" }
+
+	
+	scale = 0.4 # change to increase or decrease distance between stars and rings, also effects planetary ring!
+}
+
+entity = {
+	name = "eternal_empire_anthiliary_entity"
+	cull_radius = 500
+	
+	locator = { name = "loc101" position = { 250 0 0 } rotation = { 90 0 0 }}
+	locator = { name = "loc102" position = { 216.5 0 125 } rotation = { 60 0 0 }}
+	locator = { name = "loc103" position = { 125 0 216.5 } rotation = { 30 0 0 }}
+	locator = { name = "loc104" position = { 0 0 250 } rotation = { 0 0 0 }}
+	locator = { name = "loc105" position = { -125 0 216.5 } rotation = { -30 0 0 }}
+	locator = { name = "loc106" position = { -216.5 0 125 } rotation = { -60 0 0 }}
+	locator = { name = "loc107" position = { -250 0 0 } rotation = { -90 0 0 }}
+	locator = { name = "loc108" position = { -216.5 0 -125 } rotation = { -120 0 0 }}
+	locator = { name = "loc109" position = { -125 0 -216.5 } rotation = { -150 0 0 }}	
+	locator = { name = "loc110" position = { 0 0 -250 } rotation = { -180 0 0 }}
+	locator = { name = "loc111" position = { 125 0 -216.5 } rotation = { -210 0 0 }}
+	locator = { name = "loc112" position = { 216.5 0 -125 } rotation = { -240 0 0 }}
+ 
+	attach = { "loc101" = "eternal_empire_eternalring_tech_entity_01_entity" }
+	attach = { "loc102" = "eternal_empire_eternalring_tech_entity_01_entity" }
+	attach = { "loc103" = "eternal_empire_eternalring_tech_entity_01_entity" }
+	attach = { "loc104" = "eternal_empire_eternalring_tech_entity_01_entity" }
+	attach = { "loc105" = "eternal_empire_eternalring_tech_entity_01_entity" }
+	attach = { "loc106" = "eternal_empire_eternalring_tech_entity_01_entity" }
+	attach = { "loc107" = "eternal_empire_eternalring_tech_entity_01_entity" }
+	attach = { "loc108" = "eternal_empire_eternalring_tech_entity_01_entity" }
+	attach = { "loc109" = "eternal_empire_eternalring_tech_entity_01_entity" }
+	attach = { "loc110" = "eternal_empire_eternalring_tech_entity_01_entity" }
+	attach = { "loc111" = "eternal_empire_eternalring_tech_entity_01_entity" }
+	attach = { "loc112" = "eternal_empire_eternalring_tech_entity_01_entity" }
+
+	
+	scale = 0.4 # change to increase or decrease distance between stars and rings, also effects planetary ring!
+}
+
+entity = {
+	name = "eternal_empire_fortress_ee_entity"
+	cull_radius = 500
+	
+	locator = { name = "loc101" position = { 250 0 0 } rotation = { 90 0 0 }}
+	locator = { name = "loc102" position = { 216.5 0 125 } rotation = { 60 0 0 }}
+	locator = { name = "loc103" position = { 125 0 216.5 } rotation = { 30 0 0 }}
+	locator = { name = "loc104" position = { 0 0 250 } rotation = { 0 0 0 }}
+	locator = { name = "loc105" position = { -125 0 216.5 } rotation = { -30 0 0 }}
+	locator = { name = "loc106" position = { -216.5 0 125 } rotation = { -60 0 0 }}
+	locator = { name = "loc107" position = { -250 0 0 } rotation = { -90 0 0 }}
+	locator = { name = "loc108" position = { -216.5 0 -125 } rotation = { -120 0 0 }}
+	locator = { name = "loc109" position = { -125 0 -216.5 } rotation = { -150 0 0 }}	
+	locator = { name = "loc110" position = { 0 0 -250 } rotation = { -180 0 0 }}
+	locator = { name = "loc111" position = { 125 0 -216.5 } rotation = { -210 0 0 }}
+	locator = { name = "loc112" position = { 216.5 0 -125 } rotation = { -240 0 0 }}
+ 
+	attach = { "loc101" = "eternal_empire_eternalring_seam_entity_01_entity" }
+	attach = { "loc102" = "eternal_empire_eternalring_tech_entity_01_entity" }
+	attach = { "loc103" = "eternal_empire_eternalring_seam_entity_01_entity" }
+	attach = { "loc104" = "eternal_empire_eternalring_tech_entity_01_entity" }
+	attach = { "loc105" = "eternal_empire_eternalring_seam_entity_01_entity" }
+	attach = { "loc106" = "eternal_empire_eternalring_tech_entity_01_entity" }
+	attach = { "loc107" = "eternal_empire_eternalring_seam_entity_01_entity" }
+	attach = { "loc108" = "eternal_empire_eternalring_tech_entity_01_entity" }
+	attach = { "loc109" = "eternal_empire_eternalring_seam_entity_01_entity" }
+	attach = { "loc110" = "eternal_empire_eternalring_tech_entity_01_entity" }
+	attach = { "loc111" = "eternal_empire_eternalring_seam_entity_01_entity" }
+	attach = { "loc112" = "eternal_empire_eternalring_tech_entity_01_entity" }
+
+	
+	scale = 0.4 # change to increase or decrease distance between stars and rings, also effects planetary ring!
+}
+
+entity = {
+	name = "eternal_empire_superring_ee_entity"
+	cull_radius = 500
+	
+	locator = { name = "loc101" position = { 250 0 0 } rotation = { 90 0 0 }}
+	locator = { name = "loc102" position = { 216.5 0 125 } rotation = { 60 0 0 }}
+	locator = { name = "loc103" position = { 125 0 216.5 } rotation = { 30 0 0 }}
+	locator = { name = "loc104" position = { 0 0 250 } rotation = { 0 0 0 }}
+	locator = { name = "loc105" position = { -125 0 216.5 } rotation = { -30 0 0 }}
+	locator = { name = "loc106" position = { -216.5 0 125 } rotation = { -60 0 0 }}
+	locator = { name = "loc107" position = { -250 0 0 } rotation = { -90 0 0 }}
+	locator = { name = "loc108" position = { -216.5 0 -125 } rotation = { -120 0 0 }}
+	locator = { name = "loc109" position = { -125 0 -216.5 } rotation = { -150 0 0 }}	
+	locator = { name = "loc110" position = { 0 0 -250 } rotation = { -180 0 0 }}
+	locator = { name = "loc111" position = { 125 0 -216.5 } rotation = { -210 0 0 }}
+	locator = { name = "loc112" position = { 216.5 0 -125 } rotation = { -240 0 0 }}
+ 
+	attach = { "loc101" = "eternal_empire_eternalring_seam_entity_01_entity" }
+	attach = { "loc102" = "eternal_empire_eternalring_tech_entity_01_entity" }
+	attach = { "loc103" = "ringworld_piece_habitable_entity" }
+	attach = { "loc104" = "eternal_empire_eternalring_tech_entity_01_entity" }
+	attach = { "loc105" = "eternal_empire_eternalring_seam_entity_01_entity" }
+	attach = { "loc106" = "ringworld_piece_habitable_entity" }
+	attach = { "loc107" = "eternal_empire_eternalring_seam_entity_01_entity" }
+	attach = { "loc108" = "eternal_empire_eternalring_tech_entity_01_entity" }
+	attach = { "loc109" = "ringworld_piece_habitable_entity" }
+	attach = { "loc110" = "eternal_empire_eternalring_tech_entity_01_entity" }
+	attach = { "loc111" = "eternal_empire_eternalring_seam_entity_01_entity" }
+	attach = { "loc112" = "ringworld_piece_habitable_entity" }
+
+	
+	scale = 0.4 # change to increase or decrease distance between stars and rings, also effects planetary ring!
+}
+
+
+entity = {
+	name = "eternal_anthiliary_entity_01_entity"
+	cull_radius = 500
+	
+	locator = { name = "loc101" position = { 0 0 0 } rotation = { 0 40 0 }}
+	locator = { name = "loctw" position = { 0 0 0 } rotation = { 0 135 0 }}
+
+	attach = { "loc101" = "eternal_empire_fortress_ee_entity" }
+	attach = { "loctw" = "eternal_empire_anthiliary_entity" }	
+
+	scale = 3
+}
+
+entity = {
+	name = "eternal_anthiliary_2_entity_01_entity"
+	cull_radius = 500
+	
+	locator = { name = "loc101" position = { 0 0 0 } rotation = { 0 165 0 }}
+	locator = { name = "loctw" position = { 0 0 0 } rotation = { 0 120 0 }}
+
+	attach = { "loc101" = "eternal_empire_fortress_ee_entity" }
+	attach = { "loctw" = "eternal_empire_anthiliary_entity" }	
+
+	scale = 2.5
+}
+
+entity = {
+	name = "eternal_anthiliary_3_entity_01_entity"
+	cull_radius = 500
+	
+	locator = { name = "loc101" position = { 0 0 0 } rotation = { 0 90 0 }}
+	locator = { name = "loctw" position = { 0 0 0 } rotation = { 0 90 0 }}
+
+	attach = { "loc101" = "eternal_empire_diffrentthing_entity" } 
+
+	scale = 3.5
+}
+
+entity = {
+	name = "eternal_anthiliary_3b_entity_01_entity"
+	cull_radius = 500
+	
+	locator = { name = "loc101" position = { 0 0 0 } rotation = { 0 135 0 }}
+	locator = { name = "loctw" position = { 0 0 0 } rotation = { 0 45 0 }}
+
+	attach = { "loc101" = "eternal_empire_anthiliary_entity" }
+	attach = { "locw" = "eternal_empire_anthiliary_entity" }
+	
+	scale = 1.7
+}
+
+entity = {
+	name = "eternal_anthiliary_3c_entity_01_entity"
+	cull_radius = 500
+	
+	locator = { name = "loc101" position = { 0 0 0 } rotation = { 0 110 0 }}
+	locator = { name = "loctw" position = { 0 0 0 } rotation = { 0 155 0 }}
+
+	attach = { "loc101" = "eternal_empire_anthiliary_entity" }
+	attach = { "locw" = "eternal_empire_anthiliary_entity" }
+	
+	scale = 3.2
+}
+
+
+entity = {
+	name = "eternal_anthiliary_3c_entity_01_entity"
+	cull_radius = 500
+	
+	locator = { name = "loc101" position = { 0 0 0 } rotation = { 0 150 0 }}
+	locator = { name = "loctw" position = { 0 0 0 } rotation = { 0 200 0 }}
+	locator = { name = "locta" position = { 0 0 0 } rotation = { 0 75 0 }}
+
+	attach = { "loc101" = "eternal_empire_anthiliary_entity" }
+	attach = { "locw" = "eternal_empire_anthiliary_entity" }
+	attach = { "locw" = "eternal_empire_anthiliary_entity" }
+	
+	scale = 1
+}
+
+entity = {
+	name = "eternal_anthiliary_3d_entity_01_entity"
+	cull_radius = 500
+	
+	locator = { name = "loc101" position = { 0 0 0 } rotation = { 0 40 0 }}
+	locator = { name = "loctw" position = { 0 0 0 } rotation = { 0 155 0 }}
+	locator = { name = "locta" position = { 0 0 0 } rotation = { 0 75 0 }}
+
+	attach = { "loc101" = "eternal_empire_anthiliary_entity" }
+	attach = { "locw" = "eternal_empire_anthiliary_entity" }
+	attach = { "locw" = "eternal_empire_anthiliary_entity" }
+	
+	scale = 3.2
+}
+
+entity = {
+	name = "eternal_anthiliary_4_entity_01_entity"
+	cull_radius = 500
+	
+	locator = { name = "loc101" position = { 0 0 0 } rotation = { 0 45 0 }}
+
+	attach = { "loc101" = "eternal_empire_anthiliary_entity"}
+
+	scale = 1.5
+}
+
+entity = {
+	name = "eternal_anthiliary_core_entity_01_entity"
+	cull_radius = 500
+	
+	locator = { name = "loc101" position = { 0 0 0 } rotation = { 0 0 0 }}
+
+	attach = { "loc101" = "eternal_sphere_phase_05_entity"}
+
+	scale = 1.0
+}
+
+entity = {
+	name = "eternal_anthiliary_finished_entity_01_entity"
+	cull_radius = 500
+	
+	locator = { name = "locyes" position = { 0 0 0 } rotation = { 0 0 0 }}
+
+	attach = { "locyes" = "eternal_anthiliary_core_entity_01_entity" }
+	attach = { "locyes" = "eternal_anthiliary_4_entity_01_entity" }
+	attach = { "locyes" = "eternal_anthiliary_3_entity_01_entity" }
+	attach = { "locyes" = "eternal_anthiliary_2_entity_01_entity" }
+	attach = { "locyes" = "eternal_anthiliary_3b_entity_01_entity" }
+	attach = { "locyes" = "eternal_anthiliary_3c_entity_01_entity" }
+	attach = { "locyes" = "eternal_anthiliary_3d_entity_01_entity" }
+	attach = { "locyes" = "eternal_sphere_phase_05_entity" }
+
+
+	scale = 1.0
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+########################################################
+###			 GAME ENTITIES - Placeable
+########################################################
+
+
+
+
+
+
+
+
+entity = {
+	name = "eternalring_entity_01_entity"
+	cull_radius = 500
+	scale = 1
+	locator = { name = "loc101" position = { 0 0 0 } rotation = { 0 40 0 }}
+	locator = { name = "loctw" position = { 0 0 0 } rotation = { 0 135 0 }}
+
+	attach = { "loc101" = "eternal_empire_diffrentthing_entity" }
+	attach = { "loctw" = "eternal_empire_diffrentthing_entity" }	
+
+}
+
+entity = {
+	name = "eternalring_systemfortress_01_entity"
+	cull_radius = 500
+	scale = 5.5
+	
+	locator = { name = "loc101" position = { 0 0 0 } rotation = { 0 0 0 }}
+	locator = { name = "loctw" position = { 0 0 0 } rotation = { 0 135 0 }}
+
+	attach = { "loc101" = "eternal_empire_fortress_ee_entity" }
+
+}
+
+entity = {
+	name = "eternalring_superring_01_entity"
+	cull_radius = 500
+	scale = 4.6
+	
+	locator = { name = "loc101" position = { 0 0 0 } rotation = { 0 0 0 }}
+	locator = { name = "loctw" position = { 0 0 0 } rotation = { 0 135 0 }}
+
+	attach = { "loc101" = "eternal_empire_superring_ee_entity" }
+
+}
+
+entity = {
+	name = "construction_01_eternalring_entity_01_entity"
+	cull_radius = 500
+	
+	locator = { name = "loc101" position = { 0 0 0 } rotation = { 0 40 0 }}
+	locator = { name = "loctw" position = { 0 0 0 } rotation = { 0 135 0 }}
+
+	attach = { "loc101" = "eternal_empire_diffrentthing_entity" }
+	attach = { "loctw" = "eternal_empire_diffrentthing_entity" }
+
+	scale = 1
+
+}
+
+
+entity = {
+	name = "eternal_empire_eternalring_entity_01_entity"
+	cull_radius = 500
+	
+	locator = { name = "loc101" position = { 0 0 0 } rotation = { 0 40 0 }}
+	locator = { name = "loctw" position = { 0 0 0 } rotation = { 0 135 0 }}
+
+	attach = { "loc101" = "eternal_empire_diffrentthing_entity" }
+	attach = { "loctw" = "eternal_empire_diffrentthing_entity" }
+	
+}
+
+entity = {
+	name = "psi_ring_entity"
+	pdxmesh = "psi_ring_01_mesh"
+	scale = 1.0
+	playback_rate = -0.1 
+
+	meshsettings = {
+		name = "ring"
+		index = 0
+		texture_diffuse = "psi_ring_diffuse.dds"
+		shader = "PdxMeshExtraDimensionalShip"
+	}
+	
+}
+
+
+entity = {
+	name = "psi_system_ring_entity"
+	pdxmesh = "psi_ring_01_mesh"
+	scale = 80.0
+	playback_rate = 0.1 
+	scale = 1
+	meshsettings = {
+		name = "ring"
+		index = 0
+		texture_diffuse = "psi_ring_diffuse.dds"
+		shader = "PdxMeshExtraDimensionalShip"
+	}
+	
+}
+
+entity = {
+	name = "eternal_empire_diffrentthing_entity"
+	cull_radius = 500
+	
+	locator = { name = "loc101" position = { 250 0 0 } rotation = { 90 0 0 }}
+	locator = { name = "loc102" position = { 216.5 0 125 } rotation = { 60 0 0 }}
+	locator = { name = "loc103" position = { 125 0 216.5 } rotation = { 30 0 0 }}
+	locator = { name = "loc104" position = { 0 0 250 } rotation = { 0 0 0 }}
+	locator = { name = "loc105" position = { -125 0 216.5 } rotation = { -30 0 0 }}
+	locator = { name = "loc106" position = { -216.5 0 125 } rotation = { -60 0 0 }}
+	locator = { name = "loc107" position = { -250 0 0 } rotation = { -90 0 0 }}
+	locator = { name = "loc108" position = { -216.5 0 -125 } rotation = { -120 0 0 }}
+	locator = { name = "loc109" position = { -125 0 -216.5 } rotation = { -150 0 0 }}	
+	locator = { name = "loc110" position = { 0 0 -250 } rotation = { -180 0 0 }}
+	locator = { name = "loc111" position = { 125 0 -216.5 } rotation = { -210 0 0 }}
+	locator = { name = "loc112" position = { 216.5 0 -125 } rotation = { -240 0 0 }}
+ 
+	attach = { "loc101" = "eternal_empire_eternalring_habitable_entity_01_entity" }
+	attach = { "loc102" = "eternal_empire_eternalring_tech_entity_01_entity" }
+	attach = { "loc103" = "eternal_empire_eternalring_habitable_entity_01_entity" }
+	attach = { "loc104" = "eternal_empire_eternalring_tech_entity_01_entity" }
+	attach = { "loc105" = "eternal_empire_eternalring_habitable_entity_01_entity" }
+	attach = { "loc106" = "eternal_empire_eternalring_tech_entity_01_entity" }
+	attach = { "loc107" = "eternal_empire_eternalring_habitable_entity_01_entity" }
+	attach = { "loc108" = "eternal_empire_eternalring_tech_entity_01_entity" }
+	attach = { "loc109" = "eternal_empire_eternalring_habitable_entity_01_entity" }
+	attach = { "loc110" = "eternal_empire_eternalring_tech_entity_01_entity" }
+	attach = { "loc111" = "eternal_empire_eternalring_habitable_entity_01_entity" }
+	attach = { "loc112" = "eternal_empire_eternalring_tech_entity_01_entity" }
+
+	
+	scale = 0.4 # change to increase or decrease distance between stars and rings, also effects planetary ring!
+}
+
+
+########################################################
+###			 GAME ENTITIES - Placeable
+########################################################
+
+
+
+entity = {
+	name = "eternal_empire_construction_01_eternalring_entity_01_entity"
+	cull_radius = 500
+		
+	default_state = "idle"
+	state = { name = "idle" state_time = 5 }
+
+	locator = { name = "loc101" position = { 0 0 0 } rotation = { 0 40 0 }}
+	locator = { name = "loctw" position = { 0 0 0 } rotation = { 0 135 0 }}
+
+	attach = { "loc101" = "eternal_empire_diffrentthing_entity" }
+	attach = { "loctw" = "eternal_empire_diffrentthing_entity" }
+	
+	game_data = {
+		shader_type = ship
+		emissive_recolor_crunch = 1.0
+	}
+	
+
+ }
+
+
+entity = {
+	name = "eternal_empire_eternalring_entity_01_entity"
+	cull_radius = 500
+	
+	locator = { name = "loc101" position = { 0 0 0 } rotation = { 0 40 0 }}
+	locator = { name = "loctw" position = { 0 0 0 } rotation = { 0 135 0 }}
+
+	attach = { "loc101" = "eternal_empire_diffrentthing_entity" }
+	attach = { "loctw" = "eternal_empire_diffrentthing_entity" }
+	
+		
+	default_state = "idle"
+	state = { name = "idle" state_time = 5 }
+
+	game_data = {
+		shader_type = ship
+		emissive_recolor_crunch = 1.0
+	}
+}
+
+entity = {
+	name = "eternal_astropolis_planet_01_entity"
+	pdxmesh = "planet_clouded_mesh"
+
+	#planet surface texture override	
+	meshsettings = {
+		name = "planet_geosphereShape"
+		texture_diffuse = "eternal_planet_diffuse.dds"
+		texture_normal = "eternal_planet_normal.dds"
+		texture_specular = "eternal_planet_specular.dds"
+		shader = "PdxMeshPlanetEmissive"
+	}
+	
+	meshsettings = {
+	name = "clouds_geosphereShape"
+		texture_diffuse = "eternal_planet_diffuse.dds"
+		texture_normal = "eternal_planet_normal.dds"
+		texture_specular = "eternal_planet_specular.dds"
+		shader = "PdxMeshPlanetEmissive"
+	}
+	
+	##pole texture override
+	meshsettings = {
+		name = "polesShape"
+		texture_diffuse = "poles_tropical_1_diffuse.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+	}
+	
+	state = { name = "idle" animation = "idle"	animation_speed = 0.1
+		event = { time = 0 particle = "black_hole_particle" trigger_once = yes keep_particle = yes }
+		event = { trigger_once = yes sound = { soundeffect = "blackhole_hum_idle" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_city_planet" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_city_planet_flyby" } }
+	}
+	attach = { planet = "city_planet_surface_ships_entity" }
+	attach = { planet = "eternal_astropolis_surrounding_entity" }
+
+
+
+	
+
+	playback_rate = -0.1 # Rotation is reversed
+	scale = 0.5
+}
+
+entity = {
+	name = "eternal_astropolis_surrounding_entity"
+	locator = { name = "loc1" position = { 50 0 0 }}
+	locator = { name = "loc2" position = { -50 0 0 }}
+	locator = { name = "loc3" position = { 0 50 0 }}
+	locator = { name = "loc4" position = { 0 -50 0 }}
+
+	locator = { name = "loc5" position = { 0 0 0 }}
+	locator = { name = "loc6" position = { 0 0 0 } rotation = { 0 45 0 } }
+
+	locator = { name = "pew1" position = { 0 0 0 } }
+	locator = { name = "pew2" position = { 0 0 0 } rotation = { 0 90 0 } }
+	locator = { name = "pew5" position = { 0 0 0 } rotation = { 0 90 0 } }
+	locator = { name = "pew3" position = { 0 0 0 } rotation = { 0 180 0 }}
+	locator = { name = "pew4" position = { 0 0 0 } rotation = { 0 270 0 }}
+
+	attach = { "loc5" = "eternalring_entity_01_entity" }
+	attach = { "loc6" = "eternalring_entity_01_entity" }
+	
+	attach = { "pew1" = "black_hole_astropolis_rings_entity" }
+	attach = { "pew2" = "black_hole_astropolis_rings_entity" }
+
+
+
+}
+
+entity = {
+	name = "eternal_empire_flower_planet_01_entity"
+	cull_radius = 500.0
+	scale 8
+	pdxmesh = "planet_clouded_mesh"
+
+	#planet surface texture override	
+	meshsettings = {
+			shader = "PdxMeshExtraDimensionalShip"
+			texture_diffuse = "ee_ship_mask.dds"
+	}
+	
+		
+	default_state = "idle"
+	state = { name = "idle" state_time = 100 time_offset = { 0 100 }
+	}
+	
+	state = { name = "construction"
+	}
+	
+	
+	locator = { name = "ray2" position = { 0 -20 0 } rotation = { 0 90 0 } }
+	
+	
+	attach = { "ray2" = "ringworld_piece_habitable_entity" }
+
+	game_data = {
+		shader_type = ship
+	}
+}
+
+
+entity = {
+	name = "eternal_empire_ringworld_habitable_entity_01_entity"
+	cull_radius = 500.0
+
+		
+	default_state = "idle"
+	state = { name = "idle" state_time = 100 time_offset = { 0 100 }
+	}
+	
+	state = { name = "construction"
+	}
+	
+	
+	locator = { name = "ray2" position = { 0 0 0 } rotation = { 0 0 0 } }
+	
+	
+	attach = { "ray2" = "ringworld_piece_habitable_entity" }
+
+	game_data = {
+		size = @ringworld_segment_size
+	}
+}
+
+
+entity = {
+	name = "eternal_empire_ringworld_tech_entity_01_entity"
+	cull_radius = 500.0
+	
+	
+	default_state = "idle"
+	state = { name = "idle"		state_time = 5
+		event = { time = 0 node = "tech_1" particle = "ringworld_tech_particle" keep_particle = yes trigger_once = yes }
+		#event = { time = 1 node = "tech_2" particle = "ringworld_tech_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 1 node = "tech_3" particle = "ringworld_tech_particle" keep_particle = yes trigger_once = yes }
+	}
+	state = { name = "construction"
+	}
+	
+	locator = { name = "ray2" position = { 0 0 0 } rotation = { 0 0 0 } }
+	
+	
+	attach = { "ray2" = "ringworld_piece_entity" }
+
+	game_data = {
+		size = @ringworld_segment_size
+	}
+}
+
+
+entity = {
+	name = "eternal_empire_ringworld_seam_entity_01_entity"
+	cull_radius = 500.0
+	
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 100 time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_01" stop_on_state_change = yes } }
+		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_02" stop_on_state_change = yes } }
+	}
+	state = { name = "construction"
+	start_event = { trigger_once = yes sound = { soundeffect = "ringworld_construction_ambient" } }
+	}
+	
+	
+	locator = { name = "ray2" position = { 0 0 0 } rotation = { 0 0 0 } }
+	
+	
+	attach = { "ray2" = "ringworld_piece_entity" }
+
+	game_data = {
+		size = @ringworld_segment_size
+	}
+}
+
+
+entity = {
+	name = "eternal_empire_yellow_ringworld_habitable_entity_01_entity"
+	cull_radius = 500.0
+
+		
+	default_state = "idle"
+	state = { name = "idle" state_time = 100 time_offset = { 0 100 }
+	}
+
+	
+
+	locator = { name = "ray2" position = { 0 0 0 } rotation = { 0 0 0 } }
+	
+	
+	attach = { "ray2" = "ringworld_piece_habitable_entity" }
+
+	game_data = {
+		size = @ringworld_segment_size
+	}
+}
+
+
+entity = {
+	name = "eternal_empire_yellow_ringworld_tech_entity_01_entity"
+	cull_radius = 500.0
+
+	
+	locator = { name = "ray2" position = { 0 0 0 } rotation = { 0 0 0 } }
+	
+	
+	attach = { "ray2" = "ringworld_piece_entity" }
+
+	game_data = {
+		size = @ringworld_segment_size
+	}
+}
+
+
+entity = {
+	name = "eternal_empire_yellow_ringworld_seam_entity_01_entity"
+	cull_radius = 500.0
+
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 100 time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_01" stop_on_state_change = yes } }
+		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_02" stop_on_state_change = yes } }
+	}
+	state = { name = "construction"
+	start_event = { trigger_once = yes sound = { soundeffect = "ringworld_construction_ambient" } }
+	}
+	
+	
+	locator = { name = "ray2" position = { 0 0 0 } rotation = { 0 0 0 } }
+	
+
+	attach = { "ray2" = "ringworld_piece_entity" }
+	
+
+	game_data = {
+		size = @ringworld_segment_size
+	}
+}
+
+
+
+###			Molluscoid
+
+

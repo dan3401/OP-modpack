@@ -1,0 +1,288 @@
+ObjectTypes = {
+
+#### DM TITAN
+
+
+
+pdxparticle = {
+	name = "yellow_eternal_perdition_beam_dm_windup_effect"
+	type = "yellow_eternal_perdition_beam_dm_windup_effect"
+	
+	scale = 1.0
+}
+
+pdxparticle = {
+	name = "yellow_eternal_perdition_beam_dm_muzzle_windup_effect"
+	type = "yellow_eternal_perdition_beam_dm_muzzle_windup_effect"
+	
+	scale = 1.0
+}
+
+pdxparticle = {
+	name = "yellow_eternal_perdition_beam_dm_muzzle_effect"
+	type = "yellow_eternal_perdition_beam_dm_muzzle_effect"
+	
+	scale = 1.0
+}
+
+pdxparticle = {
+	name = "yellow_eternal_perdition_beam_dm_hit_effect"
+	type = "yellow_eternal_perdition_beam_dm_hit_effect"
+	
+	scale = 1.0
+}
+
+#### DM ARC EMITTER
+
+pdxparticle = {
+	name = "yellow_eternal_arc_emitter_dm_hit_effect"
+	type = "yellow_eternal_arc_emitter_dm_hit_effect"
+	
+	scale = 1.15
+}
+
+pdxparticle = {
+	name = "yellow_eternal_arc_emitter_dm_muzzle_particle"
+	type = "yellow_eternal_arc_emitter_dm_muzzle"
+	
+	scale = 1.5
+}
+
+pdxparticle = {
+	name = "yellow_eternal_arc_emitter_dm_windup_effect"
+	type = "yellow_eternal_arc_emitter_dm_windup_effect"
+	
+	scale = 1.5
+}
+
+pdxparticle = {
+	name = "yellow_eternal_arc_emitter_dm_muzzle_windup_effect"
+	type = "yellow_eternal_arc_emitter_dm_muzzle_windup_effect"
+	
+	scale = 1.5
+}
+
+
+
+#### DM AUTCANNONS
+
+pdxparticle = {
+	name = "yellow_eternal_auto_cannons_dm_small_muzzle_particle"
+	type = "yellow_eternal_auto_cannons_dm_muzzle"
+	
+	scale = 0.5
+}
+pdxparticle = {
+	name = "yellow_eternal_auto_cannons_dm_medium_muzzle_particle"
+	type = "yellow_eternal_auto_cannons_dm_muzzle"
+	
+	scale = 1.0
+}
+pdxparticle = {
+	name = "yellow_eternal_auto_cannons_dm_large_muzzle_particle"
+	type = "yellow_eternal_auto_cannons_dm_muzzle"
+	
+	scale = 1.25
+}
+
+pdxparticle = {
+	name = "yellow_eternal_auto_cannons_dm_small_hit_effect"
+	type = "yellow_eternal_auto_cannons_dm_hit_effect"
+	
+	scale = 0.5
+}
+pdxparticle = {
+	name = "yellow_eternal_auto_cannons_dm_medium_hit_effect"
+	type = "yellow_eternal_auto_cannons_dm_hit_effect"
+	
+	scale = 1.0
+}
+pdxparticle = {
+	name = "yellow_eternal_auto_cannons_dm_large_hit_effect"
+	type = "yellow_eternal_auto_cannons_dm_hit_effect"
+	
+	scale = 1.25
+}
+
+#### DM LASER POINTER
+
+pdxparticle = {
+	name = "yellow_eternal_point_defence_laser_dm_muzzle_particle"
+	type = "yellow_eternal_dm_laser_file"
+	
+	scale = 0.5
+}
+
+pdxparticle = {
+	name = "yellow_eternal_point_defence_laser_dm_hit_effect"
+	type = "yellow_eternal_dm_laser_hit_effect"
+	
+	scale = 0.5
+}
+
+#### DM DISRUPTORS
+
+	pdxparticle = {
+		name = "yellow_eternal_disruptor_dm_small_muzzle_particle"
+		type = "yellow_eternal_disruptor_dm_muzzle_file"
+		
+		scale = 0.75
+	}
+	
+	pdxparticle = {
+		name = "yellow_eternal_disruptor_dm_medium_muzzle_particle"
+		type = "yellow_eternal_disruptor_dm_muzzle_file"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "yellow_eternal_disruptor_dm_large_muzzle_particle"
+		type = "yellow_eternal_disruptor_dm_muzzle_file"
+		
+		scale = 1.25
+	}
+
+	pdxparticle = {
+		name = "yellow_eternal_disruptor_dm_small_hit_effect"
+		type = "yellow_eternal_disruptor_dm_hit_effect"
+		
+		scale = 0.75
+	}
+	
+	pdxparticle = {
+		name = "yellow_eternal_disruptor_dm_medium_hit_effect"
+		type = "yellow_eternal_disruptor_dm_hit_effect"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "yellow_eternal_disruptor_dm_large_hit_effect"
+		type = "yellow_eternal_disruptor_dm_hit_effect"
+		
+		scale = 1.5
+	}
+
+#### DM LASER
+
+	pdxparticle = {
+		name = "yellow_eternal_dm_laser_small_hit_effect"
+		type = "yellow_eternal_dm_laser_hit_effect"
+		
+		scale = 0.6
+	}
+	
+	pdxparticle = {
+		name = "yellow_eternal_dm_laser_medium_hit_effect"
+		type = "yellow_eternal_dm_laser_hit_effect"
+		
+		scale = 0.85
+	}
+	
+	pdxparticle = {
+		name = "yellow_eternal_dm_laser_large_hit_effect"
+		type = "yellow_eternal_dm_laser_hit_effect"
+		
+		scale = 1.15
+	}
+
+	pdxparticle = {
+		name = "yellow_eternal_dm_laser_large_muzzle_particle"
+		type = "yellow_eternal_dm_laser_file"
+		
+		scale = 2.75
+	}
+	
+	pdxparticle = {
+		name = "yellow_eternal_dm_laser_medium_muzzle_particle"
+		type = "yellow_eternal_dm_laser_file"
+		
+		scale = 1.75
+	}
+	
+	pdxparticle = {
+		name = "yellow_eternal_dm_laser_small_muzzle_particle"
+		type = "yellow_eternal_dm_laser_file"
+		
+		scale = 1.25
+	}
+
+### DM energy lance
+
+	pdxparticle = {
+		name = "yellow_eternal_energy_lance_dm_windup_effect"
+		type = "yellow_eternal_energy_lance_dm_windup_effect"
+		
+		scale = 1.5
+	}
+	
+	pdxparticle = {
+		name = "yellow_eternal_energy_lance_dm_muzzle_windup_effect"
+		type = "yellow_eternal_energy_lance_dm_muzzle_windup_effect"
+		
+		scale = 1.5
+	}
+
+	pdxparticle = {
+		name = "yellow_eternal_energy_lance_dm_muzzle_particle"
+		type = "yellow_eternal_energy_lance_dm_muzzle"
+		
+		scale = 1.5
+	}	
+
+	pdxparticle = {
+		name = "yellow_eternal_energy_lance_dm_hit_effect"
+		type = "yellow_eternal_energy_lance_dm_hit_effect"
+		
+		scale = 1.15
+	}
+
+
+	
+	pdxparticle = {
+		name = "yellow_eternal_titan_laser_windup_effect"
+		type = "yellow_eternal_titan_laser_windup_effect"
+		
+		scale = 1.5
+	}
+	
+	pdxparticle = {
+		name = "yellow_eternal_titan_laser_muzzle_windup"
+		type = "yellow_eternal_titan_laser_muzzle_windup"
+		
+		scale = 1.5
+	}
+	
+	pdxparticle = {
+		name = "yellow_eternal_titan_laser_muzzle_particle"
+		type = "yellow_eternal_titan_laser_muzzle_file"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "yellow_eternal_titan_laser_hit_effect"
+		type = "yellow_eternal_titan_laser_hit_effect"
+		
+		scale = 3.0
+	}
+	
+### DM Bombardment
+	
+	pdxparticle = {
+		name = "yellow_eternal_planetary_bombardment_dm_effect"
+		type = "yellow_eternal_planetary_bombardment_dm"
+		
+		scale = 1.5
+	}
+	
+### AE Bombardment
+	
+	pdxparticle = {
+		name = "yellow_eternal_planetary_bombardment_ae_effect"
+		type = "yellow_eternal_planetary_bombardment_ae"
+		
+		scale = 2.5
+	}
+}

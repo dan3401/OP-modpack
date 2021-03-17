@@ -1,0 +1,435 @@
+@dyson_scale = 32
+
+
+
+
+#####################################################
+#####											#####
+#####			eternal_empire					#####
+#####											#####
+#####################################################
+
+
+entity = {
+	name = "eternal_empire_mega_shipyard_entity"
+
+	locator = { name = "roota"	position = { 0 0 0 } rotation = {0 0 0 }}	
+	
+
+	attach = { "roota" = "shipyard_entity" }
+
+	state = { name = "construction"
+    }
+	
+	
+			
+		default_state = "idle"
+		state = { name = "idle"
+		start_event = { trigger_once = yes sound = { soundeffect = "construction_platform_hum" } }
+	}
+	
+	game_data = {
+        custom_texture = "gfx/models/ships/megastructures/construction_platform/construction_platform_01_fadein.dds"
+    }
+
+}
+
+
+entity = {
+	name = "shipyard_entity"
+	locator = { name = "root"	position = { 0 0 0 } }
+	locator = { name = "roota"	position = { 0 0 0 } rotation = {0 90 0 }}	
+	locator = { name = "rootw"	position = { 0 0 0 } rotation = {0 90 90 }}	
+	locator = { name = "roote"	position = { 0 0 0 } rotation = {0 90 0 }}
+	locator = { name = "rootq"	position = { 0 0 0 } rotation = {0 90 90 }}	
+	
+
+	attach = { "roota" = "eternal_empire_thinktank_part2_entity" }
+	attach = { "roota" = "eternal_empire_thinktank_part3_entity" }
+
+	attach = { "rootw" = "eternal_empire_thinktank_part2_entity" }
+	attach = { "rootw" = "eternal_empire_thinktank_part3_entity" }
+
+
+	state = { name = "construction"
+		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_construction_ambient" } }
+	}
+
+	scale = 0.7
+	
+	cull_radius = 500
+}
+
+
+
+entity = {
+	name = "eternal_sphere_phase_06_entity"
+	pdxmesh = "planet_no_pole_no_clouds_mesh"
+	locator = { name = "root"	position = { 0 	0  0 } }	
+
+	scale = 2.0
+	cull_radius = 500
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 } 
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class_02" } }
+	}
+	
+	attach = { planet = "eternal_sphere_circular_entity" }	
+	
+
+}
+
+entity = {
+	name = "eternal_sphere_phase_05_entity"
+	pdxmesh = "planet_no_pole_no_clouds_mesh"
+	locator = { name = "root"	position = { 0 	0  0 } }	
+
+	scale = 2.0
+	cull_radius = 500
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 } 
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class_02" } }
+	}
+	
+	attach = { planet = "eternal_sphere_circular_entity" }	
+	
+
+}
+
+entity = {
+	name = "eternal_sphere_circular_entity"
+	pdxmesh = "eternal_sphere_mesh"
+	
+
+	meshsettings = {
+		name = "polySurface61Shape"
+		index = 0
+		texture_diffuse = "eternal_sphere_diffuse.dds"
+		texture_normal = "eternal_sphere_normal.dds"
+		texture_specular = "eternal_sphere_specular.dds"
+		shader = "PdxMeshShip"
+	}
+	
+	default_state = "idle"		
+	#playback_rate = -1.0 # Rotation is reversed
+	state = { name = "idle"		animation = "closed" animation_blend_time = 0 looping = no next_state = "idle"
+		start_event = { trigger_once = yes sound = { soundeffect = "technosphere_idle" } }
+	}
+	scale = 0.3
+}
+
+entity = {
+	name = "eternal_sphere_open_circular_entity"
+	pdxmesh = "eternal_sphere_mesh"
+	
+
+	meshsettings = {
+		name = "polySurface61Shape"
+		index = 0
+		texture_diffuse = "eternal_sphere_diffuse.dds"
+		texture_normal = "eternal_sphere_normal.dds"
+		texture_specular = "eternal_sphere_specular.dds"
+		shader = "PdxMeshShip"
+	}
+	
+	default_state = "idle"		
+	#playback_rate = -1.0 # Rotation is reversed
+	state = { name = "idle"		animation = "closed" animation_blend_time = 0 looping = no next_state = "idle"
+		start_event = { trigger_once = yes sound = { soundeffect = "technosphere_idle" } }
+	}
+	scale = 0.3
+}
+
+
+
+entity = {
+	name = "eternal_empire_dyson_sphere_frame_entity"
+	pdxmesh = "dyson_sphere_frame_mesh"
+		scale = @dyson_scale
+
+	default_state = "idle"
+	state = { name = "idle" state_time = 10
+		start_event = { trigger_once = yes sound = { soundeffect = "dyson_sphere_treble_hum" } }
+	}
+	
+		meshsettings = {
+			name = "frame1Shape"
+			index = 0
+			texture_diffuse = "eternal_empire_dyson_sphere_01_diffuse.dds"
+			texture_normal = "eternal_empire_dyson_sphere_01_normal.dds"
+			texture_specular = "eternal_empire_dyson_sphere_01_specular.dds"
+			shader = "PdxMeshShip"
+		}
+			 game_data = {
+        custom_texture = "gfx/models/ships/megastructures/dyson_sphere/dyson_sphere_01_construction_fadein.dds"
+    }
+}
+
+entity = {
+	name = "eternal_empire_dyson_sphere_part_1_entity"
+	pdxmesh = "dyson_sphere_part_1_mesh"
+		scale = @dyson_scale
+
+	default_state = "idle"
+	state = { name = "idle" state_time = 10
+		start_event = { trigger_once = yes sound = { soundeffect = "dyson_sphere_bass_hum_partial" } }
+	}
+	
+		meshsettings = {
+			name = "pCylinder26|pCylinderShape2"
+			index = 0
+			texture_diffuse = "eternal_empire_dyson_sphere_01_diffuse.dds"
+			texture_normal = "eternal_empire_dyson_sphere_01_normal.dds"
+			texture_specular = "eternal_empire_dyson_sphere_01_specular.dds"
+			shader = "PdxMeshShip"
+		}
+			 game_data = {
+        custom_texture = "gfx/models/ships/megastructures/dyson_sphere/dyson_sphere_01_construction_fadein.dds"
+    }
+}
+
+entity = {
+	name = "eternal_empire_dyson_sphere_part_2_entity"
+	pdxmesh = "dyson_sphere_part_2_mesh"
+	scale = @dyson_scale
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 10
+		start_event = { trigger_once = yes sound = { soundeffect = "dyson_sphere_bass_hum_partial" } }
+	}
+	
+		meshsettings = {
+			name = "pCylinder11|pCylinderShape11"
+			index = 0
+			texture_diffuse = "eternal_empire_dyson_sphere_01_diffuse.dds"
+			texture_normal = "eternal_empire_dyson_sphere_01_normal.dds"
+			texture_specular = "eternal_empire_dyson_sphere_01_specular.dds"
+			shader = "PdxMeshShip"
+		}
+			 game_data = {
+        custom_texture = "gfx/models/ships/megastructures/dyson_sphere/dyson_sphere_01_construction_fadein.dds"
+    }
+}
+
+entity = {
+	name = "eternal_empire_dyson_sphere_part_3_entity"
+	pdxmesh = "dyson_sphere_part_3_mesh"
+	scale = @dyson_scale
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 10
+		start_event = { trigger_once = yes sound = { soundeffect = "dyson_sphere_bass_hum_partial" } }
+	}
+	
+		meshsettings = {
+			name = "pCylinder22|pCylinderShape22"
+			index = 0
+			texture_diffuse = "eternal_empire_dyson_sphere_01_diffuse.dds"
+			texture_normal = "eternal_empire_dyson_sphere_01_normal.dds"
+			texture_specular = "eternal_empire_dyson_sphere_01_specular.dds"
+			shader = "PdxMeshShip"
+		}
+			 game_data = {
+        custom_texture = "gfx/models/ships/megastructures/dyson_sphere/dyson_sphere_01_construction_fadein.dds"
+    }
+}
+
+entity = {
+	name = "eternal_empire_dyson_sphere_part_4_entity"
+	pdxmesh = "dyson_sphere_part_4_mesh"
+	scale = @dyson_scale
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 10
+		event = { time = 0 particle = "dyson_sphere_electricity_effect" keep_particle = yes trigger_once = yes }
+		start_event = { trigger_once = yes sound = { soundeffect = "dyson_sphere_bass_hum" } }
+	}
+	
+		meshsettings = {
+			name = "pCylinder15|pCylinderShape1"
+			index = 0
+			texture_diffuse = "eternal_empire_dyson_sphere_01_diffuse.dds"
+			texture_normal = "eternal_empire_dyson_sphere_01_normal.dds"
+			texture_specular = "eternal_empire_dyson_sphere_01_specular.dds"
+			shader = "PdxMeshShip"
+		}
+			 game_data = {
+        custom_texture = "gfx/models/ships/megastructures/dyson_sphere/dyson_sphere_01_construction_fadein.dds"
+    }
+}
+
+entity = {
+	name = "eternal_empire_dyson_sphere_phase_01_entity"
+	locator = { name = "root"	position = { 0 	0  0 } }	
+	
+	attach = { "root" = "eternal_empire_dyson_sphere_frame_entity" }
+
+	scale = 1.0
+	cull_radius = 500
+}
+
+entity = {
+	name = "eternal_empire_dyson_sphere_phase_02_entity"
+	locator = { name = "root"	position = { 0 	0  0 } }	
+	
+	attach = { "root" = "eternal_empire_dyson_sphere_frame_entity" }
+	attach = { "root" = "eternal_empire_dyson_sphere_part_1_entity" }
+	
+	attach = { "root" = "penta_rays_short_entity" }
+	
+	scale = 1.0
+	cull_radius = 500
+}
+
+entity = {
+	name = "eternal_empire_dyson_sphere_phase_03_entity"
+	locator = { name = "root"	position = { 0 	0  0 } }	
+	
+	attach = { "root" = "eternal_empire_dyson_sphere_frame_entity" }
+	attach = { "root" = "eternal_empire_dyson_sphere_part_1_entity" }
+	attach = { "root" = "eternal_empire_dyson_sphere_part_2_entity" }
+	
+	attach = { "root" = "penta_rays_short_entity" }
+	attach = { "root" = "hexa_rays_entity" }
+	
+	scale = 1.0
+	cull_radius = 500
+}
+
+entity = {
+	name = "eternal_empire_dyson_sphere_phase_04_entity"
+	locator = { name = "root"	position = { 0 	0  0 } }	
+	
+	attach = { "root" = "eternal_empire_dyson_sphere_frame_entity" }
+	attach = { "root" = "eternal_empire_dyson_sphere_part_1_entity" }
+	attach = { "root" = "eternal_empire_dyson_sphere_part_2_entity" }
+	attach = { "root" = "eternal_empire_dyson_sphere_part_3_entity" }
+
+	attach = { "root" = "penta_rays_short_entity" }
+	attach = { "root" = "hexa_rays_entity" }
+	
+	scale = 1.0
+	cull_radius = 500
+}
+
+entity = {
+	name = "eternal_empire_dyson_sphere_phase_05_entity"
+	locator = { name = "root"	position = { 0 	0  0 } }
+	locator = { name = "roote"	position = { 0 	0  0 } rotation = { 0 90 0 }}
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 10
+		event = { time = 0 particle = "dyson_sphere_electricity_effect" keep_particle = yes trigger_once = yes }
+		start_event = { trigger_once = yes sound = { soundeffect = "dyson_sphere_bass_hum" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "dyson_sphere_bass_hum_partial" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "dyson_sphere_treble_hum" } }
+	
+	}
+	
+	attach = { "root" = "eternal_sphere_dyson_entity" }
+	
+	attach = { "root" = "penta_rays_entity" }
+	attach = { "root" = "hexa_rays_entity" }
+	attach = { "roote" = "penta_rays_entity" }
+	attach = { "roote" = "hexa_rays_entity" }
+	
+	scale = 1.0
+	cull_radius = 500
+	
+}
+entity = {
+	name = "eternal_light_dyson_sphere_phase_05_entity"
+	
+	
+	locator = { name = "root"	position = { 0 	0  0 } }
+	locator = { name = "roote"	position = { 0 	0  0 } rotation = { 0 90 0 }}
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 10
+		event = { time = 0 particle = "dyson_sphere_electricity_effect" keep_particle = yes trigger_once = yes }
+		start_event = { trigger_once = yes sound = { soundeffect = "dyson_sphere_bass_hum" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "dyson_sphere_bass_hum_partial" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "dyson_sphere_treble_hum" } }
+	
+	}
+	attach = { "root" = "eternal_light_sphere_dyson_entity" }
+	attach = { "root" = "eternal_sphere_dyson_entity" }
+	
+	attach = { "root" = "penta_rays_entity" }
+	attach = { "root" = "hexa_rays_entity" }
+	attach = { "roote" = "penta_rays_entity" }
+	attach = { "roote" = "hexa_rays_entity" }
+	
+	scale = 1.0
+	cull_radius = 500
+	
+}
+
+#
+entity = {
+	name = "eternal_sphere_dyson_entity"
+
+	locator = { name = "root"	position = { 0 	0  0 } }	
+
+	scale = 13.5
+	cull_radius = 500
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 } 
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class_02" } }
+	}
+	
+	locator = { name = "planet"	position = { 0 0 0 } rotation = { 0 0 0 } }
+	attach = { planet = "eternal_sphere_circular_entity" }	
+
+}
+
+entity = {
+	name = "eternal_light_sphere_dyson_entity"
+	pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+	locator = { name = "root"	position = { 0 	0  0 } }	
+
+	scale = 10
+	cull_radius = 500
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 } 
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class_02" } }
+	}
+	
+	
+	locator = { name = "planet"	position = { 0 0 0 } rotation = { 0 180 0 } }
+
+	attach = { planet = "eternal_light_dyson_sphere_ring_entity" }	
+}
+
+entity = {
+	name = "eternal_light_sphere_circular_entity"
+	pdxmesh = "eternal_light_sphere_mesh"
+	
+	default_state = "idle"		
+	state = { name = "idle"		animation = "opened" animation_blend_time = 0 looping = no next_state = "idle"
+		start_event = { trigger_once = yes sound = { soundeffect = "technosphere_idle" } }
+	}
+	scale = 0.3
+}
+
+
+entity = {
+	name = "eternal_empire_destroyed_dyson_sphere_entity"
+	locator = { name = "root"	position = { 0 	0  0 } }	
+	
+	attach = { "root" = "eternal_empire_dyson_sphere_frame_entity" }
+
+	scale = 1.0
+	cull_radius = 500
+}
+
+

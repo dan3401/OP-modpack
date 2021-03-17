@@ -1,0 +1,496 @@
+@dyson_scale = 32
+
+
+
+
+#####################################################
+#####											#####
+#####			eternal_empire					#####
+#####											#####
+#####################################################
+
+entity = {
+	name = "eternal_light_eternal_sphere_phase_06_entity"
+	pdxmesh = "planet_no_pole_no_clouds_mesh"
+	locator = { name = "root"	position = { 0 	0  0 } }	
+
+	scale = 2.0
+	cull_radius = 500
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 } 
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class_02" } }
+	}
+	
+	attach = { planet = "eternal_light_eternal_sphere_circular_entity" }	
+	
+
+}
+
+entity = {
+	name = "eternal_light_eternal_sphere_phase_05_entity"
+	pdxmesh = "planet_no_pole_no_clouds_mesh"
+	locator = { name = "root"	position = { 0 	0  0 } }	
+
+	scale = 2.0
+	cull_radius = 500
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 } 
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class_02" } }
+	}
+	
+	attach = { planet = "eternal_light_eternal_sphere_circular_entity" }	
+	
+
+}
+
+entity = {
+	name = "eternal_light_eternal_sphere_circular_entity"
+	pdxmesh = "technosphere_mesh"
+	
+
+
+	meshsettings = {
+			shader = "PdxMeshExtraDimensionalShip"
+			texture_diffuse = "eternal_light_sphere_diffuse.dds"
+	}
+	
+	default_state = "idle"		
+	#playback_rate = -1.0 # Rotation is reversed
+	state = { name = "idle"		animation = "closed" animation_blend_time = 0 looping = no next_state = "idle"
+		start_event = { trigger_once = yes sound = { soundeffect = "technosphere_idle" } }
+	}
+	scale = 0.3
+}
+
+entity = {
+	name = "eternal_light_eternal_sphere_open_circular_entity"
+	pdxmesh = "technosphere_mesh"
+	
+
+	meshsettings = {
+			shader = "PdxMeshExtraDimensionalShip"
+			texture_diffuse = "eternal_light_sphere_diffuse.dds"
+	}
+	
+	default_state = "idle"		
+	#playback_rate = -1.0 # Rotation is reversed
+	state = { name = "idle"		animation = "closed" animation_blend_time = 0 looping = no next_state = "idle"
+		start_event = { trigger_once = yes sound = { soundeffect = "technosphere_idle" } }
+	}
+	scale = 0.3
+}
+
+entity = {
+	name = "eternal_light_eternal_sphere_pillar_entity"
+	pdxmesh = "planet_no_pole_no_clouds_mesh"
+	locator = { name = "root"	position = { 0 	0  0 } }	
+
+	scale = 0.5
+	cull_radius = 500
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 } 
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class_02" } }
+	}
+	
+	attach = { planet = "eternal_light_eternal_sphere_circular_entity" }	
+	
+
+}
+
+
+
+
+
+entity = {
+	name = "eternal_light_eternal_pillar_fe_entity"
+
+	locator = { name = "rootq"	position = { 0 0 0 } rotation = { 0 0 0 }}
+	locator = { name = "roota"	position = { 0 35 0 } rotation = { 0 90 0 }}
+	locator = { name = "rootb"	position = { 0 -35 0 } rotation = { 0 -90 0 }}
+	locator = { name = "rootc"	position = { 0 0 0 } rotation = { 0 10 0 }}
+
+	attach = { roota = "eternal_light_titan_entity" }
+	attach = { rootb = "eternal_light_titan_entity" }
+	attach = { roota = "eternal_empire_titan_entity" }
+	attach = { rootb = "eternal_empire_titan_entity" }
+	attach = { rootc = "eternal_sphere_pillar_entity" }
+
+	default_state = "idle"
+
+
+	scale = 2
+}
+
+
+entity = {
+	name = "eternal_light_psio_system_entity"
+	
+
+	#playback_rate = -1.0 # Rotation is reversed
+	state = { name = "idle"		animation = "closed" animation_blend_time = 0 looping = no next_state = "idle"
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_eternos" } }
+	}
+
+	locator = { name = "rootq"	position = { 0 0 0 } rotation = { 0 0 0 }}
+	locator = { name = "rootu"	position = { 0 -50 0 } rotation = { 0 0 0 }}
+	locator = { name = "roota"	position = { -350 0 0 } rotation = { 0 0 0 }}
+	locator = { name = "rootb"	position = { 350 0 0 } rotation = { 0 0 0 }}
+	locator = { name = "rootc"	position = { 0 0 350 } rotation = { 0 0 0 }}
+	locator = { name = "rootd"	position = { 0 0 -350 } rotation = { 0 0 0 }}
+	locator = { name = "roote"	position = { 0 50 0 } rotation = { 0 0 0 }}
+
+	attach = { roota = "eternal_light_eternal_pillar_fe_entity" }
+	attach = { rootb = "eternal_light_eternal_pillar_fe_entity" }
+	attach = { rootc = "eternal_light_eternal_pillar_fe_entity" }
+	attach = { rootd = "eternal_light_eternal_pillar_fe_entity" }
+
+	attach = { rootq = "psi_system_ring_entity" }
+	#attach = { rootq = "psio_portal_entity" }
+
+	
+
+	scale = 2
+}
+
+
+entity = {
+	name = "eternal_light_psio_system_2_entity"
+	
+
+	#playback_rate = -1.0 # Rotation is reversed
+	state = { name = "idle"		animation = "closed" animation_blend_time = 0 looping = no next_state = "idle"
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_eternos_ambient" } }
+	}
+
+	locator = { name = "rootq"	position = { 0 0 0 } rotation = { 0 0 0 }}
+	locator = { name = "rootu"	position = { 0 -50 0 } rotation = { 0 0 0 }}
+	locator = { name = "roota"	position = { -350 0 0 } rotation = { 0 0 0 }}
+	locator = { name = "rootb"	position = { 350 0 0 } rotation = { 0 0 0 }}
+	locator = { name = "rootc"	position = { 0 0 350 } rotation = { 0 0 0 }}
+	locator = { name = "rootd"	position = { 0 0 -350 } rotation = { 0 0 0 }}
+	locator = { name = "roote"	position = { 0 50 0 } rotation = { 0 0 0 }}
+
+	attach = { roota = "eternal_light_eternal_pillar_fe_entity" }
+	attach = { rootb = "eternal_light_eternal_pillar_fe_entity" }
+	attach = { rootc = "eternal_light_eternal_pillar_fe_entity" }
+	attach = { rootd = "eternal_light_eternal_pillar_fe_entity" }
+
+
+	
+
+	scale = 2
+}
+
+entity = {
+	name = "eternal_light_eternal_pillar_cross_entity"
+
+	locator = { name = "roota"	position = { 0 35 0 } rotation = { 0 90 0 }}
+	locator = { name = "rootb"	position = { 0 -35 0 } rotation = { 0 -90 0 }}
+
+
+	attach = { roota = "eternal_light_titan_entity" }
+	attach = { rootb = "eternal_light_titan_entity" }
+	attach = { roota = "eternal_empire_titan_entity" }
+	attach = { rootb = "eternal_empire_titan_entity" }
+
+
+	default_state = "idle"
+
+
+	scale = 2
+}
+
+entity = {
+	name = "eternal_light_eternal_pillar_cross_2_entity"
+
+	locator = { name = "roota"	position = { 0 35 0 } rotation = { 0 90 0 }}
+	locator = { name = "rootb"	position = { 0 -35 0 } rotation = { 0 -90 0 }}
+
+	attach = { roota = "eternal_light_titan_entity" }
+	attach = { rootb = "eternal_light_titan_entity" }
+	attach = { roota = "eternal_empire_titan_entity" }
+	attach = { rootb = "eternal_empire_titan_entity" }
+
+	default_state = "idle"
+
+
+	scale = 2
+}
+
+
+entity = {
+	name = "eternal_light_eternal_cross_entity"
+
+	locator = { name = "rootq"	position = { 0 0 0 } rotation = { 0 0 0 }}
+	locator = { name = "roota"	position = { 0 0 0 } rotation = { 0 90 0 }}
+	locator = { name = "rootb"	position = { 0 0 0 } rotation = { 0 0 0 }}
+	locator = { name = "rootc"	position = { 0 0 0 } rotation = { 0 10 0 }}
+
+	attach = { roota = "eternal_light_eternal_pillar_cross_entity" }
+	attach = { rootb = "eternal_light_eternal_pillar_cross_2_entity" }
+	attach = { rootc = "eternal_sphere_pillar_entity" }
+
+	default_state = "idle"
+
+
+	scale = 2
+}
+
+entity = {
+	name = "eternal_light_psio_capitalo_system_entity"
+	
+
+	#playback_rate = -1.0 # Rotation is reversed
+	state = { name = "idle"		animation = "closed" animation_blend_time = 0 looping = no next_state = "idle"
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_eternos_ambient" } }
+	}
+
+	locator = { name = "rootq"	position = { 0 0 0 } rotation = { 0 0 0 }}
+	locator = { name = "rootu"	position = { 0 0 0 } rotation = { 45 0 0 }}
+	locator = { name = "roota"	position = { 0 0 0 } rotation = { 0 0 0 }}
+	locator = { name = "rootb"	position = { 0 0 0 } rotation = { 0 0 0 }}
+	locator = { name = "rootc"	position = { 0 0 1500 } rotation = { 0 0 0 }}
+	locator = { name = "rootd"	position = { 0 0 -1500 } rotation = { 0 0 0 }}
+	locator = { name = "roote"	position = { -1500 0 0 } rotation = { 90 0 0 }}
+	locator = { name = "rootx"	position = { 1500 0 0 } rotation = { 90 0 0 }}
+
+	attach = { rootq = "eternal_light_psio_system_2_entity" }
+	attach = { rootu = "eternal_light_psio_system_2_entity" }
+	attach = { rootc = "eternal_light_eternal_cross_entity" }
+	attach = { rootd = "eternal_light_eternal_cross_entity" }
+	attach = { rootx = "eternal_light_eternal_cross_entity" }
+	attach = { roote = "eternal_light_eternal_cross_entity" }
+	
+	#attach = { rootq = "psio_portal_entity" }
+	#attach = { rootq = "psio_stormo_entity" }
+
+	
+
+	scale = 2
+}
+
+entity = {
+	name = "eternal_light_psio_capital_system_entity"
+	
+
+	#playback_rate = -1.0 # Rotation is reversed
+	state = { name = "idle"		animation = "closed" animation_blend_time = 0 looping = no next_state = "idle"
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_eternos_ambient" } }
+	}
+
+	locator = { name = "rootq"	position = { 0 0 0 } rotation = { 45 0 0 }}
+
+	attach = { rootq = "eternal_light_psio_capitalo_system_entity" }
+
+
+	scale = 1
+}
+
+entity = {
+	name = "eternal_light_psio_capitalo_system_no_effect_entity"
+	
+
+	#playback_rate = -1.0 # Rotation is reversed
+	state = { name = "idle"		animation = "closed" animation_blend_time = 0 looping = no next_state = "idle"
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_eternos_ambient" } }
+	}
+
+	locator = { name = "rootq"	position = { 0 0 0 } rotation = { 0 0 0 }}
+	locator = { name = "rootu"	position = { 0 0 0 } rotation = { 45 0 0 }}
+	locator = { name = "roota"	position = { 0 0 0 } rotation = { 0 0 0 }}
+	locator = { name = "rootb"	position = { 0 0 0 } rotation = { 0 0 0 }}
+	locator = { name = "rootc"	position = { 0 0 1500 } rotation = { 0 0 0 }}
+	locator = { name = "rootd"	position = { 0 0 -1500 } rotation = { 0 0 0 }}
+	locator = { name = "roote"	position = { -1500 0 0 } rotation = { 90 0 0 }}
+	locator = { name = "rootx"	position = { 1500 0 0 } rotation = { 90 0 0 }}
+
+	attach = { rootq = "eternal_light_psio_system_2_entity" }
+	attach = { rootu = "eternal_light_psio_system_2_entity" }
+	attach = { rootc = "eternal_light_eternal_cross_entity" }
+	attach = { rootd = "eternal_light_eternal_cross_entity" }
+	attach = { rootx = "eternal_light_eternal_cross_entity" }
+	attach = { roote = "eternal_light_eternal_cross_entity" }
+
+
+	
+
+	scale = 2
+}
+
+entity = {
+	name = "eternal_light_psio_capital_system_no_effect_entity"
+	
+
+	#playback_rate = -1.0 # Rotation is reversed
+	state = { name = "idle"		animation = "closed" animation_blend_time = 0 looping = no next_state = "idle"
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_eternos_ambient" } }
+	}
+
+	locator = { name = "rootq"	position = { 0 0 0 } rotation = { 45 0 0 }}
+
+	attach = { rootq = "psio_capitalo_system_no_effect_entity" }
+
+
+	scale = 1
+}
+
+
+entity = {
+	name = "psio_portal_entity"
+	
+
+	#playback_rate = -1.0 # Rotation is reversed
+	state = { name = "idle"		animation = "closed" animation_blend_time = 0 looping = no next_state = "idle"
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_eternos_ambient" } }
+	}
+
+	locator = { name = "rootq"	position = { 0 0 0 } rotation = { 0 0 0 }}
+	locator = { name = "rootu"	position = { 0 0 0 } rotation = { 90 0 0 }}
+	locator = { name = "roota"	position = { 0 0 0 } rotation = { 0 0 0 }}
+	locator = { name = "rootb"	position = { 0 0 0 } rotation = { 0 0 0 }}
+	locator = { name = "rootc"	position = { 0 0 500 } rotation = { 0 0 0 }}
+	locator = { name = "rootd"	position = { 0 0 -500 } rotation = { 0 0 0 }}
+	locator = { name = "roote"	position = { 0 0 0 } rotation = { 0 0 0 }}
+
+	#attach = { rootq = "extra_dimensional_03_dimensional_portal_ed_entity" }
+	#attach = { rootq = "extra_dimensional_03_dimensional_portal_ed_entity" }
+	attach = { rootq = "extra_dimensional_ee_dimensional_portal_core_entity" }
+	attach = { rootq = "extra_dimensional_eee_dimensional_portal_core_entity" }
+
+	scale = 3
+}
+
+entity = {
+	name = "psio_storm_entity"
+	
+
+	#playback_rate = -1.0 # Rotation is reversed
+	state = { name = "idle"		animation = "closed" animation_blend_time = 0 looping = no next_state = "idle"
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_eternos_ambient" } }
+	}
+
+	locator = { name = "rootq"	position = { 0 0 0 } rotation = { 0 0 0 }}
+	locator = { name = "rootu"	position = { 0 0 0 } rotation = { 90 0 0 }}
+	locator = { name = "roota"	position = { 0 0 0 } rotation = { 0 0 0 }}
+	locator = { name = "rootb"	position = { 0 0 0 } rotation = { 0 0 0 }}
+	locator = { name = "rootc"	position = { 0 0 500 } rotation = { 0 0 0 }}
+	locator = { name = "rootd"	position = { 0 0 -500 } rotation = { 0 0 0 }}
+	locator = { name = "roote"	position = { 0 0 0 } rotation = { 0 0 0 }}
+
+
+	attach = { rootq = "extra_dimensional_ee_dimensional_portal_core_entity" }
+	attach = { rootq = "extra_dimensional_eee_dimensional_portal_core_entity" }
+
+	scale = 30
+}
+
+entity = {
+	name = "psio_stormo_entity"
+	
+
+	#playback_rate = -1.0 # Rotation is reversed
+	state = { name = "idle"		animation = "closed" animation_blend_time = 0 looping = no next_state = "idle"
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_eternos_ambient" } }
+	}
+
+	locator = { name = "rootq"	position = { 0 0 0 } rotation = { 0 0 0 }}
+	locator = { name = "rootu"	position = { 0 0 0 } rotation = { 90 0 0 }}
+	locator = { name = "roota"	position = { 0 0 0 } rotation = { 0 0 0 }}
+	locator = { name = "rootb"	position = { 0 0 0 } rotation = { 0 0 0 }}
+	locator = { name = "rootc"	position = { 0 0 500 } rotation = { 0 0 0 }}
+	locator = { name = "rootd"	position = { 0 0 -500 } rotation = { 0 0 0 }}
+	locator = { name = "roote"	position = { 0 0 0 } rotation = { 0 0 0 }}
+
+
+	attach = { rootq = "extra_dimensional_ee_dimensional_portal_core_entity" }
+	attach = { rootq = "extra_dimensional_eee_dimensional_portal_core_entity" }
+
+	scale = 15
+}
+
+
+
+entity = {
+	name = "extra_dimensional_ee_dimensional_portal_core_entity"
+	pdxmesh = "portal_yellow_mesh"
+	
+	locator = { name = "part1" 	position = { 0 0 0 } }
+	
+	default_state = idle
+	state = { name = "idle"		animation = "idle"		animation_blend_time = 0.3
+		start_event = { trigger_once = yes sound = { soundeffect = "ex_dimensional_portal_idle" } }
+	
+
+		event = { time = 0 node = "clock_12_locator" particle = "portal_orange_effect_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "ex_dimensional_portal_thunder" } }
+		event = { time = 0 node = "clock_3_locator" particle = "portal_orange_effect_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "ex_dimensional_portal_thunder" } }
+		event = { time = 0 node = "clock_6_locator" particle = "portal_orange_effect_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "ex_dimensional_portal_thunder" } }
+		event = { time = 0 node = "clock_9_locator" particle = "portal_orange_effect_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "ex_dimensional_portal_thunder" } }
+	}
+	
+	#game_data = {
+	#	uv_animation_speed 		= 0.25
+	#	uv_animation_direction 	= { 0.0 -1.0 }
+	#}
+	
+	scale = 30.0
+}
+
+entity = {
+	name = "extra_dimensional_eee_dimensional_portal_core_entity"
+	pdxmesh = "portal_yellow_mesh"
+	
+	locator = { name = "part1" 	position = { 0 0 0 } }
+	
+	default_state = idle
+	state = { name = "idle"		animation = "idle"		animation_blend_time = 0.3
+		start_event = { trigger_once = yes sound = { soundeffect = "ex_dimensional_portal_idle" } }
+	
+		event = { time = 0 node = "root2" particle = "portal_orange_inner_effect_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "clock_12_locator" particle = "portal_orange_effect_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "ex_dimensional_portal_thunder" } }
+		event = { time = 0 node = "clock_3_locator" particle = "portal_orange_effect_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "ex_dimensional_portal_thunder" } }
+		event = { time = 0 node = "clock_6_locator" particle = "portal_orange_effect_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "ex_dimensional_portal_thunder" } }
+		event = { time = 0 node = "clock_9_locator" particle = "portal_orange_effect_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "ex_dimensional_portal_thunder" } }
+	}
+	
+	#game_data = {
+	#	uv_animation_speed 		= 0.25
+	#	uv_animation_direction 	= { 0.0 -1.0 }
+	#}
+	
+	scale = 31.0
+}
+
+
+
+
+
+
+entity = {
+	name = "psionic_storms_entity"
+	scale = 3
+	locator = { name = "root"	position = { 0 0 0 } rotation = { 0 0 0 }}
+	default_state = "idle"	
+	state = { name = "idle" animation = "idle" 
+		event = { time = 0 node = "effect_1" particle = "shroud_creature_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "root" particle = "shroud_creature_corrupted_cloud" keep_particle = yes trigger_once = yes }
+		start_event = { trigger_once = yes sound = { soundeffect = "shroud_creature_idle_low" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "shroud_creature_idle_high" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "shroud_creature_corrupted_idle" } }
+		event = { time = 1.2 trigger_once = yes sound = { soundeffect = "shroud_creature_thunder" } }
+	}
+	
+	attach = { root = "plane_creature_corrupted_01_entity" }
+	
+}
+
+
+
+
+#playback_rate = -1.0 # Rotation is reversed
+

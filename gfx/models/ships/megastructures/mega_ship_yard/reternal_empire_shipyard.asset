@@ -1,0 +1,86 @@
+entity = {
+	name = "reternal_empire_mega_shipyard_01_stage_1_entity"
+	locator = { name = "part1" }
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 6.5 }
+	state = { name = "death" state_time = 6.6 looping = no 
+		event = { time = 6.5 node = "part1" particle = "juggernaut_explosion_particle" sound = { soundeffect = ship_destroyed } }
+	}
+	
+	attach = { part1 = "reternal_empire_mega_shipyard_01_stage_1_section_entity" }
+}
+
+entity = {
+	name = "reternal_empire_mega_shipyard_01_stage_1_section_entity"
+	pdxmesh = "mega_shipyard_01_stage_1_mesh"
+	locator = { name = "core" }
+	
+	attach = { core = "reternal_empire_ship_circle_entity" }
+	
+	scale = 0.3
+}
+
+entity = {
+	name = "reternal_empire_mega_shipyard_01_stage_2_entity"
+	locator = { name = "part1" }
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 6.5 }
+	state = { name = "death" state_time = 6.6 looping = no 
+		event = { time = 6.5 node = "part1" particle = "juggernaut_explosion_particle" sound = { soundeffect = ship_destroyed } }
+	}
+	
+	attach = { part1 = "reternal_empire_ship_circle_entity" }
+	
+	scale = 0.35
+}
+
+entity = {
+	name = "reternal_empire_mega_shipyard_01_stage_2_section_entity"
+	pdxmesh = "mega_shipyard_01_stage_2_mesh"
+	locator = { name = "core" }
+	
+	attach = { core = "reternal_empire_ship_circle_entity" }
+}
+
+entity = {
+	name = "reternal_empire_mega_shipyard_01_stage_3_entity"
+	locator = { name = "part1" }
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 6.5 }
+	state = { name = "death" state_time = 6.6 looping = no 
+		event = { time = 6.5 node = "part1" particle = "juggernaut_explosion_particle" sound = { soundeffect = ship_destroyed } }
+	}
+	
+	attach = { core = "reternal_empire_ship_circle_entity"}	
+	
+	scale = 0.4
+}
+
+entity = {
+	name = "reternal_empire_mega_shipyard_01_stage_3_section_entity"
+	pdxmesh = "mega_shipyard_01_stage_3_mesh"
+	locator = { name = "core" }
+	
+
+	attach = { core = "reternal_empire_ship_circleb_entity"}	
+
+}	
+
+
+
+
+entity = {
+	name = "reternal_empire_part_mega_shipyard_01_stage_3_section_entity"
+
+	locator = { name = "core" }
+	
+
+
+	default_state = "idle"	
+
+#	
+
+}

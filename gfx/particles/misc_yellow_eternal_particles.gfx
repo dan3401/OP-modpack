@@ -1,0 +1,14 @@
+objectTypes = {
+	pdxparticle = {
+		name = "yellow_eternal_gateway_portal_effect"
+		type = "yellow_eternal_gateway_portal_effect"
+		
+		scale = 1.0
+	}
+	pdxparticle = {
+		name = "yellow_eternal_gateway_portal_death_residue_effect"
+		type = "yellow_eternal_gateway_portal_death_residue_effect"
+		
+		scale = 1.0
+	}
+}

@@ -1,0 +1,128 @@
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "eternal_disruptor_dm_small"
+	color =  {  0.6		0.6		0.6 	2.4 }
+	hit_entity = "both_eternal_disruptor_dm_small_hit_entity"
+	shield_hit_entity = "both_eternal_disruptor_dm_small_shield_hit_entity"
+	muzzle_flash_entity = "both_eternal_disruptor_dm_small_muzzle_entity"
+	
+	#beam specific data
+	width = 1
+	texture_scroll_speed = 2.0
+	stretch_to_fit = no
+	texture_tiling = 2.0	
+	hit = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.4 1.0
+			0.8 0.5
+			1.0 0.0
+		}
+		duration = 1.75
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.4 0.0
+			0.8 0.0
+			1.0 0.0
+		}
+		duration = 0.75
+
+	}
+	texture = "gfx/models/combat_items/eternal_disruptor_diffuse.dds"
+	
+	shield_impact = {
+		size = large
+		loop_duration = 1.25
+		delay = 0
+	}
+}
+
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "eternal_disruptor_dm_medium"
+	color =  {  0.6		0.6		0.6 	3.4 }
+	hit_entity = "both_eternal_disruptor_dm_medium_hit_entity"
+	shield_hit_entity = "both_eternal_disruptor_dm_medium_shield_hit_entity"
+	muzzle_flash_entity = "both_eternal_disruptor_dm_medium_muzzle_entity"
+	
+	#beam specific data
+	width = 1.5
+	texture_scroll_speed = 1.0
+	stretch_to_fit = no
+	texture_tiling = 2.0	
+	hit = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.4 1.0
+			0.8 0.5
+			1.0 0.0
+		}
+		duration = 1.75
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.4 0.0
+			0.8 0.0
+			1.0 0.0
+		}
+		duration = 0.75
+
+	}
+	texture = "gfx/models/combat_items/eternal_disruptor_diffuse.dds"
+	
+	shield_impact = {
+		size = large
+		loop_duration = 1.25
+		delay = 0
+	}
+}
+
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "eternal_disruptor_dm_large"
+	color =  {  0.6		0.6		0.6 	4.4 }
+	hit_entity = "both_eternal_disruptor_dm_large_hit_entity"
+	shield_hit_entity = "both_eternal_disruptor_dm_large_shield_hit_entity"
+	muzzle_flash_entity = "both_eternal_disruptor_dm_large_muzzle_entity"
+	
+	#beam specific data
+	width = 2.5
+	texture_scroll_speed = 3.0
+	stretch_to_fit = no
+	texture_tiling = 2.0	
+	hit = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.4 1.0
+			0.8 0.5
+			1.0 0.0
+		}
+		duration = 1.75
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.4 0.0
+			0.8 0.0
+			1.0 0.0
+		}
+		duration = 0.75
+
+	}
+	texture = "gfx/models/combat_items/eternal_disruptor_diffuse.dds"
+	
+	shield_impact = {
+		size = large
+		loop_duration = 1.25
+		delay = 0
+	}
+}

@@ -1,0 +1,204 @@
+objectTypes = {
+
+
+####################
+####DM Tier {Projectile)
+####################
+
+####DM Mass Driver
+	
+	pdxparticle = {
+		name = "yellow_eternal_mass_driver_dm_large_muzzle_particle"
+		type = "yellow_eternal_mass_driver_dm_muzzle"
+		
+		scale = 1.5
+	}
+	
+	pdxparticle = {
+		name = "yellow_eternal_mass_driver_dm_medium_muzzle_particle"
+		type = "yellow_eternal_mass_driver_dm_muzzle"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "yellow_eternal_mass_driver_dm_small_muzzle_particle"
+		type = "yellow_eternal_mass_driver_dm_muzzle"
+		
+		scale = 0.75
+	}
+	
+	pdxparticle = {
+		name = "yellow_eternal_mass_driver_dm_large_hit_effect"
+		type = "yellow_eternal_mass_driver_dm_hit_effect"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "yellow_eternal_mass_driver_dm_medium_hit_effect"
+		type = "yellow_eternal_mass_driver_dm_hit_effect"
+		
+		scale = 0.85
+	}
+	
+	pdxparticle = {
+		name = "yellow_eternal_mass_driver_dm_small_hit_effect"
+		type = "yellow_eternal_mass_driver_dm_hit_effect"
+		
+		scale = 0.65
+	}
+	
+	
+####DM Launcher
+	
+	pdxparticle = {
+		name = "yellow_eternal_energy_torpedoes_dm_muzzle_particle"
+		type = "yellow_eternal_energy_torpedoes_dm_file"
+		
+		scale = 1.75
+	}
+	
+	pdxparticle = {
+		name = "yellow_eternal_energy_torpedoes_dm_idle_particle"
+		type = "yellow_eternal_energy_torpedoes_dm_idle_file"
+		
+		scale = 1.75
+	}
+	
+	pdxparticle = {
+		name = "yellow_eternal_energy_torpedoes_dm_idle_trail_particle"
+		type = "yellow_eternal_energy_torpedoes_dm_idle_trail_file"
+		
+		scale = 1.75
+	}
+	
+	pdxparticle = {
+		name = "yellow_eternal_energy_torpedoes_dm_hit_effect"
+		type = "yellow_eternal_energy_torpedoes_dm_hit_effect"
+		
+		scale = 1.75
+	}
+	
+####DM Plasma
+	
+	pdxparticle = {
+		name = "yellow_eternal_plasma_cannon_dm_large_muzzle_particle"
+		type = "yellow_eternal_plasma_cannon_dm_file"
+		
+		scale = 0.80
+	}
+	
+	pdxparticle = {
+		name = "yellow_eternal_plasma_cannon_dm_medium_muzzle_particle"
+		type = "yellow_eternal_plasma_cannon_dm_file"
+		
+		scale = 0.5
+	}
+	
+	pdxparticle = {
+		name = "yellow_eternal_plasma_cannon_dm_small_muzzle_particle"
+		type = "yellow_eternal_plasma_cannon_dm_file"
+		
+		scale = 0.25
+	}
+	
+	
+	pdxparticle = {
+		name = "large_yellow_eternal_plasma_cannon_dm_idle_particle"
+		type = "yellow_eternal_plasma_cannon_dm_idle_file"
+		
+		scale = 1.8
+	}
+	pdxparticle = {
+		name = "large_yellow_eternal_plasma_cannon_dm_idle_drops_particle"
+		type = "yellow_eternal_plasma_cannon_dm_idle_drops_file"
+		
+		scale = 1.8
+	}
+	
+	pdxparticle = {
+		name = "medium_yellow_eternal_plasma_cannon_dm_idle_particle"
+		type = "yellow_eternal_plasma_cannon_dm_idle_file"
+		
+		scale = 1.4
+	}
+	pdxparticle = {
+		name = "medium_yellow_eternal_plasma_cannon_dm_idle_drops_particle"
+		type = "yellow_eternal_plasma_cannon_dm_idle_drops_file"
+		
+		scale = 1.4
+	}
+	
+	pdxparticle = {
+		name = "small_yellow_eternal_plasma_cannon_dm_idle_particle"
+		type = "yellow_eternal_plasma_cannon_dm_idle_file"
+		
+		scale = 0.8
+	}
+	pdxparticle = {
+		name = "small_yellow_eternal_plasma_cannon_dm_idle_drops_particle"
+		type = "yellow_eternal_plasma_cannon_dm_idle_drops_file"
+		
+		scale = 0.8
+	}
+	
+	pdxparticle = {
+		name = "yellow_eternal_plasma_cannon_dm_small_hit_effect"
+		type = "yellow_eternal_plasma_cannon_dm_hit_effect"
+		
+		scale = 0.55
+	}
+	
+	pdxparticle = {
+		name = "yellow_eternal_plasma_cannon_dm_medium_hit_effect"
+		type = "yellow_eternal_plasma_cannon_dm_hit_effect"
+		
+		scale = 0.7
+	}
+	
+	pdxparticle = {
+		name = "yellow_eternal_plasma_cannon_dm_large_hit_effect"
+		type = "yellow_eternal_plasma_cannon_dm_hit_effect"
+		
+		scale = 1.0
+	}
+	
+####DM Artillery
+
+	pdxparticle = {
+		name = "yellow_eternal_kinetic_artillery_dm_windup_effect"
+		type = "yellow_eternal_kinetic_artillery_dm_windup_effect"
+		
+		scale = 1.5
+	}
+	
+	pdxparticle = {
+		name = "yellow_eternal_kinetic_artillery_dm_muzzle_windup_effect"
+		type = "yellow_eternal_kinetic_artillery_dm_muzzle_windup_effect"
+		
+		scale = 1.5
+	}
+
+	pdxparticle = {
+		name = "yellow_eternal_kinetic_artillery_dm_muzzle_particle"
+		type = "yellow_eternal_kinetic_artillery_dm_muzzle_file"
+		
+		scale = 2.0
+	}
+	
+	pdxparticle = {
+		name = "yellow_eternal_kinetic_artillery_dm_idle_particle"
+		type = "yellow_eternal_kinetic_artillery_dm_idle"
+		
+		scale = 2.0
+	}
+
+	pdxparticle = {
+		name = "yellow_eternal_kinetic_artillery_dm_hit_effect"
+		type = "yellow_eternal_kinetic_artillery_dm_hit_effect"
+		
+		scale = 1.5
+	}
+	
+}

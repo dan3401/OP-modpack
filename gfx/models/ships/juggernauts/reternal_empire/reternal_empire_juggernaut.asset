@@ -1,0 +1,37 @@
+entity = {
+	name = "reternal_empire_juggernaut_entity"
+	pdxmesh = "avian_01_juggernaut_frame_mesh"
+ 
+	default_state = "idle"
+	state = { name = "idle"	 animation = "idle" animation_blend_time = 0.25
+	#	start_event = { trigger_once = yes sound = { soundeffect = "amb_corvette_hum" } }
+	}
+	state = { name = "moving"	animation = "idle" animation_blend_time = 0.25
+	#	event = { trigger_once = yes sound = { soundeffect = moving_out_corvette } }
+	}
+	state = { name = "death" animation = "death" animation_blend_time = 0.0 looping = no
+		event = { time = 13.2 node = "part1" particle = "juggernaut_explosion_particle" sound = { soundeffect = ship_destroyed } }
+	}
+ 
+    scale = 1.0
+	game_data = {
+		size = 35
+		emissive_recolor_crunch = 5.0
+	}
+
+	#attach = { part1 = "avian_01_juggernaut_core_section_entity" }
+}
+
+entity = {
+	name = "reternal_empire_juggernaut_core_section_entity"
+
+	locator = { name = "core" rotation = { 0 90 90 } }
+	attach = { "core" = "reternal_empire_starbase_starhold_section_entity" }
+	default_state = "idle"
+	state = { name = "idle"	 animation = "idle" animation_blend_time = 0.25
+	#	start_event = { trigger_once = yes sound = { soundeffect = "amb_corvette_hum" } }
+	}
+
+	
+}
+

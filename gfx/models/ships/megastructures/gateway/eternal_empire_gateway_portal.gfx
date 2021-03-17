@@ -1,0 +1,38 @@
+objectTypes = {
+	pdxmesh = {
+		name = "eternal_empire_gateway_portal_mesh"
+		file = "gfx/models/ships/megastructures/gateway/gateway_portal.mesh"
+		
+		meshsettings = {
+			name = "pCylinderShape7"
+			index = 0
+			texture_diffuse = "eternal_empire_gateway_portal_connector_diffuse.dds"
+			texture_normal = "nospec.dds"
+			texture_specular = "nospec.dds"
+			shader = "PdxMeshAlphaAdditiveAnimateUV"
+		}
+
+		meshsettings = {
+			name = "pCylinderShape2"
+			index = 0
+			texture_diffuse = "eternal_empire_gateway_portal_diffuse.dds"
+			texture_normal = "nospec.dds"
+			texture_specular = "nospec.dds"
+			shader = "PdxMeshAlphaAdditiveAnimateUV"
+		}
+		
+	}
+
+	pdxmesh = {
+		name = "portal_yellow_mesh"
+		file = "gfx/models/ships/extra_dimensional_01/portal.mesh"
+		
+		animation = { id = "idle"			type = "portal_idle_animation" }
+		
+		scale = 1.0
+		
+		meshsettings = {
+			texture_diffuse = "portal_ed_yellow_background.dds"
+		}
+	}
+}

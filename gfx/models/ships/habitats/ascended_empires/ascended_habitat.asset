@@ -1,0 +1,359 @@
+# ----------------------------
+# --------  DELTA TIER -------- 
+# ----------------------------
+entity = {
+	name = "dm_habitat_phase_01_entity"
+	pdxmesh = "dm_habitat_lvl1_mesh"
+	default_state = "idle"
+	state = { name = "idle" animation = "idle"
+		event = { time = 0 node = "singularity_core" particle = "dm_bare_black_hole_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "generator_light" particle = "dm_habitat_singulo_beam_effect" keep_particle = yes trigger_once = yes }
+	}
+  scale = 1.5
+	game_data = {
+		size = 35
+		shader_type = ship
+		emissive_recolor_crunch = 25.0
+	}
+}
+entity = {
+	name = "dm_habitat_phase_02_entity"
+	pdxmesh = "dm_habitat_lvl2_mesh"
+	default_state = "idle"
+	state = { name = "idle" animation = "idle"
+		event = { time = 0 node = "singularity_core" particle = "dm_bare_black_hole_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "generator_light" particle = "dm_habitat_singulo_beam_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "singularity_small_upper_01" particle = "dm_small_bare_black_hole_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_01" particle = "dm_habitat_singulo_small_upper_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_02" particle = "dm_small_bare_black_hole_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_02" particle = "dm_habitat_singulo_small_upper_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_03" particle = "dm_small_bare_black_hole_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_03" particle = "dm_habitat_singulo_small_upper_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_04" particle = "dm_small_bare_black_hole_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_04" particle = "dm_habitat_singulo_small_upper_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_05" particle = "dm_small_bare_black_hole_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_05" particle = "dm_habitat_singulo_small_upper_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_06" particle = "dm_small_bare_black_hole_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_06" particle = "dm_habitat_singulo_small_upper_beam_effect" keep_particle = yes trigger_once = yes }
+	}
+  scale = 1.5
+	game_data = {
+		size = 35
+		shader_type = ship
+		emissive_recolor_crunch = 25.0
+	}
+}
+entity = {
+	name = "dm_habitat_phase_03_entity"
+	pdxmesh = "dm_habitat_lvl3_mesh"
+	default_state = "idle"
+	state = { name = "idle" animation = "idle"
+		event = { time = 0 node = "singularity_core" particle = "dm_bare_black_hole_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "generator_light" particle = "dm_habitat_singulo_beam_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "singularity_small_upper_01" particle = "dm_small_bare_black_hole_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_01" particle = "dm_habitat_singulo_small_upper_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_02" particle = "dm_small_bare_black_hole_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_02" particle = "dm_habitat_singulo_small_upper_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_03" particle = "dm_small_bare_black_hole_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_03" particle = "dm_habitat_singulo_small_upper_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_04" particle = "dm_small_bare_black_hole_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_04" particle = "dm_habitat_singulo_small_upper_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_05" particle = "dm_small_bare_black_hole_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_05" particle = "dm_habitat_singulo_small_upper_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_06" particle = "dm_small_bare_black_hole_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_06" particle = "dm_habitat_singulo_small_upper_beam_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "singularity_small_lower_01" particle = "dm_small_bare_black_hole_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_lower_01" particle = "dm_habitat_singulo_small_lower_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_lower_02" particle = "dm_small_bare_black_hole_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_lower_02" particle = "dm_habitat_singulo_small_lower_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_lower_03" particle = "dm_small_bare_black_hole_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_lower_03" particle = "dm_habitat_singulo_small_lower_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_lower_04" particle = "dm_small_bare_black_hole_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_lower_04" particle = "dm_habitat_singulo_small_lower_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_lower_05" particle = "dm_small_bare_black_hole_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_lower_05" particle = "dm_habitat_singulo_small_lower_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_lower_06" particle = "dm_small_bare_black_hole_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_lower_06" particle = "dm_habitat_singulo_small_lower_beam_effect" keep_particle = yes trigger_once = yes }
+	}
+  scale = 1.5
+	game_data = {
+		size = 35
+		shader_type = ship
+		emissive_recolor_crunch = 25.0
+	}
+}
+
+# ----------------------------
+# --------  ALPHA TIER -------- 
+# ----------------------------
+entity = {
+	name = "alpha_habitat_phase_01_entity"
+	pdxmesh = "ae_habitat_lvl1_mesh"
+	default_state = "idle"
+	state = { name = "idle" animation = "idle"
+		event = { time = 0 node = "singularity_core" particle = "ae_bare_black_hole_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "generator_light" particle = "ae_habitat_singulo_beam_effect" keep_particle = yes trigger_once = yes }
+	}
+  scale = 1.5
+	game_data = {
+		size = 35
+		shader_type = ship
+		emissive_recolor_crunch = 25.0
+	}
+}
+entity = {
+	name = "alpha_habitat_phase_02_entity"
+	pdxmesh = "ae_habitat_lvl2_mesh"
+	default_state = "idle"
+	state = { name = "idle" animation = "idle"
+		event = { time = 0 node = "singularity_core" particle = "ae_bare_black_hole_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "generator_light" particle = "ae_habitat_singulo_beam_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "singularity_small_upper_01" particle = "ae_small_bare_black_hole_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_01" particle = "ae_habitat_singulo_small_upper_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_02" particle = "ae_small_bare_black_hole_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_02" particle = "ae_habitat_singulo_small_upper_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_03" particle = "ae_small_bare_black_hole_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_03" particle = "ae_habitat_singulo_small_upper_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_04" particle = "ae_small_bare_black_hole_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_04" particle = "ae_habitat_singulo_small_upper_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_05" particle = "ae_small_bare_black_hole_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_05" particle = "ae_habitat_singulo_small_upper_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_06" particle = "ae_small_bare_black_hole_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_06" particle = "ae_habitat_singulo_small_upper_beam_effect" keep_particle = yes trigger_once = yes }
+	}
+  scale = 1.5
+	game_data = {
+		size = 35
+		shader_type = ship
+		emissive_recolor_crunch = 25.0
+	}
+}
+entity = {
+	name = "alpha_habitat_phase_03_entity"
+	pdxmesh = "ae_habitat_lvl3_mesh"
+	default_state = "idle"
+	state = { name = "idle" animation = "idle"
+		event = { time = 0 node = "singularity_core" particle = "ae_bare_black_hole_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "generator_light" particle = "ae_habitat_singulo_beam_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "singularity_small_upper_01" particle = "ae_small_bare_black_hole_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_01" particle = "ae_habitat_singulo_small_upper_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_02" particle = "ae_small_bare_black_hole_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_02" particle = "ae_habitat_singulo_small_upper_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_03" particle = "ae_small_bare_black_hole_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_03" particle = "ae_habitat_singulo_small_upper_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_04" particle = "ae_small_bare_black_hole_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_04" particle = "ae_habitat_singulo_small_upper_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_05" particle = "ae_small_bare_black_hole_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_05" particle = "ae_habitat_singulo_small_upper_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_06" particle = "ae_small_bare_black_hole_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_06" particle = "ae_habitat_singulo_small_upper_beam_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "singularity_small_lower_01" particle = "ae_small_bare_black_hole_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_lower_01" particle = "ae_habitat_singulo_small_lower_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_lower_02" particle = "ae_small_bare_black_hole_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_lower_02" particle = "ae_habitat_singulo_small_lower_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_lower_03" particle = "ae_small_bare_black_hole_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_lower_03" particle = "ae_habitat_singulo_small_lower_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_lower_04" particle = "ae_small_bare_black_hole_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_lower_04" particle = "ae_habitat_singulo_small_lower_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_lower_05" particle = "ae_small_bare_black_hole_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_lower_05" particle = "ae_habitat_singulo_small_lower_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_lower_06" particle = "ae_small_bare_black_hole_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_lower_06" particle = "ae_habitat_singulo_small_lower_beam_effect" keep_particle = yes trigger_once = yes }
+	}
+  scale = 1.5
+	game_data = {
+		size = 35
+		shader_type = ship
+		emissive_recolor_crunch = 25.0
+	}
+}
+
+# ----------------------------
+# --------  SIGMA TIER -------- 
+# ----------------------------
+entity = {
+	name = "sigma_habitat_phase_01_entity"
+	pdxmesh = "se_habitat_lvl1_mesh"
+	default_state = "idle"
+	state = { name = "idle" animation = "idle"
+		event = { time = 0 node = "singularity_core" particle = "sigma_habitat_stellarite_sun_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "generator_light" particle = "sigma_habitat_singulo_beam_effect" keep_particle = yes trigger_once = yes }
+	}
+  scale = 1.5
+	game_data = {
+		size = 35
+		shader_type = ship
+		emissive_recolor_crunch = 25.0
+	}
+}
+entity = {
+	name = "sigma_habitat_phase_02_entity"
+	pdxmesh = "se_habitat_lvl2_mesh"
+	default_state = "idle"
+	state = { name = "idle" animation = "idle"
+		event = { time = 0 node = "singularity_core" particle = "sigma_habitat_stellarite_sun_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "generator_light" particle = "sigma_habitat_singulo_beam_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "singularity_small_upper_01" particle = "small_habitat_stellarite_sun_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_01" particle = "sigma_habitat_singulo_small_upper_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_02" particle = "small_habitat_stellarite_sun_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_02" particle = "sigma_habitat_singulo_small_upper_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_03" particle = "small_habitat_stellarite_sun_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_03" particle = "sigma_habitat_singulo_small_upper_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_04" particle = "small_habitat_stellarite_sun_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_04" particle = "sigma_habitat_singulo_small_upper_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_05" particle = "small_habitat_stellarite_sun_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_05" particle = "sigma_habitat_singulo_small_upper_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_06" particle = "small_habitat_stellarite_sun_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_06" particle = "sigma_habitat_singulo_small_upper_beam_effect" keep_particle = yes trigger_once = yes }
+	}
+  scale = 1.5
+	game_data = {
+		size = 35
+		shader_type = ship
+		emissive_recolor_crunch = 25.0
+	}
+}
+entity = {
+	name = "sigma_habitat_phase_03_entity"
+	pdxmesh = "se_habitat_lvl3_mesh"
+	default_state = "idle"
+	state = { name = "idle" animation = "idle"
+		event = { time = 0 node = "singularity_core" particle = "sigma_habitat_stellarite_sun_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "generator_light" particle = "sigma_habitat_singulo_beam_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "singularity_small_upper_01" particle = "small_habitat_stellarite_sun_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_01" particle = "sigma_habitat_singulo_small_upper_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_02" particle = "small_habitat_stellarite_sun_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_02" particle = "sigma_habitat_singulo_small_upper_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_03" particle = "small_habitat_stellarite_sun_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_03" particle = "sigma_habitat_singulo_small_upper_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_04" particle = "small_habitat_stellarite_sun_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_04" particle = "sigma_habitat_singulo_small_upper_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_05" particle = "small_habitat_stellarite_sun_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_05" particle = "sigma_habitat_singulo_small_upper_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_06" particle = "small_habitat_stellarite_sun_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_06" particle = "sigma_habitat_singulo_small_upper_beam_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "singularity_small_lower_01" particle = "small_habitat_stellarite_sun_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_lower_01" particle = "sigma_habitat_singulo_small_lower_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_lower_02" particle = "small_habitat_stellarite_sun_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_lower_02" particle = "sigma_habitat_singulo_small_lower_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_lower_03" particle = "small_habitat_stellarite_sun_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_lower_03" particle = "sigma_habitat_singulo_small_lower_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_lower_04" particle = "small_habitat_stellarite_sun_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_lower_04" particle = "sigma_habitat_singulo_small_lower_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_lower_05" particle = "small_habitat_stellarite_sun_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_lower_05" particle = "sigma_habitat_singulo_small_lower_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_lower_06" particle = "small_habitat_stellarite_sun_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_lower_06" particle = "sigma_habitat_singulo_small_lower_beam_effect" keep_particle = yes trigger_once = yes }
+	}
+  scale = 1.5
+	game_data = {
+		size = 35
+		shader_type = ship
+		emissive_recolor_crunch = 25.0
+	}
+}
+
+# ----------------------------
+# --------  OMEGA TIER -------- 
+# ----------------------------
+entity = {
+	name = "omega_habitat_phase_01_entity"
+	pdxmesh = "oe_habitat_lvl1_mesh"
+	default_state = "idle"
+	state = { name = "idle" animation = "idle"
+		event = { time = 0 node = "singularity_core" particle = "sigma_habitat_stellarite_sun_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "generator_light" particle = "sigma_habitat_singulo_beam_effect" keep_particle = yes trigger_once = yes }
+	}
+  scale = 1.5
+	game_data = {
+		size = 35
+		shader_type = ship
+		emissive_recolor_crunch = 25.0
+	}
+}
+entity = {
+	name = "omega_habitat_phase_02_entity"
+	pdxmesh = "oe_habitat_lvl2_mesh"
+	default_state = "idle"
+	state = { name = "idle" animation = "idle"
+		event = { time = 0 node = "singularity_core" particle = "sigma_habitat_stellarite_sun_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "generator_light" particle = "sigma_habitat_singulo_beam_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "singularity_small_upper_01" particle = "small_habitat_stellarite_sun_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_01" particle = "sigma_habitat_singulo_small_upper_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_02" particle = "small_habitat_stellarite_sun_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_02" particle = "sigma_habitat_singulo_small_upper_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_03" particle = "small_habitat_stellarite_sun_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_03" particle = "sigma_habitat_singulo_small_upper_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_04" particle = "small_habitat_stellarite_sun_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_04" particle = "sigma_habitat_singulo_small_upper_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_05" particle = "small_habitat_stellarite_sun_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_05" particle = "sigma_habitat_singulo_small_upper_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_06" particle = "small_habitat_stellarite_sun_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_06" particle = "sigma_habitat_singulo_small_upper_beam_effect" keep_particle = yes trigger_once = yes }
+	}
+  scale = 1.5
+	game_data = {
+		size = 35
+		shader_type = ship
+		emissive_recolor_crunch = 25.0
+	}
+}
+entity = {
+	name = "omega_habitat_phase_03_entity"
+	pdxmesh = "oe_habitat_lvl3_mesh"
+	default_state = "idle"
+	state = { name = "idle" animation = "idle"
+		event = { time = 0 node = "singularity_core" particle = "sigma_habitat_stellarite_sun_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "generator_light" particle = "sigma_habitat_singulo_beam_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "singularity_small_upper_01" particle = "small_habitat_stellarite_sun_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_01" particle = "sigma_habitat_singulo_small_upper_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_02" particle = "small_habitat_stellarite_sun_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_02" particle = "sigma_habitat_singulo_small_upper_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_03" particle = "small_habitat_stellarite_sun_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_03" particle = "sigma_habitat_singulo_small_upper_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_04" particle = "small_habitat_stellarite_sun_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_04" particle = "sigma_habitat_singulo_small_upper_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_05" particle = "small_habitat_stellarite_sun_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_05" particle = "sigma_habitat_singulo_small_upper_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_06" particle = "small_habitat_stellarite_sun_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_upper_06" particle = "sigma_habitat_singulo_small_upper_beam_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "singularity_small_lower_01" particle = "small_habitat_stellarite_sun_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_lower_01" particle = "sigma_habitat_singulo_small_lower_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_lower_02" particle = "small_habitat_stellarite_sun_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_lower_02" particle = "sigma_habitat_singulo_small_lower_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_lower_03" particle = "small_habitat_stellarite_sun_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_lower_03" particle = "sigma_habitat_singulo_small_lower_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_lower_04" particle = "small_habitat_stellarite_sun_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_lower_04" particle = "sigma_habitat_singulo_small_lower_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_lower_05" particle = "small_habitat_stellarite_sun_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_lower_05" particle = "sigma_habitat_singulo_small_lower_beam_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_lower_06" particle = "small_habitat_stellarite_sun_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "singularity_small_lower_06" particle = "sigma_habitat_singulo_small_lower_beam_effect" keep_particle = yes trigger_once = yes }
+	}
+  scale = 1.5
+	game_data = {
+		size = 35
+		shader_type = ship
+		emissive_recolor_crunch = 25.0
+	}
+}
+
+
+# ANIMATIONS
+
+animation = {
+	name = "ascended_habitat_idle_animation"
+	file = "ascended_habitat_idle.anim"
+}

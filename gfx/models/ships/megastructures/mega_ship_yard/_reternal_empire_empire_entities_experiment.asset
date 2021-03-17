@@ -1,0 +1,84 @@
+@corvette_scale = 6.0
+@destroyer_scale = 7.0
+@cruiser_scale = 10.0
+@battleship_scale = 12.0
+@Battlecruiser_scale = 13.0
+@LightCarrier_scale = 15.0
+@Carrier_scale = 17.0
+@military_station_large = 20.0
+@Dreadnought_scale = 20.0
+@Superdreadnought_scale = 25.0
+@Flagship_scale = 30.0
+
+
+##################         	EXPERIMENTS           ########################
+
+# FRAME
+
+
+
+entity = {
+	name = "reternal_empire_ship_qua_entity"
+
+
+	locator = { name = "potato1"				position = { 0	0  0 } rotation = { 0 0 0 } scale = 15 }
+
+	locator = { name = "potato2"				position = { 0	0  0 } rotation = { 0 90 0 } scale = 15 }
+
+
+	locator = { name = "potato3"				position = { 0	0  0 } rotation = { 0 180 0 } scale = 15 }
+
+
+	locator = { name = "potato4"				position = { 0	0  0 } rotation = { 0 270 0 } scale = 15 }	
+	
+	
+	attach = { "potato1" = "reternal_empire_ship_base_entity" }
+	attach = { "potato2" = "reternal_empire_ship_base_entity" }
+	attach = { "potato3" = "reternal_empire_ship_base_entity" }
+	attach = { "potato4" = "reternal_empire_ship_base_entity" }
+	
+	default_state = "idle"
+	state = { name = "idle"		animation = "idle"
+		start_event = { trigger_once = yes sound = { soundeffect = "fallen_empire_starbase_amb" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "fallen_empire_starbase_energy_field" } }
+	}
+	
+	game_data = {
+		shader_type = ship
+		emissive_recolor_crunch = 0.0
+	}
+	
+	scale = 4.0
+}
+
+entity = {
+	name = "reternal_empire_ship_circle_entity"
+	pdxmesh = "reternal_empire_event_ship_01_fallen_mesh"
+
+	locator = { name = "potato1"				position = { 0	0  0 } rotation = { 0 0 0 } scale = 15 }
+
+	locator = { name = "potato2"				position = { 0	0  0 } rotation = { 0 180 0 } scale = 15 }
+
+	locator = { name = "potato3"				position = { 0	0  0 } rotation = { 0 0 0 } scale = 3 }
+
+	attach = { "potato3" = "eternal_empire_gateway_entity" }
+	attach = { "potato1" = "reternal_empire_ship_base_entity" }
+	attach = { "potato2" = "reternal_empire_ship_base_entity" }
+
+	
+	default_state = "idle"
+	state = { name = "idle"		animation = "idle"
+		start_event = { trigger_once = yes sound = { soundeffect = "fallen_empire_starbase_amb" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "fallen_empire_starbase_energy_field" } }
+	}
+	
+	game_data = {
+		shader_type = ship
+		emissive_recolor_crunch = 0.0
+	}
+	
+	scale = 1.5
+}
+
+
+

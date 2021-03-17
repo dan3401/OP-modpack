@@ -1,0 +1,34 @@
+objectTypes = {
+	
+	######
+	# PLANET
+	######
+	pdxmesh = {
+		name = "eternal_shield_effect_mesh"
+		file = "gfx/models/planets/apocalypse_planet_effects/planet_shield_effect.mesh"
+		
+		meshsettings = {
+			name = "planet_geosphereShape"
+			index = 0
+			texture_diffuse = "eternal_shield_diffuse.dds"
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+			shader = "PdxMeshAlphaAdditiveAnimateUV"
+		}
+	}
+
+	pdxmesh = {
+		name = "eternal_shield_alpha_override_effect_mesh"
+		file = "gfx/models/planets/apocalypse_planet_effects/planet_shield_effect.mesh"
+		
+		meshsettings = {
+			#name = "planet_geosphereShape"
+			#index = 0
+			texture_diffuse = "eternal_shield_diffuse.dds"
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+			shader = "PdxMeshAlphaAdditiveAnimateUVAlphaOverride"
+		}
+	}
+	
+}
