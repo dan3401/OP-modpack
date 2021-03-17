@@ -1,0 +1,128 @@
+cb_subjugation_tw = {
+	show_in_diplomacy = yes
+	show_notification = yes
+	potential = {
+		OR = {
+			is_country_type = eternal_empire
+		}
+		is_subject = no
+	}
+	is_valid = {
+		NOT = { is_overlord_to = FROM }
+		from = {
+			is_country_type = default
+			is_country_type = ascended_empire
+		}
+		NOT = { has_authority = auth_machine_intelligence }
+	}	
+}
+
+
+cb_stop_tech = {
+	show_in_diplomacy = no
+	show_notification = yes
+	potential = {
+		OR = {
+			is_country_type = eternal_empire
+		}
+		is_subject = no
+	}
+	is_valid = { 
+		NOT = { is_overlord_to = FROM }
+	}	
+}
+
+cb_total_war_ee = {
+	show_in_diplomacy = yes
+	show_notification = yes
+	potential = {
+		OR = {
+			is_country_type = eternal_empire
+		}
+		is_subject = no
+	}
+	is_valid = { 
+		NOT = { is_overlord_to = FROM }
+	}	
+}
+
+
+
+cb_eternal_empire_claim = {
+	show_in_diplomacy = yes
+	show_notification = yes
+	potential = {
+		is_country_type = eternal_empire
+	}
+	is_valid = {
+		has_claim = FROM
+		NOT = { is_overlord_to = FROM }
+		OR = {
+			is_subject = no
+			overlord = { NOT = { is_same_value = from } }
+		}
+	}
+}
+
+cb_eternal_empire_humiliation = {
+	show_in_diplomacy = yes
+	show_notification = no
+	potential = {
+		is_country_type = eternal_empire
+	}
+	is_valid = {	
+		OR = {
+			NOT = { has_policy_flag = liberation_wars }
+			from = { has_ethic = ethic_gestalt_consciousness }
+		}
+		is_rival = FROM
+		from = { is_country_type = default }
+		NOT = { is_overlord_to = FROM }
+		OR = {
+			is_subject = no
+			overlord = { NOT = { is_same_value = from } }
+		}
+	}
+}
+
+cb_eternal_empire_stop_colossus = {
+	show_in_diplomacy = no
+	show_notification = no
+	potential = {
+		is_country_type = eternal_empire
+	}
+	is_valid = {
+		OR = { 
+		is_neighbor_of = from
+		from = { any_owned_ship = { is_ship_size = colossus } }
+		NOT = { any_owned_ship = { is_ship_size = colossus } }
+		NOT = { is_overlord_to = FROM }
+		OR = {
+			is_subject = no
+			overlord = { NOT = { is_same_value = from } }
+		}
+
+	}
+}
+
+
+cb_total_war_ee_default = {
+	show_in_diplomacy = yes
+	show_notification = no
+	potential = {
+		OR = {
+			is_country_type = default
+			is_country_type = ascended_empire
+			is_country_type = original_empire
+			is_country_type = awakened_fallen_empire
+		}
+
+		FROM = {
+			is_country_type = eternal_empire
+		}
+	}
+	is_valid = { 
+		NOT = { is_overlord_to = FROM }
+	}
+	
+}

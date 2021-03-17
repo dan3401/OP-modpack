@@ -1,0 +1,370 @@
+ee_war_doctrine = {
+	potential = {
+		is_country_type = eternal_empire
+	}
+
+	option = {
+		name = "defense_in_depth_doctrine"
+		
+		policy_flags = {}	
+		modifier = {
+			ship_home_territory_fire_rate_mult = 1.0
+		}
+		
+		AI_weight = {
+			factor = 1
+		}		
+	}
+	
+	option = {
+		name = "precision_doctrine"
+		
+		policy_flags = {}
+		modifier = {
+			ship_tracking_mult = 0.5
+			ship_accuracy_mult = 0.5
+		}	
+
+		AI_weight = {
+			factor = 10
+			modifier = {
+				factor = 0
+				NOR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+				}
+			}
+		}		
+	}	
+	
+	option = {
+		name = "movement_doctrine"
+		
+		policy_flags = {}	
+		modifier = {
+			ship_shield_mult = -0.25
+			ship_armor_mult = -0.25
+			ship_hull_mult = -0.25
+		}
+		
+		AI_weight = {
+			factor = 10
+			modifier = {
+				factor = 0
+				NOT = { is_preferred_weapons = weapon_type_explosive }
+			}			
+		}		
+	}
+	
+	option = {
+		name = "range_doctrine"	
+		
+		policy_flags = {}
+		modifier = {
+			ship_shield_mult = -0.50
+			ship_armor_mult = -0.50
+			ship_hull_mult = -0.50
+		}	
+
+		AI_weight = {
+			factor = 100
+			modifier = {
+				factor = 0
+				NOR = { 
+					has_ai_personality = honorbound_warriors 
+					has_ai_personality = devouring_swarm 
+				}
+			}
+		}		
+	}
+
+	option = {
+		name = "portection_doctrine"	
+		
+		valid = {
+			OR = {
+				is_country_type = eternal_empire
+			}	
+		}
+		
+		policy_flags = {}
+		modifier = {
+			ship_shield_mult = -0.75
+			ship_armor_mult = -0.75
+			ship_hull_mult = -0.75
+		}	
+
+		AI_weight = {
+			factor = 100
+			modifier = {
+				factor = 0
+				NOR = { 
+					has_ai_personality = honorbound_warriors 
+					has_ai_personality = devouring_swarm 
+				}
+			}
+		}		
+	}
+}
+
+
+ee_descension = {
+	potential = {
+		is_country_type = eternal_empire
+	}
+
+	option = {
+		name = "higher_potential"
+		
+		policy_flags = {}	
+		modifier = {
+			pop_housing_usage_add = 4
+			planet_jobs_unity_produces_mult = 4.0
+			planet_jobs_virtue_produces_mult = 4.0
+			planet_jobs_ancient_knowldege_produces_mult = 4.0
+			planet_districts_ambrosia_produces_mult = 4.0
+			country_consumer_goods_produces_mult = -0.75
+			country_food_produces_mult = -0.75
+			country_nanites_produces_mult = -0.75
+		
+		}
+		
+		AI_weight = {
+			factor = 100
+		}		
+	}
+
+	option = {
+		name = "medium_potential"
+		
+		policy_flags = {}	
+		modifier = {
+			pop_housing_usage_add = 2
+			planet_jobs_unity_produces_mult = 2.0
+			planet_jobs_virtue_produces_mult = 2.0
+			planet_jobs_ancient_knowldege_produces_mult = 2.0
+			planet_districts_ambrosia_produces_mult = 2.0
+			country_consumer_goods_produces_mult = -0.37
+			country_food_produces_mult = -0.37
+			country_nanites_produces_mult = -0.37
+		}
+		
+		AI_weight = {
+			factor = 10
+		}		
+	}
+	
+	option = {
+		name = "neutral_potential"
+		
+		policy_flags = {}
+		modifier = {
+			pop_housing_usage_add = 1
+			planet_jobs_unity_produces_mult = 1.0
+			planet_jobs_virtue_produces_mult = 1.0
+			planet_jobs_ancient_knowldege_produces_mult = 1.0
+			planet_districts_ambrosia_produces_mult = 1.0
+			country_consumer_goods_produces_mult = -0.15
+			country_food_produces_mult = -0.15
+			country_nanites_produces_mult = -0.15
+		}	
+
+		AI_weight = {
+			factor = 100
+		}	
+	}	
+	
+	option = {
+		name = "normal_potential"
+		
+		policy_flags = {}	
+		modifier = {
+
+		}
+		
+		AI_weight = {
+			factor = 1000
+		}	
+	}
+}
+
+ee_pop_descension = {
+	potential = {
+		is_country_type = eternal_empire
+	}
+
+	option = {
+		name = "rapid_growth"
+		
+		policy_flags = {}	
+		modifier = {
+			pop_growth_speed = 10
+			pop_assembly_speed = 10
+		}
+		
+		AI_weight = {
+			factor = 100
+		}		
+	}
+
+	option = {
+		name = "normal_pop"
+		
+		policy_flags = {}	
+		modifier = {
+
+		}
+		
+		AI_weight = {
+			factor = 10
+		}		
+	}
+	
+	option = {
+		name = "Stagnancy"
+		
+		policy_flags = {}
+		modifier = {
+			pop_growth_speed = -10
+			pop_assembly_speed = -10
+		}	
+
+		AI_weight = {
+			factor = 10
+		}	
+	}	
+	
+}
+
+
+fe_pops = {
+	potential = {
+		OR = {
+		is_country_type = fallen_empire
+		is_country_type = awakened_fallen_empire
+		}
+	}
+
+	option = {
+		name = "normal_pop"
+		
+		policy_flags = {}	
+		modifier = {
+
+		}
+		
+		AI_weight = {
+			factor = 10
+		}		
+	}
+	
+	option = {
+		name = "Stagnancyfe"
+		
+		policy_flags = {}
+		modifier = {
+			pop_growth_speed = -10
+			pop_assembly_speed = -10
+		}	
+
+		AI_weight = {
+			factor = 1000
+		}	
+	}	
+	
+}
+
+anomaly_ee_policy = {
+	potential = {
+		is_country_type = eternal_empire
+	}
+
+	option = {
+		name = "normal_anomaly"
+		
+		policy_flags = {}	
+		modifier = {
+
+		}
+		
+		AI_weight = {
+			factor = 100
+		}		
+	}
+	
+	option = {
+		name = "no_anomalies"
+		
+		policy_flags = {}
+		modifier = {
+			ship_anomaly_generation_chance_mult = -100
+		}	
+
+		AI_weight = {
+			factor = 0
+		}	
+	}	
+	
+}
+
+border_policy = {
+
+	potential = {
+		always = yes
+	}
+	
+	option = {
+		name = "border_policy_open"
+		
+		policy_flags = {
+			border_policy_open
+		}
+		
+		valid = {
+			OR = {
+				is_country_type = default
+				is_country_type = eternal_empire
+				is_country_type = ascended_empire
+				is_country_type = original_empire_active
+			}
+			NOR = {
+				has_valid_civic = civic_machine_terminator
+				has_valid_civic = civic_hive_devouring_swarm
+				has_valid_civic = civic_fanatic_purifiers
+			}		
+		}
+	}
+	
+	option = {
+		name = "border_policy_closed"
+		
+		policy_flags = {
+			border_policy_closed
+		}
+		modifier = {}
+		
+		valid = {
+			always = yes
+		}
+		
+		AI_weight = {
+			factor = 10
+			modifier = {
+				factor = 0
+				has_valid_ai_personality = yes
+				NOR = { 
+					has_ai_personality_behaviour = isolationist 
+					has_ai_personality_behaviour = attack_neutrals
+				}
+			}
+			modifier = {
+				factor = 0
+				has_valid_ai_personality = no
+				NOR = { 
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}			
+		}
+	}
+}

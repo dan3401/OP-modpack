@@ -1,0 +1,24 @@
+boon_1 = {
+	name = "Boon of the Magister"
+	megastructure_build_speed_mult = 0.5
+}
+
+boon_2 = {
+	name = "Boon of the Keeper"
+	planet_orbital_bombardment_damage = -1.0
+}
+
+boon_3 = {
+	name = "Boon of the Asymnet"
+	edict_length_mult = 0.50	
+}
+
+boon_4 = {
+	name = "Boon of the Philosopher"
+	all_technology_research_speed = 3.0
+}
+
+boon_5 = {
+	name = "Boon of the Overseer"
+	country_leader_pool_size = 5
+}

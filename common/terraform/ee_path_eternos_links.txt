@@ -1,0 +1,269 @@
+
+
+terraform_link = {
+	from = "pc_nuked"
+	to = "pc_gaia"
+	
+	
+	duration = 10
+	
+	condition = {
+		FROM = {
+			NOT = { is_moon = yes }
+		}
+		owner = { has_technology = "tech_eternos_insights" }
+	}
+	
+	
+}
+
+
+terraform_link = {
+	from = "pc_barren"
+	to = "pc_gaia"
+	
+	
+	duration = 10
+	
+	condition = {
+		FROM = {
+			NOT = { is_moon = yes }
+		}
+		owner = { has_technology = "tech_eternos_insights" }
+	}
+	
+	
+}
+
+terraform_link = {
+	from = "pc_toxic"
+	to = "pc_gaia"
+	
+	
+	duration = 10
+	
+	condition = {
+		FROM = {
+			NOT = { is_moon = yes }
+		}
+		owner = { has_technology = "tech_eternos_insights" }
+	}
+}
+
+
+terraform_link = {
+	from = "pc_shielded"
+	to = "pc_gaia"
+	
+	
+	duration = 10
+	
+	condition = {
+		FROM = {
+			NOT = { is_moon = yes }
+		}
+		owner = { has_technology = "tech_eternos_insights" }
+	}
+	
+	
+}
+
+terraform_link = {
+	from = "pc_frozen"
+	to = "pc_gaia"
+	
+	
+	duration = 10
+	
+	condition = {
+		FROM = {
+			NOT = { is_moon = yes }
+		}
+		owner = { has_technology = "tech_eternos_insights" }
+	}
+	
+	
+}
+
+terraform_link = {
+	from = "pc_molten"
+	to = "pc_gaia"
+	
+	
+	duration = 10
+	
+	condition = {
+		FROM = {
+			NOT = { is_moon = yes }
+		}
+		owner = { has_technology = "tech_eternos_insights" }
+	}
+	
+	
+}
+
+terraform_link = {
+	from = "pc_gaia"
+	to = "pc_eternos"
+	
+	
+	duration = 10
+	
+	condition = {
+		FROM = {
+			NOT = { is_moon = yes }
+		}
+		owner = { has_country_flag = path_of_eternos }
+	}
+	
+	
+}
+
+
+terraform_link = {
+	from = "pc_gas_giant"
+	to = "pc_gaia"
+	
+	
+	duration = 10
+	
+	condition = {
+		FROM = {
+			NOT = { is_moon = yes }
+		}
+		owner = { has_technology = "tech_eternos_insights" }
+	}
+	
+	
+}
+
+terraform_link = {
+	from = "pc_shattered"
+	to = "pc_barren"
+	
+	
+	duration = 10
+	
+	condition = {
+		FROM = {
+			NOT = { is_moon = yes }
+		}
+		owner = { has_technology = "tech_eternos_insights" }
+	}
+	
+	
+}
+
+
+terraform_link = {
+	from = "pc_eternity"
+	to = "pc_eternos"
+	
+	
+	duration = 10
+	
+	condition = {
+		FROM = {
+			NOT = { is_moon = yes }
+		}
+		owner = { has_country_flag = path_of_eternos }
+	}
+}
+
+terraform_link = {
+	from = "pc_eternal_city"
+	to = "pc_eternos"
+	
+	
+	duration = 10
+	
+	condition = {
+		FROM = {
+			NOT = { is_moon = yes }
+		}
+		owner = { has_country_flag = path_of_eternos }
+	}
+}
+
+
+
+
+terraform_link = {
+	from = "pc_eternos"
+	to = "pc_barren"
+	
+	
+	duration = 10
+	
+	condition = {
+		FROM = {
+			NOT = { is_moon = yes }
+		}
+		owner = { has_country_flag = path_of_eternos }
+	}
+}
+
+
+
+
+
+terraform_link = {
+	from = "pc_barren_cold"
+	to = "pc_gaia"
+	
+	energy = 5
+	duration = 10
+	
+	condition = {
+		FROM = {
+			NOT = { is_moon = yes }
+		}
+		owner = { has_technology = "tech_eternos_insights" }
+	}
+}
+
+
+terraform_link = {
+	from = "pc_tropical"
+	to = "pc_eternos"
+	
+	energy = 5
+	duration = 10
+	
+	condition = {
+		owner = { has_technology = "tech_eternos_insights" }
+	}
+	
+}
+
+terraform_link = {
+	from = "pc_gas_giant"
+	to = "pc_g_star"
+	
+	energy = 5
+	duration = 10
+	
+	condition = {
+		owner = { has_technology = "tech_eternos_insights" }
+	}
+	
+}
+
+
+
+terraform_link = {
+	from = "pc_gas_giant"
+	to = "pc_b_star"
+	
+	energy = 5
+	duration = 10
+	
+	condition = {
+		owner = { has_technology = "tech_eternos_insights" }
+	}
+	
+}
+
+
+
+

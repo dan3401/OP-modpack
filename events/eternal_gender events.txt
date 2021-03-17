@@ -1,0 +1,228 @@
+namespace = eternal_leader_events
+
+#patriarchy military
+country_event = {
+	id = eternal_leader_events.1
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_policy_flag = eternal_gender_patriarchy_military
+		from = {
+			OR = {
+				leader_class = admiral
+				leader_class = general
+			}
+			gender = female
+		}
+	}
+
+	immediate = {
+		from = {
+			set_is_female = no
+			set_name = random
+		}
+	}
+}
+
+#patriarchy
+country_event = {
+	id = eternal_leader_events.2
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_policy_flag = eternal_gender_patriarchy_full
+		from = {
+			gender = female
+		}
+	}
+
+	immediate = {
+		from = {
+			set_is_female = no
+			set_name = random
+		}
+	}
+}
+country_event = {
+	id = eternal_leader_events.3
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_policy_flag = eternal_gender_patriarchy_governor
+		from = {
+			OR = {
+				leader_class = governor
+				leader_class = ruler
+			}
+			gender = male
+		}
+	}
+
+	immediate = {
+		from = {
+			set_is_female = yes
+			set_name = random
+		}
+	}
+}
+#partlymatriarchy
+country_event = {
+	id = eternal_leader_events.4
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_policy_flag = eternal_gender_matriarchy_governor
+		from = {
+			OR = {
+				leader_class = governor
+				leader_class = ruler
+			}
+			gender = male
+		}
+	}
+
+	immediate = {
+		from = {
+			set_is_female = yes
+			set_name = random
+		}
+	}
+}
+#matriarchy
+country_event = {
+	id = eternal_leader_events.5
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_policy_flag = eternal_gender_matriarchy_full
+		from = {
+			gender = male
+		}
+	}
+
+	immediate = {
+		from = {
+			set_is_female = yes
+			set_name = random
+		}
+	}
+}
+
+country_event = {
+	id = eternal_leader_events.6
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_policy_flag = eternal_gender_matriarchy_military
+		from = {
+			OR = {
+				leader_class = admiral
+				leader_class = general
+			}
+			gender = female
+		}
+	}
+
+	immediate = {
+		from = {
+			set_is_female = yes
+			set_name = random
+		}
+	}
+}
+
+country_event = {
+	id = eternal_leader_events.5
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_policy_flag = eternal_gender_matriarchy_full
+		from = {
+			gender = male
+		}
+	}
+
+	immediate = {
+		from = {
+			set_is_female = yes
+			set_name = random
+		}
+	}
+}
+
+country_event = {
+	id = eternal_leader_events.6
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_policy_flag = eternal_gender_matriarchy_military
+		from = {
+			OR = {
+				leader_class = admiral
+				leader_class = general
+			}
+			gender = female
+		}
+	}
+
+	immediate = {
+		from = {
+			set_is_female = yes
+			set_name = random
+		}
+	}
+}
+
+country_event = {
+	id = eternal_leader_events.7
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_policy_flag = eternal_gender_matriarchy_science
+		from = {
+			OR = {
+				leader_class = scientist
+			}
+			gender = male
+		}
+	}
+
+	immediate = {
+		from = {
+			set_is_female = yes
+			set_name = random
+		}
+	}
+}
+
+country_event = {
+	id = eternal_leader_events.8
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_policy_flag = eternal_gender_patriarchy_science
+		from = {
+			OR = {
+				leader_class = scientist
+			}
+			gender = female
+		}
+	}
+
+	immediate = {
+		from = {
+			set_is_female = no
+			set_name = random
+		}
+	}
+}

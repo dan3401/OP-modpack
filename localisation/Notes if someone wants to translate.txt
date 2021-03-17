@@ -1,0 +1,3 @@
+Ignore "eternal_stars_I_english.yml" and "etwmenu_I_english.yml"
+
+there is no need to translate these. its testing stuff and unfished

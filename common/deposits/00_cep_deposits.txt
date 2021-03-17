@@ -1,0 +1,92 @@
+# Cache of Resources civic
+d_strategic_cache = {
+	icon = "d_buried_lithoids"
+	is_for_colonizeable = yes
+	category = deposit_cat_rare
+	potential = { always = no }
+	resources = {
+		category = planet_deposits
+		produces = { # Main Production
+			volatile_motes = 1
+			rare_crystals = 1
+			exotic_gases = 1
+		}
+		produces = { # Mote Mining
+			trigger = {
+				owner = {
+					has_technology = tech_mine_volatile_motes
+				}
+			}
+			volatile_motes = 0.5
+		}
+		produces = { # Mote Manufacturing
+			trigger = {
+				owner = {
+					has_technology = tech_volatile_motes
+				}
+			}
+			volatile_motes = 0.5
+		}
+		produces = { # Crystal Mining
+			trigger = {
+				owner = {
+					has_technology = tech_mine_rare_crystals
+				}
+			}
+			rare_crystals = 0.5
+		}
+		produces = { # Crystal Manufacturing
+			trigger = {
+				owner = {
+					has_technology = tech_rare_crystals
+				}
+			}
+			rare_crystals = 0.5
+		}
+		produces = { # Gas Extraction
+			trigger = {
+				owner = {
+					has_technology = tech_mine_exotic_gases
+				}
+			}
+			exotic_gases = 0.5
+		}
+		produces = { # Gas Manufacturing
+			trigger = {
+				owner = {
+					has_technology = tech_exotic_gases
+				}
+			}
+			exotic_gases = 0.5
+		}
+		produces = { # Nanite Bonus
+			trigger = {
+				owner = { has_technology = tech_nanite_transmutation }
+			}
+			volatile_motes = 1
+			rare_crystals = 1
+			exotic_gases = 1
+		}
+		
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Masters of Architecture civic
+d_great_monument = {
+	icon = "d_monument_in_space"
+	is_for_colonizeable = yes
+	category = deposit_cat_rare
+	potential = { always = no }
+
+	planet_modifier = {
+		pop_happiness = 0.15
+		category_industry_research_speed_mult = 0.10
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}

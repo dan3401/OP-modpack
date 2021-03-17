@@ -1,0 +1,162 @@
+
+
+
+
+
+
+
+
+
+
+
+
+strike_craft_component_template = {
+	key = "ETERNAL_FIGHTERS_HANGAR_EE"
+	size = LARGE
+	entity = "fighter_entity"
+	icon = "GFX_ship_part_eternium_fighter"
+	icon_frame = 1
+
+	weapon_type = point_defence
+	projectile_gfx = "eternal_kinetic_cannon_s"
+	power = -390
+	
+	count = 12
+	regeneration_per_day = 0.50
+	launch_time = 0.25
+	
+	damage = { min = 22 max = 58 }
+	cooldown = 2.0
+	range = 100
+	accuracy = 1.0
+	health = 75
+	armor = 50
+	shield = 75
+	tracking = 0.90	
+	speed = 650
+	rotation_speed = 0.8
+	acceleration = 0.8
+	evasion = 0.90
+	
+	hull_damage = 1.0
+	armor_penetration = 0.0
+	armor_damage = 1.25
+	shield_penetration = 0.0
+	shield_damage = 1.25
+	resources = {
+		category = ship_components
+		cost = {
+			eternium = 0.5
+		}
+	}
+	
+	ship_behavior = "fighters_behavior"
+	component_set = "ETERNAL_FIGHTERS_HANGAR_EE"
+	prerequisites = { tech_fallenw }
+	tags = { weapon_type_strike_craft }
+
+	ai_weight = {
+		weight = 3000
+	}
+}
+
+
+strike_craft_component_template = {
+	key = "ETERNAL_BOMBERS_HANGAR_EE"
+	size = LARGE
+	entity = "bomber_entity"
+	icon = "GFX_ship_part_eternium_bomber"
+	icon_frame = 1
+	
+	weapon_type = instant
+	projectile_gfx = "eternal_kinetic_cannon_s"
+	power = -390
+		
+	count = 10
+	regeneration_per_day = 0.50
+	launch_time = 0.25
+	
+	damage = { min = 55 max = 200 }
+	cooldown = 4
+	range = 100
+	accuracy = 1.0	
+	health = 190
+	armor = 70
+	shield = 100
+	evasion = 0.60
+	speed = 625
+	tracking = 0.80
+	rotation_speed = 0.6
+	acceleration = 0.6
+	
+	hull_damage = 1.50	
+	armor_damage = 1.50
+	shield_penetration = 1
+	resources = {
+		category = ship_components
+		cost = {
+			eternium = 0.5
+		}
+	}
+	
+	ship_behavior = "bombers_behavior"
+	
+	component_set = "ETERNAL_BOMBERS_HANGAR_EE"
+	prerequisites = { tech_fallenw }
+	tags = { weapon_type_strike_craft }
+
+	ai_weight = {
+		weight = 3000
+	}
+}
+
+
+strike_craft_component_template = {
+	key = "ETERNAL_GUNSHIP_HANGAR_EE"
+	size = LARGE
+	entity = "fighter_entity"
+	icon = "GFX_ship_part_eternium_gunship"
+	icon_frame = 1
+	
+	weapon_type = instant
+	projectile_gfx = "eternal_kinetic_cannon_s"
+	power = -390
+		
+	count = 2
+	regeneration_per_day = 0.10
+	launch_time = 0.25
+	
+	damage = { min = 400 max = 1000 }
+	cooldown = 6
+	range = 100
+	accuracy = 1
+	health = 750
+	armor = 350
+	shield = 350
+	evasion = 0.60
+	speed = 450
+	tracking = 1
+	rotation_speed = 0.4
+	acceleration = 0.3
+	
+	hull_damage = 1.0
+	armor_damage = 1.50
+	shield_penetration = 0.0
+	resources = {
+		category = ship_components
+		cost = {
+			eternium = 0.5
+		}
+	}
+	
+	ship_behavior = "bombers_behavior"
+	
+	component_set = "ETERNAL_GUNSHIP_HANGAR_EE"
+	prerequisites = { tech_fallenw }
+	tags = { weapon_type_strike_craft }
+
+	ai_weight = {
+		weight = 3000
+	}
+}
+

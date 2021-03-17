@@ -1,0 +1,14 @@
+spriteTypes = {	
+	spriteType = {
+		name = "GFX_evt_ascended_juggernaut"
+		texturefile = "gfx/event_pictures/ascended_juggernaut.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_chrysalis_protocol"
+		texturefile = "gfx/event_pictures/chrysalis_protocol.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+}

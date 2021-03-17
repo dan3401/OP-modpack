@@ -1,0 +1,504 @@
+
+namespace = setuptw
+
+country_event = {
+	id = setuptw.1
+	title = OK
+	desc = OK
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		any_country = {
+					if = {
+					limit = {
+					is_country_type = awakened_fallen_empire
+					has_country_flag = twinks_fallen
+				}
+			}
+		}
+	}
+
+	immediate = {
+		set_country_type = fallen_empire
+		change_government = {
+			civics = {
+				civic = civic_eternal_stability 
+				civic = civic_keepers
+			}
+		}
+		country_event =  { id = setuptw.2 }	
+	}
+}
+
+#testthing
+country_event = {
+	id = setuptw.2
+	title = OK
+	desc = OK
+	is_triggered_only = yes
+	hide_window = yes
+
+	
+	trigger = {
+		any_country = {
+		if = {
+			limit = {
+			is_country_type = fallen_empire
+			has_country_flag = twinks_fallen
+				}
+			}
+		}
+	}
+	
+	
+	immediate = {
+		set_country_type = eternal_empire
+		change_government = {
+			civics = {
+				civic = civic_eternal_stability 
+				civic = civic_keepers
+			}
+		}
+	country_event =  { id = setuptw.3 }
+	country_event =  { id = setuptw.13 }
+
+	
+	}
+}
+
+country_event = {
+	id = setuptw.3
+	title = OK
+	desc = OK
+	hide_window = yes
+	is_triggered_only = yes	
+	fire_only_once = yes
+	
+	
+	trigger = {
+		any_country = {
+			if = {
+			limit = {
+					OR = {
+					has_government = "gov_eternal_continuum"
+					has_government = "gov_ancient_ai"
+					}
+					is_ai = yes
+				}
+			}
+		}
+	}
+
+	immediate = {
+		every_country = {
+			if = {
+				limit = {
+					OR = {
+					has_government = "gov_eternal_continuum"
+					has_government = "gov_ancient_ai"
+					}
+					is_ai = yes	
+				}
+			add_modifier = {
+				modifier = "all_years_fe"
+				days = 60000
+			}
+			add_modifier = {
+				modifier = "first_years_fe"
+				days = 2000
+			}
+			add_modifier = {
+				modifier = "immortal"
+				days = -1
+			}
+			add_modifier = {
+				modifier = "first_years_fallen"
+				days = 3600
+			}
+			
+			
+			country_event =  { id = setuptw.4 }
+			country_event =  { id = setuptw.13 }
+
+			}
+		}
+		
+	}
+}
+
+country_event = {
+	id = setuptw.13
+	title = OK
+	desc = OK
+
+	hide_window = yes
+
+	is_triggered_only = yes	
+
+	trigger = {
+		any_country = {
+		if = {
+			limit = {
+				any_country = {
+					has_government = "gov_eternal_continuum"
+					is_ai = no
+					}
+				}
+			}
+		}
+	}
+
+	immediate = {
+		every_country = {	
+				limit = {
+					AND = {
+					has_government = "gov_eternal_continuum"
+					is_ai = no
+					}
+				
+				}
+			add_modifier = {
+				modifier = "first_years_fallen"
+				days = 7200
+			}
+
+
+		}
+
+
+	country_event =  { id = setuptw.4 }
+		
+	}
+}
+
+country_event = {
+	id = setuptw.4
+	title = OK
+	desc = OK
+
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		any_country = {
+		has_government = "gov_eternal_continuum"
+		is_ai = yes
+		}
+	}
+
+	immediate = {
+		every_country = {	
+				limit = {
+					AND = {
+					has_government = "gov_eternal_continuum"
+					is_ai = yes
+					is_country_type = eternal_empire
+					}
+				
+				}
+		}
+	
+
+	}
+}
+
+
+
+country_event = {
+	id = setuptw.5
+	title = OK
+	desc = OK
+
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_country = {
+		has_government = "gov_awakened_ascendancy"
+		has_country_flag = twinks_fallen
+		}
+	}
+
+	immediate = {
+		set_country_type = fallen_empire
+		change_government = {
+			civics = {
+				civic = civic_lethargic_leadership
+				civic = civic_empire_in_decline
+			}
+		}
+
+		# Changing country type resets resources, so give them full stores
+
+		# Add some more fleet
+		country_event =  { id = setuptw.6 }
+		
+		
+	}
+}
+
+
+country_event = {
+	id = setuptw.6
+	title = OK
+	desc = OK
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		any_country = {	
+			if = {
+			limit = {
+				OR = {
+					is_country_type = awakened_fallen_empire
+					is_country_type = default
+				}
+				
+				}
+			}
+
+		}
+	}
+	
+	immediate = {
+		set_country_type = fallen_empire
+		change_government = {
+			civics = {
+				civic = civic_lethargic_leadership
+				civic = civic_empire_in_decline
+			}
+		}
+	country_event =  { id = setuptw.7 }
+	give_technology = { tech = tech_fallenb }
+	}
+}
+
+country_event = {
+	id = setuptw.7
+	title = OK
+	desc = OK
+
+	hide_window = yes
+	is_triggered_only = yes	
+	
+	trigger = {
+		any_country = {	
+			if = {
+			limit = {
+				AND = {
+				has_government = "gov_stagnant_ascendancy"
+				is_ai = yes
+					}
+			
+				}
+			}
+
+		}
+	}
+
+	immediate = {
+		every_country = {	
+				limit = {
+					AND = {
+					has_government = "gov_stagnant_ascendancy"
+					is_ai = yes
+					}
+				
+				}
+
+		}
+	
+	}
+}
+
+country_event = {
+	id = setuptw.8
+	title = OK
+	desc = OK
+
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_type = fallen_empire
+		change_government = {
+			civics = {
+				civic = civic_ancient_machine
+				civic = civic_eternal_conciousness
+			}
+		}
+		country_event =  { id = setuptw.2 }	
+	}
+}
+
+#testthing
+country_event = {
+	id = setuptw.9
+	title = OK
+	desc = OK
+
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		set_country_type = eternal_empire
+		change_government = {
+			civics = {
+				civic = civic_ancient_machine
+				civic = civic_eternal_conciousness
+			}
+		}
+	country_event =  { id = setuptw.3 }
+	give_technology = { tech =  tech_awakening message = no  }
+	give_technology = { tech =  tech_fallenm message = no  }	
+	
+	}
+}
+
+country_event = {
+	id = setuptw.133
+	title = OK
+	desc = OK
+
+	hide_window = yes
+
+	is_triggered_only = yes	
+
+	immediate = {
+		every_country = {	
+				limit = {
+					AND = {
+					has_government = "gov_eternal_continuum"
+					is_ai = no
+					}
+				
+				}
+			}
+	
+	add_resource = { acot_sr_stellarite = -100000  }
+	add_resource = { acot_sr_light_matter = -100000 }
+	add_resource = { acot_sr_dark_energy = -100000 }
+	add_resource = { virtue = -100000  }
+	}
+}
+
+
+country_event = {
+	id = setuptw.121
+	title = OK
+	desc = OK
+	
+	hide_window = yes
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	trigger = {
+        OR = {
+        is_country_type = fallen_empire
+        is_country_type = awakened_fallen_empire
+        }
+		is_at_war = no
+        fleet_power < 800000
+        is_ai = yes
+	}
+	
+	immediate = {	
+		capital_scope = {	
+			create_fallen_empire_reinforcements = yes
+		}
+	}
+}
+
+
+country_event = {
+	id = setuptw.123
+	title = OK
+	desc = OK
+	fire_only_once = yes
+	hide_window = yes
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	
+	trigger = {
+        is_country_type = fallen_empire
+		is_at_war = no
+        fleet_power < 300000
+        is_ai = no
+	}
+	
+	immediate = {	
+		capital_scope = {	
+			create_fallen_empire_reinforcements = yes
+        }
+        capital_scope = {	
+			create_fallen_empire_reinforcements = yes
+        }
+        capital_scope = {	
+			create_fallen_empire_reinforcements = yes
+		}
+	}
+}
+
+
+country_event = {
+	id = setuptw.222
+	title = OK
+	desc = OK
+	fire_only_once = yes
+	hide_window = yes
+	
+	
+	trigger = {
+        is_country_type = eternal_empire
+		has_ethic = ethic_fanatic_spiritualist
+        is_ai = yes
+	}
+	
+	immediate = {	
+		give_technology = {
+			tech = tech_eternos_insights
+			message = no
+		}
+		give_technology = {
+			tech = tech_eternos_weapons
+			message = no
+		}
+	}
+}
+
+
+
+country_event = {
+	id = setuptw.223
+	title = OK
+	desc = OK
+	fire_only_once = yes
+	hide_window = yes
+	
+	
+	trigger = {
+        is_country_type = eternal_empire
+		NOT = { has_ethic = ethic_fanatic_spiritualist }
+        is_ai = yes
+	}
+	
+	immediate = {	
+		give_technology = {
+			tech = tech_mechanist_insights
+			message = no
+		}
+		give_technology = {
+			tech = tech_mechanist_weapons
+			message = no
+		}
+	}
+}
+

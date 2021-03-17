@@ -1,0 +1,47 @@
+spritetypes = {
+
+    spriteType = {
+		name = "GFX_starbase_patrol_offices"
+		texturefile = "gfx/interface/icons/modules/ex_patrol_offices.dds"
+	}
+
+    spriteType = {
+		name = "GFX_starbase_alloy_forge"
+		texturefile = "gfx/interface/icons/modules/ex_alloy_forge.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_sb_MC"
+		texturefile = "gfx/interface/icons/modules/sb_mc.dds"
+	}
+
+	spriteType = {
+		name = "GFX_sb_MB"
+		texturefile = "gfx/interface/icons/modules/sb_mb.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_starbase_proving_ground"
+		texturefile = "gfx/interface/icons/modules/ex_proving_ground.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_starbase_psi_command"
+		texturefile = "gfx/interface/icons/modules/ex_psi_command.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_starbase_molecular_forge"
+		texturefile = "gfx/interface/icons/modules/ex_molecular_forge.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_arcade"
+		texturefile = "gfx/interface/icons/modules/ex_arcade.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_construction_centre"
+		texturefile = "gfx/interface/icons/modules/ex_construction_centre.dds"
+	}
+}

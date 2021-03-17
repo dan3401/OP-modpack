@@ -1,0 +1,73 @@
+###########################
+# Xenology General Traits #
+###########################
+
+trait_general_ancestral_knowledge = {
+	cost = 0
+	modification = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/trait_general_ancestral_knowledge.dds"
+
+	modifier = {
+		army_damage_mult = 0.10
+	}
+		
+	leader_trait = { general }
+	leader_class = { general }
+	requires_traits = { trait_genetic_memory }
+	ai_weight = { weight = 150 }
+}
+
+
+trait_general_forecaster = {
+	cost = 0
+	modification = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/trait_general_forecaster.dds"
+
+	modifier = {
+		army_experience_gain_mult_mult = 0.25
+		army_damage_mult = 0.15
+		army_collateral_damage_mult = -0.15
+	}
+		
+	leader_trait = { general }
+	leader_class = { general }
+	requires_traits = { trait_analytical }
+	ai_weight = { weight = 150 }
+}
+
+trait_general_battle_mounts = {
+	cost = 0
+	modification = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/trait_general_battle_mounts.dds"
+
+	modifier = {
+		army_morale_damage_mult = 0.10
+		army_health = 0.10
+		army_collateral_damage_mult = 0.10
+	}
+		
+	leader_trait = { general }
+	leader_class = { general }
+	requires_traits = { trait_gifted_pilots }
+	ai_weight = { weight = 100 }
+}
+
+trait_general_cavalier = {
+	cost = 0
+	modification = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/trait_general_cavalier.dds"
+
+	modifier = {
+		army_disengage_chance_mult = -0.20	
+	}
+		
+	leader_trait = { general }
+	leader_class = { general }
+	requires_traits = { trait_prideful }
+	ai_weight = { weight = 0 }
+}
+

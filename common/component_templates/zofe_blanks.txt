@@ -1,0 +1,49 @@
+##Blanks
+
+
+utility_component_template = {
+	key = "FE_COMBAT_COMPUTER_DEFAULT"
+	size = small
+	icon = "GFX_ship_part_computer_default"
+	icon_frame = 1
+	power = 0
+
+	class_restriction = { shipclass_military }
+	size_restriction = { fe_escort fe_battlecruiser fe_titan fe_goliath }
+	component_set = "combat_computers"
+	ship_behavior = "line"
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "FE_SHIP_THRUSTER"
+	size = small
+	icon = "GFX_ship_part_empty_ftl_drive"
+	icon_frame = 1
+	power = 0
+
+	component_set = "thruster_components"
+	size_restriction = { fe_escort fe_battlecruiser fe_titan fe_goliath }
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "FE_REACTOR"
+	size = small
+	icon = "GFX_ship_part_empty_ftl_drive"
+	icon_frame = 1
+	power = 0
+
+	component_set = "power_core"
+	size_restriction = { fe_escort fe_battlecruiser fe_titan fe_small_station fe_large_station fe_goliath }
+	
+	ai_weight = {
+		weight = 1
+	}
+}

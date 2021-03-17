@@ -1,0 +1,25 @@
+﻿l_english:
+#Darkmatter Popsink: Base
+ dmps_base:0 "Production Administration"
+ dmps_base_desc:0 "A basic administration building designed to prepare for the creation of large amounts of jobs."
+ 
+#Darkmatter Popsink: Energy
+ dmps_energydelta:0 "Delta Energy Complex"
+ dmps_energydelta_desc:0 "A power generation facility that uses dark matter to enhance production and creation of normal energy."
+ 
+ dmps_energyalpha:0 "Alpha Energy Complex"
+dmps_energyalpha_desc:0 "An advanced energy complex that uses Dark Energy to create microsingularities and produce enormous amounts of energy."
+
+ #Darkmatter Popsink: Minerals
+  dmps_mineraldelta:0 "Delta Mineral Complex"
+ dmps_mineraldelta_desc:0 "An enormous mining complex that uses Dark Matter technology to delve deeper beneath the planet's crust than ever before."
+ 
+ dmps_mineralalpha:0 "Alpha Mineral Complex"
+dmps_mineralalpha_desc:0 "A state-of-the-art mining complex that uses Dark Energy to create miniaturized gravitational anomalies to allow miners to access the core of the planet for mining."
+
+ #Darkmatter Popsink: Food
+  dmps_fooddelta:0 "Delta Food Complex"
+ dmps_fooddelta_desc:0 "A farming facility that uses Dark Matter to create miniature time dilation chambers that are used to farm massive amounts of food."
+ 
+ dmps_foodalpha:0 "Alpha Food Complex"
+dmps_foodalpha_desc:0 "A farming facility that uses Dark Energy to create temporal anomalies around large swathes of land that are used to create massive amounts of food."

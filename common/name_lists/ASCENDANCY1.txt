@@ -1,0 +1,252 @@
+﻿### Abhorrent Ascendancy -- An advanced (and awful) society with sort of fantasyish/mangled mythological themes. aka another set of names for asshole space elves
+### Created by Edcrab
+
+ASCENDANCY1 = {
+	randomized = no
+	alias = "Ascendancy1"
+	ship_names = {
+
+		generic = {
+			
+		}
+
+		corvette = {
+			First Second Third Fourth Fifth Sixth Seventh Eighth Ninth Tenth Eleventh Twelth Thirteenth Fourteenth Fifteenth Sixteenth Seventeenth Eighteenth Nineteenth Twentieth Twenty-first	
+		}
+		
+		destroyer = {
+			First Second Third Fourth Fifth Sixth Seventh Eighth Ninth Tenth Eleventh Twelth Thirteenth Fourteenth Fifteenth Sixteenth Seventeenth Eighteenth Nineteenth Twentieth Twenty-first
+		}
+		
+		cruiser = {
+			"Shining Moon" "Blinding Light" "Clean Slate" "Washed Sins" "Omen Comet" "Burning Desire" "Honour's Price" "Blazing Star" "Victors All" "Endless Passion" "Noble Sun" "Steady Hand" "Clenched Fist"
+		}
+		
+		battleship = {
+			Glorius Gleaming Searing Oathbinder Vowkeeper "Glorious Dead" "Foul Bane" "Cleansing Flame" "Pure Purpose" "Pristine Truth" "Reviled's Repentance" "Iron Heart" "Steely Gaze"  
+		}
+
+		titan = {
+			Purifier Absolver Uplifter Heroine Redeemer Cleanser
+		}
+
+		colossus = {
+			"THE LAST BREATH" "THE SUN SETS ON A DEAD WORLD" "THE UPLIFT" "THE RAPTURE"
+		}
+		
+		science = {
+			"We Make Truth" "Omen of Glory" "Victory in Knowledge" "Forging the Future" "Power is Information" "Glory to the Wise" "Wisdom Tempers Strength" "Soul and Body"
+		}
+		
+		colonizer = {
+			"Verdant Hills" "Great Destiny" "Prophecy Beckons" "Loving Embrace" "Holy Vows" "Oath of Purity" "Ark of Renewal"
+		}
+		
+		constructor = {
+			Khasci Hephastus Acture Vurriel Voirkananis Licaster Vidomacher Mercari Nobilis Exaltius Hygriel Odincaern Dachon Cheriel Thorvam Peytus Mageur Egalian Autham Pairren Khuvnar
+		}
+
+		transport = {
+			Khasci Hephastus Acture Vurriel Voirkananis Licaster Vidomacher Mercari Nobilis Exaltius Hygriel Odincaern Dachon Cheriel Thorvam Peytus Mageur Egalian Autham Pairren Khuvnar
+		}
+	
+		military_station_small = {
+			Firepoint
+		}
+
+		ion_cannon = {
+			"Grand Cannon"
+		}
+	}
+
+	ship_class_names = {
+		generic = {
+			Valian Torus Sorec Talveri Astaeruius Kalchvairon
+		}
+		corvette = {
+			Qai Chul Vas Crul Tan Set Hiel Ceynan Rarch Amol Tantari Atfe Fentu Dantan Qaras Zemek Rilik Zul Gaef Lyr Xam Koli Weqs Loir Keig Tirim
+		}
+		destroyer = {
+			Qai Chul Vas Crul Tan Set Hiel Ceynan Rarch Amol Tantari Atfe Fentu Dantan Qaras Zemek Rilik Zul Gaef Lyr Xam Koli Weqs Loir Keig Tirim
+		}
+		cruiser = {
+			Ligprimus Toremseptus Adalivarum Endaliur Sotometia Adelamis Rarsettak Kachylr Exultatia Vodorren
+		}
+		colonizer = {
+			Genesis
+		}
+		science = {
+			Oracle
+		}
+		battleship = {
+			Sunspear Starlance Moonflame Holysteel Bravestar Destined Fatebound 
+		}
+		titan = {
+			Vehement Ardent Adamant Resolute Courageous Defiant Vengeful Audacity
+		}
+		collosus = {
+			Archon	
+		}			
+	}
+
+	fleet_names = {
+		random_names = {
+			"The Archon's Host" "Dachon Deathdealers" "Might of Acture" "Pride of Exaltius" "Hammer of Hephastus" "Champions of Vurriel" "Fleet of Mercari" "Thorvam's Fearless" "Worth of Hygriel" "Shield of Mageur" "Sword of Autham"
+		}
+		sequential_name = "%O% Fleet"
+	}
+	
+	army_names = {
+		defense_army = {
+			sequential_name = "%O% Protectors"
+		}
+			
+		assault_army = {
+			sequential_name = "%O% Footsoldiers"
+		}
+		
+		slave_army = {
+			sequential_name = "%O% Footsoldiers"
+		}
+		
+		clone_army = { 
+			sequential_name = "%O% Clone Army"
+		}
+		
+		robotic_army = {
+			sequential_name = "%O% Strike Drones"
+		}
+
+		robotic_defense_army = {
+			sequential_name = "%O% Guardians"
+		}
+		
+		psionic_army = { 
+			sequential_name = "%O% Zealots"
+		}
+		
+		xenomorph_army = {
+			sequential_name = "%O% Razorback Division"
+		}
+		
+		gene_warrior_army = {
+			sequential_name = "%O% Perfected"
+		}
+
+		occupation_army = {
+			sequential_name = "%O% Occupation Army"
+		}
+
+		robotic_occupation_army = {
+			sequential_name = "%O% Drone Occupiers"
+		}
+
+		primitive_army = {
+			sequential_name = "Primitive Army %C%"
+		}
+		industrial_army = {
+			sequential_name = "Industrial Army %C%"
+		}
+		postatomic_army = {
+			sequential_name = "Post-Atomic Army %C%"
+		}
+	}
+
+	planet_names = {
+
+		generic = {
+			names = {
+				Khasci Hephastus Acture Vurriel Voirkananis Licaster Vidomacher Mercari Nobilis Exaltius Hygriel Odincaern Dachon Cheriel Thorvam Peytus Mageur Egalian Autham Pairren Khuvnar
+			}
+		}
+		
+		pc_desert = {
+			names = {
+			}
+		}
+		
+		pc_tropical = {
+			names = {
+			}
+		}
+		
+		pc_arid = {
+			names = {
+			}
+		}
+		
+		pc_continental = {
+			names = {
+			}
+		}
+		
+		pc_ocean = {
+			names = {
+			}
+		}
+		
+		pc_tundra = {
+			names = {
+			}
+		}
+		
+		pc_arctic = {
+			names = {
+			}
+		}
+
+		pc_savannah = {
+			names = {
+			}
+		}
+
+		pc_alpine = {
+			names = {
+			}
+		}
+		
+		pc_gaia = {
+			names = {
+			"Heart of Loydamon" "Heart of Gemorai" "Heart of Varl" "Throne of Arcadimaar"
+			}
+		}
+		
+	}
+
+	### CHARACTERS
+
+	character_names = {
+
+		names1 = {
+			weight = 80
+			first_names_male = {
+				Abel Adon Athon Aldus Aun Aurion Borcael Burdaon Dieteram Corram Ceyn Gigan Hercaul Kialn Malumar Valon Odem Irarch Ronan Veditch
+				Vitalim Merotium Meracles Charrus Carron Caramor Uriel Sydon Aleister Uxlest Huma Ezruth Erogsa Heracal Zeunas Alphach Henrallo 
+				Ultrim Sollus Siebenach Zakal Xan Bacchus Seidon Mortamoc Rothoseani Rallic Cytrolam Arcas Bludric
+			}
+			first_names_female = {
+				Aaneu Aanah Ameseliri Ariel Briyl Coraeli Cordelia Thimystera Velthseine Trinae Ceyra Maladria Molisyr Syrine Hylia Lyyris Lyriel
+				Uma Dari Emiri Amarion Exultatia Trulis Leiroga Jaisana Elauriel Zeuthena Lourima Memi Rielette Staebetti Hanaliesien Lyyka Caerri Rae 
+				Vedelia Hrenia Lysteme Salatri Umelera Yunalis Zeal Persephia Veina Seiya Esyrimau Rosedeis
+			}
+			second_names = {
+				Arcadia Loydamon Gemorai Varl du'Varl Khasciette Hephastus Acture Inatrai Eiretea ka'Vurriel Voirkananis Licaster su'Vidomacher Limoire Mercari
+				Hygriel Odincaern Guilpharn du'Dachon ka'Cheriel su'Vido-Cheriel du'Vurri-Varl su'Nobili-Dachon ka'Khasci-Voirkanan Cemceytel
+				Nobilis Exaltius Thorvam su'Guil-Hygriel Peytus Mageur Egalian su'Autham Pairren ka'Actu-Mercari Valon Ambyrosin
+			}
+			regnal_first_names_male = {
+				Abel Aurion Corram Ceyn Gigan Hercaul Kialn Malumar Valon Odem Irarch Ronan Veditch Sydon Aleister Heracal Alphach Ultrim Sollus Seidon
+				Vitalim Merotium Meracles Charrus Carron Uriel
+				
+			}
+			regnal_first_names_female = {
+				Aaneu Aanah Ameseliri Ariel Coraeli Cordelia Velthseine Trinae Ceyra Maladria Molisyr Syrine Hylia Lyyris Vedelia Lysteme Umelera Zeal 
+				Amarion Lourima Rielette Hanaliesien Caerri Seiya Persephia
+				
+			}
+			regnal_second_names = { #the three biggest houses. I guess?
+				url'Loydamon url'Gemorai url'Varl "of the Loydamon" "of the Gemorai" "of the Varl"
+			}
+		}
+	}
+}

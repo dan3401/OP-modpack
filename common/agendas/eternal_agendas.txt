@@ -1,0 +1,145 @@
+
+agenda_eternal_firstborn = { # Unity production modifier
+	weight_modifier = {
+		weight = 0
+		modifier = {
+			factor = 100
+			from = {
+				has_government = "gov_eternal_continuum"
+			}
+		}
+		modifier = {
+			factor = 100
+			from = {
+				is_at_war = no
+			}	
+		}
+		
+	}
+
+	modifier = {
+		shipclass_starbase_hull_mult = 5
+	}
+}
+
+
+agenda_eternal_progenitors = { # Unity production modifier
+	weight_modifier = {
+		weight = 0
+		modifier = {
+			factor = 100
+			from = {
+				has_government = "gov_eternal_continuum"
+			}
+		}
+		modifier = {
+			factor = 150
+			from = {
+				is_overlord = yes
+			}	
+		}
+			
+	}
+
+	modifier = {
+		country_subject_technology_sharing_mult = 0.5
+		country_subject_acceptance_add = 50
+	}
+}
+
+agenda_eternal_virtue = { # Unity production modifier
+	weight_modifier = {
+		weight = 0
+		modifier = {
+			factor = 100
+			from = {
+				has_government = "gov_eternal_continuum"
+			}
+		}
+		modifier = {
+			factor = 20
+			from = {
+				any_owned_planet = {
+				has_building = building_eternal_academy
+				}
+			}
+		}
+		
+	}
+
+	modifier = {
+		planet_jobs_virtue_produces_mult = 0.20
+	}
+}
+
+agenda_eternal_eternium = { # Unity production modifier
+	weight_modifier = {
+		weight = 0
+		modifier = {
+			factor = 100
+			from = {
+				has_government = "gov_eternal_continuum"
+			}
+		}
+		modifier = {
+			factor = 100
+			from = {
+				any_owned_pop = {
+					has_job = twastromancer 	
+				}
+			}
+		}
+		
+	}
+
+	modifier = {
+		country_eternium_produces_mult = 0.3
+	}
+}
+
+
+agenda_eternal_standing = { # Unity production modifier
+	weight_modifier = {
+		weight = 0
+		modifier = {
+			factor = 100
+			from = {
+				has_government = "gov_eternal_continuum"
+			}
+			
+		}
+		modifier = {
+			factor = 100
+			from = {
+				is_at_war = yes
+			}
+			
+		}
+		
+	}
+
+	modifier = {
+		country_naval_cap_add = 500
+	}
+}
+
+
+
+agenda_eternal_perfection = { # Unity production modifier
+	weight_modifier = {
+		weight = 0
+		modifier = {
+			factor = 150
+			from = {
+				has_government = "gov_eternal_continuum"
+				has_authority = "auth_enigmantic"
+			}
+		}
+		
+	}
+
+	modifier = {
+		edict_length_mult = 0.50
+		country_starbase_capacity_add = 20
+	}
+}

@@ -1,0 +1,1134 @@
+##################
+### TECH COSTS ###
+##################
+
+#####Kinetic
+
+tech_lightmatter_flak = {
+	area = engineering
+	cost = @acot_tier9cost2
+	tier = 9
+	category = { propulsion }
+	ai_update_type = military
+	is_rare = yes
+	weight = 0
+	is_reverse_engineerable = no	
+	
+	potential = {
+		NOT = { has_global_flag = acot_shipcom_forbidden }
+		has_technology = tech_lightmatter_reactor
+	}
+
+	weight_modifier = {
+		factor = 0
+	}
+	
+	ai_weight = {
+		factor = 200		#weapons are OP
+	}
+}
+
+tech_lightmatter_autocannon = {
+	area = engineering
+	cost = @acot_tier9cost2
+	tier = 9
+	category = { propulsion }
+	ai_update_type = military
+	is_rare = yes
+	weight = 0
+	is_reverse_engineerable = no
+
+	potential = {
+		NOT = { has_global_flag = acot_shipcom_forbidden }
+		has_technology = tech_lightmatter_reactor
+	}
+
+	weight_modifier = {
+		factor = 0
+	}
+	
+	ai_weight = {
+		factor = 200		#weapons are OP
+	}
+}
+
+tech_resized_mass_accelerator_oe = {
+	area = engineering
+	cost = @acot_tier9cost2
+	tier = 9
+	category = { propulsion }
+	ai_update_type = military
+	weight = 0
+	
+	potential = {
+		NOT = { has_global_flag = acot_shipcom_forbidden }
+		has_technology = tech_lightmatter_reactor
+	}
+
+	weight_modifier = {
+		factor = 0
+	}
+	
+	ai_weight = {
+		factor = 200		#weapons are OP
+	}
+
+}
+
+tech_lightmatter_gauss = {
+	area = engineering
+	cost = @acot_tier9cost2
+	tier = 9
+	category = { propulsion }
+	ai_update_type = military
+	is_rare = yes
+	weight = 0
+	is_reverse_engineerable = no
+	
+	potential = {
+		NOT = { has_global_flag = acot_shipcom_forbidden }
+		has_technology = tech_lightmatter_reactor
+	}
+
+	weight_modifier = {
+		factor = 0
+	}
+	
+	ai_weight = {
+		factor = 200		#weapons are OP
+	}
+}
+
+
+tech_lightmatter_artillery = {
+	area = engineering
+	cost = @acot_tier9cost2
+	tier = 9
+	category = { propulsion }
+	ai_update_type = military
+	is_rare = yes
+	is_reverse_engineerable = no
+	weight = 0
+	
+	potential = {
+		NOT = { has_global_flag = acot_shipcom_forbidden }
+		has_technology = tech_lightmatter_reactor
+	}
+
+	weight_modifier = {
+		factor = 0
+	}
+	
+	ai_weight = {
+		factor = 200		#weapons are OP
+	}
+}
+
+tech_warp_lightmatter_cannon = {
+	area = engineering
+	cost = @acot_tier9cost2
+	tier = 9
+	category = { propulsion }
+	ai_update_type = military
+	is_rare = yes
+	is_reverse_engineerable = no
+	
+	potential = {
+		NOT = { has_global_flag = acot_shipcom_forbidden }
+		has_technology = tech_lightmatter_reactor
+	}
+
+	weight = 0
+	
+	weight_modifier = {
+		factor = 0
+	}
+	
+	ai_weight = {
+		factor = 200		#components are OP
+	}
+}
+
+tech_lightmatter_titan_accelerator = {
+	area = engineering
+	category = { propulsion }
+	tier = 9
+	cost = @tier5cost3
+	weight = 0
+	ai_update_type = military
+	prerequisites = { "tech_warp_lightmatter_cannon" }
+	is_rare = yes
+	
+	potential = {
+		NOT = { has_global_flag = acot_shipcom_forbidden }
+	}
+
+}
+
+#####Energy
+
+
+tech_lightmatter_point_defence = {
+	area = physics
+	cost = @acot_tier9cost2
+	tier = 9
+	category = { particles }
+	ai_update_type = military
+	is_rare = yes
+	is_reverse_engineerable = no
+	
+	potential = {
+		NOT = { has_global_flag = acot_shipcom_forbidden }
+		has_technology = tech_lightmatter_reactor
+	}
+
+	weight = 0
+	
+	weight_modifier = {
+		factor = 0
+	}
+	
+	ai_weight = {
+		factor = 200		#components are OP
+	}
+}
+
+tech_lightmatter_laser = {
+	area = physics
+	cost = @acot_tier9cost2
+	tier = 9
+	category = { particles }
+	ai_update_type = military
+	is_rare = yes
+	is_reverse_engineerable = no
+	
+	weight = 0
+	
+	potential = {
+		NOT = { has_global_flag = acot_shipcom_forbidden }
+		has_technology = tech_lightmatter_reactor
+	}
+
+	weight_modifier = {
+		factor = 0
+	}
+	
+	ai_weight = {
+		factor = 200		#weapons are OP
+	}
+}
+
+tech_lightmatter_photon = {
+	area = physics
+	cost = @acot_tier9cost2
+	tier = 9
+	category = { particles }
+	ai_update_type = military
+	is_rare = yes
+	is_reverse_engineerable = no
+	
+	weight = 0
+	
+	potential = {
+		NOT = { has_global_flag = acot_shipcom_forbidden }
+		has_technology = tech_lightmatter_reactor
+	}
+
+	weight_modifier = {
+		factor = 0
+	}
+	
+	ai_weight = {
+		factor = 200	#weapons are OP
+	}
+}
+
+tech_lightmatter_plasma_cannon = {
+	area = physics
+	cost = @acot_tier9cost2
+	tier = 9
+	category = { particles }
+	ai_update_type = military
+	is_rare = yes
+	is_reverse_engineerable = no
+	
+	weight = 0
+	
+	potential = {
+		NOT = { has_global_flag = acot_shipcom_forbidden }
+		has_technology = tech_lightmatter_reactor
+	}
+
+	weight_modifier = {
+		factor = 0
+	}
+	
+	ai_weight = {
+		factor = 200	#weapons are OP
+	}
+}
+
+tech_lightmatter_lance = {
+	area = physics
+	cost = @acot_tier9cost2
+	tier = 9
+	category = { particles }
+	ai_update_type = military
+	is_rare = yes
+	is_reverse_engineerable = no
+	
+	weight = 0
+	
+	potential = {
+		NOT = { has_global_flag = acot_shipcom_forbidden }
+		has_technology = tech_lightmatter_reactor
+	}
+
+	weight_modifier = {
+		factor = 0
+	}
+	
+	ai_weight = {
+		factor = 200		#components are OP
+	}
+}
+
+tech_lightmatter_emitter = {
+	area = physics
+	cost = @acot_tier9cost2
+	tier = 9
+	category = { particles }
+	ai_update_type = military
+	is_rare = yes
+	is_reverse_engineerable = no
+	
+	weight = 0
+	
+	potential = {
+		NOT = { has_global_flag = acot_shipcom_forbidden }
+		has_technology = tech_lightmatter_reactor
+	}
+
+	weight_modifier = {
+		factor = 0
+	}
+	
+	ai_weight = {
+		factor = 200		#components are OP
+	}
+}
+
+tech_titan_lightmatter_emitter = {
+	area = physics
+	category = { particles }
+	tier = 9
+	cost = @acot_tier9cost2
+	ai_update_type = military	
+	is_rare = yes
+	is_reverse_engineerable = no
+	
+	weight = 0
+
+	potential = {
+		NOT = { has_global_flag = acot_shipcom_forbidden }
+		has_technology = tech_lightmatter_reactor
+	}
+	weight_modifier = {
+		factor = 0
+	}
+	
+	ai_weight = {
+		factor = 200		#components are OP
+	}
+}
+
+
+tech_lightmatter_titan_beam = {
+	area = physics
+	cost = @acot_tier9cost2
+	tier = 9
+	category = { particles }
+	ai_update_type = military
+	is_rare = yes
+	is_reverse_engineerable = no
+
+	potential = {
+		NOT = { has_global_flag = acot_shipcom_forbidden }
+		has_technology = tech_lightmatter_reactor
+	}
+
+	weight = 0
+	
+	weight_modifier = {
+		factor = 0
+	}
+	
+	ai_weight = {
+		factor = 200		#components are OP
+	}
+}
+
+#####Hangers and Missiles
+
+
+tech_lightmatter_missile = {
+	area = engineering
+	cost = @acot_tier9cost2
+	tier = 9
+	category = { propulsion }
+	ai_update_type = military
+	is_rare = yes
+	is_reverse_engineerable = no
+	
+	weight = 0
+	
+	weight_modifier = {
+		factor = 0
+	}
+	
+	potential = {
+		NOT = { has_global_flag = acot_shipcom_forbidden }
+		has_technology = tech_lightmatter_reactor
+	}
+
+	ai_weight = {
+		factor = 200		#components are OP
+	}
+}
+
+
+############################################################
+##                     OE Barrage
+############################################################
+
+tech_barrage_missile_oe = {
+	area = engineering
+	category = { propulsion }
+	tier = 9
+	cost = @acot_tier9cost2
+	weight = 0
+	ai_update_type = military
+	prerequisites = { "tech_lightmatter_missile" }
+	
+	potential = {
+		NOT = { has_global_flag = acot_weapons_forbidden }
+		has_technology = tech_stellarite_reactor
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.9
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.1
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.2
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}	
+	}
+	
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.9
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.1
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.2
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+}
+
+############################################################
+##                     OE XL Missile
+############################################################
+
+tech_xl_missile_oe = {
+	area = engineering
+	category = { propulsion }
+	tier = 9
+	cost = @acot_tier9cost2
+	weight = 0
+	ai_update_type = military
+	prerequisites = { "tech_barrage_missile_oe" tech_xl_missile_se }
+	
+	potential = {
+		NOT = { has_global_flag = acot_weapons_forbidden }
+		has_technology = tech_stellarite_reactor
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.9
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.1
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.2
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}	
+	}
+	
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.9
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.1
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.2
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+}
+
+############################################################
+##                     OE Nuke
+############################################################
+
+tech_missile_nuke_oe = {
+	area = engineering
+	category = { propulsion }
+	tier = 9
+	cost = @acot_tier9cost2
+	weight = 0
+	ai_update_type = military
+	prerequisites = { "tech_missile_nuke_se" }
+	
+	potential = {
+		NOT = { has_global_flag = acot_weapons_forbidden }
+		has_technology = tech_stellarite_reactor
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.9
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.1
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.2
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}	
+	}
+	
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.9
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.1
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.2
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+}
+
+tech_lightmatter_gunship = {
+	area = engineering
+	cost = @acot_tier9cost2
+	tier = 9
+	category = { voidcraft }
+	ai_update_type = military
+	is_reverse_engineerable = no
+	is_rare = yes
+	
+	potential = {
+		NOT = { has_global_flag = acot_shipcom_forbidden }
+		has_technology = tech_lightmatter_reactor
+	}
+
+	weight = 0
+	
+	weight_modifier = {
+		factor = 0
+	}
+	
+	ai_weight = {
+		factor = 200		#components are OP
+	}
+}
+
+
+tech_lightmatter_bomber = {
+	area = engineering
+	cost = @acot_tier9cost2
+	tier = 9
+	category = { voidcraft }
+	ai_update_type = military
+	is_reverse_engineerable = no
+	is_rare = yes
+	
+	potential = {
+		NOT = { has_global_flag = acot_shipcom_forbidden }
+		has_technology = tech_lightmatter_reactor
+	}
+
+	weight = 0
+	
+	weight_modifier = {
+		factor = 0
+	}
+	
+	ai_weight = {
+		factor = 200		#components are OP
+	}
+}
+
+tech_lightmatter_fighter = {
+	area = engineering
+	cost = @acot_tier9cost2
+	tier = 9
+	category = { voidcraft }
+	ai_update_type = military
+	is_reverse_engineerable = no
+	is_rare = yes
+	
+	potential = {
+		NOT = { has_global_flag = acot_shipcom_forbidden }
+		has_technology = tech_lightmatter_reactor
+	}
+
+	weight = 0
+	
+	weight_modifier = {
+		factor = 0
+	}
+	
+	ai_weight = {
+		factor = 200		#components are OP
+	}
+}
+
+
+#####Utilities
+
+tech_lightmatter_armor = {
+	area = engineering
+	cost = @acot_tier9cost2
+	tier = 9
+	category = { materials }
+	ai_update_type = military
+	is_rare = yes
+	is_reverse_engineerable = no
+	
+	potential = {
+		NOT = { has_global_flag = acot_shipcom_forbidden }
+		has_technology = tech_lightmatter_reactor
+	}
+
+	weight = 0
+	
+	weight_modifier = {
+		factor = 0
+	}
+	
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		custom = {
+			title = "TECH_UNLOCK_ORIGIN_ARMOR_TITLE"
+			desc = "TECH_UNLOCK_ORIGIN_ARMOR_DESC"
+		}
+	}
+
+	ai_weight = {
+		factor = 200		#components are OP
+	}
+}
+
+tech_lightmatter_shield = {
+	area = physics
+	cost = @acot_tier9cost2
+	tier = 9
+	category = { particles }
+	ai_update_type = military
+	is_rare = yes
+	is_reverse_engineerable = no
+	
+	weight = 0
+	
+	potential = {
+		NOT = { has_global_flag = acot_shipcom_forbidden }
+		has_technology = tech_lightmatter_reactor
+	}
+
+	weight_modifier = {
+		factor = 0
+	}
+	
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		custom = {
+			title = "TECH_UNLOCK_ORIGIN_SHIELD_TITLE"
+			desc = "TECH_UNLOCK_ORIGIN_SHIELD_DESC"
+		}
+	}
+
+	ai_weight = {
+		factor = 200		#components are OP
+	}
+}
+
+tech_lightmatter_thruster = {
+	area = engineering
+	cost = @acot_tier9cost2
+	tier = 9
+	category = { propulsion }
+	ai_update_type = military
+	is_rare = yes
+	is_reverse_engineerable = no
+	
+	weight = 0
+	
+	weight_modifier = {
+		factor = 0
+	}
+
+	potential = {
+		NOT = { has_global_flag = acot_shipcom_forbidden }
+		has_technology = tech_lightmatter_reactor
+	}
+
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		custom = {
+			title = "TECH_UNLOCK_ORIGIN_THRUSTER_TITLE"
+			desc = "TECH_UNLOCK_ORIGIN_THRUSTER_DESC"
+		}
+	}
+	
+	ai_weight = {
+		factor = 200		#components are OP
+	}
+}
+
+tech_lightmatter_reactor = {
+	area = physics
+	cost = @acot_tier9cost2
+	tier = 9
+	category = { particles }
+	ai_update_type = military
+	is_rare = yes
+	is_reverse_engineerable = no
+	
+	weight = 0
+	
+	weight_modifier = {
+		factor = 0
+	}
+
+	potential = {
+		NOT = { has_global_flag = acot_shipcom_forbidden }
+		OR = {
+			is_progenitor_empires = yes
+			has_country_flag = acquired_light_matter
+		}
+	}
+
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_ORIGIN_REACTOR_TITLE"
+			desc = "TECH_UNLOCK_ORIGIN_REACTOR_DESC"
+		}
+	}
+	
+	ai_weight = {
+		factor = 200		#components are OP
+	}
+}
+
+tech_lightmatter_sensors = {
+	area = physics
+	cost = @acot_tier9cost2
+	tier = 9
+	category = { computing }
+	ai_update_type = military
+	is_rare = yes
+	is_reverse_engineerable = no
+	
+	weight = 0
+	
+	weight_modifier = {
+		factor = 0
+	}
+
+	potential = {
+		NOT = { has_global_flag = acot_shipcom_forbidden }
+		has_technology = tech_lightmatter_reactor
+	}
+
+	ai_weight = {
+		factor = 200		#components are OP
+	}
+}
+
+tech_computer_lightmatter = {
+	area = physics
+	cost = @acot_tier9cost2
+	tier = 9
+	category = { computing }
+	ai_update_type = military
+	is_rare = yes
+	is_reverse_engineerable = no
+	
+	weight = 0
+	
+	weight_modifier = {
+		factor = 0
+	}
+
+	potential = {
+		NOT = { has_global_flag = acot_shipcom_forbidden }
+		has_technology = tech_lightmatter_reactor
+	}
+
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		custom = {
+			title = "TECH_UNLOCK_ORIGIN_CCOM_TITLE"
+			desc = "TECH_UNLOCK_ORIGIN_CCOM_DESC"
+		}
+	}
+	
+	ai_weight = {
+		factor = 200		#components are OP
+	}
+}
+
+tech_lightmatter_jump_drive = {
+	area = physics
+	cost = @acot_tier9cost2
+	tier = 9
+	category = { particles }
+	ai_update_type = military
+	is_rare = yes
+	is_reverse_engineerable = no
+	
+	weight = 0
+	
+	weight_modifier = {
+		factor = 0
+	}
+	
+	potential = {
+		NOT = { has_global_flag = acot_shipcom_forbidden }
+		has_technology = tech_lightmatter_reactor
+	}
+
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		custom = {
+			title = "TECH_UNLOCK_ORIGIN_JDRIVE_TITLE"
+			desc = "TECH_UNLOCK_ORIGIN_JDRIVE_DESC"
+		}
+	}
+
+	ai_weight = {
+		factor = 200		#components are OP
+	}
+}
+
+### Aux
+
+tech_lightmatter_afterburners = {
+	area = engineering
+	cost = @acot_tier9cost2
+	tier = 9
+	category = { propulsion }
+	ai_update_type = military
+	is_rare = yes
+	is_reverse_engineerable = no
+	
+	weight = 0
+	
+	weight_modifier = {
+		factor = 0
+	}
+
+	potential = {
+		NOT = { has_global_flag = acot_shipcom_forbidden }
+		has_technology = tech_lightmatter_reactor
+	}
+	
+	ai_weight = {
+		factor = 200		#components are OP
+	}
+}
+
+tech_lightmatter_hyper_jump_drive = {
+	area = physics
+	cost = @acot_tier9cost2
+	tier = 9
+	category = { particles }
+	ai_update_type = military
+	is_rare = yes
+	is_reverse_engineerable = no
+	
+	weight = 0
+	
+	weight_modifier = {
+		factor = 0
+	}
+
+	potential = {
+		NOT = { has_global_flag = acot_shipcom_forbidden }
+		has_technology = tech_lightmatter_reactor
+	}
+
+	ai_weight = {
+		factor = 200		#components are OP
+	}
+}
+
+tech_lightmatter_reactive_drone = {
+	area = engineering
+	cost = @acot_tier9cost2
+	tier = 9
+	category = { materials }
+	ai_update_type = military
+	is_rare = yes
+	is_reverse_engineerable = no
+	
+	weight = 0
+	
+	weight_modifier = {
+		factor = 0
+	}
+
+	potential = {
+		NOT = { has_global_flag = acot_shipcom_forbidden }
+		has_technology = tech_lightmatter_reactor
+	}
+
+	ai_weight = {
+		factor = 200		#components are OP
+	}
+}
+
+tech_lightmatter_analyzer_ai = {
+	area = physics
+	cost = @acot_tier9cost2
+	tier = 9
+	category = { computing }
+	ai_update_type = military
+	is_rare = yes
+	is_reverse_engineerable = no
+	
+	weight = 0
+	
+	weight_modifier = {
+		factor = 0
+	}
+
+	potential = {
+		NOT = { has_global_flag = acot_shipcom_forbidden }
+		has_technology = tech_lightmatter_reactor
+	}
+	
+	ai_weight = {
+		factor = 200		#components are OP
+	}
+}
+
+tech_lightmatter_shield_supercharger = {
+	area = physics
+	cost = @acot_tier9cost2
+	tier = 9
+	category = { particles }
+	ai_update_type = military
+	is_rare = yes
+	is_reverse_engineerable = no
+	
+	weight = 0
+	
+	weight_modifier = {
+		factor = 0
+	}
+	
+	potential = {
+		NOT = { has_global_flag = acot_shipcom_forbidden }
+		has_technology = tech_lightmatter_reactor
+	}
+
+	ai_weight = {
+		factor = 200		#components are OP
+	}
+}
+
+tech_lightmatter_inspire_aura = {
+	area = physics
+	cost = @acot_tier9cost2
+	tier = 9
+	category = { computing }
+	ai_update_type = military
+	is_rare = yes
+	is_reverse_engineerable = no
+	
+	weight = 0
+	
+	weight_modifier = {
+		factor = 0
+	}
+
+	potential = {
+		NOT = { has_global_flag = acot_shipcom_forbidden }
+		has_technology = tech_lightmatter_reactor
+	}
+
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_INSPIRE_AURA_OE_TITLE"
+			desc = "TECH_UNLOCK_INSPIRE_AURA_OE_DESC"
+		}
+	}
+	
+	ai_weight = {
+		factor = 200		#components are OP
+	}
+}
+
+tech_lightmatter_aura_energy_drainer = {
+	area = physics
+	cost = @acot_tier9cost2
+	tier = 9
+	category = { computing }
+	ai_update_type = military
+	is_rare = yes
+	is_reverse_engineerable = no
+	
+	weight = 0
+	
+	weight_modifier = {
+		factor = 0
+	}
+	
+	potential = {
+		NOT = { has_global_flag = acot_shipcom_forbidden }
+		has_technology = tech_lightmatter_reactor
+	}
+
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_ENERGY_DRAINER_OE_TITLE"
+			desc = "TECH_UNLOCK_ENERGY_DRAINER_OE_DESC"
+		}
+	}
+
+	ai_weight = {
+		factor = 200		#components are OP
+	}
+}
+
+tech_lightmatter_weapon_core = {
+	area = physics
+	cost = @acot_tier9cost2
+	tier = 9
+	category = { computing }
+	ai_update_type = military
+	is_rare = yes
+	is_reverse_engineerable = no
+	
+	weight = 0
+	
+	weight_modifier = {
+		factor = 0
+	}
+	
+	potential = {
+		NOT = { has_global_flag = acot_shipcom_forbidden }
+		has_technology = tech_lightmatter_reactor
+	}
+
+	ai_weight = {
+		factor = 200		#components are OP
+	}
+}

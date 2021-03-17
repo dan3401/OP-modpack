@@ -1,0 +1,79 @@
+#Ascended Empire Ambitions
+
+@ambitionDuration = 3600
+
+punishment_protocols = {
+	length = @ambitionDuration
+	icon = "GFX_edict_type_time"
+	
+	is_ambition = yes 		# Costs Unity scaled to tradition cost
+	
+	resources = {
+		category = edicts
+	}
+	
+	modifier = {
+		damage_vs_country_type_default_mult = 0.33
+	}	
+	
+	prerequisites = {
+		"tech_fallen_technologies_5"		
+	}
+	
+	potential = {
+		OR = {
+			is_country_type = ascended_empire
+			is_country_type = lost_empire
+		}
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+
+rejuvenate_society = {
+	length = @ambitionDuration
+	icon = "GFX_edict_type_time"
+	is_ambition = yes
+	
+	resources = {
+		category = edicts
+	}
+
+	potential = {
+		is_country_type = ascended_empire
+		has_country_flag = decadence_edict_gained
+	}
+
+	allow = {
+		
+	}
+	
+#	prerequisites = {
+#		"tech_fallen_technologies_2"		
+#	}
+
+	effect = {
+#		every_owned_pop = {
+#			limit = {
+#				has_pop_flag = decadent_pop
+#			}
+#			remove_pop_flag = decadent_pop
+#		}
+		every_country = {
+			limit = {
+				NOT = { is_same_value = root }
+				is_ai = no
+			}
+			country_event = { id = zofe.4 }
+		}
+		set_timed_country_flag = { flag = no_decadence days = 7200 }
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+}
+

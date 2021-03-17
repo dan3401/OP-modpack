@@ -1,0 +1,225 @@
+
+# All leaders will have a common trait-point value set in defines, which they use to grab traits
+
+# leader_trait = yes - this tags the trait as a leader-trait and not a species-trait
+# initial = no - if set to no, this trait can not be granted to leaders when they are generated
+# leader_class = { admiral scientist }  -- OR  - if not set, it can be given to all leader-types except Rulers
+# requires_traits = { trait_psionic } -- AND - leader-trait can only be randomly given on generation if the leaders species has this trait
+# requires_governments = { despotic_hegemony ai_overlordship } -- OR - leader-trait can only be randomly given on generation if the Empire has this type of government form
+# prerequisites = { tech_psionic_theory } - AND - leader-trait can only be given if the technology specified has been researched by the Empire
+
+############################
+# Generic Leader Traits    #
+# (Available For Everyone) #
+############################
+
+
+leader_trait_water_type_Steady_Stream_1 = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/EeveelutionTypes/water_type.png"
+	self_modifier = {
+		leader_age = 50
+	}
+	leader_potential_add = {
+		NOT = { from = { has_ethic = "ethic_gestalt_consciousness" } }
+	}
+	leader_trait = all
+    opposites = {  "leader_trait_water_type_Steady_Stream_2" "leader_trait_water_type_Steady_Stream_3" "leader_trait_water_type_Steady_Stream_4" "leader_trait_water_type_Steady_Stream_5" "leader_trait_water_type_Steady_Stream_6" "leader_trait_water_type_Steady_Stream_7" "leader_trait_water_type_Steady_Stream_8" "leader_trait_water_type_Steady_Stream_9" "leader_trait_water_type_Steady_Stream_10" }
+
+    leader_potential_add = {
+	from = {
+				any_owned_pop = {
+				pop_has_trait = trait_water_type_mega_evolution
+			}
+			}
+			}    }
+
+leader_trait_water_type_Steady_Stream_2 = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/EeveelutionTypes/water_type.png"
+	self_modifier = {
+		leader_age = 50
+	}
+	leader_potential_add = {
+		NOT = { from = { has_ethic = "ethic_gestalt_consciousness" } }
+	}
+	leader_trait = all
+    opposites = {  "leader_trait_water_type_Steady_Stream_1" "leader_trait_water_type_Steady_Stream_3" "leader_trait_water_type_Steady_Stream_4" "leader_trait_water_type_Steady_Stream_5" "leader_trait_water_type_Steady_Stream_6" "leader_trait_water_type_Steady_Stream_7" "leader_trait_water_type_Steady_Stream_8" "leader_trait_water_type_Steady_Stream_9" "leader_trait_water_type_Steady_Stream_10" }
+
+    leader_potential_add = {
+	from = {
+				any_owned_pop = {
+				pop_has_trait = trait_water_type_mega_evolution
+			}
+			}
+			}    }
+
+leader_trait_water_type_Steady_Stream_3 = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/EeveelutionTypes/water_type.png"
+	self_modifier = {
+		leader_age = 50
+	}
+	leader_potential_add = {
+		NOT = { from = { has_ethic = "ethic_gestalt_consciousness" } }
+	}
+	leader_trait = all
+    opposites = {  "leader_trait_water_type_Steady_Stream_2" "leader_trait_water_type_Steady_Stream_1" "leader_trait_water_type_Steady_Stream_4" "leader_trait_water_type_Steady_Stream_5" "leader_trait_water_type_Steady_Stream_6" "leader_trait_water_type_Steady_Stream_7" "leader_trait_water_type_Steady_Stream_8" "leader_trait_water_type_Steady_Stream_9" "leader_trait_water_type_Steady_Stream_10" }
+
+    leader_potential_add = {
+	from = {
+				any_owned_pop = {
+				pop_has_trait = trait_water_type_mega_evolution
+			}
+			}
+			}    }
+
+leader_trait_water_type_Steady_Stream_4 = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/EeveelutionTypes/water_type.png"
+	self_modifier = {
+		leader_age = 50
+	}
+	leader_potential_add = {
+		NOT = { from = { has_ethic = "ethic_gestalt_consciousness" } }
+	}
+	leader_trait = all
+    opposites = {  "leader_trait_water_type_Steady_Stream_2" "leader_trait_water_type_Steady_Stream_3" "leader_trait_water_type_Steady_Stream_1" "leader_trait_water_type_Steady_Stream_5" "leader_trait_water_type_Steady_Stream_6" "leader_trait_water_type_Steady_Stream_7" "leader_trait_water_type_Steady_Stream_8" "leader_trait_water_type_Steady_Stream_9" "leader_trait_water_type_Steady_Stream_10" }
+
+    leader_potential_add = {
+	from = {
+				any_owned_pop = {
+				pop_has_trait = trait_water_type_mega_evolution
+			}
+			}
+			}    }
+
+leader_trait_water_type_Steady_Stream_5 = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/EeveelutionTypes/water_type.png"
+	self_modifier = {
+		leader_age = 50
+	}
+	leader_potential_add = {
+		NOT = { from = { has_ethic = "ethic_gestalt_consciousness" } }
+	}
+	leader_trait = all
+    opposites = {  "leader_trait_water_type_Steady_Stream_2" "leader_trait_water_type_Steady_Stream_3" "leader_trait_water_type_Steady_Stream_4" "leader_trait_water_type_Steady_Stream_1" "leader_trait_water_type_Steady_Stream_6" "leader_trait_water_type_Steady_Stream_7" "leader_trait_water_type_Steady_Stream_8" "leader_trait_water_type_Steady_Stream_9" "leader_trait_water_type_Steady_Stream_10" }
+
+    leader_potential_add = {
+	from = {
+				any_owned_pop = {
+				pop_has_trait = trait_water_type_mega_evolution
+			}
+			}
+			}    }
+
+leader_trait_water_type_Steady_Stream_6 = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/EeveelutionTypes/water_type.png"
+	self_modifier = {
+		leader_age = 50
+	}
+	leader_potential_add = {
+		NOT = { from = { has_ethic = "ethic_gestalt_consciousness" } }
+	}
+	leader_trait = all
+    opposites = {  "leader_trait_water_type_Steady_Stream_2" "leader_trait_water_type_Steady_Stream_3" "leader_trait_water_type_Steady_Stream_4" "leader_trait_water_type_Steady_Stream_5" "leader_trait_water_type_Steady_Stream_1" "leader_trait_water_type_Steady_Stream_7" "leader_trait_water_type_Steady_Stream_8" "leader_trait_water_type_Steady_Stream_9" "leader_trait_water_type_Steady_Stream_10" }
+
+    leader_potential_add = {
+	from = {
+				any_owned_pop = {
+				pop_has_trait = trait_water_type_mega_evolution
+			}
+			}
+			}    }
+
+leader_trait_water_type_Steady_Stream_7 = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/EeveelutionTypes/water_type.png"
+	self_modifier = {
+		leader_age = 50
+	}
+	leader_potential_add = {
+		NOT = { from = { has_ethic = "ethic_gestalt_consciousness" } }
+	}
+	leader_trait = all
+    opposites = {  "leader_trait_water_type_Steady_Stream_2" "leader_trait_water_type_Steady_Stream_3" "leader_trait_water_type_Steady_Stream_4" "leader_trait_water_type_Steady_Stream_5" "leader_trait_water_type_Steady_Stream_6" "leader_trait_water_type_Steady_Stream_1" "leader_trait_water_type_Steady_Stream_8" "leader_trait_water_type_Steady_Stream_9" "leader_trait_water_type_Steady_Stream_10" }
+
+    leader_potential_add = {
+	from = {
+				any_owned_pop = {
+				pop_has_trait = trait_water_type_mega_evolution
+			}
+			}
+			}    }
+
+leader_trait_water_type_Steady_Stream_8 = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/EeveelutionTypes/water_type.png"
+	self_modifier = {
+		leader_age = 50
+	}
+	leader_potential_add = {
+		NOT = { from = { has_ethic = "ethic_gestalt_consciousness" } }
+	}
+	leader_trait = all
+    opposites = {  "leader_trait_water_type_Steady_Stream_2" "leader_trait_water_type_Steady_Stream_3" "leader_trait_water_type_Steady_Stream_4" "leader_trait_water_type_Steady_Stream_5" "leader_trait_water_type_Steady_Stream_6" "leader_trait_water_type_Steady_Stream_7" "leader_trait_water_type_Steady_Stream_1" "leader_trait_water_type_Steady_Stream_9" "leader_trait_water_type_Steady_Stream_10" }
+
+    leader_potential_add = {
+	from = {
+				any_owned_pop = {
+				pop_has_trait = trait_water_type_mega_evolution
+			}
+			}
+			}    }
+
+leader_trait_water_type_Steady_Stream_9 = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/EeveelutionTypes/water_type.png"
+	self_modifier = {
+		leader_age = 50
+	}
+	leader_potential_add = {
+		NOT = { from = { has_ethic = "ethic_gestalt_consciousness" } }
+	}
+	leader_trait = all
+    opposites = {  "leader_trait_water_type_Steady_Stream_2" "leader_trait_water_type_Steady_Stream_3" "leader_trait_water_type_Steady_Stream_4" "leader_trait_water_type_Steady_Stream_5" "leader_trait_water_type_Steady_Stream_6" "leader_trait_water_type_Steady_Stream_7" "leader_trait_water_type_Steady_Stream_8" "leader_trait_water_type_Steady_Stream_1" "leader_trait_water_type_Steady_Stream_10" }
+
+    leader_potential_add = {
+	from = {
+				any_owned_pop = {
+				pop_has_trait = trait_water_type_mega_evolution
+			}
+			}
+			}    }
+
+leader_trait_water_type_Steady_Stream_10 = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/EeveelutionTypes/water_type.png"
+	self_modifier = {
+		leader_age = 50
+	}
+	leader_potential_add = {
+		NOT = { from = { has_ethic = "ethic_gestalt_consciousness" } }
+	}
+	leader_trait = all
+    opposites = {  "leader_trait_water_type_Steady_Stream_2" "leader_trait_water_type_Steady_Stream_3" "leader_trait_water_type_Steady_Stream_4" "leader_trait_water_type_Steady_Stream_5" "leader_trait_water_type_Steady_Stream_6" "leader_trait_water_type_Steady_Stream_7" "leader_trait_water_type_Steady_Stream_8" "leader_trait_water_type_Steady_Stream_9" "leader_trait_water_type_Steady_Stream_1" }
+
+    leader_potential_add = {
+	from = {
+				any_owned_pop = {
+				pop_has_trait = trait_water_type_mega_evolution
+			}
+			}
+			}    }

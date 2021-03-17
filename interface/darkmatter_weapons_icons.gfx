@@ -1,0 +1,46 @@
+spriteTypes = {
+
+# Weapons
+
+	spriteType = {
+		name = "GFX_ship_part_dm_missle"
+		textureFile = "gfx/interface/icons/ship_parts/ship_part_dm_missle.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_ship_part_armor_dm"
+		textureFile = "gfx/interface/icons/ship_parts/ship_part_armor_dm.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_ship_part_dark_matter_shield_tw"
+		textureFile = "gfx/interface/icons/ship_parts/ship_part_dark_matter_shield_tw.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_ship_part_dark_matter_shield_tw"
+		textureFile = "gfx/interface/icons/ship_parts/ship_part_dark_matter_shield_tw.dds"
+		noOfFrames = 1
+	}	
+	spriteType = {
+		name = "GFX_ship_part_titan_laser_dw"
+		textureFile = "gfx/interface/icons/ship_parts/ship_part_titan_laser_dw.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_ship_part_energy_lance_g"
+		textureFile = "gfx/interface/icons/ship_parts/ship_part_energy_lance_g.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_ship_part_infinity_reactor"
+		textureFile = "gfx/interface/icons/ship_parts/ship_part_infinity_reactor.dds"
+		noOfFrames = 1
+	}
+
+
+
+
+		
+		
+}

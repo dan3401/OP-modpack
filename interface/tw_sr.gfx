@@ -1,0 +1,63 @@
+spriteTypes = {
+
+	### Virtue
+	spriteType = {
+		name = "GFX_virtue"
+		textureFile = "gfx/interface/icons/resources/virtue.dds"
+	}
+	spriteType = {
+		name = "GFX_virtue_large"
+		textureFile = "gfx/interface/icons/resources/virtue_large.dds"
+	}
+
+	spriteType = {
+		name = "GFX_virtue_grey"
+		textureFile = "gfx/interface/icons/resources/virtue_grey.dds"
+	}
+
+	### Ancient Knowledge
+	spriteType = {
+		name = "GFX_ancient_knowldege"
+		textureFile = "gfx/interface/icons/resources/ancient_knowldege.dds"
+	}
+	spriteType = {
+		name = "GFX_ancient_knowledge_large"
+		textureFile = "gfx/interface/icons/resources/ancient_knowldege_large.dds"
+	}
+	spriteType = {
+		name = "GFX_ancient_knowledge_grey"
+		textureFile = "gfx/interface/icons/resources/ancient_knowldege_grey.dds"
+	}
+
+	### Ambrosia
+
+	spriteType = {
+		name = "GFX_ambrosia"
+		textureFile = "gfx/interface/icons/resources/ambrosia.dds"
+	}
+	spriteType = {
+		name = "GFX_acot_ambrosia_large"
+		textureFile = "gfx/interface/icons/resources/ambrosia_large.dds"
+	}
+
+	spriteType = {
+		name = "GFXacot_ambrosia_grey"
+		textureFile = "gfx/interface/icons/resources/ambrosia_grey.dds"
+	}
+	
+	### Eternium
+	
+	spriteType = {
+		name = "GFX_eternium"
+		textureFile = "gfx/interface/icons/resources/eternium.dds"
+	}
+	spriteType = {
+		name = "GFX_acot_eternium_large"
+		textureFile = "gfx/interface/icons/resources/eternium_large.dds"
+	}
+
+	spriteType = {
+		name = "GFXacot_eternium_grey"
+		textureFile = "gfx/interface/icons/resources/eternium_grey.dds"
+	}
+}

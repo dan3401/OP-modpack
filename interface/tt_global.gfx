@@ -1,0 +1,103 @@
+spriteTypes = {
+	#Place holder icon used for tree adoption buttons, added in v2.
+	#To be replaced with different icons for each tree, similar look but with shortened name of each tree on it.
+	spriteType = {
+		name = "GFX_tt_ph"
+		texturefile = "gfx/tradition_unknown.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_tt_ph_anim"
+		texturefile = "gfx/tradition_unknown_anim2.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/tradition_unknown_mask.dds"
+			animationtexturefile = "gfx/tradition_unknown_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 80.0
+			animationdelay = 0.0
+			animationblendmode = "overlay"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+	}
+
+	#Grouped arrows cut in v2 as they caused issues with being able to select traditions
+	#Remember to remove extra arrows that arent used
+	spriteType = {
+		name = "GFX_arrow_single_2"
+		texturefile = "gfx/interface/traditions/arrow_single_2.dds" # Slightly longer version of arrow_single
+	}
+	spriteType = {
+		name = "GFX_arrow_up"
+		texturefile = "gfx/interface/traditions/arrow_up.dds" # Upward facing arrow
+	}
+	spriteType = {
+		name = "GFX_arrow_right"
+		texturefile = "gfx/interface/traditions/arrow_right.dds" # right facing arrow
+	}
+	spriteType = {
+		name = "GFX_arrow_right_3"
+		texturefile = "gfx/interface/traditions/arrow_right_3.dds" # right facing arrow
+	}
+	spriteType = {
+		name = "GFX_arrow_right_4"
+		texturefile = "gfx/interface/traditions/arrow_right_4.dds" # right facing arrow
+	}
+	spriteType = {
+		name = "GFX_arrow_left"
+		texturefile = "gfx/interface/traditions/arrow_left.dds" # left facing arrow
+	}
+	spriteType = {
+		name = "GFX_arrow_left_2"
+		texturefile = "gfx/interface/traditions/arrow_left_2.dds" # Slightly longer version of arrow_left
+	}
+	spriteType = {
+		name = "GFX_arrow_left_4"
+		texturefile = "gfx/interface/traditions/arrow_left_4.dds" # Slightly longer version of arrow_left
+	}
+	spriteType = {
+		name = "GFX_arrow_left_down"
+		texturefile = "gfx/interface/traditions/arrow_left_down.dds" # left then downward facing arrow
+	}
+	spriteType = {
+		name = "GFX_arrow_right_down"
+		texturefile = "gfx/interface/traditions/arrow_right_down.dds" # right then downward facing arrow
+	}
+	spriteType = {
+		name = "GFX_arrow_long_2"
+		texturefile = "gfx/interface/traditions/arrow_long_2.dds" # Slightly longer version of arrow_long
+	}
+	spriteType = {
+		name = "GFX_arrow_double_2"
+		texturefile = "gfx/interface/traditions/arrow_double_2.dds" # Remade version of arrow_double
+	}
+	spriteType = {
+		name = "GFX_arrow_double_3"
+		texturefile = "gfx/interface/traditions/arrow_double_3.dds" # Remade version of arrow_double
+	}
+	spriteType = {
+		name = "GFX_arrow_double_4"
+		texturefile = "gfx/interface/traditions/arrow_double_4.dds" # Remade version of arrow_double
+	}
+	spriteType = {
+		name = "GFX_arrow_triple"
+		texturefile = "gfx/interface/traditions/arrow_triple.dds" # Remade version of arrow_double
+	}
+	spriteType = {
+		name = "GFX_arrow_triple_2"
+		texturefile = "gfx/interface/traditions/arrow_triple_2.dds" # Remade version of arrow_double
+	}
+	spriteType = {
+		name = "GFX_arrow_down_left"
+		texturefile = "gfx/interface/traditions/arrow_down_left.dds" # Remade version of arrow_left_down
+	}
+	spriteType = {
+		name = "GFX_arrow_down_right"
+		texturefile = "gfx/interface/traditions/arrow_down_right.dds" # Remade version of arrow_right_down
+	}
+}

@@ -1,0 +1,185 @@
+namespace = twrpevents
+
+country_event = {
+    id = twrpevents.1  #introduction of basics
+	title = "twarrival.1.name"
+    desc = "twarrival.1.desc"
+    is_triggered_only = yes
+    fire_only_once = yes
+	picture = GFX_evt_ascensiontw
+	show_sound = event_the_great_awakening
+
+    trigger = {
+        has_government = gov_eternal_continuum
+    }
+    
+    option = {
+        name = twarrival.1.a.name
+        country_event = {
+            id = twrpevents.3 days = 1800  
+        }
+    }
+}
+
+country_event = {
+    id = twrpevents.2 
+	title = "twarrival.2.name"
+    desc = "twarrival.2.desc"
+    fire_only_once = yes
+	picture = GFX_evt_origin_empire
+	show_sound = event_celebration
+
+    trigger = {
+        has_global_flag = active_origin_crisis
+        is_country_type = eternal_empire
+        has_government = "gov_eternal_continuum"
+    }
+
+    mean_time_to_happen = {
+        days = 20
+    }
+    
+    option = {
+        name = twarrival.2.a.name
+        custom_tooltip = twarrival.2.a.desc
+        hidden_effect = {
+			every_country = {
+				limit = {
+					has_government = "gov_eternal_continuum"
+                }
+                add_modifier = {
+                    modifier = "againstoe"
+                    days = -1
+                }
+            }
+        }
+    }
+    option = {
+        name = twarrival.2.b.name
+        custom_tooltip = twarrival.2.b.desc
+        hidden_effect = {
+			every_country = {
+				limit = {
+					has_government = "gov_eternal_continuum"
+                }
+                add_modifier = {
+                    modifier = "withoe"
+                    days = -1
+                }
+            }
+        }
+    }
+}
+
+country_event = {
+    id = twrpevents.3  #Eternal Society, Eternium?
+	title = "twarrival.3.name"
+    desc = "twarrival.3.desc"
+    is_triggered_only = yes
+    fire_only_once = yes
+	picture = GFX_evt_astropolis
+	show_sound = event_the_great_awakening
+
+    trigger = {
+        has_government = gov_eternal_continuum
+    }
+    
+    option = {
+        name = EXCELLENT
+       hidden_effect = {
+           country_event = {
+               id = twrpevents.4 days = 500
+           }
+       }
+    }
+}
+
+country_event = {
+    id = twrpevents.4  #Eternal Society, Eternium?
+	title = "twarrival.4.name"
+    desc = "twarrival.4.desc"
+    is_triggered_only = yes
+    fire_only_once = yes
+	picture = GFX_evt_ascensiontw
+	show_sound = event_the_great_awakening
+
+    trigger = {
+        has_government = gov_eternal_continuum
+    }
+    
+    option = {
+        name = EXCELLENT
+       hidden_effect = {
+           
+       }
+    }
+}
+
+
+country_event = {
+    id = twrpevents.5  #Eternal Society, Eternium?
+	title = "twarrival.5.name"
+    desc = "twarrival.5.desc"
+    is_triggered_only = yes
+    fire_only_once = yes
+	picture = GFX_evt_ascensiontw
+	show_sound = event_the_great_awakening
+
+    trigger = {
+        has_government = gov_eternal_continuum
+    }
+    
+    option = {
+        name = EXCELLENT
+       hidden_effect = {
+           
+       }
+    }
+}
+
+
+
+
+country_event = {
+    id = twrpevents.50  #AEE divine spark
+	title = "twrpevents.50.name"
+    desc = "twrpevents.50.desc"
+    is_triggered_only = yes
+
+	picture = GFX_evt_astropolis
+	show_sound = event_the_great_awakening
+    
+    
+    
+    option = {
+        name = EXCELLENT
+        add_modifier = {
+            modifier = "ee_society_development"
+            days = 10000
+        }
+        add_modifier = {
+            modifier = "ee_society_transofmration"
+            days = -1
+        }
+    }
+}
+
+country_event = {
+    id = twrpevents.60  #AEE ascension
+	title = " twrpevents.60.name"
+    desc = " twrpevents.60.desc"
+    is_triggered_only = yes
+
+	picture = GFX_evt_ascensiontw
+	show_sound = event_the_great_awakening
+
+    
+    
+    option = {
+        name = Worrying
+        country_event = {
+            
+        }
+    }
+    
+}

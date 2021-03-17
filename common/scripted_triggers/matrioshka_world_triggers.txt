@@ -1,0 +1,5 @@
+matrioshka_world_built = {
+    OR = {
+        has_modifier = pm_matrioshka_world
+    }
+}

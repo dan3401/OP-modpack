@@ -1,0 +1,238 @@
+##################
+### TECH COSTS ###
+##################
+#If you change any of these, use replace in files so the values are the same across all files
+
+@tier1cost1 = 360
+@tier1cost2 = 480
+@tier1cost3 = 600
+@tier1cost4 = 720
+
+@tier2cost1 = 1000
+@tier2cost2 = 1400
+@tier2cost3 = 1800
+@tier2cost4 = 2200
+
+@tier3cost1 = 3000
+@tier3cost2 = 4000
+@tier3cost3 = 5000
+@tier3cost4 = 6000
+
+####################
+### TECH WEIGHTS ###
+####################
+
+@tier1weight1 = 100
+@tier1weight2 = 95
+@tier1weight3 = 90
+@tier1weight4 = 85
+
+@tier2weight1 = 75
+@tier2weight2 = 70
+@tier2weight3 = 65
+@tier2weight4 = 60
+
+@tier3weight1 = 50
+@tier3weight2 = 45
+@tier3weight3 = 40
+@tier3weight4 = 35
+
+
+tech_fallenw = {
+	cost = @guardiantechcost
+	area = physics
+	tier = @guardiantechtier
+	is_reverse_engineerable = no
+	category = { computing }
+	ai_update_type = all
+	weight = 0
+	is_rare = yes
+
+	modifier = {
+
+		job_tw_hedonist_per_pop = 0.2
+
+		job_twoverseer_per_pop = 0.1
+
+		country_resource_max_minerals_add = 1500000
+		country_resource_max_energy_add = 1500000
+		country_resource_max_food_add = 1500000
+		country_resource_max_alloys_add = 1500000
+		country_resource_max_consumer_goods_add = 1500000
+		country_resource_max_influence_add = 1500000
+		
+		megastructure_build_speed_mult = 2.0
+		pop_ethics_shift_speed_mult = -10
+
+		country_alloys_cost_mult = -0.5
+
+		colony_start_num_pops_add = 40
+		shipsize_starbase_citadel_build_speed_mult = 10
+		shipsize_starbase_outpost_build_speed_mult = 10
+		shipsize_starbase_starfortress_build_speed_mult = 10
+		shipsize_starbase_citadel_hull_mult = 1
+		ship_colonizer_food_cost_add = -200
+		ship_colonizer_consumer_goods_cost_add = -200
+		ship_colonizer_alloys_cost_add = -100
+		ship_colonizer_unity_cost_add = 500
+		ship_colonizer_virtue_cost_add = 500
+		ship_colonizer_eternium_cost_add = 20
+
+
+		planet_clear_blocker_time_mult = -3.0
+
+		pop_ethic_militarist_attraction_mult = -9.0 
+		pop_ethic_pacifist_attraction_mult = -9.0
+		pop_ethic_authoritarian_attraction_mult = -9.0 
+		pop_ethic_egalitarian_attraction_mult = -9.0
+
+		country_naval_cap_add = 10000
+		country_command_limit_add = 5000
+		starbases_upkeep_mult = -2.00
+		starbase_upgrade_speed_mult = 5.00
+		starbase_shipyard_build_speed_mult = 5.0
+		ship_shield_mult = -0.85	
+		ship_armor_mult = -0.5
+		army_damage_mult = 1.00
+		army_health = 1.00
+		country_starbase_influence_cost_mult = 100.0
+		shipclass_starbase_hull_mult = -1.5
+		all_technology_research_speed = 10.00
+		megastructure_build_speed_mult = 10.00
+		country_starbase_alloys_cost_mult = 100.0
+
+		megastructure_build_speed_mult = 10.00
+		army_starting_experience_add = 1000000
+		ship_starting_experience_add = 1000000
+		pop_government_ethic_attraction	= 10.0
+		pop_ethics_shift_speed_mult = 2.0
+		country_leader_pool_size = 25
+		country_starbase_capacity_add = 100
+		colony_start_num_pops_add = 50
+		planet_building_build_speed_mult = 10.00
+		planet_army_build_speed_mult = 10.00
+		planet_stability_add = 500
+		edict_length_mult = 100.00
+		claims_cost_mult = -10.00
+		country_admin_cap_add = 250000
+		planet_colony_development_speed_mult = 50.00
+		country_base_influence_produces_add = 1000
+		country_base_unity_produces_add = 10000
+		country_base_unity_produces_mult = 5.00	
+
+		army_damage_mult = 1.00
+		army_disengage_chance_mult = 0.35
+		army_experience_gain_mult = 10.0
+		army_health = 0.5
+		army_damage_mult = 0.50
+		army_health = 0.25
+		army_morale = 0.25
+		army_morale_damage_mult = 1.0
+		planet_jobs_engineering_research_produces_mult = 0.25
+		planet_jobs_physics_research_produces_mult = 0.25
+		planet_jobs_society_research_produces_mult = 0.25
+		deposit_blockers_cost_mult = -1.0
+		planet_clear_blocker_time_mult = -1.00
+		planet_jobs_minerals_produces_mult = 0.25
+		planet_jobs_energy_produces_mult = 0.25
+		planet_jobs_alloys_produces_mult = 0.25
+		planet_districts_cost_mult = -0.25
+		planet_buildings_cost_mult = -0.25
+		planet_building_build_speed_mult = 0.25
+		planet_stability_add = 20
+		planet_crime_add = -50
+		planet_army_build_speed_mult = 0.50
+		planet_colony_development_speed_mult = 0.50
+		pop_happiness = 0.30
+		all_technology_research_speed = 1.00
+		science_ship_survey_speed = 50.0
+		ship_anomaly_research_speed_mult = 5.0
+		starbase_upgrade_cost_mult = -0.50
+		terraform_speed_mult = 1.00
+		species_leader_exp_gain = 50.00
+		station_researchers_produces_mult = 10.00
+		num_tech_alternatives_add = 15
+	}
+
+	weight_modifier = {
+		factor = 0
+	}
+}
+
+
+tech_fallenb = {
+	cost = @guardiantechcost
+	area = physics
+	tier = @guardiantechtier
+	is_reverse_engineerable = no
+	category = { computing }
+	ai_update_type = all
+	weight = 0
+	is_rare = yes
+
+	modifier = {
+		pop_government_ethic_attraction = 10.00	
+		pop_ethics_shift_speed_mult = 10.00
+		job_enforcer_add = -3
+		job_clerk_add = -10
+		job_administrator_add = -3
+		job_colonist_add = -2
+		job_spawning_drone_add = -3
+		job_coordinator_add = -5
+		job_synapse_drone_add = -3
+		job_brain_drone_add = -3
+		job_calculator_add = -3
+		job_artisan_drone_add = -3
+		job_fabricator_add = -3
+		job_alloy_drone_add = -3
+		country_government_civic_points_add = -1
+		job_patrol_drone_add = -3
+		job_merchant_add = -10
+	}
+
+	weight_modifier = {
+		factor = 0
+	}
+}
+
+
+tech_awakening = {
+	cost = @guardiantechcost
+	area = physics
+	is_reverse_engineerable = no
+	tier = @guardiantechtier
+	category = { computing }
+	ai_update_type = all
+	weight = 0
+	is_rare = yes
+
+	modifier = {
+		
+		
+	}
+
+	weight_modifier = {
+		factor = 0
+	}
+}
+
+tech_ee_shipping = {
+	cost = @guardiantechcost
+	area = physics
+	is_reverse_engineerable = no
+	tier = @guardiantechtier
+	category = { computing }
+	ai_update_type = all
+	weight = 0
+	is_rare = yes
+
+	modifier = {
+		
+		
+	}
+
+	weight_modifier = {
+		factor = 0
+	}
+}
+

@@ -1,0 +1,56 @@
+namespace = utopia
+
+# New Leaders Get Erudite Trait
+country_event = {
+	id = utopia.2509
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		from = {
+			species = { 
+				has_trait = trait_erudite 
+				#NOR = {
+				#	has_trait = trait_cybernetic 
+				#	has_trait = trait_psionic 
+				#	has_trait = trait_latent_psionic				
+				#}
+			}
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = admiral }
+				add_trait = leader_trait_admiral_erudite
+				add_ruler_trait = leader_trait_ruler_erudite
+				break = yes
+			}
+			if = {
+				limit = { leader_class = general }
+				add_trait = leader_trait_general_erudite
+				add_ruler_trait = leader_trait_ruler_erudite
+				break = yes
+			}
+			if = {
+				limit = { leader_class = governor }
+				add_trait = leader_trait_governor_erudite
+				add_ruler_trait = leader_trait_ruler_erudite
+				break = yes
+			}
+			if = {
+				limit = { leader_class = scientist }
+				add_trait = leader_trait_scientist_erudite
+				add_ruler_trait = leader_trait_ruler_erudite
+				break = yes
+			}
+			if = {
+				limit = { leader_class = ruler }
+				add_trait = leader_trait_ruler_erudite
+				add_ruler_trait = leader_trait_ruler_erudite
+				break = yes
+			}
+		}
+	}
+}

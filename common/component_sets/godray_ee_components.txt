@@ -1,0 +1,52 @@
+component_set = {
+	key = "GODRAY_ARMOR_EE"
+	icon = "GFX_ship_part_godray_armor"
+	icon_frame = 1	
+}
+component_set = {
+	key = "GODRAY_PARTICLE_LANCE_EE"
+	icon = "GFX_ship_part_godray_lance"
+	icon_frame = 1	
+}
+component_set = {
+	key = "EE_PLANETKILLER_GAIA"
+	icon = "GFX_ship_part_planet_killer_ee_gaia"
+	icon_frame = 1	
+}
+component_set = {
+	key = "EE_PLANETKILLER_BARREN"
+	icon = "GFX_ship_part_planet_killer_ee_barren"
+	icon_frame = 1	
+}
+component_set = {
+	key = "GODRAY_LASER_EE"
+	icon = "GFX_ship_part_godray_laser"
+	icon_frame = 1	
+}
+component_set = {
+	key = "GODRAY_PD_EE"
+	icon = "GFX_ship_part_godray_pd"
+	icon_frame = 1	
+}
+component_set = {
+	key = "GODRAY_PERDITION_BEAM_EE"	
+	icon = "GFX_ship_part_godray_titan_beam"
+	icon_frame = 1	
+}
+component_set = {
+	key = "GODRAY_GUNSHIP_HANGAR_EE"	
+	icon = "GFX_ship_part_godray_gunship"
+	icon_frame = 1	
+}
+component_set = {
+	key = "GODRAY_SKY_BEAM_EE"
+	icon = "GFX_ship_part_godray_sky_beam"
+	icon_frame = 1	
+}
+
+
+	
+
+
+
+

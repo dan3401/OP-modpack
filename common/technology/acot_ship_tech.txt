@@ -1,0 +1,3807 @@
+# ##################
+# FE Ship Tech
+# ##################
+
+tech_energy_core = {
+	cost = @tier5cost3
+	area = physics
+	tier = 5
+	category = { particles }
+	ai_update_type = all
+	is_reverse_engineerable = yes
+	is_rare = yes
+	weight = 15
+	prerequisites = { "tech_dark_matter_power_core" }
+	
+	potential = {
+		NOT = { has_global_flag = acot_aux_forbidden }
+
+	}
+	
+	weight_modifier = {
+		factor = 0.5
+		modifier = {
+			factor = 0.1
+			NOR = {
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_expertise_particles"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_maniacal"
+				}
+			}		
+		}
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_discovery_adopt
+		}
+	}
+	
+	ai_weight = {
+		factor = 20
+	}
+}
+
+tech_kinetic_core = {
+	cost = @tier5cost3
+	area = engineering
+	tier = 5
+	category = { propulsion }
+	ai_update_type = all
+	is_reverse_engineerable = yes
+	is_rare = yes
+	weight = 15
+	prerequisites = { "tech_dark_matter_power_core" }
+	
+	potential = {
+		NOT = { has_global_flag = acot_aux_forbidden }
+ 
+	}
+	
+	weight_modifier = {
+		factor = 0.5
+		modifier = {
+			factor = 0.1
+			NOR = {
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_expertise_propulsion"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_maniacal"
+				}
+			}		
+		}
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_discovery_adopt
+		}
+	}
+	
+	ai_weight = {
+		factor = 20
+	}
+}
+
+tech_missile_core = {
+	cost = @tier5cost3
+	area = engineering
+	tier = 5
+	category = { propulsion }
+	ai_update_type = all
+	is_reverse_engineerable = yes
+	is_rare = yes
+	weight = 15
+	prerequisites = { "tech_dark_matter_power_core" }
+	
+	potential = {
+		NOT = { has_global_flag = acot_aux_forbidden }
+
+	}
+	
+	weight_modifier = {
+		factor = 0.5
+		modifier = {
+			factor = 0.1
+			NOR = {
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_expertise_propulsion"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_maniacal"
+				}
+			}		
+		}
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_discovery_adopt
+		}
+	}
+	
+	ai_weight = {
+		factor = 20
+	}
+}
+
+tech_fighter_core = {
+	cost = @tier5cost3
+	area = engineering
+	tier = 5
+	category = { propulsion }
+	ai_update_type = all
+	is_reverse_engineerable = yes
+	is_rare = yes
+	weight = 15
+	prerequisites = { "tech_dark_matter_power_core" }
+	
+	potential = {
+		NOT = { has_global_flag = acot_aux_forbidden }
+	}
+	
+	weight_modifier = {
+		factor = 0.5
+		modifier = {
+			factor = 0.1
+			NOR = {
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_expertise_propulsion"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_maniacal"
+				}
+			}		
+		}
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_discovery_adopt
+		}
+	}
+	
+	ai_weight = {
+		factor = 20
+	}
+}
+
+tech_enigmatic_drive = {
+	cost = @tier5cost3
+	area = physics
+	tier = 5
+	category = { particles }
+	ai_update_type = all
+	is_reverse_engineerable = yes
+	is_rare = yes
+	weight = 15
+	prerequisites = { "tech_jump_drive_1" "tech_dark_matter_power_core_ae" }
+	
+	prereqfor_desc = {
+		component = {
+			title = "TECH_UNLOCK_ENIG_DRIVE"
+			desc = "TECH_UNLOCK_ENIG_DRIVE_DESC"
+		}
+	}	
+
+	potential = {
+		NOT = { has_global_flag = acot_shipcom_forbidden }
+		NOT = {
+			is_country_type = fallen_empire 			
+		}
+	}
+	
+	weight_modifier = {
+		factor = 0.5
+		modifier = {
+			factor = 0.1
+			NOR = {
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_expertise_particles"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_maniacal"
+				}
+			}		
+		}
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_discovery_adopt
+		}
+	}
+	
+	ai_weight = {
+		factor = 20 #FTL techs are good
+	}
+}
+
+### Shroud Jump drives
+tech_shroud_jump_drive = {
+	cost = @tier5cost3
+	area = society
+	tier = 5
+	category = { psionics }
+	ai_update_type = all
+	is_rare = yes
+	prerequisites = { "tech_psi_jump_drive_1" "tech_dark_matter_power_core_ae" }
+	weight = 15
+	is_reverse_engineerable = no
+	
+	
+	modifier = { 
+		ship_landing_time_mult = -1.0
+	}	
+
+
+	
+	potential = {
+		NOT = { has_global_flag = acot_shipcom_forbidden }
+		NOR = { 
+			has_ethic = ethic_gestalt_consciousness 
+			is_country_type = fallen_empire
+		}
+	}
+	
+	prereqfor_desc = {
+		component = {
+			title = "TECH_UNLOCK_SHROUDDRIVE"
+			desc = "TECH_UNLOCK_SHROUDDRIVE_DESC"
+		}
+	}
+	
+	weight_modifier = {
+		factor = 0.5
+		modifier = {
+			factor = 10
+			NOR = {
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_expertise_psionics"
+				}
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_maniacal"
+				}
+			}
+		}		
+	}
+}
+
+########FE Sensors
+
+tech_sensor_fe = {
+	area = physics
+	cost = @tier5cost3
+	tier = 5
+	category = { computing }
+	ai_update_type = all	
+	prerequisites = { "tech_sensors_dm" "tech_dark_matter_power_core_ae" }
+	weight = @tier5weight3
+	is_rare = yes
+
+	potential = {
+		NOT = { has_global_flag = acot_shipcom_forbidden }
+		NOT = {
+			is_country_type = fallen_empire 			
+		}
+	}
+	
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_discovery_adopt
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 1.25 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+	}
+	
+	prereqfor_desc = {
+		component = {
+			title = "TECH_UNLOCK_FE_SENSOR_TITLE"
+			desc = "TECH_UNLOCK_FE_SENSOR_DESC"
+		}
+	}
+}
+
+tech_sensors_dm = {
+	area = physics
+	cost = @tier5cost1
+	tier = 5
+	category = { computing }
+	ai_update_type = all	
+	prerequisites = { "tech_sensors_4" "tech_dark_matter_power_core" }
+	weight = @tier5weight1
+	is_rare = yes
+	
+	potential = {
+		NOT = { has_global_flag = acot_shipcom_forbidden }
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_discovery_adopt
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 1.25 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+	}
+	
+	prereqfor_desc = {
+		component = {
+			title = "TECH_UNLOCK_FE_SENSOR_TITLE"
+			desc = "TECH_UNLOCK_FE_SENSOR_DESC"
+		}
+	}
+}
+
+########FE Super Thruster
+
+tech_fe_thruster_2 = {
+	area = engineering
+	category = { propulsion }
+	tier = 5
+	cost = @tier5cost2
+	weight = @tier5weight2
+	ai_update_type = all
+	is_rare = yes
+
+	potential = {
+		NOT = { has_global_flag = acot_shipcom_forbidden }
+		NOT = {
+			is_country_type = fallen_empire 			
+		}
+	}
+	
+	prerequisites = { "tech_dark_matter_propulsion" "tech_dark_matter_power_core_ae" }
+	
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		custom = {
+			title = "TECH_UNLOCK_FE_THRUSTER_TITLE"
+			desc = "TECH_UNLOCK_FE_THRUSTER_DESC"
+		}
+	}
+	
+	weight_modifier = {
+	}
+}
+
+# Dark Matter Deflectors AE
+tech_dark_matter_deflector_ae = {
+	area = physics
+	category = { field_manipulation }
+	tier = 5
+	cost = @tier5cost2
+	weight = @tier5weight2
+	ai_update_type = all
+	is_rare = yes
+
+	potential = {
+		NOT = { has_global_flag = acot_utilitys_forbidden }
+		NOT = {
+			is_country_type = fallen_empire 			
+		}
+	}
+
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		custom = {
+			title = "TECH_UNLOCK_AE_SHIELD_TITLE"
+			desc = "TECH_UNLOCK_AE_SHIELD_DESC"
+		}
+	}
+	
+	prerequisites = { "tech_dark_matter_deflector" "tech_dark_matter_power_core_ae" }
+	
+	weight_modifier = {	
+	}
+}
+
+# Dark Matter Power Cores AE
+tech_dark_matter_power_core_ae = {
+	area = physics
+	category = { particles }
+	tier = 5
+	cost = 35000
+	weight = 15
+	ai_update_type = all
+	is_rare = yes
+	is_dangerous = yes
+	
+	potential = {
+		NOT = { has_global_flag = acot_shipcom_forbidden }
+		NOT = {
+			is_country_type = fallen_empire 			
+		}
+	}
+
+	prerequisites = { "tech_dark_matter_power_core" "tech_armor_dm" "tech_sensors_dm" "tech_mine_dark_energy" }
+	
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		hide_prereq_for_desc = custom
+		custom = {
+			title = "TECH_UNLOCK_DARK_MATTER_POWER_AE_TITLE"
+			desc = "TECH_UNLOCK_DARK_MATTER_POWER_AE_DESC"
+		}
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+				has_country_flag = ae_dark_power_delay
+		}
+		modifier = {
+			factor = 0.15
+				is_ai = no
+				NOT = {
+					has_technology = tech_dark_matter_deflector
+				}
+		}
+		modifier = {
+			factor = 0.25
+			NOT = {
+				is_country_type = default				
+			}
+		}
+		modifier = {
+			factor = 0.25
+				NOR = {
+					research_leader = {
+						area = physics
+						has_trait = "leader_trait_curator"
+						has_level >= 6
+					}
+					research_leader = {
+						area = physics
+						has_trait = "leader_trait_spark_of_genius"
+						has_level >= 6
+					}	
+					research_leader = {
+						area = physics
+						has_trait = "leader_trait_scientist_erudite"
+						has_level >= 6
+					}		
+					research_leader = {
+						area = physics
+						has_trait = "leader_trait_scientist_chosen"
+						has_level >= 6
+					}		
+					research_leader = {
+						area = physics
+						has_trait = "leader_trait_maniacal"
+						has_level >= 6
+					}		
+					research_leader = {
+						area = physics
+						has_trait = "leader_trait_scientist_brainslug"
+						has_level >= 6
+					}
+					research_leader = {
+						area = physics
+						has_trait = "leader_trait_sapient_AI_assistant"
+						has_level >= 6
+					}
+					research_leader = {
+						area = physics
+						has_trait = "leader_trait_scientist_psionic"
+						has_level >= 6
+					}		
+					research_leader = {
+						area = physics
+						has_trait = "leader_trait_scientist_synthetic"
+						has_level >= 6
+						}		
+					research_leader = {
+						area = physics
+						has_trait = "leader_trait_expertise_particles"
+						has_level >= 6
+					}					
+				}			
+			}
+	}
+}
+
+# Dark Matter Armor DM
+tech_armor_dm = {
+	area = engineering
+	category = { materials }
+	tier = 5
+	cost = @tier5cost2
+	weight = @tier5weight2
+	ai_update_type = all
+	is_rare = yes
+	
+	prerequisites = { "tech_dark_matter_power_core" }
+	
+	potential = {
+		NOT = { has_global_flag = acot_utilitys_forbidden }
+	}
+	
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		custom = {
+			title = "TECH_UNLOCK_DARK_MATTER_ARMOR_TITLE"
+			desc = "TECH_UNLOCK_DARK_MATTER_ARMOR_DESC"
+		}
+	}
+	
+	weight_modifier = {
+	}
+}
+
+# Dark Matter Armor AE
+tech_armor_ae = {
+	area = engineering
+	category = { materials }
+	tier = 5
+	cost = @tier5cost2
+	weight = @tier5weight2
+	ai_update_type = all
+	is_rare = yes
+	
+	potential = {
+		NOT = { has_global_flag = acot_utilitys_forbidden }
+		NOT = {
+			is_country_type = fallen_empire 			
+		}
+	}
+
+	prerequisites = { "tech_dark_matter_power_core_ae" "tech_armor_dm" }
+	
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		custom = {
+			title = "TECH_UNLOCK_DARK_MATTER_ARMOR_AE_TITLE"
+			desc = "TECH_UNLOCK_DARK_MATTER_ARMOR_AE_DESC"
+		}
+	}
+	
+	weight_modifier = {
+	}
+}
+
+###### AUX
+
+# Dark Matter Afterburner
+tech_darkmatter_afterburners = {
+	area = engineering
+	category = { propulsion }
+	tier = 5
+	cost = @tier5cost2
+	weight = @tier5weight2
+	ai_update_type = all
+	is_rare = yes
+
+	potential = {
+		NOT = { has_global_flag = acot_shipcom_forbidden }
+		NOT = {
+			is_country_type = fallen_empire 			
+		}
+	}
+	
+	prerequisites = { "tech_fe_thruster_2" "tech_afterburners_2" }
+	
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		custom = {
+			title = "TECH_UNLOCK_FE_THRUSTER_TITLE"
+			desc = "TECH_UNLOCK_FE_THRUSTER_DESC"
+		}
+	}
+	
+	weight_modifier = {
+	}
+}
+
+####Star Charter
+tech_darkmatter_star_charter = {
+	area = physics
+	cost = @tier5cost1
+	tier = 5
+	category = { computing }
+	ai_update_type = all	
+	prerequisites = { "tech_sensor_fe" }
+	weight = @tier5weight1
+	is_rare = yes
+
+	potential = {
+		NOT = { has_global_flag = acot_shipcom_forbidden }
+		NOT = {
+			is_country_type = fallen_empire 			
+		}
+	}
+	
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_discovery_adopt
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 1.25 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+	}
+}
+
+# Dark Matter Suprashielder
+tech_darkmatter_shield_supercharger = {
+	area = physics
+	category = { field_manipulation }
+	tier = 5
+	cost = @tier5cost2
+	weight = @tier5weight2
+	ai_update_type = all
+	is_rare = yes
+
+	potential = {
+		NOT = { has_global_flag = acot_utilitys_forbidden }
+		NOT = {
+			is_country_type = fallen_empire 			
+		}
+	}
+	
+	prerequisites = { "tech_dark_matter_deflector_ae" }
+	
+	weight_modifier = {	
+	}
+}
+
+# Dark Matter Reacotr Booster
+tech_darkmatter_reactor_booster = {
+	area = physics
+	category = { particles }
+	tier = 5
+	cost = @tier5cost2
+	weight = @tier5weight2
+	ai_update_type = all
+	is_rare = yes
+	
+	potential = {
+		NOT = { has_global_flag = acot_shipcom_forbidden }
+		NOT = {
+			is_country_type = fallen_empire 			
+		}
+	}
+
+	prerequisites = { "tech_dark_matter_power_core_ae" }
+
+	
+	weight_modifier = {
+	}
+}
+
+# Dark Matter Drone
+tech_darkmatter_reactive_drone = {
+	area = engineering
+	category = { materials }
+	tier = 5
+	cost = @tier5cost2
+	weight = @tier5weight2
+	ai_update_type = all
+	is_rare = yes
+	
+	potential = {
+		NOT = { has_global_flag = acot_utilitys_forbidden }
+		NOT = {
+			is_country_type = fallen_empire 			
+		}
+	}
+
+	prerequisites = { "tech_armor_ae" }
+
+	
+	weight_modifier = {
+	}
+}
+
+tech_darkmatter_hyper_jump_drive = {
+	cost = @tier5cost3
+	area = physics
+	tier = 5
+	category = { particles }
+	ai_update_type = all
+	is_reverse_engineerable = yes
+	is_rare = yes
+	weight = 15
+	prerequisites = { "tech_enigmatic_drive" }
+	
+	prereqfor_desc = {
+		component = {
+			title = "TECH_UNLOCK_ENIG_DRIVE"
+			desc = "TECH_UNLOCK_ENIG_DRIVE_DESC"
+		}
+	}	
+
+	potential = {
+		NOT = { has_global_flag = acot_shipcom_forbidden }
+		NOT = {
+			is_country_type = fallen_empire 			
+		}
+	}
+	
+	weight_modifier = {
+		factor = 0.5
+		modifier = {
+			factor = 0.1
+			NOR = {
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_expertise_particles"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_maniacal"
+				}
+			}		
+		}
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_discovery_adopt
+		}
+	}
+	
+	ai_weight = {
+		factor = 20 #FTL techs are good
+	}
+}
+
+#Drainer
+tech_darkmatter_aura_energy_drainer = {
+	area = physics
+	cost = @tier5cost3
+	tier = 5
+	category = { computing }
+	ai_update_type = all	
+	prerequisites = { "tech_dark_matter_power_core_ae" }
+	weight = @tier5weight3
+	is_rare = yes
+
+	potential = {
+		NOT = { has_global_flag = acot_shipcom_forbidden }
+		NOT = {
+			is_country_type = fallen_empire 			
+		}
+	}
+	
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_discovery_adopt
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 1.25 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+	}
+}
+
+#bionic interface
+tech_bionic_interface = {
+	area = physics
+	cost = @tier5cost3
+	tier = 5
+	category = { computing }
+	ai_update_type = all	
+	prerequisites = { "tech_dark_matter_power_core_ae" }
+	weight = @tier5weight3
+	is_rare = yes
+
+	potential = {
+		NOT = { has_global_flag = acot_shipcom_forbidden }
+	}
+	
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_discovery_adopt
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 1.25 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+	}
+	
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		custom = {
+			title = "TECH_UNLOCK_BIONIC_COMPUTER_TITLE"
+			desc = "TECH_UNLOCK_BIONIC_COMPUTER_DESC"
+		}
+	}
+}
+
+
+########################### SR Tech
+
+#Dark Energy Eating
+tech_mine_dark_energy = {
+	cost = @tier5cost1
+	area = physics
+	tier = 3
+	category = { field_manipulation }
+	prerequisites = { "tech_dark_matter_power_core" }
+	weight = @tier4weight1
+		
+	## unlocks Dark Energy
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.5
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 5 #strategic resource
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+tech_precursor_design = {
+	area = engineering
+	cost = 125000
+	tier = 5
+	is_rare = yes
+	category = { voidcraft }
+	ai_update_type = military
+	weight = 0
+	
+	potential = {
+	NOT = { has_country_flag = twinks_fallen } 	
+	}
+	
+
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		hide_prereq_for_desc = custom
+		custom = {
+			title = "TECH_UNLOCK_FE_SHIP_TITLE"
+			desc = "TECH_UNLOCK_FE_SHIP_DESC"
+		}
+	}
+	
+	ai_weight = {
+		factor = 5		#weapons are good
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_precursor_escort = {
+	area = engineering
+	cost = 50000
+	tier = 5
+	is_rare = yes
+	category = { voidcraft }
+	ai_update_type = military
+	weight = 0
+	icon = tech_precursor_escort_delta
+
+	potential = {
+		NOT = {
+			is_country_type = fallen_empire		
+		}
+		NOT = { has_country_flag = twinks_fallen } 	
+	}
+	
+
+	prerequisites = {
+		tech_precursor_design
+	}
+	
+	ai_weight = {
+		factor = 5		#weapons are good
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_precursor_bc = {
+	area = engineering
+	cost = 50000
+	tier = 5
+	is_rare = yes
+	category = { voidcraft }
+	ai_update_type = military
+	weight = 0
+	icon = tech_precursor_bc_delta
+
+	potential = {
+		NOT = {
+			is_country_type = fallen_empire		
+		}
+		NOT = { has_country_flag = twinks_fallen } 	
+	}
+
+	prerequisites = {
+		tech_precursor_design
+	}
+	
+	ai_weight = {
+		factor = 5		#weapons are good
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_fe_assault_carrier = {
+	area = engineering
+	cost = 40000
+	tier = 5
+	is_rare = yes
+	category = { voidcraft }
+	ai_update_type = military
+	weight = 0
+
+	potential = {
+		NOT = {
+			is_country_type = fallen_empire		
+		}
+		NOT = { has_country_flag = twinks_fallen } 	
+	}
+	
+	prerequisites = {
+		tech_precursor_design
+	}
+
+	ai_weight = {
+		factor = 5		#weapons are good
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_precursor_titan = {
+	area = engineering
+	cost = 50000
+	tier = 5
+	is_rare = yes
+	category = { voidcraft }
+	ai_update_type = military
+	weight = 0
+	
+	weight_modifier = {
+		factor = 0
+	}
+	
+	potential = {
+		NOT = {
+			is_country_type = fallen_empire		
+		}
+		NOT = { has_country_flag = twinks_fallen } 	
+	}
+
+	prerequisites = {
+		tech_precursor_design
+	}
+
+	ai_weight = {
+		factor = 5		#weapons are good
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_gatekeepers = {
+	area = engineering
+	cost = 50000
+	tier = 5
+	is_rare = yes
+	category = { voidcraft }
+	ai_update_type = military
+	weight = 0
+	
+	weight_modifier = {
+		factor = 0
+	}
+	
+	potential = {
+		NOT = {
+			is_country_type = fallen_empire		
+		}
+		NOT = { has_country_flag = twinks_fallen } 	
+	}
+
+	prerequisites = {
+		tech_precursor_design
+	}
+
+	ai_weight = {
+		factor = 5		#weapons are good
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_fe_tower_offense = {
+	area = engineering
+	cost = 40000
+	tier = 5
+	is_rare = yes
+	category = { voidcraft }
+	ai_update_type = military
+	weight = 0
+	
+	weight_modifier = {
+		factor = 0
+	}
+	
+	potential = {
+		NOT = {
+			is_country_type = fallen_empire		
+		}
+		NOT = { has_country_flag = twinks_fallen } 	
+	}
+
+	ai_weight = {
+		factor = 5		#weapons are good
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_precursor_guardian = {
+	area = engineering
+	cost = 40000
+	tier = 5
+	is_rare = yes
+	category = { voidcraft }
+	ai_update_type = military
+	weight = 0
+	
+	weight_modifier = {
+		factor = 0
+	}
+	
+	potential = {
+		NOT = {
+			is_country_type = fallen_empire		
+		}
+		NOT = { has_country_flag = twinks_fallen } 	
+	}
+
+	ai_weight = {
+		factor = 5		#weapons are good
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_precursor_colossus = {
+	area = engineering
+	cost = 40000
+	tier = 5
+	is_rare = yes
+	category = { voidcraft }
+	ai_update_type = military
+	weight = 0
+	
+	weight_modifier = {
+		factor = 0
+	}
+	
+	potential = {
+		NOT = {
+			is_country_type = fallen_empire		
+		}
+		NOT = { has_country_flag = twinks_fallen } 	
+	}
+
+	ai_weight = {
+		factor = 5		#weapons are good
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+###DELTA####
+
+tech_precursor_escort_delta = {
+	area = engineering
+	cost = 125000
+	tier = 5
+	is_rare = yes
+	category = { voidcraft }
+	ai_update_type = military
+	weight = 10
+
+	potential = {
+		NOT = {
+			is_country_type = fallen_empire		
+		}
+	}
+	
+	modifier = {
+		shipsize_precursor_escort_hull_add = 750
+	}
+
+	prerequisites = {
+		tech_precursor_escort
+	}
+
+
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_DELTA_ESCORT_TITLE"
+			desc = "TECH_UNLOCK_DELTA_ESCORT_DESC"
+		}
+	}
+	
+	ai_weight = {
+		factor = 5		#weapons are good
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_precursor_bc_delta = {
+	area = engineering
+	cost = 125000
+	tier = 5
+	is_rare = yes
+	category = { voidcraft }
+	ai_update_type = military
+	weight = 10
+
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_DELTA_BC_TITLE"
+			desc = "TECH_UNLOCK_DELTA_BC_DESC"
+		}
+	}
+
+	potential = {
+		NOT = {
+			is_country_type = fallen_empire		
+		}
+	}
+
+	modifier = {
+		shipsize_precursor_battlecruiser_hull_add = 1250
+	}
+
+
+	prerequisites = {
+		tech_precursor_bc
+	}
+	
+	ai_weight = {
+		factor = 5		#weapons are good
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+### ALPHA ####
+
+tech_precursor_guardian_alpha = {
+	area = engineering
+	cost = 125000
+	tier = 5
+	is_rare = yes
+	category = { voidcraft }
+	ai_update_type = military
+	weight = 10
+
+	potential = {
+		NOT = {
+			is_country_type = fallen_empire		
+		}
+	}
+	
+	modifier = {
+		shipsize_precursor_guardian_hull_add = 2500
+	}
+
+	prerequisites = {
+		tech_precursor_guardian
+	}
+
+
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_ALPHA_GUARDIAN_TITLE"
+			desc = "TECH_UNLOCK_ALPHA_GUARDIAN_DESC"
+		}
+	}
+	
+	ai_weight = {
+		factor = 5		#weapons are good
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_precursor_escort_alpha = {
+	area = engineering
+	cost = 200000
+	tier = 5
+	is_rare = yes
+	category = { voidcraft }
+	ai_update_type = military
+	weight = 10
+
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_ALPHA_ESCORT_TITLE"
+			desc = "TECH_UNLOCK_ALPHA_ESCORT_DESC"
+		}
+	}
+
+	potential = {
+		NOT = {
+			is_country_type = fallen_empire		
+		}
+	}
+	
+	modifier = {
+		shipsize_precursor_escort_hull_add = 750
+	}
+
+	prerequisites = {
+		tech_precursor_escort
+		tech_precursor_escort_delta
+		tech_dark_matter_power_core_ae
+		tech_fe_thruster_2
+	}
+
+	
+	ai_weight = {
+		factor = 5		#weapons are good
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_precursor_bc_alpha = {
+	area = engineering
+	cost = 200000
+	tier = 5
+	is_rare = yes
+	category = { voidcraft }
+	ai_update_type = military
+	weight = 10
+
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_ALPHA_BC_TITLE"
+			desc = "TECH_UNLOCK_ALPHA_BC_DESC"
+		}
+	}
+
+	potential = {
+		NOT = {
+			is_country_type = fallen_empire		
+		}
+	}
+
+	modifier = {
+		shipsize_precursor_battlecruiser_hull_add = 1250
+	}
+
+
+	prerequisites = {
+		tech_precursor_bc
+		tech_precursor_bc_delta
+		tech_dark_matter_power_core_ae
+		tech_fe_thruster_2
+	}
+	
+	ai_weight = {
+		factor = 5		#weapons are good
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_fe_assault_carrier_alpha = {
+	area = engineering
+	cost = 200000
+	tier = 5
+	is_rare = yes
+	category = { voidcraft }
+	ai_update_type = military
+	weight = 10
+
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_ALPHA_AC_TITLE"
+			desc = "TECH_UNLOCK_ALPHA_AC_DESC"
+		}
+	}
+
+	potential = {
+		NOT = {
+			is_country_type = fallen_empire		
+		}
+	}
+	
+
+	modifier = {
+		shipsize_fe_assault_carrier_hull_add = 3000
+	}
+
+	prerequisites = {
+		tech_fe_assault_carrier
+		tech_dark_matter_power_core_ae
+		tech_fe_thruster_2
+	}
+	
+	ai_weight = {
+		factor = 5		#weapons are good
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_precursor_titan_alpha = {
+	area = engineering
+	cost = 200000
+	tier = 5
+	is_rare = yes
+	category = { voidcraft }
+	ai_update_type = military
+	weight = 10
+
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_ALPHA_TITAN_TITLE"
+			desc = "TECH_UNLOCK_ALPHA_TITAN_DESC"
+		}
+	}
+
+	potential = {
+		NOT = {
+			is_country_type = fallen_empire		
+		}
+	}
+	
+
+	modifier = {
+		shipsize_precursor_titan_hull_add = 5000
+	}
+
+	prerequisites = {
+		tech_precursor_titan
+		tech_dark_matter_power_core_ae
+		tech_fe_thruster_2
+	}
+	
+	ai_weight = {
+		factor = 5		#weapons are good
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_gatekeepers_alpha = {
+	area = engineering
+	cost = 200000
+	tier = 5
+	is_rare = yes
+	category = { voidcraft }
+	ai_update_type = military
+	weight = 10
+
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_ALPHA_AC_TITLE"
+			desc = "TECH_UNLOCK_ALPHA_AC_DESC"
+		}
+	}
+
+	potential = {
+		NOT = {
+			is_country_type = fallen_empire		
+		}
+	}
+
+	modifier = {
+		shipsize_sofe_gatekeeper_warden_hull_add = 10000
+	}
+
+	prerequisites = {
+		tech_gatekeepers
+		tech_dark_matter_power_core_ae
+		tech_fe_thruster_2
+	}
+	
+	ai_weight = {
+		factor = 5		#weapons are good
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_fe_tower_offense_alpha = {
+	area = engineering
+	cost = 200000
+	tier = 5
+	is_rare = yes
+	category = { voidcraft }
+	ai_update_type = military
+	weight = 10
+
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_ALPHA_SENTINEL_TITLE"
+			desc = "TECH_UNLOCK_ALPHA_SENTINEL_DESC"
+		}
+	}
+
+	potential = {
+		NOT = {
+			is_country_type = fallen_empire		
+		}
+	}
+	
+	modifier = {
+		shipsize_sentinel_sphere_hull_add = 10000
+	}
+
+
+	prerequisites = {
+		tech_fe_tower_offense
+		tech_dark_matter_power_core_ae
+		tech_fe_thruster_2
+	}
+	
+	ai_weight = {
+		factor = 5		#weapons are good
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_precursor_colossus_ae = {
+	area = engineering
+	cost = 200000
+	tier = 5
+	is_rare = yes
+	category = { voidcraft }
+	ai_update_type = military
+	weight = 10
+
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_ALPHA_COLOSSUS_TITLE"
+			desc = "TECH_UNLOCK_ALPHA_COLOSSUS_DESC"
+		}
+	}
+
+	potential = {
+		NOT = {
+			is_country_type = fallen_empire		
+		}
+	}
+	
+	modifier = {
+		shipsize_precursor_colossus_hull_add = 100000
+	}
+
+
+	prerequisites = {
+		tech_precursor_colossus
+		tech_dark_matter_power_core_ae
+		tech_fe_thruster_2
+	}
+	
+	ai_weight = {
+		factor = 5		#weapons are good
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+#####COST UPKEEP #####
+
+tech_precursor_guardian_cost = {
+	area = engineering
+	cost = 200000
+	tier = 5
+	is_rare = yes
+	category = { voidcraft }
+	ai_update_type = military
+	weight = 0
+	icon = tech_precursor_guardian_alpha
+	
+	potential = {
+		NOT = {
+			is_country_type = fallen_empire		
+		}
+	}
+
+	modifier = {
+		shipsize_precursor_guardian_hull_add = 2500
+		shipsize_precursor_guardian_build_speed_mult = 0.25	
+	}
+
+	prerequisites = {
+		tech_precursor_guardian
+	}
+
+	weight_modifier = {
+		factor = 0
+	}
+	
+	ai_weight = {
+		factor = 5		#weapons are good
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_precursor_escort_cost = {
+	area = engineering
+	cost = 200000
+	tier = 5
+	is_rare = yes
+	category = { voidcraft }
+	ai_update_type = military
+	weight = 0
+	icon = tech_precursor_escort_alpha
+	
+	potential = {
+		NOT = {
+			is_country_type = fallen_empire		
+		}
+	}
+
+	modifier = {
+		shipsize_precursor_escort_build_speed_mult = 0.25
+		shipsize_precursor_escort_hull_add = 750
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+	
+	ai_weight = {
+		factor = 5		#weapons are good
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_precursor_bc_cost = {
+	area = engineering
+	cost = 200000
+	tier = 5
+	is_rare = yes
+	category = { voidcraft }
+	ai_update_type = military
+	weight = 0
+	icon = tech_precursor_bc_alpha
+
+	potential = {
+		NOT = {
+			is_country_type = fallen_empire		
+		}
+	}
+
+	modifier = {
+		shipsize_precursor_battlecruiser_build_speed_mult = 0.25
+		shipsize_precursor_battlecruiser_hull_add = 1250
+	}
+
+	
+	weight_modifier = {
+		factor = 0
+	}
+
+	prerequisites = {
+		tech_precursor_bc
+	}
+	
+	ai_weight = {
+		factor = 5		#weapons are good
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_fe_assault_carrier_cost = {
+	area = engineering
+	cost = 200000
+	tier = 5
+	is_rare = yes
+	category = { voidcraft }
+	ai_update_type = military
+	weight = 0
+	icon = tech_fe_assault_carrier_alpha
+
+	potential = {
+		NOT = {
+			is_country_type = fallen_empire		
+		}
+		NOT = { has_country_flag = twinks_fallen } 	
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+
+	modifier = {
+		shipsize_fe_assault_carrier_build_speed_mult = 0.25
+		shipsize_fe_assault_carrier_hull_add = 3000
+	}
+
+	prerequisites = {
+		tech_fe_assault_carrier
+	}
+	
+	ai_weight = {
+		factor = 5		#weapons are good
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_precursor_titan_cost = {
+	area = engineering
+	cost = 200000
+	tier = 5
+	is_rare = yes
+	category = { voidcraft }
+	ai_update_type = military
+	weight = 0
+
+	icon = tech_precursor_titan_alpha
+
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_ALPHA_TITAN_TITLE"
+			desc = "TECH_UNLOCK_ALPHA_TITAN_DESC"
+		}
+	}
+
+	potential = {
+		NOT = {
+			is_country_type = fallen_empire		
+		}
+		NOT = { has_country_flag = twinks_fallen } 	
+	}
+	
+
+	modifier = {
+		shipsize_precursor_titan_build_speed_mult = 0.25
+		shipsize_precursor_titan_hull_add = 5000
+	}
+
+	prerequisites = {
+		tech_precursor_titan
+	}
+	
+	ai_weight = {
+		factor = 5		#weapons are good
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_fe_tower_offense_cost = {
+	area = engineering
+	cost = 200000
+	tier = 5
+	is_rare = yes
+	category = { voidcraft }
+	ai_update_type = military
+	weight = 0
+	icon = tech_fe_tower_offense_alpha
+
+	potential = {
+		NOT = {
+			is_country_type = fallen_empire		
+		}
+		NOT = { has_country_flag = twinks_fallen } 	
+	}
+	
+	modifier = {
+		shipsize_sentinel_sphere_build_speed_mult = 0.25
+		shipsize_sentinel_sphere_hull_add = 10000
+	}
+
+	weight_modifier = {
+		factor = 0
+	}
+
+	prerequisites = {
+		tech_fe_tower_offense
+	}
+	
+	ai_weight = {
+		factor = 5		#weapons are good
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_gatekeepers_cost = {
+	area = engineering
+	cost = 200000
+	tier = 5
+	is_rare = yes
+	category = { voidcraft }
+	ai_update_type = military
+	weight = 0
+
+	icon = tech_gatekeepers_alpha
+
+	prereqfor_desc = {
+		ship = {
+			title = "TECH_UNLOCK_ALPHA_GATEKEEPER_TITLE"
+			desc = "TECH_UNLOCK_ALPHA_GATEKEEPER_DESC"
+		}
+	}
+
+	potential = {
+		NOT = {
+			is_country_type = fallen_empire		
+		}
+		NOT = { has_country_flag = twinks_fallen } 	
+	}
+	
+
+	modifier = {
+		shipsize_sofe_gatekeeper_warden_build_speed_mult = 0.25
+		shipsize_sofe_gatekeeper_warden_hull_add = 10000
+	}
+
+	prerequisites = {
+		tech_gatekeepers
+	}
+	
+	ai_weight = {
+		factor = 5		#weapons are good
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+#####SIGMA####
+
+tech_precursor_guardian_sigma = {
+	area = engineering
+	cost = 200000
+	tier = 5
+	is_rare = yes
+	category = { voidcraft }
+	ai_update_type = military
+	weight = 5
+
+	potential = {
+		NOT = {
+			is_country_type = fallen_empire
+				
+		}
+		NOT = { has_country_flag = twinks_fallen } 	
+	}
+	
+	modifier = {
+		shipsize_precursor_guardian_hull_add = 2500
+		shipsize_precursor_guardian_build_speed_mult = 0.25	
+	}
+
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_SIGMA_GUARDIAN_TITLE"
+			desc = "TECH_UNLOCK_SIGMA_GUARDIAN_DESC"
+		}
+	}
+
+	prerequisites = {
+		tech_precursor_guardian
+		tech_precursor_guardian_alpha
+		tech_stellarite_reactor
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0		
+			NOT = {
+				has_country_flag = stellarite_section_learned
+			}	
+		}	
+	}
+
+	
+	ai_weight = {
+		factor = 5		#weapons are good
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_precursor_escort_sigma = {
+	area = engineering
+	cost = 200000
+	tier = 5
+	is_rare = yes
+	category = { voidcraft }
+	ai_update_type = military
+	weight = 5
+
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_SIGMA_ESCORT_TITLE"
+			desc = "TECH_UNLOCK_SIGMA_ESCORT_DESC"
+		}
+	}
+
+	potential = {
+		NOT = {
+			is_country_type = fallen_empire		
+		}
+	}
+	
+	modifier = {
+		shipsize_precursor_escort_hull_add = 750
+	}
+
+	prerequisites = {
+		tech_precursor_escort
+		tech_precursor_escort_alpha
+		tech_stellarite_reactor
+		tech_stellarite_thruster
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0		
+			NOT = {
+				has_country_flag = stellarite_section_learned
+			}	
+		}	
+	}
+	
+	ai_weight = {
+		factor = 5		#weapons are good
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_precursor_bc_sigma = {
+	area = engineering
+	cost = 200000
+	tier = 5
+	is_rare = yes
+	category = { voidcraft }
+	ai_update_type = military
+	weight = 5
+
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_SIGMA_BC_TITLE"
+			desc = "TECH_UNLOCK_SIGMA_BC_DESC"
+		}
+	}
+
+	potential = {
+		NOT = {
+			is_country_type = fallen_empire		
+		}
+	}
+
+	modifier = {
+		shipsize_precursor_battlecruiser_hull_add = 1250
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0		
+			NOT = {
+				has_country_flag = stellarite_section_learned
+			}	
+		}	
+	}
+
+	prerequisites = {
+		tech_precursor_bc
+		tech_precursor_bc_alpha
+		tech_stellarite_reactor
+		tech_stellarite_thruster
+	}
+	
+	ai_weight = {
+		factor = 5		#weapons are good
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_fe_assault_carrier_sigma = {
+	area = engineering
+	cost = 200000
+	tier = 5
+	is_rare = yes
+	category = { voidcraft }
+	ai_update_type = military
+	weight = 5
+
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_SIGMA_AC_TITLE"
+			desc = "TECH_UNLOCK_SIGMA_AC_DESC"
+		}
+	}
+
+	potential = {
+		NOT = {
+			is_country_type = fallen_empire		
+		}
+	}
+	
+
+	modifier = {
+		shipsize_fe_assault_carrier_hull_add = 3000
+	}
+
+	prerequisites = {
+		tech_fe_assault_carrier_alpha
+		tech_stellarite_reactor
+		tech_stellarite_thruster
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0		
+			NOT = {
+				has_country_flag = stellarite_section_learned
+			}	
+		}	
+	}
+	
+	ai_weight = {
+		factor = 5		#weapons are good
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_precursor_titan_sigma = {
+	area = engineering
+	cost = 200000
+	tier = 5
+	is_rare = yes
+	category = { voidcraft }
+	ai_update_type = military
+	weight = 5
+
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_SIGMA_TITAN_TITLE"
+			desc = "TECH_UNLOCK_SIGMA_TITAN_DESC"
+		}
+	}
+
+	potential = {
+		NOT = {
+			is_country_type = fallen_empire		
+		}
+	}
+	
+
+	modifier = {
+		shipsize_precursor_titan_hull_add = 5000
+	}
+
+	prerequisites = {
+		tech_precursor_titan_alpha
+		tech_stellarite_reactor
+		tech_stellarite_thruster
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0		
+			NOT = {
+				has_country_flag = stellarite_section_learned
+			}	
+		}	
+	}
+
+	ai_weight = {
+		factor = 5		#weapons are good
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_fe_tower_offense_sigma = {
+	area = engineering
+	cost = 200000
+	tier = 5
+	is_rare = yes
+	category = { voidcraft }
+	ai_update_type = military
+	weight = 5
+
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_SIGMA_SENTINEL_TITLE"
+			desc = "TECH_UNLOCK_SIGMA_SENTINEL_DESC"
+		}
+	}
+
+	potential = {
+		NOT = {
+			is_country_type = fallen_empire		
+		}
+	}
+	
+	modifier = {
+		shipsize_sentinel_sphere_hull_add = 10000
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0		
+			NOT = {
+				has_country_flag = stellarite_section_learned
+			}	
+		}	
+	}
+
+	prerequisites = {
+		tech_fe_tower_offense_alpha
+		tech_stellarite_reactor
+		tech_stellarite_thruster
+	}
+	
+	ai_weight = {
+		factor = 5		#weapons are good
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_gatekeepers_sigma = {
+	area = engineering
+	cost = 200000
+	tier = 5
+	is_rare = yes
+	category = { voidcraft }
+	ai_update_type = military
+	weight = 10
+
+	prereqfor_desc = {
+		ship = {
+			title = "TECH_UNLOCK_SIGMA_GATEKEEPER_TITLE"
+			desc = "TECH_UNLOCK_SIGMA_GATEKEEPER_DESC"
+		}
+	}
+
+	potential = {
+		NOT = {
+			is_country_type = fallen_empire		
+		}
+	}
+	
+
+	modifier = {
+		shipsize_sofe_gatekeeper_warden_hull_add = 10000
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0		
+			NOT = {
+				has_country_flag = stellarite_section_learned
+			}	
+		}	
+	}
+
+	prerequisites = {
+		tech_gatekeepers
+		tech_gatekeepers_alpha
+		tech_stellarite_reactor
+		tech_stellarite_thruster
+	}
+	
+	ai_weight = {
+		factor = 5		#weapons are good
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_precursor_colossus_se = {
+	area = engineering
+	cost = 200000
+	tier = 5
+	is_rare = yes
+	category = { voidcraft }
+	ai_update_type = military
+	weight = 10
+
+	prereqfor_desc = {
+		ship = {
+			title = "TECH_UNLOCK_SIGMA_COLOSSUS_TITLE"
+			desc = "TECH_UNLOCK_SIGMA_COLOSSUS_DESC"
+		}
+	}
+
+	potential = {
+		NOT = {
+			is_country_type = fallen_empire		
+		}
+	}
+	
+
+	modifier = {
+		shipsize_precursor_colossus_hull_add = 100000
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0		
+			NOT = {
+				has_country_flag = stellarite_section_learned
+			}	
+		}	
+	}
+
+	prerequisites = {
+		tech_precursor_colossus
+		tech_precursor_colossus_ae
+		tech_stellarite_reactor
+		tech_stellarite_thruster
+	}
+	
+	ai_weight = {
+		factor = 5		#weapons are good
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+####OMEGA####
+
+tech_omega_guardian = {
+	area = engineering
+	cost = 400000
+	tier = 5
+	is_rare = yes
+	category = { voidcraft }
+	ai_update_type = military
+	weight = 0
+
+	potential = {
+		NOT = {
+			is_country_type = fallen_empire		
+		}
+	}
+	
+	modifier = {
+		shipsize_precursor_guardian_hull_add = 2500
+		shipsize_precursor_guardian_build_speed_mult = 0.25	
+	}
+
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_OMEGA_GUARDIAN_TITLE"
+			desc = "TECH_UNLOCK_OMEGA_GUARDIAN_DESC"
+		}
+	}
+
+	prerequisites = {
+		tech_precursor_guardian
+		tech_lightmatter_reactor
+	}
+
+	weight_modifier = {
+		factor = 0
+	}
+	
+	ai_weight = {
+		factor = 5		#weapons are good
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_omega_escort = {
+	area = engineering
+	cost = 400000
+	tier = 5
+	is_rare = yes
+	category = { voidcraft }
+	ai_update_type = military
+	weight = 0
+
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_OMEGA_ESCORT_TITLE"
+			desc = "TECH_UNLOCK_OMEGA_ESCORT_DESC"
+		}
+	}
+
+	potential = {
+		NOT = {
+			is_country_type = fallen_empire		
+		}
+	}
+	
+	modifier = {
+		shipsize_precursor_escort_hull_add = 750
+	}
+
+	prerequisites = {
+		tech_precursor_escort
+		tech_lightmatter_reactor
+	}
+
+	
+	ai_weight = {
+		factor = 5		#weapons are good
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_omega_battlecruiser = {
+	area = engineering
+	cost = 400000
+	tier = 5
+	is_rare = yes
+	category = { voidcraft }
+	ai_update_type = military
+	weight = 0
+
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_OMEGA_BATTLECRUISER_TITLE"
+			desc = "TECH_UNLOCK_OMEGA_BATTLECRUISER_DESC"
+		}
+	}
+
+	potential = {
+		NOT = {
+			is_country_type = fallen_empire		
+		}
+	}
+
+	modifier = {
+		shipsize_precursor_battlecruiser_hull_add = 1250
+	}
+
+
+	prerequisites = {
+		tech_precursor_bc
+		tech_lightmatter_reactor
+	}
+	
+	ai_weight = {
+		factor = 5		#weapons are good
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_omege_sentinel = {
+	area = engineering
+	cost = 400000
+	tier = 5
+	is_rare = yes
+	category = { voidcraft }
+	ai_update_type = military
+	weight = 0
+
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_OMEGA_SENTINEL_TITLE"
+			desc = "TECH_UNLOCK_OMEGA_SENTINEL_DESC"
+		}
+	}
+
+	potential = {
+		NOT = {
+			is_country_type = fallen_empire		
+		}
+	}
+	
+	modifier = {
+		shipsize_sentinel_sphere_hull_add = 10000
+	}
+
+
+	prerequisites = {
+		tech_fe_tower_offense
+		tech_lightmatter_reactor
+	}
+	
+	ai_weight = {
+		factor = 5		#weapons are good
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_omega_titan = {
+	area = engineering
+	cost = 400000
+	tier = 5
+	is_rare = yes
+	category = { voidcraft }
+	ai_update_type = military
+	weight = 0
+
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_OMEGA_TITAN_TITLE"
+			desc = "TECH_UNLOCK_OMEGA_TITAN_DESC"
+		}
+	}
+
+	potential = {
+		NOT = {
+			is_country_type = fallen_empire		
+		}
+	}
+	
+
+	modifier = {
+		shipsize_precursor_titan_hull_add = 5000
+	}
+
+	prerequisites = {
+		tech_precursor_titan
+		tech_lightmatter_reactor
+	}
+	
+	ai_weight = {
+		factor = 5		#weapons are good
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_omega_carrier = {
+	cost = 400000
+	area = engineering
+	tier = 5
+	category = { voidcraft }
+	weight = 0
+	is_rare = yes
+	
+	prerequisites = {
+		tech_fe_assault_carrier
+		tech_fe_assault_carrier_sigma
+		tech_lightmatter_reactor
+	}
+
+	potential = {
+		NOT = {
+			is_country_type = fallen_empire		
+		}
+	}
+
+	modifier = {
+		shipsize_fe_assault_carrier_hull_add = 3000
+	}
+
+	prereqfor_desc = {
+		ship = {
+			title = "TECH_UNLOCK_OMEGA_CARRIER_TITLE"
+			desc = "TECH_UNLOCK_OMEGA_CARRIER_DESC"
+		}
+	}
+
+
+	
+	ai_weight = {
+		factor = 3 # ship upgrades are supposed to be good!
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_omega_gatekeeper = {
+	cost = 400000
+	area = engineering
+	tier = 5
+	category = { voidcraft }
+	prerequisites = {
+		tech_gatekeepers
+		tech_lightmatter_reactor
+	}
+	weight = 0
+	is_rare = yes
+	
+	potential = {
+		NOT = {
+			is_country_type = fallen_empire		
+		}
+	}
+
+	prereqfor_desc = {
+		ship = {
+			title = "TECH_UNLOCK_OMEGA_GATEKEEPER_TITLE"
+			desc = "TECH_UNLOCK_OMEGA_GATEKEEPER_DESC"
+		}
+	}
+
+	modifier = {
+		shipsize_sofe_gatekeeper_warden_hull_add = 10000
+	}
+
+	
+	ai_weight = {
+		factor = 3 # ship upgrades are supposed to be good!
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_omega_colossus = {
+	cost = 400000
+	area = engineering
+	tier = 5
+	category = { voidcraft }
+	prerequisites = {
+		tech_precursor_colossus
+		tech_lightmatter_reactor
+	}
+	weight = 0
+	is_rare = yes
+	
+	potential = {
+		NOT = {
+			is_country_type = fallen_empire		
+		}
+	}
+
+	prereqfor_desc = {
+		ship = {
+			title = "TECH_UNLOCK_OMEGA_COLOSSUS_TITLE"
+			desc = "TECH_UNLOCK_OMEGA_COLOSSUS_DESC"
+		}
+	}
+
+	modifier = {
+		shipsize_precursor_colossus_hull_add = 100000
+	}
+
+	
+	ai_weight = {
+		factor = 3 # ship upgrades are supposed to be good!
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+#############################################################
+
+tech_reinforced_starbase = {
+	area = engineering
+	cost = 35000
+	tier = 5
+	category = { voidcraft }
+	prerequisites = { "tech_armor_dm" "tech_starbase_5" }
+	weight = 10
+	is_rare = yes
+	
+	ai_weight = {
+		factor = 1.0
+	}
+	
+	
+	modifier = {
+		shipclass_starbase_hull_mult = 0.75
+		shipclass_starbase_damage_mult = 0.50
+	}
+}
+
+tech_reinforced_starbase_ae = {
+	area = engineering
+	cost = 35000
+	tier = 5
+	category = { voidcraft }
+	prerequisites = { "tech_armor_ae" "tech_reinforced_starbase" }
+	weight = 10
+	is_rare = yes
+	
+	potential = {
+		has_technology = tech_dark_matter_power_core_ae
+	}
+
+	ai_weight = {
+		factor = 1.0
+	}
+	
+	
+	modifier = {
+		shipclass_starbase_hull_mult = 0.75
+		shipclass_starbase_damage_mult = 0.50
+	}
+}
+
+tech_reinforced_starbase_se = {
+	area = engineering
+	cost = 35000
+	tier = 5
+	category = { voidcraft }
+	prerequisites = { "tech_stellarite_armor" "tech_reinforced_starbase_ae" }
+	weight = 10
+	is_rare = yes
+	
+	potential = {
+		has_technology = tech_stellarite_reactor
+	}
+
+	ai_weight = {
+		factor = 1.0
+	}
+	
+	
+	modifier = {
+		shipclass_starbase_hull_mult = 0.75
+		shipclass_starbase_damage_mult = 0.50
+	}
+}
+
+#############################################
+
+# World Cracker
+tech_dm_world_cracker = {
+	area = engineering
+	cost = @tier5cost3
+	tier = 5
+	is_rare = yes
+	is_reverse_engineerable = no
+	category = { voidcraft }
+	prerequisites = { "tech_pk_cracker" "tech_perdition_beam_ae" }
+	ai_update_type = military
+	weight = @tier5weight3
+
+	potential = {
+		host_has_dlc = "Apocalypse"
+		has_country_flag = colossus_project
+		is_pacifist = no
+	}
+	
+	weight_modifier = {
+		factor = 0.50
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 0.20
+			NOR = {
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_maniacal"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_expertise_voidcraft"
+				}
+			}			
+		}	
+	}
+	
+	ai_weight = {
+		factor = 0.25
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+	}
+}
+
+# Global Pacifier
+tech_dm_global_pacifier = {
+	area = physics
+	cost = @tier5cost3
+	tier = 5
+	is_rare = yes
+	is_reverse_engineerable = no
+	category = { field_manipulation }
+	prerequisites = { "tech_pk_shielder" "tech_perdition_beam_ae" }
+	ai_update_type = military
+	weight = @tier5weight3
+	
+	potential = {
+		host_has_dlc = "Apocalypse"
+		has_country_flag = colossus_project
+	}
+	
+	weight_modifier = {
+		factor = 0.50
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 0.20
+			NOR = {
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_maniacal"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_expertise_field_manipulation"
+				}
+			}			
+		}
+		modifier = {
+			factor = 2
+			is_pacifist = yes
+		}
+	}
+	
+	ai_weight = {
+		factor = 0.25
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_pacifist
+		}
+	}
+}
+
+# Neutron Sweep
+tech_dm_neutron_sweep = {
+	area = physics
+	cost = @tier5cost3
+	tier = 5
+	is_rare = yes
+	is_reverse_engineerable = no
+	category = { particles }
+	prerequisites = { "tech_pk_neutron" "tech_perdition_beam_ae" }
+	ai_update_type = military
+	weight = @tier5weight3
+	
+	potential = {
+		host_has_dlc = "Apocalypse"
+		has_country_flag = colossus_project
+		is_spiritualist = no
+		is_pacifist = no
+	}
+	
+	weight_modifier = {
+		factor = 0.50
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 0.20
+			NOR = {
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_maniacal"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_expertise_particles"
+				}
+			}			
+		}
+		modifier = {
+			factor = 2
+			is_materialist = yes
+		}
+	}
+	
+	ai_weight = {
+		factor = 0.25
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_materialist
+		}
+	}
+}
+
+# God Ray
+tech_dm_divine_enforcer = {
+	area = society
+	cost = @tier5cost3
+	tier = 5
+	is_rare = yes
+	is_reverse_engineerable = no
+	category = { psionics }
+	prerequisites = { "tech_pk_godray" "tech_perdition_beam_ae" }
+	ai_update_type = military
+	weight = @tier5weight3
+	
+	potential = {
+		host_has_dlc = "Apocalypse"
+		has_country_flag = colossus_project
+		is_spiritualist = yes
+		OR = {
+			AND = {
+				NOT = { host_has_dlc = "Utopia" }
+				has_technology = tech_telepathy
+			}
+			AND = {
+				host_has_dlc = "Utopia"
+				has_ascension_perk = ap_mind_over_matter
+			}
+		}
+	}
+	
+	weight_modifier = {
+		factor = 0.50
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 0.20
+			NOR = {
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_maniacal"
+				}
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_expertise_psionics"
+				}
+			}			
+		}
+	}
+	
+	ai_weight = {
+		factor = 0.25
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_spiritualist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_spiritualist
+		}
+	}
+}
+
+# Nanobots
+tech_dm_nanobot_diffuser = {
+	area = engineering
+	cost = @tier5cost3
+	tier = 5
+	is_rare = yes
+	is_reverse_engineerable = no
+	category = { voidcraft }
+	prerequisites = { "tech_pk_nanobots" "tech_perdition_beam_ae" }
+	ai_update_type = military
+	weight = @tier5weight3
+	
+	potential = {
+		host_has_dlc = "Apocalypse"
+		has_country_flag = colossus_project
+		has_valid_civic = civic_machine_assimilator
+	}
+	
+	weight_modifier = {
+		factor = 0.50
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 0.20
+			NOR = {
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_maniacal"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_expertise_voidcraft"
+				}
+			}			
+		}
+	}
+	
+	ai_weight = {
+		factor = 0.25
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_gestalt_consciousness
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+}
+
+###################################################
+
+# World Cracker
+tech_se_world_cracker = {
+	area = engineering
+	cost = @tier5cost3
+	tier = 5
+	is_rare = yes
+	is_reverse_engineerable = no
+	category = { voidcraft }
+	prerequisites = { "tech_dm_world_cracker" "tech_precursor_colossus" }
+	ai_update_type = military
+	weight = @tier5weight3
+
+	potential = {
+		host_has_dlc = "Apocalypse"
+		has_country_flag = colossus_project
+		is_pacifist = no
+	}
+	
+	weight_modifier = {
+		factor = 0.50
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 0.20
+			NOR = {
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_maniacal"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_expertise_voidcraft"
+				}
+			}			
+		}	
+	}
+	
+	ai_weight = {
+		factor = 0.25
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+	}
+}
+
+# Global Pacifier
+tech_se_global_pacifier = {
+	area = physics
+	cost = @tier5cost3
+	tier = 5
+	is_rare = yes
+	is_reverse_engineerable = no
+	category = { field_manipulation }
+	prerequisites = { "tech_dm_global_pacifier" "tech_precursor_colossus" }
+	ai_update_type = military
+	weight = @tier5weight3
+	
+	potential = {
+		host_has_dlc = "Apocalypse"
+		has_country_flag = colossus_project
+	}
+	
+	weight_modifier = {
+		factor = 0.50
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 0.20
+			NOR = {
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_maniacal"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_expertise_field_manipulation"
+				}
+			}			
+		}
+		modifier = {
+			factor = 2
+			is_pacifist = yes
+		}
+	}
+	
+	ai_weight = {
+		factor = 0.25
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_pacifist
+		}
+	}
+}
+
+# Neutron Sweep
+tech_se_neutron_sweep = {
+	area = physics
+	cost = @tier5cost3
+	tier = 5
+	is_rare = yes
+	is_reverse_engineerable = no
+	category = { particles }
+	prerequisites = { "tech_dm_neutron_sweep" "tech_precursor_colossus" }
+	ai_update_type = military
+	weight = @tier5weight3
+	
+	potential = {
+		host_has_dlc = "Apocalypse"
+		has_country_flag = colossus_project
+		is_spiritualist = no
+		is_pacifist = no
+	}
+	
+	weight_modifier = {
+		factor = 0.50
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 0.20
+			NOR = {
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_maniacal"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_expertise_particles"
+				}
+			}			
+		}
+		modifier = {
+			factor = 2
+			is_materialist = yes
+		}
+	}
+	
+	ai_weight = {
+		factor = 0.25
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_materialist
+		}
+	}
+}
+
+# God Ray
+tech_se_divine_enforcer = {
+	area = society
+	cost = @tier5cost3
+	tier = 5
+	is_rare = yes
+	is_reverse_engineerable = no
+	category = { psionics }
+	prerequisites = { "tech_dm_divine_enforcer" "tech_precursor_colossus" }
+	ai_update_type = military
+	weight = @tier5weight3
+	
+	potential = {
+		host_has_dlc = "Apocalypse"
+		has_country_flag = colossus_project
+		is_spiritualist = yes
+		OR = {
+			AND = {
+				NOT = { host_has_dlc = "Utopia" }
+				has_technology = tech_telepathy
+			}
+			AND = {
+				host_has_dlc = "Utopia"
+				has_ascension_perk = ap_mind_over_matter
+			}
+		}
+	}
+	
+	weight_modifier = {
+		factor = 0.50
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 0.20
+			NOR = {
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_maniacal"
+				}
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_expertise_psionics"
+				}
+			}			
+		}
+	}
+	
+	ai_weight = {
+		factor = 0.25
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_spiritualist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_spiritualist
+		}
+	}
+}
+
+# Nanobots
+tech_se_nanobot_diffuser = {
+	area = engineering
+	cost = @tier5cost3
+	tier = 5
+	is_rare = yes
+	is_reverse_engineerable = no
+	category = { voidcraft }
+	prerequisites = { "tech_dm_nanobot_diffuser" "tech_precursor_colossus" }
+	ai_update_type = military
+	weight = @tier5weight3
+	
+	potential = {
+		host_has_dlc = "Apocalypse"
+		has_country_flag = colossus_project
+		has_valid_civic = civic_machine_assimilator
+	}
+	
+	weight_modifier = {
+		factor = 0.50
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 0.20
+			NOR = {
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_maniacal"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_expertise_voidcraft"
+				}
+			}			
+		}
+	}
+	
+	ai_weight = {
+		factor = 0.25
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_gestalt_consciousness
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+}

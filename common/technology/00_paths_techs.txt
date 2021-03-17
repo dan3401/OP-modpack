@@ -1,0 +1,92 @@
+tech_eternos_insights = {
+	cost = @guardiantechcost
+	area = physics
+	is_reverse_engineerable = no
+	tier = @guardiantechtier
+	category = { computing }
+	ai_update_type = all
+	weight = 0
+	is_rare = yes
+
+	potential = {
+		NOT = { has_global_flag = acot_shipcom_forbidden }
+		NOR = {
+			is_country_type = fallen_empire 	
+			is_country_type = awakened_fallen_empire 				
+		}
+	}
+
+	modifier = {
+		
+		
+	}
+
+	weight_modifier = {
+		factor = 0
+	}
+}
+
+tech_mechanist_insights = {
+	cost = @guardiantechcost
+	area = physics
+	is_reverse_engineerable = no
+	tier = @guardiantechtier
+	category = { computing }
+	ai_update_type = all
+	weight = 0
+	is_rare = yes
+
+	modifier = {
+	
+		
+	}
+
+	weight_modifier = {
+		factor = 0
+	}
+}
+
+tech_preserver_ee = {
+	cost = @guardiantechcost
+	area = physics
+	is_reverse_engineerable = no
+	tier = @guardiantechtier
+	category = { computing }
+	ai_update_type = all
+	weight = 0
+	is_rare = yes
+
+	modifier = {
+	
+		
+	}
+
+	weight_modifier = {
+		factor = 0
+	}
+}
+
+tech_supeai_ee = {
+	cost = @guardiantechcost
+	area = physics
+	is_reverse_engineerable = no
+	tier = @guardiantechtier
+	category = { computing }
+	ai_update_type = all
+	weight = 0
+	is_rare = yes
+
+	
+
+
+			set_country_flag = path_of_mechanist		
+
+			set_country_flag = path_of_mechanist_more
+			give_technology = { tech = tech_mechanist_insights message = no }
+			
+		
+
+	weight_modifier = {
+		factor = 0
+	}
+}

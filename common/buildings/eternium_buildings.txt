@@ -1,0 +1,181 @@
+building_eternium_fortress = {
+	can_build = yes
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	base_cap_amount = 1
+
+	planetary_ftl_inhibitor = yes
+	category = government
+	
+	potential = {
+		exists = owner
+		owner = { has_government = "gov_eternal_continuum" }
+	}
+
+	planet_modifier = {
+		planet_housing_add = 50
+		planet_amenities_add = 50
+	}
+
+	army_modifier = {
+		army_defense_morale_mult = 5.0
+		army_defense_health_mult = 5.0	
+		army_defense_damage_mult = 5.0
+		army_starting_experience_add = 10000
+	}	
+	
+	convert_to = {
+		building_fortress
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+		}
+		modifier = {
+			job_twkeeper_add = 5
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			eternium = 1000
+			ambrosia = 1000
+		}	
+		upkeep = {
+			eternium = 20
+		}
+	}
+	
+	planet_modifier = {
+		planet_stability_add = 50
+		planet_orbital_bombardment_damage = -50.0
+	}
+	
+	prerequisites = {
+		"tech_fallenw"
+	}
+	
+	ai_weight = {
+		weight = 100
+	}
+}
+
+building_eternium_generator = {
+	can_build = yes
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	base_cap_amount = 1
+
+	category = government
+	
+	potential = {
+		exists = owner
+		owner = { has_government = "gov_eternal_continuum" }
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			eternium = 1000
+			ambrosia = 1000
+		}
+		produces = {
+			energy = 20000
+		}
+		upkeep = {
+			eternium = 20
+		}
+	}
+	
+
+	prerequisites = {
+		"tech_fallenw"
+	}
+	
+	ai_weight = {
+		weight = 100
+	}
+}
+
+building_eternium_replicator = {
+	can_build = yes
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	base_cap_amount = 1
+
+	category = government
+	
+	potential = {
+		exists = owner
+		owner = { has_government = "gov_eternal_continuum" }
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			eternium = 1000
+			ambrosia = 1000
+		}
+		produces = {
+			minerals = 20000
+		}
+		upkeep = {
+			eternium = 20
+		}
+	}
+	
+
+	prerequisites = {
+		"tech_fallenw"
+	}
+	
+	ai_weight = {
+		weight = 100
+	}
+}
+
+building_eternium_ressourcer = {
+	can_build = yes
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	base_cap_amount = 1
+
+	category = government
+	
+	potential = {
+		exists = owner
+		owner = { has_government = "gov_eternal_continuum" }
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			eternium = 1000
+			ambrosia = 1000
+		}
+		produces = {
+			nanites = 5000
+			sr_dark_matter = 5000
+			
+		}
+		upkeep = {
+			eternium = 20
+		}
+	}
+	
+
+	prerequisites = {
+		"tech_fallenw"
+	}
+	
+	ai_weight = {
+		weight = 100
+	}
+}
+

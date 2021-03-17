@@ -1,0 +1,32 @@
+﻿l_braz_por:
+#{
+ # #######################
+ # Written by kngpig #
+ # #######################
+ #
+ # $tooltip$ , $VALUE$ (Putting up an existing localization line)
+ # £icon£ , £mod_job_industry_equipements_add£ (Putting up an icon)
+ # §colour§ , §R(Red)§! (R, Y, E, H, S, B, G) (! Returns to default) (R Red) (Y Yellow) (B Blue) (G Green)
+ # [(Scope.Call)] , [contact_empire.GetName] (You can have multiple scope into a specific thing based on event, there is also specific scopes the game uses. Example: primitive_civ, conquered_primitive_country, LastKilledCountryName, malfunctioning_leader)
+ # 
+ # #######################
+ #
+ # #######################
+#}
+
+ class_4_singularity_demolish:0 "Demolição de singularidades de classe 4: Recursos estranhos"
+ ee_sm_NAND_knowledge:0 "Enquanto nosso pessoal dividia a singularidade de classe 4, descobrimos e descobrimos 2 substâncias misteriosas antigas, nossos cientistas pedem por pesquisas e testes o mais rápido possível!"
+ ee_sm_NOR_knowledge:0 "Enquanto nosso pessoal dividia a singularidade de classe 4, descobrimos e descobrimos 1 substâncias misteriosas antigas, nossos cientistas pedem por pesquisas e testes o mais rápido possível!"
+ ee_sm_has_knowledge:0 "Com o conhecimento já conhecido das 2 substâncias antigas encontradas durante a demolição da Singularidade de Classe 4, podemos optar por contê-las com segurança ou deixá-las."
+
+ ee_sm_excellent:0 Trabalho excelente!" 
+ ee_sm_opinion:0 "Você realmente acha que estes materiais são heresia!"
+ ee_sm_they_remember_that:0 "§RVocê não pode mudar de opnião tão rápido!§!"
+ ee_sm_work_on_it:0 "Faça disso uma prioridade"
+ ee_sm_are_lost:0 "§ROs materiais raros e limitados são perdidos!§!"
+ ee_sm_get_bonus_weight:0 "§Y$tech_extreme_energies$§! e §Y$tech_special_materials$§! aumentaram a chance de aparecer."
+ ee_sm_ignore:0 "Ignore"
+ ee_sm_heresy:0 "Estas coisas são heresia!"
+ ee_sm_get_reduced_weight:0 "£physics£§B$tech_extreme_energies$§! e £engineering£§B$tech_special_materials$§! aumentaram a chance de aparecer."
+ ee_sm_do_not_repeat:0 "§RNão é possível spammar§!"
+ 

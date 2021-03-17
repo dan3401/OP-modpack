@@ -1,0 +1,41 @@
+spriteTypes = {
+
+	SpriteType = {
+		name = "GFX_sb_tourist_area"
+		texturefile = "gfx/interface/icons/modules/sb_tourist_area.dds"
+	}
+	spriteType = {
+		name = "GFX_wg_crusade"
+		textureFile = "gfx/interface/icons/diplomacy/wg_crusade.dds"
+	}
+	spriteType = {
+		name = "GFX_wg_peacekeeping"
+		textureFile = "gfx/interface/icons/diplomacy/wg_peacekeeping.dds"
+	}
+	spriteType = {
+		name = "GFX_peacekeeper_federation"
+		textureFile = "gfx/interface/icons/federation/federation_types/peacekeeper_federation.dds"
+	}
+	spriteType = {
+		name = "GFX_peacekeeper_federation_passive"
+		textureFile = "gfx/interface/icons/federation/federation_perks/peacekeeper_federation_passive.dds"
+	}
+	spriteType = {
+		name = "GFX_unity_boost_1"
+		textureFile = "gfx/interface/icons/federation/federation_perks/unity_boost_1.dds"
+	}
+	spriteType = {
+		name = "GFX_federation_type_peacekeeper_bg"
+		textureFile = "gfx/interface/federation/peacekeeper_federation_bg.dds"
+	}
+	SpriteType = {
+		name = "GFX_sb_streamlining_sector"
+		texturefile = "gfx/interface/icons/modules/sb_streamlining_sector.dds"
+	}
+	SpriteType = {
+		name = "GFX_ap_consecrated_worlds_nihilistic"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_consecrated_worlds_nihilistic.dds"
+		alwaystransparent = yes
+	}
+	
+}

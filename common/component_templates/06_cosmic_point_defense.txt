@@ -1,0 +1,78 @@
+
+weapon_component_template = {
+	key = "ETERNAL_FLAK_CANNON_EE"
+	size = point_defence
+	icon = "GFX_ship_part_eternium_flak"
+	icon_frame = 1
+	entity = "small_kinetic_gun_entity"
+	type = point_defence
+
+	damage = { min = 10 max = 30 }
+	windup = { min = 0 max = 0 }
+	total_fire_time = 5
+	range = 35
+	accuracy = 1.0
+	power = -80
+	hull_damage = 1.25
+	armor_penetration = 0.0
+	armor_damage = 1.50
+	shield_penetration = 0.0
+	shield_damage = 1.50
+	tracking = 1.00
+	resources = {
+		category = ship_components
+		cost = {
+			eternium = 0.5
+		}
+	}
+	
+	prerequisites = { tech_fallenw }
+	component_set = "ETERNAL_FLAK_CANNON_EE"
+	projectile_gfx = "eternal_laser_s"
+	tags = { weapon_type_point_defense weapon_type_cosmic }
+	ai_tags = { weapon_role_point_defense }
+
+	ai_weight = {
+		weight = 3000
+	}
+}
+
+
+
+weapon_component_template = {
+	key = "ETERNAL_POINT_DEFENEE_EE"
+	size = point_defence
+	entity = "small_laser_gun_entity"
+	type = point_defence
+	icon = "GFX_ship_part_eternium_point_defence"
+	icon_frame = 1
+
+	damage = { min = 39 max = 150 }
+	windup = { min = 0 max = 0 }
+	total_fire_time = 15
+	range = 75
+	accuracy = 1.0
+	power = -80
+	hull_damage = 1.25
+	armor_penetration = 0.0
+	armor_damage = 1.25
+	shield_penetration = 0.0
+	shield_damage = 1.25
+	tracking = 1.00
+	resources = {
+		category = ship_components
+		cost = {
+			eternium = 0.5
+		}
+	}
+	
+	prerequisites = { tech_fallenw }
+	component_set = "ETERNAL_POINT_DEFENSE_EE"
+	projectile_gfx = "eternal_laser_s"
+	tags = { weapon_type_point_defense weapon_type_cosmic }
+	ai_tags = { weapon_role_point_defense }
+	
+	ai_weight = {
+		weight = 3000
+	}
+}

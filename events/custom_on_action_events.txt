@@ -1,0 +1,323 @@
+# First Contact Space Amoeba
+country_event = {
+	id = action.15
+	title = "action.10.name"
+	desc = "action.15.desc"
+	picture = GFX_evt_star_chart
+	location = FROMFROMFROM
+	trackable = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = { is_country_type = amoeba }
+		OR = {
+			is_country_type = default
+			is_country_type = eternal_empire
+			is_country_type = ascended_empire
+			is_country_type = awakened_fallen_empire
+			is_country_type = fallen_empire
+			is_country_type = psionic_empire
+		}
+		is_ai = no
+		NOT = { has_country_flag = amoeba_encountered }
+	}
+	
+	immediate = {
+		set_country_flag = amoeba_encountered
+		capital_scope = { save_event_target_as = pc_home }
+		from = {
+			enable_special_project = {
+				name = "INVESTIGATE_SPACE_AMOEBA"
+				location = event_target:pc_home
+				owner = ROOT
+			}
+		}
+	}
+	
+	option = {
+		name = "action.10.a"
+		tooltip = {
+			enable_special_project = {
+				name = "INVESTIGATE_SPACE_AMOEBA"
+				location = event_target:pc_home
+				owner = ROOT
+			}
+		}
+	}
+}
+
+# First Contact Crystals
+country_event = {
+	id = action.16
+	title = "action.10.name"
+	desc = "action.15.desc"
+	picture = GFX_evt_star_chart
+	location = FROMFROMFROM
+	trackable = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = { is_country_type = crystal }
+		OR = {
+			is_country_type = default
+			is_country_type = eternal_empire
+			is_country_type = ascended_empire
+			is_country_type = awakened_fallen_empire
+			is_country_type = fallen_empire
+			is_country_type = psionic_empire
+		}
+		is_ai = no
+		NOT = { has_country_flag = crystal_encountered }
+	}
+	
+	immediate = {
+		set_country_flag = crystal_encountered
+		capital_scope = { save_event_target_as = pc_home }
+		from = {
+			enable_special_project = {
+				name = "INVESTIGATE_CRYSTALS"
+				location = event_target:pc_home
+				owner = ROOT
+			}
+		}
+	}
+	
+	option = {
+		name = "action.10.a"
+		tooltip = {
+			enable_special_project = {
+				name = "INVESTIGATE_CRYSTALS"
+				location = event_target:pc_home
+				owner = ROOT
+			}
+		}
+	}
+}
+
+# First Contact Drones
+country_event = {
+	id = action.17
+	title = "action.10.name"
+	desc = "action.15.desc"
+	picture = GFX_evt_star_chart
+	location = FROMFROMFROM
+	trackable = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = { is_country_type = drone }
+		OR = {
+			is_country_type = default
+			is_country_type = eternal_empire
+			is_country_type = ascended_empire
+			is_country_type = awakened_fallen_empire
+			is_country_type = fallen_empire
+			is_country_type = psionic_empire
+		}
+		is_ai = no
+		NOT = { has_country_flag = drone_encountered }
+	}
+	
+	immediate = {
+		set_country_flag = drone_encountered
+		capital_scope = { save_event_target_as = pc_home }
+		from = {
+			enable_special_project = {
+				name = "INVESTIGATE_DRONES"
+				location = event_target:pc_home
+				owner = ROOT
+			}
+		}
+	}
+	
+	option = {
+		name = "action.10.a"
+		tooltip = {
+			enable_special_project = {
+				name = "INVESTIGATE_DRONES"
+				location = event_target:pc_home
+				owner = ROOT
+			}
+		}
+	}
+}
+
+# First Contact Space Clouds
+country_event = {
+	id = action.18
+	title = "action.10.name"
+	desc = "action.15.desc"
+	picture = GFX_evt_star_chart
+	location = FROMFROMFROM
+	trackable = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = { is_country_type = cloud }
+		OR = {
+			is_country_type = default
+			is_country_type = eternal_empire
+			is_country_type = ascended_empire
+			is_country_type = awakened_fallen_empire
+			is_country_type = fallen_empire
+			is_country_type = psionic_empire
+		}
+		is_ai = no
+		NOT = { has_country_flag = cloud_encountered }
+	}
+	
+	immediate = {
+		set_country_flag = cloud_encountered
+		capital_scope = { save_event_target_as = pc_home }
+		from = {
+			enable_special_project = {
+				name = "INVESTIGATE_SPACE_CLOUDS"
+				location = event_target:pc_home
+				owner = ROOT
+			}
+		}
+	}
+	
+	option = {
+		name = "action.10.a"
+		tooltip = {
+			enable_special_project = {
+				name = "INVESTIGATE_SPACE_CLOUDS"
+				location = event_target:pc_home
+				owner = ROOT
+			}
+		}
+	}
+}
+
+# First Contact Tiyanki
+country_event = {
+	id = action.25
+	title = "action.10.name"
+	desc = "action.15.desc"
+	picture = GFX_evt_star_chart
+	location = FROMFROMFROM
+	trackable = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = { is_country_type = tiyanki }
+		OR = {
+			is_country_type = default
+			is_country_type = eternal_empire
+			is_country_type = ascended_empire
+			is_country_type = awakened_fallen_empire
+			is_country_type = fallen_empire
+			is_country_type = psionic_empire
+		}
+		is_ai = no
+		NOT = { has_country_flag = tiyanki_encountered }
+	}
+	
+	immediate = {
+		set_country_flag = tiyanki_encountered
+		capital_scope = { save_event_target_as = pc_home }
+		from = {
+			enable_special_project = {
+				name = "INVESTIGATE_TIYANKI"
+				location = event_target:pc_home
+				owner = ROOT
+			}
+		}
+	}
+	
+	option = {
+		name = "action.10.a"
+		tooltip = {
+			enable_special_project = {
+				name = "INVESTIGATE_TIYANKI"
+				location = event_target:pc_home
+				owner = ROOT
+			}
+		}
+	}
+}
+
+# First Contact Marauders
+country_event = {
+	id = action.26
+	title = "action.10.name"
+	desc = "action.15.desc"
+	picture = GFX_evt_star_chart
+	location = FROMFROMFROM
+	trackable = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = { is_country_type = dormant_marauders }
+		OR = {
+			is_country_type = default
+			is_country_type = eternal_empire
+			is_country_type = ascended_empire
+			is_country_type = psionic_empire
+		}
+		NOR = { 
+			AND = {
+				has_country_flag = marauder_encountered_1
+				from = { has_country_flag = marauder_1 }
+			}
+			AND = {
+				has_country_flag = marauder_encountered_2
+				from = { has_country_flag = marauder_2 }
+			}
+			AND = {
+				has_country_flag = marauder_encountered_3
+				from = { has_country_flag = marauder_3 }
+			}
+		}
+	}
+	
+	immediate = {
+		from = { save_event_target_as = encountered_marauder }
+		capital_scope = { save_event_target_as = pc_home }
+		from = {
+			enable_special_project = {
+				name = "INVESTIGATE_MARAUDERS"
+				location = event_target:pc_home
+				owner = ROOT
+			}
+		}
+		if = {
+			limit = {
+				from = { has_country_flag = marauder_1 }
+			}
+			set_country_flag = marauder_encountered_1
+			break = yes
+		}
+		if = {
+			limit = {
+				from = { has_country_flag = marauder_2 }
+			}
+			set_country_flag = marauder_encountered_2
+			break = yes
+		}
+		if = {
+			limit = {
+				from = { has_country_flag = marauder_3 }
+			}
+			set_country_flag = marauder_encountered_3
+		}
+	}
+	
+	option = {
+		name = "action.10.a"
+		tooltip = {
+			enable_special_project = {
+				name = "INVESTIGATE_MARAUDERS"
+				location = event_target:pc_home
+				owner = ROOT
+			}
+		}
+	}
+}

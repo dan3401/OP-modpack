@@ -1,0 +1,44 @@
+opinion_from_personality = {
+	opinion = {
+		modifier = {
+			add = -1000
+			has_ai_personality = eternal_empire_xenophobe
+			FROM = {
+				is_country_type = eternal_empire
+			}
+		}
+		modifier = {
+			add = -1000
+			has_ai_personality = eternal_empire_death 
+		}
+		modifier = {
+			add = 100
+			has_ai_personality = fanatic_befrienders
+		}
+		modifier = {
+			add = -1000
+			has_ai_personality = metalhead
+		}
+		modifier = {
+			add = 100
+			has_ai_personality = fanatic_befrienders
+		}
+	}
+}
+
+triggered_ee_raising_power = {
+	trigger = {
+		OR = {
+		is_country_type = default
+		is_country_type = fallen_empire
+		is_country_type = awakened_fallen_empire
+		is_country_type = ascended_empire
+		is_country_type = eternal_empire
+		}
+		FROM = { has_country_flag = raising_ee_power }
+	}
+
+	opinion = {
+		base = -500
+	}
+}

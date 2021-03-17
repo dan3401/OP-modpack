@@ -1,0 +1,40 @@
+namespace = exigencycivics
+
+planet_event = {
+	id = exigencycivics.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		ex_generate_start_pops = yes #thanks to Red-Eyed_Fairace for guiding me through the secondary species changes in 2.2
+	}
+}
+
+country_event = {
+	id = exigencycivics.2
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		if = { 																	
+			limit = { 
+				has_civic = civic_psionic_heritage
+			} 
+			give_technology = { message = yes tech = tech_psionic_studies }		# edict fix for games in progress
+		}
+			}
+}
+
+country_event = {
+	id = exigencycivics.3
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		if = { 																	
+			limit = { 
+				has_civic = civic_psionic_heritage
+			} 
+			give_technology = { message = no tech = tech_mine_zro }
+			add_resource = { sr_zro = 10 }	
+		}
+			}
+}

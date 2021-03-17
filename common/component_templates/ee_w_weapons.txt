@@ -1,0 +1,26 @@
+weapon_component_template = { # hmm
+	key = "EE_PLANETKILLER_GAIA"
+	size = planet_killer
+	power = -50000
+	entity = "invisible_turret_entity"
+	type = planet_killer
+	static_rotation = yes
+	use_ship_kill_target = no
+
+	windup = { min = 0.0 max = 0.0 }
+	total_fire_time = 40
+
+
+	prerequisites = { "tech_preserver_ee" }
+
+	icon = GFX_ship_part_planet_killer_ee_gaia
+	icon_frame = 1
+
+	component_set = "EE_PLANETKILLER_GAIA"
+
+	planet_destruction_gfx = "god_ray_gfx"
+
+	size_restriction = {
+		colossus eternal_colossus
+	}
+}

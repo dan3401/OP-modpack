@@ -1,0 +1,399 @@
+star_compressor = {
+	entity = ""
+	construction_entity = "black_hole_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = yes
+	entity_offset = { x = 0 y = 0 }
+	build_time = 180
+
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 1000
+			ambrosia = 2000
+		}
+	}
+	construction_blocks_others = no
+
+	potential = {
+		OR = {
+			has_government = "gov_eternal_continuum"
+		}
+	}
+
+	possible = {
+		exists = starbase
+		custom_tooltip = {
+			fail_text = "requires_inside_border"
+			is_inside_border = from
+		}
+	}
+
+	placement_rules = {
+		planet_possible = {
+			custom_tooltip = {
+				fail_text = "requires_surveyed_planet"
+				is_surveyed = {			# prevent leaking habitability information
+					who = prev.from
+					status = yes
+				}
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_anomaly"
+				NOT = { has_anomaly = yes }
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_existing_megastructure"
+				#can_build_megastructure_on_planet = yes
+				NOR = {
+                    is_planet_class = pc_eternal_city
+					is_planet_class = pc_habitat
+					is_planet_class = pc_ringworld_tech
+                    is_planet_class = pc_ringworld_seam
+					is_planet_class = pc_black_hole
+					is_planet_class = pc_ee_star
+					is_star = no
+					is_moon = yes
+	
+				}
+            }
+            custom_tooltip = {
+                fail_text = "requires_no_binary_trinary"
+                NOR = {
+                    is_star_class = sc_trinary_1
+                    is_star_class = sc_trinary_2
+                    is_star_class = sc_trinary_3
+                    is_star_class = sc_trinary_4
+                }
+            }
+            custom_tooltip = {
+				fail_text = "requires_no_existing_megastructure"
+				#can_build_megastructure_on_planet = yes
+				NOR = {
+					has_planet_flag = megastructure
+					has_planet_flag = has_megastructure
+					is_planet_class = pc_habitat
+				}
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_orbital_station"
+				has_orbital_station = no
+			}
+
+ 			# balance for habitats
+			custom_tooltip = {
+				fail_text = "requires_not_star"
+				is_star = yes
+			}
+		} # use these for all non-star megastructures
+	}
+
+	# root = system
+	# from = country	
+	ai_weight = {
+		factor = 10
+	
+		modifier = {
+			factor = 0
+			starbase = { NOT = { has_starbase_size >= starbase_starport } }
+		}
+
+		modifier = {
+			factor = 0
+			any_neighbor_system = {
+				exists = owner
+				owner = { NOT = { is_same_value = from } }
+			}
+		}
+	}
+	
+	on_build_start = {}
+	on_build_cancel = {}
+	
+	on_build_complete = {
+		every_system_planet = { 
+			limit = { is_star = yes }
+			set_planet_size = 1
+		}
+		solar_system = { 
+			remove_hyperlane = {
+				from = prev
+				to = prevprev
+			}
+		}
+		spawn_planet = {
+			class = "pc_black_hole"
+			location = fromfrom.planet
+			orbit_location = yes
+			orbit_angle_offset = 1
+			orbit_distance_offset = 1
+			size = 20
+            has_ring = no
+            init_effect = {
+				set_planet_name = "Eye of Eternos"
+				set_planet_flag = megastructure
+            }
+		}	
+		fromfrom.planet = {
+			set_planet_flag = has_megastructure
+		}
+		remove_megastructure = fromfrom
+	}
+}
+
+
+
+ftl_disruptor_1 = {
+	entity = "reactivated_gateway_entity"
+	construction_entity = "gatebuilder_01_gateway_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = no
+	build_outside_gravity_well = yes 
+	show_galactic_map_icon = no
+	construction_blocks_others = no
+
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 1000
+			minerals = 1000
+			eternium = 100
+		}
+	}
+	
+	potential = {
+		has_technology = tech_fallenw
+	}
+	
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_tech_fallenw"
+			from = { has_technology = tech_fallenw }
+		}
+	}
+	build_time = 360
+	
+	ai_weight = {
+		factor = 0
+	}
+
+	construction_blocks_others = no
+	on_build_complete = {
+		set_star_flag = lcluster
+		from = {
+			country_event = { id = ee_hyperlane.1 }
+		}
+	}
+}
+
+phi_infusor = {
+	entity = ""
+	construction_entity = "gatebuilder_01_gateway_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = yes
+	entity_offset = { x = 0 y = 0 }
+	build_time = 180
+
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 1000
+			ambrosia = 2000
+		}
+	}
+	construction_blocks_others = no
+
+	potential = {
+		OR = {
+			has_government = "gov_eternal_continuum"
+		}
+	}
+
+	possible = {
+		exists = starbase
+		custom_tooltip = {
+			fail_text = "requires_inside_border"
+			is_inside_border = from
+		}
+	}
+
+	placement_rules = {
+		planet_possible = {
+			custom_tooltip = {
+				fail_text = "requires_surveyed_planet"
+				is_surveyed = {			# prevent leaking habitability information
+					who = prev.from
+					status = yes
+				}
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_anomaly"
+				NOT = { has_anomaly = yes }
+			}
+            custom_tooltip = {
+                fail_text = "requires_no_binary_trinary"
+                NOR = {
+                    is_star_class = sc_trinary_1
+                    is_star_class = sc_trinary_2
+                    is_star_class = sc_trinary_3
+                    is_star_class = sc_trinary_4
+                }
+            }
+			custom_tooltip = {
+				fail_text = "requires_no_orbital_station"
+				has_orbital_station = no
+			}
+
+ 			# balance for habitats
+			custom_tooltip = {
+				fail_text = "requires_not_star"
+				is_star = yes
+			}
+		} # use these for all non-star megastructures
+	}
+
+	# root = system
+	# from = country	
+	ai_weight = {
+		factor = 10
+	
+		modifier = {
+			factor = 0
+			starbase = { NOT = { has_starbase_size >= starbase_starport } }
+		}
+
+		modifier = {
+			factor = 0
+			any_neighbor_system = {
+				exists = owner
+				owner = { NOT = { is_same_value = from } }
+			}
+		}
+	}
+	
+	on_build_start = {}
+	on_build_cancel = {}
+	
+	on_build_complete = {
+		every_system_planet = { 
+			limit = { is_star = yes }
+			change_pc = pc_ee_star
+			set_planet_size = -20
+		}
+		solar_system = { 
+			remove_hyperlane = {
+				from = prev
+				to = prevprev
+			}
+		}
+		fromfrom.planet = {
+			set_planet_flag = has_megastructure
+		}
+		remove_megastructure = fromfrom
+	}
+}
+
+system_creator = {
+	entity = ""
+	construction_entity = "gatebuilder_01_gateway_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = no
+	build_outside_gravity_well = yes
+	entity_offset = { x = 0 y = 0 }
+	build_time = 180
+
+	resources = {
+		category = megastructures
+		cost = {
+			eternium = 2000
+			ambrosia = 2000
+		}
+	}
+	construction_blocks_others = no
+
+	potential = {
+		OR = {
+			has_government = "gov_eternal_continuum"
+		}
+	}
+
+	possible = {
+		exists = starbase
+		custom_tooltip = {
+			fail_text = "requires_inside_border"
+			is_inside_border = from
+		}
+	}
+
+	placement_rules = {
+		planet_possible = {
+			custom_tooltip = {
+				fail_text = "requires_surveyed_planet"
+				is_surveyed = {			# prevent leaking habitability information
+					who = prev.from
+					status = yes
+				}
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_anomaly"
+				NOT = { has_anomaly = yes }
+			}
+            custom_tooltip = {
+                fail_text = "requires_no_binary_trinary"
+                NOR = {
+                    is_star_class = sc_trinary_1
+                    is_star_class = sc_trinary_2
+                    is_star_class = sc_trinary_3
+                    is_star_class = sc_trinary_4
+                }
+            }
+			custom_tooltip = {
+				fail_text = "requires_no_orbital_station"
+				has_orbital_station = no
+			}
+
+ 			# balance for habitats
+			custom_tooltip = {
+				fail_text = "requires_not_star"
+				is_star = yes
+			}
+		} # use these for all non-star megastructures
+	}
+
+	# root = system
+	# from = country	
+	ai_weight = {
+		factor = 10
+	
+		modifier = {
+			factor = 0
+			starbase = { NOT = { has_starbase_size >= starbase_starport } }
+		}
+
+		modifier = {
+			factor = 0
+			any_neighbor_system = {
+				exists = owner
+				owner = { NOT = { is_same_value = from } }
+			}
+		}
+	}
+	
+	on_build_start = {}
+	on_build_cancel = {}
+	
+	on_build_complete = {
+		FROM = {
+		country_event = {
+			id = lifeseed.1
+		}
+		}
+	
+	}
+}
+
+
+
+
+
+

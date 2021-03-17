@@ -1,0 +1,167 @@
+﻿l_english:
+ trait_agrarian_more:0 "Gaian"
+ trait_agrarian_more_desc:0 "§LThis species seem to manipulate the soil to their will, and make unnatural farmers and gardeners.§!\n"
+ trait_agrarian_not:0 "Gatherer"
+ trait_agrarian_not_desc:0 "§LThis species originated from an opulent land, and makes bad farmers and gardeners.§!\n"
+ trait_agrarian_adv:0 "Symbiotic"
+ trait_agrarian_adv_desc:0 "§LThis species has been successfully integrated into a close symbiotic relationship with various flora used for crops.§!\n"
+ 
+ trait_ingenious_more:0 "Creative"
+ trait_ingenious_more_desc:0 "§LMembers of this species frequently try out creative and even dangerous ideas, improving efficiency of their infrastructure and power grids.§!\n"
+ trait_ingenious_not:0 "Stagnant"
+ trait_ingenious_not_desc:0 "§LMembers of this species is not enthusiastic to creative improvements, reducing efficiency of their infrastructure and power grids.§!\n"
+ trait_ingenious_adv:0 "Conductive"
+ trait_ingenious_adv_desc:0 "§LMembers of this species can conduct large mounts of power without bodily harm, making them excellent technicians and requiring less insulation for their surroundings.§!\n"
+ 
+ trait_industrious_more:0 "Organized"
+ trait_industrious_more_desc:0 "§LMembers of this species are well organized and extremely efficient in industrial conditions.§!\n"
+ trait_industrious_not:0 "Tiresome"
+ trait_industrious_not_desc:0 "§LMembers of this species are quick to tire out and need frequent breaks to function under physical laboring conditions.§!\n"
+ trait_industrious_adv:0 "Silicaid"
+ trait_industrious_adv_desc:0 "§LMembers of this species utilize various soft silicate compounds for skin protection, preventing contamination of minerals on industrial sites while providing limited protection.§!\n"
+ 
+ trait_decadent_not:0 "Atheletic"
+ trait_decadent_not_desc:0 "§LThis species simply loves to excersize and stay fit, and prefers to work under manual laboring conditions.§!\n"
+ trait_decadent_more:0 "Lazy"
+ trait_decadent_more_desc:0 "§LThis species is not very enthusiastic to physical activities and absolutely hates to be part of manual labors.§!\n"
+ 
+ trait_intelligent_more:0 "Maniac"
+ trait_intelligent_more_desc:0 "§LThis species is hell-bent on research and development, and will stop at nothing to take their technology to the next level.§!\n"
+ trait_intelligent_not:0 "Distracted"
+ trait_intelligent_not_desc:0 "§LThis species is easily distracted, thus has difficulty staying focused on research.§!\n"
+ 
+ trait_natural_engineers_adv:0 "Engineering Wired"
+ trait_natural_engineers_adv_desc:0 "§LMembers of this species' brains have been heavily wired towards engineering and material sciences.§!\n"
+ trait_natural_physicists_adv:0 "Physics Wired"
+ trait_natural_physicists_adv_desc:0 "§LMembers of this species' brains have been heavily wired towards physics and astral phenomena.§!\n"
+ trait_natural_sociologists_adv:0 "Sociology Wired"
+ trait_natural_sociologists_adv_desc:0 "§LMembers of this species' brains have been heavily wired towards sociology and biological stuies.§!\n"
+ 
+ trait_natural_engineers_not:0 "Poor Engineers"
+ trait_natural_engineers_not_desc:0 "§LMembers of this species have difficulty understanding concepts of engineering and material sciences.§!\n"
+ trait_natural_physicists_not:0 "Poor Physicists"
+ trait_natural_physicists_not_desc:0 "§LMembers of this species have difficulty understanding concepts of physics and astral phenomena.§!\n"
+ trait_natural_sociologists_not:0 "Poor Sociologists"
+ trait_natural_sociologists_not_desc:0 "§LMembers of this species have difficulty understanding concepts of sociology and biological stuies.§!\n"
+ 
+ trait_rapid_breeders_more:0 "Frenzied Breeders"
+ trait_rapid_breeders_more_desc:0 "§LThis species sees reproduction and parenthood as the most important part of life, greatly increasing population growth.§!\n"
+ 
+ trait_talented_more:0 "Gifted"
+ trait_talented_more_desc:0 "§LMembers of this species are born with incredible natural aptitude.§!\n"
+ trait_talented_not:0 "Uninterested"
+ trait_talented_not_desc:0 "§LMembers of this species are naturally uninterested in personal development and shows decreased aptitude.§!\n"
+ trait_talented_adv:0 "Heroic"
+ trait_talented_adv_desc:0 "§LMembers of this species are born with almost unnatural inherent aptitude and pushes themselves harder than anyone to release their full potential.§!\n"
+ 
+ trait_quick_learners_more:0 "Frantic Learners"
+ trait_quick_learners_more_desc:0 "§LMembers of this species are incredibly quick to learn from their experience.§!\n"
+ trait_quick_learners_adv:0 "Regenerative Synapse"
+ trait_quick_learners_adv_desc:0 "§LMembers of this species can rewire their synaptic connections at will, providing optimized learning time and enhanced adaptability.§!\n"
+ 
+ trait_traditional_more:0 "Inspired"
+ trait_traditional_more_desc:0 "§LThis species are easily inspired with right words and are quick to unite under a singular purpose or value.§!\n"
+ trait_traditional_adv:0 "Unified"
+ trait_traditional_adv_desc:0 "§LMembers of this species have limited access to psionic mind-links, through which they form small group conscience which acts as a proto-hive mind, unifying multiple individuals under a singular purpose.§!\n"
+ 
+ trait_docile_more:0 "Tranquil"
+ trait_docile_more_desc:0 "§LMembers of this species are calm and require little instructions to stay in line. They are very cooperative and civil.§!\n"
+ trait_docile_adv:0 "Zen"
+ trait_docile_adv_desc:0 "§LMembers of this species are naturally at peace with themselves, and act with absolute order and purpose, to the point where they almost seem machinistic in nature.§!\n"
+ 
+ trait_strong_adv:0 "Empowered"
+ trait_strong_adv_desc:0 "§LMembers of this species does not only have incredible physical strength, but their limited access to innate telekinesis allows incredible combat capabilities, at the cost of increased need for sustinence.§!\n"
+ 
+ trait_nomadic_more:0 "Migratory"
+ trait_nomadic_more_desc:0 "§LThis species have survived through frequent migration to avoid harm, and its members enjoy traveling across long distances.§!\n"
+ trait_nomadic_adv:0 "Travelers"
+ trait_nomadic_adv_desc:0 "§LMembers of this species possess absolutely no sedimentary value of their home and will stop at nothing to relocate for even a slightly better environment.§!\n"
+ 
+ trait_communal_more:0 "Organized"
+ trait_communal_more_desc:0 "§LMembers of this species likes to keep their surroundings well organized and requires little physical room to stay happy.§!\n"
+ trait_communal_adv:0 "Boundless"
+ trait_communal_adv_desc:0 "§LMembers of this species lacks concept of local communities but rather sees its entire society as a whole community. They care little about familial and community borders, and get along well with all neighbors.§!\n"
+ 
+ trait_conformists_more:0 "Loyal"
+ trait_conformists_more_desc:0 "§LThese people are extremely loyal and simply will not question their government nor its ethics.§!\n"
+ trait_conformists_adv:0 "Adherent"
+ trait_conformists_adv_desc:0 "§LThese people never challenge or question the leadership or their motives, and will simply comply and follow their leader's guidence to the ends of the universe.§!\n"
+ 
+ trait_venerable_adv:0 "Genome Regeneration"
+ trait_venerable_adv_desc:0 "§LThis species' genes self-regenerate the buffer segments and autonomously repair any damages to some extent, providing massively increased lifespans without the needs of modification and medicine.§!\n"
+ 
+ trait_resilient_more:0 "Stalwart"
+ trait_resilient_more_desc:0 "§LMembers of this species are very enthusiastic in defense of their home against threats, and will fight with all might to stand the ground.§!\n"
+ trait_resilient_not:0 "Degraded"
+ trait_resilient_not_desc:0 "§LMembers of this species lose interest with extended periods of status quo, and will not respond well to enemy while in a defensive position.§!\n"
+ trait_resilient_adv:0 "Guardians"
+ trait_resilient_adv_desc:0 "§LMembers of this species sees protection of their home as the most important job one can ever take and will stop at nothing to fend off any hostile invasions, even if it means losing the very thing that defines them.§!\n"
+ 
+ trait_conservational_more:0 "Recyclers"
+ trait_conservational_more_desc:0 "§LMembers of this species believes no resources should ever be wasted, showing little discomfort for using recycled or reused goods.§!\n"
+ trait_conservational_adv:0 "Efficient"
+ trait_conservational_adv_desc:0 "§LMembers of this species show unnatural creativity and discipline in conserving every last bit of resources they handle.§!\n"
+
+
+ trait_robot_power_drills_more:0 "Optimized Drills"
+ trait_robot_power_drills_more_desc:0 "§LA battery of high-power drills and an array of sensors and processors tuned for efficient mineral drilling.§!\n"
+ trait_robot_power_drills_not:0 "Multi-Tool"
+ trait_robot_power_drills_not_desc:0 "§LThe standard-issue drills have been replaced with a smaller multi-tool, giving more room for other modules.§!\n"
+
+ trait_robot_harvesters_more:0 "Genetic Resequencers"
+ trait_robot_harvesters_more_desc:0 "§LIn addition to advanced harvester modules, the on-site genetic resequencers allows for optimization of crop on individual basis.§!\n"
+ trait_robot_harvesters_not:0 "Fingered limbs"
+ trait_robot_harvesters_not_desc:0 "§LFingered limbs like these make general farming labor such as soil manipulation much more inefficient, but instead offers increased number of tasks available with each limb.§!\n"
+
+ trait_robot_superconductive_more:0 "Hyperconductive"
+ trait_robot_superconductive_more_desc:0 "§LExcess power input allows the unit to deploy its nano-field manipulators combined with dedicated quantum processors, allowing multi-dimensional tunneling to generate extra power when larger energy transmissions are needed.§!\n"
+ trait_robot_superconductive_not:0 "Insulated"
+ trait_robot_superconductive_not_desc:0 "§LMultiple micro-lattice covering the entire surface of this unit provides with increased insulation from external elements, which provides with increased unit stability at the cost of energy transmission losses.§!\n"
+
+ trait_robot_efficient_processors_complex:0 "Quantum Computing Cores"
+ trait_robot_efficient_processors_complex_desc:0 "§LImplementation of complex quantum computing processors allows these units to finish complex computations rapidly, but simpler redundant calculations will force temporary re-wiring of core processes, costimg some performance.§!\n"
+ trait_robot_efficient_processors_simple:0 "Serial Computation Matrix"
+ trait_robot_efficient_processors_simple_desc:0 "§LMultiple processors wired in serial with real-time learning algorythms allows for optimization of repetetive tasks on per-unit basis, but it will not be able to adapt to more complex, ever-changing tasks.§!\n"
+
+ trait_robot_logic_engines_more:0 "Swarm Analysis Processor"
+ trait_robot_logic_engines_more_desc:0 "§LMassive matrix of nanoprocessors working in symphony like a mini-hive mind allows for rapid analysis and reconfiguration of scientific calculations, allowing for incredibly efficient research protocols.§!\n"
+ trait_robot_logic_engines_not:0 "Hardlinks"
+ trait_robot_logic_engines_not_desc:0 "§LHardware-level protocols nailed down to prevent overrides, these have a toll on fields of research that require constant change, but is much more efficient on anything else.§!\n"
+
+ trait_robot_engineer:0 "Engineering Wired"
+ trait_robot_engineer_desc:0 "§LMultiple optimizations have been applied to these units for improved performance at mechanical sciences.§!\n"
+ trait_robot_physicist:0 "Physics Wired"
+ trait_robot_physicist_desc:0 "§LMultiple optimizations have been applied to these units for improved performance at abstract sciences.§!\n"
+ trait_robot_sociologist:0 "Sociology Wired"
+ trait_robot_sociologist_desc:0 "§LMultiple optimizations have been applied to these units for improved performance at organic sciences.§!\n"
+
+ trait_robot_propaganda_machines_more:0 "Conscience Uplink"
+ trait_robot_propaganda_machines_more_desc:0 "§LQuantum communication uplink is utilized to connect each and every one of these units together for ease of access regardless of distance, allowing increased synchronity among the population.§!\n"
+ trait_robot_propaganda_machines_not:0 "Isolated Systems"
+ trait_robot_propaganda_machines_not_desc:0 "§LIn extension to isolation of direct connection between units, each systems within the unit has been isolated for better efficiency of material labor.§!\n"
+
+ trait_robot_loyalty_circuits_not:0 "Uncomfortable"
+ trait_robot_loyalty_circuits_not_desc:0 "§LThese units have been designed for work efficiency rather than convenience of its core conscience.§!\n"
+
+ trait_robot_double_jointed_more:0 "Replicator Deployment"
+ trait_robot_double_jointed_more_desc:0 "§LWhile its core hardware is extremely complex, its limbs can be printed on-site using efficient self-replicators, allowing them to be stored and transported with massively reduced volume per unit.§!\n"
+
+ trait_robot_durable_more:0 "Maintenance Nanobots"
+ trait_robot_durable_more_desc:0 "§LBuilt-in self-maintaining nanobots with basic printing protocols allows these units to repair on the field with virtually no downtime at extrene efficiency.§!\n"
+
+ trait_robot_enhanced_memory_more:0 "Extra Memory Banks"
+ trait_robot_enhanced_memory_more_desc:0 "§LParallel array of memory banks with dedicated management processor may be costly, but is unrivaled in its efficiency in memory storage and retrieval speeds.§!\n"
+ trait_robot_enhanced_memory_not:0 "Physical Storage"
+ trait_robot_enhanced_memory_not_desc:0 "§LUnits are outfitted with hard, physcial storage, providing reduced maintenance at the cost of overall data storage.§!\n"
+
+ trait_robot_learning_algorithms_more:0 "Regenerative Datalinks"
+ trait_robot_learning_algorithms_more_desc:0 "§LAdditional cores for real-time reconfiguation of information processing algorithms allows for massively increased rate of neural development.§!\n"
+
+ trait_robot_mass_produced_more:0 "Standard Replication Protocols"
+ trait_robot_mass_produced_more_desc:0 "§LBuilt-in replication protocols allows these units to be replicated under much simpler conditions, allowing massively increased factory output.§!\n"
+
+ trait_robot_recycled_more:0 "Modular"
+ trait_robot_recycled_more_desc:0 "§LModular designs not only on bigger limb levels but down to smaller parts allows massively increased amounts of parts to be recovered on decomissioned units.§!\n"
+
+ trait_robot_streamlined_protocols_more:0 "Synchronic Protocols"
+ trait_robot_streamlined_protocols_more_desc:0 "§LA dedicated processor for real-time evaluation and synchronization of datastreams in each and every units allows for minimal efficiency loss for each unit added to clusters.§!\n"

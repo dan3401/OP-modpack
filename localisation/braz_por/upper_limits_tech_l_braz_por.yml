@@ -1,0 +1,110 @@
+﻿l_braz_por:
+#{
+ # #######################
+ # Written by kngpig #
+ # #######################
+ #
+ # $tooltip$ , $VALUE$ (Putting up an existing localization line)
+ # £icon£ , £mod_job_industry_equipements_add£ (Putting up an icon)
+ # §colour§ , §R(Red)§! (R, Y, E, H, S, B, G) (! Returns to default) (R Red) (Y Yellow) (B Blue) (G Green)
+ # [(Scope.Call)] , [contact_empire.GetName] (You can have multiple scope into a specific thing based on event, there is also specific scopes the game uses. Example: primitive_civ, conquered_primitive_country, LastKilledCountryName, malfunctioning_leader)
+ # 
+ # #######################
+ #
+ # #######################
+#}
+
+modifiers_only_adding_more_in_future:0 "§RAdicionando mais no futuro.§!"
+
+ # #######################
+ # Technology
+ # #######################
+
+ #Physics
+tech_physics_alteration:0 "Alteração da física"
+tech_physics_alteration_desc:0 "Mudar a física do mundo nos permitirá fazer mais do que somos capazes."
+tech_artifical_physics:0 "Física artificial"
+tech_artifical_physics_desc:0 "A alteração é apenas o início, por que não criar nossas próprias regras enquanto estamos nisso."
+tech_reality_formation:0 "Formação de realidade"
+tech_reality_formation_desc:0 "Nós temos a habilidade para produzir e confinar nossas próprias realidades."
+tech_rift_solidity:0 "Solidez da fenda"
+tech_rift_solidity_desc:0 "Nós podemos estudar e tornar claro as leis que governam nosso universo, poderíamos descobrir se realmente existe algo aleatório."
+tech_extreme_energies:0 "Energias extremas"
+tech_extreme_energies_desc:0 "Há poder e energias que você não pode começar a entender."
+tech_quantum_computers:0 "Computadores quânticos"
+tech_quantum_computers_desc:0 "Troca todos os computadores por computadores quânticos, fazendo com que cálculos e trabalhos sejam realizados mais rápido."
+tech_solid_light_1:0 "Protótipo de luz sólida"
+tech_solid_light_1_desc:0 "Ao alterar a massa de fótons e comprimi-los, é possível criar fluxos de luz tão densos quanto metais sólidos."
+tech_solid_light_2:0 "Motores de luz do Titã"
+tech_solid_light_2_desc:0 "Uma compressão mais forte do fóton, compatível com qualquer coisa feita de matéria padrão."
+tech_solid_light_3:0 "Sols de fóton"
+tech_solid_light_3_desc:0 "Uma armadura feita de pura luz, não apenas objetos físicos ricocheteiam na superfície, objetos desintegram instantâneamente ao toque."
+tech_quantum_calculatives:0 "Cálculo quântico"
+tech_quantum_calculatives_desc:0 "As antigas equações físicas são superadas e requerem uma atualização."
+tech_singular_particle:0 "Partícula singular"
+tech_singular_particle_desc:0 "Ao descobrir as partículas únicas que produzem a totalidade de tudo no universo, quebramos as limitações sobre as quais tudo está estabelecido."
+tech_compact_ftl:0 "Motor de MRQL compacto"
+tech_compact_ftl_desc:0 "Uma versão menor do motor MRQL, nos permitindo fazer mais com o MRQL do que ter que perder espaço em uma nave com uma unidade MRQL maior que o necessário."
+tech_gravity_cannon_1:0 "Canhão de gravidade"
+tech_gravity_cannon_1_desc:0 "Dispara um tiro de energia denso, ele puxa tudo e compacta, quebrando a integridade estrutural das naves ou qualquer coisa que isso acerte."
+tech_gravity_cannon_2:0 "Canhão de pressão"
+tech_gravity_cannon_2_desc:0 "Uma versão melhor dos Canhões de Gravidade, criando força criadora que esmaga a maioria das coisas na área de acerto em uma pequena bola de metal e lixo."
+tech_gravity_cannon_3:0 "Canhão de buraco negro"
+tech_gravity_cannon_3_desc:0 "Uma versão melhorada do Canhão de pressão, esmagando as coisas em um pequeno buraco negro que consome mais coisas ao seu redor antes de desaparecer devido à sua radiação natural."
+tech_high_efficiency_photovoltaic:0 "Fotovoltaica de alta eficiência"
+tech_high_efficiency_photovoltaic_desc:0 "Um sistema fotovoltaico melhor, mais acessível e confiável permite que a produção em massa substitua e crie grandes campos de painéis solares."
+
+ #Engineering
+tech_standard_automation:0 "Automação padrão"
+tech_standard_automation_desc:0 "Braços robóticos padronizados, fábricas padronizadas, produção padronizada, você está praticamente construindo fábricas em fábricas em fábricas."
+tech_civil_automation:0 "Automação civil"
+tech_civil_automation_desc:0 "A automação é inevitável, nós, seres conscientes, sempre encontraremos o caminho mais fácil, mesmo que seja o pior."
+tech_nanorobotics:0 "Nanorobotica"
+tech_nanorobotics_desc:0 "Robótica ao nível nanoscópico, aprendemos a usar ferramentas e máquinas que nos permitem pesquisar engenharia mais rapidamente."
+tech_nanite_programing:0 "Programação Nanite"
+tech_nanite_programing_desc:0 "Criamos nanites simples programadas para trabalhar nas coisas mais simples."
+tech_nanite_marvels:0 "Maravilhas de Nanite"
+tech_nanite_marvels_desc:0 "Podemos produzir nanites avançados que podem ser usados ​​para desconstruir o alvo molécula por molécula ou nanites que se ligam para produzir um casco adaptável."
+tech_special_materials:0 "Materiais especiais"
+tech_special_materials_desc:0 "Existem materiais que você não consegue entender."
+tech_material_exploition_lm:0 "Exploração de material: Metal Vivo"
+tech_material_exploition_lm_desc:0 "Normalmente, eles não têm muito uso comum, mas, mexendo com a estrutura dos materiais ou com a física, podemos produzir alguns resultados úteis a partir deles."
+tech_material_exploition_zro:0 "Exploração de material: Zro"
+tech_material_exploition_zro_desc:0 "Normalmente, eles não têm muito pouco uso comum, mas, mexendo com a estrutura dos materiais ou com a física, podemos produzir alguns resultados úteis a partir deles."
+tech_material_exploition_dm:0 "Exploração de material: Matéria escura"
+tech_material_exploition_dm_desc:0 "Normalmente, eles não têm muito pouco uso comum, mas, mexendo com a estrutura dos materiais ou com a física, podemos produzir alguns resultados úteis a partir deles."
+tech_improved_forging_techniques:0 "Técnicas de fornalha aprimoradas"
+tech_improved_forging_techniques_desc:0 "Melhores técnicas de forja, permitindo criar mais liga com menos gerenciamento e custo."
+tech_improved_production_techniques:0 "Técnicas de produção aprimoradas"
+tech_improved_production_techniques_desc:0 "Melhores técnicas de produção, permitindo produzir mais bens de consumo com menos gerenciamento e custo."
+tech_ftl_shells_1:0 "Cascos de guerra MRQL"
+tech_ftl_shells_1_desc:0 "Com cascos espaciais de emissão padrão integrados a pequenos acionamentos MRQL, a velocidade de massa do MRQL cria um impacto explosivo maior do que o uso de propulsão de energia de massa sólida.$modifiers_only_adding_more_in_future$"
+tech_ftl_shells_2:0 "Balas do Vazio"
+tech_ftl_shells_2_desc:0 "Projetado especialmente para a velocidade, com uma forma que não cria resistência ao espaço e gera ainda mais potência em direção a uma unidade MRQL melhor e mais poderosa.$modifiers_only_adding_more_in_future$"
+tech_ftl_shells_3:0 "Balas quânticas"
+tech_ftl_shells_3_desc:0 "Velocidade extrema com grande massa, a velocidade é ainda maior que o último design, permitindo projéteis com velocidade de quase teletransporte.$modifiers_only_adding_more_in_future$"
+tech_glitch_drives_1:0 "Drivers de 'glitchs'"
+tech_glitch_drives_1_desc:0 "Provoca um 'glitch' e teleporta as naves um pouco para um espaço próximo, a localização é aleatória a um grau que nem a nave pode prever, mas é o suficiente para evitar ataques que teriam atingido.$modifiers_only_adding_more_in_future$"
+tech_glitch_drives_2:0 "Geradores de Vazios"
+tech_glitch_drives_2_desc:0 "Observa a nave e gera vazios entre os ataques e a nave, enviando-o para uma distância em que nunca faria mal a ninguém.$modifiers_only_adding_more_in_future$"
+tech_glitch_drives_3:0 "Sexta singularidade"
+tech_glitch_drives_3_desc:0 "Um teletransporte controlado a partir da nave a cada poucos segundos, permitindo movimentos extremamente precisos e evitação para outro espaço.$modifiers_only_adding_more_in_future$"
+tech_advanced_drilling_mechanics:0 "Mecânica de perfuração avançada"
+tech_advanced_drilling_mechanics_desc:0 "Uma maior compreensão sobre o funcionamento de como as brocas devem ser projetadas e produzidas nos permite criar brocas duradouras para fazer furos profundos no solo que atingem minerais que seriam inacessíveis de outra maneira."
+tech_portal_building:0 "Construção de portal"
+tech_portal_building_desc:0 "O processo de construção de uma estrutura para abrigar um portal é complicado e exige a produção de mentes de grande número de pessoas."
+
+
+ #Society
+tech_dna_studies:0 "Estudos de DNA"
+tech_dna_studies_desc:0 "DNA é complicado, sabendo mais sobre isto nos fornecerá um melhor entendimento sobre a sociedade."
+tech_technology_implantation:0 "Implante tecnológico"
+tech_technology_implantation_desc:0 "A implantação de módulos seria uma norma. Isso nos permite mudar forçosamente a mentalidade de alguém com um chip cerebral."
+tech_immortalization:0 "Imortalização"
+tech_immortalization_desc:0 "Ao manter os cérebros dos líderes em robôs realistas, podemos mantê-los vivos por um longo tempo, bem após a data de vencimento."
+tech_chaotic_theory:0 "Teoria caótica"
+tech_chaotic_theory_desc:0 "Crenças e forças extremas tornadas reais, não para os fracos de espírito."
+tech_engodding:0 "Endeusamento"
+tech_engodding_desc:0 "Vida ou DNA, isto não importa, oque importa agora é se você tem o desejo de tornar-se um deus"
+tech_god_foods:0 "Alimentos de um deus"
+tech_god_foods_desc:0 "Quando percebemos que a comida é apenas um subproduto, há pouco sentido em se preocupar com ela..."

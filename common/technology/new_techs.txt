@@ -1,0 +1,287 @@
+tech_repeatable_ee_shield = {
+	area = physics
+	cost = 180000
+	cost_per_level = @repeatableTechLevelCost
+	tier = 5
+	is_dangerous = yes
+	category = { voidcraft }
+	levels = -1
+	weight = 70
+
+	potential = {
+		has_country_flag = ee_research
+	}
+
+	modifier = {
+		ship_shield_add = 10000 
+	
+	}
+	
+	ai_weight = {
+		factor = 1.0
+	}
+
+	weight_groups = {
+		#repeatable
+	}
+	mod_weight_if_group_picked = {
+		#repeatable = 0.01
+	}
+}
+
+
+
+
+tech_repeatable_ee_armor = {
+	area = engineering
+	cost = 180000
+	cost_per_level = @repeatableTechLevelCost
+	tier = 5
+	is_dangerous = yes
+	category = { voidcraft }
+	levels = -1
+	weight = 70
+
+	potential = {
+		has_country_flag = ee_research
+	}
+
+	modifier = {
+		ship_armor_add = 10000 
+	}
+	
+	ai_weight = {
+		factor = 0
+	}
+
+	weight_groups = {
+		#repeatable
+	}
+	mod_weight_if_group_picked = {
+		#repeatable = 0.01
+	}
+}
+
+tech_repeatable_ee_hp = {
+	area = engineering
+	cost = 180000
+	cost_per_level = @repeatableTechLevelCost
+	tier = 5
+	is_dangerous = yes
+	category = { voidcraft }
+	levels = -1
+	weight = 70
+
+	potential = {
+		has_country_flag = ee_research
+	}
+
+	modifier = {
+		ship_hull_add = 10000
+	}
+	
+	ai_weight = {
+		factor = 1.0
+	}
+
+	weight_groups = {
+		#repeatable
+	}
+	mod_weight_if_group_picked = {
+		#repeatable = 0.01
+	}
+}
+
+
+tech_repeatable_ee_evasion = {
+	area = engineering
+	cost = 180000
+	cost_per_level = @repeatableTechLevelCost
+	tier = 5
+	is_dangerous = yes
+	category = { voidcraft }
+	levels = -1
+	weight = 70
+
+	potential = {
+		has_country_flag = ee_research
+	}
+
+	modifier = {
+		ship_evasion_add = 1
+	}
+	
+	ai_weight = {
+		factor = 0
+	}
+
+	weight_groups = {
+		#repeatable
+	}
+	mod_weight_if_group_picked = {
+		#repeatable = 0.01
+	}
+}
+
+tech_repeatable_ee_armor_penetration = {
+	area = physics
+	cost = 180000
+	cost_per_level = @repeatableTechLevelCost
+	tier = 5
+	is_rare = yes
+	category = { voidcraft }
+	levels = -1
+	weight = 70
+
+	potential = {
+		has_country_flag = ee_research
+	}
+
+	modifier = {
+		ship_armor_penetration_mult = 0.01
+	}
+	
+	ai_weight = {
+		factor = 0
+	}
+
+	weight_groups = {
+		#repeatable
+	}
+	mod_weight_if_group_picked = {
+		#repeatable = 0.01
+	}
+}
+
+tech_repeatable_ee_shield_penetration = {
+	area = physics
+	cost = 180000
+	cost_per_level = @repeatableTechLevelCost
+	tier = 5
+	is_rare = yes
+	category = { field_manipulation }
+	levels = -1
+	weight = 70
+
+	potential = {
+		has_country_flag = ee_research
+	}
+
+	modifier = {
+		ship_shield_penetration_mult = 0.01
+	}
+	
+	ai_weight = {
+		factor = 0
+	}
+
+	weight_groups = {
+		#repeatable
+	}
+	mod_weight_if_group_picked = {
+		#repeatable = 0.01
+	}
+}
+
+
+tech_repeatable_ee_developement = {
+	area = society
+	cost = 180000
+	cost_per_level = @repeatableTechLevelCost
+	tier = 5
+	is_rare = yes
+	category = { statecraft }
+	levels = -1
+	weight = 70
+
+	potential = {
+		has_country_flag = ee_research
+	}
+
+	modifier = {
+		all_technology_research_speed = 0.10
+	}
+
+	
+	
+	ai_weight = {
+		factor = 0
+	}
+
+	weight_groups = {
+		#repeatable
+	}
+	mod_weight_if_group_picked = {
+		#repeatable = 0.01
+	}
+}
+
+
+tech_repeatable_ee_awesome = {
+	area = society
+	cost = 180000
+	cost_per_level = @repeatableTechLevelCost
+	tier = 5
+	is_rare = yes
+	category = { statecraft }
+	levels = -1
+	weight = 70
+
+	potential = {
+		has_country_flag = ee_research
+	}
+
+	modifier = {
+		country_unity_produces_mult = 0.1
+		country_virtue_produces_mult = 0.1
+	}
+
+	
+	
+	ai_weight = {
+		factor = 0
+	}
+
+	weight_groups = {
+		#repeatable
+	}
+	mod_weight_if_group_picked = {
+		#repeatable = 0.01
+	}
+}
+
+
+
+tech_repeatable_ee_eter = {
+	area = society
+	cost = 180000
+	cost_per_level = @repeatableTechLevelCost
+	tier = 5
+	is_rare = yes
+	category = { field_manipulation }
+	levels = -1
+	weight = 70
+
+	potential = {
+		has_country_flag = ee_research
+	}
+
+	modifier = {
+		country_base_eternium_produces_add = 1
+	}
+
+	
+	
+	ai_weight = {
+		factor = 0
+	}
+
+	weight_groups = {
+		#repeatable
+	}
+	mod_weight_if_group_picked = {
+		#repeatable = 0.01
+	}
+}
+
+

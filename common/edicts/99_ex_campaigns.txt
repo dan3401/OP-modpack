@@ -1,0 +1,124 @@
+##########################################################################
+# edicts
+##########################################################################
+
+#################
+# Campaigns
+# shorter duration, cost energy
+#################
+
+#priority_protocol = {
+#	length = 3600
+#	resources = {
+#		category = campaigns
+#		cost = {
+#			energy = 2000
+#		}
+#	}
+#
+#	modifier = {
+#		pop_government_ethic_attraction = 0.25
+#		country_base_influence_produces_add = 0.5
+#		planet_stability_add = 3
+#	}
+#	
+#	potential = {
+#		NOT = { has_ethic = ethic_gestalt_consciousness }
+#		has_civic = civic_sapient_intervention
+#		has_technology = tech_planetary_unification
+#	}
+#	
+#	ai_weight = {
+#		weight = 0
+#	}	
+#}
+
+#enhanced_protocol = {
+#	length = 3600
+#	resources = {
+#		category = campaigns
+#		cost = {
+#			energy = 5000
+#		}
+#	}
+#
+#	modifier = {
+#		pop_government_ethic_attraction = 0.40
+#		country_base_influence_produces_add = 1
+#		country_election_influence_cost_mult = -0.50
+#		planet_stability_add = 8
+#		local_trade_protection_add = 10
+#	}
+#	
+#	potential = {
+#		NOT = { has_ethic = ethic_gestalt_consciousness }
+#		has_civic = civic_sapient_intervention
+#		has_technology = tech_planetary_unification
+#	}
+#	
+#	ai_weight = {
+#		weight = 1
+#		modifier = {
+#			factor = 0
+#			energy < 10000
+#		}
+#	}	
+#}
+
+crisis_protocol = {
+	length = 720
+	resources = {
+		category = campaigns
+		cost = {
+			energy = 15000
+		}
+	}
+
+	modifier = {
+		ship_weapon_damage = 0.33
+		ship_evasion_mult = 0.33
+	}
+	
+	potential = {
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+		has_civic = civic_sapient_intervention
+		has_technology = tech_sapient_ai
+	}
+	
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			energy < 40000
+		}
+	}	
+}
+
+ascension_protocol = {
+	length = 3600
+	resources = {
+		category = campaigns
+		cost = {
+			energy = 20000
+		}
+	}
+
+	modifier = {
+		country_unity_produces_mult = 0.3
+		country_base_influence_produces_add = 2
+	}
+	
+	potential = {
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+		has_civic = civic_sapient_intervention
+		has_ascension_perk = ap_synthetic_evolution
+	}
+	
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			energy < 45000
+		}
+	}	
+}

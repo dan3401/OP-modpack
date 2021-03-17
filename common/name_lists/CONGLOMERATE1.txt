@@ -1,0 +1,366 @@
+﻿### Ploror Conglomerate -- A far-future human megacorporation
+### Created by Edcrab (with real names based on Henrik Thyrwall's UNE list)
+
+CONGLOMERATE1 = {
+	randomized = no
+	alias = "Conglomerate1"
+	ship_names = {
+
+		generic = {
+		 
+		}
+
+		corvette = {
+			AB1 AB2 AB-A AB3 AB4 AB5 AB6 AB7 AB8 AB9 AB10 AB11 AB12 AB12-a AB14 AB15 AB15a Alpha-1 Alpha-2 Alpha-3 Alpha-4 Alpha-5 Alpha-6 Alpha-7 Alpha-8 Alpha-9 Alpha-10 Alpha-11 Alpha-12 Alpha-12a Alpha-14 Alpha-15 Alpha-16 Alpha-17 Alpha-18 Alpha-19 Alpha-20
+		}
+		
+		destroyer = {
+			X1 X2 X3 X4 X5 X6 X7 X8 X9 X10 X11 X12 X12-r X14 X15 X16 XC-C18 X60 X61 X77 D-One D-Two D-Three D-Four D-Five D-Six  "Error Serial Revoked" "Beta-7d Modified" "Two Corvettes Glued Together"	
+		}
+		
+		cruiser = {
+			Chunk Thug Meathead Hardass Mule Workhorse Beast Brute Bruiser Musclehead "Grunt Manbrick" "Dirty Work" "The Suits Don't Read This" "Gauntlet Thrown" "Value Secured" "Audacious Fool" "Lovable Rogue" "Chronic Backstabber" "Mean But Hot"
+		}
+		
+		battleship = {
+			"Back in Black" "Stark Facts" "Green Line" "The Big Crash" Superior Supreme Excelsior Extremis "Insider Trading" "Unpleasant Metaphor" "Red Glare" "Glow Of Our Barrels"
+		}
+
+		titan = {
+			"Heavy Hitter" "The Equalizer" "The Avenger" "The Big Stick" "Overwhelming Force" "Hostile Takeover" "The Hard Way" "Sign On The Dotted Line"
+		}
+
+		colossus = {
+			CHECKMATE FINALE "LAST WORD" "THE END" "THE REST IS SILENCE"
+		}
+		
+		science = {
+			Alpha Beta Gamma Delta Epsilon Zeta Eta Theta Iota Kappa Lambda Mu Nu Xi Omicron Pi Rho Sigma Tau Upsilon Phi Chi Psi Omega 
+		}
+		
+		colonizer = {
+			Pilgrim Settler Comfort Joy Sunrise Sunbeam "Home Straight" "New Horizon" "New Hope" "New Dawn" "New Beginning" "Fresh Start" "Ol' Reliable" "Get Us Out Of Here" "Anywhere But Here" 
+		}
+		
+		constructor = {
+			Alpha Beta Gamma Delta Epsilon Zeta Eta Theta Iota Kappa Lambda Mu Nu Xi Omicron Pi Rho Sigma Tau Upsilon Phi Chi Psi Omega 
+		}
+
+		transport = {
+			Alpha Beta Gamma Delta Epsilon Zeta Eta Theta Iota Kappa Lambda Mu Nu Xi Omicron Pi Rho Sigma Tau Upsilon Phi Chi Psi Omega 
+		}
+	
+		military_station_small = {
+			"Fortress Platform One" "Fortress Platform Two" "Fortress Platform Three" "Fortress Platform Four" "Fortress Platform Five" "Fortress Platform Six" "Fortress Platform Seven" "Fortress Platform Nine" "Fortress Platform Ten" "Fortress Platform Eleven" "Fortress Platform Twelve" "Fortress Platform Twelve-A" "Fortress Platform Fourteen" 
+		}
+
+		ion_cannon = {
+			Bombard Ballista Catapult Harpoon Polybolos Culverin Slingshot Trebuchet Boomerang Javelin
+		}
+	}
+
+	ship_class_names = {
+		science = {
+			Explorer
+		}
+		constructor = {
+			Blacksmith
+		}
+		colonizer = {
+			Pioneer
+		}		
+		corvette = {
+			AAB1 AAB3 AAB12a AAB14 AAB15 AAB15a AAB14-Custom Serial-11 Serial-44 Serial-52 Beta-1 Beta-2 Beta-3 Beta-4 Beta-5 Beta-6 Beta-7 Beta-8 Beta-9 Beta-10 Beta-11 Beta-12 Beta-12ii
+		}
+		destroyer = {
+			PS-4 PS-5 PS-56 PS66 46-PSF 47-PSF 49-PSF 71-PSF 72-PSF 73-PSF 77-PSF 79-PSF 88-PSF 99-PSF 100-PSF 101-PSF 102-PSF 103-PSF 104-PSF 105-PSF 106-PSF 107-PSF 108-PSF 109-PSF 110-PSF 111-PSF 112-PSF 112-V-PSF	
+		}
+		cruiser = {
+			Hammer Spear Pike Mace Sledgehammer Pilum Flail Katar Khukuri Khopesh Knife Dagger Stiletto Shortsword Club Rock Stone Blade Axe Quarterstaff Stave	
+		}
+		battleship = {
+			Warhammer Lance Greataxe Halberd Glaive Sabre Jian Cutlass Rapier Dao Katana Mace Falchion	
+		}
+		StrikeCruiser = { 
+			Hammer Spear Pike Mace Sledgehammer Pilum Flail Katar Khukuri Khopesh Knife Dagger Stiletto Shortsword Club Rock Stone Blade Axe Quarterstaff Stave
+		}
+		Battlecruiser = {
+			Hammer Spear Pike Mace Sledgehammer Pilum Flail Katar Khukuri Khopesh Knife Dagger Stiletto Shortsword Club Rock Stone Blade Axe Quarterstaff Stave		
+		}
+		LightCarrier = { #carriers named after planets for now... 
+			Azqud Agrarm Imisan Phylos Audact Camblyr Voltain Kerenth Finibus Arqinfore Huevre Orduin Risrecht Serise Lodor Monrhein Thoyigos Jao Welv Topek Messene
+		}	
+		Carrier = {
+			Azqud Agrarm Imisan Phylos Audact Camblyr Voltain Kerenth Finibus Arqinfore Huevre Orduin Risrecht Serise Lodor Monrhein Thoyigos Jao Welv Topek Messene	
+		}
+		Dreadnought = { 
+			Warhammer Lance Greataxe Halberd Glaive Sabre Jian Cutlass Rapier Dao Katana Mace Falchion
+		}
+		Superdreadnought = {
+			Warhammer Lance Greataxe Halberd Glaive Sabre Jian Cutlass Rapier Dao Katana Mace Falchion		
+		}
+		Flagship = {
+			Pride
+		}
+		titan = {
+			Broadsword Greatsword Zweihänder Claymore
+		}
+		collosus = {
+			ENDGAME	
+		}			
+	}
+
+	fleet_names = {
+		random_names = {
+			"Liberty Fleet" "Justice Fleet" "Hope Fleet" "Kindness Fleet" "Virtue Fleet" "Protector Fleet" "Saviour Fleet" "Messiah Fleet" "Guardian Fleet" "Faith Fleet" "Trust Fleet" "Law Fleet" "Liberator Fleet" "Defender Fleet"
+		}
+		sequential_name = "%O% Fleet"
+	}
+	
+	army_names = {
+		defense_army = {
+			sequential_name = "%O% Planetary Guard"
+		}
+			
+		assault_army = {
+			sequential_name = "%O% Expeditionary Force"
+		}
+		
+		slave_army = {
+			sequential_name = "%O% Disposable Assets"
+		}
+		
+		clone_army = { 
+			sequential_name = "%O% Clone Army"
+		}
+		
+		robotic_army = {
+			sequential_name = "%O% Hunter-Killer Group"
+		}
+
+		robotic_defense_army = {
+			sequential_name = "%O% Defense Array"
+		}
+		
+		psionic_army = { 
+			sequential_name = "%O% Psi Commandos"
+		}
+		
+		xenomorph_army = {
+			sequential_name = "%O% Razorback Division"
+		}
+		
+		gene_warrior_army = {
+			sequential_name = "%O% Enhanced Troopers"
+		}
+
+		occupation_army = {
+			sequential_name = "%O% Occupation Army"
+		}
+
+		robotic_occupation_army = {
+			sequential_name = "%O% Robotic Occupiers"
+		}
+
+		primitive_army = {
+			sequential_name = "Primitive Army %C%"
+		}
+		industrial_army = {
+			sequential_name = "Industrial Army %C%"
+		}
+		postatomic_army = {
+			sequential_name = "Post-Atomic Army %C%"
+		}
+	}
+
+	planet_names = {
+
+		generic = {
+			names = {
+				Azqud Agrarm Imisan Phylos Audact Camblyr Voltain Kerenth Finibus Arqinfore Huevre Orduin Risrecht Serise Lodor Monrhein Thoyigos Jao Welv Topek Messene
+			}
+		}
+		
+		pc_desert = {
+			names = {
+			}
+		}
+		
+		pc_tropical = {
+			names = {
+			}
+		}
+		
+		pc_arid = {
+			names = {
+			}
+		}
+		
+		pc_continental = {
+			names = {
+			}
+		}
+		
+		pc_ocean = {
+			names = {
+			}
+		}
+		
+		pc_tundra = {
+			names = {
+			}
+		}
+		
+		pc_arctic = {
+			names = {
+			}
+		}
+
+		pc_savannah = {
+			names = {
+			}
+		}
+
+		pc_alpine = {
+			names = {
+			}
+		}
+		
+		pc_gaia = {
+			names = {
+			"Ploror II" "Second Ploror" "New Ploror" "Neo Ploror" "Ploror Genesis" "Ploror Reborn" "Ploror Gaia"
+			}
+		}
+		
+	}
+
+	### CHARACTERS   -  based on old Exigency namelist, the real names are from Henrik Thyrwall's UNE list all smashed together and adds extra sci-fi sounding junk to the mix
+
+	character_names = {
+
+		names1 = {
+			weight = 80
+			first_names_male = {
+				John Peter Adam James William Jacob Christopher Joshua Michael Ethan Joseph Matthew Anthony Daniel Ryan Samuel Stanislav 
+				David Logan Carter Benjamin Andrew Henry Nicholas Gavin Heior Owen Jack Wyatt Wayne Walter Charles Louis Merritt Earl Alfred Vernon
+				Edward Donald George Paul Greg Thomas Robert Gene Glen Hugh Ronald Francis Stephen Jon Richard Mark Marcus Scott Duncan
+				Douglas Keith Howard Russell Clayton Lee Steve Tom Clay Oliver Kenneth Ralph Lawrence Patrick Harry Alphonse Eder Iri
+				Eugene Frank Craig Jason Martin M'Bante Connor Quarir Sean An Bao Bo Cai Cheng De Dong Feng Gang Guo Hu Hui Xavier Jared Nuri  
+				You Yong Yi Xiong Wu Cooper Stanley Calhoun Neil Jeffrey Harold Raymond Fred Jian Jie Kang Li Liang Long Meng Ning Peng 
+				Marshall Silas Roy Jesse Ken Bruce Norris Horatio Clarence Lloyd Duane Mortimer Ben Ernest Warren Graham Marvin Orson Dennis
+				Jackson Dwight Harlan Arthur Percival Montgomery Clyde Rodney Gerald Franklin Jake Horace Irving Seth Randolph Floyd Carl 
+				Brent Cliff Malcolm Timothy Wallace Pierce Edmund Gary Tony Nathan Eric Albert Robin Geoffrey Larry Ian Leonard Gordon Derek
+				Maxwell Alec Bertram Rupert Dean Philip Ross Bwana Kofi Darren Melvin Justin Zack Elliot Simon Morgan Clark Jonathan Harrison
+				Edgar Nelson Emmett Trevor Travis Lance Adrian Desmond Brendan Ambrose Basil Kieran Conan Dermot Dudley Felix Farras
+				Finn Oscar Sidney Aaron Vincent Angus Grant Luke Miles Morton Rand Reginald Herbert Wesley Nellis Alexander Dominic Bradley
+				Liam Dirk Vance Kyle Chester Haas Ivan Nikolai Boris Vladimir Pyotr Alexei Dmitri Sergei Viktor Roman Igor Mikhail Vasily 
+				Vladislav Leonid Maxim Yuri Oleg Andrei Vyacheslav Aleksandr Anatoli Miroslav Artyom Bogdan Tian Wei Ezron Vitilier Wilhelm
+				Branislav Ilya Jaroslav Radomir Kirill Lubomir Yegor Qadir Amir Harshep Malek Cutter Pavel Konstantin Hret
+			}
+			first_names_female = {
+				Olivia Emily Sophie Jessica Alice Scarlett Emelin Daisy Eve Phoebe Sienna Anna Mary Megan Elizabeth Amy Darcy Matilda Erin
+				Lucy Grace Atera Evelyn Amber Harriet Caitlyn Jasmine Madison Kate Eleanor Alexandra Sarah Martha Bethany Rebecca Victoria
+				Hanna Naomi Lauren Clara Lannor Kayla Nicira Skye Eliza Patricia Linda Barbara Jennifer Maria Susan Margaret Dorothy
+				Lisa Nancy Helen Sandra Donna Carol Ruth Michela Sharon Michelle Kimberly Deborah Amelia Charlotte Isabella Ruby Addison 
+				Abigail Julia Samantha Brooklyn Eve Ashley Natalie Brianna Chloe Troia Lillian Judith Alison Amanda Angela Audrey Beatrice
+				Brienne Caroline Cassandra Charity Anne Clarime Christabel Cheryl Cynthia Cadence Cordelia Deanna Vi Temoriel Catherine
+				Denise Dolores Doreen Drusilia Edith Edna Eleonor Eileen Ellen Estelle Ethel Felicity Fiona Genevieve Gwen Gwenamie
+				Gwendolyn Henrietta Imogen Iris Imelda Jacqueline Jane Jade Jenna Joanna Josephine Julianne Kathleen Kierra Kaylee Leah Lois
+				Loretta Lorna Louisa Lynnette Lucinda Mabel Marcia Marilyn Marissa Marjorie Maud Melanie Myrna Mavis Nadine Paula Penelope
+				Philippa Priscilla Rhonda Rita Alyssa Rosamund Rosemary Roxanne Sabrina Selma Selina Sibyl Suzanne Tara Tabitha Thelma
+				Teresa Tiffany Vanessa Vivian Melissa Wanda Wendy Winifred Victoria Yvette Vera Zelda Joan Pamela Sherry Adrienne Monica
+				Irene Heather Lindsay Gillian Kristen Odette Felicia Candace Arlene Tisha Majel Fran Doris Julie Courtney Shelly Nell
+				Frances Mandy Mindy Rachel Miranda Virginia Gina Karla Tricia Diane Phyllis Sally Elaine Kara Shannon Susie Elle Gail Ann
+				Kathryn Tina Carrie Miriam Vivica Tamara Judy Willow Hilary Claire Danielle Teri Jackie Kelly Bonnie Holly Janice Brittney
+				Bianca Stephanie Natasha Lydia Mona Meredith Lynda Erica Heidi Paige Carmen Hayden Mallory Mercedes Marion Winona Jill
+				Molly Constance Jenny Penny Meryl Jodie Veronica April Sigourney Jillian Honor Truce Anna Yelena Olga Oksana Tatyana
+				Svetlana Nadya Yekaterina Irina Galina Miroslava Anastasia Vera Polina Lyudmila Elena Tatiana Sonia Mira Troya Dela
+				Marina Darya Irma Ksenia Alexandra Nadesja Valentina Arina Epril Serana Alya Galenka Katya Ljuba Radmila Natacha Vlada
+				Kat Liri Lyra Ariel Liara Merriwether Gaiyl Laurana Uisre Yuza Nuri Amari Kira Mina
+			}
+			second_names = {
+				Alder Adlus Brech Ravian Greeve Salar Vanus Valon Dritel Cooper Carter Guyal Hereward Wright Wricter Harper Telanier
+				Smith Jones Williams Taylor Brown Davies Evans Willik Johnson Robins Tamor Lanen Walch Smithselen Roberts Hall Wute
+				Wood Jackson Clark Lewis Mason Mitchell Lech Camlis Valward Quinn Murphy Mogahn Moore Murray Martin Cusp O'Neill
+				Anderson Calrein Haphly Reid Ross Watson Pavac Nile Telsori Harris Hayes Hughes Driscoll Price Jenkins Morgan Moss 
+				Sinclair Simpson Zane Young York Youngfellow Winters Worley Woodard Whitley Wheeler Wentworth West Weaver Webb Sashe
+				Sparks Carver Hunter Stanley Steel Stevens Stone Stewart Okadigbo Sullivan Swanson Swift Sykes Terrell Thornton
+				Tanner Turner Underwood Vincent Voight Gray Wade Waudeg Watts Oregon Denmark Caldur Owens Page Palmer Parker Checker
+				Perry Parson Payne Peters Phillips Pitt Lerst Ironsi Reynolds Reaves Reave Torus Rivers Robbins Innsley Fuentel Veroni
+				Robertson Ropeph Salinger Samuels Savage Saxban Tonner Schneider Scowley Sedgwick Shannon Flint Catost Ridwyler
+				Silverstone Smart Snow Kruger Landau Lawrence Lawson Lee Leonard Little Falstaff Moller Lowell Michaels Buchanan
+				Marshall Lynch Miller Montgomery Morris Nash Newman Nichols North Masters Haymaker Stammen Hayden Lovost Gevsov
+				Hansen Harrington Hart Henri Hossichori Higgs Hetzel Hoffman Hood Hutchinson Hyland Knight Kirk King Kenway Kennedy Kelly
+				Kane Nathaniel Jennax Jacobs Weber Sumeram Giles Glass Glover Goldberg Goodman Goodmach Graham Grant Graves Yardley
+				Gray Greybarr Goro Griffin Halley Hunter Holloway Hoover Hutchins Hill Hines Holden Harveson Handler Ipslock Bach
+				Conroy Cook Conley Compton Clarke Fields Farrell Felton Fisher Fleming Forrest Foster Freeman Weaver Wordtel Klein
+				Kent Gardner Gate Gabriels Daniels Darling Eastbound Edwards Stein Emerson Ericson Müller Schmidt Schneider Fischer 
+				Meyer Wagner Schulz Becker Hoffmann Bauer Brinkmann Brill Dietrich Erhard Grasser Guntenbad Schwerer Dreyer Wolf
+				Azikiwe Awolowo Balewa Akintola Turr Okonkwo Babangida Buhari Dimka Ibori Iwu Bamgboshe Biobaku Qasim Qudsi Qaderi
+				Tinibu Akinjide Akiloye Adeyemi Sekibo Oneymin Bankole Iweala Okonjo Gbadamosi Olanrewaju Whitfield Bennett Cross Saurn
+				Madaki Oyinlola Onyejekwe Jakande Ngige Uba Ohakim Alakija Onobanjo Mbanefo Mbadinuju Ekwensi Naidoo Swanepoel Turani
+				Msibi Ngobese Ngema Masuku Khonjwayo Khumalo Miro Kwayi Mambi Mbanjwa Mkhwemte Mtakwenda Ngwanya Nkwali Thwane Skhosana 
+				Tshonyane Xhamela Xoko Zangwa Ndungwane Dzana Gatyeni Gxarha Jwarha Khawuta Lacini Quadrini Mazzitelli Olivieri
+				Rossi Russo Ferrari Bianchi Ricci Marino Costa Giordano Mancini Rizzo Lombardi Moretti Ravelli Conti Gallo Bello Slivj
+				Albricci Badoglio Cappello "Di Robilant" "Di Savoia" Garibaldi Saletta Pallavicino Pianelli Mambretti Marcuzzi Valeri
+				Balletti Corsini D'Alessandro D'Agostino "De Rosa" "De Sciglio" "Di Chiara" "Di Bartolomei" Delvecchio Garcia Martinez 
+				Barakat Rodriguez Fernandez Sanchez Lopez Martin Perez Gonzalez Alvarez Gomez Diaz Dominguez Hernandez Eruo Polinlio
+				Ramirez Mendez Perez Vasquez Ruiz Aguera Alonso Batista Esguerra Flores "de la Guardia" "de la Cruz" "de la Vega"
+				"de Vargas" Ibanez Moralez Riveros Rosario Velazco Torres Quesada Saldana Salazar Ortega Ortiz Solano Romero Halres
+				"Del Grosso" D'Antoni Fazio "Di Bella" "Di Gennaro" Fabbrini Gambadori Galvani Marchetti Bianconelli Antonelli Dejyt				
+				Braun Krüger Stal Keller Reins Schust Baumann Ahlandt Sauer Kreud Kilmeister Andbede Candy Porter Adabaker Ulerten
+				Dunkler Alexander Allen Austlire Bauer Shield Banelop Baker Bailey Banks Barker Baseyal Brewster Brooks Bastion 
+				Duala Vemmel Hamperdit Ohnein Osterman Louris Karamanit Nalore Sorom Levisteq Cohen Collins Conrad Haj Rodriguez
+				Mendez Perez Vasquez Ruiz Aguera Alonso Batista Esguerra Flores Fernandez Sanchez Dominguez Hernandez Illem
+				Bloom Sherman Reigen Bernace Bates Becker Tellmater Carver Rosseti Webber Cartwright Carpenter Bucklaw Knight 
+				Burness Butler Angel Lodon Carcer Carter Charr Occenley Chase Channing Chapman Arnsley Milze Dannon Schäfer Eckmul
+				Sharp Durston Howell Mead Poole Ash Brockbank Gersen Shavlin Cooper Dixon Baxter Drake Garland Wells Hargreaves Houghton
+				Haygarth Hurst Kingsford Rawden Walden Walters Buxton Dyson Manors McMillan Nnamani Ironsi Ojukwu Sterling Bayer
+				Ward Howard Lloyd Tanner Nichekal Matthews Ellis Whyting Whittaker Barton Hawkins Garrovick Reeves Vernon Braveridge
+				Sato Suzuki Takahashi Tanaka Watanabe Ito Nakamura Kobayashi Yamamoto Kato Yoshida Yamada Sasaki Yamaguchi Naik 
+				Inoue Kimura Shimizu Hayashi Saito Yamazaki Nakajima Mori Abe Ikeda Hashimoto Ishikawa Yamashita Ogawa Ishii 
+				Goto Okada Fujita Sakamoto Murakami Nishimura Nakagawa Harada Okamoto Miura Takaya Amano Higuchi Ota Kusanagi
+				Dubois Durand Leroy Moreau Lambert Dupont Leclerc Laurent Renard Tremblay Gagnon Roy Bouchard Gauthier Hasegawa
+				Morin Lavoie Fortin Gagne Duval Hébert Deville Gerard Duchaine Jauvin Gilbert Paquette Armann Matsumoto Zorrel
+				Pelletier Rémy Giroud Bosquet Lebouef Péllissier Deveraux Kumar Prasad Acharya Swamy Pillai Gowda Nayak Desmukh 
+				Nasfielima Hasderili Tomorish Moorthi Kumar Venktaesan Wolvsbahn Vemptin Omri Topash Pilitri Tomas Nurinen Bell
+				Kulkarni Dodamani Patil Gupta Sharma Namboodiri Pannikar Varma Sondharam Sooriyaprakash Chandran Vijay Horritan
+				Lopez Martin Perez Gonzalez Alvarez Diaz Iranii Margoyles al-Ammar al-Bishi al-Astion Mustrithi Delacroix
+			}
+			regnal_first_names_male = {
+				Alexander Veld Borr Tiberius Theoterem Valerian Maximus Lucius Wilburam Mitelic
+			}
+			regnal_first_names_female = {
+				Thimystera Fatima Mira Coraeli Velthseine Sularis Trinae Anriett Olienna
+			}
+			regnal_second_names = {
+				Miccanorol Urien Url'Lilstos Hertammen Valmor Tenteri Khan al-Oddenbar Atomyer
+			}
+		}
+				
+		names2 = {
+			weight = 10
+			first_names_male = {
+				An Bao Bo Cai Cheng De Dong Feng Gang Guo Hu Hui Jian Jie Kang Li Liang Long Meng Ning Peng Qiang Shi Song Tao Tian Wei 
+				You Yong Yi Xiong Wu
+			}
+			first_names_female = {
+				Ai Bi Cui Chan Dai Dan Fang Hong Hua Huan Jiao Ju Juan Lan Lian Lin Mei Na Ni Qian Qiao Qing Shan Shu Ting Wen Xia Xian
+				Xiang Xiu Xue Yan Ying Yu Yuan Yun Zhen Zhi Zhu Zi
+			}
+			second_names = {
+				Liang Luo Kuang Lu Zheng Lin Xu Xie Wang Zhu Yang Mao Shen Hu Tan He Deng Wu Cheng Gao Wan Kong Pan Sima Zhuge Ouyang Situ
+				Huang Zhao Zhang
+			}
+			regnal_first_names_male = {
+				You Yong Yi Xiong Wu Feng Gang Guo Hu Hui
+			}
+			regnal_first_names_female = {
+				Ai Bi Lian Lin Mei Na Ni Xiu Xue Yan Ying Yu Yuan
+			}
+			regnal_second_names = {
+				Wang Zhu Yang
+			}
+		}
+	}
+}

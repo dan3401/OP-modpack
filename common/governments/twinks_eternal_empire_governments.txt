@@ -1,0 +1,71 @@
+
+
+gov_eternal_continuum = {
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = { NOT = { value = auth_corporate } }
+	}
+	possible = {
+		OR = {
+		has_civic = civic_eternal_stability 
+		has_civic = civic_keepers
+
+		}
+	}
+
+	weight = {
+		base = 100000
+	}
+	ruler_title = "RULER_KEEPER"
+	ruler_title_female = "RULER_KEEPER_FEMALE"
+}
+
+
+gov_conclave_of_eternos = {
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = { NOT = { value = auth_corporate } }
+	}
+	possible = {
+		has_civic = civic_chosen_of_eternos
+		
+	}
+
+	weight = {
+		base = 110000
+	}
+	ruler_title = "RULER_KEEPER"
+	ruler_title_female = "RULER_KEEPER_FEMALE"
+}
+
+
+
+
+
+gov_void_worshippers = {
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = { NOT = { value = auth_corporate } }
+	}
+	possible = {
+		OR = {
+		has_civic = civic_heralds_of_the_void
+		has_civic = civic_death_of_worlds
+
+		}
+	}
+
+	weight = {
+		base = 100000
+	}
+	ruler_title = "RULER_KEEPER"
+	ruler_title_female = "RULER_KEEPER_FEMALE"
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,22 @@
+# Triggers when the game starts
+on_game_start = {
+	events = {	
+		pokemon_traits.1		#fairy type trust and influence growth
+	}
+}
+
+on_modification_complete = {
+	events = {	
+		pokemon_traits.1 		#fairy type trust and influence growth
+		pokemon_traits_remove.1
+		
+	}
+}
+
+on_yearly_pulse = {
+	events = {
+		pokemon_traits.1 		#fairy type trust and influence growth
+		pokemon_traits_remove.1
+
+	}
+}

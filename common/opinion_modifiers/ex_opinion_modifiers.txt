@@ -1,0 +1,190 @@
+triggered_opinion_trait_ex_monstrous = {
+	trigger = {
+		FROM = {
+				exists = ruler
+				ruler = {
+					species = {
+						has_trait = "trait_ex_monstrous"		
+					}
+				}	
+		}
+	}
+
+	opinion = {
+		base = -25
+	}
+}
+
+triggered_opinion_ex_scorched_earth_policy = {
+	trigger = {
+		FROM = {
+			has_policy_flag = ex_scorched_earth
+		}
+	}
+
+	opinion = {
+		base = -50
+	}
+}
+
+opinion_ex_welcoming_mindnet = {
+	trigger = {
+		FROM = {
+			has_policy_flag = ex_welcoming_mindnet
+		}
+	}
+
+	opinion = {
+		base = 20
+	}
+}
+
+opinion_ex_second_universe = {
+	trigger = {
+		FROM = {
+			has_policy_flag = ex_second_universe
+		}
+	}
+
+	opinion = {
+		base = 40
+	}
+}
+
+opinion_ex_false_world = {
+	trigger = {
+		FROM = {
+			has_policy_flag = ex_false_world
+		}
+	}
+
+	opinion = {
+		base = 0
+		
+		modifier = {
+			add = 20
+			AND = {
+				has_ethic = "ethic_authoritarian"
+				has_ethic = "ethic_fanatic_materialist"
+			}
+		}
+		modifier = {
+			add = 20
+			AND = {
+				has_ethic = "ethic_fanatic_authoritarian"
+				has_ethic = "ethic_materialist"
+			}
+		}
+		modifier = {
+			add = -20
+			AND = {
+				has_ethic = "ethic_fanatic_egalitarian"
+				has_ethic = "ethic_spiritualist"
+			}
+		}
+		modifier = {
+			add = -20
+			AND = {
+				has_ethic = "ethic_fanatic_spiritualist"
+				has_ethic = "ethic_egalitarian"
+			}
+		}
+	}
+}
+
+
+opinion_ex_sapient_intervention_civic = {
+	trigger = {
+		FROM = {
+			has_valid_civic = civic_sapient_intervention
+		}
+	}
+
+	opinion = {
+		base = 0
+		
+		modifier = {
+			add = 20
+			AND = {
+				is_country_type = fallen_empire
+				has_ethic = "ethic_fanatic_materialist"
+			}
+		}
+		modifier = {
+			add = 30
+			OR = {
+				has_authority = auth_machine_intelligence #works even with Determined Exterminators at present. "Wow, hey, I know that guy"
+			}
+		}
+		modifier = {
+			add = -20
+			AND = {
+				is_country_type = fallen_empire
+				has_ethic = "ethic_fanatic_spiritualist"
+			}
+		}
+	}
+}
+
+opinion_ex_decadent_conglomerate_civic = {
+	trigger = {
+		FROM = {
+			has_valid_civic = civic_decadent_conglomerate
+		}
+	}
+
+	opinion = {
+		base = -20
+		
+		modifier = {
+			add = 20
+			OR = {
+				has_ethic = "ethic_materialist"
+				has_ethic = "ethic_fanatic_materialist"
+			}
+		}
+		modifier = {
+			add = 40
+			OR = {
+				has_valid_civic = civic_decadent_conglomerate
+			}
+		}
+		modifier = {
+			add = -10
+			OR = {
+				has_ethic = "ethic_egalitarian"
+				has_ethic = "ethic_fanatic_egalitarian"
+				has_ethic = "ethic_xenophile"
+				has_ethic = "ethic_fanatic_xenophile"
+			}
+			}
+		}
+	}
+}
+
+opinion_ex_psionic_heritage_civic = {
+	trigger = {
+		FROM = {
+			has_valid_civic = civic_psionic_heritage
+		}
+	}
+
+	opinion = {
+		base = 0
+		
+		modifier = {
+			add = -15
+			OR = {
+				has_ethic = "ethic_materialist"
+				has_ethic = "ethic_fanatic_materialist"
+			}
+		}
+		modifier = {
+			add = 20
+			OR = {
+				has_ethic = "ethic_spiritualist"
+				has_ethic = "ethic_fanatic_spiritualist"
+			}
+		}
+	}
+}

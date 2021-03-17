@@ -1,0 +1,102 @@
+eternal_warrior = {
+	damage = 100.0
+	health = 180.0
+	has_morale = no
+	morale_damage = 60.0
+	collateral_damage = 1
+	war_exhaustion = 4.0
+	time = 3600
+	resources = {
+		category = armies
+		cost = {
+			virtue = 1000
+			ambrosia = 100
+			eternium = 10
+		}
+
+		upkeep = {
+			virtue = 10
+			ambrosia = 10
+			eternium = 0.1
+		}
+	}
+	has_species = yes
+	icon_frame = 9
+
+	potential = {
+		exists = owner
+		owner = {
+			is_country_type = "eternal_empire"
+		}
+	}
+}
+
+
+eternal_psion = {
+	damage = 200.0
+	health = 300.0
+	has_morale = no
+	morale_damage = 120.0
+	collateral_damage = 0
+	war_exhaustion = 5.0
+	
+	time = 3600
+	resources = {
+		category = armies
+		cost = {
+			virtue = 10000
+			unity = 10000
+			eternium = 10
+
+		}
+
+		upkeep = {
+			virtue = 100
+			unity = 100
+		}
+	}
+	has_species = yes
+	icon_frame = 9
+
+	potential = {
+		exists = owner
+		owner = {
+			has_country_flag = path_of_eternos
+			is_country_type = "eternal_empire"
+		}
+	}
+}
+
+eternal_robot = {
+	damage = 20.0
+	health = 30.0
+	has_morale = no
+	morale_damage = 12.0
+	collateral_damage = 0
+	war_exhaustion = 5.0
+	
+	time = 3600
+	resources = {
+		category = armies
+		cost = {
+			minerals = 1000
+			virtue = 100
+			energy = 10000
+		}
+
+		upkeep = {
+			energy = 50
+			nanites = 10
+		}
+	}
+	has_species = yes
+	icon_frame = 9
+
+	potential = {
+		exists = owner
+		owner = {
+			has_country_flag = path_of_mechanist
+			is_country_type = "eternal_empire"
+		}
+	}
+}

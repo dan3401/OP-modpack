@@ -1,0 +1,405 @@
+utility_component_template = {
+	key = "LARGE_MECHANIST_ARMOR_EE"
+	size = aux
+	icon = "GFX_ship_part_mechanist_armor"
+	icon_frame = 1
+	power = -10000
+	modifier = {
+		ship_armor_regen_add_static = 100000.00
+		ship_hull_regen_add_static = 100000.00
+	}
+	
+	resources = {
+		category = ship_components
+		cost = {
+			eternium = 1.0
+		}
+		upkeep = {
+			ambrosia = -0.5
+		}
+	}
+	
+	ai_weight = {
+		weight = 4000
+	}
+
+	prerequisites = { tech_mechanist_weapons }
+	component_set = "MECHANIST_ARMOR_EE"
+	
+}
+
+
+
+
+weapon_component_template = {
+	key = "MECHANIST_PD_EE"
+	size = point_defence
+	icon = "GFX_ship_part_mechanist_pd"
+	icon_frame = 1
+	entity = "invisible_turret_entity"
+	type = instant
+
+	damage = { min = 214 max = 214 }
+	windup = { min = 1 max = 1 }
+	total_fire_time = 15
+	range = 75
+	accuracy = 1.0
+	power = -80
+	hull_damage = 1.25
+	armor_penetration = 0.0
+	armor_damage = 1.25
+	shield_penetration = 0.0
+	shield_damage = 1.25
+	tracking = 1.00
+
+	tracking = 1.0
+	
+	firing_arc = 10.0
+	min_range = 30.0
+	static_rotation = yes
+	use_ship_kill_target = no
+	resources = {
+		category = ship_components
+		cost = {
+			eternium = 0.5
+		}
+		upkeep = {
+			ambrosia = -0.5
+		}
+	}
+	ai_weight = {
+		weight = 4000
+	}
+	prerequisites = { tech_mechanist_weapons }
+	component_set = "MECHANIST_PD_EE"
+	projectile_gfx = "mechanist_pd_ee"
+	tags = { weapon_type_cosmic }
+	ai_tags = { weapon_role_artillery }
+}
+
+
+weapon_component_template = {
+	key = "MECHANIST_SKY_BEAM_EE_SMALL"
+	size = torpedo
+	icon = "GFX_ship_part_mechanist_sky_beam"
+	icon_frame = 1
+	entity = "invisible_turret_entity"
+	type = instant
+
+	
+	damage = { min = 1260 max = 1260 }
+	windup = { min = 15 max = 15 }
+
+	total_fire_time = 50
+	range = 150
+	power = -1000
+
+	hull_damage = 1.0
+	
+	armor_damage = 2.0
+	shield_damage = 2.0
+
+	tracking = 1.0
+	accuracy = 1.0
+
+	resources = {
+		category = ship_components
+		cost = {
+			eternium = 0.5
+		}
+		upkeep = {
+			ambrosia = -0.5
+		}
+	}
+	ai_weight = {
+		weight = 4000
+	}
+	prerequisites = { tech_mechanist_weapons }
+	component_set = "MECHANIST_SKY_BEAM_EE"
+	projectile_gfx = "mechanist_sky_beam_ee"
+	tags = { weapon_type_cosmic }
+	ai_tags = { weapon_role_artillery }
+}
+
+weapon_component_template = {
+	key = "MECHANIST_LASER_EE_SMALL"
+	size = small
+	icon = "GFX_ship_part_mechanist_laser"
+	icon_frame = 1
+	entity = "invisible_turret_entity"
+	type = instant
+
+	damage = { min = 600 max = 600 }
+	windup = { min = 15 max = 15 }
+	total_fire_time = 50
+	range = 60
+	power = -1000
+
+	hull_damage = 1.0
+	
+	armor_damage = 2.0
+	shield_damage = 2.0
+
+	tracking = 1.0
+	accuracy = 1.0
+	
+	firing_arc = 10.0
+	min_range = 30.0
+	static_rotation = yes
+	use_ship_kill_target = no
+	
+	static_rotation = yes
+	use_ship_kill_target = no
+	resources = {
+		category = ship_components
+		cost = {
+			eternium = 0.5
+		}
+		upkeep = {
+			ambrosia = -0.5
+		}
+	}
+	ai_weight = {
+		weight = 4000
+	}
+	prerequisites = { tech_mechanist_weapons }
+	component_set = "MECHANIST_LASER_EE"
+	projectile_gfx = "mechanist_laser_ee_small"
+	tags = { weapon_type_cosmic }
+	ai_tags = { weapon_role_artillery }
+}
+
+weapon_component_template = {
+	key = "MECHANIST_LASER_EE_MEDIUM"
+	size = medium
+	icon = "GFX_ship_part_mechanist_laser"
+	icon_frame = 1
+	entity = "invisible_turret_entity"
+	type = instant
+
+	damage = { min = 1200 max = 1200 }
+	windup = { min = 15 max = 15 }
+	total_fire_time = 50
+	range = 100
+	power = -1000
+
+	hull_damage = 1.0
+	
+	armor_damage = 2.0
+	shield_damage = 2.0
+
+	tracking = 1.0
+	accuracy = 1.0
+	
+
+
+	resources = {
+		category = ship_components
+		cost = {
+			eternium = 0.5
+		}
+		upkeep = {
+			ambrosia = -0.5
+		}
+	}
+	ai_weight = {
+		weight = 4000
+	}
+	prerequisites = { tech_mechanist_weapons }
+	component_set = "MECHANIST_LASER_EE"
+	projectile_gfx = "mechanist_laser_ee_medium"
+	tags = { weapon_type_cosmic }
+	ai_tags = { weapon_role_artillery }
+}
+
+
+weapon_component_template = {
+	key = "MECHANIST_LASER_EE_BIG"
+	size = large
+	icon = "GFX_ship_part_mechanist_laser"
+	icon_frame = 1
+	entity = "invisible_turret_entity"
+	type = instant
+
+	damage = { min = 2200 max = 2200 }
+	windup = { min = 15 max = 15 }
+	total_fire_time = 50
+	range = 150
+	power = -1000
+
+	hull_damage = 1.0
+	
+	armor_damage = 2.0
+	shield_damage = 2.0
+
+	tracking = 1.0
+	accuracy = 1.0
+
+	resources = {
+		category = ship_components
+		cost = {
+			eternium = 0.5
+		}
+		upkeep = {
+			ambrosia = -0.5
+		}
+	}
+	ai_weight = {
+		weight = 4000
+	}
+	prerequisites = { tech_mechanist_weapons }
+	component_set = "MECHANIST_LASER_EE"
+	projectile_gfx = "mechanist_laser_ee"
+	tags = { weapon_type_cosmic }
+	ai_tags = { weapon_role_artillery }
+}
+
+
+weapon_component_template = {
+	key = "MECHANIST_PARTICLE_LANCE_EE"
+	size = extra_large
+	icon = "GFX_ship_part_mechanist_lance"
+	icon_frame = 1
+	entity = "invisible_turret_entity"
+	type = instant
+
+	damage = { min = 13500 max = 13500 }
+	windup = { min = 15 max = 40 }
+	total_fire_time = 150
+	range = 300
+	
+	power = -10000
+	
+	armor_penetration = 1.0
+	hull_damage = 1.0
+
+	shield_penetration = 1.0
+
+	tracking = 1.0
+	accuracy = 1.0
+	
+	firing_arc = 10.0
+	min_range = 30.0
+
+	static_rotation = yes
+	use_ship_kill_target = no
+	resources = {
+		category = ship_components
+		cost = {
+			eternium = 2.0
+		}
+		upkeep = {
+			ambrosia = -0.5
+		}
+	}
+
+	ai_weight = {
+		weight = 4000
+	}
+	prerequisites = { tech_mechanist_weapons }
+	component_set = "MECHANIST_PARTICLE_LANCE_EE"
+	projectile_gfx = "mechanist_lance_ee"
+	tags = { weapon_type_cosmic }
+	ai_tags = { weapon_role_artillery }
+}
+
+weapon_component_template = {
+	key = "MECHANIST_PERDITION_BEAM_EE"
+	size = titanic
+	entity = "invisible_turret_entity"
+	type = instant
+	prio_projectile = yes
+	
+	icon = "GFX_ship_part_mechanist_titan_beam"
+	icon_frame = 1
+	
+	firing_arc = 10.0
+	min_range = 30.0
+	static_rotation = yes
+	use_ship_kill_target = no
+	
+	damage = { min = 1000000 max = 1000000 }
+	windup = { min = 30 max = 45 }
+	total_fire_time = 180
+	range = 350.0
+	accuracy = 1.0
+	tracking = 1.0
+
+	hull_damage = 2.0
+	shield_damage = 2.0
+	armor_damage = 2.0
+	
+	power = -10000
+	resources = {
+		category = ship_components
+		cost = {
+			eternium = 20.0
+		}
+		upkeep = {
+			ambrosia = -0.5
+		}
+	}
+	
+	prerequisites = { tech_mechanist_weapons }
+	component_set = "MECHANIST_PERDITION_BEAM_EE"
+	projectile_gfx = "mechanist_beam_ee"
+	
+	tags = { weapon_type_cosmic }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+	
+	ai_weight = {
+		weight = 4000
+	}
+}
+
+strike_craft_component_template = {
+	key = "MECHANIST_GUNSHIP_HANGAR_EE"
+	size = LARGE
+	entity = "fighter_entity"
+	icon = "GFX_ship_part_mechanist_gunship"
+	icon_frame = 1
+	
+	weapon_type = instant
+	projectile_gfx = "mechanist_pd_ee"
+	power = -390
+		
+	count = 2
+	regeneration_per_day = 0.10
+	launch_time = 0.25
+	
+	damage = { min = 800 max = 800 }
+	cooldown = 6
+	range = 40
+	accuracy = 0.85
+	health = 750
+	armor = 350
+	shield = 350
+	evasion = 0.60
+	speed = 450
+	tracking = 0.30
+	rotation_speed = 0.4
+	acceleration = 0.3
+	
+	hull_damage = 1.0
+	armor_damage = 1.50
+	shield_penetration = 0.0
+	resources = {
+		category = ship_components
+		cost = {
+			eternium = 0.5
+		}
+		upkeep = {
+			ambrosia = -0.5
+		}
+	}
+	
+	ship_behavior = "bombers_behavior"
+	
+	component_set = "MECHANIST_GUNSHIP_HANGAR_EE"
+	prerequisites = { tech_mechanist_weapons }
+	tags = { weapon_type_strike_craft }
+
+	ai_weight = {
+		weight = 3000
+	}
+}

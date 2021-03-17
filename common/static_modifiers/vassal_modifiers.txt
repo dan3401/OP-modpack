@@ -1,0 +1,55 @@
+
+blessed_race = {
+    name = "Enigmatic Patrons"
+	icon = "gfx/interface/icons/modifiers/blessed_race.dds"
+	icon_frame = 1
+    pop_citizen_happiness = 0.2
+    country_admin_cap_add = 20
+    country_minerals_produces_mult = 0.20
+    country_energy_produces_mult = 0.20
+    country_unity_produces_mult = 0.20
+    all_technology_research_speed = 0.20
+}
+
+noob_empire = {
+    name = "Enigmatic Abusers"
+	icon = "gfx/interface/icons/modifiers/noob_empire.dds"
+	icon_frame = 1
+    pop_citizen_happiness = -0.2
+    country_minerals_produces_mult = 0.10
+    country_energy_produces_mult = 0.10
+    country_admin_cap_add = 20
+    
+}
+
+pacified = {
+    name = "Enigmatic Pacification"
+	icon = "gfx/interface/icons/modifiers/pacified.dds"
+	icon_frame = 1
+    country_naval_cap_add = -50
+    pop_citizen_happiness = -0.1
+    country_minerals_produces_mult = 0.10
+    country_energy_produces_mult = 0.10
+    country_admin_cap_add = 20
+    
+}
+
+vasal = {
+	icon = "gfx/interface/icons/modifiers/vasal.dds"
+	icon_frame = 1
+    name = "Enigmatic Overlords"
+    pop_citizen_happiness = 0.1
+    country_minerals_produces_mult = 0.10
+    country_energy_produces_mult = 0.10
+    country_admin_cap_add = 20
+}
+
+allowed_ascension = {
+	name = "Boon of the Ascended"
+    country_base_eternium_produces_add = 5
+}
+
+forbid_ascnesion = {
+    name = "Denying of Ascension"
+	pop_citizen_happiness = -1.0
+}

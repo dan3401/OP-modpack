@@ -1,0 +1,230 @@
+﻿l_english:
+ twplane_button:0 "Eternal Storms Degbug."
+ twplane.tooltip:0 "Gain insight into the plane of ideas"
+ twplane.1.name:0 "Communicate with the Plane of Ideas"
+ twplane.1.desc:0 "The plane of ideas. An unreal psionic realm, full of power and knowledge yet unlike the shroud it seems good, benevolent, virtuos and true. It is infinite and eternal. it knows no bounds and no ends. It was our key to the eternal cycles and if we stay true to it, it might keep us alive, forever"
+ 
+ twplane_exit.tooltip
+
+ eemega.1.name:0 "System Harvested"
+ eemega.1.desc:0 "We have harvested the system, granting us a boost in our Cosmic Matter stockpiles. Nothing is left beside the star."
+ 
+ twarrival.1.name:0 "Arrival from the Eternal Planes"
+ twarrival.1.desc:0 "A decent amount of our people decended from the Eternal Planes into this existance. A new cycle began for us and indeed this one seems utmost fascniating. Most of our people are excited to discover its mysteries. But there are also those which remind constantly of the obligations we have to keep. We have special resonsibilites against the galaxy and its members. Our knoweldge is unsurpassed by any beeing we know so far. And it is up to us to make use of it. We have to be careful however as our unimaginable powers are a easily considered godlike by the primtives of this galaxy. But we know better, neither good, nor magic exists and primitive only call them as such because of the lack of explanations. Through our eternal powers, primtives may call them psionic, others may call them magic, we are able to raise our cities, build our fleet and almost anything at our disposal. We would do better to make sure that this galaxy is most fruitful for our endevours."
+ twarrival.1.a.name:0 "So shall it be done!"
+
+ twarrival.2.name:0 "The Arrival of the Original Empire"
+ twarrival.2.desc:0 "The seals have been broken and the arrival of the Original Empire is at hand. We forsaw these commings of course as the threads of fate and time let us to that insight. This mystical empire, the only one we could at least view at somewhat equal has entered this galaxy to change its face. The question is now if we work with them together? Stay Neutral? Or fight against them? It is up to us."
+
+ twarrival.2.a.name:0 "We will fight against them! Glory to our empire!"
+ twarrival.2.a.desc:0 "Our fighting capabilities against the Original Empire will be greatly increased."
+
+ twarrival.2.b.name:0 "We will ally with them, we can learn much from one another."
+ twarrival.2.b.desc:0 "We will gain several ressources and boni as our people are too curious about the Original Empire."
+
+ twarrival.3.name:0 "Our Arrival and the secrets of power"
+ twarrival.3.desc:0 "Since we arrived only shortly within this new cycle, it will take time for us to adjust to this plane of realtiy. Such process can take millennia as the vast powers each individual of our societies possesses are so immense that they need to be released with consideration and care, not to tear upon reality itself. However our physical existance within this plane will always be flawed compared to what we are familiar with from the eternal realms. We will hold our responisibilities true and adjust our immortal powers towards this galaxy in an adequate way, anything else is punished with true death, a real end of existance of the individual. While we can ascend and decent from the Eternal Realms as we please, making our people invulnerable, we may want to choose to focus upon certain tasks. The question is what we hold dearer within this cycle. Our own individual powers? Our craftmansship and knowledge? It us up to us to choose which path we want to go. Do we want to use the vast psionic powers which we call our birthright or do we want to press our name onto this cycle with structures beyond imagining? It is up to us"
+ 
+ twarrival.4.name:0 "The secrets of Cosmic Matter"
+ twarrival.4.desc:0 "Many cycles ago, one of our Philosophers discovered a mystical matter we called Cosmic Matter. Its properties were so vast so unususal that not even our minds of eternal wisdom could grasp its true nature. Many cycles have passed since then and our knowledbe about the Cosmic Matter has grown significantly. Its complexity make it incomprehensible to any younger race and its pure existance should be against all known rules of the Kosmos. It has the potential to bend all space and time, to tear upon reality and to create whole new ones. Its untold powers are what make it incredibly valued even to us. However we did not unlock its full potential yet. Many parts of the mystical eterniuma are still not understood. Many more cycles will pass till we grasp its true nature. None the less we can use a portion of its potential to create powerful artifacts, weapons or other things. From what we know, we are able to gather it with machines almost like a mine which complexity would make every head of a mortal burst. Or we can choose to create with the untold powers which are our birthright. Our pure will can be enough to create, once our psionic potential has been unleashed upon this galaxy. The choice of path is ours."
+
+ twarrival.3.a.name:0 "We will allow the ascension of course!"
+ twarrival.3.a.desc:0 "Our people will be pleased. The leader dissapeares into the eternal planes."
+
+ twarrival.3.b.name:0 "no! We cannot afford it at the moment!"
+ twarrival.3.b.desc:0 "Our people will be very displeased of such disrespect to the eternal protocolls."
+ 
+ twarrival.5.name:0 "The Unleashed Potential"
+ twarrival.5.desc:0 "It took some time to get familiar with this galaxy, but as more and more of our people unlock a fraction of their power, everything begins to change. All eternals do have powers, and can communicate via a mere thought, yet at the same time, the powers of the eternal realm is limited within this universe. The more power we can use, the thinner the borders between these universes become.."
+      
+ ee_hyperlane.1.name:0 "Hyperlanes Disrupted!"
+ ee_hyperlane.1.desc:0 "All hyperlanes connecting to the systems have been removed. Jump Drives are impossible as well. Let us hope no one can ever surpass these messurements."
+
+ twplane_exit:0 "§LExit.§!"
+ twplane_remove:0 "§HRemove§! all of the mod's settings."
+ 
+ ap_tw_spark_of_divinity:0 "The Spark of Divinity"
+ ap_tw_great_ascension:0 "Grace of Eternity"
+ ap_tw_spark_of_divinity_desc:0 "We have a divine spark within us, one which promises us greatness and eternity. It is time to discover it and reach new heights in the galactic history"
+ ap_tw_great_ascension_desc:0 "We are close to an immortal life, full of wonders for all eternity. let us define histroy and anew and learn what other planes of existance have to offer"
+ ap_tw_ascension:0 "Transforms your empire into an eternal empire. -Many- Pops will ascend to higher planes of existance, leaning only a few behind."
+ ap_tw_spark:0 "Starting point to become an Eternal Empire. Unlocks acess to eternal technologies as soon as prerequisites are fulfilled. Chosen pops will get a spark of divinity trait and other empires will percieve you as threat."
+
+ twplane_exit.tooltip:0 "Leave the plane of ideas"
+ 
+ twrpevents.50.name:0 "The Spark of Divinity"
+ twrpevents.50.desc:0 "Through our larger understanding of the existance and what may lay beyond, we went to a deeper understanding of reality. We chose to focus on a path of virtue, on a path which can lead us to other planes of existance. Many people have developed new skills, and as our people shift, we notice that there is something within us. Something we cannot describe diffrently than a spark of divinity. We should prepare and reshape our society in order to fullfill our great destinity. However many will look with jealousy to us and fear our power, we should prepare for the worst"
+ 
+ twrpevents.60.name:0 "Ascension of the Society"
+ twrpevents.60.desc:0 "It was a mere blink when the first member of our people started to ascend, a chainreaction came to be which bathed our worlds in incredible light. We are still unsure what happened but most of our people ascended, and dissapeared. Only a few of them decided to come back and aid our society to recover from this great loss, but also this new chance, the new eternetiy which we can now call our own."
+
+ 	mod_country_resource_max_minerals_add:0 "Mineral Storage"
+	mod_country_resource_max_energy_add:0 "Energy Storage"
+	mod_country_resource_max_food_add:0 "Food Storage"
+	mod_country_resource_max_alloys_add:0 "Alloy Storage"
+	mod_country_resource_max_consumer_goods_add:0 "Consumer Goods Storage"
+	mod_country_resource_max_influence_add:0 ""
+ 
+ # first menu
+ 
+ twplane.0.a:1 "Request a Boon"
+ twplane.0.a.reply:0 "If you show true virtue, you might be worthy for the boons of this plane"
+ twplane.0.a.tooltip:0 "Try to gain a boon from the realm of ideas"
+ 
+ twplane.0.b:2 "Galactic Filters"
+ twplane.0.b.reply:0 "Observing the native primitives and their reactions to such a crisis could prove utmost useful"
+ twplane.0.b.tooltip:0 "Activate one of the galactic crisis"
+ 
+ twplane.0.c:3 "The fallen empires"
+ twplane.0.c.tooltip:0 "Open this menu to awaken specific fallen empires" 
+ twplane.0.c.reply:0 "Long time ago there was a conflict between the greatest empires in history. It was a battle of courage and valor in an eternal trial. Shall we renew these glorious times?"
+ 
+ twplane.0.d:4 "The Power of the Plane of Ideas"
+ twplane.0.d.tooltip:0 "Open this menu to see specific effects you can achieve" 
+ twplane.0.d.reply:0 "Long time ago there was a conflict between the greatest empires in history. It was a battle of courage and valor in an eternal trial.
+ 
+ 
+  civic_chosen_of_eternos:0 "Chosen of Eternos"
+  civic_chosen_of_eternos_desc:0 "We are gifted, through our eternal power, we are blessed beyond imagining"
+
+  tech_repeatable_ee_shield:0 "Cosmic Shield Accumulation"
+  tech_repeatable_ee_armor:0 "Cosmic Armor Enhancement"
+  tech_repeatable_ee_hp:0 "Cosmic Hull Empowerment"
+  tech_repeatable_ee_evasion:0 "Evasion Enhancements"
+  tech_repeatable_ee_armor_penetration:0 "Armor Deconstruction"
+  tech_repeatable_ee_shield_penetration:0 "Shield Negation"
+  tech_repeatable_ee_developement:0 "Eternal Insights"
+  tech_repeatable_ee_awesome:0 "Eternal Philosophies"
+  tech_repeatable_ee_eter:0 "Cosmic Matter Generation"
+
+  tech_repeatable_ee_shield_desc:0 ""
+  tech_repeatable_ee_armor_desc:0 ""
+  tech_repeatable_ee_hp_desc:0 ""
+  tech_repeatable_ee_evasion_desc:0 ""
+  tech_repeatable_ee_armor_penetration_desc:0 ""
+  tech_repeatable_ee_shield_penetration_desc:0 ""
+  tech_repeatable_ee_developement_desc:0 ""
+  tech_repeatable_ee_awesome_desc:0 ""
+  tech_repeatable_ee_eter_desc:0 ""
+  
+ 
+ twplane.2.desc:0 "We delved deeper into the realm of ideas, the eternal power which became our birthright, our insight, our guidance. We may proceed and hope to get a boon which will affect  us greatly!"
+ twplane.2.name:0 "The Boons"
+ 
+ twplane.2.a:0 "Request a Boon"
+ twplane.2.a.tooltip:0 "Request a boon from the plane of Ideas"
+
+ twplane.2:0 "Proceed!"
+ twplane.2.b.desc:0 "Proceed!"
+ twplane.2.b.tooltip:0 "We proceed and request a boon which might benefit us"
+ twplane.2.b.name:0 "The plane has granted us its clarity and wisdom! Our empire has been granted a boon for its benefit!"
+ twplane.2.b.reply:0 "The plane has granted us its clarity and wisdom! Our empire has been granted a boon for its benefit!"
+ 
+ twplane.3.name:0 "Galactic Filters"
+ twplane.3.desc:0 "Through our psionic power, and the power granted by the plane of ideas, we are able to tear holes in reality, attrackt extragalactic species to this galaxy or influence primitve machine AIs"
+ 
+ twplane.3.a:0 "The Prethoryn Scourge"
+ twplane.3.a.name:0 "The Prethoryn Scourge"
+ twplane.3.a.tooltip:0 "Starts the Prethoryn Scourge Eventchain"
+ twplane.3.a.reply:0 "Through our eternal power, we opened the way for this primitive race to plague the galaxy. It is our task now to observe the experiement"
+ 
+ twplane.3.b:0 "The Extradimensionals"
+ twplane.3.b.name:0 "The Extradimensionals"
+ twplane.3.b.tooltip:0"Starts the Extradimensional Eventchain"
+ twplane.3.b.reply:0 "Through our eternal power, we opened the way for these beeings to hunt the galaxy. It is our task now to observe the experiement"
+ 
+ twplane.3.c:0 "The Contingency"
+ twplane.3.c.name:0 "The Contingency"
+ twplane.3.c.tooltip:0 "Starts the Contingency Eventchain"
+ twplane.3.c.reply:0 "We evoked reactions by an ancient AI placed long ago by an empire influenced by our thoughts. Through its activation we might achieve fascinating results in this cycle"
+
+ twplane.3.desc:0 "Wellcome to the eternal Archives. The place where all our knowledge is stored. (WORK IN PROGRESS)"
+ 
+ twplane.4.a:0 "Keepers of Knowledge"
+ twplane.4.a.name:0 "Keepers of Knowledge"
+ twplane.4.a.tooltip:0 "Awakens a Materialist Fallen Empire"
+ twplane.4.a.reply:0 "Through our eternal power, we opened the way for this primitive race to plague the galaxy. It is our task now to observe the experiement"
+ 
+ twplane.4.b:0 "Holy Guardians"
+ twplane.4.b.name:0 "Holy Guardians"
+ twplane.4.b.tooltip:0 "Awakens a Spiritualist Fallen Empire"
+ twplane.4.b.reply:0 "Through our eternal power, we opened the way for these beeings to hunt the galaxy. It is our task now to observe the experiement"
+ 
+ twplane.4.c:0 "Militant Isolationists"
+ twplane.4.c.name:0 "Militant Isolationists"
+ twplane.4.c.tooltip:0 "Awakens a Xenophobe Fallen Empire"
+ twplane.4.c.reply:0 "We evoked reactions by an ancient AI placed long ago by an empire influenced by our thoughts. Through its activation we might achieve fascinating results in this cycle"
+ 
+ twplane.4.d:0 "Enigmatic Observers"
+ twplane.4.d.name:0 Enigmatic Observers"
+ twplane.4.d.tooltip:0 "Awakens a Xenophile Fallen Empire"
+ twplane.4.d.reply:0 "We evoked reactions by an ancient AI placed long ago by an empire influenced by our thoughts. Through its activation we might achieve fascinating results in this cycle"
+
+ twplane.4.e:0 "Custodian protocols"
+ twplane.4.e.name:0 "Custodian protocols"
+ twplane.4.e.tooltip:0 "Awakens a Xenophile Fallen Empire"
+ twplane.4.e.reply:0 "We evoked reactions by an ancient AI placed long ago by an empire influenced by our thoughts. Through its activation we might achieve fascinating results in this cycle"
+
+ twplane.4.f:0 "Malfuntioning Custodian"
+ twplane.4.f.name:0 "Malfuntioning Custodian"
+ twplane.4.f.tooltip:0 "Awakens a Xenophile Fallen Empire"
+ twplane.4.f.reply:0 "We evoked reactions by an ancient AI placed long ago by an empire influenced by our thoughts. Through its activation we might achieve fascinating results in this cycle"
+
+ twplane.4.g:0 "War in Heaven"
+ twplane.4.g.name:0 "War in Heaven"
+ twplane.4.g.tooltip:0 "Awakens a Xenophile Fallen Empire"
+ twplane.4.g.reply:0 "We evoked reactions by an ancient AI placed long ago by an empire influenced by our thoughts. Through its activation we might achieve fascinating results in this cycle"
+
+
+
+
+ 
+ twplane.2.cm:0 "We shall provoke these materialists!"
+ twplane.2.cm.tooltip:0 "This option will awake all materialist fallen empires!"
+ twplane.2.cm.reply:0 "So shall it be! The eternal battleground begins!"
+ 
+ twplane.2.cs:0 "Time to start the crusade!"
+ twplane.2.cs.tooltip:0 "This option will awake all spiritualist fallen empires!"
+ twplane.2.cs.reply:0 "So shall it be! The eternal battleground begins!"
+ 
+ twplane.2.cxe:0 "The galaxy shall be saved!"
+ twplane.2.cxe.tooltip:0 "This option will awake all xenophile fallen empires!"
+ twplane.2.cxe.reply:0 "So shall it be! The eternal battleground begins!"
+ 
+ twplane.2.cph:0 "The reclaimers shall seed chaos!"
+ twplane.2.cph.tooltip:0 "This option will awake all xenophobe fallen empires!"
+ twplane.2.cph.reply:0 "So shall it be! The eternal battleground begins!"
+ 
+ twplane.2.cmi:0 "Only the powerful will survive!"
+ twplane.2.cmi.tooltip:0 "This option will awake all militarist fallen empires!"
+ twplane.2.cmi.reply:0 "So shall it be! The eternal battleground begins!"
+ 
+ twplane.2.ba:0 "Back to main Menu"
+ twplane.2.b.tooltip:0 "This button will return you to the starting menue"
+ 
+ twplane.2.masch:0 "Let me look at the Custodian Project"
+ twplane.2.masch.tooltip:0 "Decide how the Fallen machine empire shall awake"
+  
+ twplane.2.mascha:0 "Let me look at the Custodian Project"
+ twplane.2.mascha.tooltip:0 "Decide how the Fallen machine empire shall awake"
+ 
+ twplane.40.name:0 "The Custodian Project"
+ twplane.40.desc:0 "The custodian porject was once initiated to preverve organic live from the contingency.It lasted long ago and we are able to manipulate it in our interest. What shall happen to it?"
+ 
+ twplane.40.a:0 "Initiate the Final Defense Protocoll!"
+ twplane.40.a.tooltip:0 "The Initiation of the Final Defense Protocoll will cause every Fallen Machine Empire to awaken according to its protective protocolls against galactic threats."
+
+ twplane.40.b:0 "Corrupt the Final Defense Protocoll"
+ twplane.40.b.tooltip:0 "By corrupting the defense protocolls of the Custodian Project, every Fallen Machine Empire awakes and will seed chaos through the galaxy. Rampaging and destroying everything in an irrational manner."
+
+ 
+ 
+ # History Logs
+ 
+ 
+
+ twhist.2.a.reply:0 "Glory to the new reign of our [Root.GetRulerName]. True valor and true virtue were shown by [Root.GetRulerName] and his name shall echco in these noble halls for all eternity! Praise our new regent. A new age is about to begin."
+ 
+ 
+ 
+ "First of all then, we must see that every science and art has an end, and that too a good one; for no science or art exeists for the sake of evil. Since then in all the arts the end is good, it it plain that the end of the best art will be the best good. But statecraft ist the best art, so that the end of this will be the good. But we must disinguis diffrent meanings in the word 'good' itself. Thus we must look forward and preserve what is this common good, as we know that the good itself must lie in galactic statecraft."

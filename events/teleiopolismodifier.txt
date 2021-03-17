@@ -1,0 +1,805 @@
+namespace = telop
+
+planet_event = {
+	id = telop.1
+	title = OK
+	desc = OK
+	hide_window = yes
+	fire_only_once = yes
+	
+
+
+	pre_triggers = {
+		is_capital = yes
+	}
+	trigger = { 
+		exists = owner
+		owner = {
+			has_government = gov_eternal_continuum
+		}
+		NOT = {
+			has_planet_flag = eternal_prepared
+		}
+		
+	}	
+
+	immediate = {
+		generate_eternal_start_deposits_and_blockers = yes
+		set_planet_flag = eternal_prepared
+	}
+
+}
+
+#planet_event = {
+#	id = telop.2
+#	title = OK
+#	desc = OK
+#	hide_window = yes
+#
+#
+#
+#	trigger = { 
+#		AND = {
+#		is_planet_class = pc_eternos
+#		NOT = { has_modifier = "eepsionic" }
+#		}
+#	}	
+#
+#	immediate = {
+#	add_modifier = {
+#		modifier = "eepsionic"
+#			days = -1
+#		}
+#	}
+#
+#}
+
+planet_event = {
+	id = telop.3
+	title = OK
+	desc = OK
+	hide_window = yes
+	
+
+
+	trigger = { 
+			AND = {
+		NOT = { is_planet_class = pc_eternos }
+		has_modifier = "eepsionic"
+		}
+	}	
+
+	immediate = {
+		remove_modifier = "eepsionic"	
+	}
+
+}
+
+planet_event = {
+	id = telop.4
+	title = OK
+	desc = OK
+	hide_window = yes
+
+
+
+	trigger = { 
+		AND = {
+		NOT = { is_planet_class = pc_eternity }
+		has_modifier = "teleiopolis"
+		}
+	}	
+
+	immediate = {
+		remove_modifier = "teleiopolis"	
+	}
+
+}
+
+planet_event = {
+	id = telop.5
+	title = OK
+	desc = OK
+	hide_window = yes
+	fire_only_once = yes
+
+
+
+	trigger = {
+		exists = owner
+		owner = { NOT = { is_country_type = eternal_empire } }
+		OR = {
+		is_planet_class = pc_eternity
+		is_planet_class = pc_eternos
+		is_planet_class = pc_eternal_city
+		is_planet_class = pc_eternal_ringworld_habitable
+		}
+	}	
+
+	immediate = {
+		change_pc = pc_black_hole
+	}
+
+	
+}
+
+
+planet_event = {
+	id = telop.6
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		THIS = {
+			NOR = {
+			has_planet_flag = ee_built_up
+			is_planet_class = pc_habitat
+			}
+			has_owner = yes
+			owner = { 
+				is_country_type = eternal_empire
+				NOT = { has_ethic = ethic_fanatic_spiritualist }
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+				is_ai = yes	
+			}
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_planet_flag = ee_built_up
+			if = {
+				limit = {
+					NOT = { is_planet_class = pc_ringworld_habitable }
+				}
+				change_pc = pc_eternity
+				remove_all_districts = yes
+				while = {
+					count = 15
+					add_district = district_teleipopolis_normal
+				}
+				while = {
+					count = 1
+					add_district = district_teleipopolis_palace
+				}
+				while = {
+					count = 10
+					add_district = district_eternalcity_untouched
+				}
+			
+			}
+			add_building = building_eternal_energy
+			add_building = building_eternal_energy
+			add_building = building_eternal_consumer
+			add_building = building_eternal_consumer
+			add_building = building_eternal_dark_matter
+			add_building = building_eternal_food
+			add_building = building_eternal_fortress
+			add_building = building_eternal_archive
+			add_building = building_eternal_ressource
+			add_building = building_eternal_rares
+			add_building = building_eternal_rares
+			add_building = building_eternal_glory
+			
+			if = {
+				limit = {
+					has_building = building_research_lab_1
+				 }
+				 remove_building = building_research_lab_1
+				 add_building = building_eternal_energy		
+			}
+			if = {
+				limit = {
+					has_building = building_foundry_1
+				 }
+				 remove_building = building_foundry_1
+				 add_building = building_eternal_alloys	
+			}
+			if = {
+				limit = {
+					has_building = building_factory_1
+				 }
+				 remove_building = building_factory_1
+				 add_building = building_eternal_consumer	
+			}
+			if = {
+				limit = {
+					has_building = building_colony_shelter
+				 }
+				 remove_building = building_colony_shelter
+				 add_building = building_eternal_palace			
+			}
+			if = {
+				limit = {
+					has_building = building_capital
+				 }
+				 remove_building = building_capital
+				 add_building = building_eternal_palace						
+			}
+			if = {
+				limit = {
+					has_building = building_major_capital
+				 }
+				 remove_building = building_major_capital
+				 add_building = building_eternal_palace						
+			}
+			if = {
+				limit = {
+					has_building = building_system_capital
+				 }
+				 remove_building = building_system_capital
+				 add_building = building_eternal_palace						
+			}
+			if = {
+				limit = {
+					has_building = building_hab_capital
+				 }
+				 remove_building = building_hab_capital
+				 add_building = building_eternal_palace						
+			}
+			if = {
+				limit = {
+					has_building = building_hab_major_capital
+				 }
+				 remove_building = building_hab_major_capital
+				 add_building = building_eternal_palace					
+			}		
+			
+			
+			if = {
+				limit = {
+					has_building = building_deployment_post
+				 }
+				 remove_building = building_deployment_post
+				 add_building = building_eternal_palace						
+			}
+			if = {
+				limit = {
+					has_building = building_machine_capital
+				 }
+				 remove_building = building_machine_capital
+				 add_building = building_eternal_palace			
+			}
+			if = {
+				limit = {
+					has_building = building_machine_major_capital
+				 }
+				 remove_building = building_machine_major_capital
+				 add_building = building_eternal_palace						
+			}
+			if = {
+				limit = {
+					has_building = building_machine_system_capital
+				 }
+				 remove_building = building_machine_system_capital
+				 add_building = building_eternal_palace					
+			}
+
+			if = {
+				limit = {
+					has_building = building_hive_capital
+				 }
+				 remove_building = building_hive_capital
+				 add_building = building_eternal_palace						
+			}
+			if = {
+				limit = {
+					has_building = building_hive_major_capital
+				 }
+				 remove_building = building_hive_major_capital
+				 add_building = building_eternal_palace						
+			}
+			hidden_effect = {
+				
+			}
+
+		}
+	}
+}
+
+planet_event = {
+	id = telop.7
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	pre_triggers = {
+		has_owner = yes
+	}
+	trigger = {
+			NOR = {
+				has_planet_flag = ee_built_up
+				is_planet_class = pc_habitat
+			}
+			
+			owner = { 
+				is_country_type = eternal_empire
+				has_ethic = ethic_fanatic_spiritualist
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+				is_ai = yes	
+			}	
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_planet_flag = ee_built_up
+			if = {
+				limit = {
+					NOT = { is_planet_class = pc_ringworld_habitable }
+				}
+				change_pc = pc_eternos
+				remove_all_districts = yes
+			while = {
+				count = 10
+				add_district = district_psionic_city_ee
+			}
+			while = {
+				count = 10
+				add_district = district_psionic_contemplation_ee
+			}
+			while = {
+				count = 5
+				add_district = district_psionic_complex_ee
+			}	
+			}
+			add_building = building_ee_eternos_energy
+			add_building = building_ee_eternos_energy
+			add_building = building_ee_eternos_minerals
+			add_building = building_ee_eternos_minerals
+			add_building = building_gardens_meditation
+			add_building = building_ee_psionic_assembly
+			add_building = building_temple_ascendance
+			add_building = building_lightforge_ee
+			add_building = building_eternium_fortress
+			add_building = building_ee_eternos_minerals
+			add_building = building_gardens_meditation
+			add_building = building_gardens_meditation
+			add_building = building_gardens_meditation
+			
+			if = {
+				limit = {
+					has_building = building_research_lab_1
+				 }
+				 remove_building = building_research_lab_1
+				 add_building = building_ee_eternos_minerals	
+			}
+			if = {
+				limit = {
+					has_building = building_foundry_1
+				 }
+				 remove_building = building_foundry_1
+				 add_building = building_ee_eternos_energy
+			}
+			if = {
+				limit = {
+					has_building = building_factory_1
+				 }
+				 remove_building = building_factory_1
+				 add_building = building_temple_ascendance	
+			}
+			if = {
+				limit = {
+					has_building = building_colony_shelter
+				 }
+				 remove_building = building_colony_shelter
+				 add_building = building_eternal_palace			
+			}
+			if = {
+				limit = {
+					has_building = building_capital
+				 }
+				 remove_building = building_capital
+				 add_building = building_eternal_palace						
+			}
+			if = {
+				limit = {
+					has_building = building_major_capital
+				 }
+				 remove_building = building_major_capital
+				 add_building = building_eternal_palace						
+			}
+			if = {
+				limit = {
+					has_building = building_system_capital
+				 }
+				 remove_building = building_system_capital
+				 add_building = building_eternal_palace						
+			}
+			if = {
+				limit = {
+					has_building = building_hab_capital
+				 }
+				 remove_building = building_hab_capital
+				 add_building = building_eternal_palace						
+			}
+			if = {
+				limit = {
+					has_building = building_hab_major_capital
+				 }
+				 remove_building = building_hab_major_capital
+				 add_building = building_eternal_palace					
+			}		
+			
+			
+			if = {
+				limit = {
+					has_building = building_deployment_post
+				 }
+				 remove_building = building_deployment_post
+				 add_building = building_eternal_palace						
+			}
+			if = {
+				limit = {
+					has_building = building_machine_capital
+				 }
+				 remove_building = building_machine_capital
+				 add_building = building_eternal_palace			
+			}
+			if = {
+				limit = {
+					has_building = building_machine_major_capital
+				 }
+				 remove_building = building_machine_major_capital
+				 add_building = building_eternal_palace						
+			}
+			if = {
+				limit = {
+					has_building = building_machine_system_capital
+				 }
+				 remove_building = building_machine_system_capital
+				 add_building = building_eternal_palace					
+			}
+
+			if = {
+				limit = {
+					has_building = building_hive_capital
+				 }
+				 remove_building = building_hive_capital
+				 add_building = building_eternal_palace						
+			}
+			if = {
+				limit = {
+					has_building = building_hive_major_capital
+				 }
+				 remove_building = building_hive_major_capital
+				 add_building = building_eternal_palace						
+			}
+			
+
+		}
+	}
+}
+
+
+
+planet_event = {
+	id = telop.12
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	pre_triggers = {
+		has_owner = yes
+	}
+	trigger = {
+		NOR = { is_planet_class = pc_eternos 
+				is_planet_class = pc_eternity
+		}
+		is_planet_class = pc_habitat
+		
+		owner = { 
+				is_country_type = eternal_empire
+				NOT = { has_ethic = ethic_fanatic_spiritualist }
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+				is_ai = yes	
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_planet_flag = ee_built_up
+			add_building = building_eternal_energy
+			add_building = building_eternal_energy
+			add_building = building_eternal_consumer
+			add_building = building_eternal_consumer
+			add_building = building_eternal_dark_matter
+			add_building = building_eternal_food
+			add_building = building_eternal_fortress
+			add_building = building_eternal_archive
+			add_building = building_eternal_ressource
+			add_building = building_eternal_rares
+			add_building = building_eternal_rares
+			add_building = building_eternal_glory
+			
+			if = {
+				limit = {
+					has_building = building_research_lab_1
+				 }
+				 remove_building = building_research_lab_1
+				 add_building = building_eternal_energy		
+			}
+			if = {
+				limit = {
+					has_building = building_foundry_1
+				 }
+				 remove_building = building_foundry_1
+				 add_building = building_eternal_alloys	
+			}
+			if = {
+				limit = {
+					has_building = building_factory_1
+				 }
+				 remove_building = building_factory_1
+				 add_building = building_eternal_consumer	
+			}
+			if = {
+				limit = {
+					has_building = building_colony_shelter
+				 }
+				 remove_building = building_colony_shelter
+				 add_building = building_eternal_palace			
+			}
+			if = {
+				limit = {
+					has_building = building_capital
+				 }
+				 remove_building = building_capital
+				 add_building = building_eternal_palace						
+			}
+			if = {
+				limit = {
+					has_building = building_major_capital
+				 }
+				 remove_building = building_major_capital
+				 add_building = building_eternal_palace						
+			}
+			if = {
+				limit = {
+					has_building = building_system_capital
+				 }
+				 remove_building = building_system_capital
+				 add_building = building_eternal_palace						
+			}
+			if = {
+				limit = {
+					has_building = building_hab_capital
+				 }
+				 remove_building = building_hab_capital
+				 add_building = building_eternal_palace						
+			}
+			if = {
+				limit = {
+					has_building = building_hab_major_capital
+				 }
+				 remove_building = building_hab_major_capital
+				 add_building = building_eternal_palace					
+			}		
+			
+			
+			if = {
+				limit = {
+					has_building = building_deployment_post
+				 }
+				 remove_building = building_deployment_post
+				 add_building = building_eternal_palace						
+			}
+			if = {
+				limit = {
+					has_building = building_machine_capital
+				 }
+				 remove_building = building_machine_capital
+				 add_building = building_eternal_palace			
+			}
+			if = {
+				limit = {
+					has_building = building_machine_major_capital
+				 }
+				 remove_building = building_machine_major_capital
+				 add_building = building_eternal_palace						
+			}
+			if = {
+				limit = {
+					has_building = building_machine_system_capital
+				 }
+				 remove_building = building_machine_system_capital
+				 add_building = building_eternal_palace					
+			}
+
+			if = {
+				limit = {
+					has_building = building_hive_capital
+				 }
+				 remove_building = building_hive_capital
+				 add_building = building_eternal_palace						
+			}
+			if = {
+				limit = {
+					has_building = building_hive_major_capital
+				 }
+				 remove_building = building_hive_major_capital
+				 add_building = building_eternal_palace						
+			}
+			
+
+		}
+	}
+}
+
+planet_event = {
+	id = telop.13
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		THIS = {
+			NOR = {
+			has_planet_flag = ee_built_up
+			is_planet_class = pc_habitat
+			}
+			has_owner = yes
+			owner = { 
+				is_country_type = eternal_empire
+				has_ethic = ethic_gestalt_consciousness
+				is_ai = yes	
+			}
+		}
+	}
+	
+	
+	immediate = {
+		hidden_effect = {
+			set_planet_flag = ee_built_up
+			add_building = building_eternal_energy_ai
+			add_building = building_eternal_energy_ai
+			add_building = building_eternal_consumer_ai	
+			add_building = building_eternal_consumer_ai	
+			add_building = building_eternal_dark_matter_ai	
+			add_building = building_eternal_food_ai	
+			add_building = building_eternal_fortress_ai	
+			add_building = building_eternal_archive_ai	
+			add_building = building_eternal_ressource_ai	
+			add_building = building_eternal_rares_ai	
+			add_building = building_eternal_rares_ai	
+			add_building = building_eternal_ressource_ai
+			
+			if = {
+				limit = {
+					has_building = building_research_lab_1
+				 }
+				 remove_building = building_research_lab_1
+				 add_building = building_eternal_energy_ai	
+			}
+			if = {
+				limit = {
+					has_building = building_foundry_1
+				 }
+				 remove_building = building_foundry_1
+				 add_building = building_eternal_alloys_ai
+			}
+			if = {
+				limit = {
+					has_building = building_factory_1
+				 }
+				 remove_building = building_factory_1
+				 add_building = building_eternal_consumer_ai	
+			}
+			if = {
+				limit = {
+					has_building = building_colony_shelter
+				 }
+				 remove_building = building_colony_shelter
+				 add_building = building_eternal_nexus_ai	
+			}
+			if = {
+				limit = {
+					has_building = building_capital
+				 }
+				 remove_building = building_capital
+				 add_building = building_eternal_nexus_ai				
+			}
+			if = {
+				limit = {
+					has_building = building_major_capital
+				 }
+				 remove_building = building_major_capital
+				 add_building = building_eternal_nexus_ai					
+			}
+			if = {
+				limit = {
+					has_building = building_system_capital
+				 }
+				 remove_building = building_system_capital
+				 add_building = building_eternal_nexus_ai				
+			}
+			if = {
+				limit = {
+					has_building = building_hab_capital
+				 }
+				 remove_building = building_hab_capital
+				 add_building = building_eternal_nexus_ai					
+			}
+			if = {
+				limit = {
+					has_building = building_hab_major_capital
+				 }
+				 remove_building = building_hab_major_capital
+				 add_building = building_eternal_nexus_ai				
+			}		
+			
+			
+			if = {
+				limit = {
+					has_building = building_deployment_post
+				 }
+				 remove_building = building_deployment_post
+				 add_building = building_eternal_nexus_ai					
+			}
+			if = {
+				limit = {
+					has_building = building_machine_capital
+				 }
+				 remove_building = building_machine_capital
+				 add_building = building_eternal_nexus_ai		
+			}
+			if = {
+				limit = {
+					has_building = building_machine_major_capital
+				 }
+				 remove_building = building_machine_major_capital
+				 add_building = building_eternal_nexus_ai						
+			}
+			if = {
+				limit = {
+					has_building = building_machine_system_capital
+				 }
+				 remove_building = building_machine_system_capital
+				 add_building = building_eternal_nexus_ai	
+			}
+
+			if = {
+				limit = {
+					has_building = building_hive_capital
+				 }
+				 remove_building = building_hive_capital
+				 add_building = building_eternal_nexus_ai					
+			}
+			if = {
+				limit = {
+					has_building = building_hive_major_capital
+				 }
+				 remove_building = building_hive_major_capital
+				 add_building = building_eternal_nexus_ai						
+			}	
+
+		}
+	}
+}
+
+planet_event = {
+	id = telop.50
+	hide_window = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				owner = { 
+					is_country_type = eternal_empire
+				}
+			}
+			generate_eternal_start_deposits_and_blockers = yes
+		}
+		
+	}
+
+	
+}
+
+
+
+
+
+

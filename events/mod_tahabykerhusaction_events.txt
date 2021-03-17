@@ -1,0 +1,34 @@
+namespace = tahabykerhusaction
+
+country_event = {
+    id = tahabykerhusaction.2
+    hide_window = yes
+
+    is_triggered_only = yes
+    fire_only_once = yes
+
+    trigger = {
+        has_technology = tech_tahaByKerhus_brainslug1
+    }
+
+    immediate = {
+        every_owned_planet = {
+            limit = {
+                has_modifier = brainslug_woes_phobe
+			}
+            remove_modifier = brainslug_woes_phobe
+        }
+        every_owned_planet = {
+            limit = {
+                has_modifier = brainslug_woes
+            }
+            remove_modifier = brainslug_woes
+        }
+    }
+}
+
+####################################################################################################################
+#												 ГЕШТАЛЬТ - МАШИНА				    							   #
+####################################################################################################################
+#country_event = {
+#}

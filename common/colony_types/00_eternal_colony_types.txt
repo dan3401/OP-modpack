@@ -1,0 +1,268 @@
+tw_eternal_planet = {
+	icon = 10
+
+	potential = {
+		exists = owner
+		is_capital = yes
+		owner = { 
+			is_country_type = eternal_empire
+			is_gestalt = no
+			
+		}
+	}
+	
+	planet_modifier = {
+		planet_stability_add = 50
+		pop_government_ethic_attraction = 1
+		planet_amenities_add = 200
+		country_base_eternium_produces_add = 5
+	}
+
+	weight_modifier = {
+		base = 10000
+	}
+}
+
+tw_eternal_planet_ai = {
+	icon = 10
+
+	potential = {
+		exists = owner
+		owner = { 
+			is_country_type = eternal_empire
+			is_gestalt = yes
+		}
+	}
+	
+	planet_modifier = {
+		planet_stability_add = 50
+		planet_amenities_add = 200
+	}
+
+	weight_modifier = {
+		base = 1000
+	}
+}
+
+
+tw_eternal_colony = {
+	icon = 10
+
+	potential = {
+		exists = owner
+		is_capital = no
+		is_planet_class = pc_eternity
+		owner = { 
+			is_country_type = eternal_empire
+			is_gestalt = no
+			
+		}
+	}
+	
+	planet_modifier = {
+		planet_stability_add = 50
+		pop_government_ethic_attraction = 1
+		planet_amenities_add = 100
+	}
+
+	weight_modifier = {
+		base = 10000
+	}
+}
+
+tw_eternal_psionic = {
+	icon = 10
+
+	potential = {
+		exists = owner
+		is_capital = no
+		is_planet_class = pc_eternos
+		owner = { 
+			is_country_type = eternal_empire
+			is_gestalt = no
+			
+		}
+	}
+	
+	planet_modifier = {
+		planet_stability_add = 50
+		pop_government_ethic_attraction = 1
+		
+	}
+
+	weight_modifier = {
+		base = 10000
+	}
+}
+
+
+tw_eternal_kosmopolis = {
+	icon = 10
+
+	potential = {
+		exists = owner
+		is_capital = no
+		is_planet_class = pc_eternal_city
+		owner = { 
+			is_country_type = eternal_empire
+			is_gestalt = no
+			
+		}
+	}
+	
+	planet_modifier = {
+		planet_stability_add = 50
+		pop_government_ethic_attraction = 1
+		planet_amenities_add = 100
+	}
+
+	weight_modifier = {
+		base = 10000
+	}
+}
+
+tw_eternal_rings = {
+	icon = 10
+
+	potential = {
+		exists = owner
+		is_capital = no
+		is_planet_class = pc_eternalring
+		owner = { 
+			is_country_type = eternal_empire
+			is_gestalt = no
+			
+		}
+	}
+	
+	planet_modifier = {
+		planet_stability_add = 50
+		pop_government_ethic_attraction = 1
+		planet_amenities_add = 100
+	}
+
+	weight_modifier = {
+		base = 1000
+	}
+}
+
+
+tw_eternal_astropolis = {
+	icon = 10
+
+	potential = {
+		exists = owner
+		is_capital = no
+		is_planet_class = pc_astropolis
+		owner = { 
+			is_country_type = eternal_empire
+			is_gestalt = no
+			
+		}
+	}
+	
+	planet_modifier = {
+		planet_stability_add = 50
+		pop_government_ethic_attraction = 1
+		planet_amenities_add = 100
+	}
+
+	weight_modifier = {
+		base = 1000
+	}
+}
+
+tw_eternal_habitat = {
+	icon = 10
+
+	potential = {
+		exists = owner
+		is_capital = no
+		is_planet_class = pc_habitat
+		owner = { 
+			is_country_type = eternal_empire
+			is_gestalt = no
+			
+		}
+	}
+	
+	planet_modifier = {
+		planet_stability_add = 50
+		pop_government_ethic_attraction = 1
+		planet_amenities_add = 100
+	}
+
+	weight_modifier = {
+		base = 1000
+	}
+}
+
+
+tw_eternal_eternity = {
+	icon = 10
+
+	potential = {
+		exists = owner
+		is_capital = no
+		is_planet_class = pc_eternity
+		owner = { 
+			is_country_type = eternal_empire
+			is_gestalt = no
+			
+		}
+	}
+	
+	planet_modifier = {
+		planet_stability_add = 50
+		pop_government_ethic_attraction = 1
+		planet_housing_add = 50
+	}
+
+	weight_modifier = {
+		base = 1000
+	}
+}
+
+
+
+
+# Fallen Empire Capital
+col_fe_capital = {
+	icon = 10
+
+	potential = {
+		is_capital = yes
+		exists = owner
+		owner = { is_fallen_empire = yes }
+	}
+	
+	planet_modifier = {
+		planet_stability_add = 10
+		planet_amenities_add = 200
+	}
+
+	weight_modifier = {
+		base = 1000
+	}
+}
+
+
+# Fallen Empire Colony
+col_fe_colony = {
+	icon = 11
+
+	potential = {
+		is_capital = no
+		exists = owner
+		owner = { is_fallen_empire = yes }
+	}
+	
+	planet_modifier = {
+		planet_stability_add = 5
+		planet_amenities_add = 200
+	}
+
+	weight_modifier = {
+		base = 1000
+	}
+}

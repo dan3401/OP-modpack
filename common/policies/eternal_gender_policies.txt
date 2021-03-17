@@ -1,0 +1,144 @@
+eternal_gender_policy = {
+	potential = {
+		NOT = { has_ethic = "ethic_gestalt_consciousness"}
+	}
+	
+	option = {
+		name = "eternal_gender_patriarchy_military"   
+
+		valid = {
+			NOT = {
+				has_ethic = ethic_fanatic_egalitarian
+			}
+		}
+
+		policy_flags = {
+			eternal_gender_patriarchy_military
+		}
+
+	}
+
+	option = {
+		name = "eternal_gender_patriarchy_science"   
+
+		valid = {
+			NOT = {
+				has_ethic = ethic_fanatic_egalitarian
+			}
+		}
+
+		policy_flags = {
+			eternal_gender_patriarchy_science
+		}
+
+	}
+
+	option = {
+		name = "eternal_gender_patriarchy_governor"
+
+		valid = {
+			NOT = {
+				has_ethic = ethic_fanatic_egalitarian
+			}
+		}
+
+		policy_flags = {
+			eternal_gender_patriarchy_governor
+		}
+	}
+
+	option = {
+		name = "eternal_gender_patriarchy_full"
+
+		valid = {
+			NOR = {
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
+			}
+		}
+
+		policy_flags = {
+			eternal_gender_patriarchy_full
+		}
+
+		
+	}
+
+	option = {
+		name = "eternal_gender_default"
+
+		policy_flags = {
+			eternal_gender_default
+		}
+
+		AI_weight = {
+			factor = 100
+		}
+	}
+
+	option = {
+		name = "eternal_gender_matriarchy_full"
+
+		valid = {
+			NOR = {
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
+			}
+		}
+
+		policy_flags = {
+			eternal_gender_matriarchy_full
+		}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = "eternal_gender_matriarchy_governor"
+
+		valid = {
+			NOT = {
+				has_ethic = ethic_fanatic_egalitarian
+			}
+		}
+
+		policy_flags = {
+			eternal_gender_matriarchy_governor
+		}
+	}
+
+	
+	option = {
+		name = "eternal_gender_matriarchy_military"   
+
+		valid = {
+			NOT = {
+				has_ethic = ethic_fanatic_egalitarian
+			}
+		}
+
+		policy_flags = {
+			eternal_gender_matriarchy_military
+		}
+
+	}
+
+	option = {
+		name = "eternal_gender_matriarchy_science"   
+
+		valid = {
+			NOT = {
+				has_ethic = ethic_fanatic_egalitarian
+			}
+		}
+
+		policy_flags = {
+			eternal_gender_matriarchy_science
+		}
+
+	}
+
+	
+}

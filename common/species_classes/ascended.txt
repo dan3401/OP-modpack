@@ -1,0 +1,77 @@
+
+Eternal = {
+	archetype = ASCENDED
+	randomized = no
+	
+	possible = { authority = { OR = { value = auth_enigmatic value = auth_eternal_mandate } } }
+	
+	leader_age_min = 1200000
+	leader_age_max = 1340000
+	
+	portraits = {
+		"cyrian"
+		"lyrian"
+	}
+
+
+	use_climate_preference = no
+	portrait_modding = yes
+	graphical_culture = eternal_empire
+	move_pop_sound_effect = "moving_pop_confirmation"
+}
+
+Eternity = {
+	archetype = ASCENDED
+	randomized = no
+	
+	possible = { authority = { OR = { value = auth_enigmatic value = auth_eternal_mandate } } }
+	
+	leader_age_min = 1200000
+	leader_age_max = 1340000
+	
+	portraits = {
+		"cyrian"
+		"lyrian"
+	}
+
+
+	use_climate_preference = no
+	portrait_modding = yes
+	graphical_culture = reternal_empire
+	move_pop_sound_effect = "moving_pop_confirmation"
+}
+
+
+
+
+Ascended = {
+	archetype = BIOLOGICAL
+	use_climate_preference = no	
+	randomized = no
+	possible = { authority = { OR = { value = auth_enigmatic value = auth_eternal_mandate } } }
+	
+
+	portraits = {
+		"cyrian"
+	}
+
+	# Just in case.
+	non_randomized_portraits = {
+		"cyrian"
+	
+	}
+	
+	portrait_modding = yes
+	graphical_culture = eternal_empire
+	move_pop_sound_effect = "moving_pop_confirmation"
+
+}
+
+Plane = {
+	archetype = BIOLOGICAL
+	randomized = no
+	playable = { always = no }
+
+	graphical_culture = plane_ideas
+	move_pop_sound_effect = "moving_pop_confirmation"
+}

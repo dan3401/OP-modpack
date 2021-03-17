@@ -1,0 +1,136 @@
+
+
+soundeffect = {
+	name = moving_out_eternal_empire_ship
+	falloff = "falloff_400"
+	volume = 0.35
+	sounds = {
+		sound = moving_out_eternal_empire_ship_01
+	} 
+	is3d = yes
+	max_audible = 2	
+	max_audible_behaviour = fail	
+}
+
+soundeffect = {
+	name = amb_eternal_empire_warship_01
+	loop = yes
+	falloff = falloff_fleet
+	random_sound_when_looping = no
+	sounds = {
+		sound = amb_eternal_empire_warship_01
+	} 
+	volume = 0.25
+	is3d = yes
+	max_audible = 2
+	volume_random_offset = { -0.05 0.05 }
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = amb_eternos_ambient
+	loop = yes
+	falloff = falloff_fleet
+	random_sound_when_looping = no
+	sounds = {
+		sound = amb_eternos_ambient
+	} 
+	volume = 0.25
+	is3d = yes
+	max_audible = 2
+	volume_random_offset = { -0.05 0.05 }
+	max_audible_behaviour = fail
+}
+
+
+soundeffect = {
+    name = pc_eternity
+    sounds = {
+        sound = pc_eternity
+    }
+    max_audible = 1
+    max_audible_behaviour = fail
+    fade_out = 0.3
+}
+
+soundeffect = {
+    name = pc_eternos
+    sounds = {
+        sound = pc_eternos
+    }
+    max_audible = 1
+    max_audible_behaviour = fail
+    fade_out = 0.3
+}
+
+soundeffect = {
+    name = pc_ee_psionic
+    sounds = {
+        sound = pc_ee_psionic
+    }
+    max_audible = 1
+    max_audible_behaviour = fail
+    fade_out = 0.3
+}
+
+soundeffect = {
+    name = pc_ee_star
+    sounds = {
+        sound = pc_ee_star
+    }
+    max_audible = 1
+    max_audible_behaviour = fail
+    fade_out = 0.3
+}
+
+
+
+
+sound = 
+{
+	name = "moving_out_eternal_empire_ship_01"
+	file = "units/moving_out_eternal_empire_ship_01.wav"
+	volume = 0.6
+}
+
+sound = 
+{
+	name = "amb_eternal_empire_warship_01"
+	file = "ambient/amb_eternal_empire_warship_01.wav"
+	volume = 0.6
+}
+
+sound =
+{
+	name = "amb_eternos_ambient"
+	file = "ambient/pc_eternos_ambient.wav"
+	volume = 0.6
+}
+
+sound = 
+{
+	name = "pc_ee_star"
+	file = "ambient/pc_ee_star.wav"
+	volume = 0.3
+}
+
+sound = 
+{
+	name = "pc_eternity"
+	file = "ambient/pc_eternity.wav"
+	volume = 0.6
+}
+
+sound = 
+{
+	name = "pc_ee_psionic"
+	file = "ambient/pc_ee_psionic.wav"
+	volume = 0.6
+}
+
+sound = 
+{
+	name = "pc_eternos"
+	file = "ambient/pc_eternos.wav"
+	volume = 0.6
+}

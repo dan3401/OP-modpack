@@ -1,0 +1,550 @@
+academy_tw = {
+	entity = "reternal_empire_academy_test_entity"
+	construction_entity = "reternal_empire_academy_test_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = no
+	entity_offset = { x = -12 y = -12 }
+	build_time = 1800
+
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 50000
+			influence = 200
+			eternium = 200
+			minerals = 10000
+		}
+		produces = {
+			ancient_knowldege = 300
+			virtue = 500
+		}
+	}
+	country_modifier = {
+		
+	}
+	construction_blocks_others = no
+
+	potential = {
+		owner = {
+		has_government = "gov_eternal_continuum"
+		has_country_flag = path_of_mechanist_more
+		}
+	}
+
+	possible = {
+		exists = starbase
+		custom_tooltip = {
+			fail_text = "requires_inside_border"
+			is_inside_border = from
+			
+		}
+	}
+
+	placement_rules = {
+		planet_possible = {
+			custom_tooltip = {
+				fail_text = "requires_surveyed_planet"
+				is_surveyed = {			# prevent leaking habitability information
+					who = prev.from
+					status = yes
+				}
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_anomaly"
+				NOT = { has_anomaly = yes }
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_existing_megastructure"
+				#can_build_megastructure_on_planet = yes
+				NOR = {
+					has_planet_flag = has_megastructure
+					is_planet_class = pc_ringworld_habitable
+					is_planet_class = pc_ringworld_seam
+					is_planet_class = pc_habitat
+				}
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_orbital_station"
+				has_orbital_station = no
+			}
+
+ 			# balance for habitats
+			custom_tooltip = {
+				fail_text = "requires_not_star"
+				is_star = no
+			}
+		} # use these for all non-star megastructures
+	}
+
+	# root = system
+	# from = country	
+	ai_weight = {
+		factor = 10
+	}
+	
+	on_build_start = {
+	}
+	on_build_cancel = {}
+	
+	on_build_complete = {
+		fromfrom.planet = {
+			set_planet_flag = has_megastructure
+		}
+		
+	}
+}
+
+wrath_mechanist_tw = {
+	entity = "wrath_entity"
+	construction_entity = "wrath_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = no
+	entity_offset = { x = -7 y = -7 }
+	build_time = 1800
+
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 3000
+			influence = 200
+		}
+		produces = {
+			
+		}
+	}
+	country_modifier = {
+		country_naval_cap_add = 2000
+		ship_armor_mult = 0.5
+		ship_shield_mult = 0.5
+		ship_tracking_mult = 0.5
+	}
+	construction_blocks_others = no
+
+	potential = {
+		owner = {
+		has_government = "gov_eternal_continuum"
+		has_country_flag = path_of_mechanist_more
+		NOT = { has_country_flag = has_wrath_ee }
+		}
+	}
+
+	possible = {
+		exists = starbase
+		custom_tooltip = {
+			fail_text = "requires_inside_border"
+			is_inside_border = from
+		}
+	}
+
+	placement_rules = {
+		planet_possible = {
+			custom_tooltip = {
+				fail_text = "requires_surveyed_planet"
+				is_surveyed = {			# prevent leaking habitability information
+					who = prev.from
+					status = yes
+				}
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_anomaly"
+				NOT = { has_anomaly = yes }
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_existing_megastructure"
+				#can_build_megastructure_on_planet = yes
+				NOR = {
+					has_planet_flag = megastructure
+
+					has_planet_flag = has_megastructure
+					solar_system = {
+						has_star_flag = ring_world_built
+					}
+					is_planet_class = pc_habitat
+				}
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_orbital_station"
+				has_orbital_station = no
+			}
+
+ 			# balance for habitats
+			custom_tooltip = {
+				fail_text = "requires_not_star"
+				is_star = no
+			
+			}
+		} # use these for all non-star megastructures
+	}
+
+	# root = system
+	# from = country	
+	ai_weight = {
+		factor = 10
+	}
+	
+	on_build_start = {}
+	on_build_cancel = {}
+	
+	on_build_complete = {
+		set_star_flag = megastructure
+		owner = { set_country_flag = has_wrath_ee }
+		fromfrom.planet = {
+			set_planet_flag = has_megastructure
+		}
+	}
+}
+
+
+anthiliary_tw = {
+	entity = "eternal_anthiliary_finished_entity_01_entity"
+	construction_entity = "eternal_anthiliary_finished_entity_01_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = yes
+	entity_offset = { x = 0 y = 0 }
+	build_time = 1800
+
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 30000
+			influence = 200
+			eternium = 1000
+		}
+		produces = {
+			
+		}
+	}
+	
+	country_modifier = {
+		all_technology_research_speed = 1.0
+		pop_citizen_happiness = 0.5
+
+	}
+
+	construction_blocks_others = no
+
+	potential = {
+		owner = {
+		has_government = "gov_eternal_continuum"
+		has_country_flag = path_of_mechanist_more
+		}
+	}
+
+	possible = {
+		exists = starbase
+		custom_tooltip = {
+			fail_text = "requires_inside_border"
+			is_inside_border = from
+		}
+	}
+
+	placement_rules = {
+		planet_possible = {
+			custom_tooltip = {
+				fail_text = "requires_surveyed_planet"
+				is_surveyed = {			# prevent leaking habitability information
+					who = prev.from
+					status = yes
+				}
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_anomaly"
+				NOT = { has_anomaly = yes }
+			}
+			
+			custom_tooltip = {
+				fail_text = "requires_no_orbital_station"
+				has_orbital_station = no
+			}
+
+ 			# balance for habitats
+			custom_tooltip = {
+				fail_text = "requires_not_star"
+				is_star = yes
+				NOT = { has_planet_flag = megastructure_ee }
+			}
+
+		} # use these for all non-star megastructures
+	}
+
+	# root = system
+	# from = country	
+	ai_weight = {
+		factor = 10
+	}
+	
+	on_build_start = {}
+	on_build_cancel = {}
+	
+	on_build_complete = {
+		every_system_planet = { 
+			limit = { is_star = yes }
+			set_planet_size = 1
+			set_planet_flag = megastructure_ee
+		}
+	}
+}
+
+
+super_fortress = {
+	entity = "eternalring_systemfortress_01_entity"
+	construction_entity = "eternalring_systemfortress_01_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = yes
+	entity_offset = { x = 0 y = 0 }
+	build_time = 1800
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 10000
+            influence = 100
+            eternium = 100
+		}
+		produces = {
+			consumer_goods = 2000
+			food = 2000
+			nanites = 2000
+		}
+	}
+
+	potential = { always = no }	
+
+	possible = {
+		exists = starbase
+		custom_tooltip = {
+			fail_text = "requires_inside_border"
+			is_inside_border = from
+		}
+		custom_tooltip = {
+			fail_text = "requires_no_existing_dyson_sphere"
+			from = { NOT = { has_country_flag = built_dyson_sphere } }
+			THIS = { NOT = { has_star_flag = fortress_built } }
+		}	
+		custom_tooltip = {
+			fail_text = "requires_existing_ringworld"
+			THIS = { has_planet_class = pc_ringworld_habitable }
+		}	
+		custom_tooltip = {
+			fail_text = "requires_surveyed_system"
+			NOT = {
+				any_system_planet = {
+					is_surveyed = {
+						who = prev.from
+						status = no
+					}
+				}
+			}
+		}
+		
+		
+	}
+	
+	placement_rules = {
+		planet_possible = {
+			custom_tooltip = {
+				fail_text = "must_build_around_star"
+				is_star = yes
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_anomaly"
+				NOT = { has_anomaly = yes }
+            }
+            custom_tooltip = {
+                fail_text = "requires_phi_singularity"
+                is_star = yes
+          
+            }
+	    custom_tooltip = {
+			fail_text = "requires_no_existing_megastructure"
+			NOT = { has_planet_flag = phi_sphere_built }
+			
+		}
+			custom_tooltip = {
+				fail_text = "requires_no_orbital_station"
+				has_orbital_station = no
+			}
+		}
+	}
+	
+	# root = system
+	# from = country	
+	ai_weight = {
+		factor = 15
+		
+		modifier = {
+			factor = 0.1
+			starbase = { NOT = { has_starbase_size >= starbase_starfortress } }
+		}	
+		
+		modifier = {
+			factor = 0.1
+			any_neighbor_system = {
+				exists = owner
+				NOT = { 
+					owner = { is_same_value = from } 
+				}
+			}
+		}
+	}
+	
+	on_build_start = {}
+	on_build_cancel = {}
+	on_build_complete = {
+		set_star_flag = fortress_built
+	}
+
+
+	
+	placement_rules = {
+		planet_possible = {
+			custom_tooltip = {
+				fail_text = "must_build_around_star"
+				is_star = yes
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_anomaly"
+				NOT = { has_anomaly = yes }
+            }
+            custom_tooltip = {
+                fail_text = "requires_phi_singularity"
+                is_star = yes
+          
+            }
+	    custom_tooltip = {
+			fail_text = "requires_no_existing_megastructure"
+			NOT = { has_planet_flag = phi_sphere_built }
+		}
+			custom_tooltip = {
+				fail_text = "requires_no_orbital_station"
+				has_orbital_station = no
+			}
+		}
+	}
+
+}
+
+system_harvester = {
+	entity = ""
+	construction_entity = "gatebuilder_01_gateway_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = yes
+	entity_offset = { x = 0 y = 0 }
+	build_time = 180
+
+	resources = {
+		category = megastructures
+		cost = {
+			minerals = 1000
+			energy = 1000
+		}
+	}
+    construction_blocks_others = no
+
+	potential = {
+		owner = {
+		has_government = "gov_eternal_continuum"
+		has_country_flag = path_of_mechanist_more
+		}
+	}
+
+	possible = {
+		exists = starbase
+		custom_tooltip = {
+			fail_text = "requires_inside_border"
+			is_inside_border = from
+		}
+	}
+
+	placement_rules = {
+		planet_possible = {
+			custom_tooltip = {
+				fail_text = "requires_surveyed_planet"
+				is_surveyed = {			# prevent leaking habitability information
+					who = prev.from
+					status = yes
+				}
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_anomaly"
+				NOT = { has_anomaly = yes }
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_existing_megastructure"
+				#can_build_megastructure_on_planet = yes
+				NOR = {
+                    is_planet_class = pc_eternal_city
+					is_planet_class = pc_habitat
+					is_planet_class = pc_ringworld_tech
+                    is_planet_class = pc_ringworld_seam
+					is_planet_class = pc_black_hole
+					is_planet_class = pc_ee_star
+					is_star = no
+					is_moon = yes
+					has_planet_flag = system_harvested
+				}
+            }
+            custom_tooltip = {
+                fail_text = "requires_no_binary_trinary"
+                NOR = {
+                    is_star_class = sc_trinary_1
+                    is_star_class = sc_trinary_2
+                    is_star_class = sc_trinary_3
+					is_star_class = sc_trinary_4
+					
+                }
+            }
+            custom_tooltip = {
+				fail_text = "requires_no_existing_megastructure"
+				#can_build_megastructure_on_planet = yes
+				NOR = {
+					has_star_flag = system_harvested
+				}
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_orbital_station"
+				has_orbital_station = no
+			}
+
+ 			# balance for habitats
+			custom_tooltip = {
+				fail_text = "requires_not_star"
+				is_star = yes
+			}
+		} # use these for all non-star megastructures
+	}
+
+	# root = system
+	# from = country	
+	ai_weight = {
+		factor = 0
+	}
+	
+	on_build_start = {}
+	on_build_cancel = {}
+	
+	on_build_complete = {
+		set_star_flag = system_harvested
+		every_system_planet = { 
+			limit = { is_star = yes }
+			set_planet_size = 1
+			set_planet_flag = system_harvested
+		}
+		every_system_planet = { 
+			limit = { is_star = no }
+			remove_planet = yes
+		}
+		set_asteroid_belt = {
+			radius = 0
+		}
+		set_star_flag = system_harvested
+		remove_megastructure = fromfrom
+		FROM = {
+			country_event = {
+					id = eemega.1
+					days = 1
+			}
+			
+		}
+		
+	}
+}

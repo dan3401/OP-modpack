@@ -1,0 +1,46 @@
+
+building_light_foundry_beep = {
+	can_demolish = yes
+	capital = yes
+	icon = building_eternal_energy
+	base_cap_amount = 2
+
+	potential = {
+		exists = owner
+		owner = { 
+				is_country_type = eternal_empire
+				is_ai = yes              # we do want that for the AI! Because the Ai is stupid!
+		}	
+	}
+	
+	convert_to = {
+		building_dimensional_fabricator
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			minerals = 200000
+			energy = 200000
+			food = 200000
+			alloys = 200000
+			unity = 200000
+			consumer_goods = 200000
+			physics_research = 1000
+			society_research = 1000
+			engineering_research = 1000
+			sr_dark_matter = 1000	
+			acot_sr_dark_energy = 1000
+			acot_sr_light_matter = 1000	
+		}
+	}
+	
+	planet_modifier = {
+		planet_amenities_add = 2000
+	}
+
+	ai_weight = {
+		weight = 10000
+	}
+
+}

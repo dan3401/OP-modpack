@@ -1,0 +1,734 @@
+namespace = twleader
+
+country_event = {
+	id = twleader.2
+	title = "perfection.2.name"
+	desc = "perfection.2.desc"
+	picture = GFX_evt_perfection
+	show_sound = event_the_great_awakening
+	
+	is_triggered_only = yes
+	
+
+
+	immediate = {
+		every_owned_pop = {
+			limit = {
+				is_same_species = root
+				has_trait = trait_ascended
+			}
+			#owner_species = { save_event_target_as = ascended_species }
+		}
+		
+	}
+	
+	option = {
+		name = "utopia.2650.a"
+		hidden_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						is_country_type = eternal_empire	
+					}
+				}
+				every_owned_leader = {
+					limit = {
+						is_same_species = root
+						#species = { 
+						#	has_trait = trait_ascended
+						#	is_same_value = event_target:ascended_species 
+						#}
+						NOR = {
+							has_trait = leader_trait_admiral_ascended
+								has_trait = leader_trait_admiral_perfection
+								has_trait = leader_trait_admiral_universal_language
+								has_trait = leader_trait_general_ascended
+								has_trait = leader_trait_general_perfection
+								has_trait = leader_trait_general_universal_language
+								has_trait = leader_trait_governor_ascended
+								has_trait = leader_trait_governor_perfection
+								has_trait = leader_trait_governor_universal_language
+								has_trait = leader_trait_scientist_ascended
+								has_trait = leader_trait_scientist_perfection
+								has_trait = leader_trait_scientist_universal_language
+								has_trait = leader_trait_ruler_ascended
+								has_trait = leader_trait_ruler_perfection
+								has_trait = leader_trait_ruler_universal_language
+						}
+					}
+					if = {
+						limit = { leader_class = admiral }
+						add_trait = leader_trait_admiral_ascended
+						add_trait = leader_trait_admiral_perfection
+						add_trait = leader_trait_admiral_universal_language
+						add_ruler_trait = leader_trait_ruler_ascended
+						add_ruler_trait = leader_trait_ruler_perfection
+						add_ruler_trait = leader_trait_ruler_universal_language
+					}
+					if = {
+						limit = { leader_class = general }
+						add_trait = leader_trait_general_ascended
+						add_trait = leader_trait_general_perfection
+						add_trait = leader_trait_general_universal_language
+						add_ruler_trait = leader_trait_ruler_ascended
+						add_ruler_trait = leader_trait_ruler_perfection
+						add_ruler_trait = leader_trait_ruler_universal_language
+					}
+					if = {
+						limit = { leader_class = governor }
+						add_trait = leader_trait_governor_ascended
+						add_trait = leader_trait_governor_perfection
+						add_trait = leader_trait_governor_universal_language
+						add_ruler_trait = leader_trait_ruler_ascended
+						add_ruler_trait = leader_trait_ruler_perfection
+						add_ruler_trait = leader_trait_ruler_universal_language
+					}
+					if = {
+						limit = { leader_class = scientist }
+						add_trait = leader_trait_scientist_ascended
+						add_trait = leader_trait_scientist_perfection
+						add_trait = leader_trait_scientist_universal_language
+						add_ruler_trait = leader_trait_ruler_ascended
+						add_ruler_trait = leader_trait_ruler_perfection
+						add_ruler_trait = leader_trait_ruler_universal_language
+					}
+					if = {
+						limit = { leader_class = ruler }
+						add_trait = leader_trait_ruler_ascended
+						add_trait = leader_trait_ruler_perfection
+						add_trait = leader_trait_ruler_universal_language
+						add_ruler_trait = leader_trait_ruler_ascended
+						add_ruler_trait = leader_trait_ruler_perfection
+						add_ruler_trait = leader_trait_ruler_universal_language
+					}
+				}
+				every_pool_leader = {
+					limit = {
+						is_same_species = root
+						#species = { 
+						#	has_trait = trait_ascended
+						#	is_same_value = event_target:ascended_species
+						#}
+						NOR = {
+							has_trait = leader_trait_admiral_ascended
+							has_trait = leader_trait_admiral_perfection
+							has_trait = leader_trait_admiral_universal_language
+							has_trait = leader_trait_general_ascended
+							has_trait = leader_trait_general_perfection
+							has_trait = leader_trait_general_universal_language
+							has_trait = leader_trait_governor_ascended
+							has_trait = leader_trait_governor_perfection
+							has_trait = leader_trait_governor_universal_language
+							has_trait = leader_trait_scientist_ascended
+							has_trait = leader_trait_scientist_perfection
+							has_trait = leader_trait_scientist_universal_language
+							has_trait = leader_trait_ruler_ascended
+							has_trait = leader_trait_ruler_perfection
+							has_trait = leader_trait_ruler_universal_language
+						}
+					}
+					if = {
+						limit = { leader_class = admiral }
+						add_trait = leader_trait_admiral_ascended
+						add_trait = leader_trait_admiral_perfection
+						add_trait = leader_trait_admiral_universal_language
+						add_ruler_trait = leader_trait_ruler_ascended
+						add_ruler_trait = leader_trait_ruler_perfection
+						add_ruler_trait = leader_trait_ruler_universal_language
+					}
+					if = {
+						limit = { leader_class = general }
+						add_trait = leader_trait_general_ascended
+						add_trait = leader_trait_general_perfection
+						add_trait = leader_trait_general_universal_language
+						add_ruler_trait = leader_trait_ruler_ascended
+						add_ruler_trait = leader_trait_ruler_perfection
+						add_ruler_trait = leader_trait_ruler_universal_language
+					}
+					if = {
+						limit = { leader_class = governor }
+						add_trait = leader_trait_governor_ascended
+						add_trait = leader_trait_governor_perfection
+						add_trait = leader_trait_governor_universal_language
+						add_ruler_trait = leader_trait_ruler_ascended
+						add_ruler_trait = leader_trait_ruler_perfection
+						add_ruler_trait = leader_trait_ruler_universal_language
+					}
+					if = {
+						limit = { leader_class = scientist }
+						add_trait = leader_trait_scientist_ascended
+						add_trait = leader_trait_scientist_perfection
+						add_trait = leader_trait_scientist_universal_language
+						add_ruler_trait = leader_trait_ruler_ascended
+						add_ruler_trait = leader_trait_ruler_perfection
+						add_ruler_trait = leader_trait_ruler_universal_language
+					}
+					if = {
+						limit = { leader_class = ruler }
+						add_trait = leader_trait_ruler_ascended
+						add_trait = leader_trait_ruler_perfection
+						add_trait = leader_trait_ruler_universal_language
+						add_ruler_trait = leader_trait_ruler_ascended
+						add_ruler_trait = leader_trait_ruler_perfection
+						add_ruler_trait = leader_trait_ruler_universal_language
+					}
+				}
+			}
+			observer_event = { id = observer.6 }
+			every_country = {
+				limit = { 
+					is_ai = no
+					has_communications = root
+					NOT = { is_same_value = root }
+				}
+				
+			}
+			country_event = {
+				id = twleader.3 days = 10  
+			}
+			country_event = {
+				id = twrpevents.1 days = 360  
+			}
+			
+		}
+	}
+}
+
+# New Leaders Get Psionic Trait
+country_event = {
+	id = twleader.3
+	is_triggered_only = yes
+	hide_window = yes
+
+	
+
+	immediate = {
+		hidden_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						has_government = "gov_eternal_continuum"	
+					}
+				}
+				every_owned_leader = {
+					limit = {
+						is_same_species = root
+						#species = { 
+						#	has_trait = trait_ascended
+						#	is_same_value = event_target:ascended_species 
+						#}
+						NOR = {
+							has_trait = leader_trait_admiral_ascended
+								has_trait = leader_trait_admiral_perfection
+								has_trait = leader_trait_admiral_universal_language
+								has_trait = leader_trait_general_ascended
+								has_trait = leader_trait_general_perfection
+								has_trait = leader_trait_general_universal_language
+								has_trait = leader_trait_governor_ascended
+								has_trait = leader_trait_governor_perfection
+								has_trait = leader_trait_governor_universal_language
+								has_trait = leader_trait_scientist_ascended
+								has_trait = leader_trait_scientist_perfection
+								has_trait = leader_trait_scientist_universal_language
+								has_trait = leader_trait_ruler_ascended
+								has_trait = leader_trait_ruler_perfection
+								has_trait = leader_trait_ruler_universal_language
+						}
+					}
+					if = {
+						limit = { leader_class = admiral }
+						add_trait = leader_trait_admiral_ascended
+						add_trait = leader_trait_admiral_perfection
+						add_trait = leader_trait_admiral_universal_language
+						add_ruler_trait = leader_trait_ruler_ascended
+						add_ruler_trait = leader_trait_ruler_perfection
+						add_ruler_trait = leader_trait_ruler_universal_language
+					}
+					if = {
+						limit = { leader_class = general }
+						add_trait = leader_trait_general_ascended
+						add_trait = leader_trait_general_perfection
+						add_trait = leader_trait_general_universal_language
+						add_ruler_trait = leader_trait_ruler_ascended
+						add_ruler_trait = leader_trait_ruler_perfection
+						add_ruler_trait = leader_trait_ruler_universal_language
+					}
+					if = {
+						limit = { leader_class = governor }
+						add_trait = leader_trait_governor_ascended
+						add_trait = leader_trait_governor_perfection
+						add_trait = leader_trait_governor_universal_language
+						add_ruler_trait = leader_trait_ruler_ascended
+						add_ruler_trait = leader_trait_ruler_perfection
+						add_ruler_trait = leader_trait_ruler_universal_language
+					}
+					if = {
+						limit = { leader_class = scientist }
+						add_trait = leader_trait_scientist_ascended
+						add_trait = leader_trait_scientist_perfection
+						add_trait = leader_trait_scientist_universal_language
+						add_ruler_trait = leader_trait_ruler_ascended
+						add_ruler_trait = leader_trait_ruler_perfection
+						add_ruler_trait = leader_trait_ruler_universal_language
+					}
+					if = {
+						limit = { leader_class = ruler }
+						add_trait = leader_trait_ruler_ascended
+						add_trait = leader_trait_ruler_perfection
+						add_trait = leader_trait_ruler_universal_language
+						add_ruler_trait = leader_trait_ruler_ascended
+						add_ruler_trait = leader_trait_ruler_perfection
+						add_ruler_trait = leader_trait_ruler_universal_language
+					}
+				}
+				every_pool_leader = {
+					limit = {
+						is_same_species = root
+						#species = { 
+						#	has_trait = trait_ascended
+						#	is_same_value = event_target:ascended_species
+						#}
+						NOR = {
+							has_trait = leader_trait_admiral_ascended
+							has_trait = leader_trait_admiral_perfection
+							has_trait = leader_trait_admiral_universal_language
+							has_trait = leader_trait_general_ascended
+							has_trait = leader_trait_general_perfection
+							has_trait = leader_trait_general_universal_language
+							has_trait = leader_trait_governor_ascended
+							has_trait = leader_trait_governor_perfection
+							has_trait = leader_trait_governor_universal_language
+							has_trait = leader_trait_scientist_ascended
+							has_trait = leader_trait_scientist_perfection
+							has_trait = leader_trait_scientist_universal_language
+							has_trait = leader_trait_ruler_ascended
+							has_trait = leader_trait_ruler_perfection
+							has_trait = leader_trait_ruler_universal_language
+						}
+					}
+					if = {
+						limit = { leader_class = admiral }
+						add_trait = leader_trait_admiral_ascended
+						add_trait = leader_trait_admiral_perfection
+						add_trait = leader_trait_admiral_universal_language
+						add_ruler_trait = leader_trait_ruler_ascended
+						add_ruler_trait = leader_trait_ruler_perfection
+						add_ruler_trait = leader_trait_ruler_universal_language
+					}
+					if = {
+						limit = { leader_class = general }
+						add_trait = leader_trait_general_ascended
+						add_trait = leader_trait_general_perfection
+						add_trait = leader_trait_general_universal_language
+						add_ruler_trait = leader_trait_ruler_ascended
+						add_ruler_trait = leader_trait_ruler_perfection
+						add_ruler_trait = leader_trait_ruler_universal_language
+					}
+					if = {
+						limit = { leader_class = governor }
+						add_trait = leader_trait_governor_ascended
+						add_trait = leader_trait_governor_perfection
+						add_trait = leader_trait_governor_universal_language
+						add_ruler_trait = leader_trait_ruler_ascended
+						add_ruler_trait = leader_trait_ruler_perfection
+						add_ruler_trait = leader_trait_ruler_universal_language
+					}
+					if = {
+						limit = { leader_class = scientist }
+						add_trait = leader_trait_scientist_ascended
+						add_trait = leader_trait_scientist_perfection
+						add_trait = leader_trait_scientist_universal_language
+						add_ruler_trait = leader_trait_ruler_ascended
+						add_ruler_trait = leader_trait_ruler_perfection
+						add_ruler_trait = leader_trait_ruler_universal_language
+					}
+					if = {
+						limit = { leader_class = ruler }
+						add_trait = leader_trait_ruler_ascended
+						add_trait = leader_trait_ruler_perfection
+						add_trait = leader_trait_ruler_universal_language
+						add_ruler_trait = leader_trait_ruler_ascended
+						add_ruler_trait = leader_trait_ruler_perfection
+						add_ruler_trait = leader_trait_ruler_universal_language
+					}
+				}
+			}
+			observer_event = { id = observer.6 }
+			every_country = {
+				limit = { 
+					is_ai = no
+					has_communications = root
+					NOT = { is_same_value = root }
+				}
+				
+			}
+			
+		}
+	}
+}
+
+country_event = {
+	id = twleader.4
+	title = "perfection.4.name"
+	desc = "perfection.4.desc"
+	picture = GFX_evt_robotperfection
+	show_sound = event_the_great_awakening
+	
+	is_triggered_only = yes
+
+	immediate = {
+		every_owned_pop = {
+			limit = {
+				is_same_species = root
+				has_trait = trait_ascended_mechanical
+			}
+			#owner_species = { save_event_target_as = ascended_species }
+		}
+		
+	}
+	
+	option = {
+		name = "utopia.2650.a"
+		hidden_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						is_country_type = eternal_empire	
+					}
+				}
+				every_owned_leader = {
+					limit = {
+						is_same_species = root
+						#species = { 
+						#	has_trait = trait_ascended_mechanical
+						#	is_same_value = event_target:ascended_species 
+						#}
+						NOR = {
+							has_trait = leader_trait_admiral_ascended_mechanical
+								has_trait = leader_trait_admiral_ascended_maintenance
+								has_trait = leader_trait_admiral_perfect_tools
+								has_trait = leader_trait_general_ascended_mechanical
+								has_trait = leader_trait_general_ascended_maintenance
+								has_trait = leader_trait_general_perfect_tools
+								has_trait = leader_trait_governor_ascended_mechanical
+								has_trait = leader_trait_governor_ascended_maintenance
+								has_trait = leader_trait_governor_perfect_tools
+								has_trait = leader_trait_scientist_ascended_mechanical
+								has_trait = leader_trait_scientist_ascended_maintenance
+								has_trait = leader_trait_scientist_perfect_tools
+								has_trait = leader_trait_ruler_ascended_mechanical
+								has_trait = leader_trait_ruler_ascended_maintenance
+								has_trait = leader_trait_ruler_perfect_tools
+						}
+					}
+					if = {
+						limit = { leader_class = admiral }
+						add_trait = leader_trait_admiral_ascended_mechanical
+						add_trait = leader_trait_admiral_ascended_maintenance
+						add_trait = leader_trait_admiral_perfect_tools
+						add_ruler_trait = leader_trait_ruler_ascended_mechanical
+						add_ruler_trait = leader_trait_ruler_ascended_maintenance
+						add_ruler_trait = leader_trait_ruler_perfect_tools
+					}
+					if = {
+						limit = { leader_class = general }
+						add_trait = leader_trait_general_ascended_mechanical
+						add_trait = leader_trait_general_ascended_maintenance
+						add_trait = leader_trait_general_perfect_tools
+						add_ruler_trait = leader_trait_ruler_ascended_mechanical
+						add_ruler_trait = leader_trait_ruler_ascended_maintenance
+						add_ruler_trait = leader_trait_ruler_perfect_tools
+					}
+					if = {
+						limit = { leader_class = governor }
+						add_trait = leader_trait_governor_ascended_mechanical
+						add_trait = leader_trait_governor_ascended_maintenance
+						add_trait = leader_trait_governor_perfect_tools
+						add_ruler_trait = leader_trait_ruler_ascended_mechanical
+						add_ruler_trait = leader_trait_ruler_ascended_maintenance
+						add_ruler_trait = leader_trait_ruler_perfect_tools
+					}
+					if = {
+						limit = { leader_class = scientist }
+						add_trait = leader_trait_scientist_ascended_mechanical
+						add_trait = leader_trait_scientist_ascended_maintenance
+						add_trait = leader_trait_scientist_perfect_tools
+						add_ruler_trait = leader_trait_ruler_ascended_mechanical
+						add_ruler_trait = leader_trait_ruler_ascended_maintenance
+						add_ruler_trait = leader_trait_ruler_perfect_tools
+					}
+					if = {
+						limit = { leader_class = ruler }
+						add_trait = leader_trait_ruler_ascended_mechanical
+						add_trait = leader_trait_ruler_ascended_maintenance
+						add_trait = leader_trait_ruler_perfect_tools
+						add_ruler_trait = leader_trait_ruler_ascended_mechanical
+						add_ruler_trait = leader_trait_ruler_ascended_maintenance
+						add_ruler_trait = leader_trait_ruler_perfect_tools
+					}
+				}
+				every_pool_leader = {
+					limit = {
+						is_same_species = root
+						#species = { 
+						#	has_trait = trait_ascended_mechanical
+						#	is_same_value = event_target:ascended_species
+						#}
+						NOR = {
+							has_trait = leader_trait_admiral_ascended_mechanical
+							has_trait = leader_trait_admiral_ascended_maintenance
+							has_trait = leader_trait_admiral_perfect_tools
+							has_trait = leader_trait_general_ascended_mechanical
+							has_trait = leader_trait_general_ascended_maintenance
+							has_trait = leader_trait_general_perfect_tools
+							has_trait = leader_trait_governor_ascended_mechanical
+							has_trait = leader_trait_governor_ascended_maintenance
+							has_trait = leader_trait_governor_perfect_tools
+							has_trait = leader_trait_scientist_ascended_mechanical
+							has_trait = leader_trait_scientist_ascended_maintenance
+							has_trait = leader_trait_scientist_perfect_tools
+							has_trait = leader_trait_ruler_ascended_mechanical
+							has_trait = leader_trait_ruler_ascended_maintenance
+							has_trait = leader_trait_ruler_perfect_tools
+						}
+					}
+					if = {
+						limit = { leader_class = admiral }
+						add_trait = leader_trait_admiral_ascended_mechanical
+						add_trait = leader_trait_admiral_ascended_maintenance
+						add_trait = leader_trait_admiral_perfect_tools
+						add_ruler_trait = leader_trait_ruler_ascended_mechanical
+						add_ruler_trait = leader_trait_ruler_ascended_maintenance
+						add_ruler_trait = leader_trait_ruler_perfect_tools
+					}
+					if = {
+						limit = { leader_class = general }
+						add_trait = leader_trait_general_ascended_mechanical
+						add_trait = leader_trait_general_ascended_maintenance
+						add_trait = leader_trait_general_perfect_tools
+						add_ruler_trait = leader_trait_ruler_ascended_mechanical
+						add_ruler_trait = leader_trait_ruler_ascended_maintenance
+						add_ruler_trait = leader_trait_ruler_perfect_tools
+					}
+					if = {
+						limit = { leader_class = governor }
+						add_trait = leader_trait_governor_ascended_mechanical
+						add_trait = leader_trait_governor_ascended_maintenance
+						add_trait = leader_trait_governor_perfect_tools
+						add_ruler_trait = leader_trait_ruler_ascended_mechanical
+						add_ruler_trait = leader_trait_ruler_ascended_maintenance
+						add_ruler_trait = leader_trait_ruler_perfect_tools
+					}
+					if = {
+						limit = { leader_class = scientist }
+						add_trait = leader_trait_scientist_ascended_mechanical
+						add_trait = leader_trait_scientist_ascended_maintenance
+						add_trait = leader_trait_scientist_perfect_tools
+						add_ruler_trait = leader_trait_ruler_ascended_mechanical
+						add_ruler_trait = leader_trait_ruler_ascended_maintenance
+						add_ruler_trait = leader_trait_ruler_perfect_tools
+					}
+					if = {
+						limit = { leader_class = ruler }
+						add_trait = leader_trait_ruler_ascended_mechanical
+						add_trait = leader_trait_ruler_ascended_maintenance
+						add_trait = leader_trait_ruler_perfect_tools
+						add_ruler_trait = leader_trait_ruler_ascended_mechanical
+						add_ruler_trait = leader_trait_ruler_ascended_maintenance
+						add_ruler_trait = leader_trait_ruler_perfect_tools
+					}
+				}
+			}
+			observer_event = { id = observer.6 }
+			every_country = {
+				limit = { 
+					is_ai = no
+					has_communications = root
+					NOT = { is_same_value = root }
+				}
+				
+			}
+			country_event = {
+				id = twleader.5 days = 10
+			}
+			
+		}
+	}
+}
+
+# New Leaders Get Psionic Trait
+country_event = {
+	id = twleader.5
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		owner = {
+			species = { has_trait = trait_ascended_mechanical }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						has_government = "gov_ancient_ai"
+					}
+				}
+				every_owned_leader = {
+					limit = {
+						is_same_species = root
+						#species = { 
+						#	has_trait = trait_ascended_mechanical
+						#	is_same_value = event_target:ascended_species 
+						#}
+						NOR = {
+							has_trait = leader_trait_admiral_ascended_mechanical
+								has_trait = leader_trait_admiral_ascended_maintenance
+								has_trait = leader_trait_admiral_perfect_tools
+								has_trait = leader_trait_general_ascended_mechanical
+								has_trait = leader_trait_general_ascended_maintenance
+								has_trait = leader_trait_general_perfect_tools
+								has_trait = leader_trait_governor_ascended_mechanical
+								has_trait = leader_trait_governor_ascended_maintenance
+								has_trait = leader_trait_governor_perfect_tools
+								has_trait = leader_trait_scientist_ascended_mechanical
+								has_trait = leader_trait_scientist_ascended_maintenance
+								has_trait = leader_trait_scientist_perfect_tools
+								has_trait = leader_trait_ruler_ascended_mechanical
+								has_trait = leader_trait_ruler_ascended_maintenance
+								has_trait = leader_trait_ruler_perfect_tools
+						}
+					}
+					if = {
+						limit = { leader_class = admiral }
+						add_trait = leader_trait_admiral_ascended_mechanical
+						add_trait = leader_trait_admiral_ascended_maintenance
+						add_trait = leader_trait_admiral_perfect_tools
+						add_ruler_trait = leader_trait_ruler_ascended_mechanical
+						add_ruler_trait = leader_trait_ruler_ascended_maintenance
+						add_ruler_trait = leader_trait_ruler_perfect_tools
+					}
+					if = {
+						limit = { leader_class = general }
+						add_trait = leader_trait_general_ascended_mechanical
+						add_trait = leader_trait_general_ascended_maintenance
+						add_trait = leader_trait_general_perfect_tools
+						add_ruler_trait = leader_trait_ruler_ascended_mechanical
+						add_ruler_trait = leader_trait_ruler_ascended_maintenance
+						add_ruler_trait = leader_trait_ruler_perfect_tools
+					}
+					if = {
+						limit = { leader_class = governor }
+						add_trait = leader_trait_governor_ascended_mechanical
+						add_trait = leader_trait_governor_ascended_maintenance
+						add_trait = leader_trait_governor_perfect_tools
+						add_ruler_trait = leader_trait_ruler_ascended_mechanical
+						add_ruler_trait = leader_trait_ruler_ascended_maintenance
+						add_ruler_trait = leader_trait_ruler_perfect_tools
+					}
+					if = {
+						limit = { leader_class = scientist }
+						add_trait = leader_trait_scientist_ascended_mechanical
+						add_trait = leader_trait_scientist_ascended_maintenance
+						add_trait = leader_trait_scientist_perfect_tools
+						add_ruler_trait = leader_trait_ruler_ascended_mechanical
+						add_ruler_trait = leader_trait_ruler_ascended_maintenance
+						add_ruler_trait = leader_trait_ruler_perfect_tools
+					}
+					if = {
+						limit = { leader_class = ruler }
+						add_trait = leader_trait_ruler_ascended_mechanical
+						add_trait = leader_trait_ruler_ascended_maintenance
+						add_trait = leader_trait_ruler_perfect_tools
+						add_ruler_trait = leader_trait_ruler_ascended_mechanical
+						add_ruler_trait = leader_trait_ruler_ascended_maintenance
+						add_ruler_trait = leader_trait_ruler_perfect_tools
+					}
+				}
+				every_pool_leader = {
+					limit = {
+						is_same_species = root
+						#species = { 
+						#	has_trait = trait_ascended_mechanical
+						#	is_same_value = event_target:ascended_species
+						#}
+						NOR = {
+							has_trait = leader_trait_admiral_ascended_mechanical
+							has_trait = leader_trait_admiral_ascended_maintenance
+							has_trait = leader_trait_admiral_perfect_tools
+							has_trait = leader_trait_general_ascended_mechanical
+							has_trait = leader_trait_general_ascended_maintenance
+							has_trait = leader_trait_general_perfect_tools
+							has_trait = leader_trait_governor_ascended_mechanical
+							has_trait = leader_trait_governor_ascended_maintenance
+							has_trait = leader_trait_governor_perfect_tools
+							has_trait = leader_trait_scientist_ascended_mechanical
+							has_trait = leader_trait_scientist_ascended_maintenance
+							has_trait = leader_trait_scientist_perfect_tools
+							has_trait = leader_trait_ruler_ascended_mechanical
+							has_trait = leader_trait_ruler_ascended_maintenance
+							has_trait = leader_trait_ruler_perfect_tools
+						}
+					}
+					if = {
+						limit = { leader_class = admiral }
+						add_trait = leader_trait_admiral_ascended_mechanical
+						add_trait = leader_trait_admiral_ascended_maintenance
+						add_trait = leader_trait_admiral_perfect_tools
+						add_ruler_trait = leader_trait_ruler_ascended_mechanical
+						add_ruler_trait = leader_trait_ruler_ascended_maintenance
+						add_ruler_trait = leader_trait_ruler_perfect_tools
+					}
+					if = {
+						limit = { leader_class = general }
+						add_trait = leader_trait_general_ascended_mechanical
+						add_trait = leader_trait_general_ascended_maintenance
+						add_trait = leader_trait_general_perfect_tools
+						add_ruler_trait = leader_trait_ruler_ascended_mechanical
+						add_ruler_trait = leader_trait_ruler_ascended_maintenance
+						add_ruler_trait = leader_trait_ruler_perfect_tools
+					}
+					if = {
+						limit = { leader_class = governor }
+						add_trait = leader_trait_governor_ascended_mechanical
+						add_trait = leader_trait_governor_ascended_maintenance
+						add_trait = leader_trait_governor_perfect_tools
+						add_ruler_trait = leader_trait_ruler_ascended_mechanical
+						add_ruler_trait = leader_trait_ruler_ascended_maintenance
+						add_ruler_trait = leader_trait_ruler_perfect_tools
+					}
+					if = {
+						limit = { leader_class = scientist }
+						add_trait = leader_trait_scientist_ascended_mechanical
+						add_trait = leader_trait_scientist_ascended_maintenance
+						add_trait = leader_trait_scientist_perfect_tools
+						add_ruler_trait = leader_trait_ruler_ascended_mechanical
+						add_ruler_trait = leader_trait_ruler_ascended_maintenance
+						add_ruler_trait = leader_trait_ruler_perfect_tools
+					}
+					if = {
+						limit = { leader_class = ruler }
+						add_trait = leader_trait_ruler_ascended_mechanical
+						add_trait = leader_trait_ruler_ascended_maintenance
+						add_trait = leader_trait_ruler_perfect_tools
+						add_ruler_trait = leader_trait_ruler_ascended_mechanical
+						add_ruler_trait = leader_trait_ruler_ascended_maintenance
+						add_ruler_trait = leader_trait_ruler_perfect_tools
+					}
+				}
+			}
+			observer_event = { id = observer.6 }
+			every_country = {
+				limit = { 
+					is_ai = no
+					has_communications = root
+					NOT = { is_same_value = root }
+				}
+				
+			}
+			
+		}
+	}
+}

@@ -1,0 +1,82 @@
+############DARK MATTER EVENTS
+
+
+namespace = knotw_ships
+
+# chari Built
+ship_event = {
+	id = knotw_ships.0
+	hide_window = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+		is_ship_size = eternal_colossus
+		is_ship_size = eternal_titan
+		}
+	}
+
+	immediate = {
+		set_ship_flag = chari_first_life
+		set_disable_at_health = 0.02
+	}
+}
+
+# chari First Life
+ship_event = {
+	id = knotw_ships.1
+	hide_window = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+	OR = {
+		is_ship_size = eternal_colossus
+		is_ship_size = eternal_titan
+		}
+		has_ship_flag = chari_first_life
+	}
+
+	immediate = {
+		set_ship_flag = chari_second_life
+		ship_event = { id = knotw_ships.2 days = 1 }
+	}
+}
+
+# chari Second Life Assigned
+ship_event = {
+	id = knotw_ships.2
+	hide_window = yes
+	
+	is_triggered_only = yes
+
+	immediate = {
+		set_ship_flag = chari_second_life
+		repair_ship = yes
+		set_disabled = no	
+		remove_ship_flag = chari_first_life
+	}
+}
+
+ship_event = {
+	id = knotw_ships.3
+	hide_window = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+		is_ship_size = eternal_colossus
+		is_ship_size = eternal_titan
+		}
+		has_ship_flag = chari_second_life
+		NOT = {
+			has_ship_flag = chari_first_life
+		}
+	}
+
+	immediate = {
+		destroy_ship = this
+	}
+}

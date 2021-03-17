@@ -1,0 +1,214 @@
+@resolution_weight_hated = 3
+@resolution_weight_disliked = 4
+@resolution_weight_unpopular = 5
+@resolution_weight_normal = 6
+@resolution_weight_popular = 6.5
+@resolution_weight_loved = 7
+
+@resolution_cost_t1 = 100
+@resolution_cost_t2 = 150
+@resolution_cost_t3 = 200
+@resolution_cost_t4 = 250
+@resolution_cost_t5 = 300
+@resolution_cost_denounce = 25
+
+@resolution_flag_timer = 360
+
+#example_resolution = {
+#	icon = "name of the icon key"
+#	resources = {} # cost and category
+#	target = yes/no # if this resolution requires a target country
+#	harmful = yes/no # if the AI should consider this harmful when choosing target
+#	modifier = {} # modifier to be applied to all community members if passed
+#	triggered_modifier = {} # triggered modifier to be applied, scope is country
+#	effect = {} # effect to be applied if passed, scope is country
+#	fail_effects = {} # effect to be applied if failed, scope is country
+#	potential = {} # potential trigger, scope is country
+#	allow = {} # allow trigger, scope is country
+#	ai_weight = {} # ai weight modifiers, scope is country
+#	valid_target = {} # valid targets trigger, scope is country
+#}
+
+# NOTE: Remember to add Resolutions to a Resolution Category!
+
+resolution_mutualdefense_castigation_denouncement = {
+	icon = "GFX_resolution_mutual_defense"
+
+	potential = {
+		has_federations_dlc = yes
+	}
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_denounce
+		}
+	}
+
+	target = yes
+	harmful = yes
+	valid_target = {
+		OR = {
+			is_country_type = default
+			is_country_type = ascended_empire
+			is_country_type = lost_empire
+		}
+		NOT = { is_same_value = from } # don't denounce yourself.
+		OR = {
+			is_galactic_community_member = no
+			is_in_breach_of_any = yes
+		}
+		OR = {
+			opinion_level = { who = from level < neutral }
+			from = { is_rival = prev }
+			is_in_breach_of_any = yes
+		}
+	}
+
+	effect = {
+		add_modifier = { modifier = resolution_denounced days = 3600 }
+	}
+
+	potential = {
+		OR = {
+			is_active_resolution = "resolution_mutualdefense_castigation_proclamation"
+			is_active_resolution = "resolution_mutualdefense_renegade_containment"
+		}
+	}
+
+	allow = {
+	}
+
+	ai_weight = {
+		weight = @resolution_weight_normal
+	}
+}
+
+resolution_council_denouncement = {
+	icon = "GFX_resolution_purges"
+
+	potential = {
+		has_federations_dlc = yes
+	}
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t1
+		}
+	}
+
+	target = yes
+	harmful = yes
+	valid_target = {
+		OR = {
+			is_country_type = default
+			is_country_type = ascended_empire
+			is_country_type = lost_empire
+		}
+		is_galactic_community_member = yes
+		NOT = { is_same_value = from } # don't denounce yourself.
+		OR = {
+			opinion_level = { who = from level < neutral }
+			from = { is_rival = prev }
+			is_in_breach_of_any = yes
+		}
+	}
+
+	effect = {
+		add_modifier = { modifier = resolution_denounced days = 3600 }
+	}
+
+	potential = {
+		is_galactic_council_established = yes
+		NOT = { has_global_flag = resolution_council_denouncement_abolished }
+	}
+
+	allow = {
+		is_part_of_galactic_council = yes
+	}
+
+	ai_weight = {
+		weight = @resolution_weight_disliked
+	}
+}
+
+resolution_galacticreforms_permanent_seat = {
+	icon = "GFX_resolution_council_member_permanent"
+
+	potential = {
+		has_federations_dlc = yes
+	}
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t5
+		}
+	}
+
+	target = yes
+	harmful = no
+	valid_target = {
+		OR = {
+			is_country_type = default
+			is_country_type = ascended_empire
+			is_country_type = lost_empire
+		}
+		is_galactic_community_member = yes
+		is_part_of_galactic_council = yes
+		is_permanent_councillor = no
+	}
+
+	effect = {
+		add_permanent_councillor = yes
+	}
+
+	potential = {
+		is_galactic_council_established = yes
+	}
+
+	ai_weight = {
+		weight = @resolution_weight_disliked
+	}
+}
+
+resolution_galacticreforms_revoke_permanent_seat = {
+	icon = "GFX_resolution_council_member_permanent"
+
+	potential = {
+		has_federations_dlc = yes
+	}
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t5
+		}
+	}
+
+	target = yes
+	harmful = yes
+	valid_target = {
+		OR = {
+			is_country_type = default
+			is_country_type = ascended_empire
+			is_country_type = lost_empire
+		}
+		is_galactic_community_member = yes
+		is_part_of_galactic_council = yes
+		is_permanent_councillor = yes
+	}
+
+	effect = {
+		remove_permanent_councillor = yes
+	}
+
+	potential = {
+		is_galactic_council_established = yes
+	}
+
+	ai_weight = {
+		weight = @resolution_weight_disliked
+	}
+}

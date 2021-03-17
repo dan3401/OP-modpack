@@ -1,0 +1,302 @@
+
+tech_mega_evolution = {
+	cost = 10000
+	area = society
+	category = { biology }
+	tier = 5
+	prerequisites = { "tech_genetic_resequencing" }
+	weight = 100
+	icon = tech_gene_expressions
+
+	modifier = {
+		description = tech_gene_expressions_modifier_desc
+		description_parameters = {
+			POINTS = 4
+		}
+		POKEMON_species_trait_points_add = 4
+	}
+
+	potential = {
+		OR = {
+			NOT = { has_authority = auth_machine_intelligence }
+			has_civic = civic_machine_assimilator
+			has_civic = civic_machine_servitor
+		}
+	}
+
+	weight_modifier = {
+	    modifier = {
+			factor = 0
+			NOT = { 
+				any_owned_pop = {
+				pop_has_trait = trait_directed_evolution
+			}
+			}
+			}
+		
+	}
+
+	ai_weight = {
+		factor = 0
+		
+	}
+}
+
+
+
+tech_grass_type_Wild_growth = {
+	cost = @tier5cost2
+	area = society
+	tier = 5
+	category = { biology }
+	weight = @tier5weight2
+	icon = tech_dense_jungle
+
+	modifier = {
+		pop_growth_speed = 0.1
+	}
+
+	potential = {
+		OR = {
+			NOT = { has_authority = auth_machine_intelligence }
+			has_civic = civic_machine_assimilator
+		}
+	}
+
+	weight_modifier = {
+		factor = 1.5 
+		 modifier = {
+			factor = 0
+			NOR = { 
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_scientist_grass_type_Gene_Mastery_1" 
+			}				
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_scientist_grass_type_Gene_Mastery_2" 
+			}	
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_scientist_grass_type_Gene_Mastery_3" 
+			}	
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_scientist_grass_type_Gene_Mastery_4" 
+			}	
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_scientist_grass_type_Gene_Mastery_5" 
+			}
+			}
+			}
+		modifier = {
+			factor = 1.25
+			has_authority = auth_hive_mind
+		}
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_supremacy_adopt
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 0
+			}
+		
+	
+}
+
+tech_grass_type_Wild_growth_1 = {
+	cost = @tier5cost2
+	area = society
+	tier = 4
+	category = { biology }
+	prerequisites = { "tech_grass_type_Wild_growth" }
+	weight = @tier5weight2
+	icon = tech_dense_jungle
+
+	modifier = {
+		pop_growth_speed = 0.1
+	}
+
+	potential = {
+		OR = {
+			NOT = { has_authority = auth_machine_intelligence }
+			has_civic = civic_machine_assimilator
+		}
+	}
+
+	weight_modifier = {
+		factor = 1.5 
+		 modifier = {
+			factor = 0
+			NOR = { 
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_scientist_grass_type_Gene_Mastery_1" 
+			}				
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_scientist_grass_type_Gene_Mastery_2" 
+			}	
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_scientist_grass_type_Gene_Mastery_3" 
+			}	
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_scientist_grass_type_Gene_Mastery_4" 
+			}	
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_scientist_grass_type_Gene_Mastery_5" 
+			}
+			}
+			}
+		modifier = {
+			factor = 1.25
+			has_authority = auth_hive_mind
+		}
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_supremacy_adopt
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 0
+			}
+		
+	
+}
+
+tech_grass_type_Wild_growth_2 = {
+	cost = @tier5cost2
+	area = society
+	tier = 5
+	category = { biology }
+	prerequisites = { "tech_grass_type_Wild_growth_1" }
+	weight = @tier5weight2
+	icon = tech_dense_jungle
+
+	modifier = {
+		pop_growth_speed = 0.1
+	}
+
+	potential = {
+		OR = {
+			NOT = { has_authority = auth_machine_intelligence }
+			has_civic = civic_machine_assimilator
+		}
+	}
+
+	weight_modifier = {
+		factor = 1.5 
+		 modifier = {
+			factor = 0
+			NOR = { 
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_scientist_grass_type_Gene_Mastery_1" 
+			}				
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_scientist_grass_type_Gene_Mastery_2" 
+			}	
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_scientist_grass_type_Gene_Mastery_3" 
+			}	
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_scientist_grass_type_Gene_Mastery_4" 
+			}	
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_scientist_grass_type_Gene_Mastery_5" 
+			}
+			}
+			}
+		modifier = {
+			factor = 1.25
+			has_authority = auth_hive_mind
+		}
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_supremacy_adopt
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 0
+			}
+		
+	
+}
+
+
+tech_Deep_brain_development = {
+	cost = 6000
+	area = society
+	category = { biology }
+	tier = 3
+	prerequisites = { "tech_gene_tailoring" }
+	weight = 100
+	icon = tech_combat_computers_3
+
+	modifier = {
+		planet_jobs_produces_mult = 0.05
+		planet_jobs_engineering_research_produces_mult = 0.1
+		planet_jobs_physics_research_produces_mult = 0.1
+		planet_jobs_society_research_produces_mult = 0.1
+		species_leader_exp_gain = 0.1
+		leader_skill_levels = 1
+	}
+
+	potential = {
+		OR = {
+			NOT = { has_authority = auth_machine_intelligence }
+			has_civic = civic_machine_assimilator
+			has_civic = civic_machine_servitor
+		}
+	}
+
+	weight_modifier = {
+	    modifier = {
+			factor = 0
+			NOT = { 
+				any_owned_pop = {
+				pop_has_trait = trait_directed_evolution
+			}
+			}
+			}
+		
+	}
+
+	ai_weight = {
+		factor = 0 
+	
+	}
+}

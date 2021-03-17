@@ -1,0 +1,280 @@
+greetings = {
+	MA_ARROGANT_GREETING_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			is_country_type = eternal_empire
+			has_ethic = ethic_fanatic_materialist
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_arrogant_to = FROM
+				is_imperious_to = FROM
+			}
+		}
+	}
+	MA_BELLIGERENT_GREETING_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			is_country_type = eternal_empire
+			has_ethic = ethic_fanatic_materialist
+			NOT = { is_at_war_with = FROM }
+			is_belligerent_to = FROM
+		}
+	}	
+	MA_CUSTODIAL_GREETING_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			is_country_type = eternal_empire
+			has_ethic = ethic_fanatic_materialist
+			NOT = { is_at_war_with = FROM }
+			is_custodial_to = FROM
+			is_in_federation_with = FROM
+		}
+	}
+	MA_CUSTODIAL_GREETING_02 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			is_country_type = eternal_empire
+			has_ethic = ethic_fanatic_materialist
+			NOT = { is_at_war_with = FROM }
+			is_custodial_to = FROM
+			NOT = { is_in_federation_with = FROM }
+		}
+	}
+	MA_OVERLORD_GREETING_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			is_country_type = eternal_empire
+			has_ethic = ethic_fanatic_materialist
+			is_overlord_to = FROM
+		}
+	}
+	XE_ARROGANT_GREETING_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			is_country_type = eternal_empire
+			has_ethic = ethic_fanatic_xenophile
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_arrogant_to = FROM
+				is_imperious_to = FROM
+			}
+		}
+	}
+	XE_BELLIGERENT_GREETING_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			is_country_type = eternal_empire
+			has_ethic = ethic_fanatic_xenophile
+			NOT = { is_at_war_with = FROM }
+			is_belligerent_to = FROM
+		}
+	}		
+	XE_CUSTODIAL_GREETING_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			is_country_type = eternal_empire
+			has_ethic = ethic_fanatic_xenophile
+			NOT = { is_at_war_with = FROM }
+			is_custodial_to = FROM
+			is_in_federation_with = FROM
+		}
+	}
+	XE_CUSTODIAL_GREETING_02 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			is_country_type = eternal_empire
+			has_ethic = ethic_fanatic_xenophile
+			NOT = { is_at_war_with = FROM }
+			is_custodial_to = FROM
+			NOT = { is_in_federation_with = FROM }
+		}
+	}
+	XE_OVERLORD_GREETING_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			is_country_type = eternal_empire
+			has_ethic = ethic_fanatic_xenophile
+			is_overlord_to = FROM
+			FROM = { NOT = { has_authority = auth_machine_intelligence } }
+		}
+	}
+	XE_MECH_OVERLORD_GREETING_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			is_country_type = eternal_empire
+			has_ethic = ethic_fanatic_xenophile
+			is_overlord_to = FROM
+			FROM = { has_authority = auth_machine_intelligence }
+		}
+	}
+
+
+	# Jingoistic Reclaimers
+	XP_ARROGANT_GREETING_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			is_country_type = eternal_empire
+			has_ethic = ethic_fanatic_xenophobe
+			FROM = { NOT = { has_authority = auth_machine_intelligence } }
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_arrogant_to = FROM
+				is_imperious_to = FROM
+			}
+		}
+	}
+	XP_MECH_ARROGANT_GREETING_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			is_country_type = eternal_empire
+			has_ethic = ethic_fanatic_xenophobe
+			FROM = { has_authority = auth_machine_intelligence }
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_arrogant_to = FROM
+				is_imperious_to = FROM
+			}
+		}
+	}
+	XP_BELLIGERENT_GREETING_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			is_country_type = eternal_empire
+			has_ethic = ethic_fanatic_xenophobe
+			FROM = { NOT = { has_authority = auth_machine_intelligence } }
+			NOT = { is_at_war_with = FROM }
+			is_belligerent_to = FROM
+		}
+	}
+	XP_MECH_BELLIGERENT_GREETING_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			is_country_type = eternal_empire
+			has_ethic = ethic_fanatic_xenophobe
+			FROM = { has_authority = auth_machine_intelligence }
+			NOT = { is_at_war_with = FROM }
+			is_belligerent_to = FROM
+		}
+	}
+	XP_OVERLORD_GREETING_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			is_country_type = eternal_empire
+			has_ethic = ethic_fanatic_xenophobe
+			is_overlord_to = FROM
+		}
+	}	
+	
+	# Doctrinal Enforcers
+	SP_ARROGANT_GREETING_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			is_country_type = eternal_empire
+			has_ethic = ethic_fanatic_spiritualist
+			FROM = { NOT = { has_authority = auth_machine_intelligence } }
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_arrogant_to = FROM
+				is_imperious_to = FROM
+			}
+		}
+	}
+	SP_MECH_ARROGANT_GREETING_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			is_country_type = eternal_empire
+			has_ethic = ethic_fanatic_spiritualist
+			FROM = { has_authority = auth_machine_intelligence }
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_arrogant_to = FROM
+				is_imperious_to = FROM
+			}
+		}
+	}
+	SP_BELLIGERENT_GREETING_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			is_country_type = eternal_empire
+			has_ethic = ethic_fanatic_spiritualist
+			FROM = { NOT = { has_authority = auth_machine_intelligence } }
+			NOT = { is_at_war_with = FROM }
+			is_belligerent_to = FROM
+		}
+	}
+
+	SP_MECH_BELLIGERENT_GREETING_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			is_country_type = eternal_empire
+			has_ethic = ethic_fanatic_spiritualist
+			FROM = { has_authority = auth_machine_intelligence }
+			NOT = { is_at_war_with = FROM }
+			is_belligerent_to = FROM
+		}
+	}	
+	SP_OVERLORD_GREETING_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			is_country_type = eternal_empire
+			has_ethic = ethic_fanatic_spiritualist
+			is_overlord_to = FROM
+		}
+	}
+	01_AWAKENED_EMPIRE_WAR_GREETING = {
+		trigger = {
+			is_country_type = eternal_empire
+			is_fallen_machine_empire = no
+			is_at_war_with = FROM
+		}
+	}
+	02_AWAKENED_EMPIRE_WAR_GREETING = {
+		trigger = {
+			is_country_type = eternal_empire
+			is_fallen_machine_empire = no
+			is_at_war_with = FROM
+		}
+	}
+}

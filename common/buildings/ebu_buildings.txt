@@ -1,0 +1,1725 @@
+#Farming Buildings
+
+building_hydroponics_farm = {
+	base_buildtime = @b1_time
+
+	category = resource
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				country_uses_food = yes
+				is_ai = no
+			}
+		}
+		NOT = { is_planet_class = pc_machine }
+		NOT = { has_modifier = resort_colony }
+	}
+
+	allow = {
+		buildings_simple_allow = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				is_ai = yes
+				country_uses_food = no
+			}
+			planet = {
+				NOT = { is_planet_class = pc_habitat }
+				free_building_slots = 0
+				owner = {
+					is_ai = yes
+					has_monthly_income = {
+						resource = food
+						value > 100
+					}
+				}
+			}
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_farmer_add = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_origin = origin_void_dwellers }
+		}
+		modifier = {
+			job_farmer_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_agri_drone_add = 2
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 300
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = job_agri_drone_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		text = job_farmer_effect_desc
+	}
+
+	prerequisites = {
+		"tech_hydroponics"
+	}
+	
+	upgrades = {
+		"eb_hydrofarm2"
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 10
+			NOR = {
+				is_planet_class = pc_habitat
+				is_planet_class = pc_city
+				is_planet_class = pc_relic
+			}
+			OR = {
+				free_jobs < 3
+				buildings_unemployed = yes
+			}
+			OR = {
+				num_free_districts = { type = district_farming value = 0 }
+				free_district_slots = 0
+			}
+			owner = {
+				has_monthly_income = {
+					resource = food
+					value < 0
+				}
+			}
+		}
+		modifier = {
+			weight = 20
+			OR = {
+				free_housing > 3
+				owner = { is_gestalt = no }
+			}
+			OR = {
+				free_jobs < 3
+				buildings_unemployed = yes
+			}
+			is_planet_class = pc_habitat
+			OR = {
+				owner = {
+					has_monthly_income = {
+						resource = food
+						value < 50
+					}
+				}
+				has_building = building_hydroponics_farm
+			}
+		}
+		modifier = {
+			factor = 0
+			owner = {
+				has_monthly_income = {
+					resource = food
+					value > 100
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			owner = {
+				country_uses_food = no
+			}
+		}
+	}
+
+	ai_resource_production = {
+		food = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+eb_hydrofarm2 = {
+	base_buildtime = 360
+	can_build = no
+	
+	category = resource
+	
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_farmer_add = 5
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_origin = origin_void_dwellers }
+		}
+		modifier = {
+			job_farmer_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_agri_drone_add = 5
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 600
+			volatile_motes = 10
+		}
+		upkeep = {
+			energy = 5
+			volatile_motes = 1
+		}
+	}	
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = job_agri_drone_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		text = job_farmer_effect_desc
+	}
+	
+	upgrades = {
+		"eb_hydrofarm3"
+	}
+	
+	prerequisites = {
+		"tech_food_processing_1"
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 501
+			OR = {
+				free_jobs < 3
+				buildings_unemployed = yes
+			}
+			OR = {
+				num_free_districts = { type = district_farming value = 0 } 
+				free_district_slots = 0
+			}
+			owner = {
+				OR = {
+					is_mechanical_empire = no
+					AND = {
+						is_mechanical_empire = yes
+						OR = {
+							has_civic = civic_machine_servitor
+							has_civic = civic_machine_assimilator
+						}
+					}
+				}
+				has_monthly_income = {
+					resource = food
+					value < 0
+				}
+			}
+		}
+		modifier = {
+			weight = 1001
+			OR = {
+				free_housing > 3
+				owner = { is_gestalt = no }
+			}
+			OR = {
+				free_jobs < 3
+				buildings_unemployed = yes
+			}
+			OR = {
+				is_planet_class = pc_habitat
+				is_planet_class = pc_city
+				is_planet_class = pc_relic
+			}
+			OR = {
+				owner = {
+					OR = {
+						is_mechanical_empire = no
+						AND = {
+							is_mechanical_empire = yes
+							OR = {
+								has_civic = civic_machine_servitor
+								has_civic = civic_machine_assimilator
+							}
+						}
+					}
+					has_monthly_income = {
+						resource = food
+						value < 125
+					}
+				}
+				has_building = building_hydroponics_farm
+			}
+		}
+		modifier = {
+			factor = 0
+			owner = {
+				has_monthly_income = {
+					resource = food
+					value > 1
+				}
+			}
+			OR = {
+				is_planet_class = pc_city
+				is_planet_class = pc_relic
+			}
+		}
+		modifier = {
+			factor = 0
+			owner = { has_monthly_income = { resource = volatile_motes value <= 1 } }
+        }
+	}
+
+	ai_resource_production = {
+		food = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+eb_hydrofarm3 = {
+	base_buildtime = 360
+	can_build = no
+
+	category = resource
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_farmer_add = 10
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_origin = origin_void_dwellers }
+		}
+		modifier = {
+			job_farmer_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_agri_drone_add = 10
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 900
+			volatile_motes = 25
+		}
+		upkeep = {
+			energy = 10
+			volatile_motes = 2
+		}
+	}	
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = job_agri_drone_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		text = job_farmer_effect_desc
+	}
+	
+	prerequisites = {
+		"tech_food_processing_2"
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 502
+			OR = {
+				free_jobs < 3
+				buildings_unemployed = yes
+			}
+			OR = {
+				num_free_districts = { type = district_farming value = 0 } 
+				free_district_slots = 0
+			}
+			owner = {
+				OR = {
+					is_mechanical_empire = no
+					AND = {
+						is_mechanical_empire = yes
+						OR = {
+							has_civic = civic_machine_servitor
+							has_civic = civic_machine_assimilator
+						}
+					}
+				}
+				has_monthly_income = {
+					resource = food
+					value < 0
+				}
+			}
+		}
+		modifier = {
+			weight = 1002
+			OR = {
+				free_housing > 3
+				owner = { is_gestalt = no }
+			}
+			OR = {
+				free_jobs < 3
+				buildings_unemployed = yes
+			}
+			OR = {
+				is_planet_class = pc_habitat
+				is_planet_class = pc_city
+				is_planet_class = pc_relic
+			}
+			OR = {
+				owner = {
+					OR = {
+						is_mechanical_empire = no
+						AND = {
+							is_mechanical_empire = yes
+							OR = {
+								has_civic = civic_machine_servitor
+								has_civic = civic_machine_assimilator
+							}
+						}
+					}
+					has_monthly_income = {
+						resource = food
+						value < 125
+					}
+				}
+				has_building = building_hydroponics_farm
+			}
+		}
+		modifier = {
+			factor = 0
+			owner = {
+				has_monthly_income = {
+					resource = food
+					value > 1
+				}
+			}
+			OR = {
+				is_planet_class = pc_city
+				is_planet_class = pc_relic
+			}
+		}
+		modifier = {
+            factor = 0
+            owner = { has_monthly_income = { resource = volatile_motes value <= 2 } }
+        }
+	}
+
+	ai_resource_production = {
+		food = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+#Mineral Buildings
+eb_mineral2 = {
+	base_buildtime = 360
+	can_build = no
+	
+	category = resource
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_miner_add = 5
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_mining_drone_add = 5
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 600
+			rare_crystals = 10
+		}
+		upkeep = {
+			energy = 5
+			rare_crystals = 1
+		}
+	}	
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = job_mining_drone_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		text = job_miner_effect_desc
+	}
+	
+	prerequisites = {
+		tech_mineral_purification_2
+	}
+	
+	upgrades = {
+		"eb_mineral3"
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 501
+			OR = { 
+				NOT = { is_planet_class = pc_habitat }
+				has_planet_flag = mining_habitat
+			}
+			OR = {
+				free_jobs < 3
+				buildings_unemployed = yes
+			}
+			OR = {
+				num_free_districts = { type = district_mining value = 0 } 
+				free_district_slots = 0
+			}#Don't build when you can still get farming districts
+			owner = {
+				has_monthly_income = {
+					resource = minerals
+					value < 0
+				}
+			}
+		}
+		modifier = {
+			weight = 1001
+			OR = {
+				free_housing > 3
+				owner = { is_gestalt = no }
+			}
+			OR = {
+				free_jobs < 3
+				buildings_unemployed = yes
+			}
+			OR = {
+				AND = {
+					is_planet_class = pc_habitat
+					has_planet_flag = mining_habitat
+				}
+				NOR = { 
+					is_planet_class = pc_ringworld_habitable 
+					is_planet_class = pc_cybrex
+					has_modifier = resort_colony
+				}
+			}
+			OR = {
+				owner = {
+					has_monthly_income = {
+						resource = minerals
+						value < 125
+					}
+				}
+				has_building = eb_mineral
+			}
+		}
+		modifier = {
+			factor = 0
+			owner = {
+				has_monthly_income = {
+					resource = minerals
+					value > 1
+				}
+			}
+			OR = {
+				is_planet_class = pc_city
+				is_planet_class = pc_relic
+			}
+		}
+		modifier = {
+            factor = 0
+			owner = { has_monthly_income = { resource = rare_crystals value <= 1 } }
+        }
+	}
+
+	ai_resource_production = {
+		minerals = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+eb_mineral3 = {
+	base_buildtime = 360
+	can_build = no
+	
+	category = resource
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_miner_add = 10
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_mining_drone_add = 10
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 900
+			volatile_motes = 25
+		}
+		upkeep = {
+			energy = 10
+			rare_crystals = 2
+		}
+	}	
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = job_mining_drone_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		text = job_miner_effect_desc
+	}
+	
+	prerequisites = {
+		eb_mineral_tech
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 502
+			OR = { 
+				NOT = { is_planet_class = pc_habitat }
+				has_planet_flag = mining_habitat
+			}
+			OR = {
+				free_jobs < 3
+				buildings_unemployed = yes
+			}
+			OR = {
+				num_free_districts = { type = district_mining value = 0 } 
+				free_district_slots = 0
+			}#Don't build when you can still get farming districts
+			owner = {
+				has_monthly_income = {
+					resource = minerals
+					value < 0
+				}
+			}
+		}
+		modifier = {
+			weight = 1002
+			OR = {
+				free_housing > 3
+				owner = { is_gestalt = no }
+			}
+			OR = {
+				free_jobs < 3
+				buildings_unemployed = yes
+			}
+			OR = {
+				AND = {
+					is_planet_class = pc_habitat
+					has_planet_flag = mining_habitat
+				}
+				NOR = { 
+					is_planet_class = pc_ringworld_habitable 
+					is_planet_class = pc_cybrex
+					has_modifier = resort_colony
+				}
+			}
+			OR = {
+				owner = {
+					has_monthly_income = {
+						resource = minerals
+						value < 125
+					}
+				}
+				has_building = eb_mineral
+			}
+		}
+		modifier = {
+			factor = 0
+			owner = {
+				has_monthly_income = {
+					resource = minerals
+					value > 1
+				}
+			}
+			OR = {
+				is_planet_class = pc_city
+				is_planet_class = pc_relic
+			}
+		}
+		modifier = {
+            factor = 0
+            owner = { has_monthly_income = { resource = rare_crystals value <= 2 } }
+        }
+	}
+
+	ai_resource_production = {
+		minerals = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+eb_mineral_hab2 = {
+	base_buildtime = 360
+	can_build = no
+	
+	category = resource
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_miner_add = 3
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+			planet = { 
+				OR = { 
+					AND = {
+						has_planet_flag = mining_habitat 
+						is_planet_class = pc_habitat
+					}
+					is_planet_class = pc_ringworld_habitable
+					is_planet_class = pc_cybrex
+				}
+			}
+		}
+		modifier = {
+			job_miner_add = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_mining_drone_add = 3
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+			planet = { 
+				OR = { 
+					AND = {
+						has_planet_flag = mining_habitat 
+						is_planet_class = pc_habitat
+					}
+					is_planet_class = pc_ringworld_habitable
+					is_planet_class = pc_cybrex
+				}
+			}
+		}
+		modifier = {
+			job_mining_drone_add = 2
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 600
+			rare_crystals = 10
+		}
+		upkeep = {
+			energy = 5
+			rare_crystals = 1
+		}
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { 
+				OR = {
+					is_gestalt = yes
+					is_regular_empire = yes
+				}
+			}
+			planet = {
+				NOT = { has_planet_flag = mining_habitat }
+				is_planet_class = pc_habitat
+				NOT = { is_planet_class = pc_ringworld_habitable }
+				NOT = { is_planet_class = pc_cybrex }
+			}
+		}
+		text = eb_mineral_hab_bad
+	}	
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = job_mining_drone_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		text = job_miner_effect_desc
+	}
+	
+	prerequisites = {
+		tech_mineral_purification_2
+	}
+	
+	upgrades = {
+		"eb_mineral_hab3"
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 501
+			OR = { 
+				NOT = { is_planet_class = pc_habitat }
+				has_planet_flag = mining_habitat
+			}
+			OR = {
+				free_jobs < 3
+				buildings_unemployed = yes
+			}
+			OR = {
+				num_free_districts = { type = district_mining value = 0 } 
+				free_district_slots = 0
+			}#Don't build when you can still get farming districts
+			owner = {
+				has_monthly_income = {
+					resource = minerals
+					value < 0
+				}
+			}
+		}
+		modifier = {
+			weight = 1001
+			OR = {
+				free_housing > 3
+				owner = { is_gestalt = no }
+			}
+			OR = {
+				free_jobs < 3
+				buildings_unemployed = yes
+			}
+			OR = {
+				AND = {
+					is_planet_class = pc_habitat
+					has_planet_flag = mining_habitat
+				}
+				NOR = { 
+					is_planet_class = pc_ringworld_habitable 
+					is_planet_class = pc_cybrex
+					has_modifier = resort_colony
+				}
+			}
+			OR = {
+				owner = {
+					has_monthly_income = {
+						resource = minerals
+						value < 125
+					}
+				}
+				has_building = eb_mineral
+			}
+		}
+		modifier = {
+			factor = 0
+			owner = {
+				has_monthly_income = {
+					resource = minerals
+					value > 1
+				}
+			}
+			OR = {
+				is_planet_class = pc_city
+				is_planet_class = pc_relic
+			}
+		}
+		modifier = {
+            factor = 0
+			owner = { has_monthly_income = { resource = rare_crystals value <= 1 } }
+        }
+	}
+
+	ai_resource_production = {
+		minerals = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+eb_mineral_hab3 = {
+	base_buildtime = 360
+	can_build = no
+	
+	category = resource
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_miner_add = 6
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+			planet = { 
+				OR = { 
+					AND = {
+						has_planet_flag = mining_habitat 
+						is_planet_class = pc_habitat
+					}
+					is_planet_class = pc_ringworld_habitable
+					is_planet_class = pc_cybrex
+				}
+			}
+		}
+		modifier = {
+			job_miner_add = 4
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_mining_drone_add = 6
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+			planet = { 
+				OR = { 
+					AND = {
+						has_planet_flag = mining_habitat 
+						is_planet_class = pc_habitat
+					}
+					is_planet_class = pc_ringworld_habitable
+					is_planet_class = pc_cybrex
+				}
+			}
+		}
+		modifier = {
+			job_mining_drone_add = 4
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 900
+			volatile_motes = 25
+		}
+		upkeep = {
+			energy = 10
+			rare_crystals = 2
+		}
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { 
+				OR = {
+					is_gestalt = yes
+					is_regular_empire = yes
+				}
+			}
+			planet = {
+				NOT = { has_planet_flag = mining_habitat }
+				is_planet_class = pc_habitat
+				NOT = { is_planet_class = pc_ringworld_habitable }
+				NOT = { is_planet_class = pc_cybrex }
+			}
+		}
+		text = eb_mineral_hab_bad
+	}	
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = job_mining_drone_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		text = job_miner_effect_desc
+	}
+	
+	prerequisites = {
+		eb_mineral_tech
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 502
+			OR = { 
+				NOT = { is_planet_class = pc_habitat }
+				has_planet_flag = mining_habitat
+			}
+			OR = {
+				free_jobs < 3
+				buildings_unemployed = yes
+			}
+			OR = {
+				num_free_districts = { type = district_mining value = 0 } 
+				free_district_slots = 0
+			}#Don't build when you can still get farming districts
+			owner = {
+				has_monthly_income = {
+					resource = minerals
+					value < 0
+				}
+			}
+		}
+		modifier = {
+			weight = 1002
+			OR = {
+				free_housing > 3
+				owner = { is_gestalt = no }
+			}
+			OR = {
+				free_jobs < 3
+				buildings_unemployed = yes
+			}
+			OR = {
+				AND = {
+					is_planet_class = pc_habitat
+					has_planet_flag = mining_habitat
+				}
+				NOR = { 
+					is_planet_class = pc_ringworld_habitable 
+					is_planet_class = pc_cybrex
+					has_modifier = resort_colony
+				}
+			}
+			OR = {
+				owner = {
+					has_monthly_income = {
+						resource = minerals
+						value < 125
+					}
+				}
+				has_building = eb_mineral
+			}
+		}
+		modifier = {
+			factor = 0
+			owner = {
+				has_monthly_income = {
+					resource = minerals
+					value > 1
+				}
+			}
+			OR = {
+				is_planet_class = pc_city
+				is_planet_class = pc_relic
+			}
+		}
+		modifier = {
+            factor = 0
+            owner = { has_monthly_income = { resource = rare_crystals value <= 2 } }
+        }
+	}
+
+	ai_resource_production = {
+		minerals = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+#Energy Buildings
+
+eb_energy2 = {
+	base_buildtime = 360
+	can_build = no
+	
+	category = resource
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_technician_add = 5
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_technician_drone_add = 5
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 600
+			exotic_gases = 10
+		}
+		upkeep = {
+			minerals = 2.5
+			exotic_gases = 1
+		}
+	}	
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = job_technician_drone_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		text = job_technician_effect_desc
+	}
+	
+	prerequisites = {
+		tech_power_hub_2
+	}
+	
+	upgrades = {
+		"eb_energy3"
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 501
+			OR = { 
+				NOT = { is_planet_class = pc_habitat }
+				has_planet_flag = energy
+			}
+			OR = {
+				free_jobs < 3
+				buildings_unemployed = yes
+			}
+			OR = {
+				num_free_districts = { type = district_mining value = 0 } 
+				free_district_slots = 0
+			}#Don't build when you can still get farming districts
+			owner = {
+				has_monthly_income = {
+					resource = energy
+					value < 0
+				}
+			}
+		}
+		modifier = {
+			weight = 1001
+			OR = {
+				free_housing > 3
+				owner = { is_gestalt = no }
+			}
+			OR = {
+				free_jobs < 3
+				buildings_unemployed = yes
+			}
+			OR = {
+				AND = {
+					is_planet_class = pc_habitat
+					has_planet_flag = energy_habitat
+				}
+				NOT = { has_modifier = resort_colony }
+			}
+			OR = {
+				owner = {
+					has_monthly_income = {
+						resource = energy
+						value < 125
+					}
+				}
+				has_building = eb_energy
+			}
+		}
+		modifier = {
+			factor = 0
+			owner = {
+				has_monthly_income = {
+					resource = energy
+					value > 1
+				}
+			}
+			OR = {
+				is_planet_class = pc_city
+				is_planet_class = pc_relic
+			}
+		}
+		modifier = {
+            factor = 0.0
+        	owner = { has_monthly_income = { resource = exotic_gases value <= 1 } }
+        }
+	}
+
+	ai_resource_production = {
+		energy = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+eb_energy3 = {
+	base_buildtime = 360
+	can_build = no
+	
+	category = resource
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_technician_add = 10
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_technician_drone_add = 10
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 900
+			exotic_gases = 25
+		}
+		upkeep = {
+			minerals = 5
+			exotic_gases = 2
+		}
+	}	
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = job_technician_drone_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		text = job_technician_effect_desc
+	}
+	
+	prerequisites = {
+		eb_energy_tech
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 502
+			OR = { 
+				NOT = { is_planet_class = pc_habitat }
+				has_planet_flag = energy
+			}
+			OR = {
+				free_jobs < 3
+				buildings_unemployed = yes
+			}
+			OR = {
+				num_free_districts = { type = district_mining value = 0 } 
+				free_district_slots = 0
+			}#Don't build when you can still get farming districts
+			owner = {
+				has_monthly_income = {
+					resource = energy
+					value < 0
+				}
+			}
+		}
+		modifier = {
+			weight = 1002
+			OR = {
+				free_housing > 3
+				owner = { is_gestalt = no }
+			}
+			OR = {
+				free_jobs < 3
+				buildings_unemployed = yes
+			}
+			OR = {
+				AND = {
+					is_planet_class = pc_habitat
+					has_planet_flag = energy_habitat
+				}
+				NOT = { has_modifier = resort_colony }
+			}
+			OR = {
+				owner = {
+					has_monthly_income = {
+						resource = energy
+						value < 125
+					}
+				}
+				has_building = eb_energy
+			}
+		}
+		modifier = {
+			factor = 0
+			owner = {
+				has_monthly_income = {
+					resource = energy
+					value > 1
+				}
+			}
+			OR = {
+				is_planet_class = pc_city
+				is_planet_class = pc_relic
+			}
+		}
+		modifier = {
+            factor = 0.0
+        	owner = { has_monthly_income = { resource = exotic_gases value <= 2 } }
+        }
+	}
+
+	ai_resource_production = {
+		energy = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+eb_energy_hab2 = {
+	base_buildtime = 360
+	can_build = no
+	
+	category = resource
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_technician_add = 5
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_technician_drone_add = 5
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 600
+			exotic_gases = 10
+		}
+		upkeep = {
+			minerals = 2.5
+			exotic_gases = 1
+		}
+	}	
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = job_technician_drone_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		text = job_technician_effect_desc
+	}
+	
+	prerequisites = {
+		tech_power_hub_2
+	}
+	
+	upgrades = {
+		"eb_energy_hab3"
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 501
+			OR = { 
+				NOT = { is_planet_class = pc_habitat }
+				has_planet_flag = energy
+			}
+			OR = {
+				free_jobs < 3
+				buildings_unemployed = yes
+			}
+			OR = {
+				num_free_districts = { type = district_mining value = 0 } 
+				free_district_slots = 0
+			}#Don't build when you can still get farming districts
+			owner = {
+				has_monthly_income = {
+					resource = energy
+					value < 0
+				}
+			}
+		}
+		modifier = {
+			weight = 1001
+			OR = {
+				free_housing > 3
+				owner = { is_gestalt = no }
+			}
+			OR = {
+				free_jobs < 3
+				buildings_unemployed = yes
+			}
+			OR = {
+				AND = {
+					is_planet_class = pc_habitat
+					has_planet_flag = energy_habitat
+				}
+				NOT = { has_modifier = resort_colony }
+			}
+			OR = {
+				owner = {
+					has_monthly_income = {
+						resource = energy
+						value < 125
+					}
+				}
+				has_building = eb_energy
+			}
+		}
+		modifier = {
+			factor = 0
+			owner = {
+				has_monthly_income = {
+					resource = energy
+					value > 1
+				}
+			}
+			OR = {
+				is_planet_class = pc_city
+				is_planet_class = pc_relic
+			}
+		}
+		modifier = {
+            factor = 0.0
+            owner = { has_monthly_income = { resource = exotic_gases value <= 1 } }
+        }
+	}
+
+	ai_resource_production = {
+		energy = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+eb_energy_hab3 = {
+	base_buildtime = 360
+	can_build = no
+	
+	category = resource
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_technician_add = 10
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_technician_drone_add = 10
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 900
+			exotic_gases = 25
+		}
+		upkeep = {
+			minerals = 5
+			exotic_gases = 2
+		}
+	}	
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = job_technician_drone_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		text = job_technician_effect_desc
+	}
+	
+	prerequisites = {
+		eb_energy_tech
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 502
+			OR = { 
+				NOT = { is_planet_class = pc_habitat }
+				has_planet_flag = energy
+			}
+			OR = {
+				free_jobs < 3
+				buildings_unemployed = yes
+			}
+			OR = {
+				num_free_districts = { type = district_mining value = 0 } 
+				free_district_slots = 0
+			}#Don't build when you can still get farming districts
+			owner = {
+				has_monthly_income = {
+					resource = energy
+					value < 0
+				}
+			}
+		}
+		modifier = {
+			weight = 1002
+			OR = {
+				free_housing > 3
+				owner = { is_gestalt = no }
+			}
+			OR = {
+				free_jobs < 3
+				buildings_unemployed = yes
+			}
+			OR = {
+				AND = {
+					is_planet_class = pc_habitat
+					has_planet_flag = energy_habitat
+				}
+				NOT = { has_modifier = resort_colony }
+			}
+			OR = {
+				owner = {
+					has_monthly_income = {
+						resource = energy
+						value < 125
+					}
+				}
+				has_building = eb_energy
+			}
+		}
+		modifier = {
+			factor = 0
+			owner = {
+				has_monthly_income = {
+					resource = energy
+					value > 1
+				}
+			}
+			OR = {
+				is_planet_class = pc_city
+				is_planet_class = pc_relic
+			}
+		}
+		modifier = {
+            factor = 0.0
+            owner = { has_monthly_income = { resource = exotic_gases value <= 2 } }
+        }
+	}
+
+	ai_resource_production = {
+		energy = 1
+		trigger = {
+			always = yes
+		}
+	}
+}

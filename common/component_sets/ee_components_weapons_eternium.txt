@@ -1,0 +1,189 @@
+
+
+component_set = {
+	key = "ETERNAL_LASER_EE"
+	
+	icon = "GFX_ship_part_eternium_laser"
+	icon_frame = 1	
+}
+
+
+component_set = {
+	key = "ETERNAL_COSMIC_GATHERER"
+	
+	icon = "GFX_ship_part_eternium_analyzer_ai"
+	icon_frame = 1	
+}
+
+
+component_set = {
+	key = "ETERNAL_PLASMA_EE"
+	
+	icon = "GFX_ship_part_eternium_photon"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "ETERNAL_DISRUPTOR_EE"
+	
+	icon = "GFX_ship_part_eternium_disruptor"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "ETERNAL_PARTICLE_LANCE_EE"
+	
+	icon = "GFX_ship_part_eternium_lance"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "ETERNAL_POINT_DEFENSE_EE"
+	
+	icon = "GFX_ship_part_eternium_point_defence"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "ETERNAL_SUPER_PLASMA_EE"
+	
+	icon = "GFX_ship_part_eternium_plasma_cannon"
+	icon_frame = 1	
+}
+
+
+component_set = {
+	key = "ETERNAL_PARTICLE_TIME_EE"
+	
+	icon = "GFX_ship_part_time_ee"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "ETERNAL_MASS_DRIVER_EE"
+	
+	icon = "GFX_ship_part_eternium_gauss"
+	icon_frame = 1	
+}
+
+
+component_set = {
+	key = "ETERNAL_AUTOCANNON_EE"
+	
+	icon = "GFX_ship_part_eternium_autocannon"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "ETERNAL_FLAK_CANNON_EE"
+	
+	icon = "GFX_ship_part_eternium_flak"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "ETERNAL_MISSILE_EE"
+	
+	icon = "GFX_ship_part_eternium_missile"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "ETERNAL_FIGHTERS_HANGAR_EE"
+	
+	icon = "GFX_ship_part_eternium_fighter"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "ETERNAL_BOMBERS_HANGAR_EE"
+	
+	icon = "GFX_ship_part_eternium_bomber"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "ETERNAL_GUNSHIP_HANGAR_EE"
+	
+	icon = "GFX_ship_part_eternium_gunship"
+	icon_frame = 1	
+}
+
+
+component_set = {
+	key = "ETERNAL_MASS_ACCELERATOR_EE"
+	
+	icon = "GFX_ship_part_warp_eternium_cannon"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "ETERNAL_ARC_EMITTER_EE"
+	
+	icon = "GFX_ship_part_eternium_emitter"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "ETERNAL_PERDITION_BEAM_EE"
+	
+	icon = "GFX_ship_part_eternium_titan_beam"
+	icon_frame = 1	
+}
+	
+component_set = {
+	key = "ETERNAL_ARMOR_EE"
+	
+	icon = "GFX_ship_part_eternium_armor"
+	icon_frame = 1	
+}
+
+
+component_set = {
+	key = "ETERNAL_ENIGMATIC_SHIELD_EE"
+	
+	icon = "GFX_ship_part_eternium_shield"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "ETERNAL_AFTERBURNERS_EE"
+	
+	icon = "GFX_ship_part_eternium_afterburners"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "ETERNAL_HYPERCHARGED_JUMPER_EE"
+	
+	icon = "GFX_ship_part_eternium_jump_drive"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "ETERNAL_REPAIR_COUNTERMEASURES_EE"
+	
+	icon = "GFX_ship_part_eternium_reactive_drone"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "ETERNAL_SHIELD_BOOSTER_EE"
+	
+	icon = "GFX_ship_part_eternium_shield_supercharger"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "ETERNAL_WEAPONS_CORE_EE"
+	
+	icon = "GFX_ship_part_eternium_weapon_core"
+	icon_frame = 1	
+}
+
+component_set = {
+    key = "ETERNAL_AUX_ENIGMATIC_AI"
+    
+    icon = "GFX_ship_part_eternium_analyzer_ai"
+    icon_frame = 1    
+}

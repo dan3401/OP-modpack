@@ -1,0 +1,21 @@
+guiTypes = {
+		containerWindowType = {
+            name = "candidates"
+            position = { x = 25 y = 125 }
+            size = { width = 760 height = 500 }
+            verticalScrollbar = "right_vertical_slider"
+
+            background = {
+                name = "background"
+                spriteType = "GFX_invisible"
+            }
+
+            gridBoxType = {
+                name = "candidate_entries"
+                position = { x = 190 y = 0 }
+                slotSize = { width = 375 height = 210 }
+                max_slots_horizontal = 2
+            }
+        }
+
+}

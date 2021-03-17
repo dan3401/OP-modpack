@@ -1,0 +1,26 @@
+##########################################################################
+# Unity Ambitions - edicts
+##########################################################################
+
+ascension_protocol = {
+	length = 3600
+	
+	is_ambition = yes 		# Costs Unity scaled to tradition cost
+	
+	modifier = {
+		country_energy_produces_mult = -0.25
+		country_base_influence_produces_add = 4
+		all_technology_research_speed = 0.20
+		planet_jobs_produces_mult = 0.20
+	}	
+	
+	potential = {
+		has_technology = tech_ascension_theory
+		has_civic = civic_sapient_intervention
+		has_megastructure = dyson_sphere_5
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+}

@@ -1,0 +1,147 @@
+﻿l_braz_por:
+#{
+ # #######################
+ # Written by kngpig #
+ # #######################
+ #
+ # $tooltip$ , $VALUE$ (Putting up an existing localization line)
+ # £icon£ , £mod_job_industry_equipements_add£ (Putting up an icon)
+ # §colour§ , §R(Red)§! (R, Y, E, H, S, B, G) (! Returns to default) (R Red) (Y Yellow) (B Blue) (G Green)
+ # [(Scope.Call)] , [contact_empire.GetName] (You can have multiple scope into a specific thing based on event, there is also specific scopes the game uses. Example: primitive_civ, conquered_primitive_country, LastKilledCountryName, malfunctioning_leader)
+ # 
+ # #######################
+ #
+ # #######################
+#}
+
+ # ###################################
+ # Job Categories
+ # ###################################
+
+ planet_food_growth:0 "Fazendeiro"
+
+ # ###################################
+ # Jobs
+ # ###################################
+
+job_soldiers_plural:0 "Soldados"
+
+job_reality:0 "Técnico em realidade"
+job_reality_plural:0 "Técnicos em realidade"
+job_reality_desc:0 "O técnico em realidade faz a manutenção do fabricador, fazendo com que custe menos ou até nada a manutenção de energia."
+job_reality_effect_desc:0 "£job_reality£ $job_reality_plural$ faz a manutenção faznedo com que custe menos ou até nada a manutenção de energia."
+mod_job_reality_add:0 "$job_reality$ Trabalhos"
+mod_job_reality_per_pop:0 "§G+1§! $job_reality$ Trabalhos por $VALUE$ Pops"
+mod_job_reality_per_pop_short:0 "\n§G+1§! £mod_job_reality_add£ por $VALUE$ £pop£"
+
+job_food_growth_factory:0 "Operador da fábrica de comida"
+job_food_growth_factory_plural:0 "Operador da fábrica de comida"
+job_food_growth_factory_desc:0 "Opera a fábrica para criar grande quantidade de alimentos."
+job_food_growth_factory_effect_desc:0 "£job_food_growth_factory£ $job_food_growth_factory_plural$ produz grandes quantidades de £food£ §Y$food$§!"
+mod_job_food_growth_factory_add:0 "$job_food_growth_factory$ Trabalhos"
+mod_job_food_growth_factory_per_pop:0 "§G+1§! $job_food_growth_factory$ Trabalho por $VALUE$ Pops"
+mod_job_food_growth_factory_per_pop_short:0 "\n§G+1§! £mod_job_food_growth_factory_add£ por $VALUE$ £pop£"
+
+job_food_growth_factory_drone:0 "Drone da fábrica de crescimento de alimentos"
+job_food_growth_factory_drone_plural:0 "Drone da fábrica de crescimento de alimentos"
+job_food_growth_factory_drone_desc:0 "Opera a fábrica para criar grande quantidade de alimentos."
+job_food_growth_factory_drone_effect_desc:0 "£job_food_growth_factory_drone£ $job_food_growth_factory_drone_plural$ produz uma grande quantidade de £food£ §Y$food$§!"
+mod_job_food_growth_factory_drone_add:0 "$job_food_growth_factory_drone$ Trabalhos"
+mod_job_food_growth_factory_drone_per_pop:0 "§G+1§! $job_food_growth_factory_drone$ trabalho por $VALUE$ Pops"
+mod_job_food_growth_factory_drone_per_pop_short:0 "\n§G+1§! £mod_job_food_growth_factory_add£ por $VALUE$ £pop£"
+
+job_nanite_builder:0 "Construtor de Nanites"
+job_nanite_builder_plural:0 "Construtor de Nanites"
+job_nanite_builder_desc:0 "Constrói Nanites."
+job_nanite_builder_effect_desc:0 "£job_nanite_builder£ $job_nanite_builder_plural$ transforma £rare_crystals£ §Y$rare_crystals$§!, £volatile_motes£ §Y$volatile_motes$§!, £exotic_gases£ §Y$exotic_gases$§! em £nanites£ §Y$nanites$§!"
+mod_job_nanite_builder_add:0 "$job_nanite_builder$ Trabalhos"
+mod_job_nanite_builder_per_pop:0 "§G+1§! $job_nanite_builder$ trabalho por $VALUE$ Pops"
+mod_job_nanite_builder_per_pop_short:0 "\n§G+1§! £mod_job_nanite_builder_add£ por $VALUE$ £pop£"
+
+job_nanite_builder_drone:0 "Drone construtor de Nanites."
+job_nanite_builder_drone_plural:0 "Drone construtor de Nanites."
+job_nanite_builder_drone_desc:0 "Constrói Nanites."
+job_nanite_builder_drone_effect_desc:0 "$job_nanite_builder_drone$ $job_nanite_builder_drone_plural$ transforma £rare_crystals£ §Y$rare_crystals$§!, £volatile_motes£ §Y$volatile_motes$§!, £exotic_gases£ §Y$exotic_gases$§! em £nanites£ §Y$nanites$§!"
+mod_job_nanite_builder_drone_add:0 "$job_nanite_builder_drone$ Trabalhos"
+mod_job_nanite_builder_drone_per_pop:0 "§G+1§! $job_nanite_builder_drone$ trabalho por $VALUE$ Pops"
+mod_job_nanite_builder_drone_per_pop_short:0 "\n§G+1§! £mod_job_nanite_builder_drone_add£ por $VALUE$ £pop£"
+
+job_transformer:0 "Técnico de Subestação"
+job_transformer_plural:0 "Técnico de Subestação"
+job_transformer_desc:0 "Produz mais distritos geradores."
+job_transformer_effect_desc:0 "£job_transformer£ $job_transformer_plural$ transforma £consumer_goods£ §Y$consumer_goods$§! em distrito gerador."
+mod_job_transformer_add:0 "$job_transformer$ Trabalhos"
+mod_job_transformer_per_pop:0 "§G+1§! $job_transformer$ trabalho por $VALUE$ Pops"
+mod_job_transformer_per_pop_short:0 "\n§G+1§! £mod_job_transformer_add£ por $VALUE$ £pop£"
+
+job_transformer_drone:0 "Drone de subestação"
+job_transformer_drone_plural:0 "Drone de subestação"
+job_transformer_drone_desc:0 "Produz mais distritos geradores."
+job_transformer_drone_effect_desc:0 "£job_transformer_drone£ $job_transformer_drone_plural$ transforma £alloys£ §Y$alloys$§! em distrito gerador."
+mod_job_transformer_drone_add:0 "$job_transformer_drone$ Trabalhos"
+mod_job_transformer_drone_per_pop:0 "§G+1§! $job_transformer_drone$ trabalho por $VALUE$ Pops"
+mod_job_transformer_drone_per_pop_short:0 "\n§G+1§! £mod_job_transformer_drone_add£ por $VALUE$ £pop£"
+
+job_computer_technician:0 "Técnico de computador"
+job_computer_technician_plural:0 "Técnico de computador"
+job_computer_technician_desc:0 "Produz mais capacidade administrativa."
+job_computer_technician_effect_desc:0 "£job_computer_technician£ $job_computer_technician_plural$ transforma £energy£ §Y$energy$§! em capacidade administrativa."
+mod_job_computer_technician_add:0 "$job_computer_technician$ Trabalhos"
+mod_job_computer_technician_per_pop:0 "§G+1§! $job_computer_technician$ trabalho por $VALUE$ Pops"
+mod_job_computer_technician_per_pop_short:0 "\n§G+1§! £mod_job_computer_technician_add£ por $VALUE$ £pop£"
+
+job_computer_drone:0 "Drone computador"
+job_computer_drone_plural:0 "Drone computador"
+job_computer_drone_desc:0 "Produz mais capacidade administrativa."
+job_computer_drone_effect_desc:0 "£job_computer_drone£ $job_computer_drone_plural$ transforma £energy£ §Y$energy$§! em capacidade administrativa."
+mod_job_computer_drone_add:0 "$job_computer_drone$ trabalhos"
+mod_job_computer_drone_per_pop:0 "§G+1§! $job_computer_drone$ trabalho por $VALUE$ Pops"
+mod_job_computer_drone_per_pop_short:0 "\n§G+1§! £mod_job_computer_drone_add£ por $VALUE$ £pop£"
+
+job_metal_vitalization_op:0 "Trabalhador do laboratório de vitalização de metais"
+job_metal_vitalization_op_plural:0 "Trabalhadores do laboratório de vitalização de metais"
+job_metal_vitalization_op_desc:0 "Produz metal vivo."
+job_metal_vitalization_op_effect_desc:0 "£job_metal_vitalization_op£ $job_metal_vitalization_op_plural$ transforma £alloys£ §Y$alloys$§! e £volatile_motes£ §Y$volatile_motes$§! em £sr_living_metal£ §Y$sr_living_metal$§!."
+mod_job_metal_vitalization_op_add:0 "$job_metal_vitalization_op$ trabalhos"
+mod_job_metal_vitalization_op_per_pop:0 "§G+1§! $job_metal_vitalization_op$ trabalho por $VALUE$ Pops"
+mod_job_metal_vitalization_op_per_pop_short:0 "\n§G+1§! £mod_job_metal_vitalization_op_add£ por $VALUE$ £pop£"
+
+job_metal_vitalization_drone:0 "Drone do laboratório de vitalização de metais"
+job_metal_vitalization_drone_plural:0 "Drones do laboratório de vitalização de metais"
+job_metal_vitalization_drone_desc:0 "Produz metal vivo."
+job_metal_vitalization_drone_effect_desc:0 "£job_metal_vitalization_drone£ $job_metal_vitalization_drone_plural$ transforma £alloys£ §Y$alloys$§! e £volatile_motes£ §Y$volatile_motes$§! em £sr_living_metal£ §Y$sr_living_metal$§!."
+mod_job_metal_vitalization_drone_add:0 "$job_metal_vitalization_drone$ trabalhos"
+mod_job_metal_vitalization_drone_per_pop:0 "§G+1§! $job_metal_vitalization_drone$ trabalho por $VALUE$ Pops"
+mod_job_metal_vitalization_drone_per_pop_short:0 "\n§G+1§! £mod_job_metal_vitalization_drone_add£ por $VALUE$ £pop£"
+
+job_space_powderization_op:0 "Trabalhador do laboratório de pulverização espacial"
+job_space_powderization_op_plural:0 "Trabalhadores do laboratório de pulverização espacial"
+job_space_powderization_op_desc:0 Produz Zro."
+job_space_powderization_op_effect_desc:0 "£job_space_powderization_op£ $job_space_powderization_op_plural$ transforma £alloys£ §Y$alloys$§! e £rare_crystals£ §Y$rare_crystals$§! em £sr_zro£ §Y$sr_zro$§!."
+mod_job_space_powderization_op_add:0 "$job_space_powderization_op$ trabalhos"
+mod_job_space_powderization_op_per_pop:0 "§G+1§! $job_space_powderization_op$ trabalho por $VALUE$ Pops"
+mod_job_space_powderization_op_per_pop_short:0 "\n§G+1§! £mod_job_space_powderization_op_add£ por $VALUE$ £pop£"
+
+job_space_powderization_drone:0 "Drone do laboratório de pulverização espacial"
+job_space_powderization_drone_plural:0 "Drones do laboratório de pulverização espacial"
+job_space_powderization_drone_desc:0 "Produz zro."
+job_space_powderization_drone_effect_desc:0 "£job_space_powderization_drone£ $job_space_powderization_drone_plural$ transforma £alloys£ §Y$alloys$§! e £rare_crystals£ §Y$rare_crystals$§! em £sr_zro£ §Y$sr_zro$§!."
+mod_job_space_powderization_drone_add:0 "$job_space_powderization_drone$ trabalhos"
+mod_job_space_powderization_drone_per_pop:0 "§G+1§! $job_space_powderization_drone$ trabalho por $VALUE$ Pops"
+mod_job_space_powderization_drone_per_pop_short:0 "\n§G+1§! £mod_job_space_powderization_drone_add£ por $VALUE$ £pop£"
+
+job_gravity_condensation_op:0 "Trabalhador do laboratório de condensação por gravidade"
+job_gravity_condensation_op_plural:0 "Trabalhadores do laboratório de condensação por gravidade"
+job_gravity_condensation_op_desc:0 "Produz matéria escura."
+job_gravity_condensation_op_effect_desc:0 "£job_gravity_condensation_op£ $job_gravity_condensation_op_plural$ transforma £alloys£ §Y$alloys$§! e £exotic_gases£ §Y$exotic_gases$§! em £sr_dark_matter£ §Y$sr_dark_matter$§!."
+mod_job_gravity_condensation_op_add:0 "$job_gravity_condensation_op$ trabalhos"
+mod_job_gravity_condensation_op_per_pop:0 "§G+1§! $job_gravity_condensation_op$ trabalho por $VALUE$ Pops"
+mod_job_gravity_condensation_op_per_pop_short:0 "\n§G+1§! £mod_job_gravity_condensation_op_add£ por $VALUE$ £pop£"
+
+job_gravity_condensation_drone:0 "Drone do laboratório de condensação por gravidade"
+job_gravity_condensation_drone_plural:0 "Drones do laboratório de condensação por gravidade"
+job_gravity_condensation_drone_desc:0 "Produz matéria escura."
+job_gravity_condensation_drone_effect_desc:0 "£job_gravity_condensation_drone£ $job_gravity_condensation_drone_plural$ transforma £alloys£ §Y$alloys$§! e £exotic_gases£ §Y$exotic_gases$§! em £sr_dark_matter£ §Y$sr_dark_matter$§!."
+mod_job_gravity_condensation_drone_add:0 "$job_gravity_condensation_drone$ trabalhos"
+mod_job_gravity_condensation_drone_per_pop:0 "§G+1§! $job_gravity_condensation_drone$ trabalho por $VALUE$ Pops"
+mod_job_gravity_condensation_drone_per_pop_short:0 "\n§G+1§! £mod_job_gravity_condensation_drone_add£ por $VALUE$ £pop£"

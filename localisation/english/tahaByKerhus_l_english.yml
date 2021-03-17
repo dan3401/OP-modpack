@@ -1,0 +1,17 @@
+﻿l_english:
+# ## Ascension
+ tahabykerhus_not_ap_synthetic_evolution:0 "$TRIGGER_FAIL$May not have the §Y$ap_synthetic_evolution$§! Ascension Perk."
+# ## Technologies
+ tech_tahaByKerhus_brainslug1:0 "Brain Slug Analysis"
+ tech_tahaByKerhus_brainslug1_desc:0 "The study of the structure of RNA and DNA. The mathematical calculation of the  optimal consumption of kilocalories for Brain Slug, biochemical adaptation for potential carriers."
+ tech_tahaByKerhus_brainslug2:0 "Brain Slug: Chronology of DNA"
+ tech_tahaByKerhus_brainslug2_desc:0 "When studying the chains of RNA and DNA of Brain Slugs, residual protein links of previous carriers were found."
+ TECH_TAHABYKERHUS_BRAINSLUG_CHANGE_TITLE:0 "Pre-sapient Species"
+ TECH_TAHABYKERHUS_BRAINSLUG_CHANGE_DESC:0 "Discovers a large number of traits recovered from residual protein chains of cerebral Brain Slugs."
+
+ tech_tahabyk_cyberslave_implants:0 "Cyberimplant technology for slave"
+ tech_tahabyk_cyberslave_implants_desc:0 "Cyberimplant technology for slave"
+# ### Traits
+ trait_tahabyk_cyberimplant_slave:0 "Cyber Implants class «Slave»"
+ trait_tahabyk_cyberimplant_slave_desc:0 "§LSpecially designed cyber implants for slaves. These cyber implants are equipped with a module of the nerve regulator, in case of danger to the creators, it is turned off.§!"
+  TRAIT_TAHABYK_CYBERIMPLANT_SLAVE_EFFECT:0 "$MOD_POP_ENVIRONMENT_TOLERANCE$: §G+20%§!\n$MOD_ARMY_DEFENSE_DAMAGE_MULT$: §G+10%§!\n$MOD_ARMY_DEFENSE_HEALTH_MULT$: §G+10%§!\n$mod_planet_jobs_produces_mult$: §G+5%§!\n£minerals£ $minerals$ from £job£ Jobs: §G+2%§!\n$mod_planet_jobs_energy_produces_mult$: §G+2%§!\nCannot generate §YLeaders§!\nCannot be employed in §Y$pop_cat_ruler$§! or §Y$pop_cat_specialist$§! Jobs"

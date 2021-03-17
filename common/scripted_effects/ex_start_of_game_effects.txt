@@ -1,0 +1,40 @@
+ex_generate_start_pops = {	
+	if = { limit = { owner = { has_valid_civic = civic_manufactured_species } }
+		
+		last_created_species = {
+			set_citizenship_type = {
+				country = root.owner
+				type = citizenship_full
+			}
+		}
+		while = {
+			count = 2
+			create_pop = {
+				species = last_created_species
+				ethos = random
+			}
+		}		
+	}	
+}
+
+#		else_if = {
+#		limit = { owner = { is_megacorp = yes} }
+#		while = {
+#			limit = { num_pops < 28 }
+#			create_pop = {
+#				species = owner_main_species
+#				ethos = random
+#			}
+#		}				
+#		}
+#	
+#		else = {
+#		while = {
+#			limit = { num_pops < 24 }
+##			create_pop = {
+#				species = owner_main_species
+#				ethos = random
+#			}
+#		}		
+#	}	
+#}

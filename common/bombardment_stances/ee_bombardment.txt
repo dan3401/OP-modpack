@@ -1,0 +1,28 @@
+reorigination = {
+	trigger = {
+		owner = { 
+			has_government = "gov_eternal_continuum"
+		}
+	}
+	
+	icon_frame = 3
+	default = yes
+	
+	stop_when_armies_dead = no
+	abduct_pops = no
+
+	planet_damage = 50.0
+	army_damage = 5.0	
+	
+	kill_pop_chance = 5.0
+	min_pops_to_kill_pop = 0
+	
+	# root = fleet
+	# from = planet
+	ai_weight = {
+		weight = 1000
+	}
+	
+	
+}
+

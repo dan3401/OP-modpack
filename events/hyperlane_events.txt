@@ -1,0 +1,59 @@
+namespace = ee_hyperlane
+
+country_event = {
+	id = ee_hyperlane.1
+	title = "ee_hyperlane.1.name"
+	desc = "ee_hyperlane.1.desc"
+	is_triggered_only = yes
+	picture = GFX_evt_drifting_gateway
+	show_sound = event_radio_chatter
+	
+	immediate = {
+		every_system_within_border = {
+			limit = {
+				any_system_megastructure = {
+					is_megastructure_type = ftl_disruptor_1
+				}
+			}
+            isolate_system = yes
+            set_star_flag = lcluster
+		}	
+        root = { country_event { id = ee_hyperlane.2 days = 1 }}
+	}
+	
+	option = {
+		name = EXCELLENT
+	}
+}
+
+country_event = {
+	id = ee_hyperlane.2
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		random_owned_megastructure = {
+			limit = { is_megastructure_type = ftl_disruptor_1 }
+			remove_megastructure = this
+		}
+		random_owned_megastructure = {
+			limit = { is_megastructure_type = ftl_disruptor_2 }
+			remove_megastructure = this
+		}
+	}
+}
+
+country_event = {
+	id = ee_hyperlane.3
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_owned_megastructure = {
+			limit = { is_megastructure_type = psionic_storms }
+			remove_megastructure = this
+		}
+		
+	}
+}
+

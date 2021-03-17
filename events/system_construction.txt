@@ -1,0 +1,59 @@
+########################
+#
+# Ringworld Construction
+#
+########################
+
+namespace = lifeseed
+
+# Ring complete
+country_event = {
+	id = lifeseed.1
+	title = "lifeseed.01.name"
+	desc = lifeseed.01.desc
+	picture = GFX_evt_alien_city
+	show_sound = event_mystic_reveal
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = lifeseed.1.a
+		custom_tooltip = lifeseed.1.a.tooltip
+		every_system_within_border = {
+			limit = {
+				any_system_megastructure = {
+					is_megastructure_type = system_creator
+				}
+			}
+            hidden_effect = {
+				solar_system = {
+					spawn_system = {
+						min_distance = 9
+						max_distance = 12
+						initializer = "empty_system"
+					}
+				}
+			}
+			
+		}
+		country_event = {
+			id = lifeseed.2 days = 2
+		}
+	}
+}
+
+country_event = {
+	id = lifeseed.2
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		random_owned_megastructure = {
+			limit = { is_megastructure_type = system_creator }
+			remove_megastructure = this
+		}
+	}
+}
+
+
+

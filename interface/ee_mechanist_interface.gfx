@@ -1,0 +1,46 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_ship_part_computer_eternium_defense"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_computer_eternium_defense.dds"		
+	}
+	spriteType = {
+		name = "GFX_ship_part_computer_eternium_offense"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_computer_eternium_offense.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_mechanist_armor"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_mechanist_armor.dds"		
+	}
+	spriteType = {
+		name = "GFX_ship_part_mechanist_lance"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_mechanist_lance.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_mechanist_laser"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_mechanist_laser.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_mechanist_pd"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_mechanist_pd.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_mechanist_titan_beam"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_mechanist_titan_beam.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_mechanist_sky_beam"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_mechanist_sky_beam.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_mechanist_gunship"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_mechanist_gunship.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_mechanist_swarmpedos"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_mechanist_gunship.dds"
+	}
+	
+}
+
+

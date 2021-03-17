@@ -1,0 +1,1499 @@
+open_wormhole = {
+	set_star_flag = ehof_destination_system@root
+	root = {
+		remove_country_flag = giga_ehof_target_sc_d
+		remove_country_flag = giga_ehof_target_sc_f
+		remove_country_flag = giga_ehof_target_sc_g
+		remove_country_flag = giga_ehof_target_sc_k
+		remove_country_flag = giga_ehof_target_sc_m
+		remove_country_flag = giga_ehof_target_sc_brown
+		remove_country_flag = giga_ehof_target_sc_a
+		remove_country_flag = giga_ehof_target_sc_b
+		remove_country_flag = giga_ehof_target_sc_lbv_blue
+		remove_country_flag = giga_ehof_target_sc_o
+		remove_country_flag = giga_ehof_target_sc_p_purple
+		remove_country_flag = giga_ehof_target_sc_tt_red
+		remove_country_flag = giga_ehof_target_sc_w_azure
+		remove_country_flag = giga_ehof_target_sc_o_hyper
+		remove_country_flag = giga_ehof_target_sc_m_hyper
+		remove_country_flag = giga_ehof_target_sc_o_super
+		remove_country_flag = giga_ehof_target_sc_m_super
+		remove_country_flag = giga_ehof_target_sc_k_super
+		remove_country_flag = giga_ehof_target_sc_g_super
+		remove_country_flag = giga_ehof_target_sc_f_super
+		remove_country_flag = giga_ehof_target_sc_b_super
+		remove_country_flag = giga_ehof_target_sc_a_super
+		remove_country_flag = giga_ehof_target_sc_m_giant
+		remove_country_flag = giga_ehof_target_sc_k_giant
+		remove_country_flag = giga_ehof_target_sc_g_giant
+		remove_country_flag = giga_ehof_target_sc_pulsar
+		remove_country_flag = giga_ehof_target_sc_protostar
+		remove_country_flag = giga_ehof_target_sc_magnetar
+		remove_country_flag = giga_ehof_target_sc_neutron_star
+		remove_country_flag = giga_ehof_target_sc_collapsar
+		remove_country_flag = giga_ehof_target_sc_c_giant
+		remove_country_flag = giga_ehof_target_sc_s_giant
+		remove_country_flag = giga_ehof_target_sc_ae
+		remove_country_flag = giga_ehof_target_sc_black_hole
+		remove_country_flag = giga_ehof_target_sc_nova_1
+		remove_country_flag = giga_ehof_target_sc_quasar
+		remove_country_flag = giga_ehof_target_binary
+		remove_country_flag = giga_ehof_target_trinary
+		remove_country_flag = giga_ehof_target_cohesive
+		country_event = { id = ehof_megastructure.304 }
+	}
+}
+
+ehof_generate_pgate = {
+	random_system = {
+		limit = {
+			NOR = {
+				has_star_flag = empire_cluster
+				closest_system = {
+					has_megastructure = ehof_pgate_unknown
+					distance = {
+						source = prev
+						max_distance <= 200
+					}
+				}
+			}
+		}
+		set_star_flag = ehof_has_pgate
+		spawn_megastructure = {
+			type = "ehof_pgate_unknown"
+			location = solar_system
+			orbit_angle = 110
+			orbit_distance = 35
+		}
+	}
+}
+
+ehof_mega_system = {
+	random_system_within_border = {
+		limit = { has_an_active_ehof = yes }
+		save_event_target_as = ehof_megastructure_system
+	}
+}
+
+ehof_dest_system = {
+	random_system = {
+		limit = { has_star_flag = ehof_destination_system@root }
+		save_event_target_as = ehof_destination_system
+	}
+}
+
+ehof_go_back = {
+	hidden_effect = {
+		remove_country_flag = giga_ehof_target_sc_d
+		remove_country_flag = giga_ehof_target_sc_f
+		remove_country_flag = giga_ehof_target_sc_g
+		remove_country_flag = giga_ehof_target_sc_k
+		remove_country_flag = giga_ehof_target_sc_m
+		remove_country_flag = giga_ehof_target_sc_brown
+		remove_country_flag = giga_ehof_target_sc_a
+		remove_country_flag = giga_ehof_target_sc_b
+		remove_country_flag = giga_ehof_target_sc_lbv_blue
+		remove_country_flag = giga_ehof_target_sc_o
+		remove_country_flag = giga_ehof_target_sc_p_purple
+		remove_country_flag = giga_ehof_target_sc_tt_red
+		remove_country_flag = giga_ehof_target_sc_w_azure
+		remove_country_flag = giga_ehof_target_sc_o_hyper
+		remove_country_flag = giga_ehof_target_sc_m_hyper
+		remove_country_flag = giga_ehof_target_sc_o_super
+		remove_country_flag = giga_ehof_target_sc_m_super
+		remove_country_flag = giga_ehof_target_sc_k_super
+		remove_country_flag = giga_ehof_target_sc_g_super
+		remove_country_flag = giga_ehof_target_sc_f_super
+		remove_country_flag = giga_ehof_target_sc_b_super
+		remove_country_flag = giga_ehof_target_sc_a_super
+		remove_country_flag = giga_ehof_target_sc_m_giant
+		remove_country_flag = giga_ehof_target_sc_k_giant
+		remove_country_flag = giga_ehof_target_sc_g_giant
+		remove_country_flag = giga_ehof_target_sc_pulsar
+		remove_country_flag = giga_ehof_target_sc_protostar
+		remove_country_flag = giga_ehof_target_sc_magnetar
+		remove_country_flag = giga_ehof_target_sc_neutron_star
+		remove_country_flag = giga_ehof_target_sc_collapsar
+		remove_country_flag = giga_ehof_target_sc_c_giant
+		remove_country_flag = giga_ehof_target_sc_s_giant
+		remove_country_flag = giga_ehof_target_sc_ae
+		remove_country_flag = giga_ehof_target_sc_black_hole
+		remove_country_flag = giga_ehof_target_sc_nova_1
+		remove_country_flag = giga_ehof_target_sc_quasar
+		remove_country_flag = giga_ehof_target_binary
+		remove_country_flag = giga_ehof_target_trinary
+		remove_country_flag = giga_ehof_target_cohesive
+		remove_country_flag = ehof_travel_diplomacy
+		country_event = { id = ehof_travel.001 }
+	}
+}
+
+ehof_leave_station = {
+	hidden_effect = {
+		remove_country_flag = giga_ehof_target_sc_d
+		remove_country_flag = giga_ehof_target_sc_f
+		remove_country_flag = giga_ehof_target_sc_g
+		remove_country_flag = giga_ehof_target_sc_k
+		remove_country_flag = giga_ehof_target_sc_m
+		remove_country_flag = giga_ehof_target_sc_brown
+		remove_country_flag = giga_ehof_target_sc_a
+		remove_country_flag = giga_ehof_target_sc_b
+		remove_country_flag = giga_ehof_target_sc_lbv_blue
+		remove_country_flag = giga_ehof_target_sc_o
+		remove_country_flag = giga_ehof_target_sc_p_purple
+		remove_country_flag = giga_ehof_target_sc_tt_red
+		remove_country_flag = giga_ehof_target_sc_w_azure
+		remove_country_flag = giga_ehof_target_sc_o_hyper
+		remove_country_flag = giga_ehof_target_sc_m_hyper
+		remove_country_flag = giga_ehof_target_sc_o_super
+		remove_country_flag = giga_ehof_target_sc_m_super
+		remove_country_flag = giga_ehof_target_sc_k_super
+		remove_country_flag = giga_ehof_target_sc_g_super
+		remove_country_flag = giga_ehof_target_sc_f_super
+		remove_country_flag = giga_ehof_target_sc_b_super
+		remove_country_flag = giga_ehof_target_sc_a_super
+		remove_country_flag = giga_ehof_target_sc_m_giant
+		remove_country_flag = giga_ehof_target_sc_k_giant
+		remove_country_flag = giga_ehof_target_sc_g_giant
+		remove_country_flag = giga_ehof_target_sc_pulsar
+		remove_country_flag = giga_ehof_target_sc_protostar
+		remove_country_flag = giga_ehof_target_sc_magnetar
+		remove_country_flag = giga_ehof_target_sc_neutron_star
+		remove_country_flag = giga_ehof_target_sc_collapsar
+		remove_country_flag = giga_ehof_target_sc_c_giant
+		remove_country_flag = giga_ehof_target_sc_s_giant
+		remove_country_flag = giga_ehof_target_sc_ae
+		remove_country_flag = giga_ehof_target_sc_black_hole
+		remove_country_flag = giga_ehof_target_sc_nova_1
+		remove_country_flag = giga_ehof_target_sc_quasar
+		remove_country_flag = giga_ehof_target_binary
+		remove_country_flag = giga_ehof_target_trinary
+		remove_country_flag = giga_ehof_target_cohesive
+		remove_country_flag = ehof_travel_diplomacy
+		if = {
+			limit = {
+				NOR = {
+					has_country_flag = ehof_destination_picked
+					has_country_flag = ehof_activated
+					has_country_flag = ehof_is_upgrading
+					has_country_flag = ehof_on_cooldown
+				}
+			}
+			ehof_set_to_idle = yes
+			remove_country_flag = ehof_activating
+			country_event = { id = ehof_megastructure.009 days = 2 } # Check EHOF state
+		}
+	}
+}
+
+###############################################################################################################################################################
+######################################################################## Travel Effects #######################################################################
+###############################################################################################################################################################
+
+ehof_pre_flight = {
+	country_event = { id = ehof_megastructure.202 } # Set to Firing
+	remove_country_flag = ehof_report_quest
+	remove_country_flag = ehof_report_standard
+	remove_country_flag = ehof_report_cohesive
+	remove_country_flag = ehof_report_bountiful
+	log = "Pre-flight triggered"
+
+	# Reset flags and variables
+	every_system = {
+		limit = { has_star_flag = ehof_destination_system@root }
+		remove_star_flag = ehof_destination_system@root
+	}
+
+	# Set cooldown days
+	if = {		limit = { check_variable = { which = ehof_phase value = 1 } } set_variable = { which = ehof_cooldown_days value = @ehof_phase1_cooldown_days } }
+	else_if = {	limit = { check_variable = { which = ehof_phase value = 2 } } set_variable = { which = ehof_cooldown_days value = @ehof_phase2_cooldown_days } }
+	else_if = {	limit = { check_variable = { which = ehof_phase value = 3 } } set_variable = { which = ehof_cooldown_days value = @ehof_phase3_cooldown_days } }
+	else_if = {	limit = { check_variable = { which = ehof_phase value = 4 } } set_variable = { which = ehof_cooldown_days value = @ehof_phase4_cooldown_days } }
+
+	random_system_within_border = {
+		limit = { has_an_active_ehof = yes }
+		save_event_target_as = ehof_megastructure_system
+
+		# Set EHOF location
+		star = { save_event_target_as = ehof_move_to_wormhole }
+
+		# Move every fleet in system to wormhole
+		every_fleet_in_system = {
+			limit = {
+				can_use_ehof = yes
+				exists = owner
+				owner = { is_same_value = root }
+			}
+			set_fleet_flag = ehof_ready_for_travel@root
+			auto_move_to_planet = {
+				target = event_target:ehof_move_to_wormhole
+				clear_auto_move_on_arrival = yes
+			}
+		}
+	}
+
+	# Traders
+	if = {
+		limit = {
+			NOR = {
+				has_global_flag = ehof_traders_spawned
+				has_global_flag = compound_invasion_ongoing
+				check_variable = { which = ehof_phase value < 3 }
+			}
+		}
+		random_list = {
+			4 = { change_variable = { which = ehof_spawn_traders value = 1 } }
+			1 = {
+				modifier = { factor = 3 check_variable = { which = ehof_spawn_traders value >= 4 } }
+				modifier = { factor = 4 check_variable = { which = ehof_spawn_traders value >= 8 } }
+				modifier = { factor = 5 check_variable = { which = ehof_spawn_traders value >= 12 } }
+				country_event = { id = ehof_mega_trader.100 }
+			}
+		}
+	}
+}
+
+ehof_dest_01 = { # Wormhole Cohesive
+	set_variable = { which = ehof_last_target value = 1 }	# Redo button
+
+	if = {
+		limit = { check_variable = { which = ehof_phase value = 4 } }
+		set_country_flag = giga_ehof_target_cohesive
+		country_event = { id = ehof_travel.002 }
+	}
+	else = {
+		random_list = {
+			25 = {
+				modifier = { factor = 0 NOT = { has_global_flag = annihilator_system_spawned } }
+				modifier = {
+					factor = 0.2
+					any_system = {
+						annihilator_system = yes
+						empire_has_visited = yes
+					}
+				}
+				random_system = {
+					limit = { annihilator_system = yes }
+					open_wormhole = yes
+				}
+			}
+			25 = { # Trader hub
+				modifier = {
+					factor = 0
+					OR = {
+						any_owned_fleet = {
+							exists = solar_system
+							solar_system = { urmazin_system = yes }
+						}
+						has_country_flag = ehof_recently_visited_trader
+						has_global_flag = compound_invasion_ongoing
+						check_variable = { which = ehof_phase value < 3 }
+						NOT = { has_global_flag = ehof_traders_spawned }
+					}
+				}
+				set_timed_country_flag = { flag = ehof_recently_visited_trader days = @ehof_trader_visiting_days }
+				random_system = {
+					limit = { urmazin_capital = yes }
+					open_wormhole = yes
+				}
+			}
+			50 = {
+				country_event = { id = ehof_systems.000 }
+				last_created_system = { open_wormhole = yes }
+			}
+		}
+	}
+}
+
+ehof_dest_02 = {
+	set_variable = { which = ehof_last_target value = 2 }	# Redo button
+	random_system = {
+		limit = {
+			ehof_travel_conditions = yes
+			cohesive_system = no
+			compound_cluster = no
+			annihilator_system = no
+			urmazin_system = no
+			everchanging_system = no
+		}
+		open_wormhole = yes
+	}
+}
+
+ehof_dest_03 = {
+	set_variable = { which = ehof_last_target value = 3 }	# Redo button
+	if = {
+		limit = { check_variable = { which = ehof_phase value = 4 } }
+		set_country_flag = giga_ehof_target_binary
+		country_event = { id = ehof_travel.002 }
+	}
+	else = {
+		random_system = {
+			limit = {
+				ehof_travel_conditions = yes
+				cohesive_system = no
+				is_binary = yes
+			}
+			open_wormhole = yes
+		}
+	}
+}
+
+ehof_dest_04 = {
+	set_variable = { which = ehof_last_target value = 4 }	# Redo button
+	if = {
+		limit = { check_variable = { which = ehof_phase value = 4 } }
+		set_country_flag = giga_ehof_target_trinary
+		country_event = { id = ehof_travel.002 }
+	}
+	else = {
+		random_system = {
+			limit = {
+				ehof_travel_conditions = yes
+				cohesive_system = no
+				is_trinary = yes
+			}
+			open_wormhole = yes
+		}
+	}
+}
+
+ehof_dest_05 = {
+	set_variable = { which = ehof_last_target value = 5 }	# Redo button
+	if = {
+		limit = { check_variable = { which = ehof_phase value = 4 } }
+		set_country_flag = giga_ehof_target_sc_f
+		country_event = { id = ehof_travel.002 }
+	}
+	else = {
+		random_system = {
+			limit = {
+				ehof_travel_conditions = yes
+				cohesive_system = no
+				is_star_class_sc_f = yes
+			}
+			open_wormhole = yes
+		}
+	}
+}
+
+ehof_dest_06 = {
+	set_variable = { which = ehof_last_target value = 6 }	# Redo button
+	if = {
+		limit = { check_variable = { which = ehof_phase value = 4 } }
+		set_country_flag = giga_ehof_target_sc_g
+		country_event = { id = ehof_travel.002 }
+	}
+	else = {
+		random_system = {
+			limit = {
+				ehof_travel_conditions = yes
+				cohesive_system = no
+				is_star_class_sc_g = yes
+			}
+			open_wormhole = yes
+		}
+	}
+}
+
+ehof_dest_07 = {
+	set_variable = { which = ehof_last_target value = 7 }	# Redo button
+	if = {
+		limit = { check_variable = { which = ehof_phase value = 4 } }
+		set_country_flag = giga_ehof_target_sc_k
+		country_event = { id = ehof_travel.002 }
+	}
+	else = {
+		random_system = {
+			limit = {
+				ehof_travel_conditions = yes
+				cohesive_system = no
+				is_star_class_sc_k = yes
+			}
+			open_wormhole = yes
+		}
+	}
+}
+
+ehof_dest_08 = {
+	set_variable = { which = ehof_last_target value = 8 }	# Redo button
+	if = {
+		limit = { check_variable = { which = ehof_phase value = 4 } }
+		set_country_flag = giga_ehof_target_sc_m
+		country_event = { id = ehof_travel.002 }
+	}
+	else = {
+		random_system = {
+			limit = {
+				ehof_travel_conditions = yes
+				cohesive_system = no
+				is_star_class_sc_m = yes
+			}
+			open_wormhole = yes
+		}
+	}
+}
+
+ehof_dest_09 = {
+	set_variable = { which = ehof_last_target value = 9 }	# Redo button
+	if = {
+		limit = { check_variable = { which = ehof_phase value = 4 } }
+		set_country_flag = giga_ehof_target_sc_d
+		country_event = { id = ehof_travel.002 }
+	}
+	else = {
+		random_system = {
+			limit = {
+				ehof_travel_conditions = yes
+				cohesive_system = no
+				is_star_class_sc_d = yes
+			}
+			open_wormhole = yes
+		}
+	}
+}
+
+ehof_dest_10 = {
+	set_variable = { which = ehof_last_target value = 10 }	# Redo button
+	if = {
+		limit = { check_variable = { which = ehof_phase value = 4 } }
+		set_country_flag = giga_ehof_target_sc_brown
+		country_event = { id = ehof_travel.002 }
+	}
+	else = {
+		random_system = {
+			limit = {
+				ehof_travel_conditions = yes
+				cohesive_system = no
+				OR = {
+					is_star_class_sc_t = yes
+					is_star_class_sc_l = yes
+					is_star_class_sc_y = yes
+				}
+			}
+			open_wormhole = yes
+		}
+	}
+}
+
+ehof_dest_11 = {
+	set_variable = { which = ehof_last_target value = 11 }	# Redo button
+	if = {
+		limit = { check_variable = { which = ehof_phase value = 4 } }
+		set_country_flag = giga_ehof_target_sc_b
+		country_event = { id = ehof_travel.002 }
+	}
+	else = {
+		random_system = {
+			limit = {
+				ehof_travel_conditions = yes
+				cohesive_system = no
+				is_star_class_sc_b = yes
+			}
+			open_wormhole = yes
+		}
+	}
+}
+
+ehof_dest_12 = {
+	set_variable = { which = ehof_last_target value = 12 }	# Redo button
+	if = {
+		limit = { check_variable = { which = ehof_phase value = 4 } }
+		set_country_flag = giga_ehof_target_sc_a
+		country_event = { id = ehof_travel.002 }
+	}
+	else = {
+		random_system = {
+			limit = {
+				ehof_travel_conditions = yes
+				cohesive_system = no
+				is_star_class_sc_a = yes
+			}
+			open_wormhole = yes
+		}
+	}
+}
+
+ehof_dest_13 = {
+	set_variable = { which = ehof_last_target value = 13 }	# Redo button
+	if = {
+		limit = { check_variable = { which = ehof_phase value = 4 } }
+		set_country_flag = giga_ehof_target_sc_o
+		country_event = { id = ehof_travel.002 }
+	}
+	else = {
+		random_system = {
+			limit = {
+				ehof_travel_conditions = yes
+				cohesive_system = no
+				is_star_class_sc_o = yes
+			}
+			open_wormhole = yes
+		}
+	}
+}
+
+ehof_dest_14 = {
+	set_variable = { which = ehof_last_target value = 14 }	# Redo button
+	if = {
+		limit = { check_variable = { which = ehof_phase value = 4 } }
+		set_country_flag = giga_ehof_target_sc_p_purple
+		country_event = { id = ehof_travel.002 }
+	}
+	else = {
+		random_system = {
+			limit = {
+				ehof_travel_conditions = yes
+				cohesive_system = no
+				OR = {
+					is_star_class_sc_p_purple = yes
+					is_star_class_sc_p_red = yes
+					is_star_class_sc_p_green = yes
+				}
+			}
+			open_wormhole = yes
+		}
+	}
+}
+
+ehof_dest_15 = {
+	set_variable = { which = ehof_last_target value = 15 }	# Redo button
+	if = {
+		limit = { check_variable = { which = ehof_phase value = 4 } }
+		set_country_flag = giga_ehof_target_sc_lbv_blue
+		country_event = { id = ehof_travel.002 }
+	}
+	else = {
+		random_system = {
+			limit = {
+				ehof_travel_conditions = yes
+				cohesive_system = no
+				OR = {
+					is_star_class_sc_lbv_blue = yes
+					is_star_class_sc_lbv_green = yes
+					is_star_class_sc_lbv_red = yes
+				}
+			}
+			open_wormhole = yes
+		}
+	}
+}
+
+ehof_dest_16 = {
+	set_variable = { which = ehof_last_target value = 16 }	# Redo button
+	if = {
+		limit = { check_variable = { which = ehof_phase value = 4 } }
+		set_country_flag = giga_ehof_target_sc_tt_red
+		country_event = { id = ehof_travel.002 }
+	}
+	else = {
+		random_system = {
+			limit = {
+				ehof_travel_conditions = yes
+				cohesive_system = no
+				OR = {
+					is_star_class_sc_tt_red = yes
+					is_star_class_sc_tt_orange = yes
+					is_star_class_sc_tt_white = yes
+				}
+			}
+			open_wormhole = yes
+		}
+	}
+}
+
+ehof_dest_17 = {
+	set_variable = { which = ehof_last_target value = 17 }	# Redo button
+	if = {
+		limit = { check_variable = { which = ehof_phase value = 4 } }
+		set_country_flag = giga_ehof_target_sc_w_azure
+		country_event = { id = ehof_travel.002 }
+	}
+	else = {
+		random_system = {
+			limit = {
+				ehof_travel_conditions = yes
+				cohesive_system = no
+				OR = {
+					is_star_class_sc_w_azure = yes
+					is_star_class_sc_w_green = yes
+					is_star_class_sc_w_purple = yes
+					is_star_class_sc_w_red = yes
+				}
+			}
+			open_wormhole = yes
+		}
+	}
+}
+
+ehof_dest_18 = {
+	set_variable = { which = ehof_last_target value = 18 }	# Redo button
+	if = {
+		limit = { check_variable = { which = ehof_phase value = 4 } }
+		set_country_flag = giga_ehof_target_sc_m_giant
+		country_event = { id = ehof_travel.002 }
+	}
+	else = {
+		random_system = {
+			limit = {
+				ehof_travel_conditions = yes
+				cohesive_system = no
+				is_star_class_sc_m_giant = yes
+			}
+			open_wormhole = yes
+		}
+	}
+}
+
+ehof_dest_19 = {
+	set_variable = { which = ehof_last_target value = 19 }	# Redo button
+	if = {
+		limit = { check_variable = { which = ehof_phase value = 4 } }
+		set_country_flag = giga_ehof_target_sc_k_giant
+		country_event = { id = ehof_travel.002 }
+	}
+	else = {
+		random_system = {
+			limit = {
+				ehof_travel_conditions = yes
+				cohesive_system = no
+				is_star_class_sc_k_giant = yes
+			}
+			open_wormhole = yes
+		}
+	}
+}
+
+ehof_dest_20 = {
+	set_variable = { which = ehof_last_target value = 20 }	# Redo button
+	if = {
+		limit = { check_variable = { which = ehof_phase value = 4 } }
+		set_country_flag = giga_ehof_target_sc_g_giant
+		country_event = { id = ehof_travel.002 }
+	}
+	else = {
+		random_system = {
+			limit = {
+				ehof_travel_conditions = yes
+				cohesive_system = no
+				is_star_class_sc_g_giant = yes
+			}
+			open_wormhole = yes
+		}
+	}
+}
+
+ehof_dest_21 = {
+	set_variable = { which = ehof_last_target value = 21 }	# Redo button
+	if = {
+		limit = { check_variable = { which = ehof_phase value = 4 } }
+		set_country_flag = giga_ehof_target_sc_o_super
+		country_event = { id = ehof_travel.002 }
+	}
+	else = {
+		random_system = {
+			limit = {
+				ehof_travel_conditions = yes
+				cohesive_system = no
+				is_star_class_sc_o_super = yes
+			}
+			open_wormhole = yes
+		}
+	}
+}
+
+ehof_dest_22 = {
+	set_variable = { which = ehof_last_target value = 22 }	# Redo button
+	if = {
+		limit = { check_variable = { which = ehof_phase value = 4 } }
+		set_country_flag = giga_ehof_target_sc_b_super
+		country_event = { id = ehof_travel.002 }
+	}
+	else = {
+		random_system = {
+			limit = {
+				ehof_travel_conditions = yes
+				cohesive_system = no
+				is_star_class_sc_b_super = yes
+			}
+			open_wormhole = yes
+		}
+	}
+}
+
+ehof_dest_23 = {
+	set_variable = { which = ehof_last_target value = 23 }	# Redo button
+	if = {
+		limit = { check_variable = { which = ehof_phase value = 4 } }
+		set_country_flag = giga_ehof_target_sc_a_super
+		country_event = { id = ehof_travel.002 }
+	}
+	else = {
+		random_system = {
+			limit = {
+				ehof_travel_conditions = yes
+				cohesive_system = no
+				is_star_class_sc_a_super = yes
+			}
+			open_wormhole = yes
+		}
+	}
+}
+
+ehof_dest_24 = {
+	set_variable = { which = ehof_last_target value = 24 }	# Redo button
+	if = {
+		limit = { check_variable = { which = ehof_phase value = 4 } }
+		set_country_flag = giga_ehof_target_sc_f_super
+		country_event = { id = ehof_travel.002 }
+	}
+	else = {
+		random_system = {
+			limit = {
+				ehof_travel_conditions = yes
+				cohesive_system = no
+				is_star_class_sc_f_super = yes
+			}
+			open_wormhole = yes
+		}
+	}
+}
+
+ehof_dest_25 = {
+	set_variable = { which = ehof_last_target value = 25 }	# Redo button
+	if = {
+		limit = { check_variable = { which = ehof_phase value = 4 } }
+		set_country_flag = giga_ehof_target_sc_g_super
+		country_event = { id = ehof_travel.002 }
+	}
+	else = {
+		random_system = {
+			limit = {
+				ehof_travel_conditions = yes
+				cohesive_system = no
+				is_star_class_sc_g_super = yes
+			}
+			open_wormhole = yes
+		}
+	}
+}
+
+ehof_dest_26 = {
+	set_variable = { which = ehof_last_target value = 26 }	# Redo button
+	if = {
+		limit = { check_variable = { which = ehof_phase value = 4 } }
+		set_country_flag = giga_ehof_target_sc_k_super
+		country_event = { id = ehof_travel.002 }
+	}
+	else = {
+		random_system = {
+			limit = {
+				ehof_travel_conditions = yes
+				cohesive_system = no
+				is_star_class_sc_k_super = yes
+			}
+			open_wormhole = yes
+		}
+	}
+}
+
+ehof_dest_27 = {
+	set_variable = { which = ehof_last_target value = 27 }	# Redo button
+	if = {
+		limit = { check_variable = { which = ehof_phase value = 4 } }
+		set_country_flag = giga_ehof_target_sc_m_super
+		country_event = { id = ehof_travel.002 }
+	}
+	else = {
+		random_system = {
+			limit = {
+				ehof_travel_conditions = yes
+				cohesive_system = no
+				is_star_class_sc_m_super = yes
+			}
+			open_wormhole = yes
+		}
+	}
+}
+
+ehof_dest_28 = {
+	set_variable = { which = ehof_last_target value = 28 }	# Redo button
+	if = {
+		limit = { check_variable = { which = ehof_phase value = 4 } }
+		set_country_flag = giga_ehof_target_sc_o_hyper
+		country_event = { id = ehof_travel.002 }
+	}
+	else = {
+		random_system = {
+			limit = {
+				ehof_travel_conditions = yes
+				cohesive_system = no
+				is_star_class_sc_o_hyper = yes
+			}
+			open_wormhole = yes
+		}
+	}
+}
+
+ehof_dest_29 = {
+	set_variable = { which = ehof_last_target value = 29 }	# Redo button
+	if = {
+		limit = { check_variable = { which = ehof_phase value = 4 } }
+		set_country_flag = giga_ehof_target_sc_m_hyper
+		country_event = { id = ehof_travel.002 }
+	}
+	else = {
+		random_system = {
+			limit = {
+				ehof_travel_conditions = yes
+				cohesive_system = no
+				is_star_class_sc_m_hyper = yes
+			}
+			open_wormhole = yes
+		}
+	}
+}
+
+ehof_dest_30 = {
+	set_variable = { which = ehof_last_target value = 30 }	# Redo button
+	if = {
+		limit = { check_variable = { which = ehof_phase value = 4 } }
+		set_country_flag = giga_ehof_target_sc_neutron_star
+		country_event = { id = ehof_travel.002 }
+	}
+	else = {
+		random_system = {
+			limit = {
+				ehof_travel_conditions = yes
+				cohesive_system = no
+				is_star_class_sc_neutron_star = yes
+			}
+			open_wormhole = yes
+		}
+	}
+}
+
+ehof_dest_31 = {
+	set_variable = { which = ehof_last_target value = 31 }	# Redo button
+	if = {
+		limit = { check_variable = { which = ehof_phase value = 4 } }
+		set_country_flag = giga_ehof_target_sc_pulsar
+		country_event = { id = ehof_travel.002 }
+	}
+	else = {
+		random_system = {
+			limit = {
+				ehof_travel_conditions = yes
+				cohesive_system = no
+				is_star_class_sc_pulsar = yes
+			}
+			open_wormhole = yes
+		}
+	}
+}
+
+ehof_dest_32 = {
+	set_variable = { which = ehof_last_target value = 32 }	# Redo button
+	if = {
+		limit = { check_variable = { which = ehof_phase value = 4 } }
+		set_country_flag = giga_ehof_target_sc_black_hole
+		country_event = { id = ehof_travel.002 }
+	}
+	else = {
+		random_system = {
+			limit = {
+				ehof_travel_conditions = yes
+				cohesive_system = no
+				OR = {
+					is_star_class = sc_black_hole
+					is_star_class = sc_birch
+					is_star_class = sc_ehof_black_hole
+				}
+			}
+			open_wormhole = yes
+		}
+	}
+}
+
+ehof_dest_33 = {
+	set_variable = { which = ehof_last_target value = 33 }	# Redo button
+	if = {
+		limit = { check_variable = { which = ehof_phase value = 4 } }
+		set_country_flag = giga_ehof_target_sc_quasar
+		country_event = { id = ehof_travel.002 }
+	}
+	else = {
+		random_system = {
+			limit = {
+				ehof_travel_conditions = yes
+				cohesive_system = no
+				OR = {
+					is_star_class = sc_quasar
+					is_star_class_sc_microquasar_1 = yes
+					is_star_class_sc_microquasar_2 = yes
+				}
+			}
+			open_wormhole = yes
+		}
+	}
+}
+
+ehof_dest_34 = {
+	set_variable = { which = ehof_last_target value = 34 }	# Redo button
+	if = {
+		limit = { check_variable = { which = ehof_phase value = 4 } }
+		set_country_flag = giga_ehof_target_sc_collapsar
+		country_event = { id = ehof_travel.002 }
+	}
+	else = {
+		random_system = {
+			limit = {
+				ehof_travel_conditions = yes
+				cohesive_system = no
+				is_star_class_sc_collapsar = yes
+			}
+			open_wormhole = yes
+		}
+	}
+}
+
+ehof_dest_35 = {
+	set_variable = { which = ehof_last_target value = 35 }	# Redo button
+	if = {
+		limit = { check_variable = { which = ehof_phase value = 4 } }
+		set_country_flag = giga_ehof_target_sc_magnetar
+		country_event = { id = ehof_travel.002 }
+	}
+	else = {
+		random_system = {
+			limit = {
+				ehof_travel_conditions = yes
+				cohesive_system = no
+				is_star_class_sc_magnetar = yes
+			}
+			open_wormhole = yes
+		}
+	}
+}
+
+ehof_dest_36 = {
+	set_variable = { which = ehof_last_target value = 36 }	# Redo button
+	if = {
+		limit = { check_variable = { which = ehof_phase value = 4 } }
+		set_country_flag = giga_ehof_target_sc_protostar
+		country_event = { id = ehof_travel.002 }
+	}
+	else = {
+		random_system = {
+			limit = {
+				ehof_travel_conditions = yes
+				cohesive_system = no
+				is_star_class_sc_protostar = yes
+			}
+			open_wormhole = yes
+		}
+	}
+}
+
+ehof_dest_37 = {
+	set_variable = { which = ehof_last_target value = 37 }	# Redo button
+	if = {
+		limit = { check_variable = { which = ehof_phase value = 4 } }
+		set_country_flag = giga_ehof_target_sc_ae
+		country_event = { id = ehof_travel.002 }
+	}
+	else = {
+		random_system = {
+			limit = {
+				ehof_travel_conditions = yes
+				cohesive_system = no
+				is_star_class_sc_ae = yes
+			}
+			open_wormhole = yes
+		}
+	}
+}
+
+ehof_dest_38 = {
+	set_variable = { which = ehof_last_target value = 38 }	# Redo button
+	if = {
+		limit = { check_variable = { which = ehof_phase value = 4 } }
+		set_country_flag = giga_ehof_target_sc_s_giant
+		country_event = { id = ehof_travel.002 }
+	}
+	else = {
+		random_system = {
+			limit = {
+				ehof_travel_conditions = yes
+				cohesive_system = no
+				is_star_class_sc_s_giant = yes
+			}
+			open_wormhole = yes
+		}
+	}
+}
+
+ehof_dest_39 = {
+	set_variable = { which = ehof_last_target value = 39 }	# Redo button
+	if = {
+		limit = { check_variable = { which = ehof_phase value = 4 } }
+		set_country_flag = giga_ehof_target_sc_c_giant
+		country_event = { id = ehof_travel.002 }
+	}
+	else = {
+		random_system = {
+			limit = {
+				ehof_travel_conditions = yes
+				cohesive_system = no
+				is_star_class_sc_c_giant = yes
+			}
+			open_wormhole = yes
+		}
+	}
+}
+
+ehof_dest_40 = {
+	set_variable = { which = ehof_last_target value = 40 }	# Redo button
+	if = {
+		limit = { check_variable = { which = ehof_phase value = 4 } }
+		set_country_flag = giga_ehof_target_sc_nova_1
+		country_event = { id = ehof_travel.002 }
+	}
+	else = {
+		random_system = {
+			limit = {
+				ehof_travel_conditions = yes
+				cohesive_system = no
+				OR = {
+					is_star_class_sc_nova_1 = yes
+					is_star_class_sc_nova_2 = yes
+				}
+			}
+			open_wormhole = yes
+		}
+	}
+}
+
+ehof_redo_button = {
+	ehof_pre_flight = yes
+	if = {		limit = { check_variable = { which = ehof_last_target value = 1  } } ehof_dest_01 = yes }
+	else_if = {	limit = { check_variable = { which = ehof_last_target value = 2  } } ehof_dest_02 = yes }
+	else_if = {	limit = { check_variable = { which = ehof_last_target value = 3  } } ehof_dest_03 = yes }
+	else_if = {	limit = { check_variable = { which = ehof_last_target value = 4  } } ehof_dest_04 = yes }
+	else_if = {	limit = { check_variable = { which = ehof_last_target value = 5  } } ehof_dest_05 = yes }
+	else_if = {	limit = { check_variable = { which = ehof_last_target value = 6  } } ehof_dest_06 = yes }
+	else_if = {	limit = { check_variable = { which = ehof_last_target value = 7  } } ehof_dest_07 = yes }
+	else_if = {	limit = { check_variable = { which = ehof_last_target value = 8  } } ehof_dest_08 = yes }
+	else_if = {	limit = { check_variable = { which = ehof_last_target value = 9  } } ehof_dest_09 = yes }
+	else_if = {	limit = { check_variable = { which = ehof_last_target value = 10 } } ehof_dest_10 = yes }
+	else_if = {	limit = { check_variable = { which = ehof_last_target value = 11 } } ehof_dest_11 = yes }
+	else_if = {	limit = { check_variable = { which = ehof_last_target value = 12 } } ehof_dest_12 = yes }
+	else_if = {	limit = { check_variable = { which = ehof_last_target value = 13 } } ehof_dest_13 = yes }
+	else_if = {	limit = { check_variable = { which = ehof_last_target value = 14 } } ehof_dest_14 = yes }
+	else_if = {	limit = { check_variable = { which = ehof_last_target value = 15 } } ehof_dest_15 = yes }
+	else_if = {	limit = { check_variable = { which = ehof_last_target value = 16 } } ehof_dest_16 = yes }
+	else_if = {	limit = { check_variable = { which = ehof_last_target value = 17 } } ehof_dest_17 = yes }
+	else_if = {	limit = { check_variable = { which = ehof_last_target value = 18 } } ehof_dest_18 = yes }
+	else_if = {	limit = { check_variable = { which = ehof_last_target value = 19 } } ehof_dest_19 = yes }
+	else_if = {	limit = { check_variable = { which = ehof_last_target value = 20 } } ehof_dest_20 = yes }
+	else_if = {	limit = { check_variable = { which = ehof_last_target value = 21 } } ehof_dest_21 = yes }
+	else_if = {	limit = { check_variable = { which = ehof_last_target value = 22 } } ehof_dest_22 = yes }
+	else_if = {	limit = { check_variable = { which = ehof_last_target value = 23 } } ehof_dest_23 = yes }
+	else_if = {	limit = { check_variable = { which = ehof_last_target value = 24 } } ehof_dest_24 = yes }
+	else_if = {	limit = { check_variable = { which = ehof_last_target value = 25 } } ehof_dest_25 = yes }
+	else_if = {	limit = { check_variable = { which = ehof_last_target value = 26 } } ehof_dest_26 = yes }
+	else_if = {	limit = { check_variable = { which = ehof_last_target value = 27 } } ehof_dest_27 = yes }
+	else_if = {	limit = { check_variable = { which = ehof_last_target value = 28 } } ehof_dest_28 = yes }
+	else_if = {	limit = { check_variable = { which = ehof_last_target value = 29 } } ehof_dest_29 = yes }
+	else_if = {	limit = { check_variable = { which = ehof_last_target value = 30 } } ehof_dest_30 = yes }
+	else_if = {	limit = { check_variable = { which = ehof_last_target value = 31 } } ehof_dest_31 = yes }
+	else_if = {	limit = { check_variable = { which = ehof_last_target value = 32 } } ehof_dest_32 = yes }
+	else_if = {	limit = { check_variable = { which = ehof_last_target value = 33 } } ehof_dest_33 = yes }
+	else_if = {	limit = { check_variable = { which = ehof_last_target value = 34 } } ehof_dest_34 = yes }
+	else_if = {	limit = { check_variable = { which = ehof_last_target value = 35 } } ehof_dest_35 = yes }
+	else_if = {	limit = { check_variable = { which = ehof_last_target value = 36 } } ehof_dest_36 = yes }
+	else_if = {	limit = { check_variable = { which = ehof_last_target value = 37 } } ehof_dest_37 = yes }
+	else_if = {	limit = { check_variable = { which = ehof_last_target value = 38 } } ehof_dest_38 = yes }
+	else_if = {	limit = { check_variable = { which = ehof_last_target value = 39 } } ehof_dest_39 = yes }
+	else_if = {	limit = { check_variable = { which = ehof_last_target value = 40 } } ehof_dest_40 = yes }
+}
+
+###############################################################################################################################################################
+######################################################################## Change States ########################################################################
+###############################################################################################################################################################
+remove_ehof_flags = {
+	remove_megastructure_flag = ehof_wormhole_node
+	remove_megastructure_flag = ehof_phase_00
+	remove_megastructure_flag = ehof_phase_01
+	remove_megastructure_flag = ehof_phase_02
+	remove_megastructure_flag = ehof_phase_03
+	remove_megastructure_flag = ehof_phase_04
+	remove_megastructure_flag = ehof_phase_01_decommissioned
+	remove_megastructure_flag = ehof_phase_02_decommissioned
+	remove_megastructure_flag = ehof_phase_03_decommissioned
+	remove_megastructure_flag = ehof_phase_04_decommissioned
+}
+
+activate_an_ehof = {
+	if = {
+		limit = { any_owned_megastructure = { has_megastructure_flag = ehof_phase_04_decommissioned } }
+		capital_scope.solar_system = {
+			closest_system = {
+				limit = { any_system_megastructure = { has_megastructure_flag = ehof_phase_04_decommissioned } }
+				random_system_megastructure = {
+					limit = { has_megastructure_flag = ehof_phase_04_decommissioned }
+					remove_megastructure = this
+				}
+				spawn_megastructure = { type = "ehof_megastructure_phase4_idle" owner = from location = star }
+			}
+		}
+	}
+	else_if = {
+		limit = { any_owned_megastructure = { has_megastructure_flag = ehof_phase_03_decommissioned } }
+		capital_scope.solar_system = {
+			closest_system = {
+				limit = { any_system_megastructure = { has_megastructure_flag = ehof_phase_03_decommissioned } }
+				random_system_megastructure = {
+					limit = { has_megastructure_flag = ehof_phase_03_decommissioned }
+					remove_megastructure = this
+				}
+				spawn_megastructure = { type = "ehof_megastructure_phase3_idle" owner = from location = star }
+			}
+		}
+	}
+	else_if = {
+		limit = { any_owned_megastructure = { has_megastructure_flag = ehof_phase_02_decommissioned } }
+		capital_scope.solar_system = {
+			closest_system = {
+				limit = { any_system_megastructure = { has_megastructure_flag = ehof_phase_02_decommissioned } }
+				random_system_megastructure = {
+					limit = { has_megastructure_flag = ehof_phase_02_decommissioned }
+					remove_megastructure = this
+				}
+				spawn_megastructure = { type = "ehof_megastructure_phase2_idle" owner = from location = star }
+			}
+		}
+	}
+	else_if = {
+		limit = { any_owned_megastructure = { has_megastructure_flag = ehof_phase_01_decommissioned } }
+		capital_scope.solar_system = {
+			closest_system = {
+				limit = { any_system_megastructure = { has_megastructure_flag = ehof_phase_01_decommissioned } }
+				random_system_megastructure = {
+					limit = { has_megastructure_flag = ehof_phase_01_decommissioned }
+					remove_megastructure = this
+				}
+				spawn_megastructure = { type = "ehof_megastructure_phase1_idle" owner = from location = star }
+			}
+		}
+	}
+}
+
+decomission_all_ehofs = {
+	remove_country_flag = ehof_destination_picked
+	remove_country_flag = ehof_travel_diplomacy
+	remove_country_flag = ehof_can_activate
+	remove_country_flag = ehof_can_deactivate
+	remove_country_flag = ehof_is_upgrading
+	remove_country_flag = ehof_on_cooldown
+
+	every_owned_megastructure = {
+		limit = {
+			OR = {
+				has_megastructure_flag = ehof_phase_00
+				has_megastructure_flag = ehof_phase_01
+				has_megastructure_flag = ehof_phase_02
+				has_megastructure_flag = ehof_phase_03
+				has_megastructure_flag = ehof_phase_04
+			}
+		}
+
+		if = {
+			limit = { has_megastructure_flag = ehof_phase_00 }
+			remove_megastructure = this
+		}
+		else_if = {
+			limit = { has_megastructure_flag = ehof_phase_01 }
+			upgrade_megastructure_to = ehof_megastructure_phase1_decommissioned
+			finish_upgrade = yes
+		}
+		else_if = {
+			limit = { has_megastructure_flag = ehof_phase_02 }
+			upgrade_megastructure_to = ehof_megastructure_phase2_decommissioned
+			finish_upgrade = yes
+		}
+		else_if = {
+			limit = { has_megastructure_flag = ehof_phase_03 }
+			upgrade_megastructure_to = ehof_megastructure_phase3_decommissioned
+			finish_upgrade = yes
+		}
+		else_if = {
+			limit = { has_megastructure_flag = ehof_phase_04 }
+			upgrade_megastructure_to = ehof_megastructure_phase4_decommissioned
+			finish_upgrade = yes
+		}
+
+	}
+}
+
+decomission_this_ehof = {
+	if = {
+		limit = { has_megastructure_flag = ehof_phase_00 }
+		remove_megastructure = this
+	}
+	else_if = {
+		limit = { has_megastructure_flag = ehof_phase_01 }
+		upgrade_megastructure_to = ehof_megastructure_phase1_decommissioned
+		finish_upgrade = yes
+	}
+	else_if = {
+		limit = { has_megastructure_flag = ehof_phase_02 }
+		upgrade_megastructure_to = ehof_megastructure_phase2_decommissioned
+		finish_upgrade = yes
+	}
+	else_if = {
+		limit = { has_megastructure_flag = ehof_phase_03 }
+		upgrade_megastructure_to = ehof_megastructure_phase3_decommissioned
+		finish_upgrade = yes
+	}
+	else_if = {
+		limit = { has_megastructure_flag = ehof_phase_04 }
+		upgrade_megastructure_to = ehof_megastructure_phase4_decommissioned
+		finish_upgrade = yes
+	}
+}
+
+ehof_set_to_idle = {
+	random_owned_megastructure = {
+		limit = {
+			OR = {
+				is_ehof_active = yes
+				is_ehof_activating = yes
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					is_megastructure_type = ehof_megastructure_phase1_activating
+					is_megastructure_type = ehof_megastructure_phase1_active
+				}
+			}
+			solar_system = {
+				spawn_megastructure = {
+					type = "ehof_megastructure_phase1_idle"
+					owner = from
+					location = star
+					init_effect = {
+						solar_system = {
+							every_system_megastructure = {
+								limit = {
+									is_any_ehof = yes
+									NOT = { is_same_value = prevprev }
+								}
+								remove_megastructure = this
+							}
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					is_megastructure_type = ehof_megastructure_phase2_activating
+					is_megastructure_type = ehof_megastructure_phase2_active
+				}
+			}
+			solar_system = {
+				spawn_megastructure = {
+					type = "ehof_megastructure_phase2_idle"
+					owner = from
+					location = star
+					init_effect = {
+						solar_system = {
+							every_system_megastructure = {
+								limit = {
+									is_any_ehof = yes
+									NOT = { is_same_value = prevprev }
+								}
+								remove_megastructure = this
+							}
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					is_megastructure_type = ehof_megastructure_phase3_activating
+					is_megastructure_type = ehof_megastructure_phase3_active
+				}
+			}
+			solar_system = {
+				spawn_megastructure = {
+					type = "ehof_megastructure_phase3_idle"
+					owner = from
+					location = star
+					init_effect = {
+						solar_system = {
+							every_system_megastructure = {
+								limit = {
+									is_any_ehof = yes
+									NOT = { is_same_value = prevprev }
+								}
+								remove_megastructure = this
+							}
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					is_megastructure_type = ehof_megastructure_phase4_activating
+					is_megastructure_type = ehof_megastructure_phase4_active
+				}
+			}
+			solar_system = {
+				spawn_megastructure = {
+					type = "ehof_megastructure_phase4_idle"
+					owner = from
+					location = star
+					init_effect = {
+						solar_system = {
+							every_system_megastructure = {
+								limit = {
+									is_any_ehof = yes
+									NOT = { is_same_value = prevprev }
+								}
+								remove_megastructure = this
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+ehof_set_to_activating = {
+	random_owned_megastructure = {
+		limit = { is_ehof_idle = yes }
+		if = {
+			limit = { is_megastructure_type = ehof_megastructure_phase1_idle }
+			upgrade_megastructure_to = ehof_megastructure_phase1_activating
+			finish_upgrade = yes
+		}
+		else_if = {
+			limit = { is_megastructure_type = ehof_megastructure_phase2_idle }
+			upgrade_megastructure_to = ehof_megastructure_phase2_activating
+			finish_upgrade = yes
+		}
+		else_if = {
+			limit = { is_megastructure_type = ehof_megastructure_phase3_idle }
+			upgrade_megastructure_to = ehof_megastructure_phase3_activating
+			finish_upgrade = yes
+		}
+		else_if = {
+			limit = { is_megastructure_type = ehof_megastructure_phase4_idle }
+			upgrade_megastructure_to = ehof_megastructure_phase4_activating
+			finish_upgrade = yes
+		}
+	}
+}
+
+ehof_set_to_activated = {
+	random_owned_megastructure = {
+		limit = { is_ehof_activating = yes }
+		if = {
+			limit = { is_megastructure_type = ehof_megastructure_phase1_activating }
+			upgrade_megastructure_to = ehof_megastructure_phase1_active
+			finish_upgrade = yes
+		}
+		else_if = {
+			limit = { is_megastructure_type = ehof_megastructure_phase2_activating }
+			upgrade_megastructure_to = ehof_megastructure_phase2_active
+			finish_upgrade = yes
+		}
+		else_if = {
+			limit = { is_megastructure_type = ehof_megastructure_phase3_activating }
+			upgrade_megastructure_to = ehof_megastructure_phase3_active
+			finish_upgrade = yes
+		}
+		else_if = {
+			limit = { is_megastructure_type = ehof_megastructure_phase4_activating }
+			upgrade_megastructure_to = ehof_megastructure_phase4_active
+			finish_upgrade = yes
+		}
+	}
+}
+
+ehof_generate_hyperlane = {
+	if = {		limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_00_01 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_00_01 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_01_02 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_01_02 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_02_03 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_02_03 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_03_04 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_03_04 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_04_05 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_04_05 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_05_06 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_05_06 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_06_07 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_06_07 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_07_08 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_07_08 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_08_09 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_08_09 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_09_10 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_09_10 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_10_11 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_10_11 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_11_12 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_11_12 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_12_13 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_12_13 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_13_14 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_13_14 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_14_15 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_14_15 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_15_16 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_15_16 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_16_17 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_16_17 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_17_18 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_17_18 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_18_19 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_18_19 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_19_20 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_19_20 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_20_21 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_20_21 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_21_22 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_21_22 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_22_23 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_22_23 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_23_24 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_23_24 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_24_25 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_24_25 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_25_26 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_25_26 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_26_27 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_26_27 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_27_28 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_27_28 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_28_29 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_28_29 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_29_30 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_29_30 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_30_31 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_30_31 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_31_32 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_31_32 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_32_33 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_32_33 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_33_34 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_33_34 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_34_35 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_34_35 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_35_36 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_35_36 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_36_37 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_36_37 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_37_38 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_37_38 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_38_39 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_38_39 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_39_40 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_39_40 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_40_41 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_40_41 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_41_42 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_41_42 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_42_43 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_42_43 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_43_44 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_43_44 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_44_45 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_44_45 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_45_46 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_45_46 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_46_47 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_46_47 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_47_48 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_47_48 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_48_49 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_48_49 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_49_50 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_49_50 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_50_51 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_50_51 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_51_52 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_51_52 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_52_53 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_52_53 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_53_54 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_53_54 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_54_55 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_54_55 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_55_56 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_55_56 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_56_57 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_56_57 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_57_58 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_57_58 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_58_59 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_58_59 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_59_60 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_59_60 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_60_61 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_60_61 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_61_62 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_61_62 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_62_63 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_62_63 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_63_64 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_63_64 = yes } add_hyperlane = { from = this to = prev } } }
+	else_if = {	limit = { any_neighbor_system = { ignore_hyperlanes = yes distance_64_65 = yes } } random_neighbor_system = { ignore_hyperlanes = yes limit = { distance_64_65 = yes } add_hyperlane = { from = this to = prev } } }
+}

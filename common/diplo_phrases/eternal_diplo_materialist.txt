@@ -1,0 +1,299 @@
+greetings = {	
+	01_ETERNAL_EMPIRE_EMPIRE_ANGRY_GREETING = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			OR = {
+				has_ai_personality = eternal_empire_materialist
+			}
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_arrogant_to = FROM
+				is_angry_to = FROM	
+				is_belligerent_to = FROM	
+				is_imperious_to = FROM				
+			}	
+		}	
+	}	
+	
+	01_ETERNAL_EMPIRE_EMPIRE_ENIGMATIC_GREETING_O = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			OR = {
+				has_ai_personality = eternal_empire_materialist
+			}
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_arrogant_to = FROM
+				is_angry_to = FROM	
+				is_belligerent_to = FROM	
+				is_imperious_to = FROM				
+			}
+			from = {
+				NOR = {
+					has_authority = auth_machine_intelligence
+					has_country_flag = synthetic_empire
+				}
+			 }				
+		}
+	}
+	02_ETERNAL_EMPIRE_EMPIRE_ENIGMATIC_GREETING_O = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			OR = {
+				has_ai_personality = eternal_empire_materialist
+			}
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_arrogant_to = FROM
+				is_angry_to = FROM	
+				is_belligerent_to = FROM	
+				is_imperious_to = FROM				
+			}
+			from = {
+				NOR = {
+					has_authority = auth_machine_intelligence
+					has_country_flag = synthetic_empire
+				}
+			 }				
+		}
+	}
+	03_ETERNAL_EMPIRE_EMPIRE_ENIGMATIC_GREETING_O = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			OR = {
+				has_ai_personality = eternal_empire_materialist
+			}
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_arrogant_to = FROM
+				is_angry_to = FROM	
+				is_belligerent_to = FROM	
+				is_imperious_to = FROM				
+			}
+			from = {
+				NOR = {
+					has_authority = auth_machine_intelligence
+					has_country_flag = synthetic_empire
+				}
+			 }			
+		}
+	}	
+	01_ETERNAL_EMPIRE_EMPIRE_ENIGMATIC_GREETING_S = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			OR = {
+				has_ai_personality = eternal_empire_materialist
+			}
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_arrogant_to = FROM
+				is_angry_to = FROM	
+				is_belligerent_to = FROM	
+				is_imperious_to = FROM				
+			}
+			from = {
+				OR = {
+					has_authority = auth_machine_intelligence
+					has_country_flag = synthetic_empire
+				}
+			 }
+		}
+	}
+	02_ETERNAL_EMPIRE_EMPIRE_ENIGMATIC_GREETING_S = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			OR = {
+				has_ai_personality = eternal_empire_materialist
+			}
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_arrogant_to = FROM
+				is_angry_to = FROM	
+				is_belligerent_to = FROM	
+				is_imperious_to = FROM				
+			}
+			from = {
+				OR = {
+					has_authority = auth_machine_intelligence
+					has_country_flag = synthetic_empire
+				}
+			 }			
+		}
+	}
+	03_ETERNAL_EMPIRE_EMPIRE_ENIGMATIC_GREETING_S = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			OR = {
+				has_ai_personality = eternal_empire_materialist
+			}
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_arrogant_to = FROM
+				is_angry_to = FROM	
+				is_belligerent_to = FROM	
+				is_imperious_to = FROM				
+			}
+			from = {
+				OR = {
+					has_authority = auth_machine_intelligence
+					has_country_flag = synthetic_empire
+				}
+			 }
+		}
+	}
+
+	01_ETERNAL_EMPIRE_EMPIRE_ENIGMATIC_GREETING_ALL = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			OR = {
+				has_ai_personality = eternal_empire_materialist
+			}
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_arrogant_to = FROM
+				is_angry_to = FROM	
+				is_belligerent_to = FROM	
+				is_imperious_to = FROM				
+			}		
+		}
+	}	
+	02_ETERNAL_EMPIRE_EMPIRE_ENIGMATIC_GREETING_ALL = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			OR = {
+				has_ai_personality = eternal_empire_materialist
+			}
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_arrogant_to = FROM
+				is_angry_to = FROM	
+				is_belligerent_to = FROM	
+				is_imperious_to = FROM				
+			}			
+		}
+	}
+	03_ETERNAL_EMPIRE_EMPIRE_ENIGMATIC_GREETING_ALL = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			OR = {
+				has_ai_personality = eternal_empire_materialist
+			}
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_arrogant_to = FROM
+				is_angry_to = FROM	
+				is_belligerent_to = FROM	
+				is_imperious_to = FROM				
+			}		
+		}
+	}
+	04_ETERNAL_EMPIRE_EMPIRE_ENIGMATIC_GREETING_ALL = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			OR = {
+				has_ai_personality = eternal_empire_materialist
+			}
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_arrogant_to = FROM
+				is_angry_to = FROM	
+				is_belligerent_to = FROM	
+				is_imperious_to = FROM				
+			}			
+		}
+	}
+	
+	01_ETERNAL_EMPIRE_EMPIRE_WAR_GREETING = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			OR = {
+				has_ai_personality = eternal_empire_materialist
+			}
+			is_at_war_with = FROM
+			NOT = { is_berserker_to = FROM }
+		}
+	}
+	02_ETERNAL_EMPIRE_EMPIRE_WAR_GREETING = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			OR = {
+				has_ai_personality = eternal_empire_materialist
+			}
+			is_at_war_with = FROM
+			NOT = { is_berserker_to = FROM }
+		}
+	}
+	
+	01_ETERNAL_EMPIRE_EMPIRE_CUSTODIAL_GREETING = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			OR = {
+				has_ai_personality = eternal_empire_materialist
+			}
+			is_custodial_to = FROM
+		}
+	}	
+	02_ETERNAL_EMPIRE_EMPIRE_CUSTODIAL_GREETING = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			OR = {
+				has_ai_personality = eternal_empire_materialist
+			}
+			is_custodial_to = FROM
+		}
+	}	
+	03_ETERNAL_EMPIRE_EMPIRE_CUSTODIAL_GREETING = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			OR = {
+				has_ai_personality = eternal_empire_materialist
+			}
+			is_custodial_to = FROM
+		}
+	}		
+	
+	01_ETERNAL_EMPIRE_EMPIRE_BERSERKER_GREETING = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			OR = {
+			has_ai_personality = eternal_empire_materialist
+			}
+			is_berserker_to = FROM
+		}
+	}
+	
+}

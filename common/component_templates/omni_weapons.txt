@@ -1,0 +1,414 @@
+######################
+## Omni Weapons
+######################
+
+
+# ####################
+#  Energy Lance
+# ####################
+
+# ## Omni Lance
+
+weapon_component_template = {
+	key = "OMNI_LANCE"
+	size = extra_large
+	type = instant
+	
+	icon = "GFX_ship_part_omni_lance"
+	icon_frame = 1
+	
+	firing_arc = 25.0
+	min_range = 10.0
+	use_ship_kill_target = no
+
+	damage = { min = 1600 max = 4000 }
+	windup = { min = 1 max = 19 }
+	total_fire_time = 60
+	range = 180.0
+	accuracy = 0.9
+	shield_damage = 0.5
+	armor_damage = 2
+	hull_damage = 1.5
+	tracking = 0
+	power = -500
+	
+	prerequisites = { "tech_omni_lance" }
+	component_set = "OMNI_LANCE"
+	projectile_gfx = "omni_lance"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @xl_t7_cost
+			rare_crystals = @xl_t7_rare
+		}		
+		upkeep = {
+			energy = @xl_t7_upkeep_energy
+			alloys = @xl_t7_upkeep_alloys
+		}
+	}
+	
+	ai_weight = {
+		weight = 10 #Omni Weapons are GOOOOOOD
+	}
+}
+
+# ## Compact Omni Lance
+
+weapon_component_template = {
+	key = "COMPACT_OMNI_LANCE"
+	size = large
+
+	type = instant
+	
+	icon = "GFX_ship_part_omni_lance"
+	icon_frame = 1
+	
+	firing_arc = 25.0
+	min_range = 10.0
+	use_ship_kill_target = no
+
+	damage = { min = 800 max = 2000 }
+	windup = { min = 1 max = 19 }
+	total_fire_time = 60
+	range = 120.0
+	accuracy = 0.9
+	shield_damage = 0.5
+	armor_damage = 2
+	hull_damage = 1.5
+	tracking = 0
+	power = -250
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @l_t7_cost
+			rare_crystals = @l_t7_rare
+		}		
+		upkeep = {
+			energy = @l_t7_upkeep_energy
+			alloys = @l_t7_upkeep_alloys
+		}
+	}
+	
+	prerequisites = { "tech_compact_omni_lance" }
+	component_set = "COMPACT_OMNI_LANCE"
+	projectile_gfx = "compact_omni_lance"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+	
+	ai_weight = {
+		weight = 10 #Omni Weapons are GOOOOOOD
+	}
+}
+
+
+
+####################
+# Arc Emitter
+####################
+
+# ## Omni Emitter
+
+weapon_component_template = {
+	key = "OMNI_EMITTER"
+	size = extra_large
+	type = instant
+	
+	icon = "GFX_ship_part_omni_emitter"
+	icon_frame = 1
+	
+	firing_arc = 35.0
+	min_range = 10.0
+	use_ship_kill_target = no
+
+	damage = { min = 1 max = 3400 }
+	windup = { min = 1 max = 19 }
+	total_fire_time = 60
+	range = 180.0
+	hull_damage = 1
+	shield_damage = 1
+	shield_penetration = 1
+	armor_damage = 1
+	armor_penetration = 1
+	tracking = 0
+	power = -500
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @xl_t7_cost
+			rare_crystals = @xl_t7_rare
+		}		
+		upkeep = {
+			energy = @xl_t7_upkeep_energy
+			alloys = @xl_t7_upkeep_alloys
+		}
+	}
+	
+	prerequisites = { "tech_omni_emitter" }
+	component_set = "OMNI_EMITTER"
+	projectile_gfx = "omni_emitter"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery }
+	
+	ai_weight = {
+		weight = 10 #Omni Weapons are GOOOOOOD
+	}
+}
+
+# ## Compact Omni Emitter
+
+weapon_component_template = {
+	key = "COMPACT_OMNI_EMITTER"
+	size = large
+
+	type = instant
+	
+	icon = "GFX_ship_part_omni_emitter"
+	icon_frame = 1
+	
+	firing_arc = 35.0
+	min_range = 10.0
+	use_ship_kill_target = no
+
+	damage = { min = 1 max = 1700 }
+	windup = { min = 1 max = 19 }
+	total_fire_time = 60
+	range = 120.0
+	hull_damage = 1
+	shield_damage = 1
+	shield_penetration = 1
+	armor_damage = 1
+	armor_penetration = 1
+	tracking = 0
+	power = -250
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @l_t7_cost
+			rare_crystals = @l_t7_rare
+		}		
+		upkeep = {
+			energy = @l_t7_upkeep_energy
+			alloys = @l_t7_upkeep_alloys
+		}
+	}
+	
+	prerequisites = { "tech_compact_omni_emitter" }
+	component_set = "COMPACT_OMNI_EMITTER"
+	projectile_gfx = "compact_omni_emitter"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_hull }
+	
+	ai_weight = {
+		weight = 10 #Omni Weapons are GOOOOOOD
+	}
+}
+
+####################
+# Autocannon
+####################
+
+
+# Massive Autocannon
+
+weapon_component_template = {
+	key = "MASSIVE_AUTOCANNONS"
+	size = extra_large
+	type = instant
+	prio_projectile = yes
+	
+	icon = "GFX_ship_part_massive_autocannon"
+	icon_frame = 1
+	
+	firing_arc = 25.0
+	min_range = 10.0
+	use_ship_kill_target = no
+
+	damage = { min = 884 max = 2672 }
+	windup = { min = 5 max = 10 }
+	total_fire_time = 10
+	range = 90.0
+	accuracy = 0.75
+	hull_damage = 1.25
+	shield_damage = 2
+	shield_penetration = 0
+	armor_penetration = 0
+	armor_damage = 0.25
+	tracking = 0
+	power = -500
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @xl_t7_cost
+			rare_crystals = @xl_t7_rare
+		}		
+		upkeep = {
+			energy = @xl_t7_upkeep_energy
+			alloys = @xl_t7_upkeep_alloys
+		}
+	}
+	
+	prerequisites = { "tech_massive_autocannons" }
+	component_set = "MASSIVE_AUTOCANNONS"
+	projectile_gfx = "massive_autocannons"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_anti_shield }
+	
+	ai_weight = {
+		weight = 10 #Omni Weapons are GOOOOOOD
+	}
+}
+
+####################
+# Omni Cannon
+####################
+
+# ## Omni Cannon
+weapon_component_template = {
+	key = "OMNI_CANNON"
+	size = extra_large
+
+	type = instant
+	prio_projectile = yes
+	
+	icon = "GFX_ship_part_omni_cannon"
+	icon_frame = 1
+	
+	firing_arc = 25.0
+	min_range = 10.0
+	use_ship_kill_target = no
+
+	damage = { min = 1800 max = 5200 }
+	windup = { min = 1 max = 19 }
+	total_fire_time = 70
+	range = 180.0
+	accuracy = 0.75
+	hull_damage = 1.25
+	shield_damage = 1.5
+	shield_penetration = 0
+	armor_damage = 0.75
+	armor_penetration = 0
+	tracking = 0
+	power = -500
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @xl_t7_cost
+			rare_crystals = @xl_t7_rare
+		}		
+		upkeep = {
+			energy = @xl_t7_upkeep_energy
+			alloys = @xl_t7_upkeep_alloys
+		}
+	}
+	
+	prerequisites = { "tech_omni_cannon" }
+	component_set = "OMNI_CANNON"
+	projectile_gfx = "omni_cannon"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_artillery }
+	
+	ai_weight = {
+		weight = 10 #Omni Weapons are GOOOOOOD
+	}
+}
+
+# ## Compact Omni Cannon
+weapon_component_template = {
+	key = "COMPACT_OMNI_CANNON"
+	size = large
+
+	type = instant
+	prio_projectile = yes
+	
+	icon = "GFX_ship_part_omni_cannon"
+	icon_frame = 1
+	
+	firing_arc = 25.0
+	min_range = 10.0
+	use_ship_kill_target = no
+
+	damage = { min = 900 max = 2600 }
+	windup = { min = 1 max = 19 }
+	total_fire_time = 70
+	range = 120.0
+	accuracy = 0.75
+	hull_damage = 1.25
+	shield_damage = 1.5
+	shield_penetration = 0
+	armor_damage = 0.75
+	armor_penetration = 0
+	tracking = 0
+	power = -150
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @l_t7_cost
+			rare_crystals = @l_t7_rare
+		}		
+		upkeep = {
+			energy = @l_t7_upkeep_energy
+			alloys = @l_t7_upkeep_alloys
+		}
+	}
+	
+	prerequisites = { "tech_compact_omni_cannon" }
+	component_set = "COMPACT_OMNI_CANNON"
+	projectile_gfx = "compact_omni_cannon"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_anti_shield }
+	ai_weight = {
+		weight = 10 #Omni Weapons are GOOOOOOD
+	}
+}
+
+weapon_component_template = {
+	key = "OMNI_TITAN_LANCE"
+	size = titanic
+	entity = "invisible_turret_entity"
+	type = instant
+	prio_projectile = yes
+	
+	icon = "GFX_ship_part_omni_titan_lance"
+	icon_frame = 1
+	
+	firing_arc = 10.0
+	min_range = 30.0
+	use_ship_kill_target = no
+	
+	damage = { min = 10000 max = 20000 }
+	windup = { min = 30 max = 45 }
+	total_fire_time = 180
+	range = 300.0
+	accuracy = 0.90
+	hull_damage = 1.25
+	shield_damage = 0.75
+	armor_damage = 1.5
+	tracking = 0
+	power = -1000
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 912
+			rare_crystals = 13.52
+		}		
+		upkeep = {
+			energy = 9.12
+			alloys = 1.824
+		}
+	}
+
+	component_set = "OMNI_TITAN_LANCE"
+	projectile_gfx = "titan_laser"
+	size_restriction = { fe_titan fe_goliath }
+	prerequisites = { "tech_omni_titan_lance" }
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery }
+	
+	ai_weight = {
+		weight = 10 #Omni Weapons are GOOOOOOD
+	}
+}
+

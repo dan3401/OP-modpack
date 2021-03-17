@@ -1,0 +1,25 @@
+### Stranded Eeveelution Scientist ###
+disco_stranded_eeveelution_scientist_cat = {
+	desc = "disco_stranded_scientist_cat_desc"
+	picture = "GFX_evt_asteroid_field"
+	max_once_global = yes
+	level = 4
+
+	spawn_chance = {
+		modifier = {
+			add = 2
+			is_asteroid = yes
+			has_any_strategic_resource = no
+		}
+		modifier = {
+			factor = 0
+			from.owner = {
+				NOT = {
+					species_portrait = Eeveelutions
+				}
+			}
+		}
+	}
+
+	on_success = eevent.1
+}

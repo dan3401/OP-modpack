@@ -1,0 +1,211 @@
+### ESCORT
+
+ship_behavior = {
+	name = "eternal_offense"
+	preferred_attack_range = 35
+	formation_distance = 45
+	return_to_formation_distance = 55
+
+	combat_target_anchor = root
+
+	collision_awareness = 0.2
+	collision_radius = 1.5							#collision_radius is a multiplier on the radius specified in the ship size
+	collision_strafe = 2.5							#collision_strafe allows the ship to move in any direction while colliding with another
+	attack_move_pattern = orbit
+	passive_move_pattern = charge
+	
+	desc = "ESCORT_OFFENSIVE_BEHAVIOR_DESC"
+}
+
+ship_behavior = {
+	name = "eternal_balance"
+	preferred_attack_range = 50
+	formation_distance = 60
+	return_to_formation_distance = 70
+
+	combat_target_anchor = root
+
+	collision_awareness = 0.2
+	collision_radius = 1.5							#collision_radius is a multiplier on the radius specified in the ship size
+	collision_strafe = 2.5							#collision_strafe allows the ship to move in any direction while colliding with another
+	attack_move_pattern = stay_at_range
+	passive_move_pattern = charge
+	
+	desc = "ESCORT_BALANCE_BEHAVIOR_DESC"
+}
+
+ship_behavior = {
+	name = "eternal_defense"
+	preferred_attack_range = 100
+	formation_distance = 100
+	return_to_formation_distance = 130
+
+	combat_target_anchor = root
+
+	collision_awareness = 0.2
+	collision_radius = 1.5							#collision_radius is a multiplier on the radius specified in the ship size
+	collision_strafe = 2.5							#collision_strafe allows the ship to move in any direction while colliding with another
+	attack_move_pattern = stay_at_range
+	passive_move_pattern = charge
+	
+	desc = "ESCORT_DEFENSIVE_BEHAVIOR_DESC"
+}
+
+#### BC
+
+ship_behavior = {
+	name = "eternal_offense_bc"
+	preferred_attack_range = 60
+	formation_distance = 70
+	return_to_formation_distance = 80
+
+	combat_target_anchor = root
+
+	collision_awareness = 0.2
+	collision_radius = 1.5							#collision_radius is a multiplier on the radius specified in the ship size
+	collision_strafe = 2.5							#collision_strafe allows the ship to move in any direction while colliding with another
+	attack_move_pattern = stay_at_range
+	passive_move_pattern = charge
+	
+	desc = "BATTLECRUISER_OFFENSIVE_BEHAVIOR_DESC"
+}
+
+ship_behavior = {
+	name = "eternal_balance_bc"
+	preferred_attack_range = 120
+	formation_distance = 130
+	return_to_formation_distance = 140
+
+	combat_target_anchor = root
+
+	collision_awareness = 0.2
+	collision_radius = 1.5							#collision_radius is a multiplier on the radius specified in the ship size
+	collision_strafe = 2.5							#collision_strafe allows the ship to move in any direction while colliding with another
+	attack_move_pattern = stay_at_range
+	passive_move_pattern = charge
+	
+	desc = "BATTLECRUISER_BALANCE_BEHAVIOR_DESC"
+}
+
+ship_behavior = {
+	name = "eternal_defense_bc"
+	preferred_attack_range = max
+	formation_distance = 160
+	return_to_formation_distance = 170
+
+	combat_target_anchor = root
+
+	collision_awareness = 0.2
+	collision_radius = 1.5							#collision_radius is a multiplier on the radius specified in the ship size
+	collision_strafe = 2.5							#collision_strafe allows the ship to move in any direction while colliding with another
+	attack_move_pattern = stay_at_range
+	passive_move_pattern = charge
+	
+	desc = "BATTLECRUISER_DEFENSIVE_BEHAVIOR_DESC"
+}
+
+## TITAN
+
+ship_behavior = {
+	name = "eternal_offense_titan"
+	preferred_attack_range = 80
+	formation_distance = 90
+	return_to_formation_distance = 100
+
+	combat_target_anchor = root
+
+	collision_awareness = 0.2
+	collision_radius = 1.5							#collision_radius is a multiplier on the radius specified in the ship size
+	collision_strafe = 2.5							#collision_strafe allows the ship to move in any direction while colliding with another
+	attack_move_pattern = stay_at_range
+	passive_move_pattern = charge
+	
+	desc = "TITAN_OFFENSIVE_BEHAVIOR_DESC"
+}
+
+ship_behavior = {
+	name = "eternal_balance_titan"
+	preferred_attack_range = 150
+	formation_distance = 160
+	return_to_formation_distance = 170
+
+	combat_target_anchor = root
+
+	collision_awareness = 0.2
+	collision_radius = 1.5							#collision_radius is a multiplier on the radius specified in the ship size
+	collision_strafe = 2.5							#collision_strafe allows the ship to move in any direction while colliding with another
+	attack_move_pattern = stay_at_range
+	passive_move_pattern = charge
+	
+	desc = "TITAN_BALANCE_BEHAVIOR_DESC"
+}
+
+ship_behavior = {
+	name = "eternal_defense_titan"
+	preferred_attack_range = max
+	formation_distance = 180
+	return_to_formation_distance = 190
+
+	combat_target_anchor = root
+
+	collision_awareness = 0.2
+	collision_radius = 1.5							#collision_radius is a multiplier on the radius specified in the ship size
+	collision_strafe = 2.5							#collision_strafe allows the ship to move in any direction while colliding with another
+	attack_move_pattern = stay_at_range
+	passive_move_pattern = charge
+	
+	desc = "TITAN_DEFENSIVE_BEHAVIOR_DESC"
+}
+
+## Goliath
+
+ship_behavior = {
+	name = "eternal_offense_goliath"
+	preferred_attack_range = 120
+	formation_distance = 130
+	return_to_formation_distance = 140
+
+	combat_target_anchor = root
+
+	collision_awareness = 0.2
+	collision_radius = 1.5							#collision_radius is a multiplier on the radius specified in the ship size
+	collision_strafe = 2.5							#collision_strafe allows the ship to move in any direction while colliding with another
+	attack_move_pattern = stay_at_range
+	passive_move_pattern = charge
+	
+	desc = "TITAN_OFFENSIVE_BEHAVIOR_DESC"
+}
+
+ship_behavior = {
+	name = "eternal_balance_goliath"
+	preferred_attack_range = 170
+	formation_distance = 180
+	return_to_formation_distance = 190
+
+	combat_target_anchor = root
+
+	collision_awareness = 0.2
+	collision_radius = 1.5							#collision_radius is a multiplier on the radius specified in the ship size
+	collision_strafe = 2.5							#collision_strafe allows the ship to move in any direction while colliding with another
+	attack_move_pattern = stay_at_range
+	passive_move_pattern = charge
+	
+	desc = "TITAN_BALANCE_BEHAVIOR_DESC"
+}
+
+ship_behavior = {
+	name = "eternal_defense_goliath"
+	preferred_attack_range = max
+	formation_distance = 200
+	return_to_formation_distance = 220
+
+	combat_target_anchor = root
+
+	collision_awareness = 0.2
+	collision_radius = 1.5							#collision_radius is a multiplier on the radius specified in the ship size
+	collision_strafe = 2.5							#collision_strafe allows the ship to move in any direction while colliding with another
+	attack_move_pattern = stay_at_range
+	passive_move_pattern = charge
+	
+	desc = "TITAN_DEFENSIVE_BEHAVIOR_DESC"
+}

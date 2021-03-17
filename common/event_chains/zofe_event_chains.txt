@@ -1,0 +1,10 @@
+fallen_technologies_chain = {
+	picture = GFX_evt_fallen_empire_awakes
+	icon = "gfx/interface/icons/situation_log/situation_log_precursor.dds"	
+}
+
+lost_technologies_chain = {
+	picture = GFX_evt_fallen_empire
+	icon = "gfx/interface/icons/situation_log/situation_log_precursor.dds"	
+}
+

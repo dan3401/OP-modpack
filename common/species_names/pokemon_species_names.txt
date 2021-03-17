@@ -1,0 +1,12 @@
+
+
+Pokemon = {
+	Eeveelutions = {
+		name = Eeveelutions
+		plural = Eeveelutions
+		home_planet = "Pokeworld"
+		home_system = "Sun"
+		name_list = "MAM3"
+	}
+	
+}

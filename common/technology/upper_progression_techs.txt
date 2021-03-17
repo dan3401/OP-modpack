@@ -1,0 +1,369 @@
+#Great Precision
+tech_great_precision = {
+
+	area = physics
+	cost = @tier4cost3
+	tier = 4
+	category = { particles }
+	is_rare = yes	
+	weight = @rareweight
+	
+	prerequisites = {
+		"tech_basic_science_lab_3" "tech_basic_exo_testing" "tech_physics_3"
+	}
+
+	modifier = {
+		country_physics_tech_research_speed = 0.1
+	}
+	
+	weight_modifier = {
+		factor = 1
+		modifier = {
+			factor = 5
+			years_passed > 25
+		}
+		modifier = {
+			factor = 5
+			years_passed > 30
+		}
+		modifier = {
+			factor = 5
+			years_passed > 35
+		}
+		modifier = {
+			factor = 5
+			years_passed > 40
+		}
+		modifier = {
+			factor = 10
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+		modifier = {
+			factor = 1
+			research_leader = {
+				area = physics
+				NOT = {
+					has_trait = "leader_trait_expertise_particles"
+				}
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 1000
+		modifier = {
+			factor = 10
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+		modifier = {
+			factor = 1
+			research_leader = {
+				area = physics
+				NOT = {
+					has_trait = "leader_trait_expertise_particles"
+				}
+			}
+		}
+	}
+}
+
+#Nanorobotics
+tech_nanorobotics = {
+
+	area = engineering
+	cost = @tier4cost3
+	tier = 4
+	category = { industry }
+	is_rare = yes	
+	weight = @rareweight
+
+	prerequisites = {
+        "tech_basic_science_lab_3" "tech_basic_exo_testing" "tech_engineering_3"
+	}
+	
+	modifier = {
+		country_engineering_tech_research_speed = 0.1
+	}
+
+	weight_modifier = {
+		factor = 1
+		modifier = {
+			factor = 5
+			years_passed > 25
+		}
+		modifier = {
+			factor = 5
+			years_passed > 30
+		}
+		modifier = {
+			factor = 5
+			years_passed > 35
+		}
+		modifier = {
+			factor = 5
+			years_passed > 40
+		}
+		modifier = {
+			factor = 10
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+		modifier = {
+			factor = 1
+			research_leader = {
+				area = engineering
+				NOT = {
+					has_trait = "leader_trait_expertise_industry"
+				}
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 1000
+		modifier = {
+			factor = 10
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+		modifier = {
+			factor = 1
+			research_leader = {
+				area = engineering
+				NOT = {
+					has_trait = "leader_trait_expertise_industry"
+				}
+			}
+		}
+	}
+}
+
+#Chaotic Theory
+tech_chaotic_theory = {
+	area = society
+	cost = @tier4cost3
+	tier = 4
+	category = { military_theory }
+	is_rare = yes	
+	weight = @rareweight
+
+	prerequisites = {
+        "tech_basic_science_lab_3" "tech_basic_exo_testing" "tech_society_3"
+	}
+	
+	modifier = {
+		country_society_tech_research_speed = 0.1
+	}
+
+	weight_modifier = {
+		factor = 1
+		modifier = {
+			factor = 5
+			years_passed > 25
+		}
+		modifier = {
+			factor = 5
+			years_passed > 30
+		}
+		modifier = {
+			factor = 5
+			years_passed > 35
+		}
+		modifier = {
+			factor = 5
+			years_passed > 40
+		}
+		modifier = {
+			factor = 10
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_military_theory"
+			}
+		}
+		modifier = {
+			factor = 1
+			research_leader = {
+				area = society
+				NOT = {
+					has_trait = "leader_trait_expertise_military_theory"
+				}
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 1000
+		modifier = {
+			factor = 10
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_military_theory"
+			}
+		}
+		modifier = {
+			factor = 1
+			research_leader = {
+				area = society
+				NOT = {
+					has_trait = "leader_trait_expertise_military_theory"
+				}
+			}
+		}
+	}
+}
+
+#Standard Automation
+tech_standard_automation = {
+
+	area = engineering
+	cost = @tier6cost1
+	tier = 6
+	category = { industry }
+	is_rare = yes	
+	weight = @tier6weight1
+
+	prerequisites = {
+        "tech_great_precision" "tech_nanorobotics" "tech_chaotic_theory"
+	}
+
+    weight_modifier = {
+		factor = 0.5
+		modifier = {
+			factor = 0.2
+			OR = {
+				has_ethic = "ethic_spiritualist"
+				has_ethic = "ethic_fanatic_spiritualist"
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 4
+				is_machine_empire = yes
+		}
+		modifier = {
+			factor = 8
+				is_megacorp = yes
+		}
+	}
+	
+	ai_weight = {
+		weight = 20
+		modifier = {
+			factor = 5
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 4
+				is_machine_empire = yes
+		}
+		modifier = {
+			factor = 8
+				is_megacorp = yes
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+}
+
+#Incomplete
+#Physics Alterations
+tech_physics_alteration = {
+
+	area = physics
+	cost = @tier6cost1
+	tier = 6
+	category = { field_manipulation }
+	is_rare = no
+	weight = @tier6weight1
+
+	modifier = {
+		all_technology_research_speed = 0.1
+	}
+
+    weight_modifier = {
+		factor = 5
+		modifier = {
+			factor = 5
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 7 #good component
+		modifier = {
+			factor = 5
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+#Incomplete and useless
+tech_artifical_physics = {
+
+	area = physics
+	cost = @tier8cost1
+	tier = 8
+	category = { field_manipulation }
+	is_rare = no	
+	weight = @tier8weight1
+	
+	prerequisites = {
+		"tech_extreme_energies" "tech_special_materials"
+	}
+
+	modifier = {
+		all_technology_research_speed = 0.1
+	}
+	
+	weight_modifier = {
+		factor = 5
+		modifier = {
+			factor = 5
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 7 #good component
+		modifier = {
+			factor = 5
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}

@@ -1,0 +1,5450 @@
+@entries_row1_y = 60
+@entries_row2_y = 327
+@entries_column1 = 11
+@entries_column2 = 325
+@entries_column3 = 640
+@entries_column4 = 954
+@entry_h = 260
+@entry_w = 308
+
+guiTypes = {
+
+	################################################################
+	# TRADITION ENTRY POSITIONS
+	################################################################
+	
+	positionType = { name = "tr_diplomacy_the_federation"         		position = { x = 192 y = 238  } }
+	positionType = { name = "tr_diplomacy_entente_coordination"         position = { x = 192 y = 305 } }
+	positionType = { name = "tr_diplomacy_open_markets"            	    position = { x = 125 y = 305 } }
+	positionType = { name = "tr_diplomacy_insider_trading"      		position = { x = 90 y = 372 } }
+	positionType = { name = "tr_diplomacy_secure_shipping"     	 	  	position = { x = 160 y = 372 } }
+	positionType = { name = "tr_est_friendship_1"					  	position = { x = 23 y = 439 } }
+	positionType = { name = "tr_est_friendship_4"		  				position = { x = 23 y = 506 } }
+	positionType = { name = "tr_est_friendship_3"			  			position = { x = 90 y = 506 } }
+	positionType = { name = "tr_est_friendship_5"			 			position = { x = 55 y = 573 } }
+	positionType = { name = "tr_est_friendship_2"		  				position = { x = 125 y = 573 } }
+	positionType = { name = "tr_plentiful_aspiration_2"			 		position = { x = 167 y = 439 } }
+	positionType = { name = "tr_plentiful_aspiration_5"			 		position = { x = 167 y = 506 } }
+	positionType = { name = "tr_plentiful_aspiration_3"			 		position = { x = 227 y = 439 } }
+	positionType = { name = "tr_plentiful_aspiration_4"			 		position = { x = 227 y = 506 } }
+	positionType = { name = "tr_plentiful_aspiration_1"			 		position = { x = 197 y = 573 } }
+	
+	positionType = { name = "tr_expansion_reach_for_the_stars"     	 	position = { x = 297 y = 238 } }
+	positionType = { name = "tr_expansion_galactic_ambition"     	 	position = { x = 297 y = 305 } }
+	positionType = { name = "tr_expansion_colonization_fever"     	 	position = { x = 367 y = 305 } }
+	positionType = { name = "tr_expansion_courier_network"     	 		position = { x = 364 y = 372 } }
+	positionType = { name = "tr_expansion_a_new_life"     	 			position = { x = 431 y = 305 } }
+	positionType = { name = "tr_est_administratum_4"		  			position = { x = 297 y = 439 } }
+	positionType = { name = "tr_est_administratum_3"			  		position = { x = 297 y = 506 } }
+	positionType = { name = "tr_est_administratum_1"					position = { x = 364 y = 439 } }
+	positionType = { name = "tr_est_administratum_2"		  			position = { x = 364 y = 506 } }
+	positionType = { name = "tr_est_administratum_5"		 			position = { x = 331 y = 573 } }
+	positionType = { name = "tr_est_foundation_1"				  		position = { x = 431 y = 439 } }
+	positionType = { name = "tr_est_foundation_2"	  					position = { x = 431 y = 506 } }
+	positionType = { name = "tr_est_foundation_3"		  				position = { x = 431 y = 573 } }
+	positionType = { name = "tr_est_foundation_4"	  					position = { x = 491 y = 506 } }
+	positionType = { name = "tr_est_foundation_5"		 				position = { x = 491 y = 573 } }
+	
+	positionType = { name = "tr_domination_grand_council"     	 		position = { x = 652 y = 372 } }
+	positionType = { name = "tr_domination_judgment_corps"     	 		position = { x = 582 y = 305 } }
+	positionType = { name = "tr_domination_workplace_motivators"   		position = { x = 684 y = 238 } }
+	positionType = { name = "tr_domination_imperious_architecture"     	position = { x = 550 y = 238 } }
+	positionType = { name = "tr_domination_colonial_viceroys"     	 	position = { x = 652 y = 305 } }
+	positionType = { name = "tr_est_isolation_1"					  	position = { x = 582 y = 439 } }
+	positionType = { name = "tr_est_isolation_2"		  				position = { x = 515 y = 439 } }
+	positionType = { name = "tr_est_isolation_3"			  			position = { x = 515 y = 372 } }
+	positionType = { name = "tr_est_isolation_4"		  				position = { x = 582 y = 506 } }
+	positionType = { name = "tr_est_isolation_5"		 				position = { x = 515 y = 305 } }
+	positionType = { name = "tr_est_chivalry_1"						  	position = { x = 719 y = 439 } }
+	positionType = { name = "tr_est_chivalry_2"		  					position = { x = 652 y = 506 } }
+	positionType = { name = "tr_est_chivalry_3"			  				position = { x = 652 y = 573 } }
+	positionType = { name = "tr_est_chivalry_4"		  					position = { x = 719 y = 506 } }
+	positionType = { name = "tr_est_chivalry_5"				 			position = { x = 779 y = 506 } }
+	positionType = { name = "tr_plentiful_malice_1" 					position = { x = 716 y = 305 } }
+	positionType = { name = "tr_plentiful_malice_2" 					position = { x = 786 y = 372 } }
+	positionType = { name = "tr_plentiful_malice_3" 					position = { x = 716 y = 372 } }
+	positionType = { name = "tr_plentiful_malice_4" 					position = { x = 786 y = 305 } }
+	positionType = { name = "tr_plentiful_malice_5" 					position = { x = 818 y = 238 } }
+	
+	positionType = { name = "tr_harmony_the_greater_good"     	 		position = { x = 1110 y = 238 } }
+	positionType = { name = "tr_harmony_kinship"     	 				position = { x = 1008 y = 305 } }
+	positionType = { name = "tr_harmony_utopian_dream"     	 			position = { x = 1078 y = 305 } }
+	positionType = { name = "tr_harmony_mind_and_body"     	 			position = { x = 1043 y = 372 } }
+	positionType = { name = "tr_harmony_bulwark_of_harmony"     	 	position = { x = 1113 y = 372 } }
+	positionType = { name = "tr_est_aesthetics_1"				  		position = { x = 1142 y = 305 } }
+	positionType = { name = "tr_est_aesthetics_2"		  				position = { x = 1212 y = 305 } }
+	positionType = { name = "tr_est_aesthetics_3"			  			position = { x = 1212 y = 372 } }
+	positionType = { name = "tr_est_aesthetics_4"		  				position = { x = 1152 y = 439 } }
+	positionType = { name = "tr_est_aesthetics_5"			 			position = { x = 1212 y = 439 } }
+	positionType = { name = "tr_est_justice_1"					  		position = { x = 1061 y = 678 } }
+	positionType = { name = "tr_est_justice_2"		  					position = { x = 941 y = 745 } }
+	positionType = { name = "tr_est_justice_3"			  				position = { x = 1001 y = 745 } }
+	positionType = { name = "tr_est_justice_4"		  					position = { x = 1061 y = 745 } }
+	positionType = { name = "tr_est_justice_5"		 					position = { x = 1001 y = 678 } }
+	positionType = { name = "tr_est_liberty_1"				  			position = { x = 1202 y = 687 } }
+	positionType = { name = "tr_est_liberty_2"		  					position = { x = 1202 y = 754 } }
+	positionType = { name = "tr_est_liberty_3"			  				position = { x = 1202 y = 821 } }
+	positionType = { name = "tr_est_liberty_4"		  					position = { x = 1142 y = 687 } }
+	positionType = { name = "tr_est_liberty_5"			 				position = { x = 1142 y = 754 } }
+	positionType = { name = "tr_est_order_1"					  		position = { x = 1096 y = 477 } }
+	positionType = { name = "tr_est_order_2"		  					position = { x = 1096 y = 544 } }
+	positionType = { name = "tr_est_order_3"			  				position = { x = 1149 y = 515 } }
+	positionType = { name = "tr_est_order_4"		  					position = { x = 1202 y = 553 } }
+	positionType = { name = "tr_est_order_5"			 				position = { x = 1131 y = 611 } }
+	positionType = { name = "tr_plentiful_affinity_1"					position = { x = 906 y = 372 } }
+	positionType = { name = "tr_plentiful_affinity_2"					position = { x = 976 y = 372 } }
+	positionType = { name = "tr_plentiful_affinity_3"					position = { x = 906 y = 439 } }
+	positionType = { name = "tr_plentiful_affinity_4"					position = { x = 976 y = 439 } }
+	positionType = { name = "tr_plentiful_affinity_5"					position = { x = 874 y = 305 } }
+	positionType = { name = "tr_plentiful_mysticism_1"					position = { x = 874 y = 506 } }
+	positionType = { name = "tr_plentiful_mysticism_2"					position = { x = 941 y = 573 } }
+	positionType = { name = "tr_plentiful_mysticism_3"					position = { x = 1008 y = 506 } }
+	positionType = { name = "tr_plentiful_mysticism_4"					position = { x = 874 y = 573 } }
+	positionType = { name = "tr_plentiful_mysticism_5"					position = { x = 1008 y = 573 } }
+	
+	positionType = { name = "tr_discovery_to_boldly_go"     	 		position = { x = 441 y = 1125 } }
+	positionType = { name = "tr_discovery_databank_uplinks"     	 	position = { x = 441 y = 1192 } }
+	positionType = { name = "tr_discovery_polytechnic_education"     	position = { x = 508 y = 1058 } }
+	positionType = { name = "tr_discovery_faith_in_science"     	 	position = { x = 508 y = 1125 } }
+	positionType = { name = "tr_discovery_science_division"     	 	position = { x = 508 y = 1192 } }
+	positionType = { name = "tr_est_archivist_1"				  		position = { x = 374 y = 1259 } }
+	positionType = { name = "tr_est_archivist_2"	  					position = { x = 374 y = 1326 } }
+	positionType = { name = "tr_est_archivist_3"		  				position = { x = 374 y = 1393 } }
+	positionType = { name = "tr_est_archivist_4"	  					position = { x = 441 y = 1326 } }
+	positionType = { name = "tr_est_archivist_5"			 			position = { x = 441 y = 1393 } }
+	positionType = { name = "tr_est_academy_1"				  			position = { x = 575 y = 1393 } }
+	positionType = { name = "tr_est_academy_2"		  					position = { x = 575 y = 1259 } }
+	positionType = { name = "tr_est_academy_3"			  				position = { x = 575 y = 1326 } }
+	positionType = { name = "tr_est_academy_4"		  					position = { x = 508 y = 1326 } }
+	positionType = { name = "tr_est_academy_5"		 					position = { x = 508 y = 1393 } }
+	positionType = { name = "tr_plentiful_experimentalism_1"			position = { x = 642 y = 1326 } }
+	positionType = { name = "tr_plentiful_experimentalism_2"			position = { x = 642 y = 1192 } }
+	positionType = { name = "tr_plentiful_experimentalism_3"			position = { x = 709 y = 1259 } }
+	positionType = { name = "tr_plentiful_experimentalism_4"			position = { x = 642 y = 1259 } }
+	positionType = { name = "tr_plentiful_experimentalism_5" 			position = { x = 709 y = 1192 } }
+	
+	positionType = { name = "tr_supremacy_war_games"     	 			position = { x = 277 y = 680 } }
+	positionType = { name = "tr_supremacy_great_game"     	 			position = { x = 277 y = 747 } }
+	positionType = { name = "tr_supremacy_fleet_logistical_corps"     	position = { x = 210 y = 747 } }
+	positionType = { name = "tr_supremacy_overwhelming_force"     	 	position = { x = 175 y = 814 } }
+	positionType = { name = "tr_supremacy_master_shipwrights"     	 	position = { x = 245 y = 814 } }
+	positionType = { name = "tr_est_militarism_1"					  	position = { x = 111 y = 814 } }
+	positionType = { name = "tr_est_militarism_2"		  				position = { x = 76 y = 680 } }
+	positionType = { name = "tr_est_militarism_3"			  			position = { x = 76 y = 747 } }
+	positionType = { name = "tr_est_militarism_4"		  				position = { x = 41 y = 814 } }
+	positionType = { name = "tr_est_militarism_5"			 			position = { x = 143 y = 680 } }
+	positionType = { name = "tr_plentiful_assault_1"		  			position = { x = 41 y = 948 } }
+	positionType = { name = "tr_plentiful_assault_2"		  			position = { x = 41 y = 1015 } }
+	positionType = { name = "tr_plentiful_assault_3"		  			position = { x = 41 y = 1149 } }
+	positionType = { name = "tr_plentiful_assault_4"		  			position = { x = 41 y = 1082 } }
+	positionType = { name = "tr_plentiful_assault_5"		  			position = { x = 101 y = 1082 } }
+	positionType = { name = "tr_plentiful_anguish_1"		  			position = { x = 245 y = 948 } }
+	positionType = { name = "tr_plentiful_anguish_2"		  			position = { x = 245 y = 1015 } }
+	positionType = { name = "tr_plentiful_anguish_3"		  			position = { x = 305 y = 948 } }
+	positionType = { name = "tr_plentiful_anguish_4"		  			position = { x = 305 y = 1015 } }
+	positionType = { name = "tr_plentiful_anguish_5"		  			position = { x = 275 y = 1082 } }
+	positionType = { name = "tr_plentiful_order_1"		  				position = { x = 411 y = 814 } }
+	positionType = { name = "tr_plentiful_order_2"		  				position = { x = 411 y = 747 } }
+	positionType = { name = "tr_plentiful_order_3"		  				position = { x = 344 y = 814 } }
+	positionType = { name = "tr_plentiful_order_4"		  				position = { x = 411 y = 881 } }
+	positionType = { name = "tr_plentiful_order_5"		  				position = { x = 344 y = 881 } }
+	positionType = { name = "tr_plentiful_defence_1"		  			position = { x = 111 y = 1015 } }
+	positionType = { name = "tr_plentiful_defence_2"		  			position = { x = 171 y = 1015 } }
+	positionType = { name = "tr_plentiful_defence_3"		  			position = { x = 111 y = 948 } }
+	positionType = { name = "tr_plentiful_defence_4"		  			position = { x = 171 y = 948 } }
+	positionType = { name = "tr_plentiful_defence_5"		  			position = { x = 171 y = 1082 } }
+	positionType = { name = "tr_est_piracy_1"						  	position = { x = 411 y = 680 } }
+	positionType = { name = "tr_est_piracy_2"		  					position = { x = 478 y = 680 } }
+	positionType = { name = "tr_est_piracy_3"			  				position = { x = 478 y = 747 } }
+	positionType = { name = "tr_est_piracy_4"		  					position = { x = 545 y = 680 } }
+	positionType = { name = "tr_est_piracy_5"				 			position = { x = 545 y = 747 } }
+	
+	positionType = { name = "tr_prosperity_interstellar_franchising"    position = { x = 924 y = 1119 } }	
+	positionType = { name = "tr_prosperity_pursuit_of_profit"     	 	position = { x = 959 y = 1253 } }
+	positionType = { name = "tr_prosperity_sct"     	 				position = { x = 994 y = 1119 } }
+	positionType = { name = "tr_prosperity_administrative_operations"   position = { x = 994 y = 1186 } }
+	positionType = { name = "tr_prosperity_public_works"     	 		position = { x = 924 y = 1186 } }	
+	positionType = { name = "tr_plentiful_kleptocracy_1"				position = { x = 924 y = 1454 } }	
+	positionType = { name = "tr_plentiful_kleptocracy_2"				position = { x = 994 y = 1387 } }	
+	positionType = { name = "tr_plentiful_kleptocracy_3"				position = { x = 959 y = 1521 } }	
+	positionType = { name = "tr_plentiful_kleptocracy_4"				position = { x = 924 y = 1387 } }	
+	positionType = { name = "tr_plentiful_kleptocracy_5"				position = { x = 994 y = 1454 } }	
+	positionType = { name = "tr_est_greed_1"				  			position = { x = 790 y = 1186 } }	
+	positionType = { name = "tr_est_greed_2"		  					position = { x = 790 y = 1253 } }	
+	positionType = { name = "tr_est_greed_3"			  				position = { x = 857 y = 1253 } }	
+	positionType = { name = "tr_est_greed_4"		  					position = { x = 790 y = 1320 } }	
+	positionType = { name = "tr_est_greed_5"			 				position = { x = 857 y = 1320 } }	
+	positionType = { name = "tr_est_commerce_1"					  		position = { x = 1061 y = 1253 } }	
+	positionType = { name = "tr_est_commerce_2"		  					position = { x = 1061 y = 1320 } }	
+	positionType = { name = "tr_est_commerce_3"			  				position = { x = 1128 y = 1186 } }	
+	positionType = { name = "tr_est_commerce_4"		  					position = { x = 1133 y = 1320 } }	
+	positionType = { name = "tr_est_commerce_5"		 					position = { x = 1128 y = 1253 } }
+	
+	positionType = { name = "tr_est_spaceborn_1"					  	position = { x = 192 y = 1226  } }	
+	positionType = { name = "tr_est_spaceborn_2"		  				position = { x = 122 y = 1293 } }	
+	positionType = { name = "tr_est_spaceborn_3"		  				position = { x = 192 y = 1293 } }	
+	positionType = { name = "tr_est_spaceborn_4"			  			position = { x = 157 y = 1360 } }	
+	positionType = { name = "tr_est_spaceborn_5"			 			position = { x = 122 y = 1226 } }	
+	positionType = { name = "tr_est_mechanicum_1"					  	position = { x = 20 y = 1360 } }	
+	positionType = { name = "tr_est_mechanicum_2"		  				position = { x = 90 y = 1360 } }	
+	positionType = { name = "tr_est_mechanicum_3"			  			position = { x = 55 y = 1494 } }	
+	positionType = { name = "tr_est_mechanicum_4"		  				position = { x = 20 y = 1427 } }	
+	positionType = { name = "tr_est_mechanicum_5"		 				position = { x = 90 y = 1427 } }	
+	positionType = { name = "tr_plentiful_endure_1"		 				position = { x = 224 y = 1360 } }	
+	positionType = { name = "tr_plentiful_endure_2"		 				position = { x = 224 y = 1427 } }	
+	positionType = { name = "tr_plentiful_endure_3" 		 			position = { x = 294 y = 1360 } }	
+	positionType = { name = "tr_plentiful_endure_4" 		 			position = { x = 294 y = 1427 } }	
+	positionType = { name = "tr_plentiful_endure_5" 		 			position = { x = 259 y = 1494 } }
+	
+	positionType = { name = "tr_plentiful_industry_1" 					position = { x = 748 y = 746 } }
+	positionType = { name = "tr_plentiful_industry_2" 					position = { x = 681 y = 679 } }
+	positionType = { name = "tr_plentiful_industry_3" 					position = { x = 713 y = 813 } }
+	positionType = { name = "tr_plentiful_industry_4" 					position = { x = 783 y = 813 } }
+	positionType = { name = "tr_plentiful_industry_5" 					position = { x = 815 y = 679 } }
+	positionType = { name = "tr_est_cybernetics_1"					  	position = { x = 593 y = 851 } }
+	positionType = { name = "tr_est_cybernetics_2"		  				position = { x = 593 y = 918 } }
+	positionType = { name = "tr_est_cybernetics_3"			  			position = { x = 663 y = 851 } }
+	positionType = { name = "tr_est_cybernetics_4"		  				position = { x = 663 y = 918 } }
+	positionType = { name = "tr_est_cybernetics_5"		 				position = { x = 628 y = 784 } }
+	positionType = { name = "tr_est_industry_1"					  		position = { x = 833 y = 851 } }
+	positionType = { name = "tr_est_industry_2"		  					position = { x = 868 y = 784 } }
+	positionType = { name = "tr_est_industry_3"			  				position = { x = 903 y = 851 } }
+	positionType = { name = "tr_est_industry_4"		  					position = { x = 833 y = 918 } }
+	positionType = { name = "tr_est_industry_5"			 				position = { x = 903 y = 918 } }
+	positionType = { name = "tr_est_mysticism_1"				  		position = { x = 748 y = 985 } }
+	positionType = { name = "tr_est_mysticism_2"	  					position = { x = 681 y = 985 } }
+	positionType = { name = "tr_est_mysticism_3"		  				position = { x = 815 y = 985 } }
+	positionType = { name = "tr_est_mysticism_4"	  					position = { x = 614 y = 985 } }
+	positionType = { name = "tr_est_mysticism_5"		 				position = { x = 882 y = 985 } }
+
+	positionType = { name = "tr_est_natural_1"				  			position = { x = 1019 y = 888 } }
+	positionType = { name = "tr_est_natural_2"		  					position = { x = 984 y = 955 } }
+	positionType = { name = "tr_est_natural_3"			  				position = { x = 1054 y = 955 } }
+	positionType = { name = "tr_est_natural_4"		  					position = { x = 1089 y = 888 } }
+	positionType = { name = "tr_est_natural_5"			 				position = { x = 1156 y = 888 } }
+	positionType = { name = "tr_plentiful_transformation_1"				position = { x = 1188 y = 955 } }
+	positionType = { name = "tr_plentiful_transformation_2"				position = { x = 1121 y = 1022 } }
+	positionType = { name = "tr_plentiful_transformation_3"				position = { x = 1054 y = 1022 } }
+	positionType = { name = "tr_plentiful_transformation_4"				position = { x = 1121 y = 1089 } }
+	positionType = { name = "tr_plentiful_transformation_5" 			position = { x = 1188 y = 1022 } }
+	
+	################################################################
+	# ASCENSION PERKS ENTRY POSITIONS
+	################################################################
+	
+	positionType = { name = "ap_0"	position = { x = -3 y = 2 } }
+	positionType = { name = "ap_1"	position = { x = 55 y = 2 } }
+	positionType = { name = "ap_2"	position = { x = 113 y = 2 } }
+	positionType = { name = "ap_3"	position = { x = 171 y = 2 } }
+	positionType = { name = "ap_4"	position = { x = 229 y = 2 } }
+	positionType = { name = "ap_5"	position = { x = 287 y = 2 } }
+	positionType = { name = "ap_6"	position = { x = 345 y = 2 } }
+	positionType = { name = "ap_7"	position = { x = 403 y = 2 } }
+	positionType = { name = "ap_8"	position = { x = 461 y = 2 } }
+	positionType = { name = "ap_9"	position = { x = 519 y = 2 } }
+	positionType = { name = "ap_10"	position = { x = 573 y = 2 } }
+	positionType = { name = "ap_11"	position = { x = 635 y = 2 } }
+	positionType = { name = "ap_12"	position = { x = 693 y = 2 } }
+	positionType = { name = "ap_13"	position = { x = 751 y = 2 } }
+	positionType = { name = "ap_14"	position = { x = 809 y = 2 } }
+	positionType = { name = "ap_15"	position = { x = 867 y = 2 } }
+	positionType = { name = "ap_16"	position = { x = 925 y = 2 } }
+	positionType = { name = "ap_17"	position = { x = 983 y = 2 } }
+	positionType = { name = "ap_18"	position = { x = 1041 y = 2 } }
+	positionType = { name = "ap_19"	position = { x = 1099 y = 2 } }
+	positionType = { name = "ap_20"	position = { x = 1157 y = 2 } }
+	positionType = { name = "ap_21"	position = { x = 26 y = 51 } }
+	positionType = { name = "ap_22"	position = { x = 84 y = 51 } }
+	positionType = { name = "ap_23"	position = { x = 143 y = 51 } }
+	positionType = { name = "ap_24"	position = { x = 200 y = 51 } }
+	positionType = { name = "ap_25"	position = { x = 258 y = 51 } }
+	positionType = { name = "ap_26"	position = { x = 316 y = 51 } }
+	positionType = { name = "ap_27"	position = { x = 374 y = 51 } }
+	positionType = { name = "ap_28"	position = { x = 432 y = 51 } }
+	positionType = { name = "ap_29"	position = { x = 490 y = 51 } }
+	positionType = { name = "ap_30"	position = { x = 548 y = 51 } }
+	positionType = { name = "ap_31"	position = { x = 606 y = 51 } }
+	positionType = { name = "ap_32"	position = { x = 664 y = 51 } }
+	positionType = { name = "ap_33"	position = { x = 722 y = 51 } }
+	positionType = { name = "ap_34"	position = { x = 780 y = 51 } }
+	positionType = { name = "ap_35"	position = { x = 838 y = 51 } }
+	positionType = { name = "ap_36"	position = { x = 896 y = 51 } }
+	positionType = { name = "ap_37"	position = { x = 954 y = 51 } }
+	positionType = { name = "ap_38"	position = { x = 1012 y = 51 } }
+	positionType = { name = "ap_39"	position = { x = 1070 y = 51 } }
+	positionType = { name = "ap_40"	position = { x = 1128 y = 51 } }
+	positionType = { name = "ap_41"	position = { x = 1186 y = 51 } }
+	positionType = { name = "ap_42"	position = { x = -3 y = 100 } }
+	positionType = { name = "ap_43"	position = { x = 55 y = 100 } }
+	positionType = { name = "ap_44"	position = { x = 113 y = 100 } }
+	positionType = { name = "ap_45"	position = { x = 171 y = 100 } }
+	positionType = { name = "ap_46"	position = { x = 229 y = 100 } }
+	positionType = { name = "ap_47"	position = { x = 287 y = 100 } }
+	positionType = { name = "ap_48"	position = { x = 345 y = 100 } }
+	positionType = { name = "ap_49"	position = { x = 403 y = 100 } }
+	positionType = { name = "ap_50"	position = { x = 461 y = 100 } }
+	positionType = { name = "ap_51"	position = { x = 519 y = 100 } }
+	positionType = { name = "ap_52"	position = { x = 573 y = 100 } }
+	positionType = { name = "ap_53"	position = { x = 635 y = 100 } }
+	positionType = { name = "ap_54"	position = { x = 693 y = 100 } }
+	positionType = { name = "ap_55"	position = { x = 751 y = 100 } }
+	positionType = { name = "ap_56"	position = { x = 809 y = 100 } }
+	positionType = { name = "ap_57"	position = { x = 867 y = 100 } }
+	positionType = { name = "ap_58"	position = { x = 925 y = 100 } }
+	positionType = { name = "ap_59"	position = { x = 983 y = 100 } }
+	positionType = { name = "ap_60"	position = { x = 1041 y = 100 } }
+	positionType = { name = "ap_61"	position = { x = 1099 y = 100 } }
+	positionType = { name = "ap_62"	position = { x = 1157 y = 100 } }
+	
+	containerWindowType = {
+		name = "traditions_ascension_perk_entry"
+		size = { width = 44 height = 44 }
+
+		iconType = {
+			name = "icon"
+			position = { x = 9 y = 5 }
+			quadTextureSprite = "GFX_ascension_perk_slot_locked"
+			alwaystransparent = yes
+			scale = 1.0
+		}
+
+		buttonType = {
+			name = "ascension_perk_button"
+			spriteType = "GFX_flag_64_frame"
+			buttonFont = "cg_16b"
+			clicksound = click
+			oversound = no_sound
+		}
+	
+	}
+
+	################################################################
+	# TRADITION ENTRY
+	################################################################
+
+	containerWindowType = {
+		name = "tradition_entry"
+		size = { width = 44 height = 44 }
+
+		buttonType = {
+			name = "adopt_button"
+			spriteType = "GFX_event_button_452"
+			buttonFont = "cg_16b"
+			clicksound = select_click
+			oversound = no_sound
+		}
+		
+		#Need to hook this in
+		#Orange frame to show available traditions
+		iconType = {
+			name = "available_tradition"
+			spriteType = "GFX_tradition_available_button"
+			alwaysTransparent = yes
+			position = { x = -22 y = -22}
+		}
+	}
+
+	################################################################
+	# TRADITION VIEW
+	################################################################
+
+	containerWindowType = {
+		name = "traditions_view"
+		size = { width = 1272 height = 100% } 
+
+		verticalScrollbar = "right_vertical_slider"
+
+		position = { x = -1270 y = 40 }
+		show_position = { x = 35 y = 40 }
+		hide_position = { x = -1270 y = 40 }
+		animation_time = 200
+		animation_type = decelerated
+		
+		orientation = upper_left
+		moveable = no
+		clipping = no
+		show_sound = "interface"
+
+		background = {
+			name = "background"
+			spriteType = "GFX_tile_outliner_bg"
+		}
+
+		iconType = {
+			name = "hex_bg"
+			spriteType = "GFX_hex_bg"
+			position = { x = -23 y = -18 }
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "header_line"
+			spriteType = "GFX_line_medium"
+			position = { x = 6 y = 21 }
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType={
+			name = "header"
+			font = "malgun_goth_24"
+			text = "TRADITIONS"
+			position = { x = 65 y = 5 }
+			maxWidth = 300
+			maxHeight = 20
+			fixedSize = yes
+			format = left
+		}
+
+		buttonType = {
+			name = "close"
+			spriteType = "GFX_close"
+			position = { x = -45 y = 16 }
+			orientation = upper_right
+			shortcut = "ESCAPE"
+			clicksound = "back_click"
+			pdx_tooltip = "CLOSE_TITLE"
+		}	
+
+		########################
+		# TABS
+		########################
+		@tabHeight = 16
+
+		buttonType = {
+			name = "tab_traditions"
+			quadTextureSprite = "GFX_tab_1_inactive"
+			position = { x = 850 y = @tabHeight }
+			font = "cg_16b"
+			buttonText = "TRADITIONS"
+			buttonFont = "cg_16b"
+			shortcut = "z"
+			clicksound = "tab_click"
+		}
+
+		buttonType = {
+			name = "tab_traditions_active"
+			quadTextureSprite = "GFX_tab_1_active"
+			position = { x = 850 y = @tabHeight }
+			font = "cg_16b"
+			buttonText = "TRADITIONS"
+			buttonFont = "cg_16b"
+			shortcut = "z"
+			clicksound = "tab_click"
+		}
+
+		buttonType = {
+			name = "tab_relics"
+			quadTextureSprite = "GFX_tab_2_inactive"
+			position = { x = 979 y = @tabHeight }
+			font = "cg_16b"
+			buttonText = "RELICS"
+			buttonFont = "cg_16b"
+			shortcut = "x"
+			clicksound = "tab_click"
+		}
+
+		buttonType = {
+			name = "tab_relics_active"
+			quadTextureSprite = "GFX_tab_2_active"
+			position = { x = 979 y = @tabHeight }
+			font = "cg_16b"
+			buttonText = "RELICS"
+			buttonFont = "cg_16b"
+			shortcut = "x"
+			clicksound = "tab_click"
+		}
+
+		################################################################
+		# TRADITION TAB
+		################################################################
+
+		containerWindowType = {
+			name = "traditions_window"
+			size = { width = 100% height = 1650 } 
+			moveable = no
+			orientation = upper_left
+			position = { x = 0 y = 0 }
+
+			containerWindowType = {
+				name = "tradition_box"
+				size = { width = 600 height = 100 }
+				position = { x = 370 y = 20 }
+
+				instantTextBoxType = {
+					name = "tradition_cost"
+					font = "malgun_goth_24"
+					position = { x = 0 y = -3 }
+					maxWidth = 140
+					maxHeight = 20
+					fixedSize = yes
+					format = right
+				}
+
+				iconType = {
+					name = "progress"
+					spriteType = "GFX_tech_research_progressbar"
+					position = { x = 150 y = -10 }
+				}
+
+				instantTextBoxType = {
+					name = "time_to_next_tradition"
+					font = "malgun_goth_24"
+					text = "11 months"
+					position = { x = 390 y = -3 }
+					maxWidth = 300
+					maxHeight = 20
+					fixedSize = yes
+					format = left
+				}
+			}
+
+			################################################################
+			# TRADITION CATEGORY DOMINATION
+			################################################################
+
+			containerWindowType = {
+				name = "tradition_domination"
+				size = { width = 5000 height = 1650 }
+				position = { x = -50% y = -50% }
+				orientation = center
+				
+				iconType = {
+					name = "hex_bg"
+					spriteType = "GFX_tradition_hex_bg_orange"
+					position = { x = -23 y = -18 }
+					alwaysTransparent = yes
+					scale = 0
+				}
+				
+				instantTextBoxType = {
+					name = "category_label"
+					font = "malgun_goth_24"
+					position = { x = 55555 y = 55555 }
+					text = "tradition_domination"
+				}
+
+				containerWindowType = {
+					name = "adopted_count"
+					size = { width = 45 height = 45 }
+					position = { x = 617 y = 238 }
+
+					background = {
+						name = "adopted_hitbox"
+						spriteType = "GFX_invisible"
+					}
+					
+					iconType = {
+						name = "adopted"
+						spriteType = "GFX_tt_ph"
+						alwaysTransparent = yes
+					}
+					
+					instantTextBoxType = {
+						name = "value"
+						font = "cg_16b"
+						position = { x = 617 y = 238 }
+						maxWidth = 100
+						maxHeight = 20
+						fixedSize = yes
+						format = center
+						alwaysTransparent = yes
+					}
+				}
+				
+				buttonType = {
+					name = "adopt_button"
+					size = { x = 45 y = 45 }
+					position = { x = 617 y = 236 }
+					spriteType = "GFX_tt_ph_anim"
+					buttonFont = "cg_16b"
+					font = "cg_16b"
+					oversound = mouse_over
+				}
+
+				instantTextBoxType = {
+					name = "category_desc"
+					font = "cg_16b"
+					position = { x = 55555 y = 55555 }
+					maxWidth = 280
+					format = center
+					vertical_alignment = center
+					alwaystransparent = yes
+					text = "tradition_domination_desc"
+				}
+
+				containerWindowType = {
+					name = "tree"
+					
+					iconType = {
+						name = "dom1"
+						spriteType = "GFX_arrow_left"
+						position = { x = 594 y = 254 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "dom2"
+						spriteType = "GFX_arrow_right"
+						position = { x = 662 y = 254 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "dom3"
+						spriteType = "GFX_arrow_right"
+						position = { x = 729 y = 254 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "dom4"
+						spriteType = "GFX_arrow_right"
+						position = { x = 796 y = 254 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "dom5"
+						spriteType = "GFX_arrow_double"
+						position = { x = 732 y = 283 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "dom6"
+						spriteType = "GFX_arrow_single"
+						position = { x = 732 y = 350 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "dom7"
+						spriteType = "GFX_arrow_single"
+						position = { x = 802 y = 350 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "dom8"
+						spriteType = "GFX_arrow_double"
+						position = { x = 598 y = 283 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "dom9"
+						spriteType = "GFX_arrow_single"
+						position = { x = 598 y = 350 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "dom10"
+						spriteType = "GFX_arrow_left"
+						position = { x = 559 y = 388 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "dom11"
+						spriteType = "GFX_arrow_up"
+						position = { x = 531 y = 349 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "dom12"
+						spriteType = "GFX_arrow_single"
+						position = { x = 598 y = 417 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "dom13"
+						spriteType = "GFX_arrow_left"
+						position = { x = 559 y = 455 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "dom14"
+						spriteType = "GFX_arrow_single"
+						position = { x = 598 y = 484 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "dom15"
+						spriteType = "GFX_arrow_single"
+						position = { x = 668 y = 350 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "dom16"
+						spriteType = "GFX_arrow_single"
+						position = { x = 668 y = 417 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "dom17"
+						spriteType = "GFX_arrow_single"
+						position = { x = 668 y = 484 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "dom18"
+						spriteType = "GFX_arrow_single"
+						position = { x = 668 y = 551 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "dom19"
+						spriteType = "GFX_arrow_right"
+						position = { x = 697 y = 455 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "dom20"
+						spriteType = "GFX_arrow_double_3"
+						position = { x = 735 y = 484 }
+						scale = 1.0
+					}
+				}
+			}
+
+			################################################################
+			# TRADITION CATEGORY EXPANSION
+			################################################################
+
+			containerWindowType = {
+				name = "tradition_expansion"
+				size = { width = 5000 height = 1650 }
+				position = { x = -50% y = -50% }
+				orientation = center
+
+				iconType = {
+					name = "hex_bg"
+					spriteType = "GFX_tradition_hex_bg_green"
+					position = { x = -23 y = -18 }
+					alwaysTransparent = yes
+					scale = 0
+				}
+
+				instantTextBoxType = {
+					name = "category_label"
+					font = "malgun_goth_24"
+					position = { x = 55555 y = 55555 }
+					text = "tradition_expansion"
+				}
+
+				containerWindowType = {
+					name = "adopted_count"
+					size = { width = 45 height = 45 }
+					position = { x = 364 y = 238 }
+
+					background = {
+						name = "adopted_hitbox"
+						spriteType = "GFX_invisible"
+					}
+					
+					iconType = {
+						name = "adopted"
+						spriteType = "GFX_tt_ph"
+						alwaysTransparent = yes
+					}
+					
+					instantTextBoxType = {
+						name = "value"
+						font = "cg_16b"
+						position = { x = 55555 y = 55555 }
+						maxWidth = 100
+						maxHeight = 20
+						fixedSize = yes
+						format = center
+						alwaysTransparent = yes
+					}
+				}
+
+				buttonType = {
+					name = "adopt_button"
+					size = { x = 45 y = 45 }
+					position = { x = 364 y = 238 }
+					spriteType = "GFX_tt_ph_anim"
+					buttonFont = "cg_16b"
+					font = "cg_16b"
+					oversound = mouse_over
+				}
+
+				instantTextBoxType = {
+					name = "category_desc"
+					font = "cg_16b"
+					position = { x = 55555 y = 55555 }
+					maxWidth = 280
+					format = center
+					vertical_alignment = center
+					alwaystransparent = yes
+					text = "tradition_expansion_desc"
+				}
+
+				containerWindowType = {
+					name = "tree"
+					
+					iconType = {
+						name = "`"
+						spriteType = "GFX_arrow_left"
+						position = { x = 341 y = 254 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "exp2"
+						spriteType = "GFX_arrow_single"
+						position = { x = 313 y = 283 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "exp3"
+						spriteType = "GFX_arrow_single"
+						position = { x = 313 y = 350 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "exp4"
+						spriteType = "GFX_arrow_single"
+						position = { x = 313 y = 417 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "exp5"
+						spriteType = "GFX_arrow_right"
+						position = { x = 342 y = 455 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "exp6"
+						spriteType = "GFX_arrow_single"
+						position = { x = 313 y = 484 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "exp7"
+						spriteType = "GFX_arrow_single"
+						position = { x = 380 y = 484 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "exp8"
+						spriteType = "GFX_arrow_merge"
+						position = { x = 317 y = 551 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "exp9"
+						spriteType = "GFX_arrow_single"
+						position = { x = 380 y = 283 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "exp10"
+						spriteType = "GFX_arrow_single"
+						position = { x = 380 y = 350 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "exp11"
+						spriteType = "GFX_arrow_right_3"
+						position = { x = 412 y = 321 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "exp12"
+						spriteType = "GFX_arrow_single"
+						position = { x = 447 y = 350 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "exp13"
+						spriteType = "GFX_arrow_single"
+						position = { x = 447 y = 417 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "exp14"
+						spriteType = "GFX_arrow_double_3"
+						position = { x = 447 y = 484 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "exp15"
+						spriteType = "GFX_arrow_single"
+						position = { x = 447 y = 551 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "exp16"
+						spriteType = "GFX_arrow_single"
+						position = { x = 507 y = 551 }
+						scale = 1.0
+					}
+				}
+			}
+
+			################################################################
+			# TRADITION CATEGORY DISCOVERY
+			################################################################
+
+			containerWindowType = {
+				name = "tradition_discovery"
+				size = { width = 5000 height = 1650 }
+				position = { x = -50% y = -50% }
+				orientation = center
+				
+				iconType = {
+					name = "hex_bg"
+					spriteType = "GFX_tradition_hex_bg_gray"
+					position = { x = -23 y = -18 }
+					alwaysTransparent = yes
+					scale = 0
+				}
+				
+				instantTextBoxType={
+					name = "category_label"
+					font = "malgun_goth_24"
+					position = { x = 55555 y = 55555 }
+					text = "tradition_discovery"
+				}
+
+				containerWindowType = {
+					name = "adopted_count"
+					size = { width = 45 height = 45 }
+					position = { x = 441 y = 1058 }
+
+					background = {
+						name = "adopted_hitbox"
+						spriteType = "GFX_invisible"
+					}
+					
+					iconType = {
+						name = "adopted"
+						spriteType = "GFX_tt_ph"
+						alwaysTransparent = yes
+					}
+					
+					instantTextBoxType = {
+						name = "value"
+						font = "cg_16b"
+						position = { x = 55555 y = 55555 }
+						maxWidth = 100
+						maxHeight = 20
+						fixedSize = yes
+						format = center
+						alwaysTransparent = yes
+					}
+				}
+				
+				buttonType = {
+					name = "adopt_button"
+					size = { x = 45 y = 45 }
+					position = { x = 441 y = 1058 }
+					spriteType = "GFX_tt_ph_anim"
+					buttonFont = "cg_16b"
+					font = "cg_16b"
+					oversound = mouse_over
+				}
+				
+				instantTextBoxType = {
+					name = "category_desc"
+					font = "cg_16b"
+					position = { x = 55555 y = 55555 }
+					maxWidth = 280
+					format = center
+					vertical_alignment = center
+					alwaystransparent = yes
+					text = "tradition_discovery_desc"
+				}
+
+				containerWindowType = {
+					name = "tree"
+					
+					iconType = {
+						name = "disc1"
+						spriteType = "GFX_arrow_single"
+						position = { x = 457 y = 1103 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "disc2"
+						spriteType = "GFX_arrow_single"
+						position = { x = 457 y = 1170 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "disc3"
+						spriteType = "GFX_arrow_single"
+						position = { x = 457 y = 1237 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "disc4"
+						spriteType = "GFX_arrow_left"
+						position = { x = 418 y = 1275 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "disc5"
+						spriteType = "GFX_arrow_single"
+						position = { x = 390 y = 1304 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "disc6"
+						spriteType = "GFX_arrow_single"
+						position = { x = 390 y = 1371 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "disc7"
+						spriteType = "GFX_arrow_single"
+						position = { x = 457 y = 1304 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "disc8"
+						spriteType = "GFX_arrow_single"
+						position = { x = 457 y = 1371 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "disc9"
+						spriteType = "GFX_arrow_right"
+						position = { x = 486 y = 1077 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "disc10"
+						spriteType = "GFX_arrow_single"
+						position = { x = 524 y = 1103 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "disc11"
+						spriteType = "GFX_arrow_single"
+						position = { x = 524 y = 1170 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "disc12"
+						spriteType = "GFX_arrow_single"
+						position = { x = 524 y = 1237 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "disc13"
+						spriteType = "GFX_arrow_single"
+						position = { x = 524 y = 1304 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "disc14"
+						spriteType = "GFX_arrow_single"
+						position = { x = 524 y = 1371 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "disc15"
+						spriteType = "GFX_arrow_right"
+						position = { x = 553 y = 1277 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "disc16"
+						spriteType = "GFX_arrow_single"
+						position = { x = 591 y = 1304 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "disc17"
+						spriteType = "GFX_arrow_single"
+						position = { x = 591 y = 1371 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "disc18"
+						spriteType = "GFX_arrow_right"
+						position = { x = 553 y = 1208 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "disc19"
+						spriteType = "GFX_arrow_right"
+						position = { x = 620 y = 1208 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "disc20"
+						spriteType = "GFX_arrow_right"
+						position = { x = 687 y = 1208 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "disc21"
+						spriteType = "GFX_arrow_single"
+						position = { x = 658 y = 1237 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "disc22"
+						spriteType = "GFX_arrow_single"
+						position = { x = 658 y = 1304 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "disc23"
+						spriteType = "GFX_arrow_single"
+						position = { x = 725 y = 1237 }
+						scale = 1.0
+					}
+				}
+			}
+
+			################################################################
+			# TRADITION CATEGORY HARMONY
+			################################################################
+
+			containerWindowType = {
+				name = "tradition_harmony"
+				size = { width = 5000 height = 1650 }
+				position = { x = -50% y = -50% }
+				orientation = center
+				
+				iconType = {
+					name = "hex_bg"
+					spriteType = "GFX_tradition_hex_bg_turqoise"
+					position = { x = -23 y = -18 }
+					alwaysTransparent = yes
+					scale = 0
+				}
+				
+				instantTextBoxType={
+					name = "category_label"
+					font = "malgun_goth_24"
+					position = { x = 55555 y = 55555 }
+					text = "tradition_harmony"
+				}
+
+				containerWindowType = {
+					name = "adopted_count"
+					size = { width = 45 height = 45 }
+					position = { x = 1043 y = 238 }
+
+					background = {
+						name = "adopted_hitbox"
+						spriteType = "GFX_invisible"
+					}
+					
+					iconType = {
+						name = "adopted"
+						spriteType = "GFX_tt_ph"
+						alwaysTransparent = yes
+					}
+					
+					instantTextBoxType = {
+						name = "value"
+						font = "cg_16b"
+						position = { x = 55555 y = 55555 }
+						maxWidth = 100
+						maxHeight = 20
+						fixedSize = yes
+						format = center
+						alwaysTransparent = yes
+					}
+				}
+				
+				buttonType = {
+					name = "adopt_button"
+					size = { x = 45 y = 45 }
+					position = { x = 1043 y = 238 }
+					spriteType = "GFX_tt_ph_anim"
+					buttonFont = "cg_16b"
+					font = "cg_16b"
+					oversound = mouse_over
+				}
+				
+				instantTextBoxType = {
+					name = "category_desc"
+					font = "cg_16b"
+					position = { x = 55555 y = 55555 }
+					maxWidth = 280
+					format = center
+					vertical_alignment = center
+					alwaystransparent = yes
+					text = "tradition_harmony_desc"
+				}
+
+				containerWindowType = {
+					name = "tree"
+					
+					iconType = {
+						name = "har1"
+						spriteType = "GFX_arrow_right"
+						position = { x = 1088 y = 254 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "har2"
+						spriteType = "GFX_arrow_right"
+						position = { x = 1155 y = 254 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "har3"
+						spriteType = "GFX_arrow_double"
+						position = { x = 1158 y = 283 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "har4"
+						spriteType = "GFX_arrow_single"
+						position = { x = 1228 y = 350 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "har5"
+						spriteType = "GFX_arrow_double_2"
+						position = { x = 1168 y = 417 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "har6"
+						spriteType = "GFX_arrow_double"
+						position = { x = 1024 y = 283 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "har7"
+						spriteType = "GFX_arrow_right"
+						position = { x = 985 y = 321 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "har8"
+						spriteType = "GFX_arrow_right"
+						position = { x = 918 y = 321 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "har9"
+						spriteType = "GFX_arrow_double"
+						position = { x = 922 y = 350 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "har10"
+						spriteType = "GFX_arrow_single"
+						position = { x = 922 y = 417 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "har11"
+						spriteType = "GFX_arrow_single"
+						position = { x = 992 y = 417 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "har12"
+						spriteType = "GFX_arrow_merge"
+						position = { x = 927 y = 484 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "har13"
+						spriteType = "GFX_arrow_left"
+						position = { x = 918 y = 522 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "har14"
+						spriteType = "GFX_arrow_left"
+						position = { x = 918 y = 589 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "har15"
+						spriteType = "GFX_arrow_right"
+						position = { x = 986 y = 522 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "har16"
+						spriteType = "GFX_arrow_right"
+						position = { x = 986 y = 589 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "har17"
+						spriteType = "GFX_arrow_single"
+						position = { x = 890 y = 551 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "har18"
+						spriteType = "GFX_arrow_single"
+						position = { x = 957 y = 551 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "har19"
+						spriteType = "GFX_arrow_single"
+						position = { x = 1024 y = 551 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "har20"
+						spriteType = "GFX_arrow_double"
+						position = { x = 1059 y = 350 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "har21"
+						spriteType = "GFX_arrow_single"
+						position = { x = 1059 y = 417 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "har22"
+						spriteType = "GFX_arrow_right_down"
+						position = { x = 1088 y = 460 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "har23"
+						spriteType = "GFX_arrow_right_down"
+						position = { x = 1141 y = 498 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "har24"
+						spriteType = "GFX_arrow_right_down"
+						position = { x = 1194 y = 536 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "har25"
+						spriteType = "GFX_arrow_single"
+						position = { x = 1218 y = 598 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "har26"
+						spriteType = "GFX_arrow_double_2"
+						position = { x = 1158 y = 665 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "har27"
+						spriteType = "GFX_arrow_single"
+						position = { x = 1158 y = 732 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "har28"
+						spriteType = "GFX_arrow_single"
+						position = { x = 1218 y = 732 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "har29"
+						spriteType = "GFX_arrow_single"
+						position = { x = 1218 y = 799 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "har30"
+						spriteType = "GFX_arrow_single"
+						position = { x = 1112 y = 522 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "har31"
+						spriteType = "GFX_arrow_double"
+						position = { x = 1077 y = 589 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "har32"
+						spriteType = "GFX_arrow_double_2"
+						position = { x = 1017 y = 656 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "har33"
+						spriteType = "GFX_arrow_double_2"
+						position = { x = 957 y = 723 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "har34"
+						spriteType = "GFX_arrow_single"
+						position = { x = 1077 y = 723 }
+						scale = 1.0
+					}
+				}
+			}
+
+			################################################################
+			# TRADITION CATEGORY PROSPERITY
+			################################################################
+
+			containerWindowType = {
+				name = "tradition_prosperity"
+				size = { width = 5000 height = 1650 }
+				position = { x = -50% y = -50% }
+				orientation = center
+				
+				iconType = {
+					name = "hex_bg"
+					spriteType = "GFX_tradition_hex_bg_yellow"
+					position = { x = -23 y = -18 }
+					alwaysTransparent = yes
+					scale = 0
+				}
+				
+				instantTextBoxType={
+					name = "category_label"
+					font = "malgun_goth_24"
+					position = { x = 55555 y = 55555 }
+					text = "tradition_prosperity"
+				}
+
+				containerWindowType = {
+					name = "adopted_count"
+					size = { width = 45 height = 45 }
+					position = { x = 959 y = 1052 }
+					
+					background = {
+						name = "adopted_hitbox"
+						spriteType = "GFX_invisible"
+					}
+					
+					iconType = {
+						name = "adopted"
+						spriteType = "GFX_tt_ph"
+						alwaysTransparent = yes
+					}
+					
+					instantTextBoxType = {
+						name = "value"
+						font = "cg_16b"
+						position = { x = 55555 y = 55555 }
+						maxWidth = 100
+						maxHeight = 20
+						fixedSize = yes
+						format = center
+						alwaysTransparent = yes
+					}
+				}
+				
+				buttonType = {
+					name = "adopt_button"
+					size = { x = 45 y = 45 }
+					position = { x = 959 y = 1052 }
+					spriteType = "GFX_tt_ph_anim"
+					buttonFont = "cg_16b"
+					font = "cg_16b"
+					oversound = mouse_over
+				}
+
+				instantTextBoxType = {
+					name = "category_desc"
+					font = "cg_16b"
+					position = { x = 55555 y = 55555 }
+					maxWidth = 280
+					format = center
+					vertical_alignment = center
+					alwaystransparent = yes
+					text = "tradition_prosperity_desc"
+				}
+
+				containerWindowType = {
+					name = "tree"
+					
+					iconType = {
+						name = "pro1"
+						spriteType = "GFX_arrow_double"
+						position = { x = 940 y = 1097 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "pro2"
+						spriteType = "GFX_arrow_single"
+						position = { x = 940 y = 1164 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "pro3"
+						spriteType = "GFX_arrow_single"
+						position = { x = 1010 y = 1164 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "pro4"
+						spriteType = "GFX_arrow_merge"
+						position = { x = 945 y = 1231 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "pro5"
+						spriteType = "GFX_arrow_single"
+						position = { x = 975 y = 1298 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "pro6"
+						spriteType = "GFX_arrow_double"
+						position = { x = 940 y = 1365 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "pro7"
+						spriteType = "GFX_arrow_single"
+						position = { x = 940 y = 1432 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "pro8"
+						spriteType = "GFX_arrow_single"
+						position = { x = 1010 y = 1432 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "pro9"
+						spriteType = "GFX_arrow_merge"
+						position = { x = 945 y = 1499 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "pro10"
+						spriteType = "GFX_arrow_left"
+						position = { x = 901 y = 1202 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "pro11"
+						spriteType = "GFX_arrow_left"
+						position = { x = 834 y = 1202 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "pro12"
+						spriteType = "GFX_arrow_single"
+						position = { x = 806 y = 1231 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "pro13"
+						spriteType = "GFX_arrow_single"
+						position = { x = 806 y = 1298 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "pro14"
+						spriteType = "GFX_arrow_single"
+						position = { x = 873 y = 1231 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "pro15"
+						spriteType = "GFX_arrow_single"
+						position = { x = 873 y = 1298 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "pro16"
+						spriteType = "GFX_arrow_right"
+						position = { x = 1039 y = 1202 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "pro17"
+						spriteType = "GFX_arrow_right"
+						position = { x = 1106 y = 1202 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "pro18"
+						spriteType = "GFX_arrow_single"
+						position = { x = 1144 y = 1231 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "pro19"
+						spriteType = "GFX_arrow_single"
+						position = { x = 1144 y = 1298 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "pro20"
+						spriteType = "GFX_arrow_single"
+						position = { x = 1077 y = 1231 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "pro21"
+						spriteType = "GFX_arrow_single"
+						position = { x = 1077 y = 1298 }
+						scale = 1.0
+					}
+				}
+			}
+
+			################################################################
+			# TRADITION CATEGORY DIPLOMACY
+			################################################################
+
+			containerWindowType = {
+				name = "tradition_diplomacy"
+				size = { width = 5000 height = 1650 }
+				position = { x = -50% y = -50% }
+				orientation = center
+
+				iconType = {
+					name = "hex_bg"
+					spriteType = "GFX_tradition_hex_bg_blue"
+					position = { x = -23 y = -18 }
+					alwaysTransparent = yes
+					scale = 0
+				}
+
+				instantTextBoxType={
+					name = "category_label"
+					font = "malgun_goth_24"
+					position = { x = 55555 y = 55555 }
+					text = "tradition_diplomacy"
+				}
+
+				containerWindowType = {
+					name = "adopted_count"
+					size = { width = 125 height = 45 }
+					position = { x = 125 y = 238 }
+					
+					background = {
+						name = "adopted_hitbox"
+						spriteType = "GFX_invisible"
+					}
+					
+					iconType = {
+						name = "adopted"
+						spriteType = "GFX_tt_ph"
+						alwaysTransparent = yes
+					}
+					
+					instantTextBoxType = {
+						name = "value"
+						font = "cg_16b"
+						position = { x = 55555 y = 55555 }
+						maxWidth = 100
+						maxHeight = 20
+						fixedSize = yes
+						format = center
+						alwaysTransparent = yes
+					}
+				}
+
+				buttonType = {
+					name = "adopt_button"
+					size = { x = 45 y = 45 }
+					position = { x = 125 y = 238 }
+					spriteType = "GFX_tt_ph_anim"
+					buttonFont = "cg_16b"
+					font = "cg_16b"
+					oversound = mouse_over
+				}
+
+				instantTextBoxType = {
+					name = "category_desc"
+					font = "cg_16b"
+					position = { x = 55555 y = 55555 }
+					maxWidth = 280
+					format = center
+					vertical_alignment = center
+					alwaystransparent = yes
+					text = "tradition_diplomacy_desc"
+				}
+
+				containerWindowType = {
+					name = "tree"
+					
+					iconType = {
+						name = "dip1"
+						spriteType = "GFX_arrow_right"
+						position = { x = 170 y = 254 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "dip2"
+						spriteType = "GFX_arrow_single"
+						position = { x = 208 y = 283 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "dip3"
+						spriteType = "GFX_arrow_single"
+						position = { x = 141 y = 283 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "dip4"
+						spriteType = "GFX_arrow_double"
+						position = { x = 108 y = 350 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "dip5"
+						spriteType = "GFX_arrow_single"
+						position = { x = 106 y = 417 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "dip6"
+						spriteType = "GFX_arrow_left"
+						position = { x = 67 y = 455 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "dip7"
+						spriteType = "GFX_arrow_single"
+						position = { x = 39 y = 484 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "dip8"
+						spriteType = "GFX_arrow_single"
+						position = { x = 106 y = 484 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "dip9"
+						spriteType = "GFX_arrow_double"
+						position = { x = 71 y = 551 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "dip10"
+						spriteType = "GFX_arrow_right"
+						position = { x = 205 y = 388 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "dip11"
+						spriteType = "GFX_arrow_double_2"
+						position = { x = 183 y = 417 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "dip12"
+						spriteType = "GFX_arrow_single"
+						position = { x = 183 y = 484 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "dip13"
+						spriteType = "GFX_arrow_single"
+						position = { x = 243 y = 484 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "dip14"
+						spriteType = "GFX_arrow_merge"
+						position = { x = 188 y = 551 }
+						scale = 1.0
+					}
+				}
+			}
+
+			################################################################
+			# TRADITION CATEGORY SUPREMACY
+			################################################################
+
+			containerWindowType = {
+				name = "tradition_supremacy"
+				size = { width = 5000 height = 1650 }
+				position = { x = -50% y = -50% }
+				orientation = center
+				
+				iconType = {
+					name = "hex_bg"
+					spriteType = "GFX_tradition_hex_bg_red"
+					position = { x = -23 y = -18 }
+					alwaysTransparent = yes
+					scale = 0
+				}
+				
+				instantTextBoxType={
+					name = "category_label"
+					font = "malgun_goth_24"
+					position = { x = 55555 y = 55555 }
+					text = "tradition_supremacy"
+				}
+
+				containerWindowType = {
+					name = "adopted_count"
+					size = { width = 45 height = 45 }
+					position = { x = 210 y = 680 }
+					
+					background = {
+						name = "adopted_hitbox"
+						spriteType = "GFX_invisible"
+					}
+					
+					iconType = {
+						name = "adopted"
+						spriteType = "GFX_tt_ph"
+						alwaysTransparent = yes
+					}
+					
+					instantTextBoxType = {
+						name = "value"
+						font = "cg_16b"
+						position = { x = 55555 y = 55555 }
+						maxWidth = 100
+						maxHeight = 20
+						fixedSize = yes
+						format = center
+						alwaysTransparent = yes
+					}
+				}
+
+				buttonType = {
+					name = "adopt_button"
+					size = { x = 45 y = 45 }
+					position = { x = 210 y = 680 }
+					spriteType = "GFX_tt_ph_anim"
+					buttonFont = "cg_16b"
+					font = "cg_16b"
+					oversound = mouse_over
+				}
+
+				instantTextBoxType = {
+					name = "category_desc"
+					font = "cg_16b"
+					position = { x = 55555 y = 55555 }
+					maxWidth = 280
+					format = center
+					vertical_alignment = center
+					alwaystransparent = yes
+					text = "tradition_supremacy_desc"
+				}
+
+				containerWindowType = {
+					name = "tree"
+					
+					iconType = {
+						name = "sup1"
+						spriteType = "GFX_arrow_single"
+						position = { x = 226 y = 725 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "sup2"
+						spriteType = "GFX_arrow_right"
+						position = { x = 255 y = 696 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "sup3"
+						spriteType = "GFX_arrow_right"
+						position = { x = 322 y = 696 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "sup4"
+						spriteType = "GFX_arrow_right"
+						position = { x = 389 y = 696 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "sup5"
+						spriteType = "GFX_arrow_right"
+						position = { x = 456 y = 696 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "sup6"
+						spriteType = "GFX_arrow_right"
+						position = { x = 523 y = 696 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "sup7"
+						spriteType = "GFX_arrow_single"
+						position = { x = 494 y = 725 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "sup8"
+						spriteType = "GFX_arrow_single"
+						position = { x = 561 y = 725 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "sup9"
+						spriteType = "GFX_arrow_single"
+						position = { x = 293 y = 725 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "sup10"
+						spriteType = "GFX_arrow_right"
+						position = { x = 322 y = 763 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "sup11"
+						spriteType = "GFX_arrow_right"
+						position = { x = 389 y = 763 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "sup12"
+						spriteType = "GFX_arrow_single"
+						position = { x = 360 y = 792 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "sup13"
+						spriteType = "GFX_arrow_single"
+						position = { x = 360 y = 859 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "sup14"
+						spriteType = "GFX_arrow_single"
+						position = { x = 427 y = 792 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "sup15"
+						spriteType = "GFX_arrow_single"
+						position = { x = 427 y = 859 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "sup16"
+						spriteType = "GFX_arrow_double"
+						position = { x = 191 y = 792 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "sup17"
+						spriteType = "GFX_arrow_single"
+						position = { x = 261 y = 859 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "sup18"
+						spriteType = "GFX_arrow_double_3"
+						position = { x = 261 y = 926 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "sup19"
+						spriteType = "GFX_arrow_single"
+						position = { x = 261 y = 993 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "sup20"
+						spriteType = "GFX_arrow_single"
+						position = { x = 321 y = 993 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "sup21"
+						spriteType = "GFX_arrow_merge"
+						position = { x = 261 y = 1060 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "sup211"
+						spriteType = "GFX_arrow_left"
+						position = { x = 187 y = 763 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "sup22"
+						spriteType = "GFX_arrow_up"
+						position = { x = 159 y = 724 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "sup23"
+						spriteType = "GFX_arrow_left"
+						position = { x = 120 y = 696 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "sup24"
+						spriteType = "GFX_arrow_left"
+						position = { x = 120 y = 763 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "sup25"
+						spriteType = "GFX_arrow_double"
+						position = { x = 57 y = 792 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "sup26"
+						spriteType = "GFX_arrow_single"
+						position = { x = 57 y = 859 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "sup27"
+						spriteType = "GFX_arrow_single"
+						position = { x = 57 y = 926 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "sup28"
+						spriteType = "GFX_arrow_single"
+						position = { x = 57 y = 993 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "sup29"
+						spriteType = "GFX_arrow_double_3"
+						position = { x = 57 y = 1060 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "sup30"
+						spriteType = "GFX_arrow_single"
+						position = { x = 57 y = 1127 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "sup31"
+						spriteType = "GFX_arrow_single"
+						position = { x = 127 y = 859 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "sup32"
+						spriteType = "GFX_arrow_double_3"
+						position = { x = 127 y = 926 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "sup33"
+						spriteType = "GFX_arrow_single"
+						position = { x = 127 y = 993 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "sup34"
+						spriteType = "GFX_arrow_single"
+						position = { x = 187 y = 993 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "sup35"
+						spriteType = "GFX_arrow_single"
+						position = { x = 187 y = 1060 }
+						scale = 1.0
+					}
+				}
+			}
+			
+			################################################################
+			# TRADITION CATEGORY ACADEMY
+			################################################################
+	
+			containerWindowType = {
+				name = "tradition_est_academy"
+				size = { width = 5000 height = 1650 }
+				position = { x = -50% y = -50% }
+				orientation = center
+				
+				iconType = {
+					name = "hex_bg"
+					spriteType = "GFX_tradition_hex_bg_est_academy"
+					position = { x = -23 y = -18 }
+					alwaysTransparent = yes
+					scale = 0
+				}
+				
+				instantTextBoxType={
+					name = "category_label"
+					font = "malgun_goth_24"
+					position = { x = 55555 y = 55555 }
+					text = "tradition_est_academy"
+				}
+	
+				containerWindowType = {
+					name = "adopted_count"
+					size = { width = 45 height = 45 }
+					position = { x = 508 y = 1259 }
+	
+					background = {
+						name = "adopted_hitbox"
+						spriteType = "GFX_invisible"
+					}
+					
+					iconType = {
+						name = "adopted"
+						spriteType = "GFX_tt_ph"
+						alwaysTransparent = yes
+					}
+					
+					instantTextBoxType = {
+						name = "value"
+						font = "cg_16b"
+						position = { x = 55555 y = 55555 }
+						maxWidth = 100
+						maxHeight = 20
+						fixedSize = yes
+						format = center
+						alwaysTransparent = yes
+					}
+				}
+				
+				buttonType = {
+					name = "adopt_button"
+					size = { x = 45 y = 45 }
+					position = { x = 508 y = 1259 }
+					spriteType = "GFX_tt_ph_anim"
+					buttonFont = "cg_16b"
+					font = "cg_16b"
+					oversound = mouse_over
+				}
+				
+				instantTextBoxType = {
+					name = "category_desc"
+					font = "cg_16b"
+					position = { x = 55555 y = 55555 }
+					maxWidth = 280
+					format = center
+					vertical_alignment = center
+					alwaystransparent = yes
+					text = "tradition_est_academy_desc"
+				}
+	
+				containerWindowType = {
+					name = "tree"
+				}
+			}
+			
+			################################################################
+			# TRADITION CATEGORY administratum
+			################################################################
+	
+			containerWindowType = {
+				name = "tradition_est_administratum"
+				size = { width = 5000 height = 1650 }
+				position = { x = -50% y = -50% }
+				orientation = center
+				
+				iconType = {
+					name = "hex_bg"
+					spriteType = "GFX_tradition_hex_bg_est_administratum"
+					position = { x = -23 y = -18 }
+					alwaysTransparent = yes
+					scale = 0
+				}
+				
+				instantTextBoxType={
+					name = "category_label"
+					font = "malgun_goth_24"
+					position = { x = 55555 y = 55555 }
+					text = "tradition_est_administratum"
+				}
+	
+				containerWindowType = {
+					name = "adopted_count"
+					size = { width = 45 height = 45 }
+					position = { x = 297 y = 372 }
+	
+					background = {
+						name = "adopted_hitbox"
+						spriteType = "GFX_invisible"
+					}
+					
+					iconType = {
+						name = "adopted"
+						spriteType = "GFX_tt_ph"
+						alwaysTransparent = yes
+					}
+					
+					instantTextBoxType = {
+						name = "value"
+						font = "cg_16b"
+						position = { x = 55555 y = 55555 }
+						maxWidth = 100
+						maxHeight = 20
+						fixedSize = yes
+						format = center
+						alwaysTransparent = yes
+					}
+				}
+				
+				buttonType = {
+					name = "adopt_button"
+					size = { x = 45 y = 45 }
+					position = { x = 297 y = 372 }
+					spriteType = "GFX_tt_ph_anim"
+					buttonFont = "cg_16b"
+					font = "cg_16b"
+					oversound = mouse_over
+				}
+				
+				instantTextBoxType = {
+					name = "category_desc"
+					font = "cg_16b"
+					position = { x = 55555 y = 55555 }
+					maxWidth = 280
+					format = center
+					vertical_alignment = center
+					alwaystransparent = yes
+					text = "tradition_est_administratum_desc"
+				}
+	
+				containerWindowType = {
+					name = "tree"
+				}
+			}
+			
+			################################################################
+			# TRADITION CATEGORY AESTHETICS
+			################################################################
+	
+			containerWindowType = {
+				name = "tradition_est_aesthetics"
+				size = { width = 5000 height = 1650 }
+				position = { x = -50% y = -50% }
+				orientation = center
+				
+				iconType = {
+					name = "hex_bg"
+					spriteType = "GFX_tradition_hex_bg_est_aesthetics"
+					position = { x = -23 y = -18 }
+					alwaysTransparent = yes
+					scale = 0
+				}
+				
+				instantTextBoxType={
+					name = "category_label"
+					font = "malgun_goth_24"
+					position = { x = 55555 y = 55555 }
+					text = "tradition_est_aesthetics"
+				}
+	
+				containerWindowType = {
+					name = "adopted_count"
+					size = { width = 45 height = 45 }
+					position = { x = 1177 y = 238 }
+	
+					background = {
+						name = "adopted_hitbox"
+						spriteType = "GFX_invisible"
+					}
+					
+					iconType = {
+						name = "adopted"
+						spriteType = "GFX_tt_ph"
+						alwaysTransparent = yes
+					}
+					
+					instantTextBoxType = {
+						name = "value"
+						font = "cg_16b"
+						position = { x = 55555 y = 55555 }
+						maxWidth = 100
+						maxHeight = 20
+						fixedSize = yes
+						format = center
+						alwaysTransparent = yes
+					}
+				}
+				
+				buttonType = {
+					name = "adopt_button"
+					size = { x = 45 y = 45 }
+					position = { x = 1177 y = 238 }
+					spriteType = "GFX_tt_ph_anim"
+					buttonFont = "cg_16b"
+					font = "cg_16b"
+					oversound = mouse_over
+				}
+				
+				instantTextBoxType = {
+					name = "category_desc"
+					font = "cg_16b"
+					position = { x = 55555 y = 55555 }
+					maxWidth = 280
+					format = center
+					vertical_alignment = center
+					alwaystransparent = yes
+					text = "tradition_est_aesthetics_desc"
+				}
+	
+				containerWindowType = {
+					name = "tree"
+				}
+			}
+			
+			################################################################
+			# TRADITION CATEGORY Archivist
+			################################################################
+	
+			containerWindowType = {
+				name = "tradition_est_archivist"
+				size = { width = 5000 height = 1650 }
+				position = { x = -50% y = -50% }
+				orientation = center
+				
+				iconType = {
+					name = "hex_bg"
+					spriteType = "GFX_tradition_hex_bg_est_archivist"
+					position = { x = -23 y = -18 }
+					alwaysTransparent = yes
+					scale = 0
+				}
+				
+				instantTextBoxType={
+					name = "category_label"
+					font = "malgun_goth_24"
+					position = { x = 55555 y = 55555 }
+					text = "tradition_est_archivist"
+				}
+	
+				containerWindowType = {
+					name = "adopted_count"
+					size = { width = 45 height = 45 }
+					position = { x = 441 y = 1259 }
+	
+					background = {
+						name = "adopted_hitbox"
+						spriteType = "GFX_invisible"
+					}
+					
+					iconType = {
+						name = "adopted"
+						spriteType = "GFX_tt_ph"
+						alwaysTransparent = yes
+					}
+					
+					instantTextBoxType = {
+						name = "value"
+						font = "cg_16b"
+						position = { x = 55555 y = 55555 }
+						maxWidth = 100
+						maxHeight = 20
+						fixedSize = yes
+						format = center
+						alwaysTransparent = yes
+					}
+				}
+				
+				buttonType = {
+					name = "adopt_button"
+					size = { x = 45 y = 45 }
+					position = { x = 441 y = 1259 }
+					spriteType = "GFX_tt_ph_anim"
+					buttonFont = "cg_16b"
+					font = "cg_16b"
+					oversound = mouse_over
+				}
+				
+				instantTextBoxType = {
+					name = "category_desc"
+					font = "cg_16b"
+					position = { x = 55555 y = 55555 }
+					maxWidth = 280
+					format = center
+					vertical_alignment = center
+					alwaystransparent = yes
+					text = "tradition_est_archivist_desc"
+				}
+	
+				containerWindowType = {
+					name = "tree"
+				}
+			}
+			
+			################################################################
+			# TRADITION CATEGORY Chivalry
+			################################################################
+	
+			containerWindowType = {
+				name = "tradition_est_chivalry"
+				size = { width = 5000 height = 1650 }
+				position = { x = -50% y = -50% }
+				orientation = center
+				
+				iconType = {
+					name = "hex_bg"
+					spriteType = "GFX_tradition_hex_bg_est_chivalry"
+					position = { x = -23 y = -18 }
+					alwaysTransparent = yes
+					scale = 0
+				}
+				
+				instantTextBoxType={
+					name = "category_label"
+					font = "malgun_goth_24"
+					position = { x = 55555 y = 55555 }
+					text = "tradition_est_chivalry"
+				}
+	
+				containerWindowType = {
+					name = "adopted_count"
+					size = { width = 45 height = 45 }
+					position = { x = 652 y = 439 }
+	
+					background = {
+						name = "GFX_invisible"
+						spriteType = "GFX_tt_ph"
+					}
+					
+					iconType = {
+						name = "adopted"
+						spriteType = "GFX_tt_ph"
+						alwaysTransparent = yes
+					}
+					
+					instantTextBoxType = {
+						name = "value"
+						font = "cg_16b"
+						position = { x = 55555 y = 55555 }
+						maxWidth = 100
+						maxHeight = 20
+						fixedSize = yes
+						format = center
+						alwaysTransparent = yes
+					}
+				}
+				
+				buttonType = {
+					name = "adopt_button"
+					size = { x = 45 y = 45 }
+					position = { x = 652 y = 439 }
+					spriteType = "GFX_tt_ph_anim"
+					buttonFont = "cg_16b"
+					font = "cg_16b"
+					oversound = mouse_over
+				}
+				
+				instantTextBoxType = {
+					name = "category_desc"
+					font = "cg_16b"
+					position = { x = 55555 y = 55555 }
+					maxWidth = 280
+					format = center
+					vertical_alignment = center
+					alwaystransparent = yes
+					text = "tradition_est_chivalry_desc"
+				}
+	
+				containerWindowType = {
+					name = "tree"
+				}
+			}
+			
+			################################################################
+			# TRADITION CATEGORY COMMERCE
+			################################################################
+	
+			containerWindowType = {
+				name = "tradition_est_commerce"
+				size = { width = 5000 height = 1650 }
+				position = { x = -50% y = -50% }
+				orientation = center
+				
+				iconType = {
+					name = "hex_bg"
+					spriteType = "GFX_tradition_hex_bg_est_commerce"
+					position = { x = -23 y = -18 }
+					alwaysTransparent = yes
+					scale = 0
+				}
+				
+				instantTextBoxType={
+					name = "category_label"
+					font = "malgun_goth_24"
+					position = { x = 55555 y = 55555 }
+					text = "tradition_est_commerce"
+				}
+	
+				containerWindowType = {
+					name = "adopted_count"
+					size = { width = 45 height = 45 }
+					position = { x = 1061 y = 1186 }
+	
+					background = {
+						name = "adopted_hitbox"
+						spriteType = "GFX_invisible"
+					}
+					
+					iconType = {
+						name = "adopted"
+						spriteType = "GFX_tt_ph"
+						alwaysTransparent = yes
+					}
+					
+					instantTextBoxType = {
+						name = "value"
+						font = "cg_16b"
+						position = { x = 55555 y = 55555 }
+						maxWidth = 100
+						maxHeight = 20
+						fixedSize = yes
+						format = center
+						alwaysTransparent = yes
+					}
+				}
+				
+				buttonType = {
+					name = "adopt_button"
+					size = { x = 45 y = 45 }
+					position = { x = 1061 y = 1186 }
+					spriteType = "GFX_tt_ph_anim"
+					buttonFont = "cg_16b"
+					font = "cg_16b"
+					oversound = mouse_over
+				}
+				
+				instantTextBoxType = {
+					name = "category_desc"
+					font = "cg_16b"
+					position = { x = 55555 y = 55555 }
+					maxWidth = 280
+					format = center
+					vertical_alignment = center
+					alwaystransparent = yes
+					text = "tradition_est_commerce_desc"
+				}
+	
+				containerWindowType = {
+					name = "tree"
+				}
+			}
+			
+			################################################################
+			# TRADITION CATEGORY CYBERNETICS
+			################################################################
+	
+			containerWindowType = {
+				name = "tradition_est_cybernetics"
+				size = { width = 5000 height = 1650 }
+				position = { x = -50% y = -50% }
+				orientation = center
+				
+				iconType = {
+					name = "hex_bg"
+					spriteType = "GFX_tradition_hex_bg_est_cybernetics"
+					position = { x = -23 y = -18 }
+					alwaysTransparent = yes
+					scale = 0
+				}
+				
+				instantTextBoxType={
+					name = "category_label"
+					font = "malgun_goth_24"
+					position = { x = 55555 y = 55555 }
+					text = "tradition_est_cybernetics"
+				}
+	
+				containerWindowType = {
+					name = "adopted_count"
+					size = { width = 45 height = 45 }
+					position = { x = 681 y = 746 }
+	
+					background = {
+						name = "adopted_hitbox"
+						spriteType = "GFX_invisible"
+					}
+					
+					iconType = {
+						name = "adopted"
+						spriteType = "GFX_tt_ph"
+						alwaysTransparent = yes
+					}
+					
+					instantTextBoxType = {
+						name = "value"
+						font = "cg_16b"
+						position = { x = 55555 y = 55555 }
+						maxWidth = 100
+						maxHeight = 20
+						fixedSize = yes
+						format = center
+						alwaysTransparent = yes
+					}
+				}
+				
+				buttonType = {
+					name = "adopt_button"
+					size = { x = 45 y = 45 }
+					position = { x = 681 y = 746 }
+					spriteType = "GFX_tt_ph_anim"
+					buttonFont = "cg_16b"
+					font = "cg_16b"
+					oversound = mouse_over
+				}
+				
+				instantTextBoxType = {
+					name = "category_desc"
+					font = "cg_16b"
+					position = { x = 55555 y = 55555 }
+					maxWidth = 280
+					format = center
+					vertical_alignment = center
+					alwaystransparent = yes
+					text = "tradition_est_cybernetics_desc"
+				}
+	
+				containerWindowType = {
+					name = "tree"
+				}
+			}
+					
+			################################################################
+			# TRADITION CATEGORY FOUNDATION
+			################################################################
+	
+			containerWindowType = {
+				name = "tradition_est_foundation"
+				size = { width = 5000 height = 1650 }
+				position = { x = -50% y = -50% }
+				orientation = center
+				
+				iconType = {
+					name = "hex_bg"
+					spriteType = "GFX_tradition_hex_bg_est_foundation"
+					position = { x = -23 y = -18 }
+					alwaysTransparent = yes
+					scale = 0
+				}
+				
+				instantTextBoxType={
+					name = "category_label"
+					font = "malgun_goth_24"
+					position = { x = 55555 y = 55555 }
+					text = "tradition_est_foundation"
+				}
+	
+				containerWindowType = {
+					name = "adopted_count"
+					size = { width = 45 height = 45 }
+					position = { x = 431 y = 372 }
+	
+					background = {
+						name = "adopted_hitbox"
+						spriteType = "GFX_invisible"
+					}
+					
+					iconType = {
+						name = "adopted"
+						spriteType = "GFX_tt_ph"
+						alwaysTransparent = yes
+					}
+					
+					instantTextBoxType = {
+						name = "value"
+						font = "cg_16b"
+						position = { x = 55555 y = 55555 }
+						maxWidth = 100
+						maxHeight = 20
+						fixedSize = yes
+						format = center
+						alwaysTransparent = yes
+					}
+				}
+				
+				buttonType = {
+					name = "adopt_button"
+					size = { x = 45 y = 45 }
+					position = { x = 431 y = 372 }
+					spriteType = "GFX_tt_ph_anim"
+					buttonFont = "cg_16b"
+					font = "cg_16b"
+					oversound = mouse_over
+				}
+				
+				instantTextBoxType = {
+					name = "category_desc"
+					font = "cg_16b"
+					position = { x = 55555 y = 55555 }
+					maxWidth = 280
+					format = center
+					vertical_alignment = center
+					alwaystransparent = yes
+					text = "tradition_est_foundation_desc"
+				}
+	
+				containerWindowType = {
+					name = "tree"
+				}
+			}		
+					
+			################################################################
+			# TRADITION CATEGORY FRIENDSHIP
+			################################################################
+	
+			containerWindowType = {
+				name = "tradition_est_friendship"
+				size = { width = 5000 height = 1650 }
+				position = { x = -50% y = -50% }
+				orientation = center
+				
+				iconType = {
+					name = "hex_bg"
+					spriteType = "GFX_tradition_hex_bg_est_friendship"
+					position = { x = -23 y = -18 }
+					alwaysTransparent = yes
+					scale = 0
+				}
+				
+				instantTextBoxType={
+					name = "category_label"
+					font = "malgun_goth_24"
+					position = { x = 55555 y = 55555 }
+					text = "tradition_est_friendship"
+				}
+	
+				containerWindowType = {
+					name = "adopted_count"
+					size = { width = 45 height = 45 }
+					position = { x = 90 y = 439 }
+	
+					background = {
+						name = "adopted_hitbox"
+						spriteType = "GFX_invisible"
+					}
+					
+					iconType = {
+						name = "adopted"
+						spriteType = "GFX_tt_ph"
+						alwaysTransparent = yes
+					}
+					
+					instantTextBoxType = {
+						name = "value"
+						font = "cg_16b"
+						position = { x = 55555 y = 55555 }
+						maxWidth = 100
+						maxHeight = 20
+						fixedSize = yes
+						format = center
+						alwaysTransparent = yes
+					}
+				}
+				
+				buttonType = {
+					name = "adopt_button"
+					size = { x = 45 y = 45 }
+					position = { x = 90 y = 439 }
+					spriteType = "GFX_tt_ph_anim"
+					buttonFont = "cg_16b"
+					font = "cg_16b"
+					oversound = mouse_over
+				}
+				
+				instantTextBoxType = {
+					name = "category_desc"
+					font = "cg_16b"
+					position = { x = 55555 y = 55555 }
+					maxWidth = 280
+					format = center
+					vertical_alignment = center
+					alwaystransparent = yes
+					text = "tradition_est_friendship_desc"
+				}
+	
+				containerWindowType = {
+					name = "tree"
+				}
+			}
+					
+			################################################################
+			# TRADITION CATEGORY GREED
+			################################################################
+	
+			containerWindowType = {
+				name = "tradition_est_greed"
+				size = { width = 5000 height = 1650 }
+				position = { x = -50% y = -50% }
+				orientation = center
+				
+				iconType = {
+					name = "hex_bg"
+					spriteType = "GFX_tradition_hex_bg_est_greed"
+					position = { x = -23 y = -18 }
+					alwaysTransparent = yes
+					scale = 0
+				}
+				
+				instantTextBoxType={
+					name = "category_label"
+					font = "malgun_goth_24"
+					position = { x = 55555 y = 555555 }
+					text = "tradition_est_greed"
+				}
+	
+				containerWindowType = {
+					name = "adopted_count"
+					size = { width = 45 height = 45 }
+					position = { x = 857 y = 1186 }
+	
+					background = {
+						name = "adopted_hitbox"
+						spriteType = "GFX_invisible"
+					}
+					
+					iconType = {
+						name = "adopted"
+						spriteType = "GFX_tt_ph"
+						alwaysTransparent = yes
+					}
+					
+					instantTextBoxType = {
+						name = "value"
+						font = "cg_16b"
+						position = { x = 33 y = 10 }
+						maxWidth = 100
+						maxHeight = 20
+						fixedSize = yes
+						format = center
+						alwaysTransparent = yes
+					}
+				}
+				
+				buttonType = {
+					name = "adopt_button"
+					size = { x = 45 y = 45 }
+					position = { x = 857 y = 1186 }
+					spriteType = "GFX_tt_ph_anim"
+					buttonFont = "cg_16b"
+					font = "cg_16b"
+					oversound = mouse_over
+				}
+				
+				instantTextBoxType = {
+					name = "category_desc"
+					font = "cg_16b"
+					position = { x = 55555 y = 55555 }
+					maxWidth = 280
+					format = center
+					vertical_alignment = center
+					alwaystransparent = yes
+					text = "tradition_est_greed_desc"
+				}
+	
+				containerWindowType = {
+					name = "tree"
+				}
+			}
+			
+			################################################################
+			# TRADITION CATEGORY INDUSTRY
+			################################################################
+	
+			containerWindowType = {
+				name = "tradition_est_industry"
+				size = { width = 5000 height = 1650 }
+				position = { x = -50% y = -50% }
+				orientation = center
+				
+				iconType = {
+					name = "hex_bg"
+					spriteType = "GFX_tradition_hex_bg_est_industry"
+					position = { x = -23 y = -18 }
+					alwaysTransparent = yes
+					scale = 0
+				}
+				
+				instantTextBoxType={
+					name = "category_label"
+					font = "malgun_goth_24"
+					position = { x = 55555 y = 55555 }
+					text = "tradition_est_industry"
+				}
+	
+				containerWindowType = {
+					name = "adopted_count"
+					size = { width = 45 height = 45 }
+					position = { x = 815 y = 746 }
+	
+					background = {
+						name = "adopted_hitbox"
+						spriteType = "GFX_invisible"
+					}
+					
+					iconType = {
+						name = "adopted"
+						spriteType = "GFX_tt_ph"
+						alwaysTransparent = yes
+					}
+					
+					instantTextBoxType = {
+						name = "value"
+						font = "cg_16b"
+						position = { x = 33 y = 10 }
+						maxWidth = 100
+						maxHeight = 20
+						fixedSize = yes
+						format = center
+						alwaysTransparent = yes
+					}
+				}
+				
+				buttonType = {
+					name = "adopt_button"
+					size = { x = 45 y = 45 }
+					position = { x = 815 y = 746 }
+					spriteType = "GFX_tt_ph_anim"
+					buttonFont = "cg_16b"
+					font = "cg_16b"
+					oversound = mouse_over
+				}
+				
+				instantTextBoxType = {
+					name = "category_desc"
+					font = "cg_16b"
+					position = { x = 55555 y = 55555 }
+					maxWidth = 280
+					format = center
+					vertical_alignment = center
+					alwaystransparent = yes
+					text = "tradition_est_industry_desc"
+				}
+	
+				containerWindowType = {
+					name = "tree"
+				}
+			}
+					
+			################################################################
+			# TRADITION CATEGORY ISOLATION
+			################################################################
+	
+			containerWindowType = {
+				name = "tradition_est_isolation"
+				size = { width = 5000 height = 1650 }
+				position = { x = -50% y = -50% }
+				orientation = center
+				
+				iconType = {
+					name = "hex_bg"
+					spriteType = "GFX_tradition_hex_bg_est_isolation"
+					position = { x = -23 y = -18 }
+					alwaysTransparent = yes
+					scale = 0
+				}
+				
+				instantTextBoxType={
+					name = "category_label"
+					font = "malgun_goth_24"
+					position = { x = 55555 y = 55555 }
+					text = "tradition_est_isolation"
+				}
+	
+				containerWindowType = {
+					name = "adopted_count"
+					size = { width = 45 height = 45 }
+					position = { x = 582 y = 372 }
+	
+					background = {
+						name = "adopted_hitbox"
+						spriteType = "GFX_invisible"
+					}
+					
+					iconType = {
+						name = "adopted"
+						spriteType = "GFX_tt_ph"
+						alwaysTransparent = yes
+					}
+					
+					instantTextBoxType = {
+						name = "value"
+						font = "cg_16b"
+						position = { x = 33 y = 10 }
+						maxWidth = 100
+						maxHeight = 20
+						fixedSize = yes
+						format = center
+						alwaysTransparent = yes
+					}
+				}
+				
+				buttonType = {
+					name = "adopt_button"
+					size = { x = 45 y = 45 }
+					position = { x = 582 y = 372 }
+					spriteType = "GFX_tt_ph_anim"
+					buttonFont = "cg_16b"
+					font = "cg_16b"
+					oversound = mouse_over
+				}
+				
+				instantTextBoxType = {
+					name = "category_desc"
+					font = "cg_16b"
+					position = { x = 55555 y = 55555 }
+					maxWidth = 280
+					format = center
+					vertical_alignment = center
+					alwaystransparent = yes
+					text = "tradition_est_isolation_desc"
+				}
+	
+				containerWindowType = {
+					name = "tree"
+				}
+			}
+			
+			################################################################
+			# TRADITION CATEGORY JUSTICE
+			################################################################
+	
+			containerWindowType = {
+				name = "tradition_est_justice"
+				size = { width = 5000 height = 1650 }
+				position = { x = -50% y = -50% }
+				orientation = center
+				
+				iconType = {
+					name = "hex_bg"
+					spriteType = "GFX_tradition_hex_bg_est_justice"
+					position = { x = -23 y = -18 }
+					alwaysTransparent = yes
+					scale = 0
+				}
+				
+				instantTextBoxType={
+					name = "category_label"
+					font = "malgun_goth_24"
+					position = { x = 55555 y = 55555 }
+					text = "tradition_est_justice"
+				}
+	
+				containerWindowType = {
+					name = "adopted_count"
+					size = { width = 45 height = 45 }
+					position = { x = 1061 y = 611 }
+	
+					background = {
+						name = "adopted_hitbox"
+						spriteType = "GFX_invisible"
+					}
+					
+					iconType = {
+						name = "adopted"
+						spriteType = "GFX_tt_ph"
+						alwaysTransparent = yes
+					}
+					
+					instantTextBoxType = {
+						name = "value"
+						font = "cg_16b"
+						position = { x = 33 y = 10 }
+						maxWidth = 100
+						maxHeight = 20
+						fixedSize = yes
+						format = center
+						alwaysTransparent = yes
+					}
+				}
+				
+				buttonType = {
+					name = "adopt_button"
+					size = { x = 45 y = 45 }
+					position = { x = 1061 y = 611 }
+					spriteType = "GFX_tt_ph_anim"
+					buttonFont = "cg_16b"
+					font = "cg_16b"
+					oversound = mouse_over
+				}
+				
+				instantTextBoxType = {
+					name = "category_desc"
+					font = "cg_16b"
+					position = { x = 55555 y = 55555 }
+					maxWidth = 280
+					format = center
+					vertical_alignment = center
+					alwaystransparent = yes
+					text = "tradition_est_justice_desc"
+				}
+	
+				containerWindowType = {
+					name = "tree"
+				}
+			}
+					
+			################################################################
+			# TRADITION CATEGORY LIBERTY
+			################################################################
+	
+			containerWindowType = {
+				name = "tradition_est_liberty"
+				size = { width = 5000 height = 1650 }
+				position = { x = -50% y = -50% }
+				orientation = center
+				
+				iconType = {
+					name = "hex_bg"
+					spriteType = "GFX_tradition_hex_bg_est_liberty"
+					position = { x = -23 y = -18 }
+					alwaysTransparent = yes
+					scale = 0
+				}
+				
+				instantTextBoxType={
+					name = "category_label"
+					font = "malgun_goth_24"
+					position = { x = 55555 y = 55555 }
+					text = "tradition_est_liberty"
+				}
+	
+				containerWindowType = {
+					name = "adopted_count"
+					size = { width = 45 height = 45 }
+					position = { x = 1202 y = 620 }
+	
+					background = {
+						name = "adopted_hitbox"
+						spriteType = "GFX_invisible"
+					}
+					
+					iconType = {
+						name = "adopted"
+						spriteType = "GFX_tt_ph"
+						alwaysTransparent = yes
+					}
+					
+					instantTextBoxType = {
+						name = "value"
+						font = "cg_16b"
+						position = { x = 33 y = 10 }
+						maxWidth = 100
+						maxHeight = 20
+						fixedSize = yes
+						format = center
+						alwaysTransparent = yes
+					}
+				}
+				
+				buttonType = {
+					name = "adopt_button"
+					size = { x = 45 y = 45 }
+					position = { x = 1202 y = 620 }
+					spriteType = "GFX_tt_ph_anim"
+					buttonFont = "cg_16b"
+					font = "cg_16b"
+					oversound = mouse_over
+				}
+				
+				instantTextBoxType = {
+					name = "category_desc"
+					font = "cg_16b"
+					position = { x = 55555 y = 55555 }
+					maxWidth = 280
+					format = center
+					vertical_alignment = center
+					alwaystransparent = yes
+					text = "tradition_est_liberty_desc"
+				}
+	
+				containerWindowType = {
+					name = "tree"
+				}
+			}
+					
+			################################################################
+			# TRADITION CATEGORY MECHANICUM
+			################################################################
+	
+			containerWindowType = {
+				name = "tradition_est_mechanicum"
+				size = { width = 5000 height = 1650 }
+				position = { x = -50% y = -50% }
+				orientation = center
+				
+				iconType = {
+					name = "hex_bg"
+					spriteType = "GFX_tradition_hex_bg_est_mechanicum"
+					position = { x = -23 y = -18 }
+					alwaysTransparent = yes
+					scale = 0
+				}
+				
+				instantTextBoxType={
+					name = "category_label"
+					font = "malgun_goth_24"
+					position = { x = 55555 y = 55555 }
+					text = "tradition_est_mechanicum"
+				}
+	
+				containerWindowType = {
+					name = "adopted_count"
+					size = { width = 45 height = 45 }
+					position = { x = 55 y = 1293 }
+	
+					background = {
+						name = "adopted_hitbox"
+						spriteType = "GFX_invisible"
+					}
+					
+					iconType = {
+						name = "adopted"
+						spriteType = "GFX_tt_ph"
+						alwaysTransparent = yes
+					}
+					
+					instantTextBoxType = {
+						name = "value"
+						font = "cg_16b"
+						position = { x = 33 y = 10 }
+						maxWidth = 100
+						maxHeight = 20
+						fixedSize = yes
+						format = center
+						alwaysTransparent = yes
+					}
+				}
+				
+				buttonType = {
+					name = "adopt_button"
+					size = { x = 45 y = 45 }
+					position = { x = 55 y = 1293 }
+					spriteType = "GFX_tt_ph_anim"
+					buttonFont = "cg_16b"
+					font = "cg_16b"
+					oversound = mouse_over
+				}
+				
+				instantTextBoxType = {
+					name = "category_desc"
+					font = "cg_16b"
+					position = { x = 55555 y = 55555 }
+					maxWidth = 280
+					format = center
+					vertical_alignment = center
+					alwaystransparent = yes
+					text = "tradition_est_mechanicum_desc"
+				}
+	
+				containerWindowType = {
+					name = "tree"
+				}
+			}
+					
+			################################################################
+			# TRADITION CATEGORY MILITARISM
+			################################################################
+	
+			containerWindowType = {
+				name = "tradition_est_militarism"
+				size = { width = 5000 height = 1650 }
+				position = { x = -50% y = -50% }
+				orientation = center
+				
+				iconType = {
+					name = "hex_bg"
+					spriteType = "GFX_tradition_hex_bg_est_militarism"
+					position = { x = -23 y = -18 }
+					alwaysTransparent = yes
+					scale = 0
+				}
+				
+				instantTextBoxType={
+					name = "category_label"
+					font = "malgun_goth_24"
+					position = { x = 55555 y = 55555 }
+					text = "tradition_est_militarism"
+				}
+	
+				containerWindowType = {
+					name = "adopted_count"
+					size = { width = 45 height = 45 }
+					position = { x = 143 y = 747 }
+	
+					background = {
+						name = "adopted_hitbox"
+						spriteType = "GFX_invisible"
+					}
+					
+					iconType = {
+						name = "adopted"
+						spriteType = "GFX_tt_ph"
+						alwaysTransparent = yes
+					}
+					
+					instantTextBoxType = {
+						name = "value"
+						font = "cg_16b"
+						position = { x = 33 y = 10 }
+						maxWidth = 100
+						maxHeight = 20
+						fixedSize = yes
+						format = center
+						alwaysTransparent = yes
+					}
+				}
+				
+				buttonType = {
+					name = "adopt_button"
+					size = { x = 45 y = 45 }
+					position = { x = 143 y = 747 }
+					spriteType = "GFX_tt_ph_anim"
+					buttonFont = "cg_16b"
+					font = "cg_16b"
+					oversound = mouse_over
+				}
+				
+				instantTextBoxType = {
+					name = "category_desc"
+					font = "cg_16b"
+					position = { x = 55555 y = 55555 }
+					maxWidth = 280
+					format = center
+					vertical_alignment = center
+					alwaystransparent = yes
+					text = "tradition_est_militarism_desc"
+				}
+	
+				containerWindowType = {
+					name = "tree"
+				}
+			}
+					
+			################################################################
+			# TRADITION CATEGORY MYSTICISM
+			################################################################
+	
+			containerWindowType = {
+				name = "tradition_est_mysticism"
+				size = { width = 5000 height = 1650 }
+				position = { x = -50% y = -50% }
+				orientation = center
+				
+				iconType = {
+					name = "hex_bg"
+					spriteType = "GFX_tradition_hex_bg_est_mysticism"
+					position = { x = -23 y = -18 }
+					alwaysTransparent = yes
+					scale = 0
+				}
+				
+				instantTextBoxType={
+					name = "category_label"
+					font = "malgun_goth_24"
+					position = { x = 55555 y = 55555 }
+					text = "tradition_est_mysticism"
+				}
+	
+				containerWindowType = {
+					name = "adopted_count"
+					size = { width = 45 height = 45 }
+					position = { x = 748 y = 918 }
+	
+					background = {
+						name = "adopted_hitbox"
+						spriteType = "GFX_invisible"
+					}
+					
+					iconType = {
+						name = "adopted"
+						spriteType = "GFX_tt_ph"
+						alwaysTransparent = yes
+					}
+					
+					instantTextBoxType = {
+						name = "value"
+						font = "cg_16b"
+						position = { x = 33 y = 10 }
+						maxWidth = 100
+						maxHeight = 20
+						fixedSize = yes
+						format = center
+						alwaysTransparent = yes
+					}
+				}
+				
+				buttonType = {
+					name = "adopt_button"
+					size = { x = 45 y = 45 }
+					position = { x = 748 y = 918 }
+					spriteType = "GFX_tt_ph_anim"
+					buttonFont = "cg_16b"
+					font = "cg_16b"
+					oversound = mouse_over
+				}
+				
+				instantTextBoxType = {
+					name = "category_desc"
+					font = "cg_16b"
+					position = { x = 55555 y = 55555 }
+					maxWidth = 280
+					format = center
+					vertical_alignment = center
+					alwaystransparent = yes
+					text = "tradition_est_mysticism_desc"
+				}
+	
+				containerWindowType = {
+					name = "tree"
+				}
+			}
+					
+			################################################################
+			# TRADITION CATEGORY NATURAL
+			################################################################
+	
+			containerWindowType = {
+				name = "tradition_est_natural"
+				size = { width = 5000 height = 1650 }
+				position = { x = -50% y = -50% }
+				orientation = center
+				
+				iconType = {
+					name = "hex_bg"
+					spriteType = "GFX_tradition_hex_bg_est_natural"
+					position = { x = -23 y = -18 }
+					alwaysTransparent = yes
+					scale = 0
+				}
+				
+				instantTextBoxType={
+					name = "category_label"
+					font = "malgun_goth_24"
+					position = { x = 55555 y = 55555 }
+					text = "tradition_est_natural"
+				}
+	
+				containerWindowType = {
+					name = "adopted_count"
+					size = { width = 45 height = 45 }
+					position = { x = 1054 y = 821 }
+	
+					background = {
+						name = "adopted_hitbox"
+						spriteType = "GFX_invisible"
+					}
+					
+					iconType = {
+						name = "adopted"
+						spriteType = "GFX_tt_ph"
+						alwaysTransparent = yes
+					}
+					
+					instantTextBoxType = {
+						name = "value"
+						font = "cg_16b"
+						position = { x = 33 y = 10 }
+						maxWidth = 100
+						maxHeight = 20
+						fixedSize = yes
+						format = center
+						alwaysTransparent = yes
+					}
+				}
+				
+				buttonType = {
+					name = "adopt_button"
+					size = { x = 45 y = 45 }
+					position = { x = 1054 y = 821 }
+					spriteType = "GFX_tt_ph_anim"
+					buttonFont = "cg_16b"
+					font = "cg_16b"
+					oversound = mouse_over
+				}
+				
+				instantTextBoxType = {
+					name = "category_desc"
+					font = "cg_16b"
+					position = { x = 55555 y = 55555 }
+					maxWidth = 280
+					format = center
+					vertical_alignment = center
+					alwaystransparent = yes
+					text = "tradition_est_natural_desc"
+				}
+	
+				containerWindowType = {
+					name = "tree"
+					
+					iconType = {
+						name = "nat1"
+						spriteType = "GFX_arrow_double"
+						position = { x = 1035 y = 866 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "nat2"
+						spriteType = "GFX_arrow_right"
+						position = { x = 1134 y = 904 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "nat3"
+						spriteType = "GFX_arrow_double"
+						position = { x = 1000 y = 933 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "nat4"
+						spriteType = "GFX_arrow_right"
+						position = { x = 1099 y = 971 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "nat5"
+						spriteType = "GFX_arrow_right"
+						position = { x = 1166 y = 971 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "nat6"
+						spriteType = "GFX_arrow_single"
+						position = { x = 1137 y = 1000 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "nat7"
+						spriteType = "GFX_arrow_left"
+						position = { x = 1098 y = 1038 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "nat8"
+						spriteType = "GFX_arrow_single"
+						position = { x = 1137 y = 1067 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "nat9"
+						spriteType = "GFX_arrow_right"
+						position = { x = 1166 y = 1038 }
+						scale = 1.0
+					}
+				}
+			}
+			
+			################################################################
+			# TRADITION CATEGORY ORDER
+			################################################################
+	
+			containerWindowType = {
+				name = "tradition_est_order"
+				size = { width = 5000 height = 1650 }
+				position = { x = -50% y = -50% }
+				orientation = center
+				
+				iconType = {
+					name = "hex_bg"
+					spriteType = "GFX_tradition_hex_bg_est_order"
+					position = { x = -23 y = -18 }
+					alwaysTransparent = yes
+					scale = 0
+				}
+				
+				instantTextBoxType={
+					name = "category_label"
+					font = "malgun_goth_24"
+					position = { x = 55555 y = 55555 }
+					text = "tradition_est_order"
+				}
+	
+				containerWindowType = {
+					name = "adopted_count"
+					size = { width = 45 height = 45 }
+					position = { x = 1043 y = 439 }
+	
+					background = {
+						name = "adopted_hitbox"
+						spriteType = "GFX_invisible"
+					}
+					
+					iconType = {
+						name = "adopted"
+						spriteType = "GFX_tt_ph"
+						alwaysTransparent = yes
+					}
+					
+					instantTextBoxType = {
+						name = "value"
+						font = "cg_16b"
+						position = { x = 33 y = 10 }
+						maxWidth = 100
+						maxHeight = 20
+						fixedSize = yes
+						format = center
+						alwaysTransparent = yes
+					}
+				}
+				
+				buttonType = {
+					name = "adopt_button"
+					size = { x = 45 y = 45 }
+					position = { x = 1043 y = 439 }
+					spriteType = "GFX_tt_ph_anim"
+					buttonFont = "cg_16b"
+					font = "cg_16b"
+					oversound = mouse_over
+				}
+				
+				instantTextBoxType = {
+					name = "category_desc"
+					font = "cg_16b"
+					position = { x = 55555 y = 55555 }
+					maxWidth = 280
+					format = center
+					vertical_alignment = center
+					alwaystransparent = yes
+					text = "tradition_est_order_desc"
+				}
+	
+				containerWindowType = {
+					name = "tree"
+				}
+			}
+			
+			################################################################
+			# TRADITION CATEGORY Piracy
+			################################################################
+	
+			containerWindowType = {
+				name = "tradition_est_piracy"
+				size = { width = 5000 height = 1650 }
+				position = { x = -50% y = -50% }
+				orientation = center
+				
+				iconType = {
+					name = "hex_bg"
+					spriteType = "GFX_tradition_hex_bg_est_piracy"
+					position = { x = -23 y = -18 }
+					alwaysTransparent = yes
+					scale = 0
+				}
+				
+				instantTextBoxType={
+					name = "category_label"
+					font = "malgun_goth_24"
+					position = { x = 55555 y = 55555 }
+					text = "tradition_est_piracy"
+				}
+	
+				containerWindowType = {
+					name = "adopted_count"
+					size = { width = 45 height = 45 }
+					position = { x = 344 y = 680 }
+	
+					background = {
+						name = "adopted_hitbox"
+						spriteType = "GFX_invisible"
+					}
+					
+					iconType = {
+						name = "adopted"
+						spriteType = "GFX_tt_ph"
+						alwaysTransparent = yes
+					}
+					
+					instantTextBoxType = {
+						name = "value"
+						font = "cg_16b"
+						position = { x = 33 y = 10 }
+						maxWidth = 100
+						maxHeight = 20
+						fixedSize = yes
+						format = center
+						alwaysTransparent = yes
+					}
+				}
+				
+				buttonType = {
+					name = "adopt_button"
+					size = { x = 45 y = 45 }
+					position = { x = 344 y = 680 }
+					spriteType = "GFX_tt_ph_anim"
+					buttonFont = "cg_16b"
+					font = "cg_16b"
+					oversound = mouse_over
+				}
+				
+				instantTextBoxType = {
+					name = "category_desc"
+					font = "cg_16b"
+					position = { x = 55555 y = 55555 }
+					maxWidth = 280
+					format = center
+					vertical_alignment = center
+					alwaystransparent = yes
+					text = "tradition_est_piracy_desc"
+				}
+	
+				containerWindowType = {
+					name = "tree"
+				}
+			}
+			
+			################################################################
+			# TRADITION CATEGORY SPACEBORN
+			################################################################
+	
+			containerWindowType = {
+				name = "tradition_est_spaceborn"
+				size = { width = 5000 height = 1650 }
+				position = { x = -50% y = -50% }
+				orientation = center
+				
+				iconType = {
+					name = "hex_bg"
+					spriteType = "GFX_tradition_hex_bg_orange"
+					position = { x = -23 y = -18 }
+					alwaysTransparent = yes
+					scale = 0
+				}
+				
+				instantTextBoxType={
+					name = "category_label"
+					font = "malgun_goth_24"
+					position = { x = 55555 y = 55555 }
+					text = "tradition_est_spaceborn"
+				}
+	
+				containerWindowType = {
+					name = "adopted_count"
+					size = { width = 45 height = 45 }
+					position = { x = 157 y = 1159 }
+	
+					background = {
+						name = "adopted_hitbox"
+						spriteType = "GFX_invisible"
+					}
+					
+					iconType = {
+						name = "adopted"
+						spriteType = "GFX_tt_ph"
+						alwaysTransparent = yes
+					}
+					
+					instantTextBoxType = {
+						name = "value"
+						font = "cg_16b"
+						position = { x = 55555 y = 55555 }
+						maxWidth = 100
+						maxHeight = 20
+						fixedSize = yes
+						format = center
+						alwaysTransparent = yes
+					}
+				}
+				
+				buttonType = {
+					name = "adopt_button"
+					size = { x = 45 y = 45 }
+					position = { x = 157 y = 1159 }
+					spriteType = "GFX_tt_ph_anim"
+					buttonFont = "cg_16b"
+					font = "cg_16b"
+					oversound = mouse_over
+				}
+				
+				instantTextBoxType = {
+					name = "category_desc"
+					font = "cg_16b"
+					position = { x = 55555 y = 55555 }
+					maxWidth = 280
+					format = center
+					vertical_alignment = center
+					alwaystransparent = yes
+					text = "tradition_est_spaceborn_desc"
+				}
+	
+				containerWindowType = {
+					name = "tree"
+					
+					iconType = {
+						name = "spa1"
+						spriteType = "GFX_arrow_double"
+						position = { x = 138 y = 1204 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "spa2"
+						spriteType = "GFX_arrow_single"
+						position = { x = 138 y = 1271 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "spa3"
+						spriteType = "GFX_arrow_single"
+						position = { x = 208 y = 1271 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "spa4"
+						spriteType = "GFX_arrow_merge"
+						position = { x = 143 y = 1338 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "spa5"
+						spriteType = "GFX_arrow_left"
+						position = { x = 99 y = 1309 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "spa6"
+						spriteType = "GFX_arrow_double"
+						position = { x = 36 y = 1338 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "spa7"
+						spriteType = "GFX_arrow_single"
+						position = { x = 36 y = 1405 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "spa8"
+						spriteType = "GFX_arrow_single"
+						position = { x = 106 y = 1405 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "spa9"
+						spriteType = "GFX_arrow_merge"
+						position = { x = 36 y = 1472 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "spa10"
+						spriteType = "GFX_arrow_right"
+						position = { x = 237 y = 1309 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "spa11"
+						spriteType = "GFX_arrow_double"
+						position = { x = 240 y = 1338 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "spa12"
+						spriteType = "GFX_arrow_single"
+						position = { x = 240 y = 1405 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "spa13"
+						spriteType = "GFX_arrow_single"
+						position = { x = 310 y = 1405 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "spa14"
+						spriteType = "GFX_arrow_merge"
+						position = { x = 245 y = 1472 }
+						scale = 1.0
+					}
+				}
+			}
+		
+			################################################################
+			# TRADITION CATEGORY MYSTICISM
+			################################################################
+
+			containerWindowType = {
+				name = "tradition_plentiful_mysticism"
+				size = { width = 5000 height = 1650 }
+				position = { x = -50% y = -50% }
+				orientation = center
+				
+				iconType = {
+					name = "hex_bg"
+					spriteType = "GFX_tradition_hex_bg_plentiful_mysticism"
+					position = { x = -23 y = -18 }
+					alwaysTransparent = yes
+					scale = 0
+				}
+				
+				instantTextBoxType={
+					name = "category_label"
+					font = "malgun_goth_24"
+					position = { x = 55555 y = 55555 }
+					text = "tradition_plentiful_mysticism"
+				}
+
+				containerWindowType = {
+					name = "adopted_count"
+					size = { width = 45 height = 45 }
+					position = { x = 941 y = 506 }
+
+					background = {
+						name = "adopted_hitbox"
+						spriteType = "GFX_invisible"
+					}
+					
+					iconType = {
+						name = "adopted"
+						spriteType = "GFX_tt_ph"
+						alwaysTransparent = yes
+					}
+					
+					instantTextBoxType = {
+						name = "value"
+						font = "cg_16b"
+						position = { x = 33 y = 10 }
+						maxWidth = 100
+						maxHeight = 20
+						fixedSize = yes
+						format = center
+						alwaysTransparent = yes
+					}
+				}
+				
+				buttonType = {
+					name = "adopt_button"
+					size = { x = 45 y = 45 }
+					position = { x = 941 y = 506 }
+					spriteType = "GFX_tt_ph_anim"
+					buttonFont = "cg_16b"
+					font = "cg_16b"
+					oversound = mouse_over
+				}
+				
+				instantTextBoxType = {
+					name = "category_desc"
+					font = "cg_16b"
+					position = { x = 55555 y = 55555 }
+					maxWidth = 280
+					format = center
+					vertical_alignment = center
+					alwaystransparent = yes
+					text = "tradition_plentiful_mysticism_desc"
+				}
+
+				containerWindowType = {
+					name = "tree"
+				}
+			}
+
+			################################################################
+			# TRADITION CATEGORY ORDER
+			################################################################
+
+			containerWindowType = {
+				name = "tradition_plentiful_order"
+				size = { width = 5000 height = 1650 }
+				position = { x = -50% y = -50% }
+				orientation = center
+				
+				iconType = {
+					name = "hex_bg"
+					spriteType = "GFX_tradition_hex_bg_plentiful_order"
+					position = { x = -23 y = -18 }
+					alwaysTransparent = yes
+					scale = 0
+				}
+				
+				instantTextBoxType={
+					name = "category_label"
+					font = "malgun_goth_24"
+					position = { x = 55555 y = 55555 }
+					text = "tradition_plentiful_order"
+				}
+
+				containerWindowType = {
+					name = "adopted_count"
+					size = { width = 45 height = 45 }
+					position = { x = 344 y = 747 }
+					
+					background = {
+						name = "adopted_hitbox"
+						spriteType = "GFX_invisible"
+					}
+					
+					iconType = {
+						name = "adopted"
+						spriteType = "GFX_tt_ph"
+						alwaysTransparent = yes
+					}
+					
+					instantTextBoxType = {
+						name = "value"
+						font = "cg_16b"
+						position = { x = 33 y = 10 }
+						maxWidth = 100
+						maxHeight = 20
+						fixedSize = yes
+						format = center
+						alwaysTransparent = yes
+					}
+				}
+
+				buttonType = {
+					name = "adopt_button"
+					size = { x = 45 y = 45 }
+					position = { x = 344 y = 747 }
+					spriteType = "GFX_tt_ph_anim"
+					buttonFont = "cg_16b"
+					font = "cg_16b"
+					oversound = mouse_over
+				}
+
+				instantTextBoxType = {
+					name = "category_desc"
+					font = "cg_16b"
+					position = { x = 55555 y = 55555 }
+					maxWidth = 280
+					format = center
+					vertical_alignment = center
+					alwaystransparent = yes
+					text = "tradition_plentiful_order_desc"
+				}
+
+				containerWindowType = {
+					name = "tree"
+				}
+			}
+
+			################################################################
+			# TRADITION CATEGORY MALICE
+			################################################################
+
+			containerWindowType = {
+				name = "tradition_plentiful_malice"
+				size = { width = 5000 height = 1650 }
+				position = { x = -50% y = -50% }
+				orientation = center
+				
+				iconType = {
+					name = "hex_bg"
+					spriteType = "GFX_tradition_hex_bg_gray"
+					position = { x = -23 y = -18 }
+					alwaysTransparent = yes
+					scale = 0
+				}
+				
+				instantTextBoxType={
+					name = "category_label"
+					font = "malgun_goth_24"
+					position = { x = 55555 y = 55555 }
+					text = "tradition_plentiful_malice"
+				}
+
+				containerWindowType = {
+					name = "adopted_count"
+					size = { width = 45 height = 45 }
+					position = { x = 751 y = 238 }
+
+					background = {
+						name = "adopted_hitbox"
+						spriteType = "GFX_invisible"
+					}
+					
+					iconType = {
+						name = "adopted"
+						spriteType = "GFX_tt_ph"
+						alwaysTransparent = yes
+					}
+					
+					instantTextBoxType = {
+						name = "value"
+						font = "cg_16b"
+						position = { x = 33 y = 10 }
+						maxWidth = 100
+						maxHeight = 20
+						fixedSize = yes
+						format = center
+						alwaysTransparent = yes
+					}
+				}
+				
+				buttonType = {
+					name = "adopt_button"
+					size = { x = 45 y = 45 }
+					position = { x = 751 y = 238 }
+					spriteType = "GFX_tt_ph_anim"
+					buttonFont = "cg_16b"
+					font = "cg_16b"
+					oversound = mouse_over
+				}
+				
+				instantTextBoxType = {
+					name = "category_desc"
+					font = "cg_16b"
+					position = { x = 10 y = 35 }
+					maxWidth = 280
+					format = center
+					vertical_alignment = center
+					alwaystransparent = yes
+					text = "tradition_plentiful_malice_desc"
+				}
+
+				containerWindowType = {
+					name = "tree"
+				}
+			}
+
+			################################################################
+			# TRADITION CATEGORY ASPIRATION
+			################################################################
+
+			containerWindowType = {
+				name = "tradition_plentiful_aspiration"
+				size = { width = 5000 height = 1650 }
+				position = { x = -50% y = -50% }
+				orientation = center
+				
+				iconType = {
+					name = "hex_bg"
+					spriteType = "GFX_tradition_hex_bg_plentiful_aspiration"
+					position = { x = -23 y = -18 }
+					alwaysTransparent = yes
+					scale = 0
+				}
+				
+				instantTextBoxType={
+					name = "category_label"
+					font = "malgun_goth_24"
+					position = { x = 55555 y = 55555 }
+					text = "tradition_plentiful_aspiration"
+				}
+
+				containerWindowType = {
+					name = "adopted_count"
+					size = { width = 45 height = 45 }
+					position = { x = 227 y = 372 }
+					
+					background = {
+						name = "adopted_hitbox"
+						spriteType = "GFX_invisible"
+					}
+					
+					iconType = {
+						name = "adopted"
+						spriteType = "GFX_tt_ph"
+						alwaysTransparent = yes
+					}
+					
+					instantTextBoxType = {
+						name = "value"
+						font = "cg_16b"
+						position = { x = 33 y = 10 }
+						maxWidth = 100
+						maxHeight = 20
+						fixedSize = yes
+						format = center
+						alwaysTransparent = yes
+					}
+				}
+
+				buttonType = {
+					name = "adopt_button"
+					size = { x = 45 y = 45 }
+					position = { x = 227 y = 372 }
+					spriteType = "GFX_tt_ph_anim"
+					buttonFont = "cg_16b"
+					font = "cg_16b"
+					oversound = mouse_over
+				}
+
+				instantTextBoxType = {
+					name = "category_desc"
+					font = "cg_16b"
+					position = { x = 55555 y = 55555 }
+					maxWidth = 280
+					format = center
+					vertical_alignment = center
+					alwaystransparent = yes
+					text = "tradition_plentiful_aspiration_desc"
+				}
+
+				containerWindowType = {
+					name = "tree"
+				}
+			}
+
+			################################################################
+			# TRADITION CATEGORY AFFINITY
+			################################################################
+
+			containerWindowType = {
+				name = "tradition_plentiful_affinity"
+				size = { width = 5000 height = 1650 }
+				position = { x = -50% y = -50% }
+				orientation = center
+				
+				iconType = {
+					name = "hex_bg"
+					spriteType = "GFX_tradition_hex_bg_plentiful_affinity"
+					position = { x = -23 y = -18 }
+					alwaysTransparent = yes
+					scale = 0
+				}
+				
+				instantTextBoxType={
+					name = "category_label"
+					font = "malgun_goth_24"
+					position = { x = 55555 y = 55555 }
+					text = "tradition_plentiful_affinity"
+				}
+
+				containerWindowType = {
+					name = "adopted_count"
+					size = { width = 45 height = 45 }
+					position = { x = 941 y = 305 }
+
+					background = {
+						name = "adopted_hitbox"
+						spriteType = "GFX_invisible"
+					}
+					
+					iconType = {
+						name = "adopted"
+						spriteType = "GFX_tt_ph"
+						alwaysTransparent = yes
+					}
+					
+					instantTextBoxType = {
+						name = "value"
+						font = "cg_16b"
+						position = { x = 33 y = 10 }
+						maxWidth = 100
+						maxHeight = 20
+						fixedSize = yes
+						format = center
+						alwaysTransparent = yes
+					}
+				}
+				
+				buttonType = {
+					name = "adopt_button"
+					size = { x = 45 y = 45 }
+					position = { x = 941 y = 305 }
+					spriteType = "GFX_tt_ph_anim"
+					buttonFont = "cg_16b"
+					font = "cg_16b"
+					oversound = mouse_over
+				}
+				
+				instantTextBoxType = {
+					name = "category_desc"
+					font = "cg_16b"
+					position = { x = 55555 y = 55555 }
+					maxWidth = 280
+					format = center
+					vertical_alignment = center
+					alwaystransparent = yes
+					text = "tradition_plentiful_affinity_desc"
+				}
+
+				containerWindowType = {
+					name = "tree"
+				}
+			}
+
+			################################################################
+			# TRADITION CATEGORY EXPERIMENTALISM
+			################################################################
+
+			containerWindowType = {
+				name = "tradition_plentiful_experimentalism"
+				size = { width = 5000 height = 1650 }
+				position = { x = -50% y = -50% }
+				orientation = center
+				
+				iconType = {
+					name = "hex_bg"
+					spriteType = "GFX_tradition_hex_bg_plentiful_experimentalism"
+					position = { x = -23 y = -18 }
+					alwaysTransparent = yes
+					scale = 0
+				}
+				
+				instantTextBoxType={
+					name = "category_label"
+					font = "malgun_goth_24"
+					position = { x = 55555 y = 55555 }
+					text = "tradition_plentiful_experimentalism"
+				}
+
+				containerWindowType = {
+					name = "adopted_count"
+					size = { width = 45 height = 45 }
+					position = { x = 575 y = 1192 }
+
+					background = {
+						name = "adopted_hitbox"
+						spriteType = "GFX_invisible"
+					}
+					
+					iconType = {
+						name = "adopted"
+						spriteType = "GFX_tt_ph"
+						alwaysTransparent = yes
+					}
+					
+					instantTextBoxType = {
+						name = "value"
+						font = "cg_16b"
+						position = { x = 33 y = 10 }
+						maxWidth = 100
+						maxHeight = 20
+						fixedSize = yes
+						format = center
+						alwaysTransparent = yes
+					}
+				}
+				
+				buttonType = {
+					name = "adopt_button"
+					size = { x = 45 y = 45 }
+					position = { x = 575 y = 1192 }
+					spriteType = "GFX_tt_ph_anim"
+					buttonFont = "cg_16b"
+					font = "cg_16b"
+					oversound = mouse_over
+				}
+				
+				instantTextBoxType = {
+					name = "category_desc"
+					font = "cg_16b"
+					position = { x = 55555 y = 55555 }
+					maxWidth = 280
+					format = center
+					vertical_alignment = center
+					alwaystransparent = yes
+					text = "tradition_plentiful_experimentalism_desc"
+				}
+
+				containerWindowType = {
+					name = "tree"
+				}
+			}
+
+			################################################################
+			# TRADITION CATEGORY INDUSTRY
+			################################################################
+
+			containerWindowType = {
+				name = "tradition_plentiful_industry"
+				size = { width = 5000 height = 1650 }
+				position = { x = -50% y = -50% }
+				orientation = center
+				
+				iconType = {
+					name = "hex_bg"
+					spriteType = "GFX_tradition_hex_bg_plentiful_industry"
+					position = { x = -23 y = -18 }
+					alwaysTransparent = yes
+					scale = 0
+				}
+				
+				instantTextBoxType={
+					name = "category_label"
+					font = "malgun_goth_24"
+					position = { x = 55555 y = 55555 }
+					text = "tradition_plentiful_industry"
+				}
+
+				containerWindowType = {
+					name = "adopted_count"
+					size = { width = 45 height = 45 }
+					position = { x = 748 y = 679 }
+
+					background = {
+						name = "adopted_hitbox"
+						spriteType = "GFX_invisible"
+					}
+					
+					iconType = {
+						name = "adopted"
+						spriteType = "GFX_tt_ph"
+						alwaysTransparent = yes
+					}
+					
+					instantTextBoxType = {
+						name = "value"
+						font = "cg_16b"
+						position = { x = 55555 y = 55555 }
+						maxWidth = 100
+						maxHeight = 20
+						fixedSize = yes
+						format = center
+						alwaysTransparent = yes
+					}
+				}
+				
+				buttonType = {
+					name = "adopt_button"
+					size = { x = 45 y = 45 }
+					position = { x = 748 y = 679 }
+					spriteType = "GFX_tt_ph_anim"
+					buttonFont = "cg_16b"
+					font = "cg_16b"
+					oversound = mouse_over
+				}
+				
+				instantTextBoxType = {
+					name = "category_desc"
+					font = "cg_16b"
+					position = { x = 55555 y = 55555 }
+					maxWidth = 280
+					format = center
+					vertical_alignment = center
+					alwaystransparent = yes
+					text = "tradition_plentiful_industry_desc"
+				}
+
+				containerWindowType = {
+					name = "tree"
+					
+					iconType = {
+						name = "ind1"
+						spriteType = "GFX_arrow_left"
+						position = { x = 725 y = 695 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "ind2"
+						spriteType = "GFX_arrow_right"
+						position = { x = 793 y = 695 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "ind3"
+						spriteType = "GFX_arrow_single"
+						position = { x = 764 y = 724 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "ind4"
+						spriteType = "GFX_arrow_double"
+						position = { x = 729 y = 791 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "ind5"
+						spriteType = "GFX_arrow_right"
+						position = { x = 725 y = 762 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "ind6"
+						spriteType = "GFX_arrow_left_down"
+						position = { x = 644 y = 767 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "ind7"
+						spriteType = "GFX_arrow_double"
+						position = { x = 609 y = 829 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "ind8"
+						spriteType = "GFX_arrow_single"
+						position = { x = 609 y = 896 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "ind9"
+						spriteType = "GFX_arrow_single"
+						position = { x = 679 y = 896 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "ind10"
+						spriteType = "GFX_arrow_right_4"
+						position = { x = 711 y = 934 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "ind11"
+						spriteType = "GFX_arrow_right"
+						position = { x = 793 y = 762 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "ind12"
+						spriteType = "GFX_arrow_right_down"
+						position = { x = 860 y = 767 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "ind13"
+						spriteType = "GFX_arrow_double"
+						position = { x = 849 y = 829 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "ind14"
+						spriteType = "GFX_arrow_single"
+						position = { x = 919 y = 896 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "ind15"
+						spriteType = "GFX_arrow_single"
+						position = { x = 849 y = 896 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "ind16"
+						spriteType = "GFX_arrow_left_4"
+						position = { x = 792 y = 934 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "ind17"
+						spriteType = "GFX_arrow_single"
+						position = { x = 764 y = 963 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "ind18"
+						spriteType = "GFX_arrow_left"
+						position = { x = 725 y = 1001 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "ind19"
+						spriteType = "GFX_arrow_left"
+						position = { x = 658 y = 1001 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "ind20"
+						spriteType = "GFX_arrow_right"
+						position = { x = 793 y = 1001 }
+						scale = 1.0
+					}
+					iconType = {
+						name = "ind21"
+						spriteType = "GFX_arrow_right"
+						position = { x = 860 y = 1001 }
+						scale = 1.0
+					}
+				}
+			}
+
+			################################################################
+			# TRADITION CATEGORY KLEPTOCRACY
+			################################################################
+
+			containerWindowType = {
+				name = "tradition_plentiful_kleptocracy"
+				size = { width = 5000 height = 1650 }
+				position = { x = -50% y = -50% }
+				orientation = center
+				
+				iconType = {
+					name = "hex_bg"
+					spriteType = "GFX_tradition_hex_bg_plentiful_kleptocracy"
+					position = { x = -23 y = -18 }
+					alwaysTransparent = yes
+					scale = 0
+				}
+				
+				instantTextBoxType={
+					name = "category_label"
+					font = "malgun_goth_24"
+					position = { x = 55555 y = 55555 }
+					text = "tradition_plentiful_kleptocracy"
+				}
+
+				containerWindowType = {
+					name = "adopted_count"
+					size = { width = 45 height = 45 }
+					position = { x = 959 y = 1320 }
+
+					background = {
+						name = "adopted_hitbox"
+						spriteType = "GFX_invisible"
+					}
+					
+					iconType = {
+						name = "adopted"
+						spriteType = "GFX_tt_ph"
+						alwaysTransparent = yes
+					}
+					
+					instantTextBoxType = {
+						name = "value"
+						font = "cg_16b"
+						position = { x = 55555 y = 55555 }
+						maxWidth = 100
+						maxHeight = 20
+						fixedSize = yes
+						format = center
+						alwaysTransparent = yes
+					}
+				}
+				
+				buttonType = {
+					name = "adopt_button"
+					size = { x = 45 y = 45 }
+					position = { x = 959 y = 1320 }
+					spriteType = "GFX_tt_ph_anim"
+					buttonFont = "cg_16b"
+					font = "cg_16b"
+					oversound = mouse_over
+				}
+				
+				instantTextBoxType = {
+					name = "category_desc"
+					font = "cg_16b"
+					position = { x = 55555 y = 55555 }
+					maxWidth = 280
+					format = center
+					vertical_alignment = center
+					alwaystransparent = yes
+					text = "tradition_plentiful_kleptocracy_desc"
+				}
+
+				containerWindowType = {
+					name = "tree"
+				}
+			}
+
+			################################################################
+			# TRADITION CATEGORY ANGUISH
+			################################################################
+
+			containerWindowType = {
+				name = "tradition_plentiful_anguish"
+				size = { width = 5000 height = 1650 }
+				position = { x = -50% y = -50% }
+				orientation = center
+				
+				iconType = {
+					name = "hex_bg"
+					spriteType = "GFX_tradition_hex_bg_plentiful_anguish"
+					position = { x = -23 y = -18 }
+					alwaysTransparent = yes
+					scale = 0
+				}
+				
+				instantTextBoxType={
+					name = "category_label"
+					font = "malgun_goth_24"
+					position = { x = 55555 y = 55555 }
+					text = "tradition_plentiful_anguish"
+				}
+
+				containerWindowType = {
+					name = "adopted_count"
+					size = { width = 45 height = 45 }
+					position = { x = 245 y = 881 }
+
+					background = {
+						name = "adopted_hitbox"
+						spriteType = "GFX_invisible"
+					}
+					
+					iconType = {
+						name = "adopted"
+						spriteType = "GFX_tt_ph"
+						alwaysTransparent = yes
+					}
+					
+					instantTextBoxType = {
+						name = "value"
+						font = "cg_16b"
+						position = { x = 55555 y = 55555 }
+						maxWidth = 100
+						maxHeight = 20
+						fixedSize = yes
+						format = center
+						alwaysTransparent = yes
+					}
+				}
+				
+				buttonType = {
+					name = "adopt_button"
+					size = { x = 45 y = 45 }
+					position = { x = 245 y = 881 }
+					spriteType = "GFX_tt_ph_anim"
+					buttonFont = "cg_16b"
+					font = "cg_16b"
+					oversound = mouse_over
+				}
+				
+				instantTextBoxType = {
+					name = "category_desc"
+					font = "cg_16b"
+					position = { x = 55555 y = 55555 }
+					maxWidth = 280
+					format = center
+					vertical_alignment = center
+					alwaystransparent = yes
+					text = "tradition_plentiful_anguish_desc"
+				}
+
+				containerWindowType = {
+					name = "tree"
+				}
+			}
+		
+			################################################################
+			# TRADITION CATEGORY DEFENCE
+			################################################################
+
+			containerWindowType = {
+				name = "tradition_plentiful_defence"
+				size = { width = 5000 height = 1650 }
+				position = { x = -50% y = -50% }
+				orientation = center
+				
+				iconType = {
+					name = "hex_bg"
+					spriteType = "GFX_tradition_hex_bg_plentiful_defence"
+					position = { x = -23 y = -18 }
+					alwaysTransparent = yes
+					scale = 0
+				}
+				
+				instantTextBoxType={
+					name = "category_label"
+					font = "malgun_goth_24"
+					position = { x = 55555 y = 55555 }
+					text = "tradition_plentiful_defence"
+				}
+
+				containerWindowType = {
+					name = "adopted_count"
+					size = { width = 45 height = 45 }
+					position = { x = 111 y = 881 }
+
+					background = {
+						name = "adopted_hitbox"
+						spriteType = "GFX_invisible"
+					}
+					
+					iconType = {
+						name = "adopted"
+						spriteType = "GFX_tt_ph"
+						alwaysTransparent = yes
+					}
+					
+					instantTextBoxType = {
+						name = "value"
+						font = "cg_16b"
+						position = { x = 55555 y = 55555 }
+						maxWidth = 100
+						maxHeight = 20
+						fixedSize = yes
+						format = center
+						alwaysTransparent = yes
+					}
+				}
+				
+				buttonType = {
+					name = "adopt_button"
+					size = { x = 45 y = 45 }
+					position = { x = 111 y = 881 }
+					spriteType = "GFX_tt_ph_anim"
+					buttonFont = "cg_16b"
+					font = "cg_16b"
+					oversound = mouse_over
+				}
+				
+				instantTextBoxType = {
+					name = "category_desc"
+					font = "cg_16b"
+					position = { x = 55555 y = 55555 }
+					maxWidth = 280
+					format = center
+					vertical_alignment = center
+					alwaystransparent = yes
+					text = "tradition_plentiful_defence_desc"
+				}
+
+				containerWindowType = {
+					name = "tree"
+				}
+			}
+
+			################################################################
+			# TRADITION CATEGORY ASSAULT
+			################################################################
+
+			containerWindowType = {
+				name = "tradition_plentiful_assault"
+				size = { width = 5000 height = 1650 }
+				position = { x = -50% y = -50% }
+				orientation = center
+				
+				iconType = {
+					name = "hex_bg"
+					spriteType = "GFX_tradition_hex_bg_plentiful_assault"
+					position = { x = -23 y = -18 }
+					alwaysTransparent = yes
+					scale = 0
+				}
+				
+				instantTextBoxType={
+					name = "category_label"
+					font = "malgun_goth_24"
+					position = { x = 55555 y = 55555 }
+					text = "tradition_plentiful_assault"
+				}
+
+				containerWindowType = {
+					name = "adopted_count"
+					size = { width = 45 height = 45 }
+					position = { x = 41 y = 881 }
+
+					background = {
+						name = "adopted_hitbox"
+						spriteType = "GFX_invisible"
+					}
+					
+					iconType = {
+						name = "adopted"
+						spriteType = "GFX_tt_ph"
+						alwaysTransparent = yes
+					}
+					
+					instantTextBoxType = {
+						name = "value"
+						font = "cg_16b"
+						position = { x = 55555 y = 55555 }
+						maxWidth = 100
+						maxHeight = 20
+						fixedSize = yes
+						format = center
+						alwaysTransparent = yes
+					}
+				}
+				
+				buttonType = {
+					name = "adopt_button"
+					size = { x = 45 y = 45 }
+					position = { x = 41 y = 881 }
+					spriteType = "GFX_tt_ph_anim"
+					buttonFont = "cg_16b"
+					font = "cg_16b"
+					oversound = mouse_over
+				}
+				
+				instantTextBoxType = {
+					name = "category_desc"
+					font = "cg_16b"
+					position = { x = 55555 y = 55555 }
+					maxWidth = 280
+					format = center
+					vertical_alignment = center
+					alwaystransparent = yes
+					text = "tradition_plentiful_assault_desc"
+				}
+
+				containerWindowType = {
+					name = "tree"
+				}
+			}
+
+			################################################################
+			# TRADITION CATEGORY TRANSFORMATION
+			################################################################
+
+			containerWindowType = {
+				name = "tradition_plentiful_transformation"
+				size = { width = 5000 height = 1650 }
+				position = { x = -50% y = -50% }
+				orientation = center
+				
+				iconType = {
+					name = "hex_bg"
+					spriteType = "GFX_tradition_hex_bg_plentiful_transformation"
+					position = { x = -23 y = -18 }
+					alwaysTransparent = yes
+					scale = 0
+				}
+				
+				instantTextBoxType={
+					name = "category_label"
+					font = "malgun_goth_24"
+					position = { x = 55555 y = 55555 }
+					text = "tradition_plentiful_transformation"
+				}
+
+				containerWindowType = {
+					name = "adopted_count"
+					size = { width = 45 height = 45 }
+					position = { x = 1121 y = 955 }
+
+					background = {
+						name = "adopted_hitbox"
+						spriteType = "GFX_invisible"
+					}
+					
+					iconType = {
+						name = "adopted"
+						spriteType = "GFX_tt_ph"
+						alwaysTransparent = yes
+					}
+					
+					instantTextBoxType = {
+						name = "value"
+						font = "cg_16b"
+						position = { x = 55555 y = 55555 }
+						maxWidth = 100
+						maxHeight = 20
+						fixedSize = yes
+						format = center
+						alwaysTransparent = yes
+					}
+				}
+				
+				buttonType = {
+					name = "adopt_button"
+					size = { x = 45 y = 45 }
+					position = { x = 1121 y = 955 }
+					spriteType = "GFX_tt_ph_anim"
+					buttonFont = "cg_16b"
+					font = "cg_16b"
+					oversound = mouse_over
+				}
+				
+				instantTextBoxType = {
+					name = "category_desc"
+					font = "cg_16b"
+					position = { x = 55555 y = 55555 }
+					maxWidth = 280
+					format = center
+					vertical_alignment = center
+					alwaystransparent = yes
+					text = "tradition_plentiful_transformation_desc"
+				}
+
+				containerWindowType = {
+					name = "tree"
+				}
+			}
+
+			################################################################
+			# TRADITION CATEGORY ENDURE
+			################################################################
+
+			containerWindowType = {
+				name = "tradition_plentiful_endure"
+				size = { width = 5000 height = 1650 }
+				position = { x = -50% y = -50% }
+				orientation = center
+				
+				iconType = {
+					name = "hex_bg"
+					spriteType = "GFX_tradition_hex_bg_plentiful_endure"
+					position = { x = -23 y = -18 }
+					alwaysTransparent = yes
+					scale = 0
+				}
+				
+				instantTextBoxType={
+					name = "category_label"
+					font = "malgun_goth_24"
+					position = { x = 55555 y = 55555 }
+					text = "tradition_plentiful_endure"
+				}
+
+				containerWindowType = {
+					name = "adopted_count"
+					size = { width = 45 height = 45 }
+					position = { x = 259 y = 1293 }
+
+					background = {
+						name = "adopted_hitbox"
+						spriteType = "GFX_invisible"
+					}
+					
+					iconType = {
+						name = "adopted"
+						spriteType = "GFX_tt_ph"
+						alwaysTransparent = yes
+					}
+					
+					instantTextBoxType = {
+						name = "value"
+						font = "cg_16b"
+						position = { x = 55555 y = 55555 }
+						maxWidth = 100
+						maxHeight = 20
+						fixedSize = yes
+						format = center
+						alwaysTransparent = yes
+					}
+				}
+				
+				buttonType = {
+					name = "adopt_button"
+					size = { x = 45 y = 45 }
+					position = { x = 259 y = 1293 }
+					spriteType = "GFX_tt_ph_anim"
+					buttonFont = "cg_16b"
+					font = "cg_16b"
+					oversound = mouse_over
+				}
+				
+				instantTextBoxType = {
+					name = "category_desc"
+					font = "cg_16b"
+					position = { x = 55555 y = 55555 }
+					maxWidth = 280
+					format = center
+					vertical_alignment = center
+					alwaystransparent = yes
+					text = "tradition_plentiful_endure_desc"
+				}
+
+				containerWindowType = {
+					name = "tree"
+				}
+			}
+
+			################################################################
+			# TRADITION ASCENSION PERKS
+			################################################################
+
+			containerWindowType = {
+				name = "ascension_perks"
+				size = { width = @entry_w_ap height = @entry_h_ap }
+				position = { x = 5 y = 60 } 
+				
+				iconType = {
+					name = "hex_bg"
+					spriteType = "GFX_hex_bg"
+					position = { x = -15 y = -15 }
+					alwaysTransparent = yes
+				}
+				
+				containerWindowType = {
+					name = "tradition_box"
+					size = { width = 300 height = 200 }
+					position = { x = 15 y = 70 }
+				}
+			}
+			
+			containerWindowType = { #Scrollbar Fix. Based on the Scrollbar fix from PT
+				name = "ScrollbarFix"
+				size = { width = @entry_w height = @entry_h } 
+				position = { x = 0 y = 1650 }
+
+				containerWindowType = {
+					name = "tradition_box"
+					size = { width = 300 height = 200 }
+					position = { x = 15 y = 70 }
+				}
+			}
+		}
+
+		###############################
+		# RELICS TAB
+		###############################
+		
+		containerWindowType = {
+			name = "relics_window"
+			size = { width = 1272 height = 600 } 
+			moveable = no
+			orientation = upper_left
+			position = { x = 0 y = 0 }
+
+			###############################
+			# RELICS
+			###############################
+
+			@relicsWidth = 738
+			@relicsWidthWide = 1248
+
+			###############################
+			# RELICS BOX
+			###############################
+
+			containerWindowType = {
+				name = "relics_box"
+				size = { width = @relicsWidth height = 536 }
+				position = { x = 10 y = 50 }
+
+				background = {
+					name = "bg"
+					quadTextureSprite = "GFX_relics_panel_bg"
+				}
+
+				# TOP BAR
+				containerWindowType = {
+					name = "relics_topbar"
+					size = { width = @relicsWidth height = 65 }
+					position = { x = 0 y = 0 }
+
+					# LEFT SIDE
+					containerWindowType = {
+						name = "relics_topbar_left"
+						size = { width = 170 height = 65 }
+						position = { x = 0 y = 0 }
+
+						instantTextBoxType = {
+							name = "relics_found_text"
+							font = "cg_16b"
+							position = { x = 10 y = 15 }
+							text = "RELICS_FOUND"
+							maxWidth = 150
+							maxHeight = 22
+							fixedSize = yes
+							format = centre
+							text_color_code = "H"
+						}
+
+						instantTextBoxType = {
+							name = "relics_found_value"
+							font = "cg_16b"
+							position = { x = 10 y = 35 }
+							maxWidth = 150
+							maxHeight = 30
+							fixedSize = yes
+							format = centre
+						}
+					}
+
+					# RIGHT SIDE
+					containerWindowType = {
+						name = "relics_topbar_right"
+						size = { width = 575 height = 65 }
+						position = { x = 175 y = 0 }
+
+						instantTextBoxType = {
+							name = "no_triumph_text"
+							font = "cg_16b"
+							position = { x = 100 y = 20 }
+							text = "ACTIVATE_RELIC_FOR_TRIUMPH"
+							maxWidth = 250
+							maxHeight = 22
+							fixedSize = yes
+							text_color_code = "Y"
+						}
+
+						instantTextBoxType = {
+							name = "active_triumph_text"
+							font = "cg_16b"
+							position = { x = 50 y = 10 }
+							text = "ACTIVE_TRIUMPH_TEXT"
+							maxWidth = 150
+							maxHeight = 22
+							fixedSize = yes
+							text_color_code = "H"
+						}
+
+						instantTextBoxType = {
+							name = "active_triumph_value"
+							font = "cg_16b"
+							position = { x = 200 y = 10 }
+							maxWidth = 60
+							maxHeight = 30
+							fixedSize = yes
+							format = centre
+						}
+
+						iconType = {
+							name = "progressbar"
+							spriteType = "GFX_queue_progressbar"
+							position = { x = 50 y = 30 }
+						}
+					}
+				}
+
+				# RELICS CONTENT
+				containerWindowType = {
+					name = "relics_content"
+					size = { width = @relicsWidth height = 470 }
+					position = { x = 0 y = 60 }
+					verticalScrollbar = "right_vertical_slider"
+					margin = { top = 10 bottom = 0 }
+
+					background = {
+						name = "bg"
+						quadTextureSprite = "GFX_tiled_window_transparent"
+					}
+
+					gridBoxType = {
+						name = "relics_grid"
+						position = { x = 95 y = 30 }
+						size = { width = 200 height = 400 }
+						slotsize = {
+							width = 184
+							height = 194
+						}
+						max_slots_horizontal = 3
+					}
+				}
+			}
+
+			###############################
+			# RELICS BOX WIDE
+			###############################
+
+			containerWindowType = {
+				name = "relics_box_wide"
+				size = { width = @relicsWidthWide height = 536 }
+				position = { x = 10 y = 50 }
+
+				background = {
+					name = "bg"
+					quadTextureSprite = "GFX_relics_panel_bg_wide"
+				}
+
+				# TOP BAR
+				containerWindowType = {
+					name = "relics_topbar"
+					size = { width = @relicsWidthWide height = 65 }
+					position = { x = 0 y = 0 }
+
+					# LEFT SIDE
+					containerWindowType = {
+						name = "relics_topbar_left"
+						size = { width = 170 height = 65 }
+						position = { x = 0 y = 0 }
+
+						instantTextBoxType = {
+							name = "relics_found_text"
+							font = "cg_16b"
+							position = { x = 10 y = 15 }
+							text = "RELICS_FOUND"
+							maxWidth = 150
+							maxHeight = 22
+							fixedSize = yes
+							format = centre
+							text_color_code = "H"
+						}
+
+						instantTextBoxType = {
+							name = "relics_found_value"
+							font = "cg_16b"
+							position = { x = 10 y = 35 }
+							maxWidth = 150
+							maxHeight = 30
+							fixedSize = yes
+							format = centre
+						}
+					}
+
+					# RIGHT SIDE
+					containerWindowType = {
+						name = "relics_topbar_right"
+						size = { width = 575 height = 65 }
+						position = { x = 465 y = 0 }
+
+						instantTextBoxType = {
+							name = "no_triumph_text"
+							font = "cg_16b"
+							position = { x = 100 y = 20 }
+							text = "ACTIVATE_RELIC_FOR_TRIUMPH"
+							maxWidth = 250
+							maxHeight = 22
+							fixedSize = yes
+							text_color_code = "Y"
+						}
+
+						instantTextBoxType = {
+							name = "active_triumph_text"
+							font = "cg_16b"
+							position = { x = 50 y = 10 }
+							text = "ACTIVE_TRIUMPH_TEXT"
+							maxWidth = 150
+							maxHeight = 22
+							fixedSize = yes
+							text_color_code = "H"
+						}
+
+						instantTextBoxType = {
+							name = "active_triumph_value"
+							font = "cg_16b"
+							position = { x = 200 y = 10 }
+							maxWidth = 60
+							maxHeight = 30
+							fixedSize = yes
+							format = centre
+						}
+
+						iconType = {
+							name = "progressbar"
+							spriteType = "GFX_queue_progressbar"
+							position = { x = 50 y = 30 }
+						}
+					}
+				}
+
+				# RELICS CONTENT
+				containerWindowType = {
+					name = "relics_content"
+					size = { width = @relicsWidthWide height = 470 }
+					position = { x = 0 y = 60 }
+					verticalScrollbar = "right_vertical_slider"
+					margin = { top = 10 bottom = 0 }
+
+					background = {
+						name = "bg"
+						quadTextureSprite = "GFX_tiled_window_transparent"
+					}
+
+					gridBoxType = {
+						name = "relics_grid"
+						position = { x = 255 y = 30 }
+						size = { width = 200 height = 400 }
+						slotsize = {
+							width = 184
+							height = 194
+						}
+						max_slots_horizontal = 4
+					}
+				}
+			}
+
+			###############################
+			# ARTIFACTS
+			###############################
+
+			@artifactsWidth = 502 
+
+			containerWindowType = {
+				name = "artifacts_box"
+				size = { width = @artifactsWidth height = 516 }
+				position = { x = 757 y = 70 }
+
+				background = {
+					name = "bg"
+					quadTextureSprite = "GFX_artifacts_panel_bg"
+				}
+
+				# TOP BAR
+				containerWindowType = {
+					name = "artifacts_topbar"
+					size = { width = @artifactsWidth height = 65 }
+					position = { x = 0 y = 0 }
+
+					instantTextBoxType = {
+						name = "artifacts_header"
+						font = "cg_16b"
+						position = { x = 20 y = 14 }
+						text = "MINOR_ARTIFACTS"
+						maxWidth = 150
+						maxHeight = 22
+						fixedSize = yes
+						format = left
+						text_color_code = "H"
+					}
+
+					instantTextBoxType = {
+						name = "artifacts_count_value"
+						font = "cg_16b"
+						position = { x = 332 y = 14 }
+						maxWidth = 150
+						maxHeight = 22
+						fixedSize = yes
+						format = right
+						text = "45"
+					}
+
+				}
+
+				# CONTENT
+				containerWindowType = {
+					name = "artifacts_content"
+					size = { width = 493 height = 474 }
+					position = { x = 10 y = 50 }
+					verticalScrollbar = "right_vertical_slider"
+					margin = { top = 0 bottom = 15 }
+
+					background = {
+						name = "bg"
+						quadTextureSprite = "GFX_tiled_window_transparent"
+					}
+
+					gridBoxType = {
+						name = "artifact_actions_grid"
+						position = { x = 0 y = 0 }
+						size = { width = 480 height = 450 }
+						slotsize = {
+							width = 480
+							height = 43
+						}
+						max_slots_horizontal = 1
+					}
+				}
+			}
+		}
+	}
+
+	# RELIC GRID BOX ENTRY
+	containerWindowType = {
+		name = "relic_grid_entry"
+		size = {
+			width = 182
+			height = 194
+		}
+
+		background = {
+			name = "bg"
+			quadTextureSprite = "GFX_tiled_window_transparent"
+			no_clicksound = yes # this will be manually set by the relic type and played in the UI via code
+		}
+
+		iconType = {
+			name = "frame"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_relics_frame"
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "frame_unused"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_relics_frame_unused"
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "relic_portrait"
+			position = { x = 10 y = 15 }
+			quadTextureSprite = "GFX_tiled_window_transparent"
+			alwaysTransparent = yes
+		}
+	}
+
+	# ARTIFACT ACTION GRID BOX ENTRY
+	containerWindowType = {
+		name = "artifact_action_grid_entry"
+		size = {
+			width =  482
+			height = 40
+		}
+
+		background = {
+			name = "bg"
+			quadTextureSprite = "GFX_tiles_dark_area_cut_8"
+		}
+
+		instantTextBoxType = {
+			name = "title"
+			font = "cg_16b"
+			position = { x = 10 y = 14 }
+			text = "MINOR_ARTIFACTS"
+			maxWidth = 300
+			maxHeight = 22
+			fixedSize = yes
+			format = left
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "cost"
+			font = "cg_16b"
+			position = { x = 320 y = 14 }
+			maxWidth = 150
+			maxHeight = 22
+			fixedSize = yes
+			format = right
+			text = "45"
+			alwaysTransparent = yes
+		}
+
+		buttonType = {
+			name = "button"
+			quadTextureSprite = "GFX_button_light"
+			position = { x = -1 y = -1 }
+			clicksound = "queuing_building"
+			size = { x = 484 y = 42 }
+		}
+	}
+}

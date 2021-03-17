@@ -1,0 +1,328 @@
+#civic_example = {
+#	playable = {}								# AND trigger, no scope; use this to prevent the civic from being selectable by the player (UI)
+#	potential = {}								# requirements list, see ../readme_requirements.txt
+#	possible = {}								# requirements list, see ../readme_requirements.txt
+#	pickable_at_start = yes / no				# default: yes
+#	modification = yes / no						# default: yes, set to no to prevent adding or removing this after creation of the empire
+#
+#	random_weight = { base = 1 }				# scriptable weight for randomizing a civic; required, else the civic will not get assigned randomly
+#
+#	modifier = {}								# modifier added to the country if the civic is selected and valid
+#	can_build_ruler_military_station = yes / no	# default: no
+#	can_build_ruler_ship = yes / no				# default: no
+#	has_secondary_species = {					# default: none; if present, will enable secondary species customization in empire designer and will create secondary species & pops at galaxy generation time (see empire_init_create_capital_secondary_pops)
+#		traits = { trait = ... }					# default: empty; trait set to enforce on the secondary species. They cannot be removed, but more can be added if points/picks permit
+#	}
+#}
+	
+civic_sapient_intervention = {
+	allow = { owner = { is_ai = no } }
+	modification = no
+	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
+	possible = {
+		ethics = {
+			NOR = {
+				text = civic_tooltip_not_spiritualist
+				value = ethic_spiritualist
+				value = ethic_fanatic_spiritualist
+			}
+		}
+	}
+	random_weight = {
+		base = 0
+		modifier = {
+			factor = 0
+		}
+	}
+	modifier = {
+		#pop_ethic_materialist_attraction_mult = 0.30 now tied to the relic
+	}
+	description = "civic_sapient_intervention_effects"
+}
+
+civic_planetary_senate = {
+	allow = { owner = { is_ai = no } }
+	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
+	possible = {
+	authority = {	value = auth_democratic	}
+	}
+	random_weight = {
+		base = 0
+		modifier = {
+			factor = 0
+		}
+	}
+		modifier = {
+			pop_factions_produces_mult = 1
+			country_leader_pool_size = 1
+			leaders_upkeep_mult = -0.50
+			job_clerk_per_pop = 0.05
+			edict_length_mult = 0.25
+			pop_ethic_egalitarian_attraction_mult = 0.30
+			country_trust_cap_add = 30
+			edicts_cost_mult = 0.20
+			country_unity_produces_mult = -0.10
+			country_trust_growth = -0.33
+			country_election_influence_cost_mult = 4
+			country_base_influence_produces_add = -1
+	}
+}
+
+civic_only_war = {
+	allow = { owner = { is_ai = no } }
+	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_militarist
+				value = ethic_militarist
+				value = ethic_fanatic_militarist
+			}
+		}
+	}
+	random_weight = {
+		base = 0
+		modifier = {
+			factor = 0
+		}
+	}
+	description = "civic_only_war_effects"
+		modifier = {		
+			country_unity_produces_mult = -0.05
+			pop_happiness = -0.05
+			all_technology_research_speed = -0.05
+			#planet_jobs_engineering_research_produces_mult= -0.05
+			#planet_jobs_physics_research_produces_mult= -0.05
+			#planet_jobs_society_research_produces_mult= -0.05
+	}
+}
+
+civic_forsaken = {
+	allow = { owner = { is_ai = no } }
+	modification = no
+	potential = { 
+		ethics = { NOT = { value = ethic_gestalt_consciousness } } 	
+	}
+	modification = no
+	random_weight = {
+		base = 0
+		modifier = {
+			factor = 0
+		}
+	}
+	description = "civic_forsaken_effects"
+
+	#traits = {
+	#	trait = trait_ex_broken
+	#}
+	modifier = {
+		all_technology_research_speed = 0.15
+	}
+}
+
+civic_divine_legacy = {
+	allow = { owner = { is_ai = no } }
+	modification = no
+	random_weight = {
+		base = 0
+		modifier = {
+			factor = 0
+		}
+	}
+	description = "civic_divine_legacy_effects"
+
+	traits = {
+		trait = trait_ex_ancient
+	}
+		modifier = {
+
+	}
+}
+
+civic_decadent_conglomerate = {
+	allow = { owner = { is_ai = no } }
+	potential = { authority = { value = auth_corporate } }
+	modification = yes
+	random_weight = {
+		base = 0
+		modifier = {
+			factor = 0
+		}
+	}
+	description = "civic_decadent_conglomerate_effects"
+
+	traits = {
+		trait = trait_ex_profligate2
+	}
+		modifier = {
+			trade_value_mult = 0.15
+			country_minerals_produces_mult = 0.15
+			country_energy_produces_mult = 0.15
+			country_base_influence_produces_add = 0.5
+			planet_branch_offices_cost_mult = -0.35
+
+	}
+}
+
+civic_manufactured_species = {
+	allow = { owner = { is_ai = no } }
+	modification = no
+	playable = { host_has_dlc = "Utopia" }
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+	}
+	possible = {
+		civics = {
+			NOR = {
+				value = civic_mechanists
+				value = civic_fanatic_purifiers
+				value = civic_agrarian_idyll
+				value = civic_post_apocalyptic
+				value = civic_life_seeded
+				value = civic_syncretic_evolution
+				value = civic_celestialremnant
+			}
+		}
+	}
+	random_weight = {
+		base = 0
+		modifier = {
+			factor = 0
+		}
+	}
+		modifier = {
+			pop_ethic_xenophile_attraction_mult = -0.50
+			category_biology_research_speed_mult = 0.30
+			pop_growth_speed = 0.10
+	}
+	description = "civic_manufactured_species_effects"
+	has_secondary_species = {
+		title = civic_manufactured_species_secondary_species
+		traits = {
+			trait = trait_ex_gef
+		}
+	}
+}
+
+#civic_decadent_hierarchy = {
+#	modification = no
+#	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
+#	possible = {
+#		authority = {
+#			OR = {
+#				text = civic_tooltip_dic_imp
+#				value = auth_dictatorial
+#				value = auth_imperial
+#			}
+#		}
+#	}
+#	random_weight = { base = 0 }
+#	modifier = {
+#		hidden_effect = { pop_ethic_authoritarian_attraction_mult = 0.30 }
+#		ruler_skill_levels = 4
+#                pop_slave_resource_output= 0.10
+#                planet_unrest_mult = 0.15
+#	}
+#}
+
+civic_harmonious_order = {
+	allow = { owner = { is_ai = no } }
+	random_weight = {
+		base = 0
+		modifier = {
+			factor = 0
+		}
+	}
+	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_pacifist
+				value = ethic_pacifist
+				value = ethic_fanatic_pacifist
+			}
+		}
+	}
+		modifier = {
+			country_society_tech_research_speed = 0.15
+			pop_government_ethic_attraction = 0.25
+			country_unity_produces_mult = 0.15
+			edict_cost = -0.20
+			pop_amenities_usage_mult = -0.15
+			pop_happiness = 0.05
+			country_naval_cap_mult = -0.20
+			ship_weapon_damage = -0.10		
+	}
+}
+
+civic_engineering_world = {
+	allow = { owner = { is_ai = no } }
+	random_weight = {
+		base = 0
+		modifier = {
+			factor = 0
+		}
+	}
+	
+		modifier = {
+			country_alloys_produces_mult = 0.20
+			pop_growth_speed = -0.10
+			country_society_tech_research_speed = -0.10
+			country_physics_tech_research_speed = -0.10
+	}
+		description = "civic_engineering_world_effects"
+}
+
+civic_power_core = {
+	allow = { owner = { is_ai = no } }
+	random_weight = {
+		base = 0
+		modifier = {
+			factor = 0
+		}
+	}
+		modifier = {
+			country_energy_produces_mult = 0.15
+			ship_shield_mult = 0.20
+			ship_upkeep_mult = -0.10
+			weapon_type_energy_weapon_fire_rate_mult = 0.05
+			ship_speed_mult = 0.10
+			country_physics_tech_research_speed = 0.2	
+			country_society_tech_research_speed = -0.10
+			country_engineering_tech_research_speed = -0.10
+			ship_armor_mult = -0.15
+	}
+}
+
+civic_psionic_heritage = {
+	allow = { owner = { is_ai = no } }
+	modification = no #grants starting tech and makes unlocking new techs more likely hence can't be changed after game start
+	potential = { 
+		ethics = { NOT = { value = ethic_gestalt_consciousness } } 	
+	}
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_spiritualist
+				value = ethic_spiritualist
+				value = ethic_fanatic_spiritualist
+			}
+		}
+	}
+	modification = no
+	random_weight = {
+		base = 0
+		modifier = {
+			factor = 0
+		}
+	}
+	modifier = {
+		pop_ethic_spiritualist_attraction_mult = 0.30
+		category_psionics_research_speed_mult = 0.20
+	}
+	description = "civic_psionic_heritage_effects"
+
+	#traits = {
+		#trait = trait_ex_psionic_obsession #through the use of events (see ex_game_start) should also grant the empire Psionic Theory for free. Thanks to Alfray Stryke for letting me see how he modded events for his own God-Emperor civic
+	}
+}

@@ -1,0 +1,69 @@
+
+
+component_set = {
+	key = "MECHANIST_ARMOR_EE"
+	
+	icon = "GFX_ship_part_mechanist_armor"
+	icon_frame = 1	
+}
+
+
+component_set = {
+	key = "MECHANIST_PARTICLE_LANCE_EE"
+	
+	icon = "GFX_ship_part_mechanist_lance"
+	icon_frame = 1	
+}
+
+
+component_set = {
+	key = "MECHANIST_LASER_EE"
+	
+	icon = "GFX_ship_part_mechanist_laser"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "MECHANIST_PD_EE"
+	
+	icon = "GFX_ship_part_mechanist_pd"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "MECHANIST_PERDITION_BEAM_EE"
+	
+	icon = "GFX_ship_part_mechanist_titan_beam"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "MECHANIST_SKY_BEAM_EE"
+	
+	icon = "GFX_ship_part_mechanist_sky_beam"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "MECHANIST_GUNSHIP_HANGAR_EE"
+	
+	icon = "GFX_ship_part_mechanist_gunship"
+	icon_frame = 1	
+}
+
+omponent_set = {
+	key = "MECHANIST_SUPER_HANGAR_EE"
+	
+	icon = "GFX_ship_part_mechanist_super"
+	icon_frame = 1	
+}
+
+
+
+
+
+	
+
+
+
+

@@ -1,0 +1,142 @@
+namespace = eternal
+
+#Eternal Empires encountering other empires
+country_event = {
+	id = eternal.31
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+				OR = {
+					is_country_type = eternal_empire
+					is_country_type = fallen_empire
+					is_country_type = awakened_fallen_empire
+						
+						
+				}
+		from = {
+				OR = {
+					is_country_type = default
+					is_country_type = fallen_empire
+					is_country_type = awakened_fallen_empire
+					is_country_type = ascended_empire 
+					is_country_type = eternal_empire
+					is_country_type = nomad
+					is_country_type = enclave
+					is_country_type = eternal_empire
+					is_country_type = nomad
+					is_country_type = enclave
+					is_country_type = extradimensional
+					is_country_type = extradimensional_1
+					is_country_type = extradimensional_2
+
+
+				}
+				NOT = { has_communications = root }
+		}
+	}
+
+	immediate = {
+		establish_communications_no_message = from
+		from = { save_event_target_as = contact_empire }
+		country_event = { id = action.1 }
+		country_event = { id = eternal.39 }
+	}
+}
+
+#Flip planets to EE starbase owner
+event = {
+	id = eternal.85
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		any_country = {
+			NOT = { is_country_type = primitive }
+			any_owned_planet = {
+				exists = starbase
+				starbase = {
+					owner = {
+						NOR = {
+							is_same_value = prevprevprev
+							is_at_war_with = prevprevprev
+						}
+					}
+				}
+			}
+		}
+	}
+
+	immediate = {
+		every_planet = {
+			limit = {
+				exists = owner
+				owner = {
+					OR = {
+						is_country_type = default
+						is_country_type = fallen_empire
+						is_country_type = awakened_fallen_empire
+						is_country_type = ascended_empire
+						is_country_type = lost_empire
+						is_country_type = eternal_empire
+					}
+				}
+				exists = starbase
+				starbase = {
+					exists = owner
+					owner = {
+						OR = {
+							is_country_type = default
+							is_country_type = fallen_empire
+							is_country_type = awakened_fallen_empire
+							is_country_type = ascended_empire
+							is_country_type = lost_empire
+							is_country_type = eternal_empire
+						}					
+						NOR = {
+							is_same_value = prevprev.owner
+							is_at_war_with = prevprev.owner
+						}
+					}
+				}
+			}
+			planet_event = { id = action.86 } # planet flips to starbase owner
+		}
+	}
+}
+
+
+country_event = {
+	id = eternal.39
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+			OR = {
+				is_country_type = eternal_empire
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire		
+			}
+	}
+
+	immediate = {
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = eternal_empire
+					is_country_type = nomad
+					is_country_type = enclave
+					is_country_type = caravaneer_home
+					is_country_type = caravaneer_fleet
+				}
+				NOT = { has_communications = root }
+			}
+
+			establish_communications_no_message = root
+			root = { save_event_target_as = contact_empire }
+			country_event = { id = action.1 }
+		}
+	}
+}
+
+

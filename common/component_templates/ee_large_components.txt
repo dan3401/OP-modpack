@@ -1,0 +1,43 @@
+weapon_component_template = {
+	key = "ETERNAL_PARTICLE_TIME_EE"
+	size = large
+	icon = "GFX_ship_part_time_ee"
+	icon_frame = 1
+	entity = "invisible_turret_entity"
+	type = instant
+
+	
+	damage = { min = 1 max = 7500 }
+	windup = { min = 2 max = 5 }
+	total_fire_time = 150
+	range = 130
+	accuracy = 1.0
+	cooldown = 0.5
+	power = -5000
+	armor_penetration = 2.0
+
+	shield_penetration = 2.0
+	
+
+	tracking = 1.0
+	
+	firing_arc = 10.0
+	min_range = 1
+	static_rotation = yes
+	use_ship_kill_target = no
+	resources = {
+		category = ship_components
+		cost = {
+			eternium = 0.5
+		}
+	}
+
+	prerequisites = { tech_fallenw }
+	component_set = "ETERNAL_PARTICLE_TIME_EE"
+	projectile_gfx = "eternal_continuum_deto_cannon_XL"
+	tags = { weapon_type_cosmic }
+	ai_tags = { weapon_role_artillery }
+}
+
+
+

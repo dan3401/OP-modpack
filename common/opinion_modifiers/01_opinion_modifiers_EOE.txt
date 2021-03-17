@@ -1,0 +1,17 @@
+triggered_opinion_trait_extremely_cute = {
+	trigger = {
+		FROM = {
+				exists = ruler
+				ruler = {
+					species = {
+						has_trait = "trait_extremely_cute"		
+					}
+				}	
+		}
+	}
+
+	opinion = {
+		base = 50 
+	}
+}
+

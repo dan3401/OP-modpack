@@ -1,0 +1,113 @@
+weapon_component_template = {
+	key = "SMALL_ETERNAL_DISRUPTOR_EE"
+	size = small
+	icon = "GFX_ship_part_eternium_disruptor"
+	icon_frame = 1
+	entity = "small_laser_gun_entity"
+	type = instant
+
+	damage = { min = 30 max = 360 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 30
+	range = 35
+	accuracy = 1.0
+	power = -180
+	hull_damage = 1.25
+	armor_penetration = 1.0
+	armor_damage = 1.0
+	shield_penetration = 1.0 
+	shield_damage = 1.0
+	tracking = 1.00
+	resources = {
+		category = ship_components
+		cost = {
+			eternium = 0.5
+		}
+	}
+
+	prerequisites = { tech_fallenw }
+	component_set = "ETERNAL_DISRUPTOR_EE"
+	projectile_gfx = "eternal_disruptor_dm_small"
+	tags = { weapon_type_cosmic }
+	ai_tags = { weapon_role_anti_shield }
+
+	ai_weight = {
+		weight = 3000
+	}
+}
+
+weapon_component_template = {
+	key = "MEDIUM_ETERNAL_DISRUPTOR_EE"
+	size = medium
+	icon = "GFX_ship_part_eternium_disruptor"
+	icon_frame = 1
+	entity = "medium_laser_gun_entity"
+	type = instant
+
+	damage = { min = 72 max = 900 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 30
+	range = 55
+	accuracy = 1.0
+	power = -270
+	hull_damage = 1.25
+	armor_penetration = 1.0
+	armor_damage = 1.0
+	shield_penetration = 1.0 
+	shield_damage = 1.0
+	tracking = 0.40
+	resources = {
+		category = ship_components
+		cost = {
+			eternium = 0.5
+		}
+	}
+
+	prerequisites = { tech_fallenw }
+	component_set = "ETERNAL_DISRUPTOR_EE"
+	projectile_gfx = "eternal_disruptor_dm_medium"
+	tags = { weapon_type_cosmic }
+	ai_tags = { weapon_role_anti_shield }
+
+	ai_weight = {
+		weight = 3000
+	}
+} 
+
+weapon_component_template = {
+	key = "LARGE_ETERNAL_DISRUPTOR_EE"
+	size = large
+	icon = "GFX_ship_part_eternium_disruptor"
+	icon_frame = 1
+	entity = "medium_laser_gun_entity"
+	type = instant
+
+	damage = { min = 625 max = 1250 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 30
+	range = 55
+	accuracy = 1.0
+	power = -270
+	hull_damage = 1.25
+	armor_penetration = 1.0
+	armor_damage = 1.0
+	shield_penetration = 1.0 
+	shield_damage = 1.0
+	tracking = 0.40
+	resources = {
+		category = ship_components
+		cost = {
+			eternium = 0.5
+		}
+	}
+
+	prerequisites = { tech_fallenw }
+	component_set = "ETERNAL_DISRUPTOR_EE"
+	projectile_gfx = "eternal_disruptor_dm_large"
+	tags = { weapon_type_cosmic }
+	ai_tags = { weapon_role_anti_shield }
+
+	ai_weight = {
+		weight = 3000
+	}
+} 

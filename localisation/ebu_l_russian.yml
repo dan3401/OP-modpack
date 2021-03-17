@@ -1,0 +1,40 @@
+﻿l_russian:
+#Farms
+ eb_hydrofarm2:0 "Гидропонная ферма 2"
+ eb_hydrofarm2_desc:0 "Улучшенная Гидропонная ферма."
+ 
+ eb_hydrofarm3:0 "Гидропонная ферма 3"
+ eb_hydrofarm3_desc:0 "Улучшенная Гидропонная ферма 2."
+ 
+#Mines
+ eb_mineral2:0 "Глубокая шахта 2"
+ eb_mineral2_desc:0 "Улучшенная глубокая шахта."
+ 
+ eb_mineral3:0 "Глубокая шахта 3"
+ eb_mineral3_desc:0 "Улучшенная Глубокая шахта 2."
+ 
+ eb_mineral_hab2:0 "Asteroid Towing Bay 2"
+ eb_mineral_hab2_desc:0 "An upgraded Asteroid Towing Bay"
+ 
+ eb_mineral_hab3:0 "Asteroid Towing Bay 3"
+ eb_mineral_hab3_desc:0 "An upgraded Asteroid Towing Bay"
+ 
+#Energy
+ eb_energy2:0 "Геотермальная электростанция 2"
+ eb_energy2_desc:0 "Улучшенная геотермальная электростанция."
+ 
+ eb_energy3:0 "Геотермальная электростанция 3"
+ eb_energy3_desc:0 "Улучшенная геотермальная электростанция 2."
+ 
+ eb_energy_hab2:0 "Solar Power Plant 2"
+ eb_energy_hab2_desc:0 "An upgraded Solar Power Plant"
+ 
+ eb_energy_hab3:0 "Solar Power Plant 3"
+ eb_energy_hab3_desc:0 "An upgraded Solar Power Plant 2"
+ 
+#Techs
+ eb_mineral_tech:0 "Улучшенная глубокая шахта"
+ eb_mineral_tech_desc:0 "Открывает третий уровень глубокой шахты."
+ 
+ eb_energy_tech:0 "Улучшенная геотермальная электростанция"
+ eb_energy_tech_desc:0 "Открывает третий уровень геотермальной электростанции."

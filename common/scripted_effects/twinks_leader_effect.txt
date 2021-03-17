@@ -1,0 +1,151 @@
+add_ascended_leader_traits = {
+	if = {
+		limit = {
+				leader_class = scientist
+				}
+		}
+		while = {
+			limit = { 
+					NOT = { has_leader_flag = has_gained_ascended_traits }
+					}
+					add_trait = leader_trait_scientist_ascended
+					add_trait = leader_trait_scientist_perfection
+					add_trait = leader_trait_scientist_universal_language
+					add_ruler_trait = leader_trait_ruler_ascended
+					add_ruler_trait = leader_trait_ruler_perfection
+					add_ruler_trait = leader_trait_ruler_universal_language
+					set_timed_leader_flag = { flag = has_gained_ascended_traits days = 7 }
+					}
+}
+
+
+
+generate_eternal_start_deposits_and_blockers = {
+	clear_deposits = yes
+	clear_planet_modifiers = yes
+	clear_blockers = yes
+	remove_all_buildings = yes
+
+	add_building = building_eternal_palace	
+	if = {
+		limit = {
+			has_building = building_research_lab_1
+		 }
+		 remove_building = building_research_lab_1
+		 add_building = building_eternal_energy		
+	}
+	if = {
+		limit = {
+			has_building = building_foundry_1
+		 }
+		 remove_building = building_foundry_1
+		 add_building = building_eternal_alloys	
+	}
+	if = {
+		limit = {
+			has_building = building_factory_1
+		 }
+		 remove_building = building_factory_1
+		 add_building = building_eternal_consumer	
+	}
+	if = {
+		limit = {
+			has_building = building_colony_shelter
+		 }
+		 remove_building = building_colony_shelter
+		 add_building = building_eternal_palace			
+	}
+	if = {
+		limit = {
+			has_building = building_capital
+		 }
+		 remove_building = building_capital
+		 add_building = building_eternal_palace						
+	}
+	if = {
+		limit = {
+			has_building = building_major_capital
+		 }
+		 remove_building = building_major_capital
+		 add_building = building_eternal_palace						
+	}
+	if = {
+		limit = {
+			has_building = building_system_capital
+		 }
+		 remove_building = building_system_capital
+		 add_building = building_eternal_palace						
+	}
+	if = {
+		limit = {
+			has_building = building_hab_capital
+		 }
+		 remove_building = building_hab_capital
+		 add_building = building_eternal_palace						
+	}
+	if = {
+		limit = {
+			has_building = building_hab_major_capital
+		 }
+		 remove_building = building_hab_major_capital
+		 add_building = building_eternal_palace					
+	}		
+	
+	
+	if = {
+		limit = {
+			has_building = building_deployment_post
+		 }
+		 remove_building = building_deployment_post
+		 add_building = building_eternal_palace						
+	}
+	if = {
+		limit = {
+			has_building = building_machine_capital
+		 }
+		 remove_building = building_machine_capital
+		 add_building = building_eternal_palace			
+	}
+	if = {
+		limit = {
+			has_building = building_machine_major_capital
+		 }
+		 remove_building = building_machine_major_capital
+		 add_building = building_eternal_palace						
+	}
+	if = {
+		limit = {
+			has_building = building_machine_system_capital
+		 }
+		 remove_building = building_machine_system_capital
+		 add_building = building_eternal_palace					
+	}
+
+	if = {
+		limit = {
+			has_building = building_hive_capital
+		 }
+		 remove_building = building_hive_capital
+		 add_building = building_eternal_palace						
+	}
+	if = {
+		limit = {
+			has_building = building_hive_major_capital
+		 }
+		 remove_building = building_hive_major_capital
+		 add_building = building_eternal_palace						
+	}
+
+	add_building = building_eternal_energy
+	add_building = building_eternal_energy
+	add_building = building_eternal_consumer
+	add_building = building_eternal_consumer
+	add_building = building_eternal_dark_matter
+	add_building = building_eternal_food
+	add_building = building_eternal_fortress
+	add_building = building_eternal_ressource
+	add_building = building_eternal_rares
+	add_building = building_eternal_rares
+
+
+}

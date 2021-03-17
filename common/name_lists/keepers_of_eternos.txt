@@ -1,0 +1,220 @@
+﻿
+beep_2 = {
+	selectable = { always = yes }
+	randomized = no
+	alias = "Eternal II"
+
+	ship_names = {
+
+		generic = {
+			Dominus Aetherna Lux Infinios Salva Perpetua Aetherna Venus Spero Tartus Cantus Virtus Musicorum Magna Perfectum Luceat Signum Mirum Verum
+		}
+
+		corvette = {
+			Logicae
+		}
+		
+		destroyer = {
+			Daros
+		}
+		
+		cruiser = {
+			Spero
+		}
+		
+		battleship = {
+			Veritas
+		}
+		
+	
+		titan = {
+			Invictus
+		}
+
+		science = {
+			Scientia
+		}
+		
+		colossus = {
+			Illuminator
+		}
+		
+		colonizer = {
+			Sedius
+		}
+		
+		constructor = {
+			Andreios
+		}
+		
+		mining_station = { Metallon }
+		research_station = { Sophia }
+		
+		#terraform_station = { ├┴╦ }
+		observation_station = { Antanaklasis }
+		
+		
+		transport = {
+			Lacus
+		}
+		
+		military_station_small = {
+			Stabilos Infinios Eternios
+		}
+
+		ion_cannon = {
+			Energios
+		}
+		
+		
+		military_station_medium = {}
+
+		
+		military_station_large = {
+			Victory Success Triumph Supremacy Superior Adventure Ascendancy Paramount Preponderous Exemplary Eximious
+			Acclaim Honor Renown Glory Superb Magnificence Majestic Splendor Paradigm Flawless Consummate Merit
+			Perfection Virtue Advantage Rectitude Incorruptible Integrity Justice Probity Prudence Purity Resolute
+			Dignity Distinction Excellence Faithful Discipline Recompense Retribution Requiem Courage Valor Gallant
+			Daring Constancy Perseverence Tenacity Sedulity Diligence Pertinacity Steadfast
+		}
+		
+		
+		
+		
+		
+	}
+
+	fleet_names = {
+		random_names = {
+			"Wrath of Eternos" "Will of Chirus" "Legacy of Aurios" "Legacy of Stefanus" "Legacy of Athena" "Legacy of Tyrastes" "Will of Eternos"
+		}
+		sequential_name = "%O% Taretium"
+	}
+	
+	army_names = {
+		generic = { 
+			sequential_name = "%O% Tesqalium"
+		}
+
+		assault_army = {
+			sequential_name = "%O% Veritas"
+		}
+		
+		slave_army = {
+			sequential_name = "%O% Servus"
+		}
+		
+		clone_army = {
+			sequential_name = "%O% he dýnamis"
+		}
+		
+		robotic_army = {
+			sequential_name = "%O% he dýnamis"
+		}
+		
+		
+		psionic_army = { 
+			random_names = { 
+				"Deus ex Manibus" 
+			}
+			sequential_name = "%O% Keepers"
+		}
+		
+		xenomorph_army = {
+			random_names = { 
+				Experimental Unit 'Rahab' Experimental Unit 'Jaculus' Experimental Unit 'Amaru' Experimental Unit 'Orochi' Experimental Unit 'Typhon' Experimental Unit 'Illuyanka'
+				Experimental Unit 'Bakunawa' Experimental Unit 'Fafnir' Experimental Unit 'Tarasque' Experimental Unit 'Tiamat'
+			}
+			sequential_name = "%O% Theta"
+		}
+		
+		gene_warrior_army = {
+			sequential_name = "%O% Regulatoros"
+		}
+	}
+
+	### PLANETS
+
+	planet_names = {
+
+		generic = {
+			names = { 
+				 Gloria Nobis Sanctus Visum Regula Virtus Musicorum Principium Virtutis Tuaem Tecum Magna Perfectum Luceat Signum Mirum Verum Illumium Salva Salva Lurta Perpertua Sanctis Ilumen Lunaria Solaria Solestes Luxaria Lux Lura Elysium Philos Dynamis Diakosyne Metropolis Philosophos Andreia Nous Nomoi Polis Bios Logos Kardia Aition Ethisma Sophistes Chalkos Aspasmos Basis Nousopolis Stratia Philopolis Thanatos Telos Teleios  						Logopolis Theta Therma Logia Aner Athenai Illusios Chirus Mirus
+			}
+		}
+		
+		pc_desert = {
+			names = {
+				
+			}
+		}
+		
+		pc_tropical = {
+			names = {
+				
+			}
+		}
+		
+		pc_arid = {
+			names = {
+				
+			}
+		}
+		
+		pc_continental = {
+			names = {
+				
+			}
+		}
+		
+		pc_gaia = {
+			names = {
+				
+			}
+		}
+		
+		pc_ocean = {
+			names = {
+				
+			}
+		}
+		
+		pc_tundra = {
+			names = {
+				
+			}
+		}
+		
+		pc_arctic = {
+			names = {
+				
+			}
+		}
+		
+	}
+
+	### CHARACTERS
+	character_names = {
+		names1 = {
+			weight = 40
+			first_names_male = {
+				Imperius Malthael Arel Murael Teleriel Aetheriel Aetheal Tyrael Tandiel Therael Impereal Gabriel Michael Malriel Andiel Anadiel Telraniel Daniel Talaniel Anariel 				Falanel Taranel Alarel Falarel Dalarel Gabriel Oriel Bandoriel Eniel Feniel Kyoreal Kaloral Kyotrel Kylethrien Kaleniel
+			}
+			first_names_female = {
+				Auriel Kaliel Telnariel Tenebria Anaria Falania Kassandra Telendris Selendis Alaia Tassalia Alrissa Teleia Kalyndriel Anastiel Faradiel Teranielle Lyrielle 						Dyrielle Alaryl
+			}
+			second_names = {
+				  " "
+			}
+			regnal_first_names_male = {
+				Intracus
+			}
+			regnal_first_names_female = {
+				Eternos Presos
+			}
+			regnal_second_names = {
+				  " "
+			}
+		}
+	}
+}

@@ -1,0 +1,95 @@
+
+
+on_game_start_country = {
+	events = {
+		eternal.39	
+		setuptw.3
+		twinks_ee.1
+		twinks_ee.2
+		setuptw.3
+		twinks_ee.1
+		twinks_ee.2
+		twinks_ee.3
+		twinks_fla.5
+		twleader.3
+		twleader.5
+		twinks_se.2
+		twinks_se.1
+		
+	}
+}
+
+
+
+on_leader_spawned = {
+	events = {
+		eternal_leader_events.1
+		eternal_leader_events.2
+		eternal_leader_events.3
+		eternal_leader_events.4
+		eternal_leader_events.5
+		eternal_leader_events.6
+		eternal_leader_events.7
+		eternal_leader_events.8
+
+	}
+}
+
+# No scope, like on_game_start
+on_monthly_pulse_country = {
+	events = {
+		twleader.3
+		twleader.5
+		playable_fe_init.4
+		playable_fes_init.4
+		
+	}
+}
+
+
+on_colonized = {
+	events = {
+		telop.6
+		telop.7
+		telop.12
+		telop.13
+	}
+}
+
+on_colony_1_year_old = {
+	events = {
+		telop.6
+		telop.7
+		telop.12
+		telop.13
+	}
+}
+
+on_first_contact = {
+	events = {
+		eternal.31
+	}
+}
+
+on_yearly_pulse_country = {
+	events = {
+		twvasall.1
+		twvasall.2
+		twvasall.3
+		twvasall.4
+		eternal.39
+	}
+}
+
+on_planet_zero_pops = {
+	events = {
+        eternal_reorigination.2
+		
+	}
+}
+
+on_five_year_pulse = {
+	events = {
+		
+	}
+}

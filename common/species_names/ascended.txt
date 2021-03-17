@@ -1,0 +1,21 @@
+
+## Ascended
+
+ASCENDED = { 
+
+	eternal = { 
+		name = Eternal
+		plural = Eternals
+		home_planet = Infinity
+		home_system = Eternity
+		name_list = "ASCENDED1"
+	}
+
+	ascended = { 
+		name = Ascendant
+		plural = Ascendants
+		home_planet = Awakening
+		home_system = Rise
+		name_list = "ASCENDED2"
+	}
+}

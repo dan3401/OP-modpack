@@ -1,0 +1,41 @@
+sectors_others_group = {
+	resources = {
+		volatile_motes
+		exotic_gases
+		rare_crystals
+		sr_living_metal
+		sr_zro
+		sr_dark_matter
+		nanites
+		acot_sr_dark_energy
+		acot_sr_stellarite
+		acot_sr_light_matter
+		esc_living_crystal
+		esc_gravitic_anomaly
+		esc_psionic_charge
+		esc_transdimensional_vortex
+		esc_enigmatic_energy
+		ukn_neutronium
+		ukn_electroweak_matter
+		ukn_quasi_matter
+		ukn_exotic_matter
+		ukn_exions
+		ukn_e3z0
+		ukn_tachyons
+		sr_iodizium
+		sr_solar_energy
+		arcane_technology
+		sr_GAPS_psychic_power
+		virtue
+		ancient_knowldege
+		ambrosia
+		eternium
+		void_matter
+		
+
+	}
+	localization = {
+		"RESOURCE_GROUP_BALANCE_ONLY" = default
+		"RESOURCE_GROUP_BALANCE_ONLY_NEG" = { balance < 0 }
+	}
+}

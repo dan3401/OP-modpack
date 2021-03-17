@@ -1,0 +1,612 @@
+
+# Colonial Council Hall
+building_world_council = {
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+
+	category = amenity
+
+	potential = {
+		NOT = { has_modifier = slave_colony }
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			has_valid_civic = civic_world_council
+		}
+	}
+
+	allow = {
+		buildings_simple_allow = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			NOT = {
+				has_valid_civic = civic_world_council
+			}
+		}
+	}
+
+	planet_modifier = {
+		planet_amenities_add = 5
+		planet_stability_add = 5
+		planet_jobs_unity_produces_mult = 0.10
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			energy = 2
+			consumer_goods = 2
+		}
+	}
+
+	upgrades = {
+		"building_world_council_2"
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 100
+			owner = { has_valid_civic = civic_world_council }
+		}
+	}
+}
+
+# Planetary Council Hall
+building_world_council_2 = {
+	base_buildtime = @b2_time
+	base_cap_amount = 1
+
+	category = amenity
+
+	potential = {
+		NOT = { has_modifier = slave_colony }
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			has_valid_civic = civic_world_council
+		}
+		exists = planet
+		planet = { is_capital = yes }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			NOT = {
+				has_valid_civic = civic_world_council
+			}
+		}
+	}
+
+	planet_modifier = {
+		planet_amenities_add = 10
+		planet_stability_add = 10
+		planet_jobs_unity_produces_mult = 0.15
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+		}
+		upkeep = {
+			energy = 4
+			consumer_goods = 4
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 100
+			owner = { has_valid_civic = civic_world_council }
+		}
+	}
+}
+
+# Planetary Databanks
+building_databanks = {
+	base_buildtime = 480
+	base_cap_amount = 1
+
+	category = resource
+	
+	potential = {
+		exists = planet
+		planet = { is_capital = yes }
+		owner = {
+			is_regular_empire = yes
+			has_valid_civic = civic_seekers_of_knowledge
+		}
+		NOT = { has_modifier = slave_colony }
+	}
+	
+	destroy_trigger = {
+		exists = owner
+		NOT = {
+			owner = { has_valid_civic = civic_seekers_of_knowledge }
+		}
+		has_modifier = slave_colony
+	}
+
+	planet_modifier = {
+		job_researcher_add = 1
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+		}
+		upkeep = {
+			energy = 3
+		}
+		produces = {
+			physics_research = 5
+			society_research = 5
+			engineering_research = 5
+		}
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		text = job_researcher_effect_desc
+	}	
+	
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0
+			buildings_build_building = no
+		}
+	}
+}
+
+# Entertainment Facilities (corporate)
+building_corporate_entertainment_facilities = {
+	base_buildtime = @b2_time
+	base_cap_amount = 1
+
+	branch_office_building = yes
+	
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = { has_valid_civic = civic_entertainment_facilities }
+	}
+	
+	destroy_trigger = {
+		has_branch_office = yes
+		NOT = {
+			branch_office_owner = { has_valid_civic = civic_entertainment_facilities }
+		}
+	}
+
+	planet_modifier = {
+		job_clerk_add = 1
+		job_entertainer_add = 1
+		branch_office_value_mult = 0.25
+	}
+	
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		upkeep = {
+			energy = 3
+		}
+		produces = {
+			unity = 2
+		}
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		text = job_clerk_effect_desc
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		text = job_entertainer_effect_desc
+	}
+	
+	ai_weight = {
+		weight = 10
+	}
+}
+
+# Goods Outlet (corporate)
+building_corporate_goods_outlet = {
+	base_buildtime = 360
+	base_cap_amount = 1
+
+	branch_office_building = yes
+	
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = { has_valid_civic = civic_consumer_focus }
+	}
+	
+	country_modifier = {
+		pop_happiness = 0.02
+	}
+
+	planet_modifier = {
+		job_clerk_add = 2
+		branch_office_value_mult = 0.10
+	}
+	
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		upkeep = {
+			energy = 2
+			consumer_goods = 4
+		}
+		produces = {
+			energy = 8
+		}
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		text = job_clerk_effect_desc
+	}
+	
+	ai_weight = {
+		weight = 10
+	}
+}
+
+# Material Distributor (corporate)
+building_corporate_industrial_distributor = {
+	base_buildtime = 360
+	base_cap_amount = 1
+
+	branch_office_building = yes
+	
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = { has_valid_civic = civic_construction_industry }
+	}
+	
+	country_modifier = {
+		starbase_shipyard_build_cost_mult = -0.02
+	}
+
+	planet_modifier = {
+		job_clerk_add = 2
+		branch_office_value_mult = 0.10
+	}
+	
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		upkeep = {
+			energy = 2
+			alloys = 4
+		}
+		produces = {
+			energy = 16
+		}
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		text = job_clerk_effect_desc
+	}
+	
+	ai_weight = {
+		weight = 10
+	}
+}
+
+building_crystal_prospecting_machine = {
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+
+	category = resource
+
+	potential = {
+		exists = planet
+		planet = { is_capital = yes }
+		owner = {
+			is_regular_empire = yes
+			has_valid_civic = civic_crystalline_energy_grid
+		}
+	}
+	
+	allow = {
+		buildings_simple_allow = yes
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 200
+		}
+		upkeep = {
+			energy = 1
+			minerals = 8
+		}
+		produces = {
+			rare_crystals = 4
+		}
+	}
+	
+	upgrades = {
+		building_crystal_prospecting_machine_2
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+building_crystal_prospecting_machine_2 = {
+	base_buildtime = @b1_time
+	can_build = no
+
+	category = resource
+
+	potential = {
+		exists = planet
+		planet = { is_capital = yes }
+		owner = {
+			is_regular_empire = yes
+			has_valid_civic = civic_crystalline_energy_grid
+		}
+	}
+	
+	allow = {
+		buildings_simple_allow = yes
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 200
+		}
+		upkeep = {
+			energy = 1
+			minerals = 16
+		}
+		produces = {
+			rare_crystals = 8
+		}
+	}
+	
+	upgrades = {
+		building_crystal_prospecting_machine_3
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+building_crystal_prospecting_machine_3 = {
+	base_buildtime = @b2_time
+	can_build = no
+
+	category = resource
+
+	potential = {
+		exists = planet
+		planet = { is_capital = yes }
+		owner = {
+			is_regular_empire = yes
+			has_valid_civic = civic_crystalline_energy_grid
+		}
+	}
+	
+	allow = {
+		exists = owner
+	}
+
+	planet_modifier = {
+		planet_jobs_rare_crystals_produces_mult = 0.10
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 200
+		}
+		upkeep = {
+			energy = 2
+			minerals = 24
+		}
+		produces = {
+			rare_crystals = 12
+		}
+	}
+	
+	upgrades = {
+		building_crystal_prospecting_machine_4
+	}
+	
+	prerequisites = {
+		tech_crystal_prospecting_3_and_4
+	}
+
+	ai_weight = {
+		weight = 80
+	}
+}
+
+building_crystal_prospecting_machine_4 = {
+	base_buildtime = @b2_time
+	can_build = no
+
+	category = resource
+
+	potential = {
+		exists = planet
+		planet = { is_capital = yes }
+		owner = {
+			is_regular_empire = yes
+			has_valid_civic = civic_crystalline_energy_grid
+		}
+	}
+	
+	allow = {
+		exists = owner
+		has_upgraded_capital = yes
+	}
+
+	planet_modifier = {
+		planet_jobs_rare_crystals_produces_mult = 0.15
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 200
+		}
+		upkeep = {
+			energy = 2
+			minerals = 40
+		}
+		produces = {
+			rare_crystals = 20
+		}
+	}
+	
+	upgrades = {
+		building_crystal_prospecting_machine_5
+	}
+	
+	prerequisites = {
+		tech_crystal_prospecting_3_and_4
+	}
+
+	ai_weight = {
+		weight = 70
+	}
+}
+
+building_crystal_prospecting_machine_5 = {
+	base_buildtime = @b2_time
+	can_build = no
+
+	category = resource
+
+	potential = {
+		exists = planet
+		planet = { is_capital = yes }
+		owner = {
+			is_regular_empire = yes
+			has_valid_civic = civic_crystalline_energy_grid
+		}
+	}
+	
+	allow = {
+		exists = owner
+		has_upgraded_capital = yes
+	}
+
+	planet_modifier = {
+		planet_jobs_rare_crystals_produces_mult = 0.20
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 300
+		}
+		upkeep = {
+			energy = 2
+			minerals = 50
+		}
+		produces = {
+			rare_crystals = 30
+		}
+	}
+	
+	upgrades = {
+		building_crystal_prospecting_machine_6
+	}
+	
+	prerequisites = {
+		tech_crystal_prospecting_5
+	}
+
+	ai_weight = {
+		weight = 60
+	}
+}
+
+building_crystal_prospecting_machine_6 = {
+	base_buildtime = @b2_time
+	can_build = no
+
+	category = resource
+
+	potential = {
+		exists = planet
+		planet = { is_capital = yes }
+		owner = {
+			is_regular_empire = yes
+			has_valid_civic = civic_crystalline_energy_grid
+		}
+	}
+	
+	allow = {
+		exists = owner
+		has_major_upgraded_capital = yes
+	}
+
+	planet_modifier = {
+		planet_jobs_rare_crystals_produces_mult = 0.25
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 400
+		}
+		upkeep = {
+			energy = 3
+			minerals = 75
+		}
+		produces = {
+			rare_crystals = 50
+		}
+	}
+	
+	
+	prerequisites = {
+		tech_crystal_prospecting_6
+	}
+
+	ai_weight = {
+		weight = 50
+	}
+}

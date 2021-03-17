@@ -1,0 +1,10 @@
+###_后期优化	新增modifier类型
+#_	LIOS
+
+
+#_贸易补偿
+z_pf2_ecat_trade = {
+	generate_mult_modifiers = {
+		produces
+	}
+}

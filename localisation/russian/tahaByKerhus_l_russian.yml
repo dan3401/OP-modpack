@@ -1,0 +1,17 @@
+﻿l_russian:
+# ## Ascension
+ tahabykerhus_not_ap_synthetic_evolution:0 "$TRIGGER_FAIL$Не должно быть бонуса совершенства §Y$ap_synthetic_evolution$§!."
+# ## Technologies
+ tech_tahaByKerhus_brainslug1:0 "Анализ мозгового слизня"
+ tech_tahaByKerhus_brainslug1_desc:0 "Изучение структуры РНК и ДНК, математический расчёт оптимального потребления килокаллорий слизнем, биохимическая адаптация потенциальных носителей."
+ tech_tahaByKerhus_brainslug2:0 "Мозговой слизень: хронология ДНК"
+ tech_tahaByKerhus_brainslug2_desc:0 "При изучении цепочек РНК и ДНК слизней были обнаружены остаточные белковые звенья предыдущих носителей."
+ TECH_TAHABYKERHUS_BRAINSLUG_CHANGE_TITLE:0 "Признаки предразумных"
+ TECH_TAHABYKERHUS_BRAINSLUG_CHANGE_DESC:0 "Открывает большое количество признаков, восстановленных из остаточных белковых цепочек мозговых слизней."
+
+ tech_tahabyk_cyberslave_implants:0 "Технология кибер-имплантов для рабов"
+ tech_tahabyk_cyberslave_implants_desc:0 "Технология кибер-имплантов для рабов"
+# ### Traits
+ trait_tahabyk_cyberimplant_slave:0 "Киберимпланты класса «Slave»"
+ trait_tahabyk_cyberimplant_slave_desc:0 "§LСпециально разработанные киберимпланты для рабов. Данные киберимпланты оснащены модулем нервного регулятора, в случае опасности для создателя - отключаются.§!"
+ TRAIT_TAHABYK_CYBERIMPLANT_SLAVE_EFFECT:0 "$MOD_POP_ENVIRONMENT_TOLERANCE$: §G+20%§!\n$MOD_ARMY_DEFENSE_DAMAGE_MULT$: §G+10%§!\n$MOD_ARMY_DEFENSE_HEALTH_MULT$: §G+10%§!\n$mod_planet_jobs_produces_mult$: §G+5%§!\n£minerals£ $minerals$ от £job£ должностей: §G+2%§!\n$mod_planet_jobs_energy_produces_mult$: §G+2%§!\nНельзя создавать §Yлидеров§!\nНельзя осуществлять такую деятельность, как §Y$pop_cat_ruler$§! или §Y$pop_cat_specialist$§!"

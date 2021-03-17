@@ -1,0 +1,470 @@
+
+
+
+plane_ideas = {
+	length = 360
+	resources = {
+		category = edicts
+		cost = {
+			virtue = 1
+		}
+	}
+	
+	prerequisites = {
+		tech_fallenw
+	}
+	potential = {
+		NOT = { has_authority = auth_hive_mind }
+	}
+		
+	allow = {
+		OR = {
+		has_technology = "tech_fallenw"
+		}
+	}
+	
+	effect = { country_event = { id = ee_hyperlane.3 } }
+
+	ai_weight = {
+		weight = 0
+		
+					
+	}
+}
+
+eternal_ambition_guidance = {
+	length = 3600
+	resources = {
+		category = edicts
+		cost = {
+			virtue = 50000
+		}
+	}
+	
+	prerequisites = {
+		tech_fallenw
+	}
+	potential = {
+		NOT = { has_authority = auth_hive_mind }
+	}
+		
+	allow = {
+		OR = {
+		has_technology = "tech_fallenw"
+		}
+	}
+	
+	modifier = {
+		country_subject_acceptance_add = 50
+	}
+
+	ai_weight = {
+		weight = 0
+		
+					
+	}
+}
+
+eternal_ambition_influence = {
+	length = 3600
+	resources = {
+		category = edicts
+		cost = {
+			influence = 1000
+		}
+	}
+	
+	prerequisites = {
+		tech_fallenw
+	}
+	potential = {
+		NOT = { has_authority = auth_hive_mind }
+	}
+		
+	allow = {
+		OR = {
+		has_technology = "tech_fallenw"
+		}
+	}
+	
+	modifier = {
+		planet_jobs_unity_produces_mult = 0.3
+	}
+
+	ai_weight = {
+		weight = 0
+		
+					
+	}
+}
+
+eternal_ambition_influence_2 = {
+	length = 3600
+	resources = {
+		category = edicts
+		cost = {
+			influence = 1000
+		}
+	}
+	
+	prerequisites = {
+		tech_fallenw
+	}
+	potential = {
+		NOT = { has_authority = auth_hive_mind }
+	}
+		
+	allow = {
+		OR = {
+		has_technology = "tech_fallenw"
+		}
+	}
+	
+	modifier = {
+		planet_jobs_virtue_produces_mult = 0.3
+	}
+
+	ai_weight = {
+		weight = 0
+		
+					
+	}
+}
+
+eternal_ambition_influence_3 = {
+	length = 3600
+	resources = {
+		category = edicts
+		cost = {
+			influence = 1000
+		}
+	}
+	
+	prerequisites = {
+		tech_fallenw
+	}
+	potential = {
+		NOT = { has_authority = auth_hive_mind }
+	}
+		
+	allow = {
+		OR = {
+		has_technology = "tech_fallenw"
+		}
+	}
+	
+	modifier = {
+		planet_jobs_eternium_produces_mult = 0.3
+	}
+
+	ai_weight = {
+		weight = 0
+		
+					
+	}
+}
+
+eternal_eternium_1 = {
+	length = 3600
+	resources = {
+		category = edicts
+		cost = {
+			energy = 50000
+		}
+	}
+	
+	prerequisites = {
+		tech_fallenw
+	}
+	potential = {
+		NOT = { has_authority = auth_hive_mind }
+	}
+		
+	allow = {
+		OR = {
+		has_technology = "tech_fallenw"
+		}
+	}
+	
+	modifier = {
+		country_base_eternium_produces_add = 3
+	}
+
+	ai_weight = {
+		weight = 0
+		
+					
+	}
+}
+
+eternal_eternium_2 = {
+	length = 3600
+	resources = {
+		category = edicts
+		cost = {
+			energy = 100000
+		}
+	}
+	
+	prerequisites = {
+		tech_fallenw
+	}
+	potential = {
+		NOT = { has_authority = auth_hive_mind }
+	}
+		
+	allow = {
+		OR = {
+		has_technology = "tech_fallenw"
+		}
+	}
+	
+	modifier = {
+		country_base_eternium_produces_add = 6
+	}
+
+	ai_weight = {
+		weight = 0
+		
+					
+	}
+}
+
+eternal_eternium_3 = {
+	length = 3600
+	resources = {
+		category = edicts
+		cost = {
+			energy = 150000
+		}
+	}
+	
+	prerequisites = {
+		tech_fallenw
+	}
+	potential = {
+		NOT = { has_authority = auth_hive_mind }
+	}
+		
+	allow = {
+		OR = {
+		has_technology = "tech_fallenw"
+		}
+	}
+	
+	modifier = {
+		country_base_eternium_produces_add = 8
+	}
+
+	ai_weight = {
+		weight = 0
+		
+					
+	}
+}
+
+
+
+eternal_ambition_progenitor = {
+	length = 3600
+	resources = {
+		category = edicts
+		cost = {
+			virtue = 50000
+		}
+	}
+	
+	prerequisites = {
+		tech_fallenw
+	}
+	potential = {
+		NOT = { has_authority = auth_hive_mind }
+	}
+		
+	allow = {
+		OR = {
+		has_technology = "tech_fallenw"
+		}
+	}
+	
+	modifier = {
+		country_subject_technology_sharing_mult = 0.5
+	}
+
+	ai_weight = {
+		weight = 0
+						
+	}
+}
+
+eternal_ambition_knowledge = {
+	length = 3600
+	resources = {
+		category = edicts
+		cost = {
+			ancient_knowldege = 20000
+		}
+	}
+	
+	prerequisites = {
+		tech_fallenw
+	}
+	potential = {
+		NOT = { has_authority = auth_hive_mind }
+	}
+		
+	allow = {
+		OR = {
+		has_technology = "tech_fallenw"
+		}
+	}
+	
+	modifier = {
+		country_virtue_produces_mult = 0.2
+	}
+
+	ai_weight = {
+		weight = 0
+						
+	}
+}
+
+eternal_ambition_growth = {
+	length = 3600
+	resources = {
+		category = edicts
+		cost = {
+			ambrosia = 20000
+		}
+	}
+	
+	prerequisites = {
+		tech_fallenw
+	}
+	potential = {
+		NOT = { has_authority = auth_hive_mind }
+	}
+		
+	allow = {
+		OR = {
+		has_technology = "tech_fallenw"
+		}
+	}
+	
+	modifier = {
+		pop_growth_speed = 1.0
+	}
+
+	ai_weight = {
+		weight = 0
+						
+	}
+}
+
+eternal_ambition_eternium_1 = {
+	length = 3600
+	resources = {
+		category = edicts
+		cost = {
+			eternium = 1000
+		}
+	}
+	
+	prerequisites = {
+		tech_fallenw
+	}
+	potential = {
+		NOT = { has_authority = auth_hive_mind }
+	}
+		
+	allow = {
+		OR = {
+		has_technology = "tech_fallenw"
+		}
+	}
+	
+	modifier = {
+
+		ship_weapon_damage = 0.2
+		army_damage_mult = 0.2
+		ship_shield_mult = 0.2
+	}
+
+	ai_weight = {
+		weight = 1000
+						
+	}
+}
+
+eternal_ambition_eternium_2 = {
+	length = 3600
+	resources = {
+		category = edicts
+		cost = {
+			eternium = 5000
+		}
+	}
+	
+	prerequisites = {
+		tech_fallenw
+	}
+	potential = {
+		NOT = { has_authority = auth_hive_mind }
+	}
+		
+	allow = {
+		OR = {
+		has_technology = "tech_fallenw"
+		}
+	}
+	
+	modifier = {
+
+		ship_weapon_damage = 0.4
+		army_damage_mult = 0.4
+		ship_shield_mult = 0.4
+	}
+
+	ai_weight = {
+		weight = 1000
+						
+	}
+}
+
+eternal_ambition_eternium_3 = {
+	length = 3600
+	resources = {
+		category = edicts
+		cost = {
+			eternium = 10000
+		}
+	}
+	
+	prerequisites = {
+		tech_fallenw
+	}
+	potential = {
+		NOT = { has_authority = auth_hive_mind }
+	}
+		
+	allow = {
+		OR = {
+		has_technology = "tech_fallenw"
+		}
+	}
+	
+	modifier = {
+	
+		ship_weapon_damage = 0.8
+		army_damage_mult = 0.8
+		ship_shield_mult = 0.8
+	}
+
+	ai_weight = {
+		weight = 1000
+						
+	}
+}
+
+
+

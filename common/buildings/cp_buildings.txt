@@ -1,0 +1,503 @@
+cp_building_local_cantina = { #Local Cantina
+	base_buildtime = @b1_time
+	branch_office_building = yes
+	icon = building_primitive_dwellings
+	potential = {
+		has_branch_office = yes
+		exists = owner
+		owner = { has_valid_civic = cp_civic_space_cantina }
+	}
+	planet_modifier = {
+		job_cp_patron_add = 2
+		job_entertainer_add = 1
+		pop_government_ethic_attraction = -0.25
+	}
+	country_modifier = {
+		planet_immigration_pull_mult = 0.5
+	}
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 400
+		}
+		upkeep = {
+			energy = 3
+		}
+	}
+	destroy_trigger = {
+		exists = owner
+		NOT = {
+			owner = { has_civic = cp_civic_space_cantina }
+		}
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = job_entertainer_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = job_patron_effect_desc
+	}
+	ai_weight = {
+		factor = 1
+	}
+}
+cp_building_cantina_wing = { #Cantina Wing
+	base_buildtime = @b1_time
+	icon = building_underground_clubs
+	potential = {
+		exists = owner
+		owner = { has_valid_civic = cp_civic_space_cantina }
+	}
+	planet_modifier = {
+		job_cp_patron_add = 8
+		job_entertainer_add = 4
+		planet_max_buildings_add = 1
+	}
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			alloys = 800
+		}
+		upkeep = {
+			energy = 6
+		}
+	}
+	destroy_trigger = {
+		exists = owner
+		NOT = {
+			owner = { has_civic = cp_civic_space_cantina }
+		}
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = job_entertainer_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = job_patron_effect_desc
+	}
+	ai_weight = {
+		factor = 1
+	}
+}
+cp_building_toothpaste_factory = { #Toothpaste Factory
+	base_buildtime = @b1_time
+	icon = building_waste_reprocessing_center
+	category = manufacturing
+	potential = {
+		exists = owner
+		owner = { has_valid_civic = cp_civic_toothpaste_enterprise }
+	}
+	destroy_trigger = {
+		exists = owner
+		NOT = {
+			owner = { has_civic = cp_civic_toothpaste_enterprise }
+		}
+	}
+	planet_modifier = {
+		job_cp_toothpaste_add = 2
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 600
+		}
+		upkeep = {
+			energy = 4
+		}
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = job_toothpaste_effect_desc
+	}
+	ai_weight = {
+		factor = 1
+	}
+}
+cp_building_toothpaste_factory_branch_office = { #Branch Office Toothpaste Factory
+	base_buildtime = @b1_time
+	icon = building_waste_reprocessing_center
+	branch_office_building = yes
+	potential = {
+		has_branch_office = yes
+		exists = owner
+		owner = { has_valid_civic = cp_civic_toothpaste_enterprise }
+	}
+	planet_modifier = {
+		job_cp_toothpaste_add = 1
+	}
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 600
+		}
+		produces = {
+			society_research = 3
+		}
+		upkeep = {
+			energy = 4
+		}
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = job_toothpaste_effect_desc
+	}
+	ai_weight = {
+		factor = 1
+	}
+}
+cp_building_monetization_office = { #Monetization Office
+	base_buildtime = @b1_time
+	icon = building_public_relations_office
+	category = government
+	potential = {
+		exists = owner
+		owner = { has_valid_civic = cp_civic_monetization_office }
+	}
+	planet_modifier = {
+		job_cp_inhumer_add = 3
+		planet_technician_energy_produces_mult = 0.10
+	}
+	destroy_trigger = {
+		exists = owner
+		NOT = {
+			owner = { has_civic = cp_civic_monetization_office }
+		}
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 400
+		}
+		upkeep = {
+			energy = 3
+		}
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = job_inhumer_effect_desc
+	}
+	ai_weight = {
+		factor = 1
+	}
+}
+cp_building_temple_paradise = { #Temple of Paradise
+	base_buildtime = @b1_time
+	icon = building_stone_palace
+	category = government
+	base_cap_amount = 1
+	potential = {
+		exists = owner
+		owner = { has_valid_civic = cp_civic_utopia_question }
+	}
+	planet_modifier = {
+		job_cp_visionary_add = 1
+	}
+	destroy_trigger = {
+		exists = owner
+		NOT = {
+			owner = { has_civic = cp_civic_utopia_question }
+		}
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 600
+		}
+		upkeep = {
+			energy = 3
+		}
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = job_visionary_effect_desc
+	}
+	ai_weight = {
+		factor = 1
+	}
+}
+cp_building_sacred_ground = { #Sacred Ground
+	base_buildtime = @b1_time
+	icon = building_autocurating_vault
+	category = government
+	potential = {
+		exists = owner
+		owner = { has_valid_civic = cp_civic_immortal_ascendancy }
+	}
+	planet_modifier = {
+		job_cp_acolyte_add = 4
+	}
+	destroy_trigger = {
+		exists = owner
+		NOT = {
+			owner = { has_civic = cp_civic_immortal_ascendancy }
+		}
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 400
+		}
+		upkeep = {
+			energy = 3
+		}
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = job_acolyte_effect_desc
+	}
+	ai_weight = {
+		factor = 1
+	}
+}
+cp_building_immortal_palace = { #Immortal Palace 1
+	#base_buildtime = @b1_time
+	#icon = building_autocurating_vault
+	can_build = no
+	can_be_disabled = no
+	base_cap_amount = 1
+	can_demolish = no
+	can_be_ruined = no
+	category = government
+	potential = {
+		exists = owner
+		owner = { has_valid_civic = cp_civic_immortal_ascendancy }
+	}
+	planet_modifier = {
+		#
+	}
+	destroy_trigger = {
+		exists = owner
+		NOT = {
+			owner = { has_civic = cp_civic_immortal_ascendancy }
+		}
+	}
+	resources = {
+		category = planet_buildings
+		upkeep = {
+			sr_dark_matter = 3
+		}
+	}
+}
+cp_building_immortal_palace_2 = { #Immortal Palace 2
+	#base_buildtime = @b1_time
+	icon = cp_building_immortal_palace
+	can_build = no
+	can_be_disabled = no
+	base_cap_amount = 1
+	can_demolish = no
+	can_be_ruined = no
+	category = government
+	potential = {
+		exists = owner
+		owner = { has_valid_civic = cp_civic_immortal_ascendancy }
+	}
+	planet_modifier = {
+		#
+	}
+	destroy_trigger = {
+		exists = owner
+		NOT = {
+			owner = { has_civic = cp_civic_immortal_ascendancy }
+		}
+	}
+	resources = {
+		category = planet_buildings
+		upkeep = {
+			sr_dark_matter = 6
+		}
+	}
+}
+cp_building_immortal_palace_3 = { #Immortal Palace 3
+	#base_buildtime = @b1_time
+	icon = cp_building_immortal_palace
+	can_build = no
+	can_be_disabled = no
+	base_cap_amount = 1
+	can_demolish = no
+	can_be_ruined = no
+	category = government
+	potential = {
+		exists = owner
+		owner = { has_valid_civic = cp_civic_immortal_ascendancy }
+	}
+	planet_modifier = {
+		#
+	}
+	destroy_trigger = {
+		exists = owner
+		NOT = {
+			owner = { has_civic = cp_civic_immortal_ascendancy }
+		}
+	}
+	resources = {
+		category = planet_buildings
+		upkeep = {
+			sr_dark_matter = 12
+		}
+	}
+}
+cp_building_immortal_palace_4 = { #Immortal Palace 4
+	#base_buildtime = @b1_time
+	icon = cp_building_immortal_palace
+	can_build = no
+	can_be_disabled = no
+	base_cap_amount = 1
+	can_demolish = no
+	can_be_ruined = no
+	category = government
+	potential = {
+		exists = owner
+		owner = { has_valid_civic = cp_civic_immortal_ascendancy }
+	}
+	planet_modifier = {
+		#
+	}
+	destroy_trigger = {
+		exists = owner
+		NOT = {
+			owner = { has_civic = cp_civic_immortal_ascendancy }
+		}
+	}
+	resources = {
+		category = planet_buildings
+		upkeep = {
+			sr_dark_matter = 24
+		}
+	}
+}
+cp_building_immortal_palace_5 = { #Immortal Palace 5
+	#base_buildtime = @b1_time
+	icon = cp_building_immortal_palace
+	can_build = no
+	can_be_disabled = no
+	base_cap_amount = 1
+	can_demolish = no
+	can_be_ruined = no
+	category = government
+	potential = {
+		exists = owner
+		owner = { has_valid_civic = cp_civic_immortal_ascendancy }
+	}
+	planet_modifier = {
+		#
+	}
+	destroy_trigger = {
+		exists = owner
+		NOT = {
+			owner = { has_civic = cp_civic_immortal_ascendancy }
+		}
+	}
+	resources = {
+		category = planet_buildings
+		upkeep = {
+			sr_dark_matter = 48
+		}
+	}
+}
+cp_building_immortal_palace_6 = { #Immortal Palace 6
+	#base_buildtime = @b1_time
+	icon = cp_building_immortal_palace
+	can_build = no
+	can_be_disabled = no
+	base_cap_amount = 1
+	can_demolish = no
+	can_be_ruined = no
+	category = government
+	potential = {
+		exists = owner
+		owner = { has_valid_civic = cp_civic_immortal_ascendancy }
+	}
+	planet_modifier = {
+		#
+	}
+	destroy_trigger = {
+		exists = owner
+		NOT = {
+			owner = { has_civic = cp_civic_immortal_ascendancy }
+		}
+	}
+	resources = {
+		category = planet_buildings
+		upkeep = {
+			sr_dark_matter = 96
+		}
+	}
+}
+cp_building_immortal_palace_7 = { #Immortal Palace 7
+	#base_buildtime = @b1_time
+	icon = cp_building_immortal_palace
+	can_build = no
+	can_be_disabled = no
+	base_cap_amount = 1
+	can_demolish = no
+	can_be_ruined = no
+	category = government
+	potential = {
+		exists = owner
+		owner = { has_valid_civic = cp_civic_immortal_ascendancy }
+	}
+	planet_modifier = {
+		#
+	}
+	destroy_trigger = {
+		exists = owner
+		NOT = {
+			owner = { has_civic = cp_civic_immortal_ascendancy }
+		}
+	}
+	resources = {
+		category = planet_buildings
+		upkeep = {
+			sr_dark_matter = 192
+		}
+	}
+}
+cp_building_immortal_palace_8 = { #Immortal Palace 8
+	#base_buildtime = @b1_time
+	icon = cp_building_immortal_palace
+	can_build = no
+	can_be_disabled = no
+	base_cap_amount = 1
+	can_demolish = no
+	can_be_ruined = no
+	category = government
+	potential = {
+		exists = owner
+		owner = { has_valid_civic = cp_civic_immortal_ascendancy }
+	}
+	planet_modifier = {
+		#
+	}
+	destroy_trigger = {
+		exists = owner
+		NOT = {
+			owner = { has_civic = cp_civic_immortal_ascendancy }
+		}
+	}
+	resources = {
+		category = planet_buildings
+		upkeep = {
+			sr_dark_matter = 384
+		}
+	}
+}

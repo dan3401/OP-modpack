@@ -1,0 +1,13 @@
+# seems to behave weirdly if one galaxy has both secondary species civics active in it.. maybe some conflict somewhere
+#empire_init_create_capital_secondary_pops = {
+#	events = {
+#		exigencycivics.1
+#		game_start.11 --  with thanks to Red-Eyed_Fairace for showing me how to implement a secondary species in 2.2
+#	}
+#}
+
+empire_init_capital_planet = {
+	events = {
+		exigencycivics.1
+	}
+}

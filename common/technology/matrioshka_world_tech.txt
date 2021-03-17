@@ -1,0 +1,85 @@
+tech_matrioshka_world = {
+	area = engineering
+	cost = @matrioshka_world_tech_cost
+	tier = 4
+	category = { voidcraft }
+	
+	prerequisites = {
+		tech_mega_engineering
+	}
+	weight = @matrioshka_world_tech_weight
+	
+	is_rare = yes
+	
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = 2
+			OR = {
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_maniacal"
+				}
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_ascension_perk = ap_arcology_project
+				has_ascension_perk = ap_machine_worlds
+				has_ascension_perk = ap_hive_worlds
+			}
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = tech_matrioshka_world }
+			}
+		}
+		modifier = {
+			factor = 1.5
+			any_neighbor_country = {
+				has_technology = tech_matrioshka_world
+			}
+		}
+		modifier = {
+			factor = 2
+			has_ascension_perk = ap_master_builders
+		}
+	}
+	
+	ai_weight = {
+		factor = @matrioshka_world_ai_tech_weight
+		modifier = {
+			factor = 2
+			OR = {
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_maniacal"
+				}
+			}
+		}
+	}		
+}

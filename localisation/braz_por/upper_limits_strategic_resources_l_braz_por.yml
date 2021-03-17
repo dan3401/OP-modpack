@@ -1,0 +1,34 @@
+﻿l_braz_por:
+#{
+ # #######################
+ # Written by kngpig #
+ # #######################
+ #
+ # $tooltip$ , $VALUE$ (Putting up an existing localization line)
+ # £icon£ , £mod_job_industry_equipements_add£ (Putting up an icon)
+ # §colour§ , §R(Red)§! (R, Y, E, H, S, B, G) (! Returns to default) (R Red) (Y Yellow) (B Blue) (G Green)
+ # [(Scope.Call)] , [contact_empire.GetName] (You can have multiple scope into a specific thing based on event, there is also specific scopes the game uses. Example: primitive_civ, conquered_primitive_country, LastKilledCountryName, malfunctioning_leader)
+ # 
+ # #######################
+ #
+ # #######################
+#}
+
+ # ###################################
+ # Strategic Resources
+ # ###################################
+
+resource_starcore:0 "Starcore"
+resource_starcore_desc:0 "Um materiail perdidos há muito tempo, é limitado e não é reproduzível. Ele gera toneladas de energia que ainda descarrega sua bagunça de forma estável em energia pura; deixar de contê-lo significa perder esse recurso valioso."
+resource_illunia:0 "Illunia"
+resource_illunia_desc:0 "Um materiail perdidos há muito tempo, é limitado e não é reproduzível. Um material flexível, resistente, incontaminável e puro, é um material que contém quase todas as propriedades que você deseja que qualquer material possua e o faz melhor."
+
+ # ###################################
+ # Strategic Resources Deficit
+ # ###################################
+
+starcore_deficit:0 "Escassez de Starcore"
+starcore_deficit_desc:0 "Escassez de Starcore, nosso uso avançado dele não pode operar sem ele."
+
+illunia_deficit:0 "Escassez de Illunia"
+illunia_deficit_desc:0 "Escassez de Starcore, nosso uso avançado dele não pode operar sem ele."

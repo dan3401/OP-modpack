@@ -1,0 +1,123 @@
+weapon_component_template = {
+	key = "ETERNAL_PLASMA_EE"
+	size = small
+	icon = "GFX_ship_part_eternium_photon"
+	icon_frame = 1
+	entity = "medium_laser_gun_entity"
+	type = instant
+
+	damage = { min = 500 max = 1000 }
+	windup = { min = 25 max = 35 }
+	total_fire_time = 42
+	range = 80
+	accuracy = 1.0
+	power = -270
+	hull_damage = 1.5
+	armor_penetration = 0.0
+	armor_damage = 2.25
+	shield_penetration = 0.0
+	shield_damage =1.0
+	tracking = 0.35
+	resources = {
+		category = ship_components
+		cost = {
+			eternium = 0.5
+		}
+	}
+
+	prerequisites = { tech_fallenw }
+	component_set = "ETERNAL_PLASMA_EE"
+	projectile_gfx = "eternal_plasma_cannon_s"
+	tags = { weapon_type_cosmic }
+	ai_tags = { weapon_role_anti_armor }
+	
+	ai_weight = {
+		weight = 3000
+	}
+}
+
+weapon_component_template = {
+	key = "ETERNAL_PLASMA_EE_MEDIUM"
+	size = medium
+	icon = "GFX_ship_part_eternium_photon"
+	icon_frame = 1	
+	entity = "large_laser_gun_entity"
+	type = instant
+
+	damage = { min = 1000 max = 2000 }
+	windup = { min = 25 max = 35 }
+	total_fire_time = 42
+	range = 130
+	missile_speed = 300 
+	missile_evasion = 0.70
+	missile_health = 90
+	missile_shield = 0
+	missile_retarget_range = 150
+	accuracy = 0.80
+	power = -5000
+	hull_damage = 2.0
+	shield_damage = 2.0
+	armor_damage = 2.0
+	
+	tracking = 0.10
+	resources = {
+		category = ship_components
+		cost = {
+			eternium = 0.5
+		}
+	}
+
+	ai_weight = {
+		weight = 2000
+	}
+
+
+	prerequisites = { tech_fallenw }
+	component_set = "ETERNAL_PLASMA_EE"
+	projectile_gfx = "eternal_plasma_cannon_m"
+	tags = { weapon_type_cosmic }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+}
+
+weapon_component_template = {
+	key = "ETERNAL_PLASMA_EE_LARGE"
+	size = large
+	icon = "GFX_ship_part_eternium_photon"
+	icon_frame = 1	
+	entity = "large_laser_gun_entity"
+	type = instant
+
+	damage = { min = 2000 max = 5000 }
+	windup = { min = 25 max = 35 }
+	total_fire_time = 42
+	range = 130
+	missile_speed = 300 
+	missile_evasion = 0.70
+	missile_health = 90
+	missile_shield = 0
+	missile_retarget_range = 150
+	accuracy = 0.80
+	power = -5000
+	hull_damage = 2.0
+	shield_damage = 2.0
+	armor_damage = 2.0
+	
+	tracking = 0.10
+	resources = {
+		category = ship_components
+		cost = {
+			eternium = 0.5
+		}
+	}
+
+	ai_weight = {
+		weight = 2000
+	}
+
+
+	prerequisites = { tech_fallenw }
+	component_set = "ETERNAL_PLASMA_EE"
+	projectile_gfx = "eternal_plasma_cannon_l"
+	tags = { weapon_type_cosmic }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+}

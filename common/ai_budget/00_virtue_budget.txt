@@ -1,0 +1,179 @@
+## Categories used in this file must have use_for_ai_budget = yes defined in economic_categories ##
+## It is possible to have multiple entries with the same category and resource ##
+
+#################
+## Expenditure ##
+#################
+virtue_expenditure_buffer = { # Buffer, will not be spent
+	resource = virtue 
+	type = expenditure
+	category = buffer
+	
+	potential = {
+		always = no
+	}
+	
+	fraction = {
+		weight = 0.0
+	}	
+}
+
+virtue_expenditure_ships = {
+	resource = virtue 
+	type = expenditure
+	category = ships
+	
+	potential = {
+		always = yes
+	}
+	
+	fraction = {
+		weight = 0.20
+	}	
+}
+
+virtue_expenditure_ship_upgrades = {
+	resource = virtue 
+	type = expenditure
+	category = ship_upgrades
+	
+	potential = {
+		always = yes
+	}
+	
+	fraction = {
+		weight = 0.12
+	}	
+}
+
+
+virtue_expenditure_starbases = {
+	resource = virtue 
+	type = expenditure
+	category = starbases
+	
+	potential = {
+		NOT = {
+			is_country_type = fallen_empire
+		}
+	}
+	
+	fraction = {
+		weight = 0.35
+	}	
+}
+
+virtue_expenditure_starbases_fallen_empires = {
+	resource = virtue 
+	type = expenditure
+	category = starbases
+	
+	potential = {
+		is_country_type = fallen_empire
+	}
+	
+	fraction = {
+		weight = 0.2
+	}	
+}
+
+virtue_expenditure_starbases_expand = {
+	resource = virtue 
+	type = expenditure
+	category = starbases
+	
+	potential = {
+		has_ai_expansion_plan = yes
+		highest_threat < 50
+		NOT = {
+			is_country_type = fallen_empire
+			is_country_type = awakened_fallen_empire
+		}
+	}
+	
+	fraction = {
+		weight = 0.8
+	}	
+}
+
+#virtue_expenditure_stations_base = {
+#	resource = virtue 
+#	type = expenditure
+#	category = stations
+	
+#	potential = {
+#		always = yes
+#	}
+	
+#	fraction = {
+#		weight = 0.15
+#	}	
+#}
+
+#virtue_expenditure_stations_no_expand = {
+#	resource = virtue 
+#	type = expenditure
+#	category = stations
+#	
+#	potential = {
+#		has_ai_expansion_plan = no
+#	}
+#	
+#	fraction = {
+#		weight = 0.25
+#	}	
+#}
+
+virtue_expenditure_colonies_expand = {
+	resource = virtue 
+	type = expenditure
+	category = colonies
+	
+	potential = {
+		ai_colonize_plans > 0
+		has_resource = { type = food amount > 400 }
+		has_monthly_income = {
+			resource = food
+			value > 0
+		}
+	}
+	
+	fraction = {
+		weight = 1.2
+	}
+
+	static_max = {
+		base = 300
+	}
+}
+
+############
+## Upkeep ##
+############
+virtue_upkeep_buffer = {	# Buffer, will not be spent
+	resource = virtue 
+	type = upkeep
+	category = buffer
+	
+	potential = {
+		always = yes
+	}
+	
+	fraction = {
+		weight = 0.5
+	}	
+}
+
+virtue_upkeep_ships = {
+	resource = virtue 
+	type = upkeep
+	category = ships
+	
+	potential = {
+		always = yes
+	}
+	
+	fraction = {
+		weight = 0.5
+	}	
+}

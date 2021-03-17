@@ -1,0 +1,123 @@
+namespace = twvasall
+
+country_event = {
+	id = twvasall.1
+	title = OK
+	desc = OK
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_country = {	
+			if = {
+				limit = {
+					is_subject_type = eternal_vassal
+				}
+				
+				add_modifier = {
+					modifier = "vasal"
+					days = 360
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = twvasall.2
+	title = OK
+	desc = OK
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		any_country = {
+			if = {
+				limit = { 
+					is_subject_type = promising_race
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		every_country = {	
+			if = {
+				limit = {
+					is_subject_type = promising_race
+				}
+				
+				add_modifier = {
+					modifier = "blessed_race"
+					days = 360
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = twvasall.3
+	title = OK
+	desc = OK
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		any_country = {
+			if = {
+				limit = { 
+					is_subject_type = pacified_race
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		every_country = {	
+			if = {
+				limit = {
+					is_subject_type = pacified_race
+				}
+				
+				add_modifier = {
+					modifier = "pacified"
+					days = 360
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = twvasall.4
+	title = OK
+	desc = OK
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		any_country = {
+			if = {
+				limit = { 
+					is_subject_type = object_use
+				}
+			}
+		}
+	}
+
+	immediate = {
+		every_country = {	
+			if = {
+				limit = {
+					is_subject_type = object_use
+				}
+				
+				add_modifier = {
+					modifier = "noob_empire"
+					days = 360
+				}
+			}
+		}
+	}
+}

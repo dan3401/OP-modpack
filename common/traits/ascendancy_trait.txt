@@ -1,0 +1,168 @@
+trait_ascended = {
+	cost = -5
+	opposites = { "trait_hive_mind" }
+	improves_leaders = yes
+	allowed_archetypes = { ASCENDED BIOLOGICAL }
+	randomized = no
+	modification = no
+	
+	modifier = {
+		country_virtue_produces_mult = 0.2
+		country_admin_cap_add = 500
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+trait_immortal = {
+	cost = 0
+	opposites = { "trait_hive_mind" }
+	randomized = no
+	modification = no
+	allowed_archetypes = { ASCENDED BIOLOGICAL }
+	
+	modifier = {
+		leader_age = 10000000
+		pop_happiness = 0.15
+	}
+
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+trait_universal_language = {
+	cost = 0
+	opposites = { "trait_hive_mind" }
+	randomized = no
+	modification = no
+	allowed_archetypes = { ASCENDED BIOLOGICAL }
+	
+	modifier = {
+		country_engineering_research_produces_mult = 0.2
+		country_physics_research_produces_mult = 0.2 
+		country_society_research_produces_mult =  0.2
+		species_leader_exp_gain = 8.0
+		leader_skill_levels = 5
+		
+	}
+
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+trait_perfection = {
+	cost = 0
+	opposites = { "trait_hive_mind" }
+	randomized = no
+	modification = no
+	allowed_archetypes = { ASCENDED BIOLOGICAL }
+	
+	modifier = {
+		
+		pop_environment_tolerance = 1.0
+		country_energy_produces_mult = 0.2
+		country_minerals_produces_mult = 0.2
+		army_damage_mult = 5
+		army_morale_damage_mult = 5
+		army_health = 5.0
+		army_defense_health_mult = 10
+		army_defense_damage_mult = 10
+		
+	}
+
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+trait_divine_spark = {
+	cost = 0
+	opposites = { "trait_hive_mind" }
+	initial = no
+	randomized = no
+	allowed_archetypes = { ASCENDED BIOLOGICAL }
+	modification = no	
+
+	modifier = {
+		pop_environment_tolerance = 1.0
+		country_energy_produces_mult = 0.1
+		country_minerals_produces_mult = 0.1
+		country_engineering_research_produces_mult = 0.1
+		country_physics_research_produces_mult = 0.1 
+		country_society_research_produces_mult =  0.1
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+trait_tw_young_ascended = {
+	icon = gfx/interface/icons/traits/ascended.dds
+	cost = 0
+	opposites = { "trait_hive_mind" "trait_perfection" "trait_universal_language" "trait_immortal" }
+	randomized = no
+	allowed_archetypes = { ASCENDED BIOLOGICAL }
+	
+	modifier = {
+		army_health = 1.5
+		army_damage_mult = 2.5
+		army_morale_damage_mult = 2.5
+		
+		pop_environment_tolerance = 1.0
+		country_energy_produces_mult = 0.1
+		country_minerals_produces_mult = 0.1
+
+		country_engineering_research_produces_mult = 0.2
+		country_physics_research_produces_mult = 0.2 
+		country_society_research_produces_mult =  0.2
+		species_leader_exp_gain = 8.0
+		leader_age = 10000000
+		pop_happiness = 0.30
+	}
+
+	species_potential_add = {
+		exists = from
+		from = {
+			OR = { has_authority = "auth_enigmatic" }
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+forced_happiness = yes
+
+
+trait_artistic_pursuit = {
+	icon = gfx/interface/icons/traits/trait_intelligent.dds
+	cost = 0
+	opposites = { "trait_hive_mind" }
+	initial = no
+	randomized = no
+	allowed_archetypes = { ASCENDED BIOLOGICAL }
+	modification = yes	
+
+	species_potential_add = {
+		exists = from
+		from = {
+			OR = { 
+				is_country_type = eternal_empire
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}

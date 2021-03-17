@@ -1,0 +1,385 @@
+
+ship_section_template = {
+	key = "ETERNAL_SKYLLA_BOW"
+	ship_size = eternal_titan
+	fits_on_slot = spinal
+	should_draw_components = yes
+	entity = "eternal_titan_bow_entity"
+	icon = "GFX_ship_part_core_bow"
+
+
+	prerequisites = { "tech_fallenw" }
+	
+	ai_weight = {
+		factor = 2000
+	}
+		
+	component_slot = {
+		name = "TITANIC_01"
+		template = "invisible_titanic_fixed"
+		
+		locatorname = "xl_gun_01"
+	}
+
+	component_slot = {
+		name = "TITANIC_02"
+		template = "invisible_titanic_fixed"
+		
+		locatorname = "xl_gun_02"
+	}
+
+	component_slot = {
+		name = "TITANIC_03"
+		template = "invisible_titanic_fixed"
+		
+		locatorname = "xl_gun_03"
+	}
+
+	component_slot = {
+		name = "TITANIC_04"
+		template = "invisible_titanic_fixed"
+		
+		locatorname = "xl_gun_04"
+	}
+	
+	large_utility_slots = 10
+
+	resources = {
+		category = ship_sections
+		cost = {
+			sr_dark_matter = 10
+		}
+	}
+}
+
+ship_section_template = {
+	key = "ETERNAL_SKYLLA_BOW_ETERNIUM"
+	ship_size = eternal_titan
+	fits_on_slot = spinal
+	should_draw_components = yes
+	entity = "eternal_titan_bow_entity"
+	icon = "GFX_ship_part_core_bow"
+
+
+	prerequisites = { "tech_fallenw" }
+	
+	ai_weight = {
+		factor = 2000
+	}
+
+	component_slot = {
+		name = "PLANET_KILLER_GUN_01"
+		slot_size = planet_killer
+		
+		locatorname = "t_gun_01"
+	}
+
+	component_slot = {
+		name = "TITANIC_01"
+		template = "invisible_titanic_fixed"
+		
+		locatorname = "xl_gun_02"
+	}
+
+	component_slot = {
+		name = "TITANIC_02"
+		template = "invisible_titanic_fixed"
+		
+		locatorname = "xl_gun_03"
+	}
+
+	component_slot = {
+		name = "TITANIC_03"
+		template = "invisible_titanic_fixed"
+		
+		locatorname = "xl_gun_04"
+	}
+
+	component_slot = {
+		name = "TITANIC_04"
+		template = "invisible_titanic_fixed"
+		
+		locatorname = "xl_gun_05"
+	}
+
+	component_slot = {
+		name = "TITANIC_05"
+		template = "invisible_titanic_fixed"
+		
+		locatorname = "xl_gun_01"
+	}
+
+	component_slot = {
+		name = "TITANIC_06"
+		template = "invisible_titanic_fixed"
+		
+		locatorname = "xl_gun_02"
+	}
+	
+	large_utility_slots = 10
+
+	resources = {
+		category = ship_sections
+		cost = {
+			eternium = 20
+		}
+	}
+}
+
+ship_section_template = {
+	key = "ETERNAL_SKYLLA_MID_ETERNIUM"
+	ship_size = eternal_titan
+	fits_on_slot = mid
+	should_draw_components = yes
+	entity = "eternal_titan_mid_entity"
+	icon = "GFX_ship_part_core_mid"
+
+
+	prerequisites = { "tech_fallenw" }
+	
+	ai_weight = {
+		factor = 2000
+	}
+
+	component_slot = {
+		name = "EXTRA_LARGE_01"
+		template = "invisible_extra_large_fixed"
+		
+		locatorname = "xl_gun_01"
+	}
+	
+	component_slot = {
+		name = "EXTRA_LARGE_02"
+		template = "invisible_extra_large_fixed"
+		
+		locatorname = "xl_gun_02"
+	}
+	
+	component_slot = {
+		name = "EXTRA_LARGE_03"
+		template = "invisible_extra_large_fixed"
+		
+		locatorname = "xl_gun_03"
+	}
+	
+	component_slot = {
+		name = "EXTRA_LARGE_04"
+		template = "invisible_extra_large_fixed"
+		
+		locatorname = "xl_gun_04"
+	}
+
+	component_slot = {
+		name = "EXTRA_LARGE_05"
+		template = "invisible_extra_large_fixed"
+		
+		locatorname = "xl_gun_01"
+	}
+
+	component_slot = {
+		name = "EXTRA_LARGE_06"
+		template = "invisible_extra_large_fixed"
+		
+		locatorname = "xl_gun_02"
+	}
+
+	component_slot = {
+		name = "EXTRA_LARGE_07"
+		template = "invisible_extra_large_fixed"
+		
+		locatorname = "xl_gun_03"
+	}
+
+	component_slot = {
+		name = "EXTRA_LARGE_08"
+		template = "invisible_extra_large_fixed"
+		
+		locatorname = "xl_gun_04"
+	}
+	
+	aux_utility_slots = 3
+	large_utility_slots = 6
+
+	resources = {
+		category = ship_sections
+		cost = {
+			eternium = 100
+		}
+		upkeep = {
+			eternium = 5
+		}
+	}
+}
+
+ship_section_template = {
+	key = "ETERNAL_SKYLLA_MID"
+	ship_size = eternal_titan
+	fits_on_slot = core
+	should_draw_components = yes
+	entity = "eternal_titan_mid_entity"
+	icon = "GFX_ship_part_core_mid"
+
+
+	prerequisites = { "tech_fallenw" }
+	
+	ai_weight = {
+		factor = 2000
+	}
+
+	component_slot = {
+		name = "LARGE_GUN_01"
+		template = "large_turret"
+		
+		locatorname = "large_gun_01"
+	}
+	component_slot = {
+		name = "LARGE_GUN_02"
+		template = "large_turret"
+		
+		locatorname = "large_gun_02"
+	}	
+	component_slot = {
+		name = "LARGE_GUN_03"
+		template = "large_turret"
+		
+		locatorname = "large_gun_03"
+	}
+	component_slot = {
+		name = "LARGE_GUN_04"
+		template = "large_turret"
+		
+		locatorname = "large_gun_04"
+	}
+	
+	component_slot = {
+		name = "LARGE_GUN_05"
+		template = "large_turret"
+		
+		locatorname = "large_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_01"
+		template = "large_strike_craft"
+		rotation = 90
+		locatorname = "strike_craft_locator_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_02"
+		template = "large_strike_craft"
+		rotation = 90
+		locatorname = "strike_craft_locator_02"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_03"
+		template = "large_strike_craft"
+		rotation = 90
+		locatorname = "strike_craft_locator_03"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_04"
+		template = "large_strike_craft"
+		rotation = 90
+		locatorname = "strike_craft_locator_04"
+	}
+	
+	aux_utility_slots = 3
+	large_utility_slots = 6
+
+	resources = {
+		category = ship_sections
+		cost = {
+			sr_dark_matter = 10
+		}
+	}
+}
+
+#STERN
+
+ship_section_template = {
+	key = "ETERNAL_SKYLLA_STERN"
+	ship_size = eternal_titan
+	fits_on_slot = stern
+	should_draw_components = yes
+	entity = "eternal_titan_stern_entity"
+	icon = "GFX_ship_part_core_stern"
+
+
+	prerequisites = { "tech_fallenw" }
+	
+	ai_weight = {
+		factor = 2000
+	}
+	
+	component_slot = {
+		name = "LARGE_GUN_01"
+		template = "large_turret"
+		
+		locatorname = "large_gun_01"
+	}
+	component_slot = {
+		name = "LARGE_GUN_02"
+		template = "large_turret"
+		
+		locatorname = "large_gun_02"
+	}
+
+	component_slot = {
+		name = "LARGE_GUN_03"
+		template = "large_turret"
+		
+		locatorname = "large_gun_03"
+	}
+	component_slot = {
+		name = "LARGE_GUN_04"
+		template = "large_turret"
+		
+		locatorname = "large_gun_04"
+	}
+
+	component_slot = {
+		name = "LARGE_GUN_05"
+		template = "large_turret"
+		
+		locatorname = "large_gun_01"
+	}
+	component_slot = {
+		name = "LARGE_GUN_06"
+		template = "large_turret"
+		
+		locatorname = "large_gun_02"
+	}
+
+	component_slot = {
+		name = "LARGE_GUN_07"
+		template = "large_turret"
+		
+		locatorname = "large_gun_03"
+	}
+	component_slot = {
+		name = "LARGE_GUN_08"
+		template = "large_turret"
+		
+		locatorname = "large_gun_04"
+	}
+
+	component_slot = {
+		name = "LARGE_GUN_09"
+		template = "large_turret"
+		
+		locatorname = "large_gun_01"
+	}
+	
+	aux_utility_slots = 3
+	large_utility_slots = 6
+
+	resources = {
+		category = ship_sections
+		cost = {
+			sr_dark_matter = 10
+		}
+	}
+}

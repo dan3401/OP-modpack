@@ -1,0 +1,55 @@
+spriteTypes = {	
+
+
+	spriteType = {
+		name = "GFX_evt_perfection"
+		texturefile = "gfx/event_pictures/ascended.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	
+	spriteType = {
+		name = "GFX_evt_robotperfection"
+		texturefile = "gfx/event_pictures/robotperfection.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_ascensiontw"
+		texturefile = "gfx/event_pictures/plane.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_astropolis"
+		texturefile = "gfx/event_pictures/astropolis.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_eternium"
+		texturefile = "gfx/event_pictures/eternium.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

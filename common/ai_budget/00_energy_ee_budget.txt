@@ -1,0 +1,130 @@
+energy_expenditure_ships = {
+	resource = energy 
+	type = expenditure
+	category = ships
+	
+	potential = {
+		always = yes
+	}
+	
+	fraction = {
+		weight = 0.20
+	}	
+}
+
+energy_expenditure_ship_upgrades = {
+	resource = energy 
+	type = expenditure
+	category = ship_upgrades
+	
+	potential = {
+		always = yes
+	}
+	
+	fraction = {
+		weight = 0.12
+	}	
+}
+
+
+energy_expenditure_starbases = {
+	resource = energy 
+	type = expenditure
+	category = starbases
+	
+	potential = {
+			is_country_type = eternal_empire
+	}
+	
+	fraction = {
+		weight = 0.35
+	}	
+}
+
+energy_expenditure_starbases_fallen_empires = {
+	resource = energy 
+	type = expenditure
+	category = starbases
+	
+	potential = {
+		is_country_type = fallen_empire
+	}
+	
+	fraction = {
+		weight = 0.2
+	}	
+}
+
+energy_expenditure_starbases_expand = {
+	resource = energy 
+	type = expenditure
+	category = starbases
+	
+	potential = {
+		has_ai_expansion_plan = yes
+		highest_threat < 50
+		NOT = {
+			is_country_type = fallen_empire
+			is_country_type = awakened_fallen_empire
+		}
+	}
+	
+	fraction = {
+		weight = 0.8
+	}	
+}
+
+
+energy_expenditure_colonies_expand = {
+	resource = energy 
+	type = expenditure
+	category = colonies
+	
+	potential = {
+		ai_colonize_plans > 0
+		has_resource = { type = food amount > 400 }
+		has_monthly_income = {
+			resource = food
+			value > 0
+		}
+	}
+	
+	fraction = {
+		weight = 1.2
+	}
+
+	static_max = {
+		base = 300
+	}
+}
+
+############
+## Upkeep ##
+############
+energy_upkeep_buffer = {	# Buffer, will not be spent
+	resource = energy 
+	type = upkeep
+	category = buffer
+	
+	potential = {
+		always = yes
+	}
+	
+	fraction = {
+		weight = 0.5
+	}	
+}
+
+energy_upkeep_ships = {
+	resource = energy 
+	type = upkeep
+	category = ships
+	
+	potential = {
+		always = yes
+	}
+	
+	fraction = {
+		weight = 0.5
+	}	
+}

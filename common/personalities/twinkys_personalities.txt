@@ -1,0 +1,281 @@
+eternal_empire_spiritualist = { 
+	aggressiveness = 1.0
+	trade_willingness = 0.33
+	bravery = 2.0
+	combat_bravery = 1.25
+	
+	threat_modifier = 0.0
+	threat_others_modifier = 0.33
+	friction_modifier = 0.0
+	claims_modifier = 10.0
+
+	behaviour = {
+		conqueror = no
+		subjugator = no
+		liberator = no
+		opportunist = no
+		slaver = no
+		uplifter = no
+		purger = no
+		dominator = no
+		infiltrator = no
+		robot_exploiter = no
+		robot_liberator = no
+		propagator = no	
+		multispecies = no
+		holy_planets = yes # special for spiritualist FE
+		isolationist = yes # always keep borders closed
+	}
+	
+	allow = {
+		AND = {
+		is_country_type = eternal_empire
+		has_ethic = "ethic_fanatic_spiritualist"
+		}
+	}
+	
+	weight_modifier = {
+		weight = 10000	
+	}
+}
+
+eternal_empire_materialist = { 
+	aggressiveness = 1.0
+	trade_willingness = 0.0
+	bravery = 2.0
+	combat_bravery = 1.25
+
+
+	military_spending = 1.2
+	colony_spending = 0.9
+	
+	federation_acceptance = 0
+	defensive_pact_acceptance = 0
+	migration_pact_acceptance = 0
+	
+	advanced_start_chance = 100
+	weapon_preferences = weapon_type_energy
+
+		
+	weapon_preferences = weapon_type_energy
+	armor_ratio = 0.4
+	shields_ratio = 0.4
+	hull_ratio = 0.2
+
+	threat_modifier = 0.0
+	threat_others_modifier = 0.33
+	friction_modifier = 0.0
+	claims_modifier = 10.0
+
+	behaviour = {
+		conqueror = no
+		subjugator = no
+		liberator = no
+		opportunist = no
+		slaver = no
+		caste_system = no
+		uplifter = no
+		purger = no
+		dominator = no
+		infiltrator = no
+		robot_exploiter = yes
+		robot_liberator = no
+		propagator = no
+		multispecies = no
+		isolationist = yes
+	
+	}
+	
+	allow = {
+		AND = {
+		is_country_type = eternal_empire
+		has_ethic = "ethic_fanatic_materialist"
+		}	
+	}
+	
+	weight_modifier = {
+		weight = 10000	
+	}
+}
+
+eternal_empire_xenophile = { 
+	aggressiveness = 0.5
+	trade_willingness = 0.0
+	bravery = 2.0
+	combat_bravery = 1.25
+
+
+	military_spending = 1.2
+	colony_spending = 0.9
+
+	advanced_start_chance = 100
+	weapon_preferences = weapon_type_kinetic
+	
+	federation_acceptance = 0
+	defensive_pact_acceptance = 0
+	migration_pact_acceptance = 0
+
+	
+	weapon_preferences = weapon_type_energy
+	armor_ratio = 0.4
+	shields_ratio = 0.4
+	hull_ratio = 0.2
+	
+	threat_modifier = 0.0
+	threat_others_modifier = 0.5
+	friction_modifier = 0.0
+	claims_modifier = 10.0
+
+	behaviour = {
+		conqueror = no
+		subjugator = no
+		liberator = yes
+		opportunist = no
+		slaver = no
+		caste_system = no
+		uplifter = no
+		purger = no
+		dominator = no
+		infiltrator = no
+		robot_exploiter = no
+		robot_liberator = no
+		propagator = no
+		multispecies = yes
+		isolationist = yes
+		crisis_fighter = yes
+	}
+	
+	allow = {
+		AND = {
+		is_country_type = eternal_empire
+		has_ethic = "ethic_fanatic_xenophile"
+		}
+	}
+	
+	weight_modifier = {
+		weight = 10000	
+	}
+}
+
+eternal_empire_xenophobe = { 
+	aggressiveness = 1.0
+	trade_willingness = 0.0
+	bravery = 2.0
+	combat_bravery = 1.25
+	
+	threat_modifier = 0.0
+	threat_others_modifier = 1.0
+	friction_modifier = 1.0
+
+	federation_acceptance = 0
+	defensive_pact_acceptance = 0
+	migration_pact_acceptance = 0
+	
+	behaviour = {
+		conqueror = no
+		subjugator = yes
+		liberator = no
+		opportunist = yes
+		slaver = yes
+		uplifter = no
+		purger = yes
+		dominator = yes
+		infiltrator = yes
+		robot_exploiter = yes
+		robot_liberator = no
+		propagator = no
+		multispecies = no
+
+		isolationist = yes # always keep borders closed
+	}
+	
+	allow = {
+		is_country_type = eternal_empire
+		has_ethic = "ethic_fanatic_xenophobe"
+	}
+	
+	weight_modifier = {
+		weight = 10000	
+	}
+}
+
+eternal_empire_aggressive = { 
+	aggressiveness = 3.0
+	trade_willingness = 0.0
+	bravery = 1.0
+	
+	threat_modifier = 5.0
+	threat_others_modifier = 5.0
+	friction_modifier = 5.0
+
+	federation_acceptance = 0
+	defensive_pact_acceptance = 0
+	migration_pact_acceptance = 0
+
+	behaviour = {
+		conqueror = yes
+		subjugator = yes
+		liberator = no
+		opportunist = yes
+		slaver = yes
+		uplifter = no
+		purger = yes
+		dominator = yes
+		infiltrator = no
+		robot_exploiter = yes
+		robot_liberator = no
+		propagator = no
+		multispecies = no
+		crisis_fighter = yes
+		isolationist = yes # always keep borders closed
+	}
+	
+	allow = {
+		is_country_type = eternal_empire
+		has_civic = "civic_ee_subjugater"
+		NOT = { has_ethic = ethic_fanatic_xenophobe }
+	}
+	
+	weight_modifier = {
+		weight = 15000	
+	}
+}
+
+
+eternal_empire_death = { 
+	aggressiveness = 10.0
+	trade_willingness = 0.0
+	bravery = 10.0
+	
+	threat_modifier = 0.0
+	threat_others_modifier = 10.0
+	friction_modifier = 6.0
+
+	behaviour = {
+		conqueror = yes
+		subjugator = yes
+		liberator = no
+		opportunist = yes
+		slaver = yes
+		uplifter = no
+		purger = yes
+		dominator = yes
+		infiltrator = no
+		robot_exploiter = yes
+		robot_liberator = no
+		propagator = no
+		multispecies = no
+		isolationist = yes # always keep borders closed
+	}
+	
+		
+	allow = {
+		is_country_type = eternal_empire
+		has_civic = "civic_ee_subjugater"
+		has_ethic = ethic_fanatic_xenophobe 
+	}
+	
+	weight_modifier = {
+		weight = 20000	
+	}
+}

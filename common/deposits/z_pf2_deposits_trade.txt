@@ -1,0 +1,320 @@
+###_额外优化 deposits	#############################################################################
+#_[common_2c/common_ru/common_leauge/common_normal]
+
+
+#_[common_2c]
+z_pf2_d_trade_2c = {
+	icon = z_pf2_d_trade_2c
+	category = deposit_cat_rare
+	should_swap_deposit_on_terraforming = no
+	drop_weight = { weight = 0 }
+	
+	triggered_planet_modifier = {
+		potential = { exists = owner	owner = { is_megacorp = yes } }
+		z_pf2_ecat_trade_produces_mult = 0.35
+	}
+	resources = {
+		category = z_pf2_ecat_trade
+		produces = {#_默认
+			energy = 5
+			consumer_goods = 2.5
+		}
+		produces = {
+			trigger = { planet = { num_pops >= 10 } }
+			energy = 5
+			consumer_goods = 2.5
+		}
+		produces = {
+			trigger = { planet = { num_pops >= 20 } }
+			energy = 5
+			consumer_goods = 2.5
+		}
+		produces = {
+			trigger = { planet = { num_pops >= 40 } }
+			energy = 10
+			consumer_goods = 5
+		}
+		produces = {
+			trigger = { planet = { num_pops >= 60 } }
+			energy = 10
+			consumer_goods = 5
+		}
+		produces = {
+			trigger = { planet = { has_planet_flag = z_pr_flg_plnt_manpower_cost_5 } }
+			energy = 3
+			consumer_goods = 1.5
+		}
+		produces = {
+			trigger = { planet = { has_planet_flag = z_pr_flg_plnt_manpower_cost_6 } }
+			energy = 11
+			consumer_goods = 5.5
+		}
+		produces = {
+			trigger = { planet = { has_planet_flag = z_pr_flg_plnt_manpower_cost_7 } }
+			energy = 27
+			consumer_goods = 13.5
+		}
+		produces = {
+			trigger = { planet = { has_planet_flag = z_pr_flg_plnt_manpower_cost_8 } }
+			energy = 59
+			consumer_goods = 29.5
+		}
+		produces = {
+			trigger = { planet = { has_planet_flag = z_pr_flg_plnt_manpower_cost_9 } }
+			energy = 123
+			consumer_goods = 61.5
+		}
+		produces = {
+			trigger = { planet = { has_planet_flag = z_pr_flg_plnt_manpower_cost_10 } }
+			energy = 251
+			consumer_goods = 125.5
+		}
+		produces = {
+			trigger = { planet = { has_planet_flag = z_pr_flg_plnt_manpower_cost_11 } }
+			energy = 507
+			consumer_goods = 253.5
+		}
+		produces = {
+			trigger = { planet = { has_planet_flag = z_pr_flg_plnt_manpower_cost_12 } }
+			energy = 1019
+			consumer_goods = 509.5
+		}
+	}
+}
+#_[common_ru]
+z_pf2_d_trade_ru = {
+	icon = z_pf2_d_trade_2c
+	category = deposit_cat_rare
+	should_swap_deposit_on_terraforming = no
+	drop_weight = { weight = 0 }
+	
+	triggered_planet_modifier = {
+		potential = { exists = owner	owner = { is_megacorp = yes } }
+		z_pf2_ecat_trade_produces_mult = 0.35
+	}
+	resources = {
+		category = z_pf2_ecat_trade
+		produces = {#_默认
+			energy = 5
+			unity = 2.5
+		}
+		produces = {
+			trigger = { planet = { num_pops >= 10 } }
+			energy = 5
+			unity = 2.5
+		}
+		produces = {
+			trigger = { planet = { num_pops >= 20 } }
+			energy = 5
+			unity = 2.5
+		}
+		produces = {
+			trigger = { planet = { num_pops >= 40 } }
+			energy = 10
+			unity = 5
+		}
+		produces = {
+			trigger = { planet = { num_pops >= 60 } }
+			energy = 10
+			unity = 5
+		}
+		produces = {
+			trigger = { planet = { has_planet_flag = z_pr_flg_plnt_manpower_cost_5 } }
+			energy = 3
+			unity = 1.5
+		}
+		produces = {
+			trigger = { planet = { has_planet_flag = z_pr_flg_plnt_manpower_cost_6 } }
+			energy = 11
+			unity = 5.5
+		}
+		produces = {
+			trigger = { planet = { has_planet_flag = z_pr_flg_plnt_manpower_cost_7 } }
+			energy = 27
+			unity = 13.5
+		}
+		produces = {
+			trigger = { planet = { has_planet_flag = z_pr_flg_plnt_manpower_cost_8 } }
+			energy = 59
+			unity = 29.5
+		}
+		produces = {
+			trigger = { planet = { has_planet_flag = z_pr_flg_plnt_manpower_cost_9 } }
+			energy = 123
+			unity = 61.5
+		}
+		produces = {
+			trigger = { planet = { has_planet_flag = z_pr_flg_plnt_manpower_cost_10 } }
+			energy = 251
+			unity = 125.5
+		}
+		produces = {
+			trigger = { planet = { has_planet_flag = z_pr_flg_plnt_manpower_cost_11 } }
+			energy = 507
+			unity = 253.5
+		}
+		produces = {
+			trigger = { planet = { has_planet_flag = z_pr_flg_plnt_manpower_cost_12 } }
+			energy = 1019
+			unity = 509.5
+		}
+	}
+}
+#_[common_leauge]
+z_pf2_d_trade_league = {
+	icon = z_pf2_d_trade_2c
+	category = deposit_cat_rare
+	should_swap_deposit_on_terraforming = no
+	drop_weight = { weight = 0 }
+	
+	triggered_planet_modifier = {
+		potential = { exists = owner	owner = { is_megacorp = yes } }
+		z_pf2_ecat_trade_produces_mult = 0.35
+	}
+	resources = {
+		category = z_pf2_ecat_trade
+		produces = {#_默认
+			energy = 5
+			consumer_goods = 2.5
+			unity = 2.5
+		}
+		produces = {
+			trigger = { planet = { num_pops >= 10 } }
+			energy = 5
+			consumer_goods = 2.5
+			unity = 2.5
+		}
+		produces = {
+			trigger = { planet = { num_pops >= 20 } }
+			energy = 5
+			consumer_goods = 2.5
+			unity = 2.5
+		}
+		produces = {
+			trigger = { planet = { num_pops >= 40 } }
+			energy = 10
+			consumer_goods = 5
+			unity = 5
+		}
+		produces = {
+			trigger = { planet = { num_pops >= 60 } }
+			energy = 10
+			consumer_goods = 5
+			unity = 5
+		}
+		produces = {
+			trigger = { planet = { has_planet_flag = z_pr_flg_plnt_manpower_cost_5 } }
+			energy = 3
+			consumer_goods = 1.5
+			unity = 1.5
+		}
+		produces = {
+			trigger = { planet = { has_planet_flag = z_pr_flg_plnt_manpower_cost_6 } }
+			energy = 11
+			consumer_goods = 5.5
+			unity = 5.5
+		}
+		produces = {
+			trigger = { planet = { has_planet_flag = z_pr_flg_plnt_manpower_cost_7 } }
+			energy = 27
+			consumer_goods = 13.5
+			unity = 13.5
+		}
+		produces = {
+			trigger = { planet = { has_planet_flag = z_pr_flg_plnt_manpower_cost_8 } }
+			energy = 59
+			consumer_goods = 29.5
+			unity = 29.5
+		}
+		produces = {
+			trigger = { planet = { has_planet_flag = z_pr_flg_plnt_manpower_cost_9 } }
+			energy = 123
+			consumer_goods = 61.5
+			unity = 61.5
+		}
+		produces = {
+			trigger = { planet = { has_planet_flag = z_pr_flg_plnt_manpower_cost_10 } }
+			energy = 251
+			consumer_goods = 125.5
+			unity = 125.5
+		}
+		produces = {
+			trigger = { planet = { has_planet_flag = z_pr_flg_plnt_manpower_cost_11 } }
+			energy = 507
+			consumer_goods = 253.5
+			unity = 253.5
+		}
+		produces = {
+			trigger = { planet = { has_planet_flag = z_pr_flg_plnt_manpower_cost_12 } }
+			energy = 1019
+			consumer_goods = 509.5
+			unity = 509.5
+		}
+	}
+}
+#_[common_normal]
+z_pf2_d_trade_normal = {
+	icon = z_pf2_d_trade_2c
+	category = deposit_cat_rare
+	should_swap_deposit_on_terraforming = no
+	drop_weight = { weight = 0 }
+	
+	triggered_planet_modifier = {
+		potential = { exists = owner	owner = { is_megacorp = yes } }
+		z_pf2_ecat_trade_produces_mult = 0.35
+	}
+	resources = {
+		category = z_pf2_ecat_trade
+		produces = {#_默认
+			energy = 10
+		}
+		produces = {
+			trigger = { planet = { num_pops >= 10 } }
+			energy = 10
+		}
+		produces = {
+			trigger = { planet = { num_pops >= 20 } }
+			energy = 10
+		}
+		produces = {
+			trigger = { planet = { num_pops >= 40 } }
+			energy = 20
+		}
+		produces = {
+			trigger = { planet = { num_pops >= 60 } }
+			energy = 20
+		}
+		produces = {
+			trigger = { planet = { has_planet_flag = z_pr_flg_plnt_manpower_cost_5 } }
+			energy = 6
+		}
+		produces = {
+			trigger = { planet = { has_planet_flag = z_pr_flg_plnt_manpower_cost_6 } }
+			energy = 22
+		}
+		produces = {
+			trigger = { planet = { has_planet_flag = z_pr_flg_plnt_manpower_cost_7 } }
+			energy = 54
+		}
+		produces = {
+			trigger = { planet = { has_planet_flag = z_pr_flg_plnt_manpower_cost_8 } }
+			energy = 118
+		}
+		produces = {
+			trigger = { planet = { has_planet_flag = z_pr_flg_plnt_manpower_cost_9 } }
+			energy = 246
+		}
+		produces = {
+			trigger = { planet = { has_planet_flag = z_pr_flg_plnt_manpower_cost_10 } }
+			energy = 502
+		}
+		produces = {
+			trigger = { planet = { has_planet_flag = z_pr_flg_plnt_manpower_cost_11 } }
+			energy = 1014
+		}
+		produces = {
+			trigger = { planet = { has_planet_flag = z_pr_flg_plnt_manpower_cost_12 } }
+			energy = 2038
+		}
+	}
+}

@@ -1,0 +1,324 @@
+namespace = ee_planet_destruction
+
+planet_event = {
+	id = ee_planet_destruction.200
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				exists = owner
+				owner = { NOT = { is_same_value = from.owner } }
+				NOT = { is_planet_class = pc_ai }
+			}
+			change_pc = pc_gaia
+            destroy_colony = yes
+		}
+
+		# Contingency Machine World
+		if = {
+			limit = { 
+				is_planet_class = pc_ai 
+				NOT = { has_planet_flag = machine_lair }
+            }
+            destroy_colony = yes
+            change_pc = pc_gaia
+			planet_event = { id = crisis.2040 }
+		}
+
+		# Contingency Final Machine World
+		if = {
+			limit = { 
+				is_planet_class = pc_ai 
+				has_planet_flag = machine_lair
+            }
+            destroy_colony = yes
+            change_pc = pc_gaia
+			from.owner = { save_event_target_as = final_machine_world_destroyer }
+			planet_event = { id = crisis.2043 }
+		}
+
+		# Swarm Situation Log counter
+		if = {
+			limit = {
+				owner = { is_country_type = swarm }
+			}
+			every_country = {
+				limit = { has_event_chain = "prethoryn_scourge_chain" }
+				add_event_chain_counter = {
+					event_chain = "prethoryn_scourge_chain"
+					counter = "infested_worlds"
+					amount = -1 
+				}
+				add_event_chain_counter = {
+					event_chain = "prethoryn_scourge_chain"
+					counter = "infested_worlds_cleansed"
+					amount = 1 
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				exists = owner
+				owner = {
+					NOT = { is_same_value = from.owner }
+					OR = {
+						is_country_type = default
+						is_country_type = fallen_empire
+						is_country_type = awakened_fallen_empire
+					}
+				}
+			}
+			# Generate threat
+			add_threat = { who = from.owner amount = 3 }
+			# modifier for allies + those upset by the shield
+			every_country = {
+				limit = {
+					NOR = {
+						is_same_value = from.owner
+						is_same_value = root.owner
+						AND = {
+							has_federation = yes
+							is_in_federation_with = from.owner
+						}
+					}
+					OR = {
+						has_communications = from.owner
+						has_communications = root.owner
+					}
+					OR = {
+						AND = {
+							has_federation = yes
+							is_in_federation_with = root.owner
+						}
+						has_ai_personality = awakened_fallen_empire_xenophile
+						AND = {
+							is_country_type = default
+							OR = {
+								is_egalitarian = yes
+								is_xenophile = yes
+								is_militarist = yes
+							}
+						}
+					}
+				}
+
+			}
+			# modifiers for victi
+		}
+		# Pandora's World Achievement
+		from.owner = { country_event = { id = achievement.3 } }
+		# Add war exhaustion to planet owner 
+		owner = {
+			add_static_war_exhaustion = {
+				attacker = from.fleet.owner
+				location = root
+				value_for_planet_destruction = 1.0
+			}
+		}
+		if = {
+			limit = { is_planet_class = pc_habitat }
+			spawn_habitat_pacifier_effect = yes
+			change_pc = {
+				class = pc_habitat_shielded
+				inherit_entity = yes
+			}
+		}
+		else_if = {
+			limit = { is_planet_class = pc_ringworld_habitable }
+			spawn_ringworld_pacifier_effect = yes
+			change_pc = {
+				class = pc_ringworld_shielded
+				inherit_entity = yes
+			}
+        }
+		else = {
+            destroy_colony = yes
+            change_pc = pc_gaia
+        }
+		clear_deposits = yes
+	add_deposit = d_underwater_vent
+        add_deposit = d_frozen_gas_lake
+        add_deposit = d_tempestous_mountain
+        add_deposit = d_searing_desert
+        add_deposit = d_buzzing_plains
+
+        add_deposit = d_rich_mountain
+        add_deposit = d_prosperous_mesa
+        add_deposit = d_submerged_ore_veins
+        add_deposit = d_ore_rich_caverns
+        add_deposit = d_mineral_striations
+
+        add_deposit = d_teeming_reef
+        add_deposit = d_lush_jungle
+        add_deposit = d_black_soil
+        add_deposit = d_fertile_lands
+        add_deposit = d_natural_farmland
+
+        add_deposit = d_dust_desert
+        add_deposit = d_fuming_bog
+        add_deposit = d_dust_caverns
+        add_deposit = d_bubbling_swamp
+        add_deposit = d_crystal_reef
+        add_deposit = d_crystal_forest
+
+        add_deposit = d_betharian_deposit
+        add_deposit = d_alien_pets_deposit
+
+	}
+}
+
+
+planet_event = {
+	id = ee_planet_destruction.300
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				exists = owner
+				owner = { NOT = { is_same_value = from.owner } }
+				NOT = { is_planet_class = pc_ai }
+			}
+			change_pc = pc_barren_cold
+            destroy_colony = yes
+		}
+
+		# Contingency Machine World
+		if = {
+			limit = { 
+				is_planet_class = pc_ai 
+				NOT = { has_planet_flag = machine_lair }
+            }
+            destroy_colony = yes
+            change_pc = pc_barren_cold
+			planet_event = { id = crisis.2040 }
+		}
+
+		# Contingency Final Machine World
+		if = {
+			limit = { 
+				is_planet_class = pc_ai 
+				has_planet_flag = machine_lair
+            }
+            destroy_colony = yes
+            change_pc = pc_barren_cold
+			from.owner = { save_event_target_as = final_machine_world_destroyer }
+			planet_event = { id = crisis.2043 }
+		}
+
+		# Swarm Situation Log counter
+		if = {
+			limit = {
+				owner = { is_country_type = swarm }
+			}
+			every_country = {
+				limit = { has_event_chain = "prethoryn_scourge_chain" }
+				add_event_chain_counter = {
+					event_chain = "prethoryn_scourge_chain"
+					counter = "infested_worlds"
+					amount = -1 
+				}
+				add_event_chain_counter = {
+					event_chain = "prethoryn_scourge_chain"
+					counter = "infested_worlds_cleansed"
+					amount = 1 
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				exists = owner
+				owner = {
+					NOT = { is_same_value = from.owner }
+					OR = {
+						is_country_type = default
+						is_country_type = fallen_empire
+						is_country_type = awakened_fallen_empire
+					}
+				}
+			}
+			# Generate threat
+			add_threat = { who = from.owner amount = 3 }
+			# modifier for allies + those upset by the shield
+			every_country = {
+				limit = {
+					NOR = {
+						is_same_value = from.owner
+						is_same_value = root.owner
+						AND = {
+							has_federation = yes
+							is_in_federation_with = from.owner
+						}
+					}
+					OR = {
+						has_communications = from.owner
+						has_communications = root.owner
+					}
+					OR = {
+						AND = {
+							has_federation = yes
+							is_in_federation_with = root.owner
+						}
+						has_ai_personality = awakened_fallen_empire_xenophile
+						AND = {
+							is_country_type = default
+							OR = {
+								is_egalitarian = yes
+								is_xenophile = yes
+								is_militarist = yes
+							}
+						}
+					}
+				}
+
+			}
+			# modifiers for victi
+		}
+		# Pandora's World Achievement
+		from.owner = { country_event = { id = achievement.3 } }
+		# Add war exhaustion to planet owner 
+		owner = {
+			add_static_war_exhaustion = {
+				attacker = from.fleet.owner
+				location = root
+				value_for_planet_destruction = 1.0
+			}
+		}
+		if = {
+			limit = { is_planet_class = pc_habitat }
+			spawn_habitat_pacifier_effect = yes
+			change_pc = {
+				class = pc_habitat_shielded
+				inherit_entity = yes
+			}
+		}
+		else_if = {
+			limit = { is_planet_class = pc_ringworld_habitable }
+			spawn_ringworld_pacifier_effect = yes
+			change_pc = {
+				class = pc_ringworld_shielded
+				inherit_entity = yes
+			}
+        }
+		else = {
+            destroy_colony = yes
+            change_pc = pc_barren_cold
+        }
+		clear_deposits = yes
+		add_deposit = d_society_3
+		add_deposit = d_society_3
+		add_deposit = d_society_3
+        add_deposit = d_society_1
+        add_deposit = d_minerals_9
+        add_deposit = d_energy_9
+        add_deposit = d_exotic_gases_5
+        add_deposit = d_zro_deposit_1
+	}
+}

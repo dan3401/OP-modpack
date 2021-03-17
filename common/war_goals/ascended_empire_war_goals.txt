@@ -1,0 +1,1509 @@
+# Ascended Empire Wargoals
+
+
+wg_ascended_empire_domination = {
+	casus_belli = cb_ascended_empire_subjugation
+	hide_if_no_cb = no
+	total_war = no
+	set_defender_wargoal = wg_end_threat
+	
+	release_occupied_systems_on_status_quo = yes
+	
+	allowed_peace_offers = {
+		status_quo
+		surrender
+		demand_surrender
+	}
+	
+	potential = {
+		is_country_type = ascended_empire
+		NOR = {
+			has_valid_civic = civic_fanatic_purifiers
+			has_valid_civic = civic_machine_terminator	
+			has_valid_civic = civic_machine_assimilator
+			has_valid_civic = civic_hive_devouring_swarm
+			has_authority = auth_corporate
+		}
+		
+		from = {
+			is_country_type = default
+			NOR = {
+				has_valid_civic = civic_fanatic_purifiers
+				has_valid_civic = civic_machine_terminator	
+				has_valid_civic = civic_machine_assimilator
+				has_valid_civic = civic_hive_devouring_swarm
+			}
+		}
+	}
+	possible = {
+#		has_total_war_cb = no
+		custom_tooltip = {
+			fail_text = has_claimed_all_systems
+			from = {
+				is_country_type = default
+				any_owned_planet = {
+					is_colony = yes
+					root = {
+						NOT = { has_claim = prev.solar_system }
+					}
+				}
+			}
+		}
+	}
+	on_accept = {
+		hidden_effect = {
+			from = {
+				add_threat = {
+					who = root
+					amount = 0.5
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_valid_civic = civic_spiritualist_fervor
+			}
+			from = {
+				set_subject_of = {
+					who = root
+					subject_type = dominion
+				}		
+			}
+		}
+		if = {
+			limit = { 
+				has_valid_civic = civic_materialist_fervor
+			}
+			from = {
+				set_subject_of = {
+					who = root
+					subject_type = satellite
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_valid_civic = civic_xenophile_fervor
+			}
+			from = {
+				set_subject_of = {
+					who = root
+					subject_type = signatory
+				}				
+			}	
+		}
+		if = {
+			limit = {
+				has_valid_civic = civic_xenophobe_fervor
+			}
+			from = {
+				set_subject_of = {
+					who = root
+					subject_type = thrall
+				}	
+			}
+		}	
+		if = {
+			limit = {
+				has_valid_civic = civic_militarist_fervor
+			}
+			from = {
+				set_subject_of = {
+					who = root
+					subject_type = fe_clan_member
+				}				
+			}	
+		}
+		if = {
+			limit = {
+				has_valid_civic = civic_pacifist_fervor
+			}
+			from = {
+				set_subject_of = {
+					who = root
+					subject_type = fe_demilitarized_state
+				}	
+			}
+		}
+		if = {
+			limit = {
+				has_valid_civic = civic_authoritarian_fervor
+			}
+			from = {
+				set_subject_of = {
+					who = root
+					subject_type = fe_puppet_state
+				}		
+			}
+		}
+		if = {
+			limit = { 
+				has_valid_civic = civic_egalitarian_fervor
+			}
+			from = {
+				set_subject_of = {
+					who = root
+					subject_type = fe_union_state
+				}
+			}
+		}
+		if = {
+			limit = { 
+				has_valid_civic = civic_barbaric_despoilers
+			}
+			from = {
+				set_subject_of = {
+					who = root
+					subject_type = fe_satrapy
+				}
+			}
+		}
+		if = {
+			limit = { 
+				has_authority = auth_hive_mind
+			}
+			from = {
+				set_subject_of = {
+					who = root
+					subject_type = fe_symbiote
+				}
+			}
+		}
+		if = {
+			limit = { 
+				has_authority = auth_machine_intelligence
+			}
+			from = {
+				set_subject_of = {
+					who = root
+					subject_type = fe_auxiliary
+				}
+			}
+		}
+		if = {
+			limit = { 
+				NOR = {
+					has_valid_civic = civic_spiritualist_fervor
+					has_valid_civic = civic_materialist_fervor
+					has_valid_civic = civic_xenophile_fervor
+					has_valid_civic = civic_xenophobe_fervor
+					has_valid_civic = civic_militarist_fervor
+					has_valid_civic = civic_pacifist_fervor
+					has_valid_civic = civic_authoritarian_fervor
+					has_valid_civic = civic_egalitarian_fervor
+					has_valid_civic = civic_barbaric_despoilers
+					has_authority = auth_hive_mind
+					has_authority = auth_machine_intelligence
+				}
+			}
+			from = {
+				set_subject_of = {
+					who = root
+					subject_type = vassal
+				}
+			}
+		}
+	}
+	
+	on_status_quo = {
+		if = {
+			limit = {
+				last_created_country = {
+					has_country_flag = released_empire
+				}
+			}
+
+			last_created_country = {
+				set_subject_of = {
+					who = root
+					subject_type = vassal
+				}
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0
+			has_ai_personality_behaviour = wants_tribute
+		}
+	}
+}
+
+wg_ascended_empire_tribute = {
+	casus_belli = cb_subjugation
+
+	hide_if_no_cb = no
+	release_occupied_systems_on_status_quo = yes
+
+	surrender_acceptance = -75
+	
+	allowed_peace_offers = {
+		status_quo
+		surrender
+		demand_surrender
+	}
+
+	potential = {
+		is_country_type = ascended_empire
+		has_valid_civic = civic_inwards_perfection
+		NOT = { has_authority = auth_corporate }
+		
+	}
+	possible = {
+		has_total_war_cb = no
+		custom_tooltip = {
+			fail_text = has_claimed_all_systems
+			from = {
+				is_country_type = default
+				any_owned_planet = {
+					is_colony = yes
+					root = {
+						NOT = { has_claim = prev.solar_system }
+					}
+				}
+			}
+		}
+	}
+	on_accept = {
+		hidden_effect = {
+			from = {
+				add_threat = {
+					who = root
+					amount = 0.25
+				}
+			}
+		}
+		from = {
+			set_subject_of = {
+				who = root
+				subject_type = tributary
+			}
+		}
+	}
+
+	on_status_quo = {
+		if = {
+			limit = {
+				last_created_country = {
+					has_country_flag = released_empire
+				}
+			}
+
+			last_created_country = {
+				set_subject_of = {
+					who = root
+					subject_type = tributary
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 50
+		modifier = {
+			factor = 0
+			NOT = { has_ai_personality_behaviour = wants_tribute }
+		}
+	}
+}
+
+wg_end_threat_ascended_empire = {
+	casus_belli = cb_ascended_empire_containment
+	
+	hide_if_no_cb = yes
+	total_war = yes
+	set_defender_wargoal = wg_end_threat_ascended_empire
+	
+	surrender_acceptance = -1000
+	
+	allowed_peace_offers = {
+		status_quo
+	}
+
+	potential = {
+		OR = {
+			is_country_type = default
+			is_country_type = ascended_empire
+		}
+		NOR = {
+			has_valid_civic = civic_fanatic_purifiers
+			has_valid_civic = civic_machine_terminator	
+			has_valid_civic = civic_machine_assimilator
+			has_valid_civic = civic_hive_devouring_swarm
+		}
+	}
+	possible = {
+		always = yes
+	}
+	on_accept = {
+		remove_country_flag = ae_crusader
+		from = { remove_country_flag = ae_crusader }
+	}
+	on_status_quo = {
+		remove_country_flag = ae_crusader
+		from = { remove_country_flag = ae_crusader }
+	}
+	
+	ai_weight = {
+		weight = 100
+	}
+}
+
+wg_ascended_empire_conquest = {
+	casus_belli = cb_claim
+	
+	hide_if_no_cb = no
+	
+	threat_multiplier = 0.75
+	
+	allowed_peace_offers = {
+		status_quo
+		surrender
+		demand_surrender
+	}
+	
+	potential = {
+		OR = {
+			is_country_type = ascended_empire
+			is_country_type = lost_empire
+		}
+		has_total_war_cb = yes
+		NOR = {
+			has_valid_civic = civic_fanatic_purifiers
+			has_valid_civic = civic_machine_terminator	
+			has_valid_civic = civic_machine_assimilator
+			has_valid_civic = civic_hive_devouring_swarm
+		}
+	}
+	possible = {
+		always = yes
+	}
+	
+	ai_weight = {
+		weight = 2
+	}
+}
+
+wg_ascended_empire_humiliation = {
+	casus_belli = cb_humiliation
+
+	hide_if_no_cb = no
+	defender_default = no
+	
+	surrender_acceptance = -25
+	
+	allowed_peace_offers = {
+		status_quo
+		surrender
+		demand_surrender
+	}
+
+	potential = {	
+		is_country_type = ascended_empire
+		NOR = {
+			has_valid_civic = civic_fanatic_purifiers
+			has_valid_civic = civic_machine_terminator	
+			has_valid_civic = civic_machine_assimilator
+			has_valid_civic = civic_hive_devouring_swarm
+		}
+#		has_total_war_cb = no
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = has_claimed_all_systems
+			from = {
+				is_country_type = default
+				any_owned_planet = {
+					is_colony = yes
+					root = {
+						NOT = { has_claim = prev.solar_system }
+					}
+				}
+			}
+		}
+	}
+	on_accept = {
+		if = {
+			limit = {
+				is_country_type = fallen_empire
+			}
+			custom_tooltip = wg_humiliation_fe_accept
+			save_event_target_as = fallen_empire_humiliator
+			from = { fallen_empire_humiliate_effect = yes }
+		}
+		else = {
+			custom_tooltip = wg_humiliation_accept
+			hidden_effect = {
+				add_resource = { influence = 100 }
+				from = {
+					add_modifier = { modifier = humiliated days = 3600 }
+					if = {
+						limit = { has_policy_flag = diplo_stance_supremacist }
+						set_policy = {
+							policy = diplomatic_stance
+							option = diplo_stance_belligerent
+							cooldown = yes
+						}
+						prev = {
+							set_country_flag = humble_pie_achievement
+						}
+					}
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+wg_ascended_empire_take_galatron = {
+	casus_belli = cb_ascended_empire_galatron
+
+	hide_if_no_cb = yes
+	release_occupied_systems_on_status_quo = no
+
+	surrender_acceptance = -40
+	
+	allowed_peace_offers = {
+		status_quo
+		surrender
+		demand_surrender
+	}
+
+
+	potential = {
+		has_total_war_cb = no
+	}
+	
+	possible = {
+		custom_tooltip = {
+			fail_text = has_claimed_all_systems
+			from = {
+				OR = {
+					is_country_type = default
+					is_country_type = ascended_empire
+				}
+				any_owned_planet = {
+					is_colony = yes
+					root = {
+						NOT = { has_claim = prev.solar_system }
+					}
+				}
+			}
+		}
+	}
+	on_accept = {
+		hidden_effect = {
+			from = {
+				add_threat = {
+					who = root
+					amount = 0.5
+				}
+			}
+		}
+		from = {
+			add_modifier = { modifier = humiliated days = 3600 }
+			hidden_effect = { country_event = { id = cara.951 } }
+			hidden_effect = { remove_relic = r_galatron }
+		}
+		hidden_effect = { country_event = { id = cara.950 } }
+		add_relic = r_galatron
+	}
+
+	on_status_quo = {
+		from = {
+			set_closed_borders = {
+				who = prev
+				status = no
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 0
+			has_ethic = ethic_gestalt_consciousness
+		}
+	}
+}
+
+wg_ascended_empire_megacorp_subjugate = {
+	casus_belli = cb_ascended_empire_megacorp_subjugate
+
+	hide_if_no_cb = no
+	release_occupied_systems_on_status_quo = yes
+
+	surrender_acceptance = -100
+	
+	allowed_peace_offers = {
+		status_quo
+		surrender
+		demand_surrender
+	}
+
+	potential = {
+		is_country_type = ascended_empire
+		has_authority = auth_corporate
+#		has_total_war_cb = no
+		from = {
+			is_country_type = default
+		}
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = has_claimed_all_systems
+			from = {
+				is_country_type = default
+				any_owned_planet = {
+					is_colony = yes
+					root = {
+						NOT = { has_claim = prev.solar_system }
+					}
+				}
+			}
+		}
+	}
+	on_accept = {
+		hidden_effect = {
+			from = {
+				add_threat = {
+					who = root
+					amount = 0.5
+				}
+			}
+		}
+		from = {
+			set_subject_of = {
+				who = root
+				subject_type = subsidiary
+			}
+		}
+	}
+
+	on_status_quo = {
+		if = {
+			limit = {
+				last_created_country = {
+					has_country_flag = released_empire
+				}
+			}
+
+			last_created_country = {
+				set_subject_of = {
+					who = root
+					subject_type = subsidiary
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 10
+	}
+}
+
+wg_ascended_empire_expel_corp = {
+	casus_belli = cb_ascended_empire_expel_corp
+
+	hide_if_no_cb = yes
+	release_occupied_systems_on_status_quo = no
+
+	set_defender_wargoal = wg_megacorp_subjugate
+
+	surrender_acceptance = -50
+	
+	allowed_peace_offers = {
+		status_quo
+		surrender
+		demand_surrender
+	}
+
+	potential = {
+		has_total_war_cb = no
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = has_claimed_all_systems
+			from = {
+				OR = {
+					is_country_type = default
+					is_country_type = ascended_empire
+				}
+				any_owned_planet = {
+					is_colony = yes
+					root = {
+						NOT = { has_claim = prev.solar_system }
+					}
+				}
+			}
+		}
+	}
+	on_status_quo = {
+		every_owned_planet = {
+			limit = { has_branch_office = from }
+			hidden_effect = { branch_office_owner = { add_resource = { energy = 1000 } } }
+			close_branch_office = yes
+		}
+		custom_tooltip = wg_expel_corp_status_quo_effects
+	}
+	on_accept = {
+		every_owned_planet = {
+			limit = { has_branch_office = from }
+			close_branch_office = yes
+			hidden_effect = { owner = { add_resource = { energy = 1000 } } }
+		}
+		custom_tooltip = wg_expel_corp_effects
+	}
+
+	ai_weight = {
+		weight = 10
+	}
+}
+
+wg_ascended_empire_hostile_takeover = {
+	casus_belli = cb_ascended_empire_hostile_takeover
+
+	hide_if_no_cb = no
+	release_occupied_systems_on_status_quo = no
+
+	surrender_acceptance = -75
+	
+	allowed_peace_offers = {
+		status_quo
+		surrender
+		demand_surrender
+	}
+
+	potential = {
+#		has_total_war_cb = no
+		is_country_type = ascended_empire
+		has_authority = auth_corporate
+		from = {
+			has_authority = auth_corporate
+		}
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = has_claimed_all_systems
+			from = {
+				OR = {
+					is_country_type = default
+					is_country_type = ascended_empire
+				}
+				any_owned_planet = {
+					is_colony = yes
+					root = {
+						NOT = { has_claim = prev.solar_system }
+					}
+				}
+			}
+		}
+	}
+	on_accept = {
+		every_country = {
+			limit = {
+				OR = {
+					has_commercial_pact = root
+					is_in_federation_with = root
+				}
+			}
+			every_owned_planet = {
+				limit = {
+					has_branch_office = from
+				}
+				hidden_effect = {
+					close_branch_office = yes
+					establish_branch_office = root
+					custom_tooltip = wg_seize_branch_office_effects
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 10
+	}
+}
+
+wg_ascended_empire_steal_galatron = {
+	casus_belli = cb_ascended_empire_steal_galatron
+
+	hide_if_no_cb = yes
+	release_occupied_systems_on_status_quo = no
+
+	surrender_acceptance = -40
+	
+	allowed_peace_offers = {
+		status_quo
+		surrender
+		demand_surrender
+	}
+
+	potential = {
+		has_total_war_cb = no
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = has_claimed_all_systems
+			from = {
+				OR = {
+					is_country_type = default
+					is_country_type = ascended_empire
+				}
+				any_owned_planet = {
+					is_colony = yes
+					root = {
+						NOT = { has_claim = prev.solar_system }
+					}
+				}
+			}
+		}
+	}
+	on_accept = {
+		hidden_effect = {
+			from = {
+				add_threat = {
+					who = root
+					amount = 0.5
+				}
+			}
+		}
+		if = {
+			limit = { has_ancrel = yes }
+			from = {
+			add_modifier = { modifier = humiliated days = 3600 }
+
+			hidden_effect = { country_event = { id = cara.951 } }
+			hidden_effect = { remove_relic = r_galatron }
+			}
+
+			hidden_effect = { country_event = { id = cara.950 } }
+			add_relic = r_galatron
+		}
+		else = {
+			from = {
+			remove_modifier = galatron_modifier
+			add_modifier = { modifier = humiliated days = 3600 }
+
+			hidden_effect = { country_event = { id = cara.951 } }
+			}
+
+			hidden_effect = { country_event = { id = cara.950 } }
+			add_modifier = { modifier = galatron_modifier days = -1 }
+		}
+	}
+
+	on_status_quo = {
+		hidden_effect = { add_resource = { energy = 1000 } }
+	}
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 0
+			has_ethic = ethic_gestalt_consciousness
+		}
+	}
+}
+
+#wg_ascended_empire_scion = {
+#	casus_belli = cb_ascended_empire_scion
+#
+#	hide_if_no_cb = yes
+#	release_occupied_systems_on_status_quo = yes
+#
+#	surrender_acceptance = -100
+#
+#
+#	potential = {
+#		has_total_war_cb = no
+#	}
+#	possible = {
+#		custom_tooltip = {
+#			fail_text = has_claimed_all_systems
+#			from = {
+#				is_country_type = default
+#				any_owned_planet = {
+#					is_colony = yes
+#					root = {
+#						NOT = { has_claim = prev.solar_system }
+#					}
+#				}
+#			}
+#		}
+#	}
+#	on_accept = {
+#		hidden_effect = {
+#			from = {
+#				save_event_target_as = scion_victim
+#				add_threat = {
+#					who = root
+#					amount = 0.5
+#				}
+#			}
+#			root = {
+#				overlord = { save_event_target_as = scion_master }
+#				country_event = { id = origin.6 days = 1 } # Delay is necessary, or game does not think war was won
+#			}
+#		}
+#		tooltip = {
+#			from = {
+#				set_subject_of = {
+#					who = event_target:scion_master
+#					subject_type = vassal
+#				}
+#			}
+#		}
+#	}
+#
+#	on_status_quo = {
+#		if = {
+#			limit = {
+#				last_created_country = {
+#					has_country_flag = released_empire
+#				}
+#			}
+#
+#			last_created_country = {
+#				set_subject_of = {
+#					who = event_target:scion_master
+#					subject_type = vassal
+#				}
+#			}
+#		}
+#	}
+#
+#	ai_weight = {
+#		weight = 50
+#	}
+#}
+
+wg_ascended_empire_counterattack = {
+	casus_belli = cb_ascended_empire_counterattack
+
+	hide_if_no_cb = yes
+
+	threat_multiplier = 0.67
+	
+	allowed_peace_offers = {
+		status_quo
+		surrender
+		demand_surrender
+	}
+
+	potential = {
+		is_country_type = ascended_empire	
+		is_galactic_community_member = yes
+		OR = {
+			is_active_resolution = "resolution_mutualdefense_enemy_of_my_enemy"
+			is_active_resolution = "resolution_mutualdefense_castigation_proclamation"
+			is_active_resolution = "resolution_mutualdefense_renegade_containment"
+		}
+		from = {
+			is_galactic_community_member = no
+			is_at_war = yes
+			any_war = {
+				is_war_participant = { who = prev side = attackers }
+				any_defender = { is_galactic_community_member = yes }
+			}
+		}
+	}
+	possible = {
+		has_total_war_cb = no
+		NOT = { is_overlord_to = FROM }
+		OR = {
+			is_subject = no
+			overlord = { NOT = { is_same_value = from } }
+		}
+	}
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+wg_ascended_empire_renegade_containment = {
+	casus_belli = cb_ascended_empire_renegade_containment
+
+	hide_if_no_cb = yes
+	total_war = yes
+	set_defender_wargoal = wg_end_threat_renegade_containment
+
+	surrender_acceptance = -1000
+	
+	allowed_peace_offers = {
+		status_quo
+	}
+
+	potential = {
+		always = yes
+	}
+	possible = {
+		always = yes
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+wg_ascended_empire_end_threat_renegade_containment = {
+	casus_belli = cb_ascended_empire_end_threat_renegade_containment
+
+	hide_if_no_cb = yes
+	total_war = yes
+	set_defender_wargoal = wg_renegade_containment
+
+	surrender_acceptance = -1000
+	
+	allowed_peace_offers = {
+		status_quo
+	}
+
+	potential = {
+		always = yes
+	}
+	possible = {
+		always = yes
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+wg_ascended_empire_force_ideology = {
+	casus_belli = cb_ascended_empire_ideology
+	
+	hide_if_no_cb = no
+	release_occupied_systems_on_status_quo = yes
+	
+	surrender_acceptance = -100
+	
+	war_exhaustion = 0.75
+	
+	allowed_peace_offers = {
+		status_quo
+		surrender
+		demand_surrender
+	}
+
+	potential = {
+		has_policy_flag = liberation_wars
+		is_country_type = ascended_empire
+		from = { is_country_type = default }
+	}
+	possible = {
+		has_total_war_cb = no
+		NOT = { is_in_federation_with = from }
+		custom_tooltip = {
+			fail_text = has_claimed_all_systems
+			from = {
+				is_country_type = default
+				any_owned_planet = {
+					is_colony = yes
+					root = {
+						NOT = { has_claim = prev.solar_system }
+					}
+				}
+			}
+		}
+	}
+	
+	on_status_quo = {
+		if = {
+			limit = {
+				exists = last_created_country
+				last_created_country = {
+					has_country_flag = released_empire
+				}
+			}
+
+			last_created_country = { add_modifier = { modifier = recently_liberated days = 7300 } }
+
+			root = { add_opinion_modifier = { modifier = opinion_we_liberated who = last_created_country } }
+			last_created_country = { add_opinion_modifier = { modifier = opinion_liberated_us who = root } }
+
+			every_country = {
+				limit = {
+					OR = {
+						is_in_federation_with = root
+						AND = {
+							is_subject = yes
+							exists = overlord
+							overlord = { is_same_value = root }
+						}
+					}
+				}
+
+				add_opinion_modifier = { modifier = opinion_we_liberated who = last_created_country }
+				last_created_country = { add_opinion_modifier = { modifier = opinion_liberated_us who = prev } }
+			}
+			from = {
+				add_threat = {
+					who = root
+					amount = 0.10
+				}
+			}
+		}
+	}
+	on_accept = {
+		custom_tooltip = wg_force_ideology_accept
+		custom_tooltip = wg_force_ideology_accept_2
+		if = {
+			limit = {
+				from = { has_federation = yes }
+			}
+			custom_tooltip = wg_force_ideology_accept_3
+		}
+		hidden_effect = {
+			from = { copy_ethos_and_authority = root }
+			from = { add_modifier = { modifier = recently_liberated days = 7300 } }
+			add_opinion_modifier = { modifier = opinion_we_liberated who = from }
+			from = { add_opinion_modifier = { modifier = opinion_liberated_us who = root } }
+			end_rivalry = from
+			from = { end_rivalry = root }
+			every_system_within_border = {
+				limit = {
+					from = { has_claim = prev }
+				}
+				remove_claims = { who = from }
+			}
+			every_country = {
+				limit = {
+					OR = {
+						is_in_federation_with = root
+						AND = {
+							is_subject = yes
+							exists = overlord
+							overlord = { is_same_value = root }
+						}
+					}
+				}
+				end_rivalry = from
+				from = { end_rivalry = prev }
+				add_opinion_modifier = { modifier = opinion_we_liberated who = from }
+				from = { add_opinion_modifier = { modifier = opinion_liberated_us who = prev } }
+				every_system_within_border = {
+					limit = {
+						from = { has_claim = prev }
+					}
+					remove_claims = { who = from }
+				}
+			}
+			from = {
+				add_threat = {
+					who = root
+					amount = 0.10
+				}
+			}
+			from = {
+				leave_alliance = { override_requirements = yes }
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 10
+	}
+}
+
+wg_ascended_empire_colossus = {
+	casus_belli = cb_ascended_empire_colossus
+	
+	hide_if_no_cb = no
+	total_war = yes
+	set_defender_wargoal = wg_end_threat_colossus
+	
+	surrender_acceptance = -1000
+	
+	allowed_peace_offers = {
+		status_quo
+	}
+
+	potential = {
+		OR = {
+			is_country_type = ascended_empire
+			is_country_type = awakened_fallen_empire
+		}
+		from = { 
+			OR = {
+				is_country_type = default
+				is_country_type = ascended_empire
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
+		}
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_terrible_opinion_or_supremacist"
+			OR = {
+				opinion_level = { who = from level <= terrible }
+				is_harming_relations_with = from
+				from = { is_at_war_with = prev }
+				OR = {
+					has_policy_flag = "diplo_stance_supremacist"
+					from = { has_policy_flag = "diplo_stance_supremacist" }
+					is_fallen_empire = yes
+					from = { is_fallen_empire = yes }
+				}
+				from = { is_rival = prev }
+			}
+		}
+		any_owned_fleet = { 
+			is_ship_class = shipclass_military_special
+			any_owned_ship = { is_ship_size = colossus } 
+		}
+	}
+	
+	ai_weight = {
+		weight = 100
+	}
+}
+
+wg_ascended_empire_end_threat_colossus = {
+	casus_belli = cb_ascended_empire_stop_colossus
+	
+	hide_if_no_cb = yes
+	total_war = yes
+	set_defender_wargoal = wg_ascended_empire_colossus
+	
+	surrender_acceptance = -1000
+	
+	allowed_peace_offers = {
+		status_quo
+	}
+
+	potential = {
+		OR = {
+			is_country_type = ascended_empire
+			is_country_type = awakened_fallen_empire
+		}
+		from = { 
+			OR = {
+				is_country_type = ascended_empire
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+#				is_country_type = default
+			}
+			any_owned_fleet = { 
+				is_ship_class = shipclass_military_special
+				any_owned_ship = { is_ship_size = colossus }
+			}
+		}
+		NOT = {
+			any_owned_fleet = { 
+				is_ship_class = shipclass_military_special
+				any_owned_ship = { is_ship_size = colossus }
+			}
+		}
+	}
+	possible = {
+		always = yes
+	}
+	
+	ai_weight = {
+		weight = 100
+	}
+}
+
+wg_ascended_empire_plunder = {
+	casus_belli = cb_ascended_empire_despoliation
+	
+	hide_if_no_cb = no
+	total_war = no
+	
+	surrender_acceptance = -25
+	
+	allowed_peace_offers = {
+		status_quo
+		surrender
+		demand_surrender
+	}
+
+	potential = {
+		is_country_type = ascended_empire
+		has_valid_civic = civic_barbaric_despoilers
+	}
+	possible = {
+		has_total_war_cb = no
+		NOT = { is_in_federation_with = from }
+		custom_tooltip = {
+			fail_text = has_claimed_all_systems
+			from = {
+				is_country_type = default
+				any_owned_planet = {
+					is_colony = yes
+					root = {
+						NOT = { has_claim = prev.solar_system }
+					}
+				}
+			}
+		}
+	}
+	on_accept = {
+		custom_tooltip = wg_plunder_accept_them
+		if = {
+			limit = {
+				from = {
+					num_owned_planets <= 3
+				}
+			}
+			custom_tooltip = wg_plunder_accept_us_1
+			hidden_effect = { add_resource = { energy = 500 minerals = 500 } }
+		}
+		if = {
+			limit = {
+				from = {
+					num_owned_planets >= 4
+					num_owned_planets <= 6
+				}
+			}
+			custom_tooltip = wg_plunder_accept_us_2
+			hidden_effect = { add_resource = { energy = 1000 minerals = 1000 } }
+		}
+		if = {
+			limit = {
+				from = {
+					num_owned_planets >= 7
+					num_owned_planets <= 9
+				}
+			}
+			custom_tooltip = wg_plunder_accept_us_3
+			hidden_effect = { add_resource = { energy = 1500 minerals = 1500 } }
+		}
+		if = {
+			limit = {
+				from = {
+					num_owned_planets >= 10
+					num_owned_planets <= 12
+				}
+			}
+			custom_tooltip = wg_plunder_accept_us_4
+			hidden_effect = { add_resource = { energy = 2000 minerals = 2000 } }
+		}
+		if = {
+			limit = {
+				from = {
+					num_owned_planets >= 13
+					num_owned_planets <= 15
+				}
+			}
+			custom_tooltip = wg_plunder_accept_us_5
+			hidden_effect = { add_resource = { energy = 2500 minerals = 2500 } }
+		}
+		if = {
+			limit = {
+				from = {
+					num_owned_planets >= 16
+					num_owned_planets <= 18
+				}
+			}
+			custom_tooltip = wg_plunder_accept_us_6
+			hidden_effect = { add_resource = { energy = 3000 minerals = 3000 } }
+		}
+		if = {
+			limit = {
+				from = {
+					num_owned_planets >= 19
+					num_owned_planets <= 21
+				}
+			}
+			custom_tooltip = wg_plunder_accept_us_7
+			hidden_effect = { add_resource = { energy = 3500 minerals = 3500 } }
+		}
+		if = {
+			limit = {
+				from = {
+					num_owned_planets >= 22
+					num_owned_planets <= 24
+				}
+			}
+			custom_tooltip = wg_plunder_accept_us_8
+			hidden_effect = { add_resource = { energy = 4000 minerals = 4000 } }
+		}
+		if = {
+			limit = {
+				from = {
+					num_owned_planets >= 25
+					num_owned_planets <= 27
+				}
+			}
+			custom_tooltip = wg_plunder_accept_us_9
+			hidden_effect = { add_resource = { energy = 4500 minerals = 4500 } }
+		}
+		if = {
+			limit = {
+				from = {
+					num_owned_planets >= 28
+					num_owned_planets <= 30
+				}
+			}
+			custom_tooltip = wg_plunder_accept_us_10
+			hidden_effect = { add_resource = { energy = 5000 minerals = 5000 } }
+		}
+		if = {
+			limit = {
+				from = {
+					num_owned_planets >= 31
+					num_owned_planets <= 33
+				}
+			}
+			custom_tooltip = wg_plunder_accept_us_11
+			hidden_effect = { add_resource = { energy = 5500 minerals = 5500 } }
+		}
+		if = {
+			limit = {
+				from = {
+					num_owned_planets >= 34
+					num_owned_planets <= 36
+				}
+			}
+			custom_tooltip = wg_plunder_accept_us_12
+			hidden_effect = { add_resource = { energy = 6000 minerals = 6000 } }
+		}
+		if = {
+			limit = {
+				from = {
+					num_owned_planets >= 37
+					num_owned_planets <= 39
+				}
+			}
+			custom_tooltip = wg_plunder_accept_us_13
+			hidden_effect = { add_resource = { energy = 6500 minerals = 6500 } }
+		}
+		if = {
+			limit = {
+				from = {
+					num_owned_planets >= 40
+					num_owned_planets <= 42
+				}
+			}
+			custom_tooltip = wg_plunder_accept_us_14
+			hidden_effect = { add_resource = { energy = 7000 minerals = 7000 } }
+		}
+		if = {
+			limit = {
+				from = {
+					num_owned_planets >= 43
+					num_owned_planets <= 45
+				}
+			}
+			custom_tooltip = wg_plunder_accept_us_15
+			hidden_effect = { add_resource = { energy = 7500 minerals = 7500 } }
+		}
+		if = {
+			limit = {
+				from = {
+					num_owned_planets >= 46
+					num_owned_planets <= 48
+				}
+			}
+			custom_tooltip = wg_plunder_accept_us_16
+			hidden_effect = { add_resource = { energy = 8000 minerals = 8000 } }
+		}
+		if = {
+			limit = {
+				from = {
+					num_owned_planets >= 49
+					num_owned_planets <= 51
+				}
+			}
+			custom_tooltip = wg_plunder_accept_us_17
+			hidden_effect = { add_resource = { energy = 8500 minerals = 8500 } }
+		}
+		if = {
+			limit = {
+				from = {
+					num_owned_planets >= 52
+					num_owned_planets <= 54
+				}
+			}
+			custom_tooltip = wg_plunder_accept_us_18
+			hidden_effect = { add_resource = { energy = 9000 minerals = 9000 } }
+		}
+		if = {
+			limit = {
+				from = {
+					num_owned_planets >= 55
+					num_owned_planets <= 57
+				}
+			}
+			custom_tooltip = wg_plunder_accept_us_19
+			hidden_effect = { add_resource = { energy = 9500 minerals = 9500 } }
+		}
+		if = {
+			limit = {
+				from = {
+					num_owned_planets >= 58
+				}
+			}
+			custom_tooltip = wg_plunder_accept_us_21
+			hidden_effect = { add_resource = { energy = 10000 minerals = 10000 } }
+		}
+		hidden_effect = { from = { add_modifier = { modifier = raided days = 3600 } } }
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+wg_ascended_empire_abduction = {
+	casus_belli = cb_ascended_empire_despoliation
+	
+	hide_if_no_cb = no
+	total_war = no
+	
+	surrender_acceptance = -25
+	
+	allowed_peace_offers = {
+		status_quo
+		surrender
+		demand_surrender
+	}
+
+	potential = {
+		is_country_type = ascended_empire
+		has_valid_civic = civic_fervid_xeno_collectors
+	}
+	possible = {
+		always = yes
+	}
+	
+	ai_weight = {
+		weight = 100
+	}
+}
+
+wg_ascended_empire_absorption = {
+	casus_belli = cb_ascended_hunger
+	
+	hide_if_no_cb = yes
+	total_war = yes
+	set_defender_wargoal = wg_end_threat_swarm
+	
+	surrender_acceptance = -1000
+	
+	allowed_peace_offers = {
+		status_quo
+	}
+	
+	potential = {
+		always = yes
+	}
+	possible = {
+		always = yes
+	}
+	
+	ai_weight = {
+		weight = 100
+	}
+}
+

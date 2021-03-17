@@ -1,0 +1,17 @@
+pm_matrioshka_world_construction = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_mastery_of_nature.dds"
+	icon_frame = 3
+
+	planet_metallurgists_alloys_produces_add = -2
+	planet_amenities_mult = -0.1
+	pop_housing_usage_mult = 0.1
+	pop_happiness = -0.1
+}
+
+pm_matrioshka_world = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_matrioshka_world.dds"
+	icon_frame = 1
+	
+	bio_pop_growth_speed = 0.1
+	bio_pop_growth_from_immigration = 0.1
+}

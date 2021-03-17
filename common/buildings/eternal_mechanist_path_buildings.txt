@@ -1,0 +1,193 @@
+
+building_ee_solar = {
+	base_buildtime = 10
+
+	can_be_ruined = no
+	can_be_disabled = no
+
+	category = government	
+
+		
+	potential = {
+		exists = owner
+		owner = { 
+			has_technology = "tech_eternos_insights" 
+			NOR = {
+				graphical_culture = eternal_empire
+				graphical_culture = eternal_empire_yellow
+				
+			}
+		}
+		
+	}	
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			unity = 10000
+		}
+		produces = {
+			eternium = 50
+		}
+		upkeep = {
+			unity = 50000
+		}
+	}
+
+	
+	prerequisites = {
+		"tech_eternos_insights"
+	}
+		
+	upgrades = {
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 5
+			owner = { 
+				has_monthly_income = {
+					resource = consumer_goods 
+					value < 10
+				}
+			}
+		}
+	}
+
+	ai_resource_production = {
+		consumer_goods  = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+
+building_ee_infinite_archives = {
+	base_buildtime = 10
+
+	can_be_ruined = no
+	can_be_disabled = no
+
+	category = government	
+
+		
+	potential = {
+		exists = owner
+		owner = { 
+			has_technology = "tech_eternos_insights" 
+			NOR = {
+				graphical_culture = eternal_empire
+				graphical_culture = eternal_empire_yellow
+				
+			}
+		}
+		
+	}		
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			unity = 10000
+		}
+		produces = {
+            ancient_knowldege = 1000
+		}
+		upkeep = {
+			unity = 50000
+		}
+	}
+
+	
+	prerequisites = {
+		"tech_eternos_insights"
+	}
+		
+	upgrades = {
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 5
+			owner = { 
+				has_monthly_income = {
+					resource = consumer_goods 
+					value < 10
+				}
+			}
+		}
+	}
+
+	ai_resource_production = {
+		consumer_goods  = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+building_ee_fancy = {
+	base_buildtime = 10
+
+	can_be_ruined = no
+	can_be_disabled = no
+
+	category = government	
+
+		
+	potential = {
+		exists = owner
+		owner = { 
+			has_technology = "tech_eternos_insights" 
+			NOR = {
+				graphical_culture = eternal_empire
+				graphical_culture = eternal_empire_yellow
+			
+			}
+		}
+		
+	}		
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			unity = 10000
+		}
+		produces = {
+            virtue = 10000
+		}
+		upkeep = {
+			unity = 50000
+		}
+	}
+
+	
+	prerequisites = {
+		"tech_eternos_insights"
+	}
+		
+	upgrades = {
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 5
+			owner = { 
+				has_monthly_income = {
+					resource = consumer_goods 
+					value < 10
+				}
+			}
+		}
+	}
+
+	ai_resource_production = {
+		consumer_goods  = 1
+		trigger = {
+			always = yes
+		}
+	}
+}

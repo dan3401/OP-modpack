@@ -1,0 +1,206 @@
+expsion = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	building_icon = building_psi_corps
+	clothes_texture_index = 5
+
+	possible = {
+		specialist_job_check_trigger = yes
+	}
+	
+	resources = {
+		category = planet_culture_workers
+		produces = {
+			unity = 2
+			society_research = 2
+		}	
+		upkeep = {
+			energy = 0.5
+		}
+	}
+		
+	weight = {
+		weight = @specialist_job_weight
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no
+		}			
+		modifier = {
+			factor = 10
+			OR = {
+				has_trait = trait_latent_psionic
+				has_trait = trait_psionic
+			}
+		}
+		modifier = {
+			factor = 3
+			OR = {
+				has_trait = trait_traditional
+				has_trait = trait_ex_society_focus
+			}
+		}
+		modifier = {
+			factor = 2
+			has_trait = trait_natural_sociologists
+		}
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}		
+	}
+}
+
+exwarmaster = {
+	category = ruler
+	condition_string = RULER_JOB_TRIGGER
+	building_icon = building_fortress
+	clothes_texture_index = 4
+
+	country_modifier = {
+		country_naval_cap_mult = 0.03
+		army_damage_mult = 0.05
+	}
+
+	possible = {
+		ruler_job_check_trigger = yes
+	}
+	
+	resources = {
+		category = planet_soldiers
+		upkeep = {
+			energy = 2
+		}
+	}
+		
+		
+	weight = {
+		weight = @specialist_job_weight
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no
+		}			
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}		
+	}
+}
+
+exmetatechnician = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	building_icon = building_power_plant
+	clothes_texture_index = 3
+
+	possible = {
+		specialist_job_check_trigger = yes
+	}
+	
+	resources = {
+		category = planet_technician
+		produces = {
+			energy = 8
+			physics_research = 6
+		}	
+	}
+		
+	weight = {
+		weight = @specialist_job_weight
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no
+		}
+		modifier = {
+			factor = 3
+			OR = {
+				has_trait = trait_ex_high_caste
+			}
+		}
+		modifier = {
+			factor = 1.75
+			OR = {
+				has_trait = trait_robot_superconductive
+				has_trait = trait_ingenious
+				has_trait = trait_nuumismatic_administration
+			}		
+		}			
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_trait = trait_natural_physicists
+				has_trait = trait_ex_physics_focus
+			}
+		}
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}		
+	}
+}
+
+exgrandsmith = {
+	category = ruler
+	condition_string = RULER_JOB_TRIGGER
+	building_icon = building_capital
+	clothes_texture_index = 4
+
+	possible = {
+		ruler_job_check_trigger = yes
+	}
+	
+	resources = {
+		category = planet_planet_administrators
+		produces = {
+			unity = 6
+		}
+		upkeep = {
+			alloys = 3
+		}
+	}
+	
+	planet_modifier = {
+		planet_amenities_add = 14
+	}	
+		
+	weight = {
+		weight = @specialist_job_weight
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no
+		}			
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}		
+	}
+}
+
+extinker = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	building_icon = building_research_lab_1
+	clothes_texture_index = 3
+
+	possible = {
+		specialist_job_check_trigger = yes
+	}
+	
+	resources = {
+		category = planet_researcher
+		produces = {
+			consumer_goods = 6
+			engineering_research = 6
+		}
+		upkeep = {
+			alloys = 3
+		}		
+	}
+		
+	weight = {
+		weight = @specialist_job_weight
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}		
+	}
+}

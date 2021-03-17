@@ -1,0 +1,94 @@
+d_eternos_tw = {
+	is_for_colonizeable = yes
+
+	
+	planet_modifier = { 
+		planet_max_districts_add = 5
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_eternos_perfection_tw = {
+	is_for_colonizeable = yes
+
+	
+	planet_modifier = { 
+		planet_max_districts_add = 5
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_eternos_psionics_tw = {
+	is_for_colonizeable = yes
+
+	
+	planet_modifier = { 
+		planet_max_districts_add = 5
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+
+d_eternos_perfect_nature_tw = {
+	is_for_colonizeable = yes
+
+	
+	planet_modifier = { 
+		planet_max_districts_add = 5
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+
+d_ascended_infrastructure_tw = {
+	is_for_colonizeable = yes
+
+	
+	planet_modifier = { 
+		planet_max_districts_add = 5
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_perfect_nature_tw = {
+	is_for_colonizeable = yes
+
+	
+	planet_modifier = { 
+		planet_max_districts_add = 5
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+
+d_bastion_of_eternity_tw = {
+	is_for_colonizeable = yes
+
+	
+	planet_modifier = { 
+		planet_max_districts_add = 5
+ 
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}

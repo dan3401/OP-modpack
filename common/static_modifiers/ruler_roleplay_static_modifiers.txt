@@ -1,0 +1,54 @@
+###planet_unrest_add -> ???###
+###country_resource_unity_add -> ???###
+###country_resource_unity_mult -> ???###
+### -> REMOVE###
+
+play_as_ruler_strategic_resource_focus_modifier = {
+	show_only_custom_tooltip = yes
+	custom_tooltip = edict_play_as_ruler_strategic_resource_focus_tooltip
+	country_produces_mult = 0.2
+	country_energy_produces_mult = -0.2
+	country_minerals_produces_mult = -0.2
+	country_food_produces_mult = -0.2
+	country_alloys_produces_mult = -0.2
+	country_consumer_goods_produces_mult = -0.2
+	country_physics_research_produces_mult = -0.2
+	country_society_research_produces_mult = -0.2
+	country_engineering_research_produces_mult = -0.2
+	country_influence_produces_mult = -0.2
+	country_unity_produces_mult = -0.2
+}
+
+############################
+#PLANET MODIFIERS###
+############################
+ruler_planet_agrarian_good1 = {
+
+	icon = "gfx/interface/icons/planet_modifiers/pm_planet_surface.dds"
+	icon_frame = 1
+}
+
+ruler_planet_agrarian_bad1 = {
+	pop_happiness = -0.05
+
+	icon = "gfx/interface/icons/planet_modifiers/pm_planet_surface.dds"
+	icon_frame = 3
+}
+
+ruler_planet_agrarian_good2 = {
+
+	icon = "gfx/interface/icons/planet_modifiers/pm_planet_surface.dds"
+	icon_frame = 1
+}
+
+ruler_planet_agrarian_bad2 = {
+
+	icon = "gfx/interface/icons/planet_modifiers/pm_planet_surface.dds"
+	icon_frame = 3
+}
+#################################
+#EVENT MODIFIERS###
+###################################
+ruler_teaching_to_play = {
+
+}

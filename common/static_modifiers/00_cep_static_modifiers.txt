@@ -1,0 +1,44 @@
+diversity_strengthened = {
+	planet_immigration_pull_mult = 0.75
+	bio_pop_growth_from_immigration = 0.25
+	pop_environment_tolerance = 0.10
+	icon = "gfx/interface/icons/planet_modifiers/pm_alien_propaganda.dds"
+	icon_frame = 1
+}
+
+sanctify_1 = {
+	country_unity_produces_mult = 0.10
+	country_base_physics_research_produces_add = 3
+	pop_ethic_spiritualist_attraction_mult = 0.15
+	custom_tooltip = ss_bonus
+	icon = "gfx/interface/icons/planet_modifiers/pm_black_hole.dds"
+	icon_frame = 1
+}
+
+sanctify_1_empire = {
+	country_unity_produces_mult = 0.05
+	pop_ethic_spiritualist_attraction_mult = 0.10
+	country_base_physics_research_produces_add = 2
+	icon = "gfx/interface/icons/modifiers/mod_black_hole.dds"
+}
+
+sanctify_2_empire = {
+	country_unity_produces_mult = 0.10
+	pop_ethic_spiritualist_attraction_mult = 0.15
+	country_base_physics_research_produces_add = 2
+	icon = "gfx/interface/icons/modifiers/mod_black_hole.dds"
+}
+
+sanctify_3_empire = {
+	country_unity_produces_mult = 0.10
+	pop_ethic_spiritualist_attraction_mult = 0.20
+	country_base_physics_research_produces_add = 4
+	icon = "gfx/interface/icons/modifiers/mod_black_hole.dds"
+}
+
+voidcraft_propulsion_materials_research_bonus = {
+	category_voidcraft_research_speed_mult = 1.00
+	category_propulsion_research_speed_mult = 1.00
+	category_materials_research_speed_mult = 1.00
+	icon = "gfx/interface/icons/modifiers/mod_resource_engineering_research_mult.dds"
+}

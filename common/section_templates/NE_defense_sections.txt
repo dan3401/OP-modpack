@@ -1,0 +1,243 @@
+ship_section_template = {
+	key = "ION_CANNON_EE_CORE"
+	fits_on_slot = "ship"
+	ship_size = ion_cannon
+	entity = "ion_cannon_section_entity"
+    icon = "GFX_ship_part_core_mid"
+    
+		prerequisites = { "tech_fallenw" }
+	
+	component_slot = {
+		name = "TITANIC_GUN_01"
+		template = "invisible_titanic_fixed"
+		
+		locatorname = "xl_gun_01"
+    }
+    
+    component_slot = {
+		name = "TITANIC_GUN_02"
+		template = "invisible_titanic_fixed"
+		
+		locatorname = "xl_gun_02"
+    }
+    
+    component_slot = {
+		name = "TITANIC_GUN_03"
+		template = "invisible_titanic_fixed"
+		
+		locatorname = "xl_gun_03"
+    }
+    
+    component_slot = {
+		name = "TITANIC_GUN_04"
+		template = "invisible_titanic_fixed"
+		
+		locatorname = "xl_gun_04"
+    }
+    
+    component_slot = {
+		name = "TITANIC_GUN_05"
+		template = "invisible_titanic_fixed"
+		
+		locatorname = "xl_gun_05"
+    }
+    
+    component_slot = {
+		name = "TITANIC_GUN_06"
+		template = "invisible_titanic_fixed"
+		
+		locatorname = "xl_gun_06"
+	}
+
+	small_utility_slots = 0
+	medium_utility_slots = 0
+	large_utility_slots = 9
+
+	resources = {
+		category = ship_sections
+		cost = {
+			eternium = 100
+		}
+	}
+}
+
+ship_section_template = {
+	key = "EE_MILITARY_STATION_SECTION"
+	ship_size = military_station_small
+    ship_size = military_station_medium
+    
+		prerequisites = { "tech_fallenw" }
+	
+	fits_on_slot = "north"
+	fits_on_slot = "west"
+	fits_on_slot = "east"
+	fits_on_slot = "south"
+	should_draw_components = yes
+	
+	entity = "military_station_section_medium_entity"
+	icon = "GFX_ship_part_core_mid"	
+    
+    component_slot = {
+		name = "EXTRA_LARGE_01"
+		template = "invisible_extra_large_fixed"
+		
+		locatorname = "xl_gun_01"
+	}
+
+	component_slot = {
+		name = "EXTRA_LARGE_02"
+		template = "invisible_extra_large_fixed"
+		
+		locatorname = "xl_gun_02"
+    }
+    
+	component_slot = {
+		name = "LARGE_GUN_01"
+		template = "large_turret"
+		
+		locatorname = "large_gun_01"
+	}
+
+	component_slot = {
+		name = "LARGE_GUN_02"
+		template = "large_turret"
+		
+		locatorname = "large_gun_02"
+	}
+
+	component_slot = {
+		name = "LARGE_GUN_03"
+		template = "large_turret"
+		
+		locatorname = "large_gun_03"
+	}
+
+	component_slot = {
+		name = "LARGE_GUN_04"
+		template = "large_turret"
+		
+		locatorname = "large_gun_04"
+	}
+			
+	large_utility_slots = 8
+	aux_utility_slots = 1
+	
+	resources = {
+		category = ship_sections
+		cost = {
+			eternium = 20
+		}
+	}
+	
+	ai_weight = {
+		factor = 1
+		modifier = {
+			factor = 10
+			OR = {
+				is_preferred_weapons = weapon_type_energy
+				is_preferred_weapons = weapon_type_kinetic
+			}			
+		}
+	}
+}
+
+
+ship_section_template = {
+	key = "Spire"
+	ship_size = military_station_small
+    ship_size = military_station_medium
+    
+		prerequisites = { "tech_fallenw" }
+	
+	fits_on_slot = "north"
+	fits_on_slot = "west"
+	fits_on_slot = "east"
+	fits_on_slot = "south"
+	should_draw_components = yes
+	
+	entity = "eternal_pillar_fe_entity"
+	icon = "GFX_ship_part_core_mid"	
+    
+  component_slot = {
+		name = "EXTRA_LARGE_01"
+		template = "invisible_extra_large_fixed"
+		
+		locatorname = "xl_gun_01"
+	}
+
+	component_slot = {
+		name = "EXTRA_LARGE_02"
+		template = "invisible_extra_large_fixed"
+		
+		locatorname = "xl_gun_01"
+  }
+    
+	component_slot = {
+		name = "EXTRA_LARGE_03"
+		template = "invisible_extra_large_fixed"
+		
+		locatorname = "xl_gun_01"
+	}
+
+	component_slot = {
+		name = "EXTRA_LARGE_04"
+		template = "invisible_extra_large_fixed"
+		
+		locatorname = "xl_gun_01"
+  }
+
+	component_slot = {
+		name = "EXTRA_LARGE_05"
+		template = "invisible_extra_large_fixed"
+		
+		locatorname = "xl_gun_01"
+	}
+
+	component_slot = {
+		name = "EXTRA_LARGE_06"
+		template = "invisible_extra_large_fixed"
+		
+		locatorname = "xl_gun_01"
+	}
+	component_slot = {
+		name = "EXTRA_LARGE_07"
+		template = "invisible_extra_large_fixed"
+		
+		locatorname = "xl_gun_01"
+  }
+
+	component_slot = {
+		name = "EXTRA_LARGE_08"
+		template = "invisible_extra_large_fixed"
+		
+		locatorname = "xl_gun_01"
+	}
+
+	component_slot = {
+		name = "EXTRA_LARGE_09"
+		template = "invisible_extra_large_fixed"
+		
+		locatorname = "xl_gun_01"
+  }
+			
+	large_utility_slots = 9
+	aux_utility_slots = 3
+	
+	resources = {
+		category = ship_sections
+		cost = {
+			eternium = 20
+		}
+	}
+	
+	ai_weight = {
+		factor = 1
+		modifier = {
+			factor = 10
+			OR = {
+				is_preferred_weapons = weapon_type_energy
+				is_preferred_weapons = weapon_type_kinetic
+			}			
+		}
+	}
+}

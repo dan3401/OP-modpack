@@ -1,0 +1,437 @@
+##########################################################################
+# Empire Policies
+#
+# #####
+#
+# AI:
+# Base AI-weight is 100, if unchanged
+# AI will grab whatever policy-option has the highest weight
+#
+# #####
+#
+##########################################################################
+
+total_war_doctrine = {
+	potential = {
+		OR = {
+			has_civic = "civic_only_war"
+			has_technology = tech_true_warfare
+		}
+	}
+
+	option = {
+		name = "ever_wary"
+		
+		policy_flags = {}	
+		modifier = {
+			ship_home_territory_fire_rate_mult = 0.33
+			starbase_defensive_war_ship_build_speed_mult = 0.33
+			planet_jobs_alloys_produces_mult = 0.05
+		}
+		
+		AI_weight = {
+			factor = 1
+		}		
+	}
+	
+	option = {
+		name = "alpha_strike"
+		
+		policy_flags = {}	
+		modifier = {
+			ship_weapon_damage = 0.15
+			ship_speed_mult = 0.25
+			ship_disengage_chance_mult = 0.50
+			ship_hull_mult = -0.10
+			ship_armor_mult = -0.20
+		}
+		
+		AI_weight = {
+			factor = 1
+		}		
+	}
+
+	option = {
+		name = "scorched_earth"
+		
+		policy_flags = {
+			ex_scorched_earth
+		}
+		modifier = {
+			army_damage_mult = 0.30 #added
+			army_morale_damage_mult = 0.50 #was 0.33
+			army_collateral_damage_mult = 0.50
+			ship_weapon_damage = 0.20 #was 0.10
+			ship_orbital_bombardment_mult = 0.75 #was 0.50
+			country_trust_cap_add = -25 #also scripted: -50 opinion from other empires
+			country_trade_fee = 0.05
+		}	
+
+		AI_weight = {
+			factor = 1
+		}
+		valid = {
+			OR = {
+				has_ethic = "ethic_xenophobe"
+				has_ethic = "ethic_fanatic_xenophobe"
+				has_civic = "civic_only_war"
+			}
+		}		
+	}
+
+	option = {
+		name = "science_corps"
+		
+		policy_flags = {}
+		modifier = {
+			all_technology_research_speed = 0.05
+			science_ship_survey_speed = 0.50
+			ship_sensor_range_add = 2
+			starbase_shipyard_build_speed_mult = -0.25
+			ship_weapon_damage = -0.15
+		}	
+
+		AI_weight = {
+			factor = 1
+		}
+		valid = {
+			OR = {
+				has_ethic = "ethic_materialist"
+				has_ethic = "ethic_fanatic_materialist"
+				has_civic = "civic_only_war"
+			}
+		}		
+	}
+	
+	option = {
+		name = "enemy_within"
+		
+		policy_flags = {}
+		modifier = {
+			planet_crime_add = -25
+			planet_stability_add = 10
+			starbase_trade_protection_range_add = 1
+			pop_happiness = -0.05
+			country_naval_cap_mult = -0.25
+		}	
+
+		AI_weight = {
+			factor = 1
+		}
+		valid = {
+			OR = {
+				has_ethic = "ethic_authoritarian"
+				has_ethic = "ethic_fanatic_authoritarian"
+				has_civic = "civic_only_war"
+			}
+		}		
+	}
+
+	option = {
+		name = "faithful_fleet"
+		
+		policy_flags = {}
+		modifier = {
+			army_morale = 0.50
+			country_unity_produces_mult = 0.10
+			ships_upkeep_mult = 0.10
+		}	
+
+		AI_weight = {
+			factor = 1
+		}
+		valid = {
+			OR = {
+				has_ethic = "ethic_spiritualist"
+				has_ethic = "ethic_fanatic_spiritualist"
+				has_civic = "civic_only_war"
+			}
+		}		
+	}
+	
+		option = {
+		name = "star_emissaries"
+		
+		policy_flags = {}
+		modifier = {
+			diplo_weight_mult = 0.1
+			diplo_weight_naval_mult = 0.1
+		}	
+
+		AI_weight = {
+			factor = 1
+		}
+		valid = {
+			OR = {
+				has_ethic = "ethic_egalitarian"
+				has_ethic = "ethic_fanatic_egalatarian"
+				has_ethic = "ethic_xenophile"
+				has_ethic = "ethic_fanatic_xenophile"
+				has_civic = "civic_only_war"
+			}
+		}		
+	}
+
+	option = {
+		name = "only_war"
+		
+		policy_flags = {}
+		modifier = {
+			army_damage_mult = 0.50
+			country_naval_cap_mult = 0.30
+			ship_fire_rate_mult = 0.25
+			ships_upkeep_mult = -0.20
+			country_war_exhaustion_mult = -0.40
+			planet_jobs_engineering_research_produces_mult= -0.15
+			planet_jobs_physics_research_produces_mult= -0.15
+			planet_jobs_society_research_produces_mult= -0.15
+			envoys_add = -1
+		}	
+
+		AI_weight = {
+			factor = 1
+			modifier = {
+				factor = 100
+				OR = { 
+					has_ai_personality = honorbound_warriors 
+				}
+			}
+		}
+		valid = {
+			OR = {
+				has_ethic = "ethic_fanatic_militarist"
+				has_civic = "civic_only_war"
+			}
+		}		
+	}
+}
+
+immersive_simulations = {
+	potential = {
+		has_technology = tech_immersive_simulations
+	}
+
+	option = {
+		name = "private_arcades"
+		
+		policy_flags = {}	
+		modifier = {
+			pop_happiness = 0.05
+			country_energy_produces_mult = 0.05
+		}
+		
+		AI_weight = {
+			factor = 1
+		}		
+	}
+	
+	option = {
+		name = "welcoming_mindnet"
+		
+		policy_flags = {
+			ex_welcoming_mindnet
+		}	
+		modifier = {
+			country_trust_cap_add = 25
+			country_trust_growth = 0.50
+			planet_immigration_pull_mult = 1
+			pop_growth_from_immigration = 0.33
+			country_trade_fee = -0.05
+		}
+		
+		AI_weight = {
+			factor = 1
+		}		
+			valid = {
+			OR = {
+				has_ethic = "ethic_xenophile"
+				has_ethic = "ethic_fanatic_xenophile"
+				has_ethic = "ethic_pacifist"
+				has_ethic = "ethic_fanatic_pacifist"
+			}
+		}
+	}	
+		option = {
+		name = "military_simulations"
+		
+		policy_flags = {}	
+		modifier = {
+			ship_weapon_damage = 0.15
+			ship_starting_experience_add = 100
+			army_damage_mult = 0.33
+			army_morale = 0.33
+			army_starting_experience_add = 100
+		}
+		
+		AI_weight = {
+			factor = 1
+		}		
+	
+	
+			valid = {
+			OR = {
+				has_ethic = "ethic_militarist"
+				has_ethic = "ethic_fanatic_militarist"
+			}
+		}
+	}	
+	option = {
+		name = "educational_simulations"
+		
+		policy_flags = {}	
+		modifier = {
+			planet_jobs_engineering_research_produces_mult= 0.10
+			planet_jobs_physics_research_produces_mult= 0.10
+			planet_jobs_society_research_produces_mult= 0.10
+			species_leader_exp_gain = 0.20
+			country_leader_pool_size = 2
+			leaders_upkeep_mult = -0.33
+			leader_skill_levels = 1
+			country_energy_produces_mult = -0.05
+		}
+		
+		AI_weight = {
+			factor = 1
+		}
+		
+			valid = {
+			OR = {
+				has_ethic = "ethic_materialist"
+				has_ethic = "ethic_fanatic_materialist"
+			}
+		}		
+	}
+	option = {
+		name = "false_world"
+		
+		policy_flags = {
+			ex_false_world
+		}	
+		modifier = {
+			pop_happiness = 0.10
+			planet_crime_add = -75
+			planet_stability_add = 10
+			pop_housing_usage_mult = -0.20
+			pop_government_ethic_attraction = 1
+			#all_technology_research_speed = -0.10 penalty seems unnecessary considering opinion malus
+		}
+		
+		prerequisites = { tech_perfect_simulations }
+
+
+		AI_weight = {
+			factor = 1
+		}		
+			valid = {
+			OR = {
+				has_ethic = "ethic_xenophobe"
+				has_ethic = "ethic_fanatic_xenophobe"
+				has_ethic = "ethic_authoritarian"
+				has_ethic = "ethic_fanatic_authoritarian"
+			}
+		}
+	}	
+	option = {
+		name = "endless_workday"
+		
+		policy_flags = {}	
+		modifier = {
+			planet_jobs_produces_mult = 0.25
+			pop_happiness = -0.10
+			country_unity_produces_mult = -0.10
+			pop_government_ethic_attraction = -0.30
+		}
+		
+		AI_weight = {
+			factor = 1
+		}		
+			valid = {
+			NOR = {
+				has_ethic = "ethic_egalitarian"
+				has_ethic = "ethic_fanatic_egalitarian"
+			}
+		}
+	}	
+	option = {
+		name = "premium_heaven"
+		
+		policy_flags = {}	
+		modifier = {
+			country_energy_produces_mult = 0.33
+			pop_happiness = -0.05
+			country_unity_produces_mult = -0.05
+			planet_stability_add = -5
+		}
+		
+		AI_weight = {
+			factor = 1
+		}		
+			valid = {
+			NOR = {
+				has_ethic = "ethic_egalitarian"
+				has_ethic = "ethic_fanatic_egalitarian"
+			}
+		}
+	}	
+	option = {
+		name = "simulated_utopia"
+		
+		policy_flags = {
+			ex_simulated_utopia
+		}	
+		modifier = {
+			pop_happiness = 0.25
+			country_unity_produces_mult = 0.15
+			pop_government_ethic_attraction = 0.50
+			planet_pops_consumer_goods_upkeep_mult = 0.10
+			pop_amenities_usage_mult = 0.10
+			planet_jobs_produces_mult = -0.25
+			pop_growth_speed = -0.35
+		}
+		
+		prerequisites = { tech_perfect_simulations }
+		
+		AI_weight = {
+			factor = 1
+		}		
+			valid = {
+			OR = {
+				has_ethic = "ethic_egalitarian"
+				has_ethic = "ethic_fanatic_egalitarian"
+				has_ethic = "ethic_pacifist"
+				has_ethic = "ethic_fanatic_pacifist"
+			}
+		}
+	}
+		option = {
+		name = "second_universe"
+		
+		policy_flags = {
+			ex_second_universe #grants a +40 opinion modifier to all empires
+		}	
+		modifier = {
+			#pop_happiness = 0.10 Got enough going for it already
+			#country_unity_produces_mult = 0.10
+			country_trust_cap_add = 50
+			country_trust_growth = 0.50
+			all_technology_research_speed = 0.15
+			ship_evasion_mult = 0.25
+			country_base_influence_produces_add = 2
+			country_energy_produces_mult = -0.10
+		}
+		
+		prerequisites = { tech_perfect_simulations }
+		
+		AI_weight = {
+			factor = 1
+		}		
+			valid = {
+			OR = {
+				has_ethic = "ethic_materialist"
+				has_ethic = "ethic_fanatic_materialist"
+				has_ethic = "ethic_xenophile"
+				has_ethic = "ethic_fanatic_xenophile"
+			}
+		}
+	}
+}	

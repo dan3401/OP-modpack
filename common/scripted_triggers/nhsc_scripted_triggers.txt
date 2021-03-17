@@ -1,0 +1,242 @@
+############################################################
+###                 ESC Scripted Triggers                ###
+############################################################
+
+### mod planet classes
+@PD_Ecocity             = "pc_ecocity"
+@PD_Bioforge            = "pc_bioforge"
+@PD_MachineFactory      = "pc_machine_factory"
+@PD_MoltenHabitat       = "pc_pd_molten_hab"
+@AM_MoltenHabitable     = "pc_molten_habitable"
+### mod planet (subclass) modifiers
+@RSNF_VolcanicWorld     = "volcanic_world"
+@RSNF_LavaWorld         = "lava_world"
+### mod district types
+@DO2_AscendedHousing    = "district_ascended_housing"
+### civics -- until CWTools actually recognizes them as valid
+@Civic_Memoralist       = "civic_memorialist"
+@Civic_MemoralistHive   = "civic_hive_memorialist"
+@Civic_MemoralistRobot  = "civic_machine_memorialist"
+@Civic_DeathCult        = "civic_death_cult"
+@Civic_DeathCultCorp    = "civic_death_cult_corporate"
+
+################## Mantle Mining Facility ###################
+
+# returns 'yes' if a planet is an ecumenopolis type
+is_city_planet_nhsc = {
+    OR = {
+        is_planet_class = pc_city
+        # planet diversity compatibility
+        is_planet_class = @PD_Ecocity
+        is_planet_class = @PD_Bioforge
+        is_planet_class = @PD_MachineFactory
+        # district overhaul compatibility
+        AND = {
+            is_planet_class = pc_relic
+            has_district = @DO2_AscendedHousing
+        }
+    }
+}
+
+# returns yes if a planet is molten/volcanic
+is_naked_mantle_planet_nhsc = {
+    OR = {
+        is_planet_class = @AM_MoltenHabitable # Alphamod Molten Habitable
+        is_planet_class = @PD_MoltenHabitat # Planet Diversity molten habitat
+        has_modifier = @RSNF_VolcanicWorld # New Frontiers volcanic tomb world
+        has_modifier = @RSNF_LavaWorld # New Frontiers planet
+    }
+}
+
+# returns 'yes' if the planet is a valid place for the mantle mining facility
+is_valid_planet_for_mantle_mining = {
+    OR = {
+        AND = {
+            is_city_planet_nhsc = yes
+            OR = {
+                free_district_slots > 4 # need at least 5
+                has_deposit = d_nhsc_large_borehole_1
+            }
+        }
+        is_naked_mantle_planet_nhsc = yes
+    }
+}
+
+# returns 'yes' if the planet is a valid place for the upgraded mantle mining facility
+is_valid_planet_for_upgraded_mantle_mining = {
+    OR = {
+        is_city_planet_nhsc = yes
+        is_naked_mantle_planet_nhsc = yes
+    }
+}
+
+# returns 'yes' if a planet is allowed to construct mantle mining facility
+can_build_mantle_mining_facility = {
+    OR = {
+        AND = {
+            is_city_planet_nhsc = yes
+            has_major_upgraded_capital = yes
+        }
+        AND = {
+            is_naked_mantle_planet_nhsc = yes
+            has_fully_upgraded_capital = yes
+            num_pops > 79
+        }
+    }
+}
+
+# returns 'yes' if the planets needs a borehole 'feature' upon construction of the mantle mining facility
+needs_giant_borehole = {
+    NOR = {
+        has_deposit = d_nhsc_large_borehole_1
+        is_naked_mantle_planet_nhsc = yes
+    }
+}
+
+###################### Country Types ########################
+
+# returns yes if the empire is playable type
+nhsc_is_playable_empire = {
+    any_playable_country = {
+        is_same_empire = PREV
+    }
+}
+
+####################### Empire Types ########################
+
+# returns 'yes' if the country is a normal empire or a machine FE/AFE
+is_normal_empire_or_machine_fe_nhsc = {
+    OR = {
+        is_fallen_empire = no
+        is_fallen_empire_machine = yes
+    }
+}
+
+# returns 'yes' if the country is a normal empire or a materialist FE/AFE
+is_normal_empire_or_materialist_fe_nhsc = {
+    OR = {
+        is_fallen_empire = no
+        is_fallen_empire_materialist = yes
+    }
+}
+
+# returns 'yes' if the country is a normal empire or a spiritualist FE/AFE
+is_normal_empire_or_spiritualist_fe_nhsc = {
+    OR = {
+        is_fallen_empire = no
+        is_fallen_empire_spiritualist = yes
+    }
+}
+
+# returns 'yes' if country is a normal organic empire or a spiritualist FE/AFE
+is_organic_empire_or_spiritualist_fe_nhsc = {
+    OR = {
+        is_fallen_empire = no
+        is_fallen_empire_spiritualist = yes
+    }
+    is_machine_empire = no
+}
+
+# returns 'yes' if the country is a normal empire or a xenophile FE/AFE
+is_normal_empire_or_xenophile_fe_nhsc = {
+    OR = {
+        is_fallen_empire = no
+        is_fallen_empire_xenophile = yes
+    }
+}
+
+####################### Weapon Types ########################
+
+# returns 'yes' if at least one weapon category requiring "New Age Warfare" tech is enabled
+has_ESC_advanced_weapons_enabled = {
+    NAND = {
+        has_global_flag = ESC_weapons_vanilla_forbidden
+        has_global_flag = ESC_weapons_crystal_forbidden
+        has_global_flag = ESC_weapons_gravity_forbidden
+        has_global_flag = ESC_weapons_nanite_forbidden
+        has_global_flag = ESC_weapons_psionic_forbidden
+        has_global_flag = ESC_weapons_wavemotion_forbidden
+        has_global_flag = ESC_weapons_plasmamissile_forbidden
+        has_global_flag = ESC_weapons_wavemotion_forbidden
+        has_global_flag = ESC_weapons_chrono_forbidden
+        has_global_flag = ESC_weapons_crafts_forbidden
+        has_global_flag = ESC_weapons_crisis_forbidden
+    }
+}
+
+# returns 'yes' if at least one extra-large or titanic weapon is enabled
+has_ESC_xlarge_weapons_enabled = {
+    NAND = {
+        has_global_flag = ESC_weapons_vanilla_forbidden
+        has_global_flag = ESC_weapons_crystal_forbidden
+        has_global_flag = ESC_weapons_gravity_forbidden
+        has_global_flag = ESC_weapons_nanite_forbidden
+        has_global_flag = ESC_weapons_psionic_forbidden
+        has_global_flag = ESC_weapons_wavemotion_forbidden
+        has_global_flag = ESC_weapons_xmissiles_forbidden
+        has_global_flag = ESC_weapons_xautocannons_forbidden
+        has_global_flag = ESC_weapons_chrono_forbidden
+        has_global_flag = ESC_weapons_enigmatic_forbidden
+        has_global_flag = ESC_matriarch_tech_forbidden
+    }
+}
+
+################### Culture Workers Types ###################
+
+# culture workers
+country_uses_culture_workers_nhsc = {
+    is_megacorp = no
+    is_spiritualist = no
+    is_gestalt = no
+    NOR = {
+        has_valid_civic = @Civic_DeathCult
+		has_valid_civic = @Civic_DeathCultCorp
+        has_valid_civic = @Civic_Memoralist
+    }
+}
+
+# priests
+country_uses_priests_nhsc = {
+    is_spiritualist = yes
+    is_gestalt = no
+    NOR = {
+        has_valid_civic = @Civic_DeathCult
+		has_valid_civic = @Civic_DeathCultCorp
+        has_valid_civic = @Civic_Memoralist
+    }
+}
+
+# managers
+country_uses_managers_nhsc = {
+    is_megacorp = yes
+    is_spiritualist = no
+    is_gestalt = no
+    NOR = {
+        has_valid_civic = @Civic_DeathCult
+		has_valid_civic = @Civic_DeathCultCorp
+        has_valid_civic = @Civic_Memoralist
+    }
+}
+
+# death priests
+country_uses_death_priests_nhsc = {
+    OR = {
+        has_valid_civic = @Civic_DeathCult
+		has_valid_civic = @Civic_DeathCultCorp
+    }
+}
+
+# death chroniclers
+country_uses_memorialists_nhsc = {
+    is_gestalt = no
+    has_valid_civic = @Civic_Memoralist
+}
+
+# death chronicler drones
+country_uses_chronicle_drones_nhsc = {
+    is_gestalt = yes
+    OR = {
+		has_valid_civic = @Civic_MemoralistHive
+		has_valid_civic = @Civic_MemoralistRobot
+    }
+}

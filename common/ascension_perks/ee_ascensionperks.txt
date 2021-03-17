@@ -1,0 +1,621 @@
+ap_tw_eternos = {
+	on_enabled = {
+		custom_tooltip = "eternos_tooltip"
+		hidden_effect = {
+			set_country_flag = path_of_eternos
+
+			
+		}
+		
+	}
+	
+	modifier = {
+		planet_pops_organics_food_upkeep_mult = -0.5
+		planet_pops_organics_consumer_goods_upkeep_mult = -0.5
+		planet_pops_organics_energy_upkeep_mult = -0.5
+		planet_pops_organics_nanites_upkeep_mult = -0.5
+		planet_jobs_unity_produces_add = 1
+		
+	}
+	
+	possible = {		
+		custom_tooltip = {
+			fail_text = "requires_fallenw"
+			OR = {
+			has_technology = tech_fallenw
+			}
+		}
+		
+		
+	}
+	
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_tw_eternos
+		}
+		has_government = gov_eternal_continuum	
+		}
+		
+	
+	ai_weight = {
+		factor = 5
+		modifier = {
+			factor = 50
+			has_ethic = ethic_fanatic_spiritualist
+		}
+	}
+}
+
+
+ap_tw_eternal_transcendence = {
+	on_enabled = {
+		#custom_tooltip = "eternal_transcendence_tooltip"
+		hidden_effect = {
+			set_country_flag = eternal_transcendence
+			give_technology = { tech = tech_eternos_insights message = no }
+			add_modifier = {
+				modifier = "unleashed_potential"
+				
+			}
+			country_event = {
+				id = twrpevents.5
+				days = 1
+			}
+			country_event = {
+				id = twinks_ee.30
+				days = 1
+			}
+		}
+		
+	}
+	
+	modifier = {
+		num_tech_alternatives_add = 5
+		planet_pops_organics_food_upkeep_mult = -0.5
+		planet_pops_organics_consumer_goods_upkeep_mult = -0.5
+		planet_pops_organics_energy_upkeep_mult = -0.5
+		planet_pops_organics_nanites_upkeep_mult = -0.5
+		
+	}
+	
+	possible = {		
+		custom_tooltip = {
+			fail_text = "requires_fallenw"
+			OR = {
+			has_technology = tech_fallenw
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_ascension_perks_3"
+			num_ascension_perks > 3
+			has_ascension_perk = ap_tw_eternos
+		}	
+	}
+	
+	potential = {
+		NOT = { has_ascension_perk = ap_tw_eternal_transcendence }
+		has_ascension_perk = ap_tw_eternos
+		has_government = gov_eternal_continuum	
+	}
+		
+	
+	ai_weight = {
+		factor = 0
+	}
+}
+
+ap_tw_bothpaths = {
+	on_enabled = {
+		custom_tooltip = "ap_tw_both_paths_tooltip"
+		hidden_effect = {
+			give_technology = { tech = tech_eternos_insights message = no }
+			add_modifier = {
+				modifier = "unleashed_potential"
+				
+			}
+			
+			
+			set_global_flag = enlightened_ee
+
+			give_technology = { tech = tech_mechanist_insights message = no }
+			
+		}
+		
+	}
+	
+	modifier = {
+		
+	}
+	
+	possible = {		
+		custom_tooltip = {
+			fail_text = "requires_fallenw"
+			OR = {
+			has_technology = tech_fallenw
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_ascension_perks_6"
+			num_ascension_perks > 5
+		}		
+	}
+	
+	potential = {
+		has_government = gov_eternal_continuum		
+			
+			has_ascension_perk = ap_tw_eternal_transcendence
+			has_ascension_perk = ap_tw_eternos
+			
+		
+		graphical_culture = eternal_light
+		species_portrait = lyrian
+	}
+	
+	ai_weight = {
+		factor = 5
+	}
+}
+
+ap_tw_mechanist = {
+	on_enabled = {
+		custom_tooltip = "tw_mechanist_tooltip"
+		hidden_effect = {
+			set_country_flag = path_of_mechanist
+		
+		}
+	}
+	
+	modifier = {
+		megastructures_energy_produces_mult = 1
+		megastructures_minerals_produces_mult = 1
+		megastructures_physics_research_produces_mult = 1
+		megastructures_engineering_research_produces_mult = 1
+		megastructures_society_research_produces_mult = 1
+		megastructure_build_speed_mult = 1.0
+
+	}
+	
+	possible = {		
+		custom_tooltip = {
+			fail_text = "requires_fallenw"
+			OR = {
+			has_technology = tech_fallenw
+			}
+		}
+		
+	}
+	
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_tw_mechanist
+		}
+		has_government = gov_eternal_continuum	
+		}
+		
+	
+		ai_weight = {
+			factor = 5
+				modifier = {
+					factor = 50
+				NOT ={	has_ethic = ethic_fanatic_spiritualist }
+			}
+		}
+}
+
+ap_tw_mechanist_path = {
+	on_enabled = {
+		custom_tooltip = "ap_tw_mechanist_path_tooltip"
+		hidden_effect = {
+			set_country_flag = path_of_mechanist_more
+			give_technology = { tech = tech_mechanist_insights message = no }
+			country_event = {
+				id = twinks_ee.30
+				days = 1
+			}
+		}
+	}
+	
+	modifier = {
+		num_tech_alternatives_add = 5
+		megastructures_energy_produces_mult = 4
+		megastructures_minerals_produces_mult = 4
+		megastructures_physics_research_produces_mult = 4
+		megastructures_engineering_research_produces_mult = 4
+		megastructures_society_research_produces_mult = 4
+		megastructure_build_speed_mult = 3.0
+
+	}
+	
+	possible = {		
+		custom_tooltip = {
+			fail_text = "requires_fallenw"
+			OR = {
+			has_technology = tech_fallenw
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_ascension_perks_3"
+			num_ascension_perks > 3
+			has_ascension_perk = ap_tw_mechanist
+		}
+	}
+	
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_tw_mechanist_path
+		}
+		has_government = gov_eternal_continuum	
+		}
+		
+	
+	ai_weight = {
+		factor = 5
+			modifier = {
+			factor = 50
+			NOT = { has_ethic = ethic_fanatic_spiritualist }
+		}
+	}
+}
+
+ap_tw_eternium = {
+	on_enabled = {
+		custom_tooltip = "eternium_tooltip"
+		hidden_effect = {
+		
+		}
+		
+	}
+	
+	modifier = {
+		country_base_eternium_produces_add = 20
+		planet_pops_eternium_produces_mult = 1.0
+	}
+	
+	possible = {		
+		custom_tooltip = {
+			fail_text = "requires_fallenw"
+			OR = {
+			has_technology = tech_fallenw
+			}
+		}
+		
+		
+	}
+	
+	potential = {
+		OR = {
+			has_ascension_perk = ap_tw_mechanist
+			has_ascension_perk = ap_tw_eternos
+		}
+		NOT = {
+			has_ascension_perk = ap_tw_eternium
+		}
+		has_government = gov_eternal_continuum	
+		}
+		
+	
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+ap_tw_virtue = {
+	on_enabled = {
+		custom_tooltip = "ap_tw_virtue_tooltip"
+		hidden_effect = {
+
+		}
+		
+	}
+	
+	modifier = {
+		country_base_virtue_produces_mult = 1
+	}
+	
+	possible = {		
+		custom_tooltip = {
+			fail_text = "requires_fallenw"
+			OR = {
+			has_technology = tech_fallenw
+			}
+		}
+		
+		
+	}
+	
+	potential = {
+		NOR = {
+			has_ascension_perk = ap_tw_virtue
+		}
+		has_government = gov_eternal_continuum	
+		}
+		
+	
+	ai_weight = {
+			factor = 5000
+	}
+}
+
+ap_tw_preserver = {
+	on_enabled = {
+		custom_tooltip = "ap_tw_preserver_tooltip"
+		hidden_effect = {
+			give_technology = { tech = tech_preserver_ee message = no }
+			set_country_flag = ee_research
+		}
+		
+	}
+	
+	modifier = {
+	
+	}
+	
+	possible = {		
+		custom_tooltip = {
+			fail_text = "requires_fallenw"
+			OR = {
+			has_technology = tech_fallenw
+			}
+		}
+		
+		
+	}
+	
+	potential = {
+		NOR = {
+			has_ascension_perk = ap_tw_preserver
+		}
+		has_government = gov_eternal_continuum	
+		}
+		
+	
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+ap_tw_bastion = {
+	on_enabled = {
+		custom_tooltip = "ap_tw_bastion_tooltip"
+		hidden_effect = {
+
+		}
+		
+	}
+	
+	modifier = {
+		starbase_defense_platform_capacity_add = 50
+		country_starbase_capacity_add = 100
+		shipclass_starbase_damage_mult = 0.50
+
+	}
+	
+	possible = {		
+		custom_tooltip = {
+			fail_text = "requires_fallenw"
+			OR = {
+			has_technology = tech_fallenw
+			}
+		}
+		
+		
+	}
+	
+	potential = {
+		NOR = {
+			has_ascension_perk = ap_tw_bastion
+		}
+		has_government = gov_eternal_continuum	
+		}
+		
+	
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+ap_tw_spark_of_divinity = {
+	
+	on_enabled = {	
+		custom_tooltip = "ap_tw_spark"
+		hidden_effect = {
+			country_event = {
+				id = twrpevents.50
+				days = 2
+			}
+			every_owned_pop = {
+				if = {
+					limit = {
+						is_same_species = root
+						OR = {
+							has_ethic = ethic_spiritualist
+							has_ethic = ethic_xenophobe
+							has_ethic = ethic_xenophile
+							has_ethic = ethic_materialist
+						}
+						
+					}
+					modify_species = {
+						species = this
+						add_trait = trait_divine_spark 
+					}
+				}
+		
+			}
+			set_country_flag = aee_research
+			set_country_flag = raising_ee_power
+			country_remove_ethic = ethic_materialist
+			country_remove_ethic = ethic_spiritualist
+			country_remove_ethic = ethic_xenophobe
+			country_remove_ethic = ethic_xenophile
+			country_remove_ethic = ethic_egalitarian
+			country_remove_ethic = ethic_fanatic_egalitarian
+			country_remove_ethic = ethic_authoritarian
+			country_remove_ethic = ethic_fanatic_authoritarian
+			country_remove_ethic = ethic_pacifist
+			country_remove_ethic = ethic_fanatic_pacifist
+			country_remove_ethic = ethic_militarist
+			country_remove_ethic = ethic_fanatic_militarist
+		}
+		
+	}
+	
+	modifier = {
+
+	}
+
+	possible = {		
+		custom_tooltip = {
+			fail_text = "requires_ee_ethic"
+			is_country_type = default
+			OR = {
+			has_ethic = ethic_fanatic_materialist
+			has_ethic = ethic_fanatic_spiritualist
+			has_ethic = ethic_fanatic_xenophobe
+			has_ethic = ethic_fanatic_xenophile
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_ascension_perks_6"
+			num_ascension_perks > 5
+		}
+		custom_tooltip = {
+			fail_text = "requires_not_ap_the_flesh_is_weak"
+			NOT = { has_ascension_perk = ap_the_flesh_is_weak }
+			is_mechanical_empire = no
+			is_cyborg_empire = no
+		}
+		custom_tooltip = {
+			fail_text = "requires_not_ap_mind_over_matter"
+			NOT = { has_ascension_perk = ap_mind_over_matter }
+		}
+	}
+	
+	potential = {
+		always = no
+		NOR = {
+			from = {
+			species = { has_trait = trait_mechanical } 
+			}
+			has_ethic = ethic_gestalt_consciousness
+		}
+	
+	}
+	
+	ai_weight = {
+		factor = 5
+	}
+}
+
+ap_tw_great_ascension = {
+	on_enabled = {
+		custom_tooltip = "ap_tw_ascension"
+		hidden_effect = {
+			country_event = {
+				id = twrpevents.60
+				days = 2
+			}
+			remove_country_flag = "raising_ee_power"
+			give_technology = { tech = tech_awakening message = no }
+			every_owned_pop = {
+				if = {
+					limit = {
+						is_same_species = root
+						OR = {
+							has_ethic = ethic_spiritualist
+							has_ethic = ethic_xenophobe
+							has_ethic = ethic_xenophile
+							has_ethic = ethic_materialist
+						}
+						
+					}
+					modify_species = {
+						species = this
+						remove_trait = trait_divine_spark
+						
+					}
+					modify_species = {
+						species = this
+						add_trait = trait_tw_young_ascended
+						
+					}
+				}
+				if = {
+					limit = {
+						is_same_species = root
+						NOR = {
+							has_ethic = ethic_spiritualist
+							has_ethic = ethic_xenophobe
+							has_ethic = ethic_xenophile
+							has_ethic = ethic_materialist
+						}
+						
+					}
+					kill_pop = yes
+				}
+				if = {
+					limit = {
+						NOT = { is_same_species = root }
+					}
+					kill_pop = yes
+				}
+			}
+			set_country_type = eternal_empire
+			change_government = {
+				civics = {
+					civic = civic_eternal_stability 
+					civic = civic_keepers
+				}
+			}
+			
+			set_country_flag = new_e_empire
+			add_resource = { minerals = 50000 }
+			add_resource = { energy = 50000 }
+			add_resource = { food = 25000 }
+			add_resource = { unity = 50000 }
+			add_resource = { influence = 2500 }
+			add_resource = { alloys = 25000 }
+			add_resource = { rare_crystals = 500 }
+			add_resource = { exotic_gases = 500 }
+			add_resource = { nanites = 500 }
+		}
+		
+	}
+	
+	possible = {		
+		custom_tooltip = {
+			fail_text = "requires_ee_ethic"
+			is_country_type = default
+			OR = {
+			has_ethic = ethic_fanatic_materialist
+			has_ethic = ethic_fanatic_spiritualist
+			has_ethic = ethic_fanatic_xenophobe
+			has_ethic = ethic_fanatic_xenophile
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_ascension_perks_6"
+			num_ascension_perks > 6
+		}
+		custom_tooltip = {
+			fail_text = "requires_cosmic_energy_theory"
+			has_technology = tech_ee_basics	
+		}
+	}
+	
+	potential = {
+		always = no
+		NOR = {
+			from = {
+			species = { has_trait = trait_mechanical } 
+			}
+			has_ethic = ethic_gestalt_consciousness
+		}
+	
+	}
+	
+	ai_weight = {
+		factor = 5
+	}
+}
+

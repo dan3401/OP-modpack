@@ -1,0 +1,160 @@
+
+weapon_component_template = {
+	key = "ETERNAL_PARTICLE_LANCE_EE"
+	size = extra_large
+	icon = "GFX_ship_part_eternium_lance"
+	icon_frame = 1
+	entity = "invisible_turret_entity"
+	type = instant
+
+	damage = { min = 5100 max = 20200 }
+	windup = { min = 25 max = 40 }
+	total_fire_time = 150
+	range = 300
+	accuracy = 1.0
+	power = -10000
+	hull_damage = 1.5
+	armor_damage = 2.0
+
+	tracking = 1.0
+	
+	firing_arc = 10.0
+	min_range = 30.0
+	static_rotation = yes
+	use_ship_kill_target = no
+	resources = {
+		category = ship_components
+		cost = {
+			eternium = 5.0
+		}
+	}
+
+	prerequisites = { tech_fallenw }
+	component_set = "ETERNAL_PARTICLE_LANCE_EE"
+	projectile_gfx = "eternal_energy_lance_dm"
+	tags = { weapon_type_cosmic }
+	ai_tags = { weapon_role_artillery }
+}
+
+
+
+weapon_component_template = {
+	key = "ETERNAL_ARC_EMITTER_EE"
+	size = extra_large
+	icon = "GFX_ship_part_eternium_emitter"
+	icon_frame = 1	
+	entity = "invisible_turret_entity"
+	type = instant
+
+	damage = { min = 5100 max = 20200 }
+	windup = { min = 25 max = 40 }
+	total_fire_time = 150
+	range = 300
+	accuracy = 1.0
+	power = -10000
+	shield_penetration = 1.0
+	armor_penetration = 1.0
+	tracking = 1.0
+
+	firing_arc = 25.0
+	min_range = 10
+	static_rotation = yes
+	use_ship_kill_target = no
+	resources = {
+		category = ship_components
+		cost = {
+			eternium = 5.0
+		}
+	}
+
+	prerequisites = { tech_fallenw }
+	component_set = "ETERNAL_ARC_EMITTER_EE"
+	projectile_gfx = "eternal_arc_emitter_dm"
+	tags = { weapon_type_cosmic }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+}
+
+
+weapon_component_template = {
+	key = "ETERNAL_MASS_ACCELERATOR_EE"
+	size = extra_large
+	icon = "GFX_ship_part_warp_eternium_cannon"
+	icon_frame = 1	
+	entity = "invisible_turret_entity"
+	
+
+	firing_arc = 25.0
+	min_range = 1.0
+	static_rotation = yes
+	use_ship_kill_target = no
+
+    	damage = { min = 5100 max = 20200 }
+	windup = { min = 25 max = 40 }
+	total_fire_time = 150
+	range = 300
+	accuracy = 1.0
+	power = -10000
+	hull_damage = 1.5
+	shield_damage = 2.0
+	tracking = 1.0
+
+	use_ship_kill_target = no
+	resources = {
+		category = ship_components
+		cost = {
+			eternium = 5.0
+		}
+	}
+
+	prerequisites = { tech_fallenw }
+	component_set = "ETERNAL_MASS_ACCELERATOR_EE"
+	projectile_gfx = "eternal_kinetic_cannon_XL"
+	tags = { weapon_type_cosmic }
+	ai_tags = { weapon_role_artillery }
+}
+
+
+weapon_component_template = {
+	key = "ETERNAL_PERDITION_BEAM_EE"
+	size = titanic
+	entity = "invisible_turret_entity"
+	type = instant
+	prio_projectile = yes
+	
+	icon = "GFX_ship_part_eternium_titan_beam"
+	icon_frame = 1
+	
+	firing_arc = 10.0
+	min_range = 30.0
+	static_rotation = yes
+	use_ship_kill_target = no
+	
+	damage = { min = 750000 max = 1000000 }
+	windup = { min = 30 max = 45 }
+	total_fire_time = 180
+	range = 300.0
+	accuracy = 1.0
+	tracking = 1.0
+	hull_damage = 2.0
+	shield_damage = 2.0
+	armor_damage = 2.0
+	
+	power = -10000
+	resources = {
+		category = ship_components
+		cost = {
+			eternium = 20.0
+		}
+	}
+	
+	prerequisites = { tech_fallenw }
+	component_set = "ETERNAL_PERDITION_BEAM_EE"
+	projectile_gfx = "eternal_titan_laser_ae"
+	
+	tags = { weapon_type_cosmic }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+	
+	ai_weight = {
+		weight = 3000
+	}
+}

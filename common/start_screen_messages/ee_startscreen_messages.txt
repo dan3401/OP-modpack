@@ -1,0 +1,17 @@
+part = {
+	location = 0
+	localization = "START_SCREEN_ETERNOS"
+	
+	trigger = {
+		has_country_flag = eternal_2
+	}
+}
+
+part = {
+	location = 0
+	localization = "START_SCREEN_SEEKERS"
+	
+	trigger = {
+		has_country_flag = eternal_1
+	}
+}

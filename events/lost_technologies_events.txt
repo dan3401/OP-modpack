@@ -1,0 +1,713 @@
+###########################################
+#     	 Lost Technologies Events
+#		  	    By Kolyn
+###########################################
+
+namespace = lost_technologies
+
+
+# Discovering Lost Technologies
+country_event = {
+	id = lost_technologies.1000
+	title = lost_technologies.1000.name
+	desc = lost_technologies.1000.desc
+	picture = GFX_evt_fallen_empire
+	show_sound = event_alien_signal
+	location = from
+	
+	trigger = {
+		is_country_type = ascended_empire
+		has_technology = tech_fallen_technologies_1
+		has_technology = tech_fallen_technologies_6
+		NOT = { has_country_flag = lost_technologies_discovered }
+		OR = {
+			NOT = { host_has_dlc = "Ancient Relics Story Pack" }
+			AND = {
+				host_has_dlc = "Ancient Relics Story Pack"
+				has_technology = tech_arcane_deciphering
+			}
+		}
+		OR = {
+			AND = {
+				has_global_flag = zofe_automated_industries_activated
+				OR = {
+					has_technology = tech_fe_class_4_singularity
+					has_technology = tech_fe_dimensional_fabricator
+					has_technology = tech_fe_nourishment_center
+					has_technology = tech_fe_affluence_center
+					has_technology = tech_fe_nano_forge
+				}
+			}
+			AND = {
+				has_global_flag = zofe_secrets_of_the_fallen_empires_activated
+				OR = {
+					has_technology = tech_fallen_technologies_4
+					has_technology = tech_fe_titans
+				}
+			}
+		}
+		
+	}
+		
+		
+	mean_time_to_happen = {
+		years = 10
+	}
+		
+	
+	immediate = {
+		set_country_flag = lost_technologies_discovered
+	}
+
+	option = {
+		name = lost_technologies.1.a
+		trigger = {
+			host_has_dlc = "Ancient Relics Story Pack"
+		}
+		custom_tooltip = lost_technologies_decision_tooltip
+		set_country_flag = lost_technologies_decision_unlocked
+		begin_event_chain = {
+			event_chain = "lost_technologies_chain"
+			target = ROOT
+		}
+	}
+	
+	option = {
+		name = lost_technologies.1.b
+		trigger = {
+			NOT = { host_has_dlc = "Ancient Relics Story Pack" }
+		}
+		set_country_flag = lost_technologies_eligible
+		begin_event_chain = {
+			event_chain = "lost_technologies_chain"
+			target = ROOT
+		}
+	}
+}
+
+## Lost Technoloties Research Critical Failure
+country_event = {
+	id = lost_technologies.1001
+	title = lost_technologies.1001.name
+	desc = lost_technologies.1001.desc
+	picture = GFX_evt_ancient_records
+
+	is_triggered_only = yes
+
+	option = {
+		name = "lost_technologies.1001.a"
+		random_owned_leader = {
+			limit = {
+				is_researching_area = physics 	
+			}
+			kill_leader = { 
+				show_notification = no 
+				type = scientist 
+			}
+		}
+	}
+}
+
+## Lost Technoloties Research Failure
+country_event = {
+	id = lost_technologies.1002
+	title = lost_technologies.1002.name
+	desc = lost_technologies.1002.desc
+	picture = GFX_evt_ancient_records
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "lost_technologies.1002.a"
+		locked_random_list = {
+            10 = {
+                add_monthly_resource_mult = {
+                    resource = engineering_research
+                    value = @tier3researchreward
+                    min = @tier3researchmin
+                    max = @tier3researchmax
+                }
+            }
+            10 = {
+                add_monthly_resource_mult = {
+                    resource = physics_research
+                    value = @tier3researchreward
+                    min = @tier3researchmin
+                    max = @tier3researchmax
+                }
+            }
+            10 = {
+                add_monthly_resource_mult = {
+                    resource = society_research
+                    value = @tier3researchreward
+                    min = @tier3researchmin
+                    max = @tier3researchmax
+                }
+            }
+        }
+    }
+}
+
+# Lost Technoloties Research Success
+country_event = {
+	id = lost_technologies.1003
+	title = "lost_technologies.1003.name"
+	desc = "lost_technologies.1003.desc"
+	picture = GFX_evt_ancient_records
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "lost_technologies.1003.a"
+		trigger = {
+			has_global_flag = zofe_automated_industries_activated
+			NOT = { has_country_flag = advanced_automated_buildings_unlocked }
+		}
+		set_country_flag = advanced_automated_buildings_unlocked
+		enable_special_project = {
+			name = "advanced_automated_industries"
+			location = root.capital_scope
+			owner = root
+		}
+    }
+	
+	option = {
+		name = "lost_technologies.1003.b"
+		trigger = {
+			has_global_flag = zofe_secrets_of_the_fallen_empires_activated
+			NOT = { has_country_flag = ancient_weaponry_unlocked }
+		}
+		set_country_flag = ancient_weaponry_unlocked
+		enable_special_project = {
+			name = "ancient_weaponry"
+			location = root.capital_scope
+			owner = root
+		}
+    }
+	
+	option = {
+		name = "lost_technologies.1003.c"
+		trigger = {
+			has_global_flag = zofe_secrets_of_the_fallen_empires_activated
+			NOT = { has_country_flag = goliath_unlocked }
+		}
+		set_country_flag = goliath_unlocked
+		enable_special_project = {
+			name = "goliath"
+			location = root.capital_scope
+			owner = root
+		}
+    }
+	
+	option = {
+		name = "lost_technologies.1003.d"
+		trigger = {
+			has_global_flag = zofe_secrets_of_the_fallen_empires_activated
+			NOT = { has_country_flag = superior_designs_unlocked }
+		}
+		set_country_flag = superior_designs_unlocked
+		enable_special_project = {
+			name = "superior_designs"
+			location = root.capital_scope
+			owner = root
+		}
+    }
+	
+}
+
+# Lost Technologies: Automated Buildings
+country_event = {
+	id = lost_technologies.1
+	title = lost_technologies.1.name
+	desc = lost_technologies.1.desc
+	picture = GFX_evt_fallen_empire
+	show_sound = event_alien_signal
+	location = from
+	
+	trigger = {
+		is_country_type = ascended_empire
+		has_technology = tech_fallen_technologies_1
+		has_technology = tech_fallen_technologies_6
+		NOT = { host_has_dlc = "Ancient Relics Story Pack" }
+		has_country_flag = lost_technologies_eligible
+		has_global_flag = zofe_automated_industries_activated
+		NOT = { has_country_flag = advanced_automated_buildings_unlocked }
+		OR = {
+			has_technology = tech_fe_class_4_singularity
+			has_technology = tech_fe_dimensional_fabricator
+			has_technology = tech_fe_nourishment_center
+			has_technology = tech_fe_affluence_center
+			has_technology = tech_fe_nano_forge
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 200
+		modifier = {
+			factor = 0.5
+			has_technology = tech_fe_class_4_singularity
+		}
+		modifier = {
+			factor = 0.5
+			has_technology = tech_fe_dimensional_fabricator
+		}
+		modifier = {
+			factor = 0.5
+			has_technology = tech_fe_nourishment_center
+		}
+		modifier = {
+			factor = 0.5
+			has_technology = tech_fe_affluence_center
+		}
+		modifier = {
+			factor = 0.5
+			has_technology = tech_fe_nano_forge
+		}
+	}
+		
+	
+	immediate = {
+		set_country_flag = advanced_automated_buildings_unlocked
+	}
+	
+	option = {
+		name = lost_technologies.1.a
+		enable_special_project = {
+			name = "advanced_automated_industries"
+			location = root.capital_scope
+			owner = root
+		}
+	}
+	
+	option = {
+		name = lost_technologies.1.b
+	}
+	
+}
+
+# Lost Technologies: Automated Buildings Unlocked
+country_event = {
+	id = lost_technologies.100
+	title = lost_technologies.100.name
+	desc = lost_technologies.100.desc
+	picture = GFX_evt_fallen_empire
+	show_sound = event_alien_signal
+	location = from
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = lost_technologies.100.a
+		give_technology = { tech = tech_lost_technologies_1	message = no }
+		if = {
+			limit = {
+				has_technology = tech_fe_class_4_singularity
+			}
+			add_research_option = tech_fe_class_5_singularity
+		}
+		if = {
+			limit = {
+				has_technology = tech_fe_dimensional_fabricator
+			}
+			add_research_option = tech_fe_dimensional_extractor
+		}
+		if = {
+			limit = {
+				has_technology = tech_fe_nourishment_center
+			}
+			add_research_option = tech_fe_agri_processing_complex
+		}
+		if = {
+			limit = {
+				has_technology = tech_fe_affluence_center
+			}
+			add_research_option = tech_fe_opulence_central
+		}
+		if = {
+			limit = {
+				has_technology = tech_fe_nano_forge
+			}
+			add_research_option = tech_fe_autonomous_fabricator
+		}
+	}
+}
+
+
+# Lost Technologies: Ancient Weaponry
+country_event = {
+	id = lost_technologies.2
+	title = lost_technologies.2.name
+	desc = lost_technologies.2.desc
+	picture = GFX_evt_fallen_empire
+	show_sound = event_alien_signal
+	location = from
+	
+	trigger = {
+		is_country_type = ascended_empire
+		has_technology = tech_fallen_technologies_4
+		has_technology = tech_fallen_technologies_6
+		NOT = { host_has_dlc = "Ancient Relics Story Pack" }
+		has_country_flag = lost_technologies_eligible
+		has_global_flag = zofe_secrets_of_the_fallen_empires_activated
+		NOT = { has_country_flag = ancient_weaponry_unlocked }
+	}
+	
+	mean_time_to_happen = {
+		years = 200
+		modifier = {
+			factor = 0.5
+			has_technology = tech_fe_battlecruisers
+		}
+		modifier = {
+			factor = 0.5
+			has_technology = tech_fe_titans
+		}
+		modifier = {
+			factor = 0.5
+			has_technology = tech_dark_matter_deflector
+		}
+	}
+		
+	
+	immediate = {
+		set_country_flag = ancient_weaponry_unlocked
+	}
+	
+	option = {
+		name = lost_technologies.2.a
+		enable_special_project = {
+			name = "ancient_weaponry"
+			location = root.capital_scope
+			owner = root
+		}
+	}
+	
+	option = {
+		name = lost_technologies.2.b
+	}
+}
+
+# Lost Technologies: Ancient Weaponry Unlocked
+country_event = {
+	id = lost_technologies.200
+	title = lost_technologies.200.name
+	desc = lost_technologies.200.desc
+	picture = GFX_evt_fallen_empire
+	show_sound = event_alien_signal
+	location = from
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = lost_technologies.200.a
+		give_technology = { tech = tech_lost_technologies_2	message = no }
+		if = {
+			limit = {
+				NOT = { has_technology = tech_dark_matter_deflector }
+			}
+			add_research_option = tech_dark_matter_deflector
+		}
+	}
+}
+
+# Lost Technologies: Omni Weapons
+country_event = {
+	id = lost_technologies.210
+	title = lost_technologies.210.name
+	desc = lost_technologies.210.desc
+	picture = GFX_evt_fallen_empire
+	show_sound = event_alien_signal
+	location = from
+	
+	trigger = {
+		is_country_type = ascended_empire
+		has_technology = tech_lost_technologies_2
+		has_global_flag = zofe_secrets_of_the_fallen_empires_activated
+		NOT = { has_country_flag = omni_weapons_unlocked }
+	}
+	
+	mean_time_to_happen = {
+		years = 200
+		modifier = {
+			factor = 0.5
+			has_technology = tech_titan_armor
+		}
+		modifier = {
+			factor = 0.5
+			has_technology = tech_titan_plating
+		}
+		modifier = {
+			factor = 0.5
+			has_technology = tech_dark_energy_power_core
+		}
+		modifier = {
+			factor = 0.5
+			has_technology = tech_dark_energy_shield
+		}
+	}
+		
+	
+	immediate = {
+		set_country_flag = omni_weapons_unlocked
+	}
+	
+	option = {
+		name = lost_technologies.210.a
+		enable_special_project = {
+			name = "omni_weapons"
+			location = root.capital_scope
+			owner = root
+		}
+	}
+	
+	option = {
+		name = lost_technologies.210.b
+	}
+}
+
+# Lost Technologies: Omni Weapons Unlocked
+country_event = {
+	id = lost_technologies.2000
+	title = lost_technologies.2000.name
+	desc = lost_technologies.2000.desc
+	picture = GFX_evt_fallen_empire
+	show_sound = event_alien_signal
+	location = from
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = lost_technologies.2000.a
+		if = {
+			limit = {
+				has_technology = tech_energy_lance_2
+			}
+			add_research_option = tech_omni_lance
+		}
+		if = {
+			limit = {
+				has_technology = tech_arc_emitter_2
+			}
+			add_research_option = tech_omni_emitter
+		}
+		if = {
+			limit = {
+				has_technology = tech_mass_accelerator_2
+			}
+			add_research_option = tech_omni_cannon
+		}
+		if = {
+			limit = {
+				has_technology = tech_autocannons_3
+			}
+			add_research_option = tech_massive_autocannons
+		}
+		if = {
+			limit = {
+				has_technology = tech_fe_titans
+			}
+			add_research_option = tech_omni_titan_lance
+		}
+	}
+}
+
+
+# Lost Technologies: Goliath
+country_event = {
+	id = lost_technologies.3
+	title = lost_technologies.3.name
+	desc = lost_technologies.3.desc
+	picture = GFX_evt_fallen_empire_awakes
+	show_sound = event_alien_signal
+	location = from
+	
+	trigger = {
+		is_country_type = ascended_empire
+		has_technology = tech_fallen_technologies_3
+		has_technology = tech_fallen_technologies_6
+		NOT = { host_has_dlc = "Ancient Relics Story Pack" }
+		has_country_flag = lost_technologies_eligible
+		has_global_flag = zofe_secrets_of_the_fallen_empires_activated
+		NOT = { has_country_flag = goliath_unlocked }
+
+	}
+	
+	mean_time_to_happen = {
+		years = 200
+		modifier = {
+			factor = 0.5
+			has_technology = tech_fe_battlecruisers
+		}
+		modifier = {
+			factor = 0.5
+			has_technology = tech_fe_titans
+		}
+		modifier = {
+			factor = 0.5
+			has_technology = tech_colossus
+		}
+	}
+		
+	
+	immediate = {
+		set_country_flag = goliath_unlocked
+	}
+	
+	option = {
+		name = lost_technologies.3.a
+		enable_special_project = {
+			name = "goliath"
+			location = root.capital_scope
+			owner = root
+		}
+	}
+	
+	option = {
+		name = lost_technologies.3.b
+	}
+}
+
+# Lost Technologies: Goliath Unlocked
+country_event = {
+	id = lost_technologies.300
+	title = lost_technologies.300.name
+	desc = lost_technologies.300.desc
+	picture = GFX_evt_fallen_empire
+	show_sound = event_alien_signal
+	location = from
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = lost_technologies.300.a		
+		add_research_option = tech_fe_goliath
+	}
+}
+
+# Lost Technologies: Legendary Weapons
+country_event = {
+	id = lost_technologies.310
+	title = lost_technologies.310.name
+	desc = lost_technologies.310.desc
+	picture = GFX_evt_fallen_empire
+	show_sound = event_alien_signal
+	location = from
+	
+	trigger = {
+		is_country_type = ascended_empire
+		has_technology = tech_fe_goliath
+		has_global_flag = zofe_secrets_of_the_fallen_empires_activated
+		NOT = { has_country_flag = legendary_weapons_unlocked }
+	}
+	
+	mean_time_to_happen = {
+		years = 20
+	}
+		
+	
+	immediate = {
+		set_country_flag = legendary_weapons_unlocked
+	}
+	
+	option = {
+		name = lost_technologies.310.a
+		enable_special_project = {
+			name = "legendary_weapons"
+			location = root.capital_scope
+			owner = root
+		}
+	}
+	
+	option = {
+		name = lost_technologies.310.b
+	}
+}
+
+# Lost Technologies: Legendary Weapons Unlocked
+country_event = {
+	id = lost_technologies.3000
+	title = lost_technologies.3000.name
+	desc = lost_technologies.3000.desc
+	picture = GFX_evt_fallen_empire
+	show_sound = event_alien_signal
+	location = from
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = lost_technologies.3000.a
+		add_research_option = tech_portal_generator
+	}
+}
+
+# Lost Technologies: Superior Designs
+country_event = {
+	id = lost_technologies.4
+	title = lost_technologies.4.name
+	desc = lost_technologies.4.desc
+	picture = GFX_evt_fallen_empire_awakes
+	show_sound = event_alien_signal
+	location = from
+	
+	trigger = {
+		is_country_type = ascended_empire
+		has_technology = tech_fallen_technologies_3
+		has_technology = tech_fallen_technologies_6
+		NOT = { host_has_dlc = "Ancient Relics Story Pack" }
+		has_country_flag = lost_technologies_eligible
+		has_global_flag = zofe_secrets_of_the_fallen_empires_activated
+		NOT = { has_country_flag = superior_designs_unlocked }
+
+	}
+	
+	mean_time_to_happen = {
+		years = 200
+		modifier = {
+			factor = 0.5
+			has_technology = tech_fe_battlecruisers
+		}
+		modifier = {
+			factor = 0.5
+			has_technology = tech_fe_titans
+		}
+		modifier = {
+			factor = 0.5
+			has_technology = tech_colossus
+		}
+	}
+		
+	
+	immediate = {
+		set_country_flag = superior_designs_unlocked
+	}
+	
+	option = {
+		name = lost_technologies.4.a
+		enable_special_project = {
+			name = "superior_designs"
+			location = root.capital_scope
+			owner = root
+		}
+	}
+	
+	option = {
+		name = lost_technologies.4.b
+	}
+}
+
+# Lost Technologies: Superior Designs Unlocked
+country_event = {
+	id = lost_technologies.400
+	title = lost_technologies.400.name
+	desc = lost_technologies.400.desc
+	picture = GFX_evt_fallen_empire
+	show_sound = event_alien_signal
+	location = from
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = lost_technologies.400.a		
+		add_research_option = tech_lost_technologies_3
+	}
+}

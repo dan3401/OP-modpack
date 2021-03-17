@@ -1,0 +1,72 @@
+namespace = ex_game_start
+### Empire init - add technologies and resources
+country_event = {
+	id = ex_game_start.1
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		if = { 																	# Psionic Heritage Civic Parameters, credit to Alfray Stryke for showing me how to implement this
+			limit = { 
+				has_civic = civic_psionic_heritage 
+			} 
+			give_technology = { message = no tech = tech_psionic_theory }		# Gives empire Psionic Theory for free
+		}
+			}
+}
+
+country_event = {
+	id = ex_game_start.2
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		if = { 																	
+			limit = { 
+				has_civic = civic_sapient_intervention
+			} 
+			give_technology = { message = no tech = tech_immersive_simulations }		# Gives empire Immersive Simulations for free
+			add_relic = r_supercomputer
+		}
+			}
+}
+
+country_event = {
+	id = ex_game_start.3
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		if = { 																	
+			limit = { 
+				has_civic = civic_psionic_heritage
+			} 
+			give_technology = { message = no tech = tech_psionic_studies }		# testing tying academies to a starting tech instead of being unique to Psionic Heritage
+		}
+			}
+}
+
+country_event = {	
+	id = ex_game_start.4
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		if = { 																	
+			limit = { 
+				has_civic = civic_psionic_destiny
+			} 
+			give_technology = { message = no tech = tech_psionic_studies } # for anyone playing with Overpowered Civics		
+		}
+			}
+}
+
+country_event = {	
+	id = ex_game_start.5
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		if = { 																	
+			limit = { 
+				has_civic = civic_forsaken
+			} 
+			give_technology = { message = no tech = tech_forsakensociety } 		
+		}
+			}
+}

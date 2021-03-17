@@ -1,0 +1,395 @@
+namespace = twinks_ee
+
+country_event = {
+	id = twinks_ee.1
+	title = OK
+	desc = OK
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	
+
+	trigger = {
+		any_country = {
+			if  = {
+				limit = {
+					has_government = "gov_eternal_continuum"
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		every_country = {	
+			if = {
+				limit = {
+					AND = {
+					has_government = "gov_eternal_continuum"
+					is_country_type = default	
+					}
+				}
+				set_country_type = awakened_fallen_empire
+				change_government = {
+				civics = {
+					civic = civic_revanchist_fervor
+					civic = civic_ancient_caches_of_technology
+				}	
+			}
+			set_country_flag = twinks_fallen
+			country_event = { id = setuptw.1 }
+			country_event = { id = twleader.2 }
+			country_event = { id = twleader.3 }
+			country_event = { id = playable_fe_init.4 days = 5 }
+			country_event = { id = playable_fe_init.5 }
+			every_planet_within_border = {
+				planet_event = {
+					id = telop.6	
+				}
+				planet_event = {
+					id = telop.7	
+				}
+			}	
+			give_technology = { tech = tech_awakening message = no }
+			give_technology = { tech = tech_fallenw message = no }
+			give_technology = { tech = tech_colossus message = no }
+			give_technology = { tech = tech_pk_cracker message = no }
+			give_technology = { tech = tech_pk_shielder message = no }
+			give_technology = { tech = tech_pk_neutron message = no }
+			give_technology = { tech = tech_pk_godray message = no }
+
+			give_technology = { tech = tech_planet_killer_naniter message = no }
+
+			give_technology = { tech = tech_ee_fortress message = no }
+			give_technology = { tech = tech_ee_dome  message = no }
+			give_technology = { tech = tech_ee_academy message = no }
+			give_technology = { tech = tech_ee_archive message = no }
+			give_technology = { tech = tech_ee_alloys message = no }
+			give_technology = { tech = tech_ee_energy message = no }
+			give_technology = { tech = tech_ee_rares message = no }
+			give_technology = { tech = tech_ee_resource message = no }
+			give_technology = { tech = tech_ee_dark_matter message = no }
+			give_technology = { tech = tech_ee_robot message = no }
+			give_technology = { tech = tech_ee_food message = no }
+			give_technology = { tech = tech_ee_athen message = no }
+			give_technology = { tech = tech_ee_palace message = no }
+
+			add_resource = { minerals = 50000 }
+			add_resource = { energy = 50000 }
+			add_resource = { food = 5000 }
+			add_resource = { influence = 1000 }
+			add_resource = { alloys = 50000 }
+			add_resource = { sr_dark_matter = 100 }
+			add_resource = { ambrosia = 1000 }
+			add_resource = { sr_living_metal = 100 }
+			add_resource = { rare_crystals = 100 }
+			add_resource = { exotic_gases = 100 }
+			add_resource = { nanites = 1000 }
+			add_resource = { acot_sr_light_matter  = 20000 }
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = twinks_ee.2
+	title = OK
+	desc = OK
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	immediate = {
+		every_country = {	
+			if = {
+				limit = {
+					has_government = "gov_stagnant_ascendancy"
+					is_country_type = default	
+				}
+				set_country_type = awakened_fallen_empire
+				change_government = {
+				civics = {
+					civic = civic_revanchist_fervor
+					civic = civic_ancient_caches_of_technology
+					}	
+			}
+			set_country_flag = twinks_fallen
+			
+			add_modifier = {
+				modifier = "first_years_fallen"
+				days = 1800
+			}
+			give_technology = { tech = tech_fallenb }
+			country_event = { id = setuptw.5 }	
+			country_event = { id = playable_fe_init.7 }
+			
+			give_technology = { tech = tech_colossus message = no }
+			add_resource = { minerals = 50000 }
+			add_resource = { energy = 50000 }
+			add_resource = { food = 5000 }
+			add_resource = { influence = 1000 }
+			add_resource = { alloys = 50000 }
+			add_resource = { sr_dark_matter = 50 }
+			add_resource = { sr_living_metal = 50 }
+			add_resource = { rare_crystals = 100 }
+			add_resource = { exotic_gases = 100 }
+			add_resource = { nanites = 1000 }
+			add_resource = { acot_sr_dark_energy  = 50 }					
+			}
+		}
+	}
+}
+
+country_event = {
+	id = twinks_ee.3
+	title = OK
+	desc = OK
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	
+	trigger = {
+		any_country = {
+			if  = {
+				limit = {
+					has_government = "gov_stagnant_ascendancy"
+					is_ai = yes
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		every_country = {	
+			if = {
+				limit = {
+					AND = {
+					has_government = "gov_stagnant_ascendancy"
+					is_country_type = fallen_empire
+					is_ai = yes
+					}	
+				}
+			add_modifier = {
+				modifier = "no_pop"
+				days = 30
+			}
+			
+			
+			}
+		}
+	}
+}
+
+country_event = {
+	id = twinks_ee.4
+	title = OK
+	desc = OK
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			has_global_flag = active_origin_crisis
+			has_global_flag = galactic_crisis_happened
+			has_global_flag = war_in_heaven_started
+		}
+        	is_country_type = eternal_empire
+		has_government = "gov_eternal_continuum"
+		is_ai = yes
+	}
+	
+	immediate = {
+		random_list = {
+			20 = { 
+				random_country = {	
+					if = {
+						limit = {
+							has_government = "gov_eternal_continuum"
+							is_country_type = eternal_empire
+							NOT = { has_ethic = ethic_fanatic_xenophobe }
+							is_ai = yes
+						}
+						change_government = {
+							civics = {
+								civic = civic_eternal_stability 
+								civic = civic_keepers
+								civic = civic_ee_subjugater
+							}
+						}
+					
+					}
+				}
+			}
+			25 = { 
+				random_country = {	
+					if = {
+						limit = {
+							has_government = "gov_eternal_continuum"
+							is_country_type = eternal_empire
+							is_ai = yes
+						}
+						change_government = {
+							civics = {
+								civic = civic_eternal_stability 
+								civic = civic_keepers
+								civic = civic_ee_subjugater
+							}
+						}
+					
+					}
+				}
+			}
+			5 = { 
+				random_country = {	
+					if = {
+						limit = {
+							has_government = "gov_eternal_continuum"
+							is_country_type = eternal_empire
+							is_ai = yes
+						}
+						change_government = {
+							civics = {
+								civic = civic_eternal_stability 
+								civic = civic_keepers
+							}
+						}
+					
+					}
+				}
+			}
+			30 = { 
+				every_country = {	
+					if = {
+						limit = {
+							has_government = "gov_eternal_continuum"
+							is_country_type = eternal_empire
+							is_ai = yes
+						}
+						change_government = {
+							civics = {
+								civic = civic_eternal_stability 
+								civic = civic_keepers
+								civic = civic_ee_subjugater
+							}
+						}
+					
+					}
+				}
+			}
+			20 = { 
+				every_country = {	
+					if = {
+						limit = {
+							has_government = "gov_eternal_continuum"
+							is_country_type = eternal_empire
+							has_ethic = ethic_fanatic_xenophobe
+							is_ai = yes
+						}
+						change_government = {
+							civics = {
+								civic = civic_eternal_stability 
+								civic = civic_keepers
+								civic = civic_ee_subjugater
+							}
+						}
+					
+					}
+				}
+			}
+		}
+		
+	}
+}
+
+
+country_event = {
+	id = twinks_ee.30
+	title = OK
+	desc = OK
+	hide_window = yes
+	is_triggered_only = yes
+
+	
+	trigger = {
+		has_country_flag = eternal_transcendence
+		has_country_flag = path_of_mechanist_more
+	}
+	
+	immediate = {
+		every_country = {	
+			if = {
+				limit = {
+					has_country_flag = eternal_transcendence
+					has_country_flag = path_of_mechanist_more	
+				}
+			add_modifier = {
+				modifier = "synthipaths"
+				days = -1
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = twinks_ee.31
+	title = OK
+	desc = OK
+	hide_window = yes
+	fire_only_once = yes
+
+	
+	trigger = {
+		is_country_type = eternal_empire
+		has_government = "gov_eternal_continuum"
+	}
+	
+	immediate = {
+		every_country = {	
+			if = {
+				limit = {
+					is_country_type = eternal_empire
+					has_government = "gov_eternal_continuum"	
+				}
+			give_technology = { tech = tech_ee_fortress message = no }
+			give_technology = { tech = tech_ee_dome  message = no }
+			give_technology = { tech = tech_ee_academy message = no }
+			give_technology = { tech = tech_ee_archive message = no }
+			give_technology = { tech = tech_ee_alloys message = no }
+			give_technology = { tech = tech_ee_energy message = no }
+			give_technology = { tech = tech_ee_rares message = no }
+			give_technology = { tech = tech_ee_resource message = no }
+			give_technology = { tech = tech_ee_dark_matter message = no }
+			give_technology = { tech = tech_ee_robot message = no }
+			give_technology = { tech = tech_ee_food message = no }
+			give_technology = { tech = tech_ee_athen message = no }
+			give_technology = { tech = tech_ee_palace message = no }
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = twinks_ee.300
+	title = OK
+	desc = OK
+	hide_window = yes
+	fire_only_once = yes
+
+	
+	trigger = {
+		is_country_type = eternal_empire
+		has_government = "gov_eternal_continuum"
+		is_ai = yes
+	}
+
+	immediate = {
+		every_system = {
+		}
+	}
+
+}

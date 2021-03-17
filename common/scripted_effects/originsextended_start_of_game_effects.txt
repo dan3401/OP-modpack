@@ -1,0 +1,1021 @@
+
+### ORIGINS EXTENDED START OF GAME EFFECTS
+
+# STARLESS - This is called after game start
+starless_start_deposits_and_blockers = {
+
+	clear_deposits = yes
+
+	# Blockers, special because Tomb world
+	add_deposit = d_tomb_world_ruins
+	add_deposit = d_failing_infrastructure
+	add_deposit = d_radioactive_wasteland
+
+	# 3 + 3 Energy, average
+	add_deposit = d_hot_springs
+	add_deposit = d_searing_desert
+	add_deposit = d_underwater_vent
+
+	# 3 + 4 Minerals, more because Tomb world
+	add_deposit = d_veiny_cliffs
+	add_deposit = d_ore_rich_caverns
+	add_deposit = d_submerged_ore_veins
+
+	# 3 + 2 Food, less beacuse Tomb world
+	add_deposit = d_lichen_fields
+	add_deposit = d_fungal_caves
+	add_deposit = d_fungal_forest
+
+}
+
+oe_generate_start_buildings_and_districts = {
+	if = {
+		limit = { NOT = { owner = { has_origin = origin_shattered_ring } } }
+		if = {
+			limit = {
+				owner = {
+					OR = {
+						has_origin = origin_syncretic_evolution
+						has_origin = origin_necrophage
+						has_valid_civic = civic_machine_servitor
+						has_valid_civic = civic_machine_assimilator
+						has_origin = originsextended_farming
+					}
+				}
+			}
+
+			if = {
+				limit = { owner = { last_created_species = { is_lithoid = yes } } }
+				owner = {
+					set_country_flag = lithoid_subspecies
+				}
+			}
+			else = {
+				owner = {
+					set_country_flag = non_lithoid_subspecies
+				}
+			}
+		}
+
+		if = {
+			limit = { owner = { is_regular_empire = yes } }
+
+			# total - 24 jobs
+
+			# 3 jobs
+			add_district_and_planet_size_if_needed_effect = {
+				district = district_city
+			}
+
+			if = {
+				limit = {
+					owner = { NOT = { has_valid_civic = civic_agrarian_idyll } }
+				}
+				while = {
+					count = 2
+					add_district_and_planet_size_if_needed_effect = {
+						district = district_city
+					}
+				}
+			}
+			else = {
+				add_district_and_planet_size_if_needed_effect = {
+					district = district_farming
+				}
+			}
+
+			# 4 - 6 jobs
+			if = {
+				limit = {
+					owner = {
+						OR = {
+							is_lithoid_empire = no
+							has_country_flag = non_lithoid_subspecies
+						}
+					}
+				}
+				while = {
+					count = 2
+					add_district_and_planet_size_if_needed_effect = {
+						district = district_farming
+					}
+				}
+				if = {
+					limit = {
+						owner = { has_origin = origin_default }
+					}
+					add_district_and_planet_size_if_needed_effect = {
+						district = district_farming
+					}
+				}
+			}
+			else = {
+				while = {
+					count = 2
+					add_district_and_planet_size_if_needed_effect = {
+						district = district_mining
+					}
+				}
+				if = {
+					limit = {
+						owner = { has_origin = origin_default }
+					}
+					add_district_and_planet_size_if_needed_effect = {
+						district = district_mining
+					}
+				}
+			}
+
+			# 4 jobs
+			while = {
+				count = 2
+				add_district_and_planet_size_if_needed_effect = {
+					district = district_mining
+				}
+			}
+
+			# 2 jobs
+			add_district_and_planet_size_if_needed_effect = {
+				district = district_generator
+			}
+
+			# 2 jobs
+			if = {
+				limit = { owner = { is_megacorp = no } }
+				while = {
+					count = 2
+					add_district_and_planet_size_if_needed_effect = {
+						district = district_generator
+					}
+				}
+			}
+
+			# 2 jobs
+			if = {
+				limit = {
+					owner = { has_origin = origin_default }
+				}
+				add_district_and_planet_size_if_needed_effect = {
+					district = district_generator
+				}
+			}
+
+			# 3 jobs
+			add_building = building_capital
+
+			# 2 jobs
+			add_building = building_bureaucratic_1
+
+			# 2 jobs
+			add_building = building_research_lab_1
+
+			# 2 jobs
+			add_building = building_foundry_1
+
+			# 2 jobs
+			add_building = building_factory_1
+
+			# 4 jobs
+			if = {
+				limit = { owner = { is_megacorp = yes } }
+				add_district_and_planet_size_if_needed_effect = {
+					district = district_city
+				}
+				add_building = building_commercial_zone
+			}
+		}
+
+		if = {
+			limit = { owner = { is_hive_empire = yes } }
+
+			# total - 34 jobs
+
+			# 4 jobs
+			while = {
+				count = 2
+				add_district_and_planet_size_if_needed_effect = {
+					district = district_hive
+				}
+			}
+
+			# 6-9 jobs
+			if = {
+				limit = { owner = { is_lithoid_empire = no } }
+				while = {
+					count = 2
+					add_district_and_planet_size_if_needed_effect = {
+						district = district_farming
+					}
+				}
+				if = {
+					limit = {
+						owner = { has_origin = origin_default }
+					}
+					add_district_and_planet_size_if_needed_effect = {
+						district = district_farming
+					}
+				}
+			}
+			else = {
+				add_district = district_mining
+				add_district = district_mining
+				if = {
+					limit = {
+						owner = { has_origin = origin_default }
+					}
+					add_district_and_planet_size_if_needed_effect = {
+						district = district_mining
+					}
+				}
+			}
+
+			# 6 jobs
+			while = {
+				count = 2
+				add_district_and_planet_size_if_needed_effect = {
+					district = district_mining
+				}
+			}
+
+			if = {
+				limit = {
+					owner = { has_origin = origin_tree_of_life }
+				}
+				remove_district = district_mining
+				add_district = {
+					ignore_cap = yes
+					district_type = district_farming
+				}
+			}
+
+			# 6 jobs
+			while = {
+				count = 2
+				add_district_and_planet_size_if_needed_effect = {
+					district = district_generator
+				}
+			}
+
+			# 3 jobs
+			if = {
+				limit = {
+					owner = { has_origin = origin_default }
+				}
+				add_district_and_planet_size_if_needed_effect = {
+					district = district_generator
+				}
+			}
+
+			# 5 jobs
+			add_building = building_hive_capital
+
+			# 2 jobs
+			add_building = building_hive_node
+
+			# 2 jobs
+			add_building = building_research_lab_1
+
+			# 2 jobs
+			add_building = building_foundry_1
+
+			# 1 job
+			add_building = building_spawning_pool
+
+			# 1 job
+			add_building = building_hive_warren
+
+			# 1 jobs
+			if = {
+				limit = {
+					owner = { has_origin = origin_default }
+				}
+				add_building = building_hive_warren
+			}
+		}
+
+		# Replace capital building for machine empires
+		if = {
+			limit = { owner = { is_machine_empire = yes } }
+
+			# total - 27 jobs
+
+			# 3 jobs
+			add_district_and_planet_size_if_needed_effect = {
+				district = district_nexus
+			}
+
+			# 4 jobs
+			while = {
+				count = 2
+				add_district_and_planet_size_if_needed_effect = {
+					district = district_mining
+				}
+			}
+
+			# 2 jobs
+			if = {
+				limit = {
+					owner = { has_origin = origin_default }
+				}
+				add_district_and_planet_size_if_needed_effect = {
+					district = district_mining
+				}
+			}
+
+			# 10 jobs
+			while = {
+				count = 5
+				add_district_and_planet_size_if_needed_effect = {
+					district = district_generator
+				}
+			}
+
+			# 2 jobs
+			if = {
+				limit = {
+					owner = { has_origin = origin_default }
+				}
+				add_district_and_planet_size_if_needed_effect = {
+					district = district_generator
+				}
+			}
+
+			# 6 jobs
+			add_building = building_machine_capital
+
+			# 1 job
+			add_building = building_machine_assembly_plant
+
+			# 2 job
+			add_building = building_uplink_node
+
+			# 2 jobs
+			add_building = building_research_lab_1
+
+			# 2 jobs
+			add_building = building_foundry_1
+
+			#Assimilators
+			if = {
+				limit = { owner = { has_civic = civic_machine_assimilator } }
+				remove_district = district_generator
+
+				if = {
+					limit = { owner = { has_country_flag = lithoid_subspecies } }
+					add_district_and_planet_size_if_needed_effect = {
+						district = district_mining
+					}
+				}
+				else = {
+					add_district_and_planet_size_if_needed_effect = {
+						district = district_farming
+					}
+				}
+			}
+
+			#Servitors
+			if = {
+				limit = { owner = { has_civic = civic_machine_servitor } }
+
+				if = {
+					limit = { owner = { has_country_flag = lithoid_subspecies } }
+					add_district_and_planet_size_if_needed_effect = {
+						district = district_mining
+					}
+				}
+				else = {
+					add_district_and_planet_size_if_needed_effect = {
+						district = district_farming
+					}
+				}
+
+				add_district_and_planet_size_if_needed_effect = {
+					district = district_generator
+				}
+				#remove_district = district_nexus
+				#remove_district = district_nexus #blocked removals for + 2 jobs and housing
+				add_building = building_organic_sanctuary
+			}
+			if = {
+				limit = { owner = { has_origin = origin_machine } }
+
+				remove_district = district_generator
+				remove_district = district_generator
+				remove_district = district_generator
+				remove_district = district_generator
+				remove_district = district_generator
+
+				remove_district = district_farming
+
+				remove_district = district_mining
+				remove_district = district_mining
+				remove_district = district_mining
+				remove_district = district_mining
+
+				add_district = district_generator_uncapped
+				add_district = district_generator_uncapped
+				add_district = district_generator_uncapped
+				add_district = district_generator_uncapped
+				add_district = district_generator_uncapped
+
+				add_district = district_mining_uncapped
+				add_district = district_mining_uncapped
+
+				#Assimilators
+				if = {
+					limit = { owner = { has_civic = civic_machine_assimilator } }
+					add_deposit = d_organic_slurry
+				}
+			}
+		}
+	}
+	
+
+	# Additional resources based on empire type and possible subspecies
+	owner = {
+		if = {
+			limit = {
+				has_authority = auth_machine_intelligence
+			}
+			if = {
+				limit = {
+					OR = {
+						has_valid_civic = civic_machine_servitor
+						has_valid_civic = civic_machine_assimilator
+					}
+				}
+				if = {
+					limit = { has_country_flag = lithoid_subspecies }
+					add_resource = { minerals = 100	}
+					add_resource = { energy = 100 }
+				}
+				else = {
+					add_resource = { food = 100	}
+					add_resource = { energy = 100 }
+				}
+			}
+			else = {
+				add_resource = { energy = 200 }
+			}
+		}
+		else = {
+			if = {
+				limit = { is_lithoid_empire = no }
+				if = {
+					limit = { has_country_flag = lithoid_subspecies }
+					add_resource = { food = 100	}
+					add_resource = { minerals = 100 }
+				}
+				else = {
+					add_resource = { food = 200 }
+				}
+			}
+			else = {
+				if = {
+					limit = { has_country_flag = non_lithoid_subspecies }
+					add_resource = { food = 100	}
+					add_resource = { minerals = 100 }
+				}
+				else = {
+					add_resource = { minerals = 200 }
+				}
+			}
+		}
+	}
+}
+
+# FARMING - Populate homeworld
+oe_generate_framing_pops = {
+	if = {
+		limit = {
+			owner = {
+				has_origin = originsextended_farming
+			}
+		}
+		last_created_species = {
+			set_species_flag = syncretic_species@root.owner
+			set_citizenship_type = {
+					country = root.owner
+					type = citizenship_slavery
+			}
+		}
+		while = {
+			count = 5
+			create_pop = {
+				species = last_created_species
+				ethos = random
+			}
+		}
+	}
+}
+
+# OUTREACH - Create trade federation members
+originsextended_create_outreach_member_1 = {
+	if = {
+		limit = { 
+			root = { has_spiritualist_government = yes }
+		}
+		create_country = {
+			name_list = random
+			species = event_target:fed_planet_1_species
+			type = default
+			origin = originsextended_outreach_npc
+			ignore_initial_colony_error = yes
+			day_zero_contact = no
+			authority = auth_corporate
+			randomize_ethos = yes
+			ethos = {
+				ethic = "ethic_xenophile"
+				ethic = "ethic_spiritualist"
+				ethic = "ethic_fanatic_spiritualist"
+			}
+			effect = {
+				save_event_target_as = fed_member_1
+				establish_communications_no_message = root
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			root = { has_militarist_government = yes }
+		}
+		create_country = {
+			name_list = random
+			species = event_target:fed_planet_1_species
+			type = default
+			origin = originsextended_outreach_npc
+			ignore_initial_colony_error = yes
+			day_zero_contact = no
+			authority = auth_corporate
+			randomize_ethos = yes
+			ethos = {
+				ethic = "ethic_xenophile"
+				ethic = "ethic_militarist"
+				ethic = "ethic_fanatic_militarist"
+			}
+			effect = {
+				save_event_target_as = fed_member_1
+				establish_communications_no_message = root
+			}
+		}
+	}
+	else_if = {
+		limit = { 
+			root = { has_pacifist_government = yes }
+		}
+		create_country = {
+			name_list = random
+			species = event_target:fed_planet_1_species
+			type = default
+			origin = originsextended_outreach_npc
+			ignore_initial_colony_error = yes
+			day_zero_contact = no
+			authority = auth_corporate
+			randomize_ethos = yes
+			ethos = {
+				ethic = "ethic_xenophile"
+				ethic = "ethic_pacifist"
+				ethic = "ethic_fanatic_pacifist"
+			}
+			effect = {
+				save_event_target_as = fed_member_1
+				establish_communications_no_message = root
+			}
+		}
+	}
+	else_if = {
+		limit = { 
+			root = { has_materialist_government = yes }
+		}
+		create_country = {
+			name_list = random
+			species = event_target:fed_planet_1_species
+			type = default
+			origin = originsextended_outreach_npc
+			ignore_initial_colony_error = yes
+			day_zero_contact = no
+			authority = auth_corporate
+			randomize_ethos = yes
+			ethos = {
+				ethic = "ethic_xenophile"
+				ethic = "ethic_materialist"
+				ethic = "ethic_fanatic_materialist"
+			}
+			effect = {
+				save_event_target_as = fed_member_1
+				establish_communications_no_message = root
+			}
+		}
+	}
+	else_if = {
+		limit = { 
+			root = { is_authoritarian = yes }
+		}
+		create_country = {
+			name_list = random
+			species = event_target:fed_planet_1_species
+			type = default
+			origin = originsextended_outreach_npc
+			ignore_initial_colony_error = yes
+			day_zero_contact = no
+			authority = auth_corporate
+			randomize_ethos = yes
+			ethos = {
+				ethic = "ethic_xenophile"
+				ethic = "ethic_authoritarian"
+				ethic = "ethic_fanatic_authoritarian"
+			}
+			effect = {
+				save_event_target_as = fed_member_1
+				establish_communications_no_message = root
+			}
+		}
+	}
+	else_if = {
+		limit = { 
+			root = { is_egalitarian = yes }
+		}
+		create_country = {
+			name_list = random
+			species = event_target:fed_planet_1_species
+			type = default
+			origin = originsextended_outreach_npc
+			ignore_initial_colony_error = yes
+			day_zero_contact = no
+			authority = auth_corporate
+			randomize_ethos = yes
+			ethos = {
+				ethic = "ethic_xenophile"
+				ethic = "ethic_egalitarian"
+				ethic = "ethic_fanatic_egalitarian"
+			}
+			effect = {
+				save_event_target_as = fed_member_1
+				establish_communications_no_message = root
+			}
+		}
+	}
+	else = {
+		create_country = {
+			name_list = random
+			species = event_target:fed_planet_1_species
+			type = default
+			origin = originsextended_outreach_npc
+			ignore_initial_colony_error = yes
+			day_zero_contact = no
+			authority = auth_corporate
+			randomize_ethos = yes
+			ethos = {
+				ethic = "ethic_xenophile"
+				ethic = "ethic_fanatic_xenophile"
+			}
+			effect = {
+				save_event_target_as = fed_member_1
+				establish_communications_no_message = root
+			}
+		}
+	}
+}
+
+originsextended_create_outreach_member_2 = {
+	if = {
+		limit = { 
+			root = { has_spiritualist_government = yes }
+		}
+		create_country = {
+			name_list = random
+			species = event_target:fed_planet_2_species
+			type = default
+			origin = originsextended_outreach_npc
+			ignore_initial_colony_error = yes
+			day_zero_contact = no
+			authority = auth_corporate
+			randomize_ethos = yes
+			ethos = {
+				ethic = "ethic_xenophile"
+				ethic = "ethic_spiritualist"
+				ethic = "ethic_fanatic_spiritualist"
+			}
+			effect = {
+				save_event_target_as = fed_member_2
+				establish_communications_no_message = root
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			root = { has_militarist_government = yes }
+		}
+		create_country = {
+			name_list = random
+			species = event_target:fed_planet_2_species
+			type = default
+			origin = originsextended_outreach_npc
+			ignore_initial_colony_error = yes
+			day_zero_contact = no
+			authority = auth_corporate
+			randomize_ethos = yes
+			ethos = {
+				ethic = "ethic_xenophile"
+				ethic = "ethic_militarist"
+				ethic = "ethic_fanatic_militarist"
+			}
+			effect = {
+				save_event_target_as = fed_member_2
+				establish_communications_no_message = root
+			}
+		}
+	}
+	else_if = {
+		limit = { 
+			root = { has_pacifist_government = yes }
+		}
+		create_country = {
+			name_list = random
+			species = event_target:fed_planet_2_species
+			type = default
+			origin = originsextended_outreach_npc
+			ignore_initial_colony_error = yes
+			day_zero_contact = no
+			authority = auth_corporate
+			randomize_ethos = yes
+			ethos = {
+				ethic = "ethic_xenophile"
+				ethic = "ethic_pacifist"
+				ethic = "ethic_fanatic_pacifist"
+			}
+			effect = {
+				save_event_target_as = fed_member_2
+				establish_communications_no_message = root
+			}
+		}
+	}
+	else_if = {
+		limit = { 
+			root = { has_materialist_government = yes }
+		}
+		create_country = {
+			name_list = random
+			species = event_target:fed_planet_2_species
+			type = default
+			origin = originsextended_outreach_npc
+			ignore_initial_colony_error = yes
+			day_zero_contact = no
+			authority = auth_corporate
+			randomize_ethos = yes
+			ethos = {
+				ethic = "ethic_xenophile"
+				ethic = "ethic_materialist"
+				ethic = "ethic_fanatic_materialist"
+			}
+			effect = {
+				save_event_target_as = fed_member_2
+				establish_communications_no_message = root
+			}
+		}
+	}
+	else_if = {
+		limit = { 
+			root = { is_authoritarian = yes }
+		}
+		create_country = {
+			name_list = random
+			species = event_target:fed_planet_2_species
+			type = default
+			origin = originsextended_outreach_npc
+			ignore_initial_colony_error = yes
+			day_zero_contact = no
+			authority = auth_corporate
+			randomize_ethos = yes
+			ethos = {
+				ethic = "ethic_xenophile"
+				ethic = "ethic_authoritarian"
+				ethic = "ethic_fanatic_authoritarian"
+			}
+			effect = {
+				save_event_target_as = fed_member_2
+				establish_communications_no_message = root
+			}
+		}
+	}
+	else_if = {
+		limit = { 
+			root = { is_egalitarian = yes }
+		}
+		create_country = {
+			name_list = random
+			species = event_target:fed_planet_2_species
+			type = default
+			origin = originsextended_outreach_npc
+			ignore_initial_colony_error = yes
+			day_zero_contact = no
+			authority = auth_corporate
+			randomize_ethos = yes
+			ethos = {
+				ethic = "ethic_xenophile"
+				ethic = "ethic_egalitarian"
+				ethic = "ethic_fanatic_egalitarian"
+			}
+			effect = {
+				save_event_target_as = fed_member_2
+				establish_communications_no_message = root
+			}
+		}
+	}
+	else = {
+		create_country = {
+			name_list = random
+			species = event_target:fed_planet_2_species
+			type = default
+			origin = originsextended_outreach_npc
+			ignore_initial_colony_error = yes
+			day_zero_contact = no
+			authority = auth_corporate
+			randomize_ethos = yes
+			ethos = {
+				ethic = "ethic_xenophile"
+				ethic = "ethic_fanatic_xenophile"
+			}
+			effect = {
+				save_event_target_as = fed_member_2
+				establish_communications_no_message = root
+			}
+		}
+	}
+}
+
+# Mars Start Tiles
+generate_red_deposits_and_blockers = {
+	clear_deposits = yes
+	add_deposit = d_rich_mountain
+	add_deposit = d_geothermal_vent
+	add_deposit = d_prosperous_mesa
+	add_deposit = d_ore_rich_caverns 
+	add_deposit = d_fertile_lands 
+	add_deposit = d_great_river
+	add_deposit = d_tempestous_mountain
+	add_deposit = d_mountain_range
+	add_deposit = d_active_volcano
+	add_deposit = d_failing_infrastructure
+	add_deposit = d_decrepit_dwellings
+	add_deposit = d_strip_mine
+	add_deposit = d_city_ruins
+
+	owner = {
+		give_technology = {
+			tech = tech_terrestrial_sculpting 
+		}
+	}
+	if = {
+		limit = { owner = { is_machine_empire = yes } }
+		add_deposit = d_rushing_waterfalls
+	}
+	if = {
+		limit = { owner = { has_valid_civic = civic_machine_servitor } }
+		add_deposit = d_hot_springs
+	}
+
+	if = {
+		limit = {
+			owner = {
+				is_lithoid_empire = yes
+				NOT = { has_valid_civic = civic_hive_devouring_swarm }
+			}
+		}
+		while = {
+			count = 4
+			add_deposit = d_hibernating_lithoids
+		}
+	}
+
+	if = {
+		limit = {
+			owner = {
+				is_lithoid_empire = yes
+				has_valid_civic = civic_hive_devouring_swarm
+			}
+		}
+		while = {
+			count = 2
+			add_deposit = d_hibernating_lithoids
+		}
+	}
+
+	# if = {
+	# 	limit = {
+	# 		owner = {
+	# 			has_origin = origin_life_seeded
+	# 		}
+	# 	}
+
+	# 	set_planet_size = 25
+
+	# 	add_deposit = d_dust_caverns
+	# 	add_deposit = d_bubbling_swamp
+	# 	add_deposit = d_crystalline_caverns
+	# }
+}
+
+# Earth Blockers
+generate_red_earth_blockers = {
+	clear_deposits = yes
+	add_deposit = d_mountain_range # -2
+	add_deposit = d_active_volcano # -2
+	add_deposit = d_radioactive_wasteland # -1
+	add_deposit = d_radioactive_wasteland # -1
+	add_deposit = d_radioactive_wasteland # -1
+	add_deposit = d_city_ruins # -2
+	add_deposit = d_city_ruins # -2
+	add_deposit = d_city_ruins # -2
+	add_deposit = d_bomb_crater # -1
+	add_deposit = d_bomb_crater # -1
+	add_deposit = d_bomb_crater # -1
+}
+
+# Core start tiles
+generate_core_deposits_and_blockers = { # mostly copied over from scripted_effects for the machine world origin init
+	
+	clear_deposits = yes # reset init districts
+
+	remove_district = district_generator
+	remove_district = district_generator
+	remove_district = district_generator
+	remove_district = district_generator
+	remove_district = district_generator
+
+	remove_district = district_farming
+
+	remove_district = district_mining
+	remove_district = district_mining
+	remove_district = district_mining
+	remove_district = district_mining
+
+	add_district = district_generator_uncapped
+	add_district = district_generator_uncapped
+	add_district = district_generator_uncapped
+	add_district = district_generator_uncapped
+	add_district = district_generator_uncapped
+
+	add_district = district_mining_uncapped
+	add_district = district_mining_uncapped
+
+	add_deposit = d_oe_deactivated_processes
+	add_deposit = d_oe_deactivated_processes
+	add_deposit = d_oe_dormant_protocols
+	add_deposit = d_oe_dormant_protocols
+
+	# nuke the system
+	owner = {
+		capital_scope = {
+			system_star = {
+				set_deposit = d_energy_10
+			}
+			add_deposit = d_machine_minerals
+			solar_system = {
+				every_system_planet = {
+					limit = {
+						colonizeable_planet = no
+						is_star = no
+					}
+					clear_deposits = yes
+				}
+				every_system_planet = {
+					limit = {
+						is_asteroid = yes
+					}
+					remove_planet = yes
+				}
+				every_system_planet = {
+					limit = {
+						colonizeable_planet = no
+						is_star = no
+						is_asteroid = no
+						NOT = { is_planet_class = pc_gas_giant }
+					}
+					change_pc = pc_broken
+				}
+				every_system_planet = {
+					limit = {
+						colonizeable_planet = no
+						is_star = no
+						is_planet_class = pc_gas_giant
+					}
+					change_pc = pc_molten
+					add_modifier = { modifier = chthonian_planet }
+					every_moon = {
+						limit = {
+							colonizeable_planet = no
+						}
+						remove_planet = yes
+					}
+					while = {
+						limit = {
+							planet_size >= 20
+						}
+						change_planet_size = -6
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,21 @@
+namespace = eemega
+
+country_event = {
+    id = eemega.1  #Eternal Society, Eternium?
+	title = "eemega.1.name"
+    desc = "eemega.1.desc"
+    is_triggered_only = yes
+    fire_only_once = yes
+	picture = GFX_evt_shattered_planet
+	show_sound = event_airlock
+
+    trigger = {
+        has_government = gov_eternal_continuum
+    }
+    
+    option = {
+        name = EXCELLENT
+        add_resource = { eternium = 1000 }
+    }
+}
+   

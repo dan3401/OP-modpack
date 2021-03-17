@@ -1,0 +1,192 @@
+##########################################################################
+# Decisions
+##########################################################################
+
+
+
+decision_palace_eternity = {
+	owned_planets_only = yes
+	icon = event_administrative_work
+	
+	enactment_time = 180
+
+
+	resources = {
+		category = decisions
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
+			minerals = 1000
+			ambrosia = 1000
+			virtue = 1000
+		}	
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = yes
+				}
+			}
+			minerals = 1000
+			ambrosia = 1000
+			virtue = 1000
+		}
+	}
+	
+	potential = {
+		NOT = { has_planet_flag = twplace }
+		NOT = { has_modifier = penal_colony }
+		NOT = { has_modifier = slave_colony }
+		NOT = { has_modifier = resort_colony }
+		exists = owner
+		owner = { is_country_type = eternal_empire }
+		
+	}
+	
+	allow = {
+		num_pops >= 1
+	}
+	
+	effect = {
+		set_planet_flag = twplace
+		custom_tooltip = decision_palace_eternity_desc	
+		hidden_effect = {
+			if = {
+				limit = {
+					has_building = building_colony_shelter
+				 }
+				 remove_building = building_colony_shelter
+				 add_building = building_eternal_palace			
+			}
+			if = {
+				limit = {
+					has_building = building_capital
+				 }
+				 remove_building = building_capital
+				 add_building = building_eternal_palace				
+			}
+			if = {
+				limit = {
+					has_building = building_major_capital
+				 }
+				 remove_building = building_major_capital
+				 add_building = building_eternal_palace				
+			}
+			if = {
+				limit = {
+					has_building = building_system_capital
+				 }
+				 remove_building = building_system_capital
+				 add_building = building_eternal_palace				
+			}
+		}
+
+
+	}
+	
+	ai_weight = {
+		weight = 10000
+	}
+}
+
+
+decision_nexus_eternity_tw = {
+	owned_planets_only = yes
+	icon = event_administrative_work
+	
+	enactment_time = 160
+	prerequisites = {
+		"tech_fallenmu"
+	}
+
+	resources = {
+		category = decisions
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
+			minerals = 10000
+			influence = 200
+			
+		}	
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = yes
+				}
+			}
+			minerals = 10000
+			influence = 25
+			sr_dark_matter = 50
+			acot_sr_dark_energy = 50
+		}
+	}
+	
+	potential = {
+		NOT = { has_modifier = penal_colony }
+		NOT = { has_modifier = slave_colony }
+		NOT = { has_modifier = resort_colony }
+		owner = { 
+			has_government = "gov_ancient_ai"
+			is_machine_empire = yes 
+		}
+		NOT = { 
+			is_fallen_empire = yes
+			has_government = "gov_stagnant_ascendancy"
+			has_government = "gov_awakened_ascendancy"
+			has_government = "gov_eternal_continuum"
+			has_building = building_ancient_control_center	
+		}
+	}
+	
+	allow = {
+		num_pops >= 1
+	}
+	
+	effect = {
+		custom_tooltip = decision_nexus_eternity_tw_desc
+		hidden_effect = {
+			if = {
+				limit = {
+					has_building = building_deployment_post
+				 }
+				 remove_building = building_deployment_post
+				 add_building = building_eternal_nexus_ai			
+			}
+			if = {
+				limit = {
+					has_building = building_machine_capital
+				 }
+				 remove_building = building_machine_capital
+				 add_building = building_eternal_nexus_ai	
+			}
+			if = {
+				limit = {
+					has_building = building_machine_major_capital
+				 }
+				 remove_building = building_machine_major_capital
+				 add_building = building_eternal_nexus_ai		
+			}
+			if = {
+				limit = {
+					has_building = building_machine_system_capital
+				 }
+				 remove_building = building_machine_system_capital
+				 add_building = building_eternal_nexus_ai		
+			}
+		}
+
+
+	}
+	
+	ai_weight = {
+		weight = 10000
+	}
+}
+
+
+

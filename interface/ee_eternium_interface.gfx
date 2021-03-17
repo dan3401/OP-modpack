@@ -1,0 +1,158 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_ship_part_computer_eternium_defense"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_computer_eternium_defense.dds"		
+	}
+	spriteType = {
+		name = "GFX_ship_part_computer_eternium_offense"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_computer_eternium_offense.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_eternium_armor"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_eternium_armor.dds"		
+	}
+	spriteType = {
+		name = "GFX_ship_part_eternium_autocannon"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_eternium_autocannon.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_eternium_bomber"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_eternium_bomber.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_eternium_disruptor"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_eternium_disruptor.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_eternium_emitter"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_eternium_emitter.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_eternium_fighter"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_eternium_fighter.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_eternium_flak"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_eternium_flak.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_eternium_gauss"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_eternium_gauss.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_eternium_gunship"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_eternium_gunship.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_eternium_lance"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_eternium_lance.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_eternium_laser"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_eternium_laser.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_eternium_missile"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_eternium_missile.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_eternium_photon"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_eternium_photon.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_eternium_plasma_cannon"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_eternium_plasma_cannon.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_eternium_point_defence"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_eternium_point_defence.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_eternium_reactor"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_eternium_reactor.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_eternium_sensors"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_eternium_sensors.dds"
+	}	
+	spriteType = {
+		name = "GFX_ship_part_eternium_shield"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_eternium_shield.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_eternium_thruster"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_eternium_thruster.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_eternium_titan_beam"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_eternium_titan_beam.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_warp_eternium_cannon"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_warp_eternium_cannon.dds"
+	}	
+	spriteType = {
+		name = "GFX_ship_part_eternium_afterburners"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_eternium_afterburners.dds"
+	}	
+	spriteType = {
+		name = "GFX_ship_part_eternium_analyzer_ai"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_eternium_analyzer_ai.dds"
+	}	
+	spriteType = {
+		name = "GFX_ship_part_eternium_aura_energy_drainer"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_eternium_aura_energy_drainer.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_ship_part_eternium_jump_drive"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_eternium_jump_drive.dds"
+	}
+		
+	spriteType = {
+		name = "GFX_ship_part_eternium_reactive_drone"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_eternium_reactive_drone.dds"
+	}		
+	spriteType = {
+		name = "GFX_ship_part_eternium_inspire_aura"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_eternium_inspire_aura.dds"
+	}	
+	spriteType = {
+		name = "GFX_ship_part_eternium_weapon_coree"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_eternium_weapon_core.dds"
+	}			
+	
+	spriteType = {
+		name = "GFX_ship_part_eternium_shield_supercharger"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_eternium_shield_supercharger.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_ship_part_eternium_weapon_core"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_eternium_weapon_core.dds"
+	}	
+
+	spriteType = {
+		name = "GFX_ship_part_computer_eternium_balanced"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_computer_eternium_balanced.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_time_ee"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_time_ee.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_computer_eternal_offense"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_ee_offensive.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_computer_eternal_defense"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_ee_defensive.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_computer_eternal_balanced"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_ee_balanced.dds"
+	}
+}
+
+

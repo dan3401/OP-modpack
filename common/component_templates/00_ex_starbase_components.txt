@@ -1,0 +1,31 @@
+utility_component_template = {
+	key = "STARBASE_AURA_MOLECULAR_FORGE"
+	size = medium
+	icon = "GFX_ship_part_aura_snare"
+	icon_frame = 1
+	power = 0
+
+	class_restriction = { shipclass_starbase }
+
+	friendly_aura = {
+		name = "aura_starbase_molecular_forge"
+		system_wide = yes
+
+		stack_info = {
+			id = friendly_molecular_forge_aura
+			priority = 10
+		}
+
+		modifier = {
+			ship_hull_regen_add_static = 2
+			ship_armor_regen_add_static = 6
+		}
+
+		graphics = {
+			ship_effect = {
+				entity = "ship_aura_positive_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+}

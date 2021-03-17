@@ -1,0 +1,24 @@
+
+can_set_lcluster_policiy = {
+	has_technology = requires_technology_gateway_activation
+	OR = {
+		has_technology = requires_technology_gateway_activation
+		any_relation = {
+			has_communications = prev
+			OR = {
+				is_country_type = eternal_empire
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+				is_country_type = default
+				is_country_type = swarm
+				has_technology = requires_technology_gateway_activation
+			}
+		}
+	}
+}
+
+controls_lcluster = {
+	any_system_within_border = {
+		has_star_flag = lcluster1
+	}
+}

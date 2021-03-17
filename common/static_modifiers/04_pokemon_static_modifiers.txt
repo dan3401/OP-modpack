@@ -1,0 +1,10 @@
+# All global modifiers are here.  They are applied from certain game-features.
+#
+# Effects are fully scriptable here.
+##########################################################################
+# Traits !!
+##########################################################################
+wear_trait_fairy_type_mega_evolution = {
+	country_base_influence_produces_add = 1
+	country_trust_growth = 0.25
+}

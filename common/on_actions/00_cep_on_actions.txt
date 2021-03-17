@@ -1,0 +1,12 @@
+
+on_game_start_country = { # Civic setups (country scope)
+	events = {
+		qfts.69 # Quest for the Seeders setup
+		begin.2 # Planetary Cache setup
+		begin.3 # Machine/Nihilistic Cult setup
+		begin.4 # Crystalline Energy Grid setup
+		begin.5 # Masters of Architecture setup
+		begin.6 # World Council setup
+		begin.7 # Seekers of Knowledge setup
+	}
+}

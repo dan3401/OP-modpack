@@ -1,0 +1,191 @@
+# Blue Stars
+sc_b_01 = {
+	class 			= b_01_star
+	planet			= { key = pc_b_star }
+	spawn_odds 		= 10
+	num_planets 	= { min = 4 max = 10 }
+
+	pc_continental 	= { spawn_odds = 0.6 }
+	pc_desert		= { spawn_odds = 0.6 }
+	pc_tropical		= { spawn_odds = 0.6 }
+	pc_arid 		= { spawn_odds = 0.6 }
+	pc_ocean		= { spawn_odds = 0.6 }
+	pc_tundra		= { spawn_odds = 0.6 }
+	pc_arctic		= { spawn_odds = 0.6 }
+	pc_alpine		= { spawn_odds = 0.6 }
+	pc_savannah		= { spawn_odds = 0.6 }
+}
+
+# Blue Stars
+sc_b_02 = {
+	class 			= b_02_star
+	planet			= { key = pc_b_star }
+	spawn_odds 		= 10
+	num_planets 	= { min = 4 max = 10 }
+
+	pc_continental 	= { spawn_odds = 0.6 }
+	pc_desert		= { spawn_odds = 0.6 }
+	pc_tropical		= { spawn_odds = 0.6 }
+	pc_arid 		= { spawn_odds = 0.6 }
+	pc_ocean		= { spawn_odds = 0.6 }
+	pc_tundra		= { spawn_odds = 0.6 }
+	pc_arctic		= { spawn_odds = 0.6 }
+	pc_alpine		= { spawn_odds = 0.6 }
+	pc_savannah		= { spawn_odds = 0.6 }
+}
+
+# White or Blueish Stars
+sc_a_01 = {
+	class 			= a_01_star
+	planet			= { key = pc_a_star }
+	spawn_odds 		= 10
+	num_planets 	= { min = 4 max = 10 }
+
+	pc_continental 	= { spawn_odds = 0.6 }
+	pc_desert		= { spawn_odds = 0.6 }
+	pc_tropical		= { spawn_odds = 0.6 }
+	pc_arid 		= { spawn_odds = 0.6 }
+	pc_ocean		= { spawn_odds = 0.6 }
+	pc_tundra		= { spawn_odds = 0.6 }
+	pc_arctic		= { spawn_odds = 0.6 }
+	pc_alpine		= { spawn_odds = 0.6 }
+	pc_savannah		= { spawn_odds = 0.6 }
+}
+
+# White or Blueish Stars
+sc_a_02 = {
+	class 			= a_02_star
+	planet			= { key = pc_a_star }
+	spawn_odds 		= 10
+	num_planets 	= { min = 4 max = 10 }
+
+	pc_continental 	= { spawn_odds = 0.6 }
+	pc_desert		= { spawn_odds = 0.6 }
+	pc_tropical		= { spawn_odds = 0.6 }
+	pc_arid 		= { spawn_odds = 0.6 }
+	pc_ocean		= { spawn_odds = 0.6 }
+	pc_tundra		= { spawn_odds = 0.6 }
+	pc_arctic		= { spawn_odds = 0.6 }
+	pc_alpine		= { spawn_odds = 0.6 }
+	pc_savannah		= { spawn_odds = 0.6 }
+}
+
+# Yellow-White Dwarves
+sc_f_01 = {
+	class 			= f_01_star
+	planet			= { key = pc_f_star }
+	spawn_odds 		= 15
+	num_planets 	= { min = 4 max = 10 }
+}
+
+# Yellow-White Dwarves
+sc_f_02 = {
+	class 			= f_02_star
+	planet			= { key = pc_f_star }
+	spawn_odds 		= 15
+	num_planets 	= { min = 4 max = 10 }
+}
+
+# Yellow Dwarves
+sc_g_01 = {
+	class 			= g_01_star
+	planet			= { key = pc_g_star }
+	spawn_odds 		= 30
+	num_planets 	= { min = 4 max = 10 }
+}
+
+# Yellow Dwarves
+sc_g_02 = {
+	class 			= g_02_star
+	planet			= { key = pc_g_star }
+	spawn_odds 		= 30
+	num_planets 	= { min = 4 max = 10 }
+}
+
+# Orange Dwarves
+sc_k_01 = {
+	class 			= k_01_star
+	planet			= { key = pc_k_star }
+	spawn_odds 		= 20
+	num_planets 	= { min = 4 max = 10 }
+}
+
+# Orange Dwarves
+sc_k_02 = {
+	class 			= k_02_star
+	planet			= { key = pc_k_star }
+	spawn_odds 		= 20
+	num_planets 	= { min = 4 max = 10 }
+}
+
+# Red Dwarves
+sc_m_01 = {
+	class 			= m_01_star
+	planet			= { key = pc_m_star }
+	spawn_odds 		= 20
+	num_planets 	= { min = 4 max = 10 }
+
+	pc_continental 	= { spawn_odds = 0.4 }
+	pc_desert		= { spawn_odds = 0.4 }
+	pc_tropical		= { spawn_odds = 0.4 }
+	pc_arid 		= { spawn_odds = 0.4 }
+	pc_ocean		= { spawn_odds = 0.4 }
+	pc_tundra		= { spawn_odds = 0.4 }
+	pc_arctic		= { spawn_odds = 0.4 }
+	pc_alpine		= { spawn_odds = 0.4 }
+	pc_savannah		= { spawn_odds = 0.4 }
+}
+
+# Red Dwarves
+sc_m_02 = {
+	class 			= m_02_star
+	planet			= { key = pc_m_star }
+	spawn_odds 		= 20
+	num_planets 	= { min = 4 max = 10 }
+
+	pc_continental 	= { spawn_odds = 0.4 }
+	pc_desert		= { spawn_odds = 0.4 }
+	pc_tropical		= { spawn_odds = 0.4 }
+	pc_arid 		= { spawn_odds = 0.4 }
+	pc_ocean		= { spawn_odds = 0.4 }
+	pc_tundra		= { spawn_odds = 0.4 }
+	pc_arctic		= { spawn_odds = 0.4 }
+	pc_alpine		= { spawn_odds = 0.4 }
+	pc_savannah		= { spawn_odds = 0.4 }
+}
+
+# Brown Dwarves
+sc_t_01 = {
+	class 			= t_01_star
+	planet			= { key = pc_t_star }
+	spawn_odds 		= 10
+	num_planets 	= { min = 4 max = 10 }
+
+	pc_continental 	= { spawn_odds = 0.4 }
+	pc_desert		= { spawn_odds = 0.4 }
+	pc_tropical		= { spawn_odds = 0.4 }
+	pc_arid 		= { spawn_odds = 0.4 }
+	pc_ocean		= { spawn_odds = 0.4 }
+	pc_tundra		= { spawn_odds = 0.4 }
+	pc_arctic		= { spawn_odds = 0.4 }
+	pc_alpine		= { spawn_odds = 0.4 }
+	pc_savannah		= { spawn_odds = 0.4 }
+}
+
+# Brown Dwarves
+sc_t_02 = {
+	class 			= t_02_star
+	planet			= { key = pc_t_star }
+	spawn_odds 		= 10
+	num_planets 	= { min = 4 max = 10 }
+
+	pc_continental 	= { spawn_odds = 0.4 }
+	pc_desert		= { spawn_odds = 0.4 }
+	pc_tropical		= { spawn_odds = 0.4 }
+	pc_arid 		= { spawn_odds = 0.4 }
+	pc_ocean		= { spawn_odds = 0.4 }
+	pc_tundra		= { spawn_odds = 0.4 }
+	pc_arctic		= { spawn_odds = 0.4 }
+	pc_alpine		= { spawn_odds = 0.4 }
+	pc_savannah		= { spawn_odds = 0.4 }
+}

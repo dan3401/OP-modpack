@@ -1,0 +1,88 @@
+
+#eternals
+
+virtue = {
+	ai_weight = {
+		weight = 1
+	}
+	max = 50000
+	tradable = no
+	prerequisites = { "tech_fallenw" }
+	deficit_modifier = virtue_deficit
+	visibility_prerequisite = { always = yes }
+
+}
+
+ambrosia = {
+	ai_weight = {
+		weight = 1
+	}
+	max = 200000
+	tradable = no
+	prerequisites = { "tech_fallenw" }
+	deficit_modifier = ambrosia_deficit
+	visibility_prerequisite = { always = yes }
+
+}
+
+ancient_knowldege = {
+	ai_weight = {
+		weight = 1
+	}
+	max = 10000
+	tradable = no
+	prerequisites = { "tech_fallenw" }
+	deficit_modifier = ancient_knowledge_deficit
+	visibility_prerequisite = { always = yes }
+
+}
+
+#weapons
+
+eternium = {
+	ai_weight = {
+		weight = 1
+	}
+	tradable = no
+	max = 20000
+	prerequisites = { "tech_fallenw" }
+	deficit_modifier = eternium_deficit
+	visibility_prerequisite = { always = yes }
+}
+
+voidmatter = {
+	ai_weight = {
+		weight = 1
+	}
+	tradable = no
+	max = 50000
+	prerequisites = { "tech_fallenw" }
+	deficit_modifier = voidmatter_deficit
+}
+
+sr_dark_matter = {
+	tradable = yes
+	market_amount = 5
+	market_price = 100
+	max = 15000
+
+	deficit_modifier = dark_matter_deficit
+	prerequisites = { "tech_mine_dark_matter" }
+	visibility_prerequisite = { always = yes }
+	
+	ai_weight = {
+		weight = 100
+	}
+}
+
+nanites  = {
+	tradable = no
+	max = 15000
+
+	deficit_modifier = nanites_deficit 
+	visibility_prerequisite = { always = yes }
+	
+	ai_weight = {
+		weight = 100
+	}
+}

@@ -1,0 +1,20 @@
+# Build Costs
+
+@matrioshka_world_influence_cost = 100
+@matrioshka_world_energy_cost = 5000
+@matrioshka_world_alloy_cost = 10000
+@matrioshka_world_mineral_cost = 20000
+
+# Build Time
+
+#@matrioshka_world_build_time = 3600 #days # no longer used
+
+# AI Weight
+
+@matrioshka_world_ai_weight = 0
+@matrioshka_world_ai_tech_weight = 0
+
+# Tech Cost and Weight
+
+@matrioshka_world_tech_cost = 24000 #@tier4cost3=24000
+@matrioshka_world_tech_weight = 50 #very high

@@ -1,0 +1,262 @@
+add_leader_traits_after_modification = {
+	if = {
+		limit = {
+			species = {
+				has_trait = trait_erudite
+				#NOR = {													# ###
+				#	has_trait = trait_cybernetic							# ###
+				#	has_trait = trait_psionic								# ###
+				#	has_trait = trait_latent_psionic						# ###
+				#}															# ###
+			}
+		}
+		if = {
+			limit = {
+				leader_class = admiral
+				NOT = { has_trait = leader_trait_admiral_erudite }
+			}
+			add_trait = leader_trait_admiral_erudite
+			add_ruler_trait = leader_trait_ruler_erudite
+		}
+		if = {
+			limit = {
+				leader_class = general
+				NOT = { has_trait = leader_trait_general_erudite }
+			}
+			add_trait = leader_trait_general_erudite
+			add_ruler_trait = leader_trait_ruler_erudite
+		}
+		if = {
+			limit = {
+				leader_class = governor
+				NOT = { has_trait = leader_trait_governor_erudite }
+			}
+			add_trait = leader_trait_governor_erudite
+			add_ruler_trait = leader_trait_ruler_erudite
+		}
+		if = {
+			limit = {
+				leader_class = scientist
+				NOT = { has_trait = leader_trait_scientist_erudite }
+			}
+			add_trait = leader_trait_scientist_erudite
+			add_ruler_trait = leader_trait_ruler_erudite
+		}
+		if = {
+			limit = {
+				leader_class = ruler
+				NOT = { has_trait = leader_trait_ruler_erudite }
+			}
+			add_trait = leader_trait_ruler_erudite
+			add_ruler_trait = leader_trait_ruler_erudite		
+			}
+	}
+	#################### BRAIN SLUG #############################################
+	if = {																	#####
+		limit = {															#####
+			species = {
+				has_trait = trait_brainslug
+			}
+		}
+		if = {
+			limit = {
+				leader_class = admiral
+				NOT = { has_trait = leader_trait_admiral_brainslug }
+			}
+			add_trait = leader_trait_admiral_brainslug
+			add_ruler_trait = leader_trait_ruler_brainslug
+		}
+		if = {
+			limit = {
+				leader_class = general
+				NOT = { has_trait = leader_trait_general_brainslug }
+			}
+			add_trait = leader_trait_general_brainslug
+			add_ruler_trait = leader_trait_ruler_brainslug
+		}
+		if = {
+			limit = {
+				leader_class = governor
+				NOT = { has_trait = leader_trait_governor_brainslug }
+			}
+			add_trait = leader_trait_governor_brainslug
+			add_ruler_trait = leader_trait_ruler_brainslug
+		}
+		if = {
+			limit = {
+				leader_class = scientist
+				NOT = { has_trait = leader_trait_scientist_brainslug }
+			}
+			add_trait = leader_trait_scientist_brainslug
+			add_ruler_trait = leader_trait_ruler_brainslug
+		}
+		if = {
+			limit = {
+				leader_class = ruler
+				NOT = { has_trait = leader_trait_ruler_brainslug }
+			}
+			add_trait = leader_trait_ruler_brainslug
+			add_ruler_trait = leader_trait_ruler_brainslug
+		}																	#####
+	}																		#####
+	#############################################################################
+}
+
+remove_leader_traits_after_modification = {
+	if = {
+		limit = {
+			species = {
+				#OR = {														# ###
+					NOT = { has_trait = trait_erudite }						# ###
+				#	has_trait = trait_cybernetic							# ###
+				#	has_trait = trait_psionic								# ###
+				#	has_trait = trait_latent_psionic						# ###
+				#}															# ###
+			}
+		}
+		if = {
+			limit = {
+				has_trait = leader_trait_admiral_erudite
+			}
+			remove_trait = leader_trait_admiral_erudite
+			remove_ruler_trait = leader_trait_ruler_erudite
+		}
+		if = {
+			limit = {
+				has_trait = leader_trait_general_erudite
+			}
+			remove_trait = leader_trait_general_erudite
+			remove_ruler_trait = leader_trait_ruler_erudite
+		}
+		if = {
+			limit = {
+				has_trait = leader_trait_governor_erudite
+			}
+			remove_trait = leader_trait_governor_erudite
+			remove_ruler_trait = leader_trait_ruler_erudite
+		}
+		if = {
+			limit = {
+				has_trait = leader_trait_scientist_erudite
+			}
+			remove_trait = leader_trait_scientist_erudite
+			remove_ruler_trait = leader_trait_ruler_erudite
+		}
+		if = {
+			limit = {
+				has_trait = leader_trait_ruler_erudite
+			}
+			remove_trait = leader_trait_ruler_erudite
+			remove_ruler_trait = leader_trait_ruler_erudite
+		}
+	}
+}
+
+#################### ASSIMILATION #############################################
+# root/this = planet
+assimilation_effect = {
+	random_owned_pop = {
+		limit = {
+			has_citizenship_type = {
+				type = citizenship_assimilation
+				country = root.owner
+			}
+		}
+		if = { # ascended synths
+			limit = {
+				root.owner = {
+					has_country_flag = synthetic_empire
+				}
+			}
+			kill_pop = yes
+			root = {
+				create_pop = {
+					species = root.owner
+					ethos = root.owner
+				}
+			}
+		}
+		else = {
+			random_galaxy_species = {
+				limit = {
+					has_species_flag = assimilation_species_of_species@prev.species
+					has_species_flag = assimilation_species_of_empire@root.owner
+				}
+				save_event_target_as = convert_to_species
+			}
+			species = {
+				save_event_target_as = old_species
+			}
+			if = {
+				limit = {
+					exists = event_target:convert_to_species #should always exist
+				}
+				change_species = event_target:convert_to_species
+				root = {
+					change_variable = {
+						which = assimilation_counter
+						value = -1
+					}
+					while = { #to avoid doing the random_galaxy_species thing too many times
+						limit = {
+							exists = event_target:old_species
+							check_variable = {
+								which = assimilation_counter
+								value > 0
+							}
+							any_owned_species = {
+								is_same_value = event_target:old_species
+							}
+						}
+						random_owned_pop = {
+							limit = {
+								is_exact_same_species = event_target:old_species
+							}
+							change_species = event_target:convert_to_species
+							apply_post_assimilation_effects = yes
+						}
+						change_variable = {
+							which = assimilation_counter
+							value = -1
+						}
+					}
+				}
+				apply_post_assimilation_effects = yes
+			}
+		}
+	}
+}
+
+# pop scope, root = planet
+apply_post_assimilation_effects = {
+	if = { # assimilator empire
+		limit = {
+			root.owner = {
+				has_authority = auth_machine_intelligence
+				has_civic = civic_machine_assimilator
+			}
+		}
+		root.owner = { generate_cyborg_treats = yes } # scripted effect
+	}
+	if = { # set citizenship
+		limit = { root.owner = { has_authority = auth_machine_intelligence } }
+		set_citizenship_type = {
+			type = citizenship_full_machine
+			country = root.owner
+		}
+	}
+	else = {
+		set_citizenship_type = {
+			type = citizenship_full
+			country = root.owner
+		}
+	}
+
+	if = { # set citizenship
+		limit = { root.owner = { has_ethic = ethic_gestalt_consciousness } }
+		set_living_standard = {
+			type = living_standard_hive_mind
+			country = root.owner
+		}
+	}
+}

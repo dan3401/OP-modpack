@@ -1,0 +1,63 @@
+﻿l_braz_por:
+#{
+ # #######################
+ # Written by kngpig #
+ # #######################
+ #
+ # $tooltip$ , $VALUE$ (Putting up an existing localization line)
+ # £icon£ , £mod_job_industry_equipements_add£ (Putting up an icon)
+ # §colour§ , §R(Red)§! (R, Y, E, H, S, B, G) (! Returns to default) (R Red) (Y Yellow) (B Blue) (G Green)
+ # [(Scope.Call)] , [contact_empire.GetName] (You can have multiple scope into a specific thing based on event, there is also specific scopes the game uses. Example: primitive_civ, conquered_primitive_country, LastKilledCountryName, malfunctioning_leader)
+ # 
+ # #######################
+ #
+ # #######################
+#}
+
+ # ###################################
+ # buildings
+ # ###################################
+
+building_reality_fabricator:0 "Fábricas de realidade"
+building_reality_fabricator_desc:0 "Estas fábricas criam pequenos universos para testar o limite de tudo oque sabemos."
+building_food_growth_factory:0 "Fábricas de comida"
+building_food_growth_factory_desc:0 "Produz grandes quantidades de comida, crescendo-as célula por célula em vez de usar terra ou fazendas hidropônicas, permitindo-nos produzir muito mais comida."
+building_nanite_factory:0 "Fábricas de Nanites"
+building_nanite_factory_desc:0 "Várias fábricas produzindo Nanites usados em muitas maneiras."
+building_nanite_hub:0 "Concentrador de Nanites"
+building_nanite_hub_desc:0 "Um concentrador de Nanites básicos que recarrega e faz manutenção, nos permitindo usar nanites para construção no planeta."
+building_auto_missiles:0 "Mísseis anti bombardeamento automatizados"
+building_auto_missiles_desc:0 "Mísseis que interceptam quaisquer cápsulas ou ataques vindos de bombardeamentos orbitais."
+building_super_computers_station:0 "Estação de super computadores"
+building_super_computers_station_desc:0 "Uma grande instalação contendo toneladas de computadores, que realizam o trabalho de organizar toneladas de arquivos de nossos cidadãos em todo o espaço."
+building_hyper_computers_station:0 "Estação de hiper-computadores"
+building_hyper_computers_station_desc:0 "Uma grande instalação contendo vários hiper-computadores, que realizam o trabalho de organizar toneladas de arquivos de nossos cidadãos em todo o espaço."
+building_quantum_computers_station:0 "Estação de computadores qânticos"
+building_quantum_computers_station_desc:0 "Uma grande instalação contendo uma quantidade não muito grande de computadores quânticos, que realizam o trabalho de organizar toneladas de arquivos de nossos cidadãos em todo o espaço."
+building_metal_vitalization_labs:0 "laboratório de vitalização de metais"
+building_metal_vitalization_labs_desc:0 "Metais Vivos não podem ser produzidos normalmente, e não temos certeza de como o metal natural vivo que já existe está aonde está, mas acreditamos que foi feito usando o mesmo método."
+building_living_metal_exploition_facilities:0 "Instalações de exploração de Metais Vivos"
+building_living_metal_exploition_facilities_desc:0 "Uma simples integração de metal vivo nas nossas construções provou ser extremamente efetivo em reduzir custos."
+building_space_powderization_labs:0 "Laboratórios de pulverização espacial "
+building_space_powderization_labs_desc:0 "Zro existe normalmente, eles são raros mas podemos cria-los artificialmente nós mesmos."
+building_oxygen_gradientation_facilities:0 "Instalações de gradiente de oxigênio"
+building_oxygen_gradientation_facilities_desc:0 "Existe uma alteração especial do Zro que quando misturado ao ar, parece deixar as pessoas mais felizes e animadas."
+building_gravity_condensation_labs:0 "Laboratórios condensadores de gravidade"
+building_gravity_condensation_labs_desc:0 "Ondas de gravidade focadas que desafiam as leis da física."
+building_gravity_violation_facilities:0 "Instalações de violação da gravidade"
+building_gravity_violation_facilities_desc:0 "Exploramos a natureza da matéria escura para tornar certas coisas mais leves."
+building_teleporter:0 "Portão de teletransporte"
+building_teleporter_desc:0 "Um grande portão, transportando matéria em movimento de uma ponta a outra usando uma grande quantidade de energia."
+building_solar_fields:0 "Campos solares"
+building_solar_fields_desc:0 "Linhas e linhas de painéis solares, produzindo energia em troca do uso de espaço que poderia ser usado para outras construções."
+building_deep_drill:0 "Brocas de perfuração profunda"
+building_deep_drill_desc:0 "Brocas perfuradoras que vão à grandes profundidades, passam a crosta do planeta, permitindo mineiradores chegarem a lugares que seriam inacessíveis sem a maquinaria industrial de alta tecnologia, eles tornam o solo em volta instável para construções."
+building_teleporter:0 "Portão de teletransporte pequeno"
+building_teleporter_desc:0 "Um pequeno portal para a população e os exércitos viajarem rapidamente de um planeta para outro que contém um portão semelhante."
+
+ # ###################################
+ # Building Desc
+ # ###################################
+
+teleporter_effect:0 "$building_teleporter$ adiciona §G+1§! £job_soldier£ §Y$job_soldier$§!, ganhando §G+10%§! §Y$MOD_PLANET_EMIGRATION_PUSH_ADD$§! e §G+10%§! §Y$MOD_PLANET_IMMIGRATION_PULL_ADD$§! para cada $building_teleporter$ que você tenha, este efeito acumula até §G6§! vezes."
+teleporter_effect_is_gestalt:0 "$building_teleporter$ adiciona §G+1§! £job_warrior_drone£ §Y$job_warrior_drone$§!, ganha §G+10%§! §Y$MOD_PLANET_EMIGRATION_PUSH_ADD$§! e §G+10%§! §Y$MOD_PLANET_IMMIGRATION_PULL_ADD$§! para cada $building_teleporter$ que você tenha, este efeito acumula até §G6§! vezes."

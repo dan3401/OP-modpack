@@ -1,0 +1,11 @@
+on_colonized = {
+	events = {
+		pifer.0
+	}
+}
+
+on_colonization_started = {
+	events = {
+		pifer.0
+	}
+}

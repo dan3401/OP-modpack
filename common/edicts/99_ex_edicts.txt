@@ -1,0 +1,134 @@
+##########################################################################
+# Empire edicts
+##########################################################################
+
+#################
+#exigency civics edicts
+#################
+
+psionic_heritage_fix = {
+	length = 1
+
+	resources = {
+		category = edicts
+		cost = {
+			influence = 1
+		}
+	}
+	effect = {
+		country_event = { id = exigencycivics.2 } 
+	}
+	potential = {
+		has_civic = civic_psionic_heritage
+	}
+	ai_weight = {
+		weight = 0		
+	}	
+}
+
+continual_aid = {
+	length = 3600
+	resources = {
+		category = edicts
+		cost = {
+			influence = 300
+		}
+	}
+
+	modifier = {
+		country_energy_produces_mult = -0.05
+		country_food_produces_mult = -0.05
+		country_trust_cap_add = 20
+		country_trust_growth = 0.40
+		pop_government_ethic_attraction = 0.40
+		country_unity_produces_mult = 0.10
+		pop_happiness = 0.05
+	}
+	
+	potential = {
+		OR = {
+			is_egalitarian = yes
+			is_xenophobe = no
+		}		
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+dispatch_prospectors = {
+	length = 3600
+	resources = {
+		category = edicts
+		cost = {
+			influence = 300
+		}
+	}
+
+	modifier = {
+		country_base_influence_produces_add = -1
+		country_base_volatile_motes_produces_add = 2
+		country_base_exotic_gases_produces_add = 2
+		country_base_rare_crystals_produces_add = 2
+		trade_value_mult = 0.10
+	}
+	
+	potential = {
+		is_materialist = yes
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+war_preparations = {
+	length = 3600
+	resources = {
+		category = edicts
+		cost = {
+			influence = 300
+		}
+	}
+
+	modifier = {
+		planet_jobs_alloys_produces_mult = 0.10
+		starbase_shipyard_build_speed_mult = 0.25
+		planet_army_build_speed_mult = 0.5
+		armies_cost_mult = -0.33
+	}
+	
+	potential = {
+		is_militarist = yes
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+voluntary_work_scheme = {
+	length = 3600
+	resources = {
+		category = edicts
+		cost = {
+			influence = 300
+		}
+	}
+
+	modifier = {
+	job_miner_add = 1
+	job_farmer_add = 1
+	job_clerk_add = 1		
+	planet_jobs_produces_mult = -0.05
+	}
+	
+	potential = {
+		is_authoritarian = yes
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+}

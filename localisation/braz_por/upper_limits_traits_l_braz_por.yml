@@ -1,0 +1,22 @@
+﻿l_braz_por:
+#{
+ # #######################
+ # Written by kngpig #
+ # #######################
+ #
+ # $tooltip$ , $VALUE$ (Putting up an existing localization line)
+ # £icon£ , £mod_job_industry_equipements_add£ (Putting up an icon)
+ # §colour§ , §R(Red)§! (R, Y, E, H, S, B, G) (! Returns to default) (R Red) (Y Yellow) (B Blue) (G Green)
+ # [(Scope.Call)] , [contact_empire.GetName] (You can have multiple scope into a specific thing based on event, there is also specific scopes the game uses. Example: primitive_civ, conquered_primitive_country, LastKilledCountryName, malfunctioning_leader)
+ # 
+ # #######################
+ #
+ # #######################
+#}
+
+ # ###################################
+ # ToolTips
+ # ###################################
+
+leader_trait_theorist:0 "Teórico"
+leader_trait_theorist_desc:0 "Um cientista teórico é comum e pode ser encontrado em qualquer lugar, mas um cientista teórico avançado que pode colocar suas idéias corretamente nas ciências do trabalho é raro. Essa possibilidade só se tornou possível com o fundamento da Teoria Caótica."

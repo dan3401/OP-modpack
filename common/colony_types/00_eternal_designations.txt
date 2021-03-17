@@ -1,0 +1,105 @@
+
+tw_eternal_fortress_focus = {
+	icon = 10
+
+	potential = {
+		exists = owner
+		owner = { 
+			is_country_type = eternal_empire
+			is_gestalt = no
+			
+		}
+	}
+	
+	planet_modifier = {
+		planet_orbital_bombardment_damage = -999999
+	}
+
+	weight_modifier = {
+		base = 1
+	}
+}
+
+tw_eternal_research_focus = {
+	icon = 10
+
+	potential = {
+		exists = owner
+		owner = { 
+			is_country_type = eternal_empire
+			is_gestalt = no
+			
+		}
+	}
+	
+	planet_modifier = {
+		
+	}
+
+	weight_modifier = {
+		base = 1
+	}
+}
+
+tw_eternal_unity_focus = {
+	icon = 10
+
+	potential = {
+		exists = owner
+		owner = { 
+			is_country_type = eternal_empire
+			is_gestalt = no
+			
+		}
+	}
+	
+	planet_modifier = {
+		
+	}
+
+	weight_modifier = {
+		base = 1
+	}
+}
+
+tw_eternal_virtue_focus = {
+	icon = 10
+
+	potential = {
+		exists = owner
+		owner = { 
+			is_country_type = eternal_empire
+			is_gestalt = no
+			
+		}
+	}
+	
+	planet_modifier = {
+		
+	}
+
+	weight_modifier = {
+		base = 1
+	}
+}
+
+tw_eternal_ambrosia_focus = {
+	icon = 10
+
+	potential = {
+		exists = owner
+		owner = { 
+			is_country_type = eternal_empire
+			is_gestalt = no
+			
+		}
+	}
+	
+	planet_modifier = {
+		
+	}
+
+	weight_modifier = {
+		base = 1
+	}
+}

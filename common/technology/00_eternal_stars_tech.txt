@@ -1,0 +1,674 @@
+
+
+tech_ee_basics = {
+	area = physics
+	cost = 500000
+	cost_per_level = @repeatableTechLevelCost
+	tier = 5
+	is_rare = yes
+	category = { voidcraft }
+	levels = 1
+	weight = 70
+
+	potential = {
+		has_country_flag = aee_research
+		OR = {
+			has_technology = tech_dark_matter_deflector
+			has_technology = tech_dark_matter_propulsion
+			has_technology = tech_dark_matter_power_core
+		}
+		has_technology = tech_stellarite_reactor
+	}
+
+	modifier = {
+		country_energy_produces_mult = 0.05
+	}
+	
+	ai_weight = {
+		factor = 1.0
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOR = {
+				is_ai = no
+				has_country_flag = stellarite_project_success
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_curator"
+					has_level >= 10
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_spark_of_genius"
+					has_level >= 10
+				}	
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_scientist_erudite"
+					has_level >= 10
+				}	
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_scientist_chosen"
+					has_level >= 8
+				}				
+			}
+		}	
+		modifier = {
+			factor = 0
+			has_country_flag = stellarite_project_success
+			NOR = {
+				is_ai = no
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_curator"
+					has_level >= 8
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_spark_of_genius"
+					has_level >= 8
+				}	
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_scientist_erudite"
+					has_level >= 8
+				}		
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_scientist_psionic"
+					has_level >= 8
+				}		
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_scientist_chosen"
+					has_level >= 8
+				}			
+			}			
+		}
+	}
+
+	mod_weight_if_group_picked = {
+		#repeatable = 0.01
+	}
+}
+
+tech_ee_theory_cosmic_energy = {
+	area = physics
+	cost = 500000
+	cost_per_level = @repeatableTechLevelCost
+	tier = 5
+	is_rare = yes
+	category = { voidcraft }
+	levels = 1
+	weight = 70
+
+	potential = {
+		has_country_flag = aee_research
+		has_technology = tech_ee_basics
+	}
+
+	modifier = {
+		country_energy_produces_mult = 0.05
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOR = {
+				is_ai = no
+				has_country_flag = stellarite_project_success
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_spark_of_genius"
+					has_level >= 10
+				}	
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_scientist_erudite"
+					has_level >= 10
+				}	
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_scientist_chosen"
+					has_level >= 8
+				}				
+			}
+		}	
+		modifier = {
+			factor = 0
+			has_country_flag = stellarite_project_success
+			NOR = {
+				is_ai = no
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_curator"
+					has_level >= 8
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_spark_of_genius"
+					has_level >= 8
+				}	
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_scientist_erudite"
+					has_level >= 8
+				}		
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_scientist_psionic"
+					has_level >= 8
+				}		
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_scientist_chosen"
+					has_level >= 8
+				}			
+			}			
+		}
+	}
+	
+	ai_weight = {
+		factor = 1.0
+	}
+}
+
+
+tech_ee_storage = {
+	area = physics
+	cost = 180000
+	cost_per_level = @repeatableTechLevelCost
+	tier = 5
+	is_rare = yes
+	category = { voidcraft }
+	levels = 1
+	weight = 70
+
+	potential = {
+		has_country_flag = aee_research
+		has_technology = tech_ee_theory_cosmic_energy
+	}
+
+	modifier = {
+		country_resource_max_minerals_add = 100000
+		country_resource_max_energy_add = 100000
+		country_resource_max_food_add = 100000
+		country_resource_max_alloys_add = 100000
+		country_resource_max_consumer_goods_add = 100000
+	
+	}
+	
+	ai_weight = {
+		factor = 1.0
+	}
+
+	weight_groups = {
+		#repeatable
+	}
+	mod_weight_if_group_picked = {
+		#repeatable = 0.01
+	}
+}
+
+tech_ee_palace = {
+	area = society
+	cost = 180000
+	cost_per_level = @repeatableTechLevelCost
+	tier = 5
+	is_rare = yes
+	category = { statecraft }
+	levels = 1
+	weight = 70
+
+	potential = {
+		has_country_flag = aee_research
+		has_technology = tech_ee_dark_matter
+	}
+
+	modifier = {
+		
+	
+	}
+	
+	ai_weight = {
+		factor = 1.0
+	}
+
+	weight_groups = {
+		#repeatable
+	}
+	mod_weight_if_group_picked = {
+		#repeatable = 0.01
+	}
+}
+
+tech_ee_athen = {
+	area = society
+	cost = 180000
+	cost_per_level = @repeatableTechLevelCost
+	tier = 5
+	is_rare = yes
+	category = { statecraft }
+	levels = 1
+	weight = 70
+
+	potential = {
+		has_country_flag = aee_research
+		has_technology = tech_ee_dark_matter
+	}
+
+	modifier = {
+		
+	
+	}
+	
+	ai_weight = {
+		factor = 1.0
+	}
+
+	weight_groups = {
+		#repeatable
+	}
+	mod_weight_if_group_picked = {
+		#repeatable = 0.01
+	}
+}
+
+tech_ee_food = {
+	area = society
+	cost = 180000
+	cost_per_level = @repeatableTechLevelCost
+	tier = 5
+	is_rare = yes
+	category = { statecraft }
+	levels = 1
+	weight = 70
+
+	potential = {
+		has_country_flag = aee_research
+		has_technology = tech_ee_dark_matter
+	}
+
+	modifier = {
+		
+	
+	}
+	
+	ai_weight = {
+		factor = 1.0
+	}
+
+	weight_groups = {
+		#repeatable
+	}
+	mod_weight_if_group_picked = {
+		#repeatable = 0.01
+	}
+}
+
+tech_ee_robot = {
+	area = engineering
+	cost = 180000
+	cost_per_level = @repeatableTechLevelCost
+	tier = 5
+	is_rare = yes
+	category = { field_manipulation }
+	levels = 1
+	weight = 70
+
+	potential = {
+		has_country_flag = aee_research
+		has_technology = tech_ee_dark_matter
+	}
+
+	modifier = {
+		
+	
+	}
+	
+	ai_weight = {
+		factor = 1.0
+	}
+
+	weight_groups = {
+		#repeatable
+	}
+	mod_weight_if_group_picked = {
+		#repeatable = 0.01
+	}
+}
+
+tech_ee_dark_matter = {
+	area = physics
+	cost = 180000
+	cost_per_level = @repeatableTechLevelCost
+	tier = 5
+	is_rare = yes
+	category = { field_manipulation }
+	levels = 1
+	weight = 70
+
+	potential = {
+		has_country_flag = aee_research
+		has_technology = tech_ee_theory_cosmic_energy
+	}
+
+	modifier = {
+		
+	
+	}
+	
+	ai_weight = {
+		factor = 1.0
+	}
+
+	weight_groups = {
+		#repeatable
+	}
+	mod_weight_if_group_picked = {
+		#repeatable = 0.01
+	}
+}
+
+tech_ee_resource = {
+	area = physics
+	cost = 180000
+	cost_per_level = @repeatableTechLevelCost
+	tier = 5
+	is_rare = yes
+	category = { field_manipulation }
+	levels = 1
+	weight = 70
+
+	potential = {
+		has_country_flag = aee_research
+		has_technology = tech_ee_dark_matter
+	}
+
+	modifier = {
+		
+	
+	}
+	
+	ai_weight = {
+		factor = 1.0
+	}
+
+	weight_groups = {
+		#repeatable
+	}
+	mod_weight_if_group_picked = {
+		#repeatable = 0.01
+	}
+}
+
+tech_ee_rares = {
+	area = physics
+	cost = 180000
+	cost_per_level = @repeatableTechLevelCost
+	tier = 5
+	is_rare = yes
+	category = { field_manipulation }
+	levels = 1
+	weight = 70
+
+	potential = {
+		has_country_flag = aee_research
+		has_technology = tech_ee_dark_matter
+	}
+
+	modifier = {
+		
+	
+	}
+	
+	ai_weight = {
+		factor = 1.0
+	}
+
+	weight_groups = {
+		#repeatable
+	}
+	mod_weight_if_group_picked = {
+		#repeatable = 0.01
+	}
+}
+
+tech_ee_energy = {
+	area = physics
+	cost = 180000
+	cost_per_level = @repeatableTechLevelCost
+	tier = 5
+	is_rare = yes
+	category = { voidcraft }
+	levels = 1
+	weight = 70
+
+	potential = {
+		has_country_flag = aee_research
+		has_technology = tech_ee_dark_matter
+	}
+
+	modifier = {
+		
+	
+	}
+	
+	ai_weight = {
+		factor = 1.0
+	}
+
+	weight_groups = {
+		#repeatable
+	}
+	mod_weight_if_group_picked = {
+		#repeatable = 0.01
+	}
+}
+
+tech_ee_alloys = {
+	area = engineering
+	cost = 180000
+	cost_per_level = @repeatableTechLevelCost
+	tier = 5
+	is_rare = yes
+	category = { materials }
+	levels = 1
+	weight = 70
+
+	potential = {
+		has_country_flag = aee_research
+		has_technology = tech_ee_dark_matter
+	}
+
+	modifier = {
+		
+	
+	}
+	
+	ai_weight = {
+		factor = 1.0
+	}
+
+	weight_groups = {
+		#repeatable
+	}
+	mod_weight_if_group_picked = {
+		#repeatable = 0.01
+	}
+}
+
+tech_ee_archive = {
+	area = society
+	cost = 180000
+	cost_per_level = @repeatableTechLevelCost
+	tier = 5
+	is_rare = yes
+	category = { statecraft }
+	levels = 1
+	weight = 70
+
+	potential = {
+		has_country_flag = aee_research
+		has_technology = tech_ee_dark_matter
+	}
+
+	modifier = {
+		
+	
+	}
+	
+	ai_weight = {
+		factor = 1.0
+	}
+
+	weight_groups = {
+		#repeatable
+	}
+	mod_weight_if_group_picked = {
+		#repeatable = 0.01
+	}
+}
+
+
+tech_ee_academy = {
+	area = society
+	cost = 180000
+	cost_per_level = @repeatableTechLevelCost
+	tier = 5
+	is_rare = yes
+	category = { statecraft }
+	levels = 1
+	weight = 70
+
+	potential = {
+		has_country_flag = aee_research
+		has_technology = tech_ee_dark_matter
+	}
+
+	modifier = {
+		
+	
+	}
+	
+	ai_weight = {
+		factor = 1.0
+	}
+
+	weight_groups = {
+		#repeatable
+	}
+	mod_weight_if_group_picked = {
+		#repeatable = 0.01
+	}
+}
+
+tech_ee_dome = {
+	area = society
+	cost = 180000
+	cost_per_level = @repeatableTechLevelCost
+	tier = 5
+	is_rare = yes
+	category = { biology }
+	levels = 1
+	weight = 70
+
+	potential = {
+		has_country_flag = aee_research
+		has_technology = tech_ee_dark_matter
+	}
+
+	modifier = {
+		
+	
+	}
+	
+	ai_weight = {
+		factor = 1.0
+	}
+
+	weight_groups = {
+		#repeatable
+	}
+	mod_weight_if_group_picked = {
+		#repeatable = 0.01
+	}
+}
+
+
+tech_ee_fortress = {
+	area = society
+	cost = 180000
+	cost_per_level = @repeatableTechLevelCost
+	tier = 5
+	is_rare = yes
+	category = { biology }
+	levels = 1
+	weight = 70
+
+	potential = {
+		has_country_flag = aee_research
+		has_technology = tech_ee_dark_matter
+	}
+
+	modifier = {
+		
+	
+	}
+	
+	ai_weight = {
+		factor = 1.0
+	}
+
+	weight_groups = {
+		#repeatable
+	}
+	mod_weight_if_group_picked = {
+		#repeatable = 0.01
+	}
+}
+
+
+tech_ee_finish = {
+	area = society
+	cost = 180000
+	cost_per_level = @repeatableTechLevelCost
+	tier = 5
+	is_rare = yes
+	category = { biology }
+	levels = 1
+	weight = 70
+
+	potential = {
+		OR = { 
+			is_country_type = eternal_empire
+		}
+		has_country_flag = aee_research
+		has_technology = tech_ee_dark_matter
+	}
+
+	modifier = {
+		job_tw_hedonist_per_pop = 0.2
+
+		job_twoverseer_per_pop = 0.1
+	
+	}
+	
+	ai_weight = {
+		factor = 1.0
+	}
+
+	weight_groups = {
+		#repeatable
+	}
+	mod_weight_if_group_picked = {
+		#repeatable = 0.01
+	}
+}

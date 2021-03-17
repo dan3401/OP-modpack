@@ -1,0 +1,572 @@
+control = {
+	pop_growth_speed = -1000.0
+}
+
+teleiopolis = {
+	planet_orbital_bombardment_damage = -1.0
+	planet_amenities_add = 200
+	building_time_mult = -0.5
+	icon = "gfx/interface/icons/planet_modifiers/teleiopolis.dds"
+	
+}
+
+ee_society_development = {
+	name = "Societal Adaption"
+	icon = "gfx/interface/icons/modifiers/stagnant.dds"
+	icon_frame = 1
+	country_unity_produces_mult = -0.75
+}
+
+ee_society_transofmration = {
+	name = "Societal Transformation"
+	icon = "gfx/interface/icons/modifiers/stagnant.dds"
+	icon_frame = 1
+	all_technology_research_speed = 0.5
+	trade_value_mult = -0.75
+	damage_vs_country_type_ascended_empire_mult = 0.25
+	damage_vs_country_type_default_mult = 0.25
+	damage_vs_country_type_eternal_empire_mult = 0.25
+	damage_vs_country_type_original_empire_mult = 0.25
+}
+
+
+kosmopolis = {
+	planet_orbital_bombardment_damage = -10.0
+	planet_amenities_add = 200
+	building_time_mult = -0.7
+
+	icon = "gfx/interface/icons/planet_modifiers/kosmopolis.dds"
+
+}
+ancient_administration = {
+	
+	icon = "gfx/interface/icons/planet_modifiers/teleiopolis.dds"
+	
+}
+
+eternal = {
+	icon = "gfx/interface/icons/modifiers/stagnant.dds"
+	icon_frame = 1
+	country_naval_cap_add = 500
+}
+
+no_pop = {
+	pop_growth_speed = -100.0
+	planet_pop_assembly_mult = -100.0
+
+}
+againstoe = {
+	name = "Enemies of the Original Empire"
+	damage_vs_country_type_original_empire_mult = 0.5
+}
+withoe = {
+	name = "Friends of the Original Empire"
+	country_base_energy_produces_add = 5000
+	country_base_minerals_produces_add = 5000
+	country_base_virtue_produces_add = 1000
+}
+fe_gatekeepers = {
+	damage_vs_country_type_original_empire_mult = 2.5
+	ship_shield_add = 25000
+	ship_hull_add =  75000
+	ship_armor_add = 25000
+	planet_pops_eternium_produces_mult = 1.0
+	country_base_volatile_motes_produces_add = 10000
+	country_base_rare_crystals_produces_add = 10000
+	country_base_sr_zro_produces_add = 10000
+	country_base_sr_living_metal_produces_add = 10000
+	country_base_exotic_gases_produces_add = 10000
+	country_base_acot_sr_dark_energy_produces_add = 100000
+	country_base_acot_sr_stellarite_produces_add = 100000
+	country_base_energy_produces_add = 500000
+	country_base_eternium_produces_add = 5000
+	country_base_minerals_produces_add = 10000
+	country_base_consumer_goods_produces_add = 50000
+	country_base_alloys_goods_produces_add = 10000
+	country_base_acot_sr_light_matter_produces_add = 10000
+	country_base_food_produces_add = 10000
+	country_base_virtue_produces_add = 10000
+	country_base_ambrosia_produces_add = 10000
+	country_base_ancient_knowldege_produces_add = 50000
+	country_base_nanites_produces_add = 1000
+	country_base_unity_produces_add = 50000
+	country_base_ancient_knowledge_produces_add = 20000
+	country_base_sr_dark_matter_produces_add = 50000
+	planet_amenities_add = 5000
+	planet_housing_add = 2000
+	country_naval_cap_add = 1000
+
+}
+
+eepsionic  = {
+	planet_pops_eternium_produces_mult = 0.5
+}
+
+unleashed_potential = {
+	icon = "gfx/interface/icons/modifiers/unleashed_potential.dds"
+	pop_happiness = 0.5
+	spaceport_ship_build_time_mult = -0.5
+	planet_jobs_produce_mult = 0.5
+	ship_shield_mult = 0.5
+	ship_armor_mult = 0.5
+	ship_weapon_damage = 0.5
+	leader_exp_gain = 10
+	planet_pops_organics_food_upkeep_mult = -0.5
+	planet_pops_organics_consumer_goods_upkeep_mult = -0.5
+	planet_pops_organics_energy_upkeep_mult = -0.5
+	planet_pops_organics_nanites_upkeep_mult = -0.5
+}
+
+synthipaths = { 
+	name = "Synthesis of Both Paths"
+	icon = "gfx/interface/icons/modifiers/stagnant.dds"
+	planet_pops_organics_food_upkeep_mult = 1.5
+	planet_pops_organics_consumer_goods_upkeep_mult = 1.5
+	planet_pops_organics_energy_upkeep_mult = 1.5
+	planet_pops_organics_nanites_upkeep_mult = 1.5
+	planet_jobs_produce_mult = -0.5
+	pop_happiness = -0.5
+}
+
+immortal = {
+	name = "Immortal"
+	icon_frame = 1
+	icon = "gfx/interface/icons/modifiers/stagnant.dds"
+
+		pop_growth_speed = -55.00
+		ship_upkeep_mult = -10.0
+		starbase_building_build_time_mult = -0.9
+		pop_happiness = 0.5
+
+		starbase_upgrade_time_mult = -10
+		starbase_defense_platform_capacity_add = 8
+		shipclass_military_station_damage_mult = 5.0
+		shipclass_military_station_hull_mult = 2.0
+		country_starbase_capacity_add = 10
+		colony_start_num_pops_add = -20
+
+		starbase_defense_platform_capacity_add = 50
+		country_starbase_capacity_add = 10
+		shipclass_starbase_damage_mult = 0.50
+		ship_shield_add = 25000
+		ship_hull_add =  75000
+		ship_armor_add = 25000
+		planet_pops_eternium_produces_mult = 1.0
+		country_base_volatile_motes_produces_add = 10000
+		country_base_rare_crystals_produces_add = 10000
+		country_base_sr_zro_produces_add = 10000
+		country_base_sr_living_metal_produces_add = 10000
+		country_base_exotic_gases_produces_add = 10000
+		country_base_acot_sr_dark_energy_produces_add = 100000
+		country_base_acot_sr_stellarite_produces_add = 100000
+		country_base_energy_produces_add = 500000
+		country_base_eternium_produces_add = 5000
+		country_base_minerals_produces_add = 10000
+		country_base_consumer_goods_produces_add = 50000
+		country_base_alloys_goods_produces_add = 10000
+		country_base_acot_sr_light_matter_produces_add = 10000
+		country_base_food_produces_add = 10000
+		country_base_virtue_produces_add = 10000
+		country_base_ambrosia_produces_add = 10000
+		country_base_ancient_knowldege_produces_add = 5000
+		country_base_nanites_produces_add = 1000
+		country_base_unity_produces_add = 50000
+		country_base_ancient_knowledge_produces_add = 2000
+		country_base_sr_dark_matter_produces_add = 5000
+		planet_amenities_add = 500
+		planet_housing_add = 200
+		country_naval_cap_add = -5000
+		ship_size_battleship_cost_mult = -1
+		spaceport_ship_build_cost_mult = -1
+		ship_size_destroyer_cost_mult = -1
+		shipsize_battleship_build_speed_mult = 10
+		shipsize_destroyer_build_speed_mult = 10
+		
+
+	
+}
+
+
+stagnant_tech = { 
+	name = "Halted Progress"
+	icon = "gfx/interface/icons/modifiers/stagnant.dds"
+	all_technology_research_speed = -30.0
+
+
+} 
+
+first_years_fallen = { # Years long buff to quick start
+	name = "Starting Buff!"
+	icon_frame = 1
+	icon = "gfx/interface/icons/modifiers/stagnant.dds"
+	# "Buffs"
+	building_time_mult = -3.0
+	planet_colony_development_speed_mult = 100
+}
+
+protected_primtives = {
+	army_damage_mult = 10000
+}
+
+first_years_fe = { # Years long buff to quick start
+	name = "Fallen Empire Starting Buff!"
+	icon_frame = 1
+	icon = "gfx/interface/icons/modifiers/stagnant.dds"
+	# "Buffs"
+	
+		#Pop-Modifiers
+
+		planet_colony_development_speed_mult = 10
+		shipsize_colonizer_build_cost_mult = -1500.0
+		country_starbase_influence_cost_mult = -1500.0
+		pop_growth_req_mult = -201.00
+		pop_migration_time = -0.99
+		pop_resettlement_cost_mult = -0.99
+		
+		starbase_building_build_time_mult = -1000.0
+		starbase_upgrade_time_mult = -1000.0
+		
+
+		#Leaders-Modifiers
+		leader_influence_cost = -1.0
+		species_leader_exp_gain = 1.0
+		
+		#Contruction Modifiers
+		building_time_mult = -1.0
+
+		#Spaceport Modifiers
+		spaceport_ship_build_time_mult = -1.0
+		spaceport_ship_build_cost_mult = -1.0
+		spaceport_module_cost_mult = -1.0
+		
+		
+		# Fleet Modifiers
+		ship_upkeep_mult = -0.99
+		ship_emergency_ftl_mult = -0.99
+		ship_reparation_speed_mult = 10
+		ship_auto_repair_add = 10
+		ship_sensor_range_mult = 0.25
+		damage_vs_country_type_amoeba_mult = 0.99
+		damage_vs_country_type_crystal_mult = 0.99
+		damage_vs_country_type_drone_mult = 0.99
+		damage_vs_country_type_cloud_mult = 0.99
+		damage_vs_country_type_swarm_mult = 0.99
+}
+
+secret_fe = { 
+	name = "Lowered Upkeep"
+	icon_frame = 1
+	icon = "gfx/interface/icons/modifiers/stagnant.dds"
+		
+		# Fleet Modifiers
+		ship_upkeep_mult = -0.75
+		
+}
+
+building = {
+		
+	planet_building_cost_mult = -1.0
+
+
+}
+
+tw_time = {
+	name = "Mysterious Time Phenomenas"
+		
+		building_time_mult = -0.8
+		planet_ship_build_speed_mult = 1.0
+		planet_army_build_speed_mult = 1.0
+		all_technology_research_speed = 3.0
+		pop_growth_speed = 1.90
+		planet_colony_development_speed_mult = 3
+		planet_clear_blocker_time_mult = -0.99
+		ship_reparation_speed_mult = 3
+		country_resource_influence_add = 3
+		ship_upkeep_mult = -0.99
+
+		planet_building_cost_mult = -0.99
+		science_ship_survey_speed = 1.0
+		ship_anomaly_research_speed_mult = 1.0
+}
+
+
+all_years_fe = { # Years long buff to quick start
+	name = "Fallen Empire Conditions"
+	icon_frame = 1
+	icon = "gfx/interface/icons/modifiers/stagnant.dds"
+	# "Buffs"
+		starbase_building_build_time_mult = 1000.0
+		
+
+		leader_skill_levels = 3
+		trait_points = 2
+		ship_upkeep_mult = -0.99
+		country_starbase_influence_cost_mult = 1500.0
+		
+}
+
+tw_difficulty_hard = {
+	name = "Ancient Knowledge"
+	# "Buffs"
+	
+		ship_upkeep_mult = -0.20
+		pop_growth_req_mult = -0.20
+		planet_ship_build_speed_mult = 0.20
+		building_time_mult = -0.2
+		planet_building_cost_mult = -0.20
+		planet_clear_blocker_time_mult = -0.20
+		country_resource_influence_add = 1
+		tile_resource_energy_mult = 0.2
+		tile_resource_minerals_mult = 0.2
+		planet_colony_development_speed_mult = 0.2
+		pop_growth_speed = 0.25
+		ship_shield_hp_mult = 0.5
+		ship_armor_mult = 0.5
+		ship_hitpoints_mult = 0.5
+}
+
+
+tw_difficulty_super_hard = {
+	name = "Ancient Traditions"
+	# "Buffs"
+	
+		ship_upkeep_mult = -0.40
+		pop_growth_req_mult = -0.40
+		planet_ship_build_speed_mult = 0.20
+		building_time_mult = -0.4
+		planet_building_cost_mult = -0.40
+		planet_clear_blocker_time_mult = -0.40
+		country_resource_influence_add = 2
+		tile_resource_energy_mult = 0.4
+		tile_resource_minerals_mult = 0.4
+		planet_colony_development_speed_mult = 0.4
+		pop_growth_speed = 0.5
+		ship_shield_hp_mult = 1.0
+		ship_armor_mult = 1.0
+		ship_evasion_add = 10
+		ship_hitpoints_mult = 1.0
+}	
+
+
+tw_diifculty_death_garantuee = {
+	name = "Ancient Principles"
+	# "Buffs"
+	
+		ship_upkeep_mult = -0.60
+		pop_growth_req_mult = -0.60
+		planet_ship_build_speed_mult = 0.20
+		building_time_mult = -0.6
+		planet_building_cost_mult = -0.60
+		planet_clear_blocker_time_mult = -0.60
+		country_resource_influence_add = 3
+		tile_resource_energy_mult = 0.6
+		tile_resource_minerals_mult = 0.6
+		planet_colony_development_speed_mult = 0.6
+		pop_growth_speed = 0.75
+		spaceport_ship_build_cost_mult = -0.5
+		ship_shield_hp_mult = 1.5
+		ship_armor_mult = 1.5
+		ship_evasion_add = 10
+		ship_hitpoints_mult = 1.5
+}
+
+accepted_protocols = {
+	name = "Accepted Ancient Protcols"
+	pop_happiness = 0.25
+	leader_exp_gain = 0.40
+	
+	icon_frame = 1;
+	icon = "gfx/interface/icons/modifiers/mod_pop_happiness.dds"
+}
+
+refused_protocols = {
+	name = "Refused Ancient Protcols"
+	pop_happiness = -0.25
+	leader_exp_gain = -0.40
+
+	
+	icon_frame = 1;
+	icon = "gfx/interface/icons/modifiers/mod_country_insult_efficiency.dds"
+}
+
+kok = {
+	name = "Keepers of Knowledge"
+	
+	icon_frame = 1;
+	icon = "gfx/interface/icons/modifiers/kok.dds"
+}
+
+wr = {
+	name = "Watchful Regulators"
+	
+	icon_frame = 1;
+	icon = "gfx/interface/icons/modifiers/wr.dds"
+}
+
+hg = {
+	name = "Holy Guardians"
+	
+	icon_frame = 1;
+	icon = "gfx/interface/icons/modifiers/hg.dds"
+}
+
+
+de = {
+	name = "Doctrinal Enforcers"
+	
+	icon_frame = 1;
+	icon = "gfx/interface/icons/modifiers/de.dds"
+}
+
+
+mi = {
+	name = "Militant Isolationist"
+	
+	icon_frame = 1;
+	icon = "gfx/interface/icons/modifiers/mi.dds"
+}
+
+jr = {
+	name = "Jingoistic Reclaimers"
+	
+	icon_frame = 1;
+	icon = "gfx/interface/icons/modifiers/jr.dds"
+}
+
+eo = {
+	name = "Engimatic Observers"
+	
+	icon_frame = 1;
+	icon = "gfx/interface/icons/modifiers/eo.dds"
+}
+
+bi = {
+	name = "Benevolent Interventionalists"
+	
+	icon_frame = 1;
+	icon = "gfx/interface/icons/modifiers/bi.dds"
+}
+
+hd = {
+	name = "Honorbound Dominators"
+	
+	icon_frame = 1;
+	icon = "gfx/interface/icons/modifiers/hd.dds"
+}
+
+cr = {
+	name = "Chauvinistic Reclaimers"
+	
+	icon_frame = 1;
+	icon = "gfx/interface/icons/modifiers/cr.dds"
+}
+
+benp = {
+	name = "Benevolent Peacekeepers"
+	
+	icon_frame = 1;
+	icon = "gfx/interface/icons/modifiers/bp.dds"
+}
+
+pi = {
+	name = "Peacemaking Imperialists"
+	
+	icon_frame = 1;
+	icon = "gfx/interface/icons/modifiers/pi.dds"
+}
+
+cuma = {
+	name = "Ancient Caretakers"
+	
+	icon_frame = 1;
+	icon = "gfx/interface/icons/modifiers/cuma.dds"
+}
+
+fdpr = {
+	name = "Galactic Custodians"
+	
+	icon_frame = 1;
+	icon = "gfx/interface/icons/modifiers/fdpr.dds"
+}
+
+macu = {
+	name = "Rampaging Machines"
+	
+	icon_frame = 1;
+	icon = "gfx/interface/icons/modifiers/macu.dds"
+}
+
+
+
+virtue_deficit = {
+    pop_happiness = -2
+    ship_weapon_damage = -1.75
+}
+
+ambrosia_deficit = {
+    pop_happiness = -1.0
+}
+
+ancient_knowledge_deficit = {
+	all_technology_research_speed = -30
+	pop_happiness = -1.0 
+}
+
+eternium_deficit = {
+    planet_jobs_minerals_produces_mult = -0.5
+	ship_weapon_damage = -0.80
+	army_damage_mult = -0.80
+	ship_shield_mult = -0.80
+}
+
+voidmatter_deficit = {
+    ship_weapon_damage = -1.75
+	army_damage_mult = -1.75
+	ship_shield_mult = -1.75
+}
+
+nanites_deficit = {
+      pop_happiness = -1.0
+}
+
+dark_matter_deficit = {
+    planet_jobs_produce_mult = -1
+    ship_weapon_damage = -0.5
+}
+
+
+eternium_buff_1 = {
+    planet_jobs_minerals_produces_mult = 0.2
+	ship_weapon_damage = 0.2
+	army_damage_mult = 0.2
+	ship_shield_mult = 0.2
+    
+}
+
+eternium_buff_2 = {
+    planet_jobs_minerals_produces_mult = 0.4
+	ship_weapon_damage = 0.4
+	army_damage_mult = 0.4
+	ship_shield_mult = 0.4
+}
+
+eternium_buff_3 = {
+    planet_jobs_minerals_produces_mult = 0.8
+	ship_weapon_damage = 0.8
+	army_damage_mult = 0.8
+	ship_shield_mult = 0.8
+}
+
+eternium_buff_4 = {
+    planet_jobs_minerals_produces_mult = 1.6
+	ship_weapon_damage = 1.6
+	army_damage_mult = 1.6
+	ship_shield_mult = 1.6
+}
+
+eternium_buff_5 = {
+    planet_jobs_minerals_produces_mult = 3.2
+	ship_weapon_damage = 3.2
+	army_damage_mult = 3.2
+	ship_shield_mult = 3.2
+}

@@ -1,0 +1,21 @@
+
+on_destroy_planet_with_EE_PLANETKILLER_GAIA = {
+	events = {
+		ee_planet_destruction.200
+	}
+}
+
+on_destroy_planet_with_EE_PLANETKILLER_BARREN = {
+	events = {
+		ee_planet_destruction.300
+	}
+}
+
+
+
+on_ship_disabled = {
+	events = {
+		knotw_ships.1
+		knotw_ships.3
+	}
+}

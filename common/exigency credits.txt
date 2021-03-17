@@ -1,0 +1,6 @@
+- Alfray Stryke for helping me with Psionic Heritage, my first ever civic
+- Svafa for the neutral trait colour scheme (it looks a hell of a lot better than the yellow ones used to) : https://steamcommunity.com/sharedfiles/filedetails/?id=683175110
+- Bombardobado for letting me reverse-engineer his game start events and policies
+- Deagroth for compiling a list of 2.2 changes and making my job way easier
+- Red-Eyed_Fairace for guiding me through 2.2's changes to secondary species spawning
+- Everyone else who contributed ideas or their time and suffered through all the bugs

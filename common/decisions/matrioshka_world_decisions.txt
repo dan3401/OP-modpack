@@ -1,0 +1,55 @@
+decision_matrioshka_world = {
+	owned_planets_only = yes
+	sound = event_construction_03
+	icon = decision_matrioshka_world
+
+	resources = {
+		category = decisions
+		cost = {
+			energy = @matrioshka_world_energy_cost
+			alloys = @matrioshka_world_alloy_cost
+			minerals = @matrioshka_world_mineral_cost
+		}
+	}
+
+	prerequisites = {
+		tech_matrioshka_world
+	}
+
+	potential = {
+		habitable_structure = no
+		owner = {
+			has_ascension_perk = ap_mastery_of_nature
+		}
+	}
+
+	allow = {
+        NOT = {
+            has_modifier = pm_matrioshka_world_construction
+        }
+	}
+
+	effect = {
+
+		custom_tooltip = matrioshka_world_decision_tooltip
+
+		hidden_effect = {
+			change_variable = { which = matrioshka_world_sphere_count value = 1 }
+			planet_event = {
+				id = MatrioshkaWorld.1
+            }
+#			add_modifier = {
+#				modifier = "pm_matrioshka_world_construction"
+#				days = @matrioshka_world_build_time
+#			}
+		}
+	}
+
+	ai_weight = {
+		weight = @matrioshka_world_ai_weight
+		modifier = {
+			factor = 0.1
+			free_district_slots > 0
+		}
+	}
+}

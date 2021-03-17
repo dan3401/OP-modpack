@@ -1,0 +1,51 @@
+
+r_supercomputer = {
+	activation_duration = 3600
+	portrait = "GFX_relic_supercomputer"
+	sound = "relic_activation_the_omnicodex"
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			energy = 5000
+		}
+	}
+	
+	ai_weight = {
+		weight = 100
+	}
+	
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		pop_ethic_materialist_attraction_mult = 0.30
+		country_admin_cap_add = 20
+		planet_stability_add = 3
+	}
+
+	score = 0 #you start with him, shouldn't contribute to victory points
+
+	active_effect = {
+		add_modifier = {
+			modifier = "sapient_intervention_relic" 
+			days = 3600 #@triumph_duration
+		}
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown" 
+				days = 3600
+			}		
+		}
+	}
+
+	# Possible check for activation
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_relic_no_cooldown"
+			NOT = { has_modifier = relic_activation_cooldown }
+		}
+	}
+}

@@ -1,0 +1,11 @@
+on_monthly_pulse = {
+	events = {
+		action.64						# vanila action.64 in on_yearly_pulse
+	}
+}
+
+on_monthly_pulse_country = {
+	events = {
+		tahabykerhusaction.2			# Remove Debuff Modifier
+	}
+}

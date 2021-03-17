@@ -1,0 +1,323 @@
+#Regular Housing Techs
+tech_paradise_dome = {
+	cost = @tier3cost1
+	area = society
+	category = { statecraft }
+	tier = 3
+	prerequisites = { "tech_housing_2" }
+	weight = @tier3weight1
+
+	potential = {
+		OR = {
+			is_gestalt = no
+			has_valid_civic = civic_machine_servitor
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOR = {
+				has_technology = tech_mine_rare_crystals
+				has_technology = tech_rare_crystals
+				has_country_flag = has_market_access
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_statecraft"
+			}
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_statecraft"
+			}
+		}
+	}
+}
+
+ebh_tech_paradise_dome = {
+	cost = @tier4cost1
+	area = society
+	category = { statecraft }
+	tier = 3
+	prerequisites = { "tech_paradise_dome" }
+	weight = @tier4weight1
+
+	potential = {
+		OR = {
+			is_gestalt = no
+			has_valid_civic = civic_machine_servitor
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOR = {
+				has_technology = tech_mine_rare_crystals
+				has_technology = tech_rare_crystals
+				has_country_flag = has_market_access
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_statecraft"
+			}
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_statecraft"
+			}
+		}
+	}
+}
+
+#Hive Housing Techs
+ebh_hive_housing_1 = {
+	cost = @tier3cost1
+	area = engineering
+	category = { industry }
+	tier = 3
+	prerequisites = { "tech_housing_2" }
+	weight = @tier3weight1
+	icon = tech_housing_1
+
+	potential = {
+		is_hive_empire = yes
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOR = {
+				has_technology = tech_mine_rare_crystals
+				has_technology = tech_rare_crystals
+				has_country_flag = has_market_access
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_statecraft"
+			}
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_statecraft"
+			}
+		}
+	}
+}
+
+ebh_hive_housing_2 = {
+	cost = @tier4cost1
+	area = engineering
+	category = { industry }
+	tier = 3
+	prerequisites = { "ebh_hive_housing_1" }
+	weight = @tier4weight1
+	icon = tech_housing_2
+
+	potential = {
+		is_hive_empire = yes
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOR = {
+				has_technology = tech_mine_rare_crystals
+				has_technology = tech_rare_crystals
+				has_country_flag = has_market_access
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_statecraft"
+			}
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_statecraft"
+			}
+		}
+	}
+}
+
+#Machine Housing Techs
+ebh_machine_housing_1 = {
+	cost = @tier3cost1
+	area = engineering
+	category = { industry }
+	tier = 3
+	prerequisites = { "tech_housing_2" }
+	weight = @tier3weight1
+	icon = tech_self_assembling_components
+
+	potential = {
+		has_authority = auth_machine_intelligence
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOR = {
+				has_technology = tech_mine_rare_crystals
+				has_technology = tech_rare_crystals
+				has_country_flag = has_market_access
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_statecraft"
+			}
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_statecraft"
+			}
+		}
+	}
+}
+
+ebh_machine_housing_2 = {
+	cost = @tier4cost1
+	area = engineering
+	category = { industry }
+	tier = 3
+	prerequisites = { "ebh_machine_housing_1" }
+	weight = @tier4weight1
+	icon = tech_self_assembling_components
+
+	potential = {
+		has_authority = auth_machine_intelligence
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOR = {
+				has_technology = tech_mine_rare_crystals
+				has_technology = tech_rare_crystals
+				has_country_flag = has_market_access
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_statecraft"
+			}
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_statecraft"
+			}
+		}
+	}
+}
+
+#Luxury Housing
+#Dense Housing
+#Hyper Dense Housing
+ebh_dense_housing = {
+	cost = @tier4cost1
+	area = physics
+	tier = 4
+	category = { field_manipulation }
+	prerequisites = { "tech_mine_dark_matter" }
+	weight = @tier4weight1
+	icon = tech_mine_dark_matter
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.5
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 1
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+ebh_dense_housing_2 = {
+	cost = @tier4cost1
+	area = physics
+	tier = 4
+	category = { field_manipulation }
+	prerequisites = { "ebh_dense_housing" }
+	weight = @tier4weight1
+	icon = tech_mine_dark_matter
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.5
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 1
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}

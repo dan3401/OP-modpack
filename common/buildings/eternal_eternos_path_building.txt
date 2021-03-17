@@ -1,0 +1,610 @@
+building_gardens_meditation = {
+	base_buildtime = 10
+
+	can_be_ruined = no
+	can_be_disabled = no
+
+	
+	category = government	
+
+		
+	potential = {
+		exists = owner
+		owner = { has_technology = "tech_eternos_insights" }
+		
+	}	
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			virtue = 1000
+			eternium = 10
+		}
+		produces = {
+			
+		}
+		upkeep = {
+			unity = 10
+			virtue = 50
+		}
+	}
+
+	planet_modifier = {
+		planet_jobs_unity_produces_add = 0.2
+		planet_amenities_add = 50
+	}
+	
+	prerequisites = {
+		"tech_eternos_insights"
+	}
+		
+	upgrades = {
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 5
+			owner = { 
+				has_monthly_income = {
+					resource = consumer_goods 
+					value < 10
+				}
+			}
+		}
+	}
+
+	ai_resource_production = {
+		consumer_goods  = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+
+
+building_temple_ascendance = {
+	base_buildtime = 10
+
+	can_be_ruined = no
+	can_be_disabled = no
+
+	
+	category = government	
+
+		
+	potential = {
+		exists = owner
+		owner = { has_technology = "tech_eternos_insights" }
+	}	
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1000
+		}
+		produces = {
+			physics_research = 500
+			society_research = 500
+			engineering_research = 500
+		}
+		upkeep = {
+			unity = 100
+		}
+	}
+	
+	prerequisites = {
+		"tech_eternos_insights"
+	}
+		
+	upgrades = {
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 5
+			owner = { 
+				has_monthly_income = {
+					resource = consumer_goods 
+					value < 10
+				}
+			}
+		}
+	}
+
+	ai_resource_production = {
+		consumer_goods  = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+building_lightforge_ee = {
+	base_buildtime = 10
+
+	can_be_ruined = no
+	can_be_disabled = no
+
+	
+	category = government	
+
+		
+	potential = {
+		exists = owner
+		owner = { has_technology = "tech_eternos_insights" }
+	}	
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1000
+		}
+		produces = {
+			acot_sr_stellarite = 20
+			ambrosia = 20
+		}
+		upkeep = {
+			unity = 100
+		}
+	}
+
+	planet_modifier = {
+		job_twlightweaver_add = 5
+	}
+	
+	prerequisites = {
+		"tech_eternos_insights"
+	}
+		
+	upgrades = {
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 5
+			owner = { 
+				has_monthly_income = {
+					resource = consumer_goods 
+					value < 10
+				}
+			}
+		}
+	}
+
+	ai_resource_production = {
+		consumer_goods  = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+
+building_ee_psionic_assembly = {
+	base_buildtime = 10
+
+	can_be_ruined = no
+	can_be_disabled = no
+
+	base_cap_amount = 1
+	
+	category = government	
+
+		
+	potential = {
+		exists = owner
+		owner = { has_technology = "tech_eternos_insights" }
+	}	
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			unity = 1000
+		}
+		produces = {
+			unity = 500
+			
+		}
+		upkeep = {
+			virtue = 10
+		}
+	}
+
+	planet_modifier = {
+		pop_amenities_usage_mult = -0.5
+	}
+	
+	prerequisites = {
+		"tech_eternos_insights"
+	}
+		
+	upgrades = {
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 5
+			owner = { 
+				has_monthly_income = {
+					resource = consumer_goods 
+					value < 10
+				}
+			}
+		}
+	}
+
+	ai_resource_production = {
+		consumer_goods  = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+
+building_ee_eternos_energy = {
+	base_buildtime = 10
+
+	can_be_ruined = no
+	can_be_disabled = no
+
+	
+	category = government	
+
+		
+	potential = {
+		exists = owner
+		owner = { has_technology = "tech_eternos_insights" }
+	}	
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			unity = 1000
+		}
+		produces = {
+			energy = 3000
+		}
+		upkeep = {
+			unity = 10
+		}
+	}
+
+	prerequisites = {
+		"tech_eternos_insights"
+	}
+		
+	upgrades = {
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 5
+			owner = { 
+				has_monthly_income = {
+					resource = consumer_goods 
+					value < 10
+				}
+			}
+		}
+	}
+
+	ai_resource_production = {
+		consumer_goods  = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+building_ee_eternos_minerals = {
+	base_buildtime = 10
+
+	can_be_ruined = no
+	can_be_disabled = no
+
+	category = government	
+
+		
+	potential = {
+		exists = owner
+		owner = { has_technology = "tech_eternos_insights" }
+	}	
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			unity = 1000
+		}
+		produces = {
+			minerals = 3000
+		}
+		upkeep = {
+			unity = 10
+		}
+	}
+
+	triggered_planet_modifier = {
+		modifier = {
+			
+		}
+	}
+	
+	prerequisites = {
+		"tech_eternos_insights"
+	}
+		
+	upgrades = {
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 5
+			owner = { 
+				has_monthly_income = {
+					resource = consumer_goods 
+					value < 10
+				}
+			}
+		}
+	}
+
+	ai_resource_production = {
+		consumer_goods  = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+buiilding_ee_eternos_nexus = {
+	base_buildtime = 10
+
+	can_be_ruined = no
+	can_be_disabled = no
+	base_cap_amount = 1
+
+	
+	category = government	
+
+		
+	potential = {
+		exists = owner
+		owner = { has_technology = "tech_eternos_insights" }
+	}	
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			virtue = 10000
+			unity = 100000
+		}
+		produces = {
+			eternium = 2
+		}
+		upkeep = {
+			unity = 10
+		}
+	}
+
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+		}
+		modifier = {
+			job_twpsiomancer_add = 3
+		}
+	}
+	
+	prerequisites = {
+		"tech_eternos_insights"
+	}
+		
+	upgrades = {
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 5
+			owner = { 
+				has_monthly_income = {
+					resource = consumer_goods 
+					value < 10
+				}
+			}
+		}
+	}
+
+	ai_resource_production = {
+		consumer_goods  = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+building_ee_city_psionic_city = {
+	base_buildtime = 10
+
+	can_be_ruined = no
+	can_be_disabled = no
+
+	category = government	
+
+		
+	potential = {
+		exists = owner
+		owner = { has_technology = "tech_eternos_insights" }
+	}	
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			unity = 1000
+		}
+		produces = {
+			unity = 5
+		}
+		upkeep = {
+			virtue = 10
+		}
+	}
+
+
+	planet_modifier = {
+			planet_housing_add = 50
+	}
+	
+	
+	prerequisites = {
+		"tech_eternos_insights"
+	}
+		
+	upgrades = {
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 5
+			owner = { 
+				has_monthly_income = {
+					resource = consumer_goods 
+					value < 10
+				}
+			}
+		}
+	}
+
+	ai_resource_production = {
+		consumer_goods  = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+
+building_temple_of_eternos = {
+	base_buildtime = 10
+
+	can_be_ruined = no
+	can_be_disabled = no
+
+	category = government	
+
+		
+	potential = {
+		exists = owner
+		owner = { has_technology = "tech_eternos_insights" }
+	}	
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			unity = 1000
+		}
+		produces = {
+			unity = 5000
+		}
+		upkeep = {
+			minerals = 75000
+			energy = 25000
+		}
+	}
+
+
+
+	prerequisites = {
+		"tech_eternos_insights"
+	}
+		
+	upgrades = {
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 5
+			owner = { 
+				has_monthly_income = {
+					resource = consumer_goods 
+					value < 10
+				}
+			}
+		}
+	}
+
+	ai_resource_production = {
+		consumer_goods  = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+building_temple_of_chirus = {
+	base_buildtime = 10
+
+	can_be_ruined = no
+	can_be_disabled = no
+
+	category = government	
+
+		
+	potential = {
+		exists = owner
+		owner = { has_technology = "tech_eternos_insights" }
+	}	
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			unity = 1000
+		}
+		produces = {
+			ambrosia = 1000
+		}
+		upkeep = {
+			minerals = 12500
+			energy = 2500
+		}
+	}
+
+	
+	prerequisites = {
+		"tech_eternos_insights"
+	}
+		
+	upgrades = {
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 5
+			owner = { 
+				has_monthly_income = {
+					resource = consumer_goods 
+					value < 10
+				}
+			}
+		}
+	}
+
+	ai_resource_production = {
+		consumer_goods  = 1
+		trigger = {
+			always = yes
+		}
+	}
+}

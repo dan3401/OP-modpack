@@ -1,0 +1,983 @@
+#####################
+# Primitive buildings
+#####################
+
+building_eternal_palace = {
+	base_buildtime = 480
+	capital = yes
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+
+	planetary_ftl_inhibitor = yes
+	category = government
+	
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+			has_technology = "tech_fallenw" 
+			has_technology = "tech_ee_palace"
+			}
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 20
+		planet_amenities_add = 20
+	}
+
+	army_modifier = {
+		army_defense_morale_mult = 1.5
+		army_defense_health_mult = 1.5	
+		army_defense_damage_mult = 1.5
+		army_starting_experience_add = 10000
+	}
+
+	country_modifier = {
+		
+		starbase_shipyard_build_speed_mult = 0.10
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_fallen_empire_spiritualist = no }
+		}
+		modifier = {
+			job_tw_aisymneter_add = 3
+			job_twkeeper_add = 5
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		upkeep = {
+			energy = 10
+		}
+	}
+	
+	
+	prerequisites = {
+		"tech_ee_palace"
+	}
+	
+	
+	upgrades = {
+	}
+	
+	ai_weight = {
+		weight = 100
+	}	
+}
+
+building_eternal_consumer = {
+	base_buildtime = 480
+	can_be_ruined = no
+	can_demolish = yes
+	
+	category = government	
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+			has_technology = "tech_fallenw" 
+			has_technology = "tech_ee_consumer"
+			}
+		}
+	}	
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1000
+			ambrosia = 10
+		}
+		produces = {
+			consumer_goods = 120
+		}
+		upkeep = {
+			ambrosia = 10
+		}
+	}
+	
+	prerequisites = {
+		"tech_ee_consumer"
+	}
+		
+	upgrades = {
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 5
+			owner = { 
+				has_monthly_income = {
+					resource = consumer_goods 
+					value < 10
+				}
+			}
+		}
+	}
+
+	ai_resource_production = {
+		consumer_goods  = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+
+building_eternal_preserve = {
+	base_buildtime = 480
+	can_demolish = yes
+	base_cap_amount = 1
+	can_be_ruined = no
+	
+	category = government	
+
+	potential = {
+		exists = owner
+		owner = { 
+			has_technology = "tech_preserver_ee" 
+		 }
+	}	
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 20000
+		}
+		produces = {
+			unity = 200
+			virtue = 200
+			ambrosia = 200
+		}
+		upkeep = {
+			energy = 1000
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 75
+		planet_amenities_add = 100
+		planet_max_districts_mult = -1.0
+	}
+	
+	prerequisites = {
+		"tech_preserver_ee"
+	}
+
+	on_built = {
+		remove_all_districts = yes
+	}
+		
+	upgrades = {
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 5
+			owner = { 
+				has_monthly_income = {
+					resource = consumer_goods 
+					value < 10
+				}
+			}
+		}
+	}
+
+	ai_resource_production = {
+		consumer_goods  = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+building_eternal_glory = {
+	base_buildtime = 480
+	can_demolish = yes
+	base_cap_amount = 1
+	can_be_ruined = no
+	
+	category = government	
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+			has_technology = "tech_fallenw" 
+			has_technology = "tech_ee_athen"
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 10000
+			eternium = 100
+		}
+		produces = {
+			unity = 200
+
+		}
+		upkeep = {
+			virtue = 500
+			energy = 1000
+		}
+	}
+
+	planet_modifier = {
+		pop_growth_speed = -200
+		pop_happiness = 0.5
+		planet_housing_add = 500
+	}
+	
+	prerequisites = {
+		"tech_ee_athen"
+	}
+		
+	upgrades = {
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 5
+			owner = { 
+				has_monthly_income = {
+					resource = consumer_goods 
+					value < 10
+				}
+			}
+		}
+	}
+
+	ai_resource_production = {
+		consumer_goods  = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+building_eternal_food = {
+	base_buildtime = 480
+	can_be_ruined = no
+	can_demolish = yes
+	
+	category = government
+	
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+			has_technology = "tech_fallenw" 
+			has_technology = "tech_ee_food"
+			}
+		}
+	}	
+	
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1000
+		}
+		produces = {
+			food = 300
+		}
+		upkeep = {
+			ambrosia = 10
+			energy = 50
+		}
+	}
+
+	prerequisites = {
+		"tech_ee_food"
+	}
+		
+	upgrades = {
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 5
+			owner = { 
+				has_monthly_income = {
+					resource = food
+					value < 10
+				}
+			}
+		}
+	}
+	
+	ai_resource_production = {
+		food = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+building_eternal_robot = {
+	base_buildtime = 480
+	can_be_ruined = no
+	can_demolish = yes
+	base_cap_amount = 1
+	
+	category = government
+	
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+			has_technology = "tech_fallenw" 
+			has_technology = "tech_ee_robot"
+			}
+		}
+	}	
+	
+	planet_modifier = {
+		planet_pop_assembly_add = 40
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1000
+		}
+		upkeep = {
+			ambrosia = 10
+		}
+	}
+
+	prerequisites = {
+		"tech_ee_robot"
+	}
+		
+	upgrades = {
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+building_eternal_dark_matter = {
+	base_buildtime = 480
+	can_be_ruined = no
+	can_demolish = yes
+	
+	category = government
+	
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+				has_technology = "tech_fallenw" 
+				has_technology = "tech_ee_dark_matter"
+				}
+			}
+			owner = { NOT = { has_technology = "tech_eternos_insights" } }
+		}	
+	
+	planet_modifier = {
+		job_twlightweaver_add = 5
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1000
+		}
+		produces = {
+
+			
+		}
+		upkeep = {
+			energy = 750
+		}
+	}
+
+	prerequisites = {
+		"tech_ee_dark_matter"
+	}
+		
+	upgrades = {
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 5
+			owner = { 
+				has_monthly_income = {
+					resource = ambrosia
+					value < 50
+				}
+			}
+		}
+	}
+
+	ai_resource_production = {
+		ambrosia = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+building_eternal_ressource = {
+	base_buildtime = 480
+	can_be_ruined = no
+	can_demolish = yes
+	
+	category = government
+	
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+			has_technology = "tech_fallenw" 
+			has_technology = "tech_ee_resource"
+			}
+		}
+	}	
+	
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_building
+		cost = {
+			minerals = 1000
+		}
+		produces = {
+			minerals = 500
+			rare_crystals = 10
+			exotic_gases = 10
+			volatile_motes = 10			
+		}
+		upkeep = {
+			ambrosia = 20
+		}
+	}
+
+	prerequisites = {
+		"tech_ee_resource"
+	}
+		
+	upgrades = {
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 5
+			owner = { 
+				has_monthly_income = {
+					resource = minerals
+					value < 100
+				}
+				has_monthly_income = {
+					resource = rare_crystals
+					value < 10
+				}
+				has_monthly_income = {
+					resource = exotic_gases
+					value < 10
+				}
+				has_monthly_income = {
+					resource = volatile_motes
+					value < 10
+				}
+			}
+		}
+	}
+
+	ai_resource_production = {
+		minerals = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+building_eternal_rares = {
+	base_buildtime = 480
+	can_be_ruined = no
+	can_demolish = yes
+	
+	category = government	
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+			has_technology = "tech_fallenw" 
+			has_technology = "tech_ee_rares"
+			}
+		}
+	}	
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+		}
+	}
+	
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1000
+		}
+		produces = {
+			sr_living_metal = 10
+			sr_zro = 10
+			nanites = 25
+			acot_sr_stellarite = 25	
+			acot_sr_dark_energy = 25
+			sr_dark_matter = 25
+
+		}
+		upkeep = {
+			ambrosia = 10
+		}
+	}
+
+	prerequisites = {
+		"tech_ee_rares"
+	}
+		
+	upgrades = {
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 5
+			owner = { 
+				has_monthly_income = {
+					resource = sr_living_metal
+					value < 10
+				}
+				has_monthly_income = {
+					resource = sr_zro
+					value < 10
+				}
+				has_monthly_income = {
+					resource = nanites
+					value < 10
+				}
+			}
+		}
+	}
+
+	ai_resource_production = {
+		nanites = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+
+building_eternal_energy = {
+	base_buildtime = 480
+	can_be_ruined = no
+	can_demolish = yes
+
+	category = government
+	
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+			has_technology = "tech_fallenw" 
+			has_technology = "tech_ee_energy"
+			}
+		}
+		owner = { NOT = { has_technology = "tech_eternos_insights" } }
+	}	
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+		}
+		
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 2000
+		}
+		produces = {
+			energy = 1000
+		}
+	}
+		
+	upgrades = {
+	}
+
+	prerequisites = {
+		"tech_ee_energy"
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 5
+			owner = { 
+				has_monthly_income = {
+					resource = energy
+					value < 100
+				}
+			}
+		}
+	}
+	ai_resource_production = {
+		energy = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+building_eternal_alloys = {
+	base_buildtime = 480
+	can_be_ruined = no
+	can_demolish = yes
+
+	category = government
+	
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+			has_technology = "tech_fallenw" 
+			has_technology = "tech_ee_alloys"
+			}
+		}
+	}	
+	
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1000
+		}
+		produces = {
+			alloys = 50
+		}
+		upkeep = {
+			ambrosia = 10
+		}
+	}
+		
+	upgrades = {
+	}
+
+	prerequisites = {
+		"tech_ee_alloys"
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 5
+			owner = { 
+				has_monthly_income = {
+					resource = alloys
+					value < 50
+				}
+			}
+		}
+	}
+	ai_resource_production = {
+		alloys = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+building_eternal_archive = {
+	base_buildtime = 480
+	can_be_ruined = no
+	can_demolish = yes
+
+	category = government
+	
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+			has_technology = "tech_fallenw" 
+			has_technology = "tech_ee_archive"
+			}
+		}
+		owner = { NOT = { has_technology = "tech_eternos_insights" } }
+	}	
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+		}
+		modifier = {
+			job_twarchivist_add = 5
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1000
+			ancient_knowldege = 100
+			ambrosia = 1000
+		}
+		produces = {
+			
+		}
+		upkeep = {
+			ambrosia = 10
+			ancient_knowldege = 10
+		}
+	}
+		
+	upgrades = {
+	}
+
+	prerequisites = {
+		"tech_ee_archive"
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 5
+			owner = { 
+				has_monthly_income = {
+					resource = physics_research
+					value < 200
+				}
+			}
+		}
+	}
+	ai_resource_production = {
+		physics_research = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+building_eternal_academy = {
+	base_buildtime = 480
+	can_be_ruined = no
+	can_demolish = yes
+
+	category = government
+	
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+			has_technology = "tech_fallenw" 
+			has_technology = "tech_ee_academy"
+			}
+		}
+	}	
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+		}
+		modifier = {
+			job_tw_hedonist_add = 5
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1000
+			ambrosia = 1000
+		}
+		produces = {
+			virtue = 100
+			ancient_knowldege = 10
+		}
+		upkeep = {
+			ambrosia = 10
+			ambrosia = 150
+			energy = 1000
+			
+		}
+	}
+		
+	upgrades = {
+	}
+
+	prerequisites = {
+		"tech_ee_academy"
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 5
+			owner = { 
+				has_monthly_income = {
+					resource = physics_research
+					value < 200
+				}
+			}
+		}
+	}
+	ai_resource_production = {
+		physics_research = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+
+
+
+
+building_eternal_dome = {
+	base_buildtime = 480
+	can_be_ruined = no
+	
+	category = government
+	
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+			has_technology = "tech_fallenw" 
+			has_technology = "tech_ee_dome"
+			}
+		}
+		owner = { NOT = { has_technology = "tech_eternos_insights" } }
+	}	
+	
+	planet_modifier = {
+		planet_housing_add = 40
+		planet_amenities_add = 40
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1000
+			eternium = 50
+		}
+		upkeep = {
+			ambrosia = 10
+		}
+	}
+	prerequisites = {
+		"tech_ee_dome"
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 2
+			free_housing < -2
+		}
+
+		modifier = {
+			factor = 3
+			free_amenities < -5
+		}
+	}
+	ai_resource_production = {
+		planet_amenities = 1
+		trigger = {
+			always = yes
+		}
+	}
+	
+
+}
+
+building_eternal_fortress = {
+	can_be_ruined = no
+
+	can_be_ruined = no
+	can_be_disabled = no
+	base_cap_amount = 1
+
+	category = government
+	
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+			has_technology = "tech_fallenw" 
+			has_technology = "tech_ee_fortress"
+			}
+		}
+	}	
+	
+	convert_to = {
+		building_fortress
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+		}
+		modifier = {
+			job_twkeeper_add = 5
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1000
+			eternium = 50
+		}	
+		upkeep = {
+			ambrosia = 10
+		}
+	}
+	
+	planet_modifier = {
+		planet_stability_add = 50
+		planet_orbital_bombardment_damage = -0.90
+	}
+	
+	prerequisites = {
+		"tech_ee_fortress"
+	}
+	
+	ai_weight = {
+		weight = 100
+	}
+}
+

@@ -1,0 +1,59 @@
+tech_tahaByKerhus_brainslug1 = {
+	cost = @tier3cost3
+	area = society
+	tier = 3
+	category = { biology }
+	is_rare = yes
+
+	modifier = {
+		pop_growth_speed = 0.10
+	}
+
+	weight = 0
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+}
+
+#tech_tahaByKerhus_brainslug2 = {
+#	cost = @tier4cost2
+#	area = society
+#	tier = 4
+#	category = { biology }
+#	is_rare = yes	
+#	prerequisites = { "tech_genetic_resequencing" "tech_tahaByKerhus_brainslug1" }
+#	weight = @tier4weight2
+#	prereqfor_desc = {
+#		diplo_action = {
+#			title = "TECH_TAHABYKERHUS_BRAINSLUG_CHANGE_TITLE"
+#			desc = "TECH_TAHABYKERHUS_BRAINSLUG_CHANGE_DESC"
+#		}
+#	}
+#
+#	weight_modifier = {
+#		factor = 0.7
+#		modifier = {
+#			factor = 1.7
+#			research_leader = {
+#				area = society
+#				has_trait = "leader_trait_expertise_biology"
+#			}
+#		}
+#	}
+#
+#	ai_weight = {
+#		modifier = {
+#			factor = 1.25
+#			research_leader = {
+#				area = society
+#				has_trait = "leader_trait_expertise_biology"
+#			}
+#		}
+#	}
+#}

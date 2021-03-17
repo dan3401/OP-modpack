@@ -1,0 +1,36 @@
+﻿l_english:
+
+ sm_patrol_offices: "Patrol Offices"
+ sm_patrol_offices_desc: "A trade route management centre: patrols, freighter escorts, and first strikes against piracy hotspots.\n"
+ sm_patrol_offices_desc_modifier: "Grants §G+10%§! Trade Value and then a further §G+2§! Naval Capacity and §G+5§! Trade Protection per Hangar Bay."
+
+ sm_munitions_bay: "Munitions Bay"
+ sm_munitions_bay_desc: "Specialise for gun batteries, improving the station's fire rate, tracking, and hull integrity.\n"
+ sm_munitions_bay_desc_modifier: "Adds §G+10%§! Hull, §G+10%§! Armor, §G+3§! Tracking and §G+2.5%§! Fire Rate per Gun Battery."
+ 
+ sm_missile_command: "Missile Command"
+ sm_missile_command_desc: "Specialise for missile batteries, improving the station's firepower and hull integrity.\n"
+ sm_missile_command_desc_modifier: "Adds §G+10%§! Hull, §G+10%§! Armor and §G+5%§! Weapons Damage per Missile Battery."
+
+ sm_proving_ground: "Proving Ground"
+ sm_proving_ground_desc: "An advanced experimental assembly plant that repurposes existing assets to expediate ship construction. Untested. No refunds.\n"
+ sm_proving_ground_desc_modifier: "Adds §G+10%§! Ship Build Speed and §G-5%§! Ship Build Cost per Anchorage."
+
+ sm_alloy_forge: "Alloy Forge"
+ sm_alloy_forge_desc: "A facility that converts a single shipyard into an alloy production array.\n"
+ sm_alloy_forge_desc_modifier: "Deducts §R1§! Shipyard Capacity, produces §G4§! £alloys£ Alloy and increases system £alloys£ Alloy production by §G10%§!."
+
+ sm_psi_command: "Psi Command"
+ sm_psi_command_desc: "A centre for directing the system's psionic assets. Telepaths scan for threats while a dedicated team of barrier telekinetics bolsters the starbase's shields.\n"
+ sm_psi_command_desc_modifier: "--not currently needed--"
+
+ sm_molecular_forge: "Molecular Forge"
+ sm_molecular_forge_desc: "A nanotechnological marvel, the Forge can dispatch maintenance swarms and begin ship repairs before they've even docked.\n"
+ aura_starbase_molecular_forge: "Molecular Repair Aura"
+ sm_starbase_molecular_forge_desc_modifier: "--not currently needed--"
+
+ sm_arcade: "Simulation Servers"
+ sm_arcade_desc: "A sophisticated mainframe providing simulations for researchers. And entertainment for bored ship crews, of course.\n"
+ 
+ sm_construction_centre: "Construction Centre"
+ sm_construction_centre_desc: "A staging post for all groundbreaking operations and the ongoing assembly of colony infrastructure."

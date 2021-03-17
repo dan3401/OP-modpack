@@ -1,0 +1,10 @@
+spriteTypes = {
+
+	# Sapient Intervention relic
+	SpriteType = {
+		name = "GFX_relic_supercomputer"
+		texturefile = "gfx/interface/icons/relics/r_supercomputer.dds"			
+		effectFile = "gfx/FX/buttonstate.lua"
+		legacy_lazy_load = no
+	}
+}

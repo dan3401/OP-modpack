@@ -1,0 +1,126 @@
+weapon_component_template = {
+	key = "ETERNAL_LAEER_EE"
+	size = small
+	icon = "GFX_ship_part_eternium_laser"
+	icon_frame = 1
+	entity = "small_laser_gun_entity"
+	type = instant
+
+	damage = { min = 127 max = 1250 }
+	windup = { min = 4 max = 40 }
+	total_fire_time = 70
+	range = 60
+	accuracy = 1.0
+	power = -210
+
+
+	hull_damage = 1.25
+	armor_penetration = 0
+	armor_damage = 1.75
+	shield_penetration = 0.0
+	shield_damage = 1.0
+
+	tracking = 0.6
+
+	resources = {
+		category = ship_components
+		cost = {
+			eternium = 0.5
+		}
+	}
+
+	prerequisites = { tech_fallenw }
+	component_set = "ETERNAL_LASER_EE"
+	projectile_gfx = "eternal_laser_s"
+	tags = { weapon_type_cosmic }
+	ai_tags = { weapon_role_anti_armor }
+
+	ai_weight = {
+		weight = 3000
+	}	
+}
+
+weapon_component_template = {
+	key = "ETERNAL_LAEER_EE_MEDIUM"
+	size = medium
+	icon = "GFX_ship_part_eternium_laser"
+	icon_frame = 1
+	entity = "small_laser_gun_entity"
+	type = instant
+
+	damage = { min = 850 max = 2550 }
+	windup = { min = 4 max = 40 }
+	total_fire_time = 70
+	range = 60
+
+	accuracy = 1.0
+	power = -210
+
+	hull_damage = 1.25
+	armor_penetration = 0
+	armor_damage = 1.75
+	shield_penetration = 0.0
+	shield_damage = 1.0
+
+	tracking = 0.6
+
+	resources = {
+		category = ship_components
+		cost = {
+			eternium = 0.5
+		}
+	}
+
+	prerequisites = { tech_fallenw }
+	component_set = "ETERNAL_LASER_EE"
+	projectile_gfx = "eternal_laser_m"
+	tags = { weapon_type_cosmic }
+	ai_tags = { weapon_role_anti_armor }
+
+	ai_weight = {
+		weight = 3000
+	}	
+}
+
+weapon_component_template = {
+	key = "ETERNAL_LAEER_EE_LARGE"
+	size = large
+	icon = "GFX_ship_part_eternium_laser"
+	icon_frame = 1
+	entity = "small_laser_gun_entity"
+	type = instant
+
+	damage = { min = 2000 max = 5000 }
+	windup = { min = 4 max = 40 }
+	total_fire_time = 70
+
+
+	range = 130
+	accuracy = 1.0
+	power = -210
+
+	hull_damage = 1.25
+	armor_penetration = 0
+	armor_damage = 1.75
+	shield_penetration = 0.0
+	shield_damage = 1.0
+
+	tracking = 0.6
+
+	resources = {
+		category = ship_components
+		cost = {
+			eternium = 0.5
+		}
+	}
+
+	prerequisites = { tech_fallenw }
+	component_set = "ETERNAL_LASER_EE"
+	projectile_gfx = "eternal_laser_l"
+	tags = { weapon_type_cosmic }
+	ai_tags = { weapon_role_anti_armor }
+
+	ai_weight = {
+		weight = 3000
+	}	
+}

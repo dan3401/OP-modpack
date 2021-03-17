@@ -1,0 +1,12 @@
+﻿l_english:
+ ####################################
+ # buildings
+ ####################################
+ building_psi_academy:0 "Psi Academy"
+ building_psi_academy_desc:1 "A vast education and training complex intended to help realise the population's psionic potential."
+ building_psi_academy_2:0 "Advanced Psi Academy"
+ building_psi_academy_2_desc:1 "Additional labs, psi gyms and residential wings ensure that the Academy's presence is felt planetwide."
+ building_psi_academy_3:0 "Superior Psi Academy"
+ building_psi_academy_3_desc:1 "Bleeding-edge emitters and amplifiers bring your learning experience to a pinnacle. Sign up now for an eight-year course!"
+ building_enginespire:0 "Enginespire"
+ building_enginespire_desc:1 "A towering testament to those that make and shape your great empire. A centre for innovation and inspiration."

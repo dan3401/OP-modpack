@@ -1,0 +1,856 @@
+mgate_base = {
+	entity = "gatebuilder_01_gateway_entity"
+	construction_entity = "gateway_portal_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = no
+	build_outside_gravity_well = yes
+	show_galactic_map_icon = no
+	
+	potential = {
+		always = no
+	}
+
+	construction_blocks_others = no
+
+	bypass_type = mgate
+}
+
+evgate_base = {
+	entity = "gatebuilder_01_gateway_entity"
+	construction_entity = "gateway_portal_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = no
+	build_outside_gravity_well = yes
+	show_galactic_map_icon = no
+	
+	potential = {
+		always = no
+	}
+
+	construction_blocks_others = no
+
+	bypass_type = evgate
+}
+
+main_gateway_ee = {
+	entity = "eternalgate_superring_01_entity"
+	construction_entity = "eternalgate_superring_01_entity"
+	portrait = "GFX_charon_gate_background"
+	place_entity_on_planet_plane = no
+	build_outside_gravity_well = yes
+	
+	potential = {
+		owner = {
+			has_technology = tech_fallenw
+	
+		}
+	}	
+
+	
+	
+	possible = {
+		exists = starbase
+		custom_tooltip = {
+			fail_text = "requires_technology_gateway_activation"
+			from = { is_country_type = "eternal_empire" }
+		}
+		custom_tooltip = {
+			fail_text = "requires_no_existing_gateway"
+			NOR = {
+				has_megastructure = main_gateway_ee
+
+			}
+		}
+		
+	}
+
+	build_time = 720
+	resources = {
+		category = megastructures
+		cost = {
+			energy = 6000
+		}
+	}
+
+	ai_weight = {
+		factor = 10
+	}
+
+	construction_blocks_others = no
+	bypass_type = eternal_empire_gate_bypass
+	on_build_complete = {
+		activate_gateway = fromfrom
+		set_star_flag = ee_main_gate
+
+		if = {
+			limit = { num_active_gateways = 1 }
+		}
+		
+	}
+}
+
+
+
+psionic_systeme = {
+	entity = "psio_system_entity"
+	construction_entity = "psio_system_entity"
+	portrait = "GFX_psionic_ee_system"
+	place_entity_on_planet_plane = yes
+	entity_offset = { x = 0 y = 0 }
+	build_time = 180
+
+	resources = {
+		category = megastructures
+		cost = {
+			unity = 100000
+			virtue = 10000
+		}
+		produces = {
+			eternium = 10
+		}
+	}
+
+	
+	construction_blocks_others = no
+
+	potential = {
+		owner = {
+			has_technology = tech_fallenw
+			has_country_flag = eternal_transcendence
+		}
+	}	
+
+
+	possible = {
+		exists = starbase
+		custom_tooltip = {
+			fail_text = "requires_inside_border"
+			is_inside_border = from
+		}
+	}
+
+	placement_rules = {
+		planet_possible = {
+			custom_tooltip = {
+				fail_text = "requires_surveyed_planet"
+				is_surveyed = {			# prevent leaking habitability information
+					who = prev.from
+					status = yes
+				}
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_anomaly"
+				NOT = { has_anomaly = yes }
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_existing_megastructure"
+				#NOT = { has_any_megastructure = yes }
+				has_no_non_gate_megastructure = yes
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_existing_megastructure"
+				#can_build_megastructure_on_planet = yes
+				NOR = {
+					is_planet_class = pc_habitat
+					is_planet_class = pc_ringworld_tech
+					is_planet_class = pc_ringworld_seam
+					is_star = no
+					is_moon = yes
+	
+				}
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_orbital_station"
+				has_orbital_station = no
+			}
+
+ 			# balance for habitats
+			custom_tooltip = {
+				fail_text = "requires_not_star"
+				is_star = yes
+			}
+
+		} # use these for all non-star megastructures
+	}
+
+	# root = system
+	# from = country	
+	ai_weight = {
+		factor = 0
+	
+		modifier = {
+			factor = 0
+			starbase = { NOT = { has_starbase_size >= starbase_starport } }
+		}
+
+		modifier = {
+			factor = 0
+			any_neighbor_system = {
+				exists = owner
+				owner = { NOT = { is_same_value = from } }
+			}
+		}
+	}
+	
+	on_build_start = {}
+	on_build_cancel = {}
+	
+	on_build_complete = {
+		every_system_planet = { 
+			limit = { is_star = yes }
+			change_pc = pc_ee_star
+			set_planet_size = -1
+		}
+		every_system_planet = { 
+			limit = { is_star = no 
+			NOT = {
+				is_planet_class = pc_eternos
+				}
+			}
+			remove_planet = yes
+		}
+		set_asteroid_belt = {
+			radius = 0
+		}
+
+		spawn_planet = {
+			class = "pc_eternos"
+			location = fromfrom.planet
+			orbit_location = yes
+			orbit_angle_offset = -1
+			orbit_distance_offset = -1
+			size = 100
+			
+			init_effect = {
+				set_name = "Eternos"
+				set_planet_entity = {	entity = "ee_psionica_planet_02_entity" }
+			
+				surveyed = {
+					set_surveyed = yes
+					surveyor = FROM
+				}
+				set_all_comms_surveyed = yes
+				clear_blockers = yes
+				if = {
+					limit = {
+						from = { has_ascension_perk = ap_master_builders }
+						NOT = { has_modifier = master_builders_habitats }
+					}
+					add_modifier = {
+						modifier = master_builders_habitats
+						days = -1
+					}
+				}
+				set_planet_flag = megastructure
+				set_planet_flag = habitat
+			
+			}
+		}
+		fromfrom.planet = {
+			set_planet_flag = has_megastructure
+		}
+		
+		
+	}
+}
+
+
+psionic_capital_systeme = {
+	entity = "psio_capital_system_entity"
+	construction_entity = "psio_capital_system_entity"
+	portrait = "GFX_psionic_ee_system"
+	place_entity_on_planet_plane = yes
+	entity_offset = { x = 0 y = 0 }
+	build_time = 180
+
+	resources = {
+		category = megastructures
+		cost = {
+			unity = 100000
+			virtue = 10000
+		}
+		produces = {
+			eternium = 20
+		}
+	}
+
+	
+	construction_blocks_others = no
+
+	potential = {
+		owner = {
+			has_technology = tech_fallenw
+			has_country_flag = eternal_transcendence
+		}
+	}	
+
+	possible = {
+		exists = starbase
+		custom_tooltip = {
+			fail_text = "requires_inside_border"
+			is_inside_border = from
+		}
+	}
+
+	placement_rules = {
+		planet_possible = {
+			custom_tooltip = {
+				fail_text = "requires_surveyed_planet"
+				is_surveyed = {			# prevent leaking habitability information
+					who = prev.from
+					status = yes
+				}
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_anomaly"
+				NOT = { has_anomaly = yes }
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_existing_megastructure"
+				#NOT = { has_any_megastructure = yes }
+				has_no_non_gate_megastructure = yes
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_existing_megastructure"
+				#can_build_megastructure_on_planet = yes
+				NOR = {
+					is_planet_class = pc_habitat
+					is_planet_class = pc_ringworld_tech
+					is_planet_class = pc_ringworld_seam
+					is_star = no
+					is_moon = yes
+	
+				}
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_orbital_station"
+				has_orbital_station = no
+			}
+
+ 			# balance for habitats
+			custom_tooltip = {
+				fail_text = "requires_not_star"
+				is_star = yes
+			}
+
+		} # use these for all non-star megastructures
+	}
+
+	# root = system
+	# from = country	
+	ai_weight = {
+		factor = 1000
+	}
+	
+	on_build_start = {}
+	on_build_cancel = {}
+	
+	on_build_complete = {
+		FROM = { set_country_flag = eecapital }
+		every_system_planet = { 
+			limit = { is_star = yes }
+			change_pc = pc_ee_star
+			set_planet_size = -1
+		}
+		every_system_planet = { 
+			limit = { is_star = no 
+			NOT = {
+				is_planet_class = pc_eternos
+				}
+			}
+			remove_planet = yes
+		}
+		set_asteroid_belt = {
+			radius = 0
+		}
+		spawn_planet = {
+			class = "pc_eternos"
+			location = fromfrom.planet
+			orbit_angle_offset = 0
+			orbit_distance_offset = 0
+			size = 200
+			
+			init_effect = {
+				set_name = "Heart of Eternos"
+				set_planet_entity = {	entity = "ee_psionica_planet_02_entity" }
+				surveyed = {
+					set_surveyed = yes
+					surveyor = FROM
+				}
+				set_all_comms_surveyed = yes
+				clear_blockers = yes
+				if = {
+					limit = {
+						from = { has_ascension_perk = ap_master_builders }
+						NOT = { has_modifier = master_builders_habitats }
+					}
+					add_modifier = {
+						modifier = master_builders_habitats
+						days = -1
+					}
+				}
+				set_planet_flag = megastructure
+				set_planet_flag = habitat
+				save_event_target_as = event_target:psionic1
+			
+			}
+		}
+
+		fromfrom.planet = {
+			set_planet_flag = has_megastructure
+		}	
+	}
+}
+
+
+psionic_storms = {
+	entity = ""
+	construction_entity = "psio_storm_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = yes
+	entity_offset = { x = 0 y = 0 }
+	build_time = 1800
+	resources = {
+		category = megastructures
+		cost = {
+			unity = 10000
+			virtue = 10000
+		}
+		produces = {
+			
+		}
+	}
+
+	potential = {
+		owner = {
+			has_technology = tech_fallenw
+			has_country_flag = eternal_transcendence
+		}
+	}	
+
+	possible = {
+		exists = starbase
+		custom_tooltip = {
+			fail_text = "requires_inside_border"
+			is_inside_border = from
+		}
+		custom_tooltip = {
+			fail_text = "requires_no_existing_dyson_sphere"
+			THIS = { NOT = { has_star_flag = psionicee_built } }
+		}	
+		custom_tooltip = {
+			fail_text = "requires_surveyed_system"
+			NOT = {
+				any_system_planet = {
+					is_surveyed = {
+						who = prev.from
+						status = no
+					}
+				}
+			}
+		}	
+	}
+	
+	placement_rules = {
+		planet_possible = {
+			custom_tooltip = {
+				fail_text = "must_build_around_star"
+				is_star = yes
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_anomaly"
+				NOT = { has_anomaly = yes }
+            }
+            custom_tooltip = {
+                fail_text = "requires_phi_singularity"
+                is_star = yes
+          
+            }
+	    custom_tooltip = {
+			fail_text = "requires_no_existing_megastructure"
+			NOT = { has_planet_flag = phi_sphere_built }
+			
+		}
+			custom_tooltip = {
+				fail_text = "requires_no_orbital_station"
+				has_orbital_station = no
+			}
+		}
+	}
+	
+	# root = system
+	# from = country	
+	ai_weight = {
+		factor = 0
+		
+		modifier = {
+			factor = 0
+			starbase = { NOT = { has_starbase_size >= starbase_starfortress } }
+		}	
+		
+		modifier = {
+			factor = 0
+			any_neighbor_system = {
+				exists = owner
+				NOT = { 
+					owner = { is_same_value = from } 
+				}
+			}
+		}
+	}
+	
+	on_build_start = {}
+	on_build_cancel = {}
+	on_build_complete = {
+		set_star_flag = psionicee_built
+		set_star_flag = lcluster
+		
+		spawn_planet = {
+			class = "pc_ee_psionic"
+			location = fromfrom.planet
+			orbit_location = yes
+			orbit_angle_offset = -1
+			orbit_distance_offset = -1
+			size = 10
+			
+			init_effect = {
+				set_planet_entity = {	entity = "ee_storm_planet_01_entity" }
+				surveyed = {
+					set_surveyed = yes
+					surveyor = FROM
+				}
+				set_all_comms_surveyed = yes
+				clear_blockers = yes
+				
+				set_planet_flag = megastructure
+				set_planet_flag = habitat
+			
+			}
+		}
+		remove_megastructure = fromfrom
+		
+	}
+
+}
+
+
+
+
+psionic_systeme_no_effect = {
+	entity = "psio_system_2_entity"
+	construction_entity = "psio_system_2_entity"
+	portrait = "GFX_psionic_ee_system"
+	place_entity_on_planet_plane = yes
+	entity_offset = { x = 0 y = 0 }
+	build_time = 180
+
+	resources = {
+		category = megastructures
+		cost = {
+			unity = 100000
+			virtue = 10000
+		}
+		produces = {
+			eternium = 10
+		}
+	}
+
+	
+	construction_blocks_others = no
+
+	potential = {
+		owner = {
+			has_technology = tech_fallenw
+			has_country_flag = eternal_transcendence
+		}
+	}	
+
+	possible = {
+		exists = starbase
+		custom_tooltip = {
+			fail_text = "requires_inside_border"
+			is_inside_border = from
+		}
+	}
+
+	placement_rules = {
+		planet_possible = {
+			custom_tooltip = {
+				fail_text = "requires_surveyed_planet"
+				is_surveyed = {			# prevent leaking habitability information
+					who = prev.from
+					status = yes
+				}
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_anomaly"
+				NOT = { has_anomaly = yes }
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_existing_megastructure"
+				#NOT = { has_any_megastructure = yes }
+				has_no_non_gate_megastructure = yes
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_existing_megastructure"
+				#can_build_megastructure_on_planet = yes
+				NOR = {
+					is_planet_class = pc_habitat
+					is_planet_class = pc_ringworld_tech
+					is_planet_class = pc_ringworld_seam
+					is_star = no
+					is_moon = yes
+	
+				}
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_orbital_station"
+				has_orbital_station = no
+			}
+
+ 			# balance for habitats
+			custom_tooltip = {
+				fail_text = "requires_not_star"
+				is_star = yes
+			}
+
+		} # use these for all non-star megastructures
+	}
+
+	# root = system
+	# from = country	
+	ai_weight = {
+		factor = 10
+	
+		modifier = {
+			factor = 0
+			starbase = { NOT = { has_starbase_size >= starbase_starport } }
+		}
+
+		modifier = {
+			factor = 0.1
+			any_neighbor_system = {
+				exists = owner
+				owner = { NOT = { is_same_value = from } }
+			}
+		}
+	}
+	
+	on_build_start = {}
+	on_build_cancel = {}
+	
+	on_build_complete = {
+		every_system_planet = { 
+			limit = { is_star = yes }
+			change_pc = pc_ee_star
+			set_planet_size = -1
+		}
+		every_system_planet = { 
+			limit = { is_star = no 
+			NOT = {
+				is_planet_class = pc_eternos
+				}
+			}
+			remove_planet = yes
+		}
+		set_asteroid_belt = {
+			radius = 0
+		}
+
+		spawn_planet = {
+			class = "pc_eternos"
+			location = fromfrom.planet
+			orbit_location = yes
+			orbit_angle_offset = -1
+			orbit_distance_offset = -1
+			size = 100
+			
+			init_effect = {
+				set_name = "Eternos"
+				surveyed = {
+					set_surveyed = yes
+					surveyor = FROM
+				}
+				set_all_comms_surveyed = yes
+				clear_blockers = yes
+				if = {
+					limit = {
+						from = { has_ascension_perk = ap_master_builders }
+						NOT = { has_modifier = master_builders_habitats }
+					}
+					add_modifier = {
+						modifier = master_builders_habitats
+						days = -1
+					}
+				}
+				set_planet_flag = megastructure
+				set_planet_flag = habitat
+			
+			}
+		}
+		fromfrom.planet = {
+			set_planet_flag = has_megastructure
+		}
+		
+		
+	}
+}
+
+
+psionic_capital_systeme_no_effect = {
+	entity = "psio_capital_system_no_effect_entity"
+	construction_entity = "psio_capital_system_no_effect_entity"
+	portrait = "GFX_psionic_ee_system"
+	place_entity_on_planet_plane = yes
+	entity_offset = { x = 0 y = 0 }
+	build_time = 180
+
+	resources = {
+		category = megastructures
+		cost = {
+			unity = 100000
+			virtue = 10000
+		}
+		produces = {
+			eternium = 20
+		}
+	}
+
+	
+	construction_blocks_others = no
+
+	potential = {
+		owner = {
+			has_technology = tech_fallenw
+			has_country_flag = eternal_transcendence
+		}
+	}	
+
+	possible = {
+		exists = starbase
+		custom_tooltip = {
+			fail_text = "requires_inside_border"
+			is_inside_border = from
+		}
+	}
+
+	placement_rules = {
+		planet_possible = {
+			custom_tooltip = {
+				fail_text = "requires_surveyed_planet"
+				is_surveyed = {			# prevent leaking habitability information
+					who = prev.from
+					status = yes
+				}
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_anomaly"
+				NOT = { has_anomaly = yes }
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_existing_megastructure"
+				#NOT = { has_any_megastructure = yes }
+				has_no_non_gate_megastructure = yes
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_existing_megastructure"
+				#can_build_megastructure_on_planet = yes
+				NOR = {
+					is_planet_class = pc_habitat
+					is_planet_class = pc_ringworld_tech
+					is_planet_class = pc_ringworld_seam
+					is_star = no
+					is_moon = yes
+	
+				}
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_orbital_station"
+				has_orbital_station = no
+			}
+
+ 			# balance for habitats
+			custom_tooltip = {
+				fail_text = "requires_not_star"
+				is_star = yes
+			}
+
+		} # use these for all non-star megastructures
+	}
+
+	# root = system
+	# from = country	
+	ai_weight = {
+		factor = 0
+	
+		modifier = {
+			factor = 0
+			starbase = { NOT = { has_starbase_size >= starbase_starport } }
+		}
+
+		modifier = {
+			factor = 0
+			any_neighbor_system = {
+				exists = owner
+				owner = { NOT = { is_same_value = from } }
+			}
+		}
+	}
+	
+	on_build_start = {}
+	on_build_cancel = {}
+	
+	on_build_complete = {
+		FROM = { set_country_flag = eecapital }
+		every_system_planet = { 
+			limit = { is_star = yes }
+			change_pc = pc_ee_star
+			set_planet_size = -1
+		}
+		every_system_planet = { 
+			limit = { is_star = no 
+			NOT = {
+				is_planet_class = pc_eternos
+				}
+			}
+			remove_planet = yes
+		}
+		set_asteroid_belt = {
+			radius = 0
+		}
+		spawn_planet = {
+			class = "pc_eternos"
+			location = fromfrom.planet
+			orbit_angle_offset = 0
+			orbit_distance_offset = 0
+			size = 200
+			
+			init_effect = {
+				set_name = "Heart of Eternos"
+				surveyed = {
+					set_surveyed = yes
+					surveyor = FROM
+				}
+				set_all_comms_surveyed = yes
+				clear_blockers = yes
+				if = {
+					limit = {
+						from = { has_ascension_perk = ap_master_builders }
+						NOT = { has_modifier = master_builders_habitats }
+					}
+					add_modifier = {
+						modifier = master_builders_habitats
+						days = -1
+					}
+				}
+				set_planet_flag = megastructure
+				set_planet_flag = habitat
+				
+			}
+		}
+
+		fromfrom.planet = {
+			set_planet_flag = has_megastructure
+		}	
+	}
+}

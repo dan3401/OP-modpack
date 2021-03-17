@@ -1,0 +1,339 @@
+######################################
+## 	Advanced Fallen Empire Buildings
+##				By Kolyn
+######################################
+
+
+@b4time = 180
+@b4cost = 150
+@b4effect = 5
+@b4upkeep = 2.5
+
+@b5time = 180
+@b5cost = 180
+@b5effect = 8
+@b5upkeep = 3
+
+@feupkeep = 4
+@feproduction = 12
+@fecost = 500
+@fetime = 730
+
+
+# Energy Buildings
+
+building_fe_class_5_singularity = {
+	base_buildtime = 720
+	can_build = yes
+	can_demolish = yes
+	icon = building_fe_class_5_singularity
+#	base_cap_amount = 5
+	
+	category = resource
+	
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+		NOT = { is_planet_class = pc_habitat }
+	}
+	
+	allow = {
+		has_upgraded_capital = yes
+	}
+	
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 2000
+			exotic_gases = 240
+		}
+		upkeep = {
+			sr_dark_matter = 2
+			exotic_gases = 2
+		}
+		produces = {
+			energy = 500
+		}
+		produces = {
+			trigger = {
+				planet = {
+					has_modifier = pm_planet_fe_buildings_boost
+				}	
+			}
+			energy = 100
+		}
+	}
+		
+	upgrades = {
+	}
+	
+	prerequisites = {
+		tech_fe_class_5_singularity
+	}
+	
+	ai_weight = {
+		weight = 10000
+		
+	}
+}
+
+# Mineral Buildings
+
+building_fe_dimensional_extractor = {
+	base_buildtime = 720
+	can_build = yes
+	can_demolish = yes
+	icon = building_fe_dimensional_extractor
+#	base_cap_amount = 5
+	
+	category = resource
+	
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		NOT = { is_planet_class = pc_habitat }
+		NOT = { has_modifier = slave_colony }
+	}
+	
+	allow = {
+		has_upgraded_capital = yes
+	}
+	
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 2000
+			sr_living_metal = 100
+		}
+		upkeep = {
+			sr_dark_matter = 4
+			sr_living_metal = 2
+		}
+		produces = {
+			minerals = 200
+			rare_crystals = 4
+			exotic_gases = 4
+			volatile_motes = 4			
+		}
+		produces = {
+			trigger = {
+				planet = {
+					has_modifier = pm_planet_fe_buildings_boost
+				}	
+			}
+			minerals = 40
+			rare_crystals = 0.8
+			exotic_gases = 0.8
+			volatile_motes = 0.8	
+		}
+	}
+		
+	upgrades = {
+	}
+	
+	prerequisites = {
+		"tech_fe_dimensional_extractor"
+	}	
+	
+	ai_weight = {
+		weight = 10000
+		
+	}
+}
+
+# Food Buildings
+
+building_fe_agri_processing_complex = {
+	base_buildtime = 720
+	can_build = yes
+	can_demolish = yes
+	icon = building_food_processing_center
+#	base_cap_amount = 3
+	
+	category = resource
+	
+	potential = {
+		NOT = { is_planet_class = pc_habitat }
+		NOT = { is_planet_class = pc_machine }
+		NOT = { has_modifier = resort_colony }
+	}
+	
+	allow = {
+		has_upgraded_capital = yes
+	}
+	
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 2000
+			volatile_motes = 240
+		}
+		upkeep = {
+			energy = 40
+			volatile_motes = 4
+		}
+		produces = {
+			food = 200
+		}
+		produces = {
+			trigger = {
+				planet = {
+					has_modifier = pm_planet_fe_buildings_boost
+				}	
+			}
+			food = 40
+		}	
+	}
+		
+	upgrades = {
+	}
+	
+	prerequisites = {
+		"tech_fe_agri_processing_complex"
+	}	
+	
+	ai_weight = {
+		weight = 10000
+		
+	}
+}
+
+#Consumer Goods
+
+building_fe_opulence_central = {
+	base_buildtime = 720
+	can_build = yes
+	can_demolish = yes
+	icon = building_fe_opulence_central
+#	base_cap_amount = 3
+	
+	category = manufacturing
+	
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				is_gestalt = no
+				has_valid_civic = civic_machine_servitor
+			}
+		}
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+	}
+	
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 2000
+			rare_crystals = 240			
+		}
+		upkeep = {
+			energy = 20
+			minerals = 20
+			rare_crystals = 4		
+		}
+		produces = {
+			consumer_goods = 100
+		}
+		produces = {
+			trigger = {
+				planet = {
+					has_modifier = pm_planet_fe_buildings_boost
+				}	
+			}
+			consumer_goods = 20
+		}
+	}
+		
+	upgrades = {
+	}
+	
+	prerequisites = {
+		"tech_fe_opulence_central"
+	}	
+	
+	show_tech_unlock_if = { 
+		OR = {
+			is_gestalt = no
+			has_valid_civic = civic_machine_servitor
+		}
+	}
+	
+	ai_weight = {
+		weight = 10000
+		
+	}
+}
+
+
+# Alloys
+
+building_fe_autonomous_fabricator = {
+	base_buildtime = 720
+	can_build = yes
+	can_demolish = yes
+	icon = building_fe_autonomous_fabricator
+#	base_cap_amount = 3
+	
+	category = manufacturing
+	
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }	
+	}
+	
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+	
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 2000
+			sr_living_metal = 100
+		}
+		upkeep = {
+			energy = 20
+			minerals = 10
+			sr_living_metal = 2
+		}
+		produces = {
+			alloys = 50
+		}
+		produces = {
+			trigger = {
+				planet = {
+					has_modifier = pm_planet_fe_buildings_boost
+				}	
+			}
+			alloys = 10
+		}
+	}
+		
+	upgrades = {
+	}
+	
+	prerequisites = {
+		tech_fe_autonomous_fabricator
+	}
+	
+	ai_weight = {
+		weight = 10000
+		
+	}
+}

@@ -1,0 +1,332 @@
+####################################
+#      Lost Technologies
+#	  	    By Kolyn
+####################################
+
+
+###Lost Technologies: Automated Industries
+tech_lost_technologies_1 = {
+	area = physics
+	cost = @tier4cost2
+	tier = 4
+	category = { field_manipulation }
+	weight = 0
+	is_rare = yes
+	
+	potential = {
+		has_global_flag = zofe_automated_industries_activated
+	}
+	
+	modifier = {
+		stations_produces_mult = 0.1
+	}
+	
+	weight_modifier = {	
+		modifier = {
+			factor = 0
+			NOR = { 
+				is_country_type = lost_empire 
+				is_country_type = ascended_empire 
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 10		#Ascension is good
+	}
+}
+
+#Energy Building
+tech_fe_class_5_singularity = {
+	cost = @fallentechcost
+	area = physics
+	tier = @fallentechtier
+	category = { field_manipulation }	
+	prerequisites = { "tech_fe_class_4_singularity" "tech_lost_technologies_1" }
+	weight = @tier3weight1
+	is_rare = yes
+	
+	potential = {
+		has_global_flag = zofe_automated_industries_activated
+		OR = {
+			is_country_type = ascended_empire
+			is_country_type = lost_empire
+		}
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 10
+			OR = {
+				has_technology = tech_mine_exotic_gases
+				has_technology = tech_exotic_gases
+			}
+		}
+		modifier = {
+			factor = 2
+			has_tradition = tr_prosperity_adopt
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}			
+		}
+	}
+	
+	ai_weight = {
+		factor = 30
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+#Mineral Building
+tech_fe_dimensional_extractor = {
+	cost = @fallentechcost
+	area = engineering
+	tier = @fallentechtier
+	category = { industry }	
+	prerequisites = { "tech_fe_dimensional_fabricator" "tech_lost_technologies_1" }
+	weight = @tier3weight1
+	is_rare = yes
+	
+	potential = {
+		has_global_flag = zofe_automated_industries_activated
+		OR = {
+			is_country_type = ascended_empire
+			is_country_type = lost_empire
+		}
+	}
+	
+	weight_modifier = {
+		factor = 2
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}			
+		}
+	}
+	
+	ai_weight = {
+		factor = 30
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+}
+
+#Food Building
+tech_fe_agri_processing_complex = {
+	cost = @fallentechcost
+	area = society
+	tier = @fallentechtier
+	category = { biology }	
+	prerequisites = { "tech_fe_nourishment_center" "tech_lost_technologies_1" }
+	weight = @tier3weight1
+	is_rare = yes
+	
+	potential = {
+		has_global_flag = zofe_automated_industries_activated
+		OR = {
+			is_country_type = ascended_empire
+			is_country_type = lost_empire
+		}
+	}
+	
+	weight_modifier = {
+		factor = 2
+		modifier = {
+			factor = 0.01
+			is_machine_empire = yes
+			NOR = { 
+				has_valid_civic = civic_machine_servitor 
+				has_valid_civic = civic_machine_assimilator 	
+				any_owned_planet = {
+					num_districts = { type = district_farming value > 0 }
+				}
+			}
+		}	
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_biology"
+			}			
+		}
+	}
+	
+	ai_weight = {
+		factor = 30
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+}
+
+##Consumer Goods
+tech_fe_opulence_central = {
+	cost = @fallentechcost
+	area = engineering
+	tier = @fallentechtier
+	category = { materials }	
+	prerequisites = { "tech_fe_affluence_center" "tech_lost_technologies_1" }
+	weight = @tier4weight1
+	is_rare = yes
+	
+	
+	potential = {
+		has_global_flag = zofe_automated_industries_activated
+		OR = {
+			is_country_type = ascended_empire
+			is_country_type = lost_empire
+		}
+		OR = {
+			is_gestalt = no
+			has_valid_civic = civic_machine_servitor
+		}
+	}
+	
+	weight_modifier = {
+		
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}			
+		}
+	}
+	
+	ai_weight = {
+		factor = 30
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+#Alloy
+tech_fe_autonomous_fabricator = {
+	cost = @fallentechcost
+	area = engineering
+	tier = @fallentechtier
+	category = { materials }	
+	prerequisites = { "tech_fe_nano_forge" "tech_lost_technologies_1" }
+	weight = @tier4weight1
+	is_rare = yes
+	
+	potential = {
+		has_global_flag = zofe_automated_industries_activated
+		OR = {
+			is_country_type = ascended_empire
+			is_country_type = lost_empire
+		}
+	}
+	
+	weight_modifier = {
+		factor = 2
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}			
+		}
+	}
+	
+	ai_weight = {
+		factor = 30
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+###Lost Technologies: Ancient Weaponry
+tech_lost_technologies_2 = {
+	area = physics
+	cost = @tier4cost2
+	tier = 4
+	category = { computing }
+	weight = 0
+	is_rare = yes
+	
+	potential = {
+		has_global_flag = zofe_secrets_of_the_fallen_empires_activated
+	}
+	
+	modifier = {
+		all_technology_research_speed = 0.05
+	}
+	
+	weight_modifier = {	
+		modifier = {
+			factor = 0
+			NOR = { 
+				is_country_type = lost_empire 
+				is_country_type = ascended_empire 
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 10		#Ancient Weaponry is GOOD
+	}
+}
+
+###Lost Technologies: Superior Designs
+tech_lost_technologies_3 = {
+	area = engineering
+	cost = @tier4cost2
+	tier = 4
+	category = { voidcraft }
+	weight = 0
+	is_rare = yes
+	
+	potential = {
+		has_global_flag = zofe_secrets_of_the_fallen_empires_activated
+	}
+	
+	modifier = {
+		starbase_shipyard_build_speed_mult = 0.05
+	}
+	
+	weight_modifier = {	
+		modifier = {
+			factor = 0
+			NOR = { 
+				is_country_type = lost_empire 
+				is_country_type = ascended_empire 
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 10		#Ancient Weaponry is GOOD
+	}
+}

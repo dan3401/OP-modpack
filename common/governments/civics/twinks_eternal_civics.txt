@@ -1,0 +1,236 @@
+civic_eternal_stability = {
+	modification = no
+	potential = {
+		authority = { NOT = { value = auth_corporate
+											
+		} }
+		ethics = { 
+			NOR = {
+				value = ethic_gestalt_consciousness
+				value = ethic_egalitarian
+				value = ethic_fanatic_egalitarian  
+				value = ethic_authoritarian  
+				value = ethic_fanatic_authoritarian
+				value = ethic_spiritualist 
+				value = ethic_materialist 
+				value = ethic_xenophile 
+				value = ethic_xenophobe
+				value = ethic_militarist
+				value = ethic_pacifist
+				value = ethic_fanatic_militarist
+				value = ethic_fanatic_pacifist
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			OR = {
+				value = ethic_fanatic_spiritualist
+				value = ethic_fanatic_materialist
+				
+				value = ethic_fanatic_xenophile
+				value = ethic_fanatic_xenophobe
+			}
+		}
+	}
+	random_weight = { base = 0 }
+	description = ETERNAL_EMPIRE
+	modifier = { 
+		
+
+
+	}
+	
+}
+
+civic_keepers = {
+	
+	modification = yes
+	potential = {
+		authority = { NOT = { value = auth_corporate
+											
+		} }
+		ethics = { 
+			NOR = {
+				
+				value = ethic_egalitarian
+				value = ethic_fanatic_egalitarian  
+				value = ethic_authoritarian  
+				value = ethic_fanatic_authoritarian
+				value = ethic_spiritualist 
+				value = ethic_materialist 
+				value = ethic_xenophile 
+				value = ethic_xenophobe
+				value = ethic_militarist
+				value = ethic_pacifist
+				value = ethic_fanatic_militarist
+				value = ethic_fanatic_pacifist
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			OR = {
+				value = ethic_fanatic_spiritualist
+				value = ethic_fanatic_materialist
+				value = ethic_fanatic_xenophile
+				value = ethic_fanatic_xenophobe
+			}
+		}
+	}
+	random_weight = { base = 0 }
+	description = ETERNAL_EMPIRE
+	modifier = {
+		
+	}
+	
+}
+
+civic_chosen_of_eternos = {
+	pickable_at_start = no
+	potential = {
+		authority = { NOT = { value = auth_corporate
+										
+		} }
+	
+	ethics = { 
+			NOR = {
+				
+				value = ethic_egalitarian
+				value = ethic_fanatic_egalitarian  
+				value = ethic_authoritarian  
+				value = ethic_fanatic_authoritarian
+				value = ethic_spiritualist 
+				value = ethic_materialist 
+				value = ethic_xenophile 
+				value = ethic_xenophobe
+				value = ethic_militarist
+				value = ethic_pacifist
+				value = ethic_fanatic_militarist
+				value = ethic_fanatic_pacifist
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			value = ethic_ee_enlightened
+		}
+	}
+	random_weight = { base = 0 }
+	modifier = {
+		country_produces_mult = 2
+		all_technology_research_speed = 2
+		country_unity_produces_mult = 2
+		country_virtue_produces_mult = 2
+		country_eternium_produces_mult = 2
+		leader_skill_levels = 10
+		leaders_cost_mult = -10.00
+		army_experience_gain_mult = 10.0
+		ship_experience_gain_mult = 10.0
+		planets_produces_mult = 10.00
+		species_leader_exp_gain = 100.0
+		army_damage_mult = 5.0
+		army_health = 10.0
+		pop_environment_tolerance = 5.0
+		planet_pops_upkeep_mult = -5.0
+		pop_resettlement_cost_mult = -5.00
+		pop_housing_usage_mult = -5.00
+		modify_species_cost_mult = -10.00
+		planet_jobs_produces_mult = 10.00
+		pop_growth_speed = 25.00
+		pop_assembly_speed = 25.00
+		planets_produces_mult = 5.00
+		army_morale = 25.0
+		army_damage_mult = 2.5
+		army_health = 5.0
+		leader_skill_levels = 10
+		species_leader_exp_gain = 50.0
+		modify_species_cost_mult = -1.00
+		planet_jobs_produces_mult = 5.00
+		starbase_upgrade_cost_mult = -0.50
+		starbase_upgrade_speed_mult = 0.50
+		starbase_shipyard_build_cost_mult = -0.50
+		country_ship_upgrade_cost_mult = -1.0
+		planet_colony_development_speed_mult = 10.0
+		armies_cost_mult = -0.50
+		pop_government_ethic_attraction = 10.0
+		country_base_influence_produces_add = 100
+		
+		country_command_limit_add = 1000
+		country_naval_cap_mult = 10.00
+	}
+	
+}
+
+
+
+civic_ee_subjugater = {
+	pickable_at_start = no
+	modification = no
+	potential = {
+		authority = { NOT = { value = auth_corporate
+									
+		} }
+		ethics = { 
+			NOR = {
+				value = ethic_egalitarian
+				value = ethic_fanatic_egalitarian  
+				value = ethic_authoritarian  
+				value = ethic_fanatic_authoritarian
+				value = ethic_spiritualist 
+				value = ethic_materialist 
+				value = ethic_xenophile 
+				value = ethic_xenophobe
+				value = ethic_militarist
+				value = ethic_pacifist
+				value = ethic_fanatic_militarist
+				value = ethic_fanatic_pacifist
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			OR = {
+				value = ethic_fanatic_spiritualist
+				value = ethic_fanatic_materialist
+				value = ethic_fanatic_xenophile
+				value = ethic_fanatic_xenophobe
+			}
+		}
+	}
+	random_weight = { base = 0 }
+	description = ETERNAL_EMPIRE
+	modifier = {
+		
+	}
+	
+}
+
+origin_eternal_empire = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_elder_race.dds"
+	picture = GFX_origin_eternal_empire
+
+	playable = {
+		always = yes
+	}
+
+	possible = {
+		civics = {
+			OR = { 
+			value = civic_keepers
+			value = civic_eternal_stability
+			}
+		}
+	}
+
+	modifier = {
+		all_technology_research_speed = 1
+	}
+
+
+	random_weight = {
+		base = 0
+	}
+}
+

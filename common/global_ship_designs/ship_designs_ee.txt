@@ -1,0 +1,381 @@
+ship_design = {
+    name = "EE_BC_ETER"
+    ship_size = battleship
+	
+    section = {
+		template = "ETERNIUM_BC_BOW_2"
+        slot = "bow"
+    
+
+	component = {
+		slot = "TITANIC_01"
+        template = "GODRAY_PERDITION_BEAM_EE"
+
+	}
+		
+	component = {
+		slot = "EXTRA_LARGE_01"
+		template = "GODRAY_PARTICLE_LANCE_EE"
+		
+	
+	}
+
+	component = {
+		slot = "EXTRA_LARGE_02"
+		
+		template = "GODRAY_PARTICLE_LANCE_EE"
+		
+	}
+	
+	component = {
+		slot = "EXTRA_LARGE_03"
+		
+		template = "GODRAY_PARTICLE_LANCE_EE"
+		
+	}
+	
+	component = {
+		slot = "EXTRA_LARGE_04"
+		
+        template = "GODRAY_PARTICLE_LANCE_EE"
+		
+	}
+	
+	component = {
+		slot = "EXTRA_LARGE_05"
+		
+        template = "GODRAY_PARTICLE_LANCE_EE"
+	
+	}
+	component = {
+		slot = "LARGE_GUN_01"
+		
+		template = "GODRAY_LASER_EE_BIG"
+		
+	}
+
+	component = {
+		slot = "LARGE_GUN_02"
+		
+        template = "GODRAY_LASER_EE_BIG"
+		
+	}
+
+	component = {
+		slot = "LARGE_GUN_03"
+		
+        template = "GODRAY_LASER_EE_BIG"
+		
+	}
+	component = {
+		slot = "LARGE_GUN_04"
+		
+        template = "GODRAY_LASER_EE_BIG"
+		
+	}
+
+	component = {
+		slot = "LARGE_GUN_05"
+		
+        template = "GODRAY_LASER_EE_BIG"
+		
+	}
+
+	component = {
+		slot = "LARGE_GUN_06"
+		
+        template = "GODRAY_LASER_EE_BIG"
+		
+    }
+    
+    component = {
+        slot = "LARGE_UTILITY_1"
+        template = "LARGE_GODRAY_ARMOR_EE"
+    }
+    component = {
+        slot = "LARGE_UTILITY_2"
+        template = "LARGE_GODRAY_ARMOR_EE"
+    }
+    component = {
+        slot = "LARGE_UTILITY_3"
+        template = "LARGE_GODRAY_ARMOR_EE"
+    }
+    component = {
+        slot = "LARGE_UTILITY_4"
+        template = "LARGE_GODRAY_ARMOR_EE"
+    }
+    component = {
+        slot = "LARGE_UTILITY_5"
+        template = "LARGE_GODRAY_ARMOR_EE"
+    }
+    component = {
+        slot = "LARGE_UTILITY_6"
+        template = "LARGE_GODRAY_ARMOR_EE"
+    }
+    component = {
+        slot = "LARGE_UTILITY_7"
+        template = "LARGE_GODRAY_ARMOR_EE"
+    }
+    component = {
+        slot = "LARGE_UTILITY_8"
+        template = "LARGE_GODRAY_ARMOR_EE"
+    }
+	component = {
+        slot = "LARGE_UTILITY_9"
+        template = "LARGE_GODRAY_ARMOR_EE"
+    }
+    component = {
+        slot = "AUX_UTILITY_1"
+        template = "ETERNAL_REPAIR_COUNTERMEASURES_EE"
+    }
+    component = {
+        slot = "AUX_UTILITY_2"
+        template = "ETERNAL_WEAPONS_CORE_EE"
+    }	
+    component = {
+        slot = "AUX_UTILITY_3"
+        template = "ETERNAL_WEAPONS_CORE_EE"
+    }  
+
+    }
+
+    section = {
+		template = "CONTINUUM_BC_MID_1"
+        slot = "mid"
+    
+		
+	component = {
+		slot = "LARGE_GUN_01"
+		
+        template = "GODRAY_LASER_EE_BIG"
+		
+	}
+
+	component = {
+		slot = "LARGE_GUN_02"
+		
+        template = "GODRAY_LASER_EE_BIG"
+		
+	}
+
+	component = {
+		slot = "LARGE_GUN_03"
+		
+        template = "GODRAY_LASER_EE_BIG"
+		
+	}
+
+	component = {
+		slot = "LARGE_GUN_04"
+		
+        template = "GODRAY_LASER_EE_BIG"
+		
+	}
+	component = {
+		slot = "LARGE_GUN_05"
+		
+        template = "GODRAY_LASER_EE_BIG"
+		
+	}
+	component = {
+		slot = "LARGE_GUN_06"
+		
+        template = "GODRAY_LASER_EE_BIG"
+		
+	}
+
+	component = {
+		slot = "LARGE_GUN_07"
+		
+        template = "GODRAY_LASER_EE_BIG"
+	}
+
+	component = {
+		slot = "LARGE_GUN_08"
+		
+        template = "GODRAY_LASER_EE_BIG"
+		
+	}
+
+	component = {
+		slot = "LARGE_GUN_09"
+		
+        template = "GODRAY_LASER_EE_BIG"
+		
+	}	
+    component = {
+        slot = "LARGE_UTILITY_1"
+        template = "LARGE_GODRAY_ARMOR_EE"
+    }
+    component = {
+        slot = "LARGE_UTILITY_2"
+        template = "LARGE_GODRAY_ARMOR_EE"
+    }
+    component = {
+        slot = "LARGE_UTILITY_3"
+        template = "LARGE_GODRAY_ARMOR_EE"
+    }
+    component = {
+        slot = "LARGE_UTILITY_4"
+        template = "LARGE_GODRAY_ARMOR_EE"
+    }
+    component = {
+        slot = "LARGE_UTILITY_5"
+        template = "LARGE_GODRAY_ARMOR_EE"
+    }
+    component = {
+        slot = "LARGE_UTILITY_6"
+        template = "LARGE_GODRAY_ARMOR_EE"
+    }
+    component = {
+        slot = "LARGE_UTILITY_7"
+        template = "LARGE_GODRAY_ARMOR_EE"
+    }
+    component = {
+        slot = "LARGE_UTILITY_8"
+        template = "LARGE_GODRAY_ARMOR_EE"
+    }
+	component = {
+        slot = "LARGE_UTILITY_9"
+        template = "LARGE_GODRAY_ARMOR_EE"
+    }
+    component = {
+        slot = "AUX_UTILITY_1"
+        template = "ETERNAL_REPAIR_COUNTERMEASURES_EE"
+    }
+    component = {
+        slot = "AUX_UTILITY_2"
+        template = "ETERNAL_WEAPONS_CORE_EE"
+    }	
+    component = {
+        slot = "AUX_UTILITY_3"
+        template = "ETERNAL_WEAPONS_CORE_EE"
+    } 
+    }   
+	
+	
+
+	section = {
+		template = "CONTINUUM_BC_STERN_2"
+        slot = stern
+    
+	
+	component = {
+		slot = "TORPEDO_01"
+		
+		template = "GODRAY_SKY_BEAM_EE_SMALL"
+		
+	}
+	
+	component = {
+		slot = "TORPEDO_02"
+		
+		template = "GODRAY_SKY_BEAM_EE_SMALL"
+		
+	}
+
+	component = {
+		slot = "TORPEDO_03"
+		
+		template = "GODRAY_SKY_BEAM_EE_SMALL"
+		
+	}
+	
+	component = {
+		slot = "TORPEDO_04"
+		
+		template = "GODRAY_SKY_BEAM_EE_SMALL"
+		
+	}
+
+	component = {
+		slot = "TORPEDO_05"
+		
+		template = "GODRAY_SKY_BEAM_EE_SMALL"
+		
+	}
+	
+	component = {
+		slot = "TORPEDO_06"
+		
+		template = "GODRAY_SKY_BEAM_EE_SMALL"
+		
+	}
+
+	component = {
+		slot = "TORPEDO_07"
+		
+		template = "GODRAY_SKY_BEAM_EE_SMALL"
+		
+	}
+	
+	component = {
+		slot = "TORPEDO_08"
+		
+		template = "GODRAY_SKY_BEAM_EE_SMALL"
+		
+	}
+
+	component = {
+		slot = "TORPEDO_09"
+		
+		template = "GODRAY_SKY_BEAM_EE_SMALL"
+		
+	}
+	
+    component = {
+        slot = "LARGE_UTILITY_1"
+        template = "LARGE_GODRAY_ARMOR_EE"
+    }
+    component = {
+        slot = "LARGE_UTILITY_2"
+        template = "LARGE_GODRAY_ARMOR_EE"
+    }
+    component = {
+        slot = "LARGE_UTILITY_3"
+        template = "LARGE_GODRAY_ARMOR_EE"
+    }
+    component = {
+        slot = "LARGE_UTILITY_4"
+        template = "LARGE_GODRAY_ARMOR_EE"
+    }
+    component = {
+        slot = "LARGE_UTILITY_5"
+        template = "LARGE_GODRAY_ARMOR_EE"
+    }
+    component = {
+        slot = "LARGE_UTILITY_6"
+        template = "LARGE_GODRAY_ARMOR_EE"
+    }
+    component = {
+        slot = "LARGE_UTILITY_7"
+        template = "LARGE_GODRAY_ARMOR_EE"
+    }
+    component = {
+        slot = "LARGE_UTILITY_8"
+        template = "LARGE_GODRAY_ARMOR_EE"
+    }
+	component = {
+        slot = "LARGE_UTILITY_9"
+        template = "LARGE_GODRAY_ARMOR_EE"
+    }
+    component = {
+        slot = "AUX_UTILITY_1"
+        template = "ETERNAL_REPAIR_COUNTERMEASURES_EE"
+    }
+    component = {
+        slot = "AUX_UTILITY_2"
+        template = "ETERNAL_WEAPONS_CORE_EE"
+    }	
+    component = {
+        slot = "AUX_UTILITY_3"
+        template = "ETERNAL_WEAPONS_CORE_EE"
+    } 
+    }
+
+    required_component="EE_EENSOR_SHIP"
+	required_component="ETERNAL_HYPERCHARGED_JUMPER_EE"
+	required_component="EE_DEFENSIVE_COMBAT_COMPUTER_BATTLECRUISER"
+	required_component="BATTLESHIP_SHIP_THRUSTER_EE"
+	required_component="ETERNIUM_REACTOR_EE"
+}

@@ -1,0 +1,309 @@
+# File is named with an ! so that it appears above vanilla policies.
+pioneer_efforts = {
+	potential = {
+		has_tradition = tr_expansion_colonization_fever
+	}
+
+	option = {
+		name = pioneer_efforts_outposts
+
+		policy_flags = {
+			pioneer_efforts_outposts
+		}
+
+		modifier = {
+			colony_start_num_pops_add = -1
+			planet_colony_development_speed_mult = 1.5
+			ship_colonizer_cost_mult = -0.50
+		}
+
+		valid = {
+			custom_tooltip = {
+				fail_text = "pifer_colonization_still_underway"
+				OR = {
+					has_policy_flag = pioneer_efforts_outposts
+					NOT = {
+						any_owned_planet = {
+							is_under_colonization = yes
+						}
+					}
+				}
+			}
+			custom_tooltip = {
+				fail_text = "pifer_has_colony_ships"
+				OR = {
+					has_policy_flag = pioneer_efforts_outposts
+					NOT = {
+						any_owned_fleet = {
+							any_owned_ship = {
+								is_ship_size = colonizer
+							}
+						}
+					}
+				}
+			}
+		}
+
+		AI_weight = {
+			weight = 9
+			modifier = {
+				factor = 1.5 # ~14
+				has_monthly_income = {
+					resource = alloys
+					value < 10
+				}
+			}
+			modifier = {
+				factor = 0
+				ruler = {
+					has_trait = trait_ruler_expansionist
+				}
+			}
+		}
+	}
+
+	option = {
+		name = pioneer_efforts_default
+
+		policy_flags = {
+			pioneer_efforts_default
+		}
+
+		modifier = {
+			planet_colony_development_speed_mult = 0.5
+		}
+
+		valid = {
+			custom_tooltip = {
+				fail_text = "pifer_colonization_still_underway"
+				OR = {
+					has_policy_flag = pioneer_efforts_default
+					NOT = {
+						any_owned_planet = {
+							is_under_colonization = yes
+						}
+					}
+				}
+			}
+			custom_tooltip = {
+				fail_text = "pifer_has_colony_ships"
+				OR = {
+					has_policy_flag = pioneer_efforts_default
+					NOT = {
+						any_owned_fleet = {
+							any_owned_ship = {
+								is_ship_size = colonizer
+							}
+						}
+					}
+				}
+			}
+		}
+
+		AI_weight = {
+			weight = 20
+			modifier = {
+				factor = 0.4 # 8
+				years_passed > 0
+			}
+		}
+	}
+
+	option = {
+		name = pioneer_efforts_expanded
+
+		policy_flags = {
+			pioneer_efforts_expanded
+		}
+
+		modifier = {
+			colony_start_num_pops_add = 1 # 1+2 = 3
+			ship_colonizer_cost_mult = 0.5 # 150%
+		}
+
+		valid = {
+			custom_tooltip = {
+				fail_text = "pifer_colonization_still_underway"
+				OR = {
+					has_policy_flag = pioneer_efforts_expanded
+					NOT = {
+						any_owned_planet = {
+							is_under_colonization = yes
+						}
+					}
+				}
+			}
+			custom_tooltip = {
+				fail_text = "pifer_has_colony_ships"
+				OR = {
+					has_policy_flag = pioneer_efforts_expanded
+					NOT = {
+						any_owned_fleet = {
+							any_owned_ship = {
+								is_ship_size = colonizer
+							}
+						}
+					}
+				}
+			}
+		}
+
+		AI_weight = {
+			weight = 10
+		}
+	}
+
+	option = {
+		name = pioneer_efforts_starborn_destiny
+
+		policy_flags = {
+			pioneer_efforts_starborn_destiny
+		}
+
+		modifier = {
+			colony_start_num_pops_add = 2 # 2+2 = 4
+			planet_colony_development_speed_mult = -0.50
+			ship_colonizer_cost_mult = 1 # 200%
+		}
+
+		AI_weight = {
+			weight = 20
+			modifier = {
+				factor = 10
+				owner_main_species = {
+					has_trait = trait_presapient_starborn
+				}
+				# Just for a bit of flavour :)
+			}
+		}
+
+		valid = {
+			custom_tooltip = {
+				fail_text = "pifer_colonization_still_underway"
+				OR = {
+					has_policy_flag = pioneer_efforts_starborn_destiny
+					NOT = {
+						any_owned_planet = {
+							is_under_colonization = yes
+						}
+					}
+				}
+			}
+			custom_tooltip = {
+				fail_text = "pifer_has_colony_ships"
+				OR = {
+					has_policy_flag = pioneer_efforts_starborn_destiny
+					NOT = {
+						any_owned_fleet = {
+							any_owned_ship = {
+								is_ship_size = colonizer
+							}
+						}
+					}
+				}
+			}
+		}
+
+		prerequisites = {
+			tech_cryostasis_1
+		}
+	}
+
+	option = {
+		name = pioneer_efforts_reach_for_the_stars
+
+		policy_flags = {
+			pioneer_efforts_reach_for_the_stars
+		}
+
+		modifier = {
+			colony_start_num_pops_add = 4 # 2+4 = 6
+			planet_colony_development_speed_mult = -1.00
+			ship_colonizer_cost_mult = 2 # 300%
+		}
+
+		valid = {
+			custom_tooltip = {
+				fail_text = "pifer_colonization_still_underway"
+				OR = {
+					has_policy_flag = pioneer_efforts_reach_for_the_stars
+					NOT = {
+						any_owned_planet = {
+							is_under_colonization = yes
+						}
+					}
+				}
+			}
+			custom_tooltip = {
+				fail_text = "pifer_has_colony_ships"
+				OR = {
+					has_policy_flag = pioneer_efforts_reach_for_the_stars
+					NOT = {
+						any_owned_fleet = {
+							any_owned_ship = {
+								is_ship_size = colonizer
+							}
+						}
+					}
+				}
+			}
+		}
+
+		AI_weight = {
+			weight = 30
+		}
+
+		prerequisites = {
+			tech_cryostasis_2
+		}
+	}
+
+	option = {
+		name = pioneer_efforts_yuhtaan_cryo_core
+
+		policy_flags = {
+			pioneer_efforts_yuhtaan_cryo_core
+		}
+
+		modifier = {
+			colony_start_num_pops_add = 2
+			ship_colonizer_cost_mult = 0.20
+		}
+
+		potential = {
+			has_relic = r_cryo_core
+		}
+
+		valid = {
+			custom_tooltip = {
+				fail_text = "pifer_colonization_still_underway"
+				OR = {
+					has_policy_flag = pioneer_efforts_yuhtaan_cryo_core
+					NOT = {
+						any_owned_planet = {
+							is_under_colonization = yes
+						}
+					}
+				}
+			}
+			custom_tooltip = {
+				fail_text = "pifer_has_colony_ships"
+				OR = {
+					has_policy_flag = pioneer_efforts_yuhtaan_cryo_core
+					NOT = {
+						any_owned_fleet = {
+							any_owned_ship = {
+								is_ship_size = colonizer
+							}
+						}
+					}
+				}
+			}
+		}
+
+		AI_weight = {
+			weight = 40
+			# it's just better overall, starborn presapient species will still prefer starborn destiny
+		}
+	}
+}

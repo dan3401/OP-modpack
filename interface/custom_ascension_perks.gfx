@@ -1,0 +1,168 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_ap_tw_awakening"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_tw_awakening.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ap_war_heaven"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_tw_awakening.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ap_tw_malfunction"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_tw_malfunction.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ap_tw_final_defense_protocols"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_tw_final_defense_protocol.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ap_tw_communication"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_tw_communication.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ap_tw_red"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_tw_red.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ap_tw_purple"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_tw_purple.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ap_tw_green"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_tw_green.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ap_tw_dark_blue"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_tw_dark_blue.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ap_tw_orange"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_tw_orange.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ap_tw_white"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_tw_white.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ap_tw_spiritualist"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_tw_purple.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ap_tw_materialist"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_tw_communication.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ap_tw_xenophobe"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_tw_red.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ap_tw_xenophile"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_tw_pink.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ap_tw_pacifist"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_tw_green.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ap_tw_militarist"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_tw_orange.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ap_tw_eternos"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_tw_eternos.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ap_tw_eternal_transcendence"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_tw_eternal_transcendence.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ap_tw_mechanist_path"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_tw_mechanist_path.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ap_tw_mechanist"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_tw_mechanist.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ap_tw_virtue"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_tw_virtue.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ap_tw_bastion"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_tw_bastion.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ap_tw_eternium"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_tw_eternium.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ap_tw_bothpaths"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_tw_bothpaths.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ap_tw_mechanist_path"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_tw_mechanist_path.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ap_tw_mechanist_path"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_tw_mechanist_path.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ap_tw_great_ascension"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_tw_great_ascension.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ap_tw_spark_of_divinity"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_tw_spark_of_divinity.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ap_tw_preserver"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_tw_preserver.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+        name = "GFX_charon_gate_background"
+        texturefile = "gfx/event_pictures/charon_gate.dds"
+    }
+	spriteType = {
+        name = "GFX_psionic_ee_system"
+        texturefile = "gfx/event_pictures/psionic_ee_system.dds"
+    }
+
+	spriteType = {
+		name = "GFX_origin_eternal_empire"
+		texturefile = "gfx/event_pictures/origin_eternal.dds"
+		alwaystransparent = yes
+	}
+	
+}

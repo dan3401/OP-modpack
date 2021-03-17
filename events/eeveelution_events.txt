@@ -1,0 +1,198 @@
+namespace = eevent
+
+#################################
+#
+# Eeveelution Events
+# by Enolether
+# Eevent.1 ~ eevent.2
+#
+#################################
+
+### Stranded Eeveelution Scientist ###
+ship_event = {
+	id = eevent.1
+	title = "eevent.1.name"
+	desc = "eevent.1.desc"
+	picture = GFX_evt_exploding_ship
+	show_sound = event_scanner
+	location = from
+
+	is_triggered_only = yes
+
+	immediate = {
+		save_global_event_target_as = stranded_eeveelution_scientist_science_ship
+
+		create_species = {
+			name = nucleon
+			class = Pokemon
+			portrait = "EOEhezi"
+			namelist = "MAM1"
+			traits = {
+				
+				trait = "trait_extremly_cute"
+								trait = "trait_pokeball_adaptability"					
+			}
+			effect = {
+				save_event_target_as = stranded_eeveelution_scientist_species
+			}
+		}
+		create_country = {
+			name = Eigram
+			type = faction
+			flag = {
+    		    icon = {
+    		        category = "special"
+    		        file = "unknown.dds"
+    		    }
+    		    background = {
+    		        category = "backgrounds"
+    		        file = "00_solid.dds"
+    		    }
+    		    colors = {
+    		        "blue"
+    		        "blue"
+    		        "null"
+    		        "null"
+    		    }
+    		}
+    		effect = {
+    			save_event_target_as = stranded_eeveelution_scientist_country
+    		}
+    	}
+		event_target:stranded_eeveelution_scientist_country = {
+			create_leader = {
+				class = scientist
+				species = event_target:stranded_eeveelution_scientist_species
+				name = Hezi
+				skill = 7
+				event_leader = yes
+				leader_age_min = 18
+				leader_age_max = 20
+				traits = {
+					trait = "leader_trait_scientist_nuclear_type"
+					trait = "leader_trait_scientist_focus_on_research"
+								trait = "leader_trait_scientist_master_biology"
+		
+					trait = "leader_trait_curator"
+				}
+			}
+		}
+		last_created_leader = {
+			set_is_female = yes
+			save_global_event_target_as = stranded_eeveelution_scientist_leader
+			exile_leader_as = stranded_eeveelution_scientist_leader
+		}
+	}
+
+	option = { # Granted
+		name = eevent.1.a
+		custom_tooltip = eevent.1.a.tooltip
+
+		hidden_effect = {
+			owner = {
+				clone_leader = {
+					target = event_target:stranded_eeveelution_scientist_leader
+					class = scientist
+					effect = {
+						save_global_event_target_as = stranded_eeveelution_scientist_leader_clone
+					}
+				}
+				country_event = { id = eevent.2 days = 60 }
+			}
+			event_target:stranded_eeveelution_scientist_leader = {
+				kill_leader = { type = scientist show_notification = no }
+			}
+		}
+	}
+
+	option = { # No. Leave her.
+		name = eevent.1.b
+		custom_tooltip = eevent.1.b.tooltip
+
+		random_list = {
+			1 = {
+				leader = { add_trait = leader_trait_adaptable }
+			}
+			1 = {
+				leader = { add_trait = leader_trait_paranoid }
+			}
+		}
+
+		hidden_effect = {
+			event_target:stranded_eeveelution_scientist_leader = {
+				kill_leader = { type = scientist show_notification = no }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = eevent.2
+	title = "eevent.2.name"
+	desc = "eevent.2.desc"
+	picture = GFX_evt_physics_research
+	show_sound = event_scanner
+	location = from
+
+	trigger = {
+		exists = event_target:stranded_eeveelution_scientist_leader_clone
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = EXCELLENT
+		custom_tooltip = eevent.2.a.tooltip
+
+		hidden_effect = {
+			set_variable = { which = picked_tech value = 0 }
+			if = {
+				limit = {
+					has_technology = tech_genome_mapping
+					has_technology = tech_gene_tailoring
+					has_technology = tech_sensors_3
+				}
+				add_monthly_resource_mult = {
+					resource = physics_research
+					value = @tier4researchreward
+					min = @tier4researchmin
+					max = @tier4researchmax
+				}
+			}
+			else = {
+				while = {
+					limit = {
+						check_variable = {
+							which = picked_tech
+							value < 2
+						}
+					}
+					random_list = {
+						1 = {
+							modifier = {
+								factor = 0
+								has_technology = tech_genome_mapping
+							}
+							give_technology = { tech = tech_genome_mapping }
+						}
+						1 = {
+							modifier = {
+								factor = 0
+								has_technology = tech_gene_tailoring
+							}
+							give_technology = { tech = tech_gene_tailoring }
+						}
+						1 = {
+							modifier = {
+								factor = 0
+								has_technology = tech_sensors_3
+							}
+							give_technology = { tech = tech_sensors_3 }
+						}
+					}
+					change_variable = { which = "picked_tech" value = 1 }
+				}
+			}
+		}
+	}
+}

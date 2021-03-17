@@ -1,0 +1,130 @@
+minerals_expenditure_ships = {
+	resource = minerals 
+	type = expenditure
+	category = ships
+	
+	potential = {
+		always = yes
+	}
+	
+	fraction = {
+		weight = 0.20
+	}	
+}
+
+minerals_expenditure_ship_upgrades = {
+	resource = minerals 
+	type = expenditure
+	category = ship_upgrades
+	
+	potential = {
+		always = yes
+	}
+	
+	fraction = {
+		weight = 0.12
+	}	
+}
+
+
+minerals_expenditure_starbases = {
+	resource = minerals 
+	type = expenditure
+	category = starbases
+	
+	potential = {
+			is_country_type = eternal_empire
+	}
+	
+	fraction = {
+		weight = 0.35
+	}	
+}
+
+minerals_expenditure_starbases_fallen_empires = {
+	resource = minerals 
+	type = expenditure
+	category = starbases
+	
+	potential = {
+		is_country_type = fallen_empire
+	}
+	
+	fraction = {
+		weight = 0.2
+	}	
+}
+
+minerals_expenditure_starbases_expand = {
+	resource = minerals 
+	type = expenditure
+	category = starbases
+	
+	potential = {
+		has_ai_expansion_plan = yes
+		highest_threat < 50
+		NOT = {
+			is_country_type = fallen_empire
+			is_country_type = awakened_fallen_empire
+		}
+	}
+	
+	fraction = {
+		weight = 0.8
+	}	
+}
+
+
+minerals_expenditure_colonies_expand = {
+	resource = minerals 
+	type = expenditure
+	category = colonies
+	
+	potential = {
+		ai_colonize_plans > 0
+		has_resource = { type = food amount > 400 }
+		has_monthly_income = {
+			resource = food
+			value > 0
+		}
+	}
+	
+	fraction = {
+		weight = 1.2
+	}
+
+	static_max = {
+		base = 300
+	}
+}
+
+############
+## Upkeep ##
+############
+minerals_upkeep_buffer = {	# Buffer, will not be spent
+	resource = minerals 
+	type = upkeep
+	category = buffer
+	
+	potential = {
+		always = yes
+	}
+	
+	fraction = {
+		weight = 0.5
+	}	
+}
+
+minerals_upkeep_ships = {
+	resource = minerals 
+	type = upkeep
+	category = ships
+	
+	potential = {
+		always = yes
+	}
+	
+	fraction = {
+		weight = 0.5
+	}	
+}

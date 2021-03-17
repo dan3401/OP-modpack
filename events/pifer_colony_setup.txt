@@ -1,0 +1,64 @@
+namespace = pifer
+
+planet_event = {
+	id = pifer.0
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		remove_planet_flag = pifer_colony_ship_t1 # Outposts
+		remove_planet_flag = pifer_colony_ship_t2
+		remove_planet_flag = pifer_colony_ship_t3
+		remove_planet_flag = pifer_colony_ship_t4 # 
+		remove_planet_flag = pifer_colony_ship_t45 # Yuht
+		remove_planet_flag = pifer_colony_ship_t5 # Grasp the stars
+		if = {
+			limit = {
+				owner = {
+					has_policy_flag = pioneer_efforts_outposts
+				}
+			}
+			set_planet_flag = pifer_colony_ship_t1
+		}
+		if = {
+			limit = {
+				owner = {
+					has_policy_flag = pioneer_efforts_default
+				}
+			}
+			set_planet_flag = pifer_colony_ship_t2
+		}
+		if = {
+			limit = {
+				owner = {
+					has_policy_flag = pioneer_efforts_expanded
+				}
+			}
+			set_planet_flag = pifer_colony_ship_t3
+		}
+		if = {
+			limit = {
+				owner = {
+					has_policy_flag = pioneer_efforts_starborn_destiny
+				}
+			}
+			set_planet_flag = pifer_colony_ship_t4
+		}
+		if = {
+			limit = {
+				owner = {
+					has_policy_flag = pioneer_efforts_reach_for_the_stars
+				}
+			}
+			set_planet_flag = pifer_colony_ship_t5
+		}
+		if = {
+			limit = {
+				owner = {
+					has_policy_flag = pioneer_efforts_yuhtaan_cryo_core
+				}
+			}
+			set_planet_flag = pifer_colony_ship_t45
+		}
+	}
+}

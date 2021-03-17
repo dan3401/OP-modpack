@@ -1,0 +1,47 @@
+﻿l_braz_por:
+#{
+ # #######################
+ # Written by kngpig #
+ # #######################
+ #
+ # $tooltip$ , $VALUE$ (Putting up an existing localization line)
+ # £icon£ , £mod_job_industry_equipements_add£ (Putting up an icon)
+ # §colour§ , §R(Red)§! (R, Y, E, H, S, B, G) (! Returns to default) (R Red) (Y Yellow) (B Blue) (G Green)
+ # [(Scope.Call)] , [contact_empire.GetName] (You can have multiple scope into a specific thing based on event, there is also specific scopes the game uses. Example: primitive_civ, conquered_primitive_country, LastKilledCountryName, malfunctioning_leader)
+ # 
+ # #######################
+ #
+ # #######################
+#}
+
+ # ###################################
+ # Ship Utilities
+ # ###################################
+NANITE_ARMOR:0 "Armadura de Nnites"
+NANITE_ARMOR_DESC:0 "Nanites que moldam automaticamente suas formas a qualquer momento que repelem ataques de maneira quase perfeita."
+
+SMALL_NANITE_ARMOR:0 "Armadura pequena de Nanines"
+MEDIUM_NANITE_ARMOR:0 "Armadura média de Nanites"
+LARGE_NANITE_ARMOR:0 "Armadura grande de Nanites"
+
+LIGHT_WALL_1:0 "Protótipo de armadura de luz"
+LIGHT_WALL_1_DESC:0 "Lasers que emitem luz sólida produzindo armadura de luz sólida."
+
+SMALL_LIGHT_WALL_1:0 "Protótipo de armadura de luz pequeno"
+MEDIUM_LIGHT_WALL_1:0 "Protótipo de armadura de luz médio"
+LARGE_LIGHT_WALL_1:0 "Protótipo de armadura de luz grande"
+
+LIGHT_WALL_2:0 "Armadura de luzes do Titan"
+LIGHT_WALL_2_DESC:0 "Uma grande compressão de lazers de fótons, combinando com qualquer coisa feita de matéria padrão, compostos ou não."
+
+SMALL_LIGHT_WALL_2:0 "Armadura de luzes do Titan pequeno"
+MEDIUM_LIGHT_WALL_2:0 "Armadura de luzes do Titan médio"
+LARGE_LIGHT_WALL_2:0 "Armadura de luzes do Titan grande"
+
+LIGHT_WALL_3:0 "Armadura de fóton solar"
+LIGHT_WALL_3_DESC:0 "Armadura de fóton puro que fazem as coisas não apenas ricochetearem, mas vaporizar ao toque."
+
+SMALL_LIGHT_WALL_3:0 "Armadura de fóton solar pequeno"
+MEDIUM_LIGHT_WALL_3:0 "Armadura de fóton solar médio"
+LARGE_LIGHT_WALL_3:0 "Armadura de fóton solar grande"
+ 

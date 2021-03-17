@@ -1,0 +1,174 @@
+ethic_ee_enlightened = {
+	cost = 3
+	category = "col"
+	category_value = 1
+	use_for_pops = no
+	country_modifier = {
+		country_base_unity_produces_add = 20000
+	}	
+
+	
+	random_weight = {
+		value = 0
+	}
+	
+
+	
+	country_attraction = {
+		value = 1
+		modifier = {
+			factor = 0
+			NOT = { is_country_type = eternal_empire }
+		}	
+	}
+
+	# from = planet
+	pop_attraction = {
+		value = 1
+		modifier = {
+			factor = 0
+			NOT = { has_trait = trait_ascended }
+		}
+		modifier = {
+			factor = 0
+			has_trait = trait_hive_mind
+		}
+		modifier = {
+			factor = 5
+			has_trait = trait_ascended
+		}
+		modifier = {
+			factor = 0
+			is_robot_pop = yes
+		}
+		modifier = {
+			factor = 1.25
+			is_robot_pop = no
+			from = {
+				any_owned_pop = {
+					has_ethic = ethic_ee_enlightened
+				}
+			}
+		}		
+	}
+}
+
+
+ethic_ee_materialist = {
+	cost = 3
+	category = "col"
+	category_value = 1
+	use_for_pops = no
+	
+	country_modifier = {
+		country_base_unity_produces_add = 20000
+	}	
+
+	
+	random_weight = {
+		value = 0
+	}
+	
+
+	
+	country_attraction = {
+		value = 1
+		modifier = {
+			factor = 0
+			NOT = { is_country_type = eternal_empire }
+		}	
+	}
+
+	# from = planet
+	
+}
+
+
+ethic_ee_spiritualist = {
+	cost = 3
+	category = "col"
+	category_value = 1
+	use_for_pops = no
+	
+	country_modifier = {
+		country_base_unity_produces_add = 20000
+	}	
+
+	
+	random_weight = {
+		value = 0
+	}
+	
+
+	
+	country_attraction = {
+		value = 1
+		modifier = {
+			factor = 0
+			NOT = { is_country_type = eternal_empire }
+		}	
+	}
+
+	# from = planet
+	
+}
+
+
+ethic_ee_xenophile = {
+	cost = 3
+	category = "col"
+	category_value = 1
+	use_for_pops = no
+	
+	country_modifier = {
+		country_base_unity_produces_add = 20000
+	}	
+
+	
+	random_weight = {
+		value = 0
+	}
+	
+
+	
+	country_attraction = {
+		value = 1
+		modifier = {
+			factor = 0
+			NOT = { is_country_type = eternal_empire }
+		}	
+	}
+
+	# from = planet
+	
+}
+
+ethic_ee_xenophobe = {
+	cost = 3
+	category = "col"
+	category_value = 1
+	use_for_pops = no
+	
+	country_modifier = {
+		country_base_unity_produces_add = 20000
+	}	
+
+	
+	random_weight = {
+		value = 0
+	}
+	
+
+	
+	country_attraction = {
+		value = 1
+		modifier = {
+			factor = 0
+			NOT = { is_country_type = eternal_empire }
+		}	
+	}
+
+	# from = planet
+
+	
+}

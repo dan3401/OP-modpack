@@ -1,0 +1,46 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_ship_part_computer_eternium_defense"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_computer_eternium_defense.dds"		
+	}
+	spriteType = {
+		name = "GFX_ship_part_computer_eternium_offense"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_computer_eternium_offense.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_godray_armor"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_godray_armor.dds"		
+	}
+	spriteType = {
+		name = "GFX_ship_part_godray_lance"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_godray_lance.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_godray_laser"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_godray_laser.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_godray_pd"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_godray_pd.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_godray_titan_beam"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_godray_titan_beam.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_godray_sky_beam"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_godray_sky_beam.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_planet_killer_ee_gaia"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_godray_sky_beam.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_godray_gunship"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_godray_gunship.dds"
+	}
+	
+}
+
+
