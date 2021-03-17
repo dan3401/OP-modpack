@@ -983,20 +983,20 @@ guiTypes = {
 				}
 			}
 		}
-		# game time
+		####################
+		# Mod Buttons
+		####################
 		containerWindowType = {
-			name = "time_window"
-			position = { x = -204 y = 0 }
-			size = { width = 212 height = 46 }
+			name = "mod_buttons_container"
+			size = { width = 445 height = 46 }
+			position = { x = -361 y = 31 }
 			if_resolution = {
 				min_width = 1920
-				position = { x = -330 y = 0 }
-				size = { width = 337 height = 46 }
+				position = { x = -442 y = 0 }
 			}
 			if_resolution = {
 				min_width = 2560
-				position = { x = -327 y = 0 }
-				size = { width = 334 height = 46 }
+				position = { x = -450 y = 0 }
 			}
 			orientation = upper_right
 			clipping = no
@@ -1009,30 +1009,114 @@ guiTypes = {
 				}
 			}
 			if_resolution = {
-				min_width = 2560
+				min_width = 1920
 				containerWindowType = {
-					name = "topbar_wrapper"
-					size = { width = 100% height = 100% }
-					clipping = yes
-					containerWindowType = {
-						name = "topbar_container"
-						size = { width = 100% height = 100% }
-						background = {
-							name = "topbar_background_hexagon"
-							spriteType = "GFX_ui_topbar_background_hexagon"
+					name = "topbar_mod_buttons"
+					size = { width = 222 height = 37 }
+					position = { x = -5 y = 10 }
+					clipping = no
+					background = {
+						name = "topbar_mod_buttons"
+						spriteType = "GFX_ui_topbar_bar"
+						alwaysTransparent = yes
+					}
+					if_resolution = {
+						min_width = 2560
+						size = { width = 227 height = 37 }
+						position = { x = -2 y = 10 }
+						iconType = {
+							name = "topbar_bar_corner"
+							spriteType = "GFX_ui_topbar_background_corner"
+							position = { x = -44 y = -10 }
+							frame = 2
 							alwaysTransparent = yes
 						}
 					}
 				}
-				containerWindowType = {
+			}
+			containerWindowType = {
+				name = "mod_buttons"
+				size = { width = 212 height = 46 }
+				position = { x = 0 y = 0 }
+				background = {
+					name = "background"
+					quadTextureSprite = "GFX_invisible"
+				}
+				effectbuttonType = {
+					name = "mod_button_modmenu"
+					position = { x = -30 y = 8 }
+					orientation = upper_right
+					spriteType = "GFX_ui_modmenu_button"
+					scale = 0.9
+					effect = "modmenu_button_effect"
+				}
+				effectButtonType = {
+					name = "mod_button_assembly"
+					position = { x = -60 y = 9 }
+					orientation = upper_right
+					spriteType = "GFX_ui_gna_button"
+					scale = 0.9
+					effect = "assembly_view_button_effect"
+				}
+				effectButtonType = {
+					name = "mod_button_ruler"
+					position = { x = -93 y = 9 }
+					orientation = upper_right
+					spriteType = "GFX_ui_rls_button"
+					scale = 0.9
+					effect = "ruler_hobby_button_effect"
+				}
+				#effectButtonType = {
+				#	name = "mod_button"
+				#	position = { x = -123 y = 8 }
+				#	orientation = upper_right
+				#	spriteType = "GFX_ui_mod_button_default"
+				#	scale = 0.9
+				#	effect = "button_effect"
+				#}
+				#
+				#effectButtonType = {
+				#	name = "mod_button"
+				#	position = { x = -153 y = 8 }
+				#	orientation = upper_right
+				#	spriteType = "GFX_ui_mod_button_default"
+				#	scale = 0.9
+				#	effect = "button_effect"
+				#}
+				#
+				#effectButtonType = {
+				#	name = "mod_button_quibble_propaganda"
+				#	position = { x = -183 y = 8 }
+				#	orientation = upper_right
+				#	spriteType = "GFX_ui_qpe_button"
+				#	scale = 0.9
+				#	effect = "quibble_button_effect"
+				#}
+			}
+		}
+		# game time
+		containerWindowType = {
+			name = "time_window"
+			position = { x = -232 y = 0 }
+			size = { width = 240 height = 46 }
+			orientation = upper_right
+			clipping = yes
+			background = {
+				name = "background"
+				quadTextureSprite = "GFX_invisible"
+				if_resolution = {
+					min_width = 2560
+					quadTextureSprite = "GFX_ui_topbar_background"
+				}
+			}
+			containerWindowType = {
+				name = "topbar_bar"
+				position = { x = 2 y = 10 }
+				size = { width = 241 height = 37 }
+				background = {
 					name = "topbar_bar"
-					position = { x = -2 y = 10 }
-					size = { width = 331 height = 37 }
-					background = {
-						name = "topbar_bar"
-						spriteType = "GFX_ui_topbar_bar"
-						alwaysTransparent = yes
-					}
+					spriteType = "GFX_ui_topbar_bar"
+					alwaysTransparent = yes
 				}
 			}
 			buttonType = {

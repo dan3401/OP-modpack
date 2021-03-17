@@ -104,7 +104,7 @@ guiTypes = {
 		buttonType = {
 			name = "lock"
 			quadTextureSprite = "GFX_navbar_lock_less"
-			position = { x = -21 y = -50 }	#_{ x = -26 y = -26 }
+			position = { x = -22 y = -25 }	#_{ x = -26 y = -26 }
 			orientation = "LOWER_RIGHT"
 			clicksound = interface
 			oversound = mouse_over
@@ -112,8 +112,8 @@ guiTypes = {
 		#_单个按钮大小
 		gridBoxType = {
 			name = "gridbox"
-			position = { x = 34 y = 30 }			#_{ x = 34 y = 50 }
-			slotSize = { width = 54 height = 38 }	#_{ width = 54 height = 40 }
+			position = { x = 34 y = 34 }			#_{ x = 34 y = 50 }
+			slotSize = { width = 54 height = 40 }
 			max_slots_horizontal = 1
 		}
 
@@ -121,7 +121,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "z_mod_button_container"
 			size = { width = 250 height = 42 }
-			position = { x = -245 y = -95 }	#_UOD[-245 -64]
+			position = { x = -245 y = -63 }	#_UOD[-245 -64]
 			orientation = lower_right
 			effectButtonType = {
 				name = "mod_button_z_modmenu"

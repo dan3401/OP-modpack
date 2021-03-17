@@ -1,11 +1,11 @@
 guiTypes = {
 	containerWindowType = {
 		name = "galaxy_view"
-		size = { width = 1562 height = 940 }
+		size = { width = 1562 height = 945 }
 		show_position = { x = 35 y = 50 }
 		if_resolution = {
 			min_height = 1200
-			size = { width = 1562 height = 1060 }
+			size = { width = 1562 height = 1065 }
 		}
 		if_resolution = {
 			min_height = 1440
@@ -326,7 +326,7 @@ guiTypes = {
 					font = "malgun_goth_24"
 					spriteType = "GFX_standard_button_230_34_button"
 					buttonText = "GALAXY_VIEW_EMPIRE_DIPLOMACY"
-					position = { x = -126 y = -58 }
+					position = { x = -126 y = -60 }
 					if_resolution = {
 						min_height = 1440
 						position = { x = -126 y = -246 }
@@ -523,10 +523,10 @@ guiTypes = {
 			containerWindowType = {
 				name = "empires_window"
 				position = { x = 420 y = 86 }
-				size = { width = 1132 height = 835 }
+				size = { width = 1132 height = 840 }
 				if_resolution = {
 					min_height = 1200
-					size = { width = 1132 height = 955 }
+					size = { width = 1132 height = 960 }
 				}
 				if_resolution = {
 					min_height = 1440
@@ -539,10 +539,10 @@ guiTypes = {
 				smoothListboxType = {
 					name = "galaxy_empires"
 					position = { x = 10 y = 5 }
-					size = { x = 1106 y = 825 }
+					size = { x = 1106 y = 830 }
 					if_resolution = {
 						min_height = 1200
-						size = { x = 1106 y = 945 }
+						size = { x = 1106 y = 950 }
 					}
 					if_resolution = {
 						min_height = 1440
