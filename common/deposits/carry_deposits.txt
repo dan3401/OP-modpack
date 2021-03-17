@@ -13169,3 +13169,4 @@ d_infinite_capacity = {
 	triggered_planet_modifier = { potential = { check_variable = { which = bio_pops value = 9997 } } pop_growth_speed_reduction = -499.9 }
 	triggered_planet_modifier = { potential = { check_variable = { which = bio_pops value = 9998 } } pop_growth_speed_reduction = -499.95 }
 	triggered_planet_modifier = { potential = { check_variable = { which = bio_pops value = 9999 } } pop_growth_speed_reduction = -500 }
+}
