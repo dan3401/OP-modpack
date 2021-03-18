@@ -1,0 +1,72 @@
+fe_terror_beyond = {
+    damage = 33
+    health = 33
+    morale_damage = 3.5
+    collateral_damage = 10
+    has_morale = no
+    war_exhaustion = 18
+    time = 850
+    icon_frame = 11
+    resources = {
+        category = armies
+        produces = {
+            food = 200
+            energy = 200
+        }
+        cost = {
+            influence = 250
+        }
+    }
+    allow = {
+        OR = {
+            has_building = building_fe_hive_evochamber
+            has_building = building_ae_hive_evochamber
+            has_building = building_stellarite_hive_evochamber
+        }
+    }
+    potential = {
+        NOT = {
+            has_global_flag = acot_army_forbidden
+        }
+        from = {
+            NOR = {
+                has_trait = "trait_mechanical"
+                has_trait = "trait_machine_unit"
+                is_sapient = no
+            }
+        }
+        owner = {
+            OR = {
+                NOT = {
+                    has_authority = auth_machine_intelligence
+                }
+                has_valid_civic = civic_machine_assimilator
+            }
+        }
+        owner = {
+            check_variable = {
+                which = terror_count
+                value >= 1
+            }
+        }
+    }
+    prerequisites = {
+        "tech_terror_beyond"
+    }
+    on_queued = {
+        owner = {
+            subtract_variable = {
+                which = "terror_count"
+                value = 1
+            }
+        }
+    }
+    on_unqueued = {
+        owner = {
+            change_variable = {
+                which = "terror_count"
+                value = 1
+            }
+        }
+    }
+}

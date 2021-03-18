@@ -1,0 +1,10 @@
+relics = {
+    generate_mult_modifiers = {
+        cost
+        upkeep
+    }
+    generate_add_modifiers = {
+        cost
+        upkeep
+    }
+}

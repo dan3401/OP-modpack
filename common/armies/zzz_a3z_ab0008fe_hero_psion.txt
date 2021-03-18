@@ -1,0 +1,74 @@
+fe_hero_psion = {
+    damage = 40
+    morale_damage = 5
+    health = 30
+    has_morale = no
+    collateral_damage = 0.5
+    war_exhaustion = 15
+    time = 1000
+    icon_frame = 9
+    resources = {
+        category = armies
+        cost = {
+            influence = 500
+        }
+        produces = {
+            influence = 1
+            society_research = 100
+        }
+    }
+    prerequisites = {
+        "tech_dark_psion"
+    }
+    potential = {
+        NOT = {
+            has_global_flag = acot_army_forbidden
+        }
+        from = {
+            OR = {
+                NOT = {
+                    host_has_dlc = "Utopia"
+                }
+                has_trait = trait_psionic
+            }
+            NOR = {
+                has_trait = "trait_machine_unit"
+                is_sapient = no
+            }
+        }
+        owner = {
+            NOT = {
+                has_authority = auth_machine_intelligence
+            }
+        }
+        owner = {
+            check_variable = {
+                which = psion_count
+                value >= 1
+            }
+        }
+    }
+    on_queued = {
+        owner = {
+            subtract_variable = {
+                which = "psion_count"
+                value = 1
+            }
+        }
+    }
+    on_unqueued = {
+        owner = {
+            change_variable = {
+                which = "psion_count"
+                value = 1
+            }
+        }
+    }
+    allow = {
+        OR = {
+            has_building = building_ae_psi_altar
+            has_building = building_stellarite_psi_altar
+            has_district = district_acot_enigmapolis_fortress
+        }
+    }
+}

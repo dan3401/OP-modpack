@@ -1,0 +1,71 @@
+fe_doomguy = {
+    damage = 30
+    health = 40
+    has_morale = no
+    morale_damage = 2.5
+    collateral_damage = 3
+    war_exhaustion = 15
+    time = 1000
+    icon_frame = 6
+    resources = {
+        category = armies
+        cost = {
+            influence = 500
+        }
+        produces = {
+            influence = 1
+            physics_research = 100
+        }
+    }
+    prerequisites = {
+        "tech_doom_hero"
+    }
+    potential = {
+        NOT = {
+            has_global_flag = acot_army_forbidden
+        }
+        from = {
+            NOR = {
+                has_trait = "trait_mechanical"
+                has_trait = "trait_machine_unit"
+                is_sapient = no
+            }
+        }
+        owner = {
+            NOT = {
+                has_authority = auth_machine_intelligence
+            }
+        }
+        owner = {
+            check_variable = {
+                which = doomguy_count
+                value >= 1
+            }
+        }
+    }
+    on_queued = {
+        owner = {
+            subtract_variable = {
+                which = "doomguy_count"
+                value = 1
+            }
+        }
+    }
+    on_unqueued = {
+        owner = {
+            change_variable = {
+                which = "doomguy_count"
+                value = 1
+            }
+        }
+    }
+    allow = {
+        OR = {
+            has_building = building_ae_clone_vats
+            has_building = building_ae_hive_evochamber
+            has_building = building_stellarite_clone_vats
+            has_building = building_stellarite_hive_evochamber
+            has_district = district_acot_enigmapolis_fortress
+        }
+    }
+}

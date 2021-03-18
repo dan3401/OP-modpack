@@ -1,0 +1,9 @@
+planet_districts_farming = {
+    parent = planet_structures
+    generate_add_modifiers = {
+        produces
+    }
+    generate_mult_modifiers = {
+        cost
+    }
+}

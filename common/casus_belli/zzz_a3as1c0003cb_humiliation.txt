@@ -1,0 +1,51 @@
+cb_humiliation = {
+    show_in_diplomacy = no
+    show_notification = no
+    potential = {
+        OR = {
+            is_country_type = default
+            is_country_type = fallen_empire
+            is_country_type = ascended_empire
+            is_country_type = lost_empire
+        }
+    }
+    is_valid = {
+        NOT = {
+            is_in_federation_with = from
+        }
+        OR = {
+            NOT = {
+                has_policy_flag = liberation_wars
+            }
+            from = {
+                has_ethic = ethic_gestalt_consciousness
+            }
+        }
+        OR = {
+            is_rival = FROM
+            AND = {
+                OR = {
+                    is_active_resolution = "resolution_mutualdefense_castigation_proclamation"
+                    is_active_resolution = "resolution_mutualdefense_renegade_containment"
+                }
+                FROM = {
+                    OR = {
+                        has_modifier = resolution_denounced
+                        is_in_breach_of_any = yes
+                    }
+                }
+            }
+        }
+        NOT = {
+            is_overlord_to = FROM
+        }
+        OR = {
+            is_subject = no
+            overlord = {
+                NOT = {
+                    is_same_value = from
+                }
+            }
+        }
+    }
+}

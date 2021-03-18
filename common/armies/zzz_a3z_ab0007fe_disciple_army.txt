@@ -1,0 +1,53 @@
+fe_disciple_army = {
+    damage = 3
+    morale_damage = 3.5
+    health = 3.25
+    morale = 6
+    collateral_damage = 0.5
+    war_exhaustion = 2.5
+    time = 260
+    icon_frame = 9
+    resources = {
+        category = armies
+        cost = {
+            minerals = 500
+            sr_dark_matter = 50
+            acot_sr_dark_energy = 50
+            influence = 50
+        }
+    }
+    prerequisites = {
+        "tech_dark_templar"
+    }
+    potential = {
+        NOT = {
+            has_global_flag = acot_army_forbidden
+        }
+        from = {
+            OR = {
+                NOT = {
+                    host_has_dlc = "Utopia"
+                }
+                has_trait = trait_psionic
+            }
+            NOR = {
+                has_trait = "trait_mechanical"
+                has_trait = "trait_machine_unit"
+                is_sapient = no
+            }
+        }
+        owner = {
+            NOT = {
+                has_authority = auth_machine_intelligence
+            }
+        }
+    }
+    allow = {
+        OR = {
+            has_building = building_fe_psi_altar
+            has_building = building_ae_psi_altar
+            has_building = building_stellarite_psi_altar
+            has_district = district_acot_enigmapolis_fortress
+        }
+    }
+}

@@ -1,0 +1,34 @@
+civic_evangelism = {
+    potential = {
+        ethics = {
+            NOT = {
+                value = ethic_gestalt_consciousness
+            }
+        }
+    }
+    modifier = {
+        country_trust_growth = 0.5
+        COUNTRY_TRUST_CAP_ADD = 50
+        DIPLO_WEIGHT_POPS_MULT = 0.15
+        DIPLO_WEIGHT_ENVOYS_MULT = 0.15
+    }
+    possible = {
+        ethics = {
+            OR = {
+                text = civic_tooltip_xenophile
+                value = ethic_xenophile
+                value = ethic_fanatic_xenophile
+            }
+            OR = {
+                text = civic_tooltip_spiritualist
+                value = ethic_spiritualist
+                value = ethic_fanatic_spiritualist
+            }
+        }
+        civics = {
+            NOR = {
+                value = civic_defenders_faith
+            }
+        }
+    }
+}

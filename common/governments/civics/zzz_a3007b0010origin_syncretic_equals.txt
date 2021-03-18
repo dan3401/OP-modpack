@@ -1,0 +1,32 @@
+origin_syncretic_equals = {
+    is_origin = yes
+    icon = "gfx/interface/icons/origins/origins_syncretic_equals.dds"
+    picture = GFX_origin_common_ground
+    playable = {
+        host_has_dlc = "Utopia"
+    }
+    possible = {
+        ethics = {
+            NOT = {
+                value = ethic_gestalt_consciousness
+            }
+        }
+        civics = {
+            NOR = {
+                value = civic_fanatic_purifiers
+                value = civic_befrienders
+            }
+        }
+    }
+    description = civic_tooltip_syncretic_equals_effects
+    has_secondary_species = {
+        title = civic_syncretic_evolution_secondary_species
+        traits = {
+            trait = trait_syncretic_equal
+        }
+    }
+    advanced_start = yes
+    random_weight = {
+        base = 10
+    }
+}
