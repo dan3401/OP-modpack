@@ -28,11 +28,10 @@ civic_aristocratic_elite = {
                 value = ethic_fanatic_socialism
             }
         }
-            OR = {
-                text = civic_tooltip_elitist
-                value = ethic_elitist
-                value = ethic_fanatic_elitist
-            }
+        OR = {
+            text = civic_tooltip_elitist
+            value = ethic_elitist
+            value = ethic_fanatic_elitist
         }
         civics = {
             NOR = {

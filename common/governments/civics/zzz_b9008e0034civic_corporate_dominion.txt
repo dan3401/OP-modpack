@@ -23,6 +23,7 @@ civic_corporate_dominion = {
                 value = ethic_xenophobe
                 value = ethic_fanatic_xenophobe
             }
+        }
         ethics = {
             OR = {
                 text = civic_tooltip_capitalism

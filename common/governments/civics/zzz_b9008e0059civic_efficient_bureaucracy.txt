@@ -10,6 +10,7 @@ civic_efficient_bureaucracy = {
                 value = auth_corporate
                 value = auth_cooperative
                 value = auth_private
+            }
         }
     }
     random_weight = {
@@ -21,6 +22,7 @@ civic_efficient_bureaucracy = {
                 value = civic_byzantine_bureaucracy
             }
         }
+    }
     random_weight = {
         base = 5
     }

@@ -28,7 +28,7 @@ ship_section_template = {
 		  "tech_arc_emitter_1"
 		  "tech_mass_accelerator_1"
 		}
-
+	}
 	component_slot = {
 		name = "EXTRA_LARGE_01"
 		template = "extra_large_turret"
@@ -63,7 +63,7 @@ ship_section_template = {
 		  "tech_arc_emitter_1"
 		  "tech_mass_accelerator_1"
 		}
-
+	}
 	component_slot = {
 		name = "EXTRA_LARGE_01"
 		template = "invisible_extra_large_fixed"

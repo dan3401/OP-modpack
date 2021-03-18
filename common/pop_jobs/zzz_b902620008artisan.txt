@@ -241,16 +241,6 @@ artisan = {
             pop_happiness = 0.05
         }
     }
-        upkeep = {
-            trigger = {
-                exists = owner
-                owner = {
-                    is_green = yes
-                }
-            }
-            minerals = -1
-        }
-    }
     weight = {
         weight = @specialist_job_weight
         modifier = {

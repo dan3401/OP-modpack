@@ -32,6 +32,7 @@ civic_environmentalist = {
             NOR = {
                 value = origin_exploited_homeworld
             }
+        }
         ethics = {
             NOR = {
                 text = civic_tooltip_not_capitalism

@@ -93,10 +93,11 @@ cb_eternal_empire_stop_colossus = {
 	}
 	is_valid = {
 		OR = { 
-		is_neighbor_of = from
-		from = { any_owned_ship = { is_ship_size = colossus } }
-		NOT = { any_owned_ship = { is_ship_size = colossus } }
-		NOT = { is_overlord_to = FROM }
+			is_neighbor_of = from
+			from = { any_owned_ship = { is_ship_size = colossus } }
+			NOT = { any_owned_ship = { is_ship_size = colossus } }
+			NOT = { is_overlord_to = FROM }
+		}
 		OR = {
 			is_subject = no
 			overlord = { NOT = { is_same_value = from } }
@@ -124,5 +125,4 @@ cb_total_war_ee_default = {
 	is_valid = { 
 		NOT = { is_overlord_to = FROM }
 	}
-	
 }

@@ -22,7 +22,6 @@ civic_byzantine_bureaucracy = {
                 value = ethic_fanatic_egalitarian
             }
         }
-    possible = {
         civics = {
             NOR = {
                 value = civic_efficient_bureaucracy

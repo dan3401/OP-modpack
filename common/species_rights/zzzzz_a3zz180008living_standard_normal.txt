@@ -2,18 +2,14 @@ living_standard_normal = {
     token = living_standard_normal
     name = living_standard_normal
     in_breach_of = {
-         {
             trigger = {
                 is_gestalt = no
             }
             key = resolution_greatergood_balance_in_the_middle
-        }
-         {
             trigger = {
                 is_gestalt = no
             }
             key = resolution_greatergood_universal_prosperity_mandate
-        }
     }
     triggered_pop_modifier = {
         potential = {
@@ -31,46 +27,23 @@ living_standard_normal = {
         pop_cat_ruler_political_power = 7
         pop_cat_specialist_political_power = 1
     }
-    potential = {
-        exists = from
-        from = {
-            is_gestalt = no
-        }
-        NOT = {
-            from = {
-                has_valid_civic = civic_shared_burden
-            }
-        }
-        NOT = {
-            from = {
-                has_valid_civic = civic_reeducated_labor
-            }
-        }
-        NOT = {
-            from = {
-                has_valid_civic = civic_welfare_state
-            }
-        }
-        NOR = {
-            has_trait = trait_hive_mind
-            has_trait = trait_machine_unit
-            is_shackled_robot_species_rights = yes
-        }
-    }
-        NOT = {
-            from = {
-                has_valid_civic = civic_worker_coop
-            }
-        }
-        NOR = {
-            has_trait = trait_hive_mind
-            has_trait = trait_machine_unit
-            is_shackled_robot_species_rights = yes
-        }
-    }
+
     allow = {
         hidden_trigger = {
             exists = from
+        }
+        owner = {
+            NOR = {
+                has_valid_civic = civic_shared_burden
+                has_valid_civic = civic_reeducated_labor
+                has_valid_civic = civic_welfare_state 
+                has_valid_civic = civic_worker_coop                
+            }
+            NOR = {
+            has_trait = trait_hive_mind
+            has_trait = trait_machine_unit
+            is_shackled_robot_species_rights = yes
+            }
         }
         custom_tooltip = {
             fail_text = SPECIES_MUST_NOT_BE_ASSIMILATING

@@ -69,9 +69,8 @@ mortal_initiate = {
         modifier = {
             factor = 0.5
             has_trait = trait_quarrelsome
-                has_trait = trait_deviants
-                has_trait = trait_unruly
-            }
+            has_trait = trait_deviants
+            has_trait = trait_unruly
         }
         modifier = {
             factor = 0.1

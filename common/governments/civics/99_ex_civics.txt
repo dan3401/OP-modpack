@@ -324,5 +324,5 @@ civic_psionic_heritage = {
 
 	#traits = {
 		#trait = trait_ex_psionic_obsession #through the use of events (see ex_game_start) should also grant the empire Psionic Theory for free. Thanks to Alfray Stryke for letting me see how he modded events for his own God-Emperor civic
-	}
+	# }
 }
