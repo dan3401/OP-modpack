@@ -1,0 +1,18 @@
+trait_advancedphysicist = {
+    cost = 3
+    potential_crossbreeding_chance = 1
+    allowed_archetypes = {
+        BIOLOGICAL
+        MACHINE
+        ROBOT
+        LITHOID
+        PLANTOID
+    }
+    icon = "gfx/interface/icons/traits/trait_natural_physicists.dds"
+    modifier = {
+        planet_jobs_physics_research_produces_mult = 0.3
+        pop_environment_tolerance = 0.1
+        army_damage_mult = -0.2
+        planet_jobs_minerals_produces_mult = -0.05
+    }
+}

@@ -1,0 +1,27 @@
+leader_trait_fairy_type_Shared_glory_5 = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/EeveelutionTypes/fairy_type.png"
+    modifier = {
+        army_morale = 0.4
+    }
+    leader_trait = {
+        general
+    }
+    leader_class = {
+        general
+    }
+    opposites = {
+        "leader_trait_fairy_type_Shared_glory_2"
+        "leader_trait_fairy_type_Shared_glory_3"
+        "leader_trait_fairy_type_Shared_glory_4"
+        "leader_trait_fairy_type_Shared_glory_1"
+    }
+    leader_potential_add = {
+        from = {
+            any_owned_pop = {
+                pop_has_trait = trait_fairy_type_mega_evolution
+            }
+        }
+    }
+}

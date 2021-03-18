@@ -1,0 +1,19 @@
+trait_f_adrenaline = {
+    cost = 3
+    potential_crossbreeding_chance = 0
+    icon = "gfx/interface/icons/traits/trait_f_adrenaline.dds"
+    modification = no
+    opposites = {
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        ROBOT
+        MACHINE
+    }
+    ai_weight = {
+        weight = 0
+    }
+    modifier = {
+        ship_speed_mult = 1
+    }
+}

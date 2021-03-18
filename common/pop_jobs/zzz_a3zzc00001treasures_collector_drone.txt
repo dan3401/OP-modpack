@@ -1,0 +1,24 @@
+treasures_collector_drone = {
+    category = complex_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = building_treasures_entrepot
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible = {
+        drone_job_check_trigger = yes
+    }
+    resources = {
+        category = planet_jobs
+        produces = {
+            treasures = 2
+            energy = 3
+        }
+    }
+    weight = {
+        weight = @synapse_drone_job_weight
+    }
+}

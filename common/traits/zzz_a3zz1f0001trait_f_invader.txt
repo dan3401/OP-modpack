@@ -1,0 +1,22 @@
+trait_f_invader = {
+    cost = 5
+    potential_crossbreeding_chance = 0
+    icon = "gfx/interface/icons/traits/trait_f_invader.dds"
+    modification = no
+    opposites = {
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        ROBOT
+        MACHINE
+    }
+    ai_weight = {
+        weight = 0
+    }
+    modifier = {
+        pop_environment_tolerance = 0.33
+        army_damage_mult = 1
+        army_health_mult = 1
+        army_collateral_damage_mult = 2.5
+    }
+}

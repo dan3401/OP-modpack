@@ -1,0 +1,62 @@
+district_journalism = {
+    base_buildtime = 240
+    min_for_deposits_on_planet = 1
+    max_for_deposits_on_planet = 6
+    conversion_ratio = 1
+    convert_to = {
+        district_journalism_uncapped
+    }
+    show_on_uncolonized = {
+        uses_district_set = standard
+        from = {
+            OR = {
+                has_ascension_perk = ap_pyramidal_society
+                has_country_flag = ap_pyramidal_society
+            }
+            is_megacorp = yes
+        }
+    }
+    potential = {
+        uses_district_set = standard
+        exists = owner
+        owner = {
+            OR = {
+                has_ascension_perk = ap_pyramidal_society
+                has_country_flag = ap_pyramidal_society
+            }
+            is_megacorp = yes
+        }
+    }
+    allow = {
+        NOR = {
+            has_modifier = resort_colony
+            has_modifier = slave_colony
+        }
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = 500
+        }
+        upkeep = {
+            energy = 2
+        }
+        produces = {
+            society_research = 2
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 2
+        job_sponsor_add = 2
+        job_journalist_add = 4
+    }
+    ai_weight = {
+        weight = 2
+    }
+    ai_resource_production = {
+        energy = 4
+        trigger = {
+            always = yes
+        }
+    }
+}

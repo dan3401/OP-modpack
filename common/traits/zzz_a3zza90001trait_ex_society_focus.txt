@@ -1,0 +1,26 @@
+trait_ex_society_focus = {
+    cost = 0
+    opposites = {
+        "trait_ex_engineering_focus"
+        "trait_ex_physics_focus"
+        "trait_ex_unscientific"
+        "trait_ex_obsessive"
+        "trait_syncretic_proles"
+    }
+    initial = yes
+    randomized = no
+    modification = yes
+    ai_weight = {
+        weight = 0
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    icon = "gfx/interface/icons/traits/trait_ex_society_focus.dds"
+    modifier = {
+        planet_jobs_engineering_research_produces_mult = -0.1
+        planet_jobs_physics_research_produces_mult = -0.1
+        planet_jobs_society_research_produces_mult = 0.2
+    }
+}

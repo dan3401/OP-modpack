@@ -1,0 +1,35 @@
+economist = {
+    category = ruler
+    condition_string = RULER_JOB_TRIGGER
+    building_icon = building_commercial_forum
+    clothes_texture_index = 1
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible = {
+        ruler_job_check_trigger = yes
+    }
+    resources = {
+        category = planet_jobs
+        produces = {
+            energy = 6
+        }
+        upkeep = {
+            consumer_goods = 2
+        }
+    }
+    planet_modifier = {
+        trade_value_mult = 0.07
+        planet_amenities_add = 10
+    }
+    weight = {
+        weight = @ruler_job_weight
+        modifier = {
+            factor = 0.2
+            has_citizenship_rights = no
+        }
+    }
+}

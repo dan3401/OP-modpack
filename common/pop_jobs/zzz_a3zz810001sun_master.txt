@@ -1,0 +1,56 @@
+sun_master = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = building_stellarite_generator_lvl3
+    clothes_texture_index = 3
+    icon = aot_ae_stellariteman
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible = {
+        specialist_job_check_trigger = yes
+    }
+    resources = {
+        category = planet_jobs
+        produces = {
+            acot_sr_stellarite = 20
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    is_ai = no
+                }
+            }
+            energy = 150
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    is_ai = yes
+                }
+            }
+            energy = 10
+        }
+    }
+    weight = {
+        weight = @specialist_job_weight
+        modifier = {
+            factor = 0.2
+            has_citizenship_rights = no
+            NOT = {
+                has_trait = trait_mechanical
+            }
+        }
+        modifier = {
+            factor = 0.1
+            can_take_servant_job = yes
+        }
+        modifier = {
+            factor = 1.5
+            has_job = sun_master
+        }
+    }
+}

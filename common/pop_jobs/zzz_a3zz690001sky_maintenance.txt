@@ -1,0 +1,71 @@
+sky_maintenance = {
+    category = simple_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = building_maintenance_depot
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible = {
+        drone_job_check_trigger = yes
+    }
+    planet_modifier = {
+        planet_amenities_no_happiness_add = 8
+        planet_jobs_simple_drone_produces_mult = 0.01
+    }
+    resources = {
+        category = planet_jobs
+        produces = {
+            unity = 6
+        }
+        upkeep = {
+            energy = 3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            OR = {
+                has_trait = trait_robot_emotion_emulators
+                has_trait = trait_charismatic
+            }
+        }
+        modifier = {
+            planet_amenities_no_happiness_add = 1.6
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            OR = {
+                has_trait = trait_robot_uncanny
+                has_trait = trait_repugnant
+            }
+        }
+        modifier = {
+            planet_amenities_no_happiness_add = -1.6
+        }
+    }
+    weight = {
+        weight = @synapse_drone_job_weight
+        modifier = {
+            factor = 2
+            has_trait = trait_charismatic
+        }
+        modifier = {
+            factor = 0.5
+            OR = {
+                has_trait = trait_robot_uncanny
+                has_trait = trait_repugnant
+            }
+        }
+        modifier = {
+            factor = 1.1
+            exists = owner
+            years_passed < 1
+            owner = {
+                has_valid_civic = civic_machine_assimilator
+            }
+            has_trait = trait_cybernetic
+        }
+    }
+}

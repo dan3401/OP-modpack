@@ -1,0 +1,18 @@
+trait_mercenary = {
+    cost = 3
+    potential_crossbreeding_chance = 1
+    allowed_archetypes = {
+        BIOLOGICAL
+        MACHINE
+        ROBOT
+        LITHOID
+        PLANTOID
+    }
+    opposites = {
+        "trait_hive_mind"
+    }
+    modifier = {
+        army_damage_mult = 0.25
+        planet_jobs_energy_produces_mult = 0.15
+    }
+}

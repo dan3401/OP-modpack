@@ -1,0 +1,34 @@
+leader_trait_natural_engineer = {
+    cost = 1
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/leader_trait_natural_engineer.dds"
+    modifier = {
+        category_materials_research_speed_mult = 0.33
+        category_industry_research_speed_mult = 0.33
+        category_voidcraft_research_speed_mult = 0.33
+        category_propulsion_research_speed_mult = 0.33
+    }
+    leader_trait = {
+        scientist
+    }
+    leader_class = {
+        scientist
+    }
+    opposites = {
+        "leader_trait_carefree"
+    }
+    leader_potential_add = {
+        OR = {
+            from = {
+                has_technology = tech_expandable_brain_1
+            }
+            has_global_flag = ap_expandable_brain_1
+        }
+    }
+    ai_categories = {
+        engineering
+    }
+    ai_weight = {
+        weight = 50
+    }
+}

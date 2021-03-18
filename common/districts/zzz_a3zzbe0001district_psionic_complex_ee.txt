@@ -1,0 +1,59 @@
+district_psionic_complex_ee = {
+    base_buildtime = 10
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        is_planet_class = pc_eternos
+    }
+    potential = {
+        OR = {
+            is_planet_class = pc_eternos
+            is_planet_class = pc_eternal_ringworld_habitable
+        }
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            unity = 5000
+            virtue = 5000
+        }
+        upkeep = {
+            virtue = 10
+        }
+        produces = {
+            unity = 50
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 1
+        planet_amenities_add = 50
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = tech_fallenw
+            }
+        }
+        modifier = {
+            job_tw_aisymneter_per_pop = 0.01
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                has_technology = tech_fallenw
+            }
+        }
+        text = job_tw_aisymneter_effect_desc
+    }
+    ai_weight = {
+        weight = 5
+    }
+    ai_resource_production = {
+        unity = 1
+        trigger = {
+            always = yes
+        }
+    }
+}

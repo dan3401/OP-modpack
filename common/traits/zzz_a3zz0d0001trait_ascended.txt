@@ -1,0 +1,20 @@
+trait_ascended = {
+    cost = -5
+    opposites = {
+        "trait_hive_mind"
+    }
+    improves_leaders = yes
+    allowed_archetypes = {
+        ASCENDED
+        BIOLOGICAL
+    }
+    randomized = no
+    modification = no
+    modifier = {
+        country_virtue_produces_mult = 0.2
+        country_admin_cap_add = 500
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

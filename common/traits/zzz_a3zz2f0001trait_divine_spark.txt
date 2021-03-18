@@ -1,0 +1,24 @@
+trait_divine_spark = {
+    cost = 0
+    opposites = {
+        "trait_hive_mind"
+    }
+    initial = no
+    randomized = no
+    allowed_archetypes = {
+        ASCENDED
+        BIOLOGICAL
+    }
+    modification = no
+    modifier = {
+        pop_environment_tolerance = 1
+        country_energy_produces_mult = 0.1
+        country_minerals_produces_mult = 0.1
+        country_engineering_research_produces_mult = 0.1
+        country_physics_research_produces_mult = 0.1
+        country_society_research_produces_mult = 0.1
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

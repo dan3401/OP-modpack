@@ -1,0 +1,3 @@
+modifier = {
+    pop_housing_usage_mult = -0.2
+}

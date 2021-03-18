@@ -1,0 +1,27 @@
+trait_artistic_pursuit = {
+    icon = gfx/interface/icons/traits/trait_intelligent.dds
+    cost = 0
+    opposites = {
+        "trait_hive_mind"
+    }
+    initial = no
+    randomized = no
+    allowed_archetypes = {
+        ASCENDED
+        BIOLOGICAL
+    }
+    modification = yes
+    species_potential_add = {
+        exists = from
+        from = {
+            OR = {
+                is_country_type = eternal_empire
+                is_country_type = fallen_empire
+                is_country_type = awakened_fallen_empire
+            }
+        }
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

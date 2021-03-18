@@ -1,0 +1,19 @@
+trait_f_electrophobe = {
+    cost = -4
+    potential_crossbreeding_chance = 0
+    icon = "gfx/interface/icons/traits/trait_f_electrophobe.dds"
+    modification = no
+    opposites = {
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        ROBOT
+        MACHINE
+    }
+    ai_weight = {
+        weight = 0
+    }
+    modifier = {
+        planet_jobs_energy_produces_mult = -0.33
+    }
+}

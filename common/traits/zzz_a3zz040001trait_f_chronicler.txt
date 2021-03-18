@@ -1,0 +1,23 @@
+trait_f_chronicler = {
+    cost = 3
+    potential_crossbreeding_chance = 0
+    icon = "gfx/interface/icons/traits/trait_f_chronicler.dds"
+    modification = no
+    opposites = {
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        ROBOT
+        MACHINE
+    }
+    ai_weight = {
+        weight = 0
+    }
+    modifier = {
+        num_tech_alternatives_add = 2
+        all_technology_research_speed = 0.33
+        planet_jobs_engineering_research_produces_mult = -0.5
+        planet_jobs_physics_research_produces_mult = -0.5
+        planet_jobs_society_research_produces_mult = -0.5
+    }
+}

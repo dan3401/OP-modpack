@@ -1,0 +1,16 @@
+trait_prey = {
+    opposites = {
+        "trait_hunter"
+    }
+    potential_crossbreeding_chance = 1
+    allowed_archetypes = {
+        BIOLOGICAL
+        PLANTOID
+    }
+    cost = -2
+    modifier = {
+        army_damage_mult = -0.4
+        planet_livestock_food_produces_add = -2
+        planet_jobs_food_produces_mult = 0.2
+    }
+}

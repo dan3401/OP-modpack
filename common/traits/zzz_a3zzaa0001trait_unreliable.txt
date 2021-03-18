@@ -1,0 +1,13 @@
+trait_unreliable = {
+    cost = -1
+    potential_crossbreeding_chance = 1
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+        PLANTOID
+    }
+    modifier = {
+        army_defense_damage_mult = -0.25
+        planet_jobs_minerals_produces_mult = -0.03
+    }
+}

@@ -1,0 +1,25 @@
+trait_immortal = {
+    cost = 7
+    potential_crossbreeding_chance = 0.15
+    allowed_archetypes = {
+        BIOLOGICAL
+        MACHINE
+        ROBOT
+        LITHOID
+        PLANTOID
+    }
+    opposites = {
+        "trait_mutant"
+        "trait_ghoul"
+        "trait_enduring"
+        "trait_fleeting"
+        "trait_replicator"
+        "trait_ancient"
+    }
+    modifier = {
+        leader_age = 500
+        planet_jobs_physics_research_produces_mult = -0.1
+        planet_jobs_engineering_research_produces_mult = -0.1
+        planet_jobs_society_research_produces_mult = -0.1
+    }
+}

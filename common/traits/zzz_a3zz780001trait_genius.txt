@@ -1,0 +1,17 @@
+trait_genius = {
+    cost = 4
+    potential_crossbreeding_chance = 1
+    allowed_archetypes = {
+        BIOLOGICAL
+        MACHINE
+        ROBOT
+        LITHOID
+        PLANTOID
+    }
+    opposites = {
+        "trait_intelligent"
+    }
+    modifier = {
+        planet_researchers_produces_mult = 0.2
+    }
+}

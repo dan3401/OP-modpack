@@ -1,0 +1,19 @@
+trait_unpredictable = {
+    cost = -2
+    potential_crossbreeding_chance = 1
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+        PLANTOID
+    }
+    opposites = {
+        "trait_conformists"
+        "trait_deviants"
+        "trait_individualist"
+        "trait_collectivist"
+        "trait_hive_mind"
+    }
+    modifier = {
+        pop_government_ethic_attraction = -0.25
+    }
+}

@@ -1,0 +1,33 @@
+twascendant = {
+    category = philosopher
+    is_capped_by_modifier = no
+    building_icon = building_gardens_meditation
+    clothes_texture_index = 1
+    possible = {
+        hidden_trigger = {
+            exists = owner
+        }
+        owner = {
+            is_country_type = eternal_empire
+            has_country_flag = path_of_eternos
+        }
+        is_same_species = owner
+        NOR = {
+            has_trait = trait_mechanical
+            has_trait = trait_machine_unit
+        }
+    }
+    resources = {
+        category = planet_jobs
+        produces = {
+            unity = 3
+            virtue = 3
+        }
+    }
+    pop_modifier = {
+        pop_happiness = 0.1
+    }
+    weight = {
+        weight = 0.1
+    }
+}
