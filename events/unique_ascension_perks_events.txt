@@ -902,18 +902,18 @@ country_event = {
 	option = { name = "Focus on Production" add_modifier = { modifier = expandable_brain_3_production days = -1 } custom_tooltip = "ALLOW_LEADER_MIN_LVL_5" custom_tooltip = "ALLOW_LEADER_MIN_TRAIT_3" hidden_effect = { country_event = { id = UniqueAscensionPerksEvents.3038 } } }
 }
 
-country_event = {
-	id = UniqueAscensionPerksEvents.3038
-	title = "UniqueAscensionPerksEvents.3038.Name"
-	desc = "UniqueAscensionPerksEvents.3038.Desc"
-	show_sound = event_engineered_evolution
-	picture = GFX_evt_expandable_brain_6
-	location = capital_scope
-	is_triggered_only = yes
-	trigger = { has_ascension_perk = ap_expandable_brain_2 NOT = { has_country_flag = ap_expandable_brain_2_project } }
-	immediate = { set_country_flag = ap_expandable_brain_2_project }
-	option = { name = EXCELLENT enable_special_project = { name = EXPANDABLE_BRAIN_3 location = capital_scope owner = root } default_hide_option = yes }
-}
+# country_event = {
+# 	id = UniqueAscensionPerksEvents.3038
+# 	title = "UniqueAscensionPerksEvents.3038.Name"
+# 	desc = "UniqueAscensionPerksEvents.3038.Desc"
+# 	show_sound = event_engineered_evolution
+# 	picture = GFX_evt_expandable_brain_6
+# 	location = capital_scope
+# 	is_triggered_only = yes
+# 	trigger = { has_ascension_perk = ap_expandable_brain_2 NOT = { has_country_flag = ap_expandable_brain_2_project } }
+# 	immediate = { set_country_flag = ap_expandable_brain_2_project }
+# 	option = { name = EXCELLENT enable_special_project = { name = EXPANDABLE_BRAIN_3 location = capital_scope owner = root } default_hide_option = yes }
+# }
 
 country_event = {
 	id = UniqueAscensionPerksEvents.3039
