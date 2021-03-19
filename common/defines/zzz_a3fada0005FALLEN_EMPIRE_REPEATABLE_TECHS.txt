@@ -1,3 +1,0 @@
-NGameplay = {
-    FALLEN_EMPIRE_REPEATABLE_TECHS = 20
-}

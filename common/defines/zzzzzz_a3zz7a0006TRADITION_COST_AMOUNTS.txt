@@ -1,5 +1,0 @@
-NEconomy = {
-    TRADITION_COST_AMOUNTS = {
-        250
-    }
-}

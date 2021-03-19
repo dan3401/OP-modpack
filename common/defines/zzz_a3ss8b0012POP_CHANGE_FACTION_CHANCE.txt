@@ -1,3 +1,0 @@
-NGameplay = {
-    POP_CHANGE_FACTION_CHANCE = 100
-}

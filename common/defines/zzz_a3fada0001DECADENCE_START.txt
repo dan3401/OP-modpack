@@ -1,3 +1,0 @@
-NGameplay = {
-    DECADENCE_START = 1
-}

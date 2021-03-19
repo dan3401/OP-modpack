@@ -1,0 +1,70 @@
+leader_trait_governor_ascended = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/ascended.dds"
+	allowed_archetypes = { ASCENDED }
+	modifier = {
+		planet_crime_mult = -0.5
+		pop_happiness = 0.30
+		planet_army_build_time_mult = -0.30
+	}
+	leader_potential_add = {
+		 from = { has_authority = "auth_enigmatic" }
+	}
+	leader_trait = { governor }
+	leader_class = { governor }
+	ai_weight = {
+		weight = 0
+	}
+	
+}
+
+leader_trait_governor_perfection = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no	
+	icon = "gfx/interface/icons/traits/trait_perfection.dds"
+	allowed_archetypes = { ASCENDED }
+	modifier = {
+		country_minerals_produces_mult = 0.1
+		country_energy_produces_mult = 0.1
+		planet_building_build_speed_mult = 0.15
+	}
+	leader_potential_add = {
+		 from = { has_authority = "auth_enigmatic" } 
+	}
+	leader_trait = { governor }
+	leader_class = { governor }
+	ai_weight = {
+		weight = 0
+	}
+	
+}
+
+
+leader_trait_governor_universal_language = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/trait_universal_language.dds"
+	allowed_archetypes = { ASCENDED }
+	modifier = {
+		deposit_blockers_cost_mult = -1.00
+		planet_clear_blocker_time_mult = -1.0
+		all_technology_research_speed = 0.2
+	}
+	leader_potential_add = {
+		 from = { has_authority = "auth_enigmatic" } 
+	}
+	leader_trait = { governor }
+	leader_class = { governor }
+	ai_weight = {
+		weight = 0
+	}
+	
+}
+

@@ -1,8 +1,0 @@
-monthly_trades = {
-    generate_add_modifiers = {
-        produces
-    }
-    generate_mult_modifiers = {
-        produces
-    }
-}

@@ -1,3 +1,0 @@
-NGameplay = {
-    TECH_COST_MULT_FALLEN_EMPIRE = 1
-}
