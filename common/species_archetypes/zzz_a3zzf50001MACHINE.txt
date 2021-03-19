@@ -1,6 +1,0 @@
-@machine_trait_points = 4
-@machine_max_traits = 12
-MACHINE = {
-    species_trait_points = @machine_trait_points
-    species_max_traits = @machine_max_traits
-}

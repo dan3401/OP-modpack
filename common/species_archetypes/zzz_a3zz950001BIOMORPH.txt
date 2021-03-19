@@ -1,4 +1,0 @@
-BIOMORPH = {
-    species_trait_points = 10
-    species_max_traits = 20
-}

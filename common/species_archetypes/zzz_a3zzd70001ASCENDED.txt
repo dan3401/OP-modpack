@@ -1,4 +1,0 @@
-ASCENDED = {
-    species_trait_points = 5
-    species_max_traits = 5
-}
