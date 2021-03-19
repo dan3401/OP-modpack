@@ -1086,7 +1086,10 @@ planet_event = {
 
 	trigger = {
 		exists =  owner
-		NOT = { is_planet_class = pc_birch }
+		NOT = { 
+			is_planet_class = pc_birch 
+			is_planet_class = pc_living_station
+		}
 	}
 
 	immediate = {

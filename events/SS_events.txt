@@ -212,5 +212,17 @@ planet_event = {
     option = {
 		name = OK
         custom_tooltip = liv.4.tooltip
+	}	
+}
+
+planet_event {
+	id = liv.5
+	is_triggered_only = yes
+    hide_window = yes
+
+	planet_modifier = { 
+		planet_building_build_speed_mult = 0.5
+		planet_decision_enact_speed_mult = 0.5
 	}
+
 }

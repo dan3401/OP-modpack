@@ -326,12 +326,13 @@ decision_upgrade = {
 
 	effect = {
 		add_deposit = d_upgrade
-		planet_modifier = { 
-			planet_building_build_speed_mult = 0.5
-			planet_decision_enact_speed_mult = 0.5
+		hidden_effect = { 
+			planet_event = {
+				id = liv.5
+			}
 		}
 	}
-
+	
 	ai_weight = {
 		weight = 9999
 	}

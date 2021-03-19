@@ -902,7 +902,7 @@ ap_underworld = {
 ap_slow_learner = {
 	possible = {}
 	modifier = {}
-	modifier = { country_unity_produces_add = 50 }
+	modifier = { country_base_unity_produces_add = 50 }
 	on_enabled = {
 		custom_tooltip = "ap_slow_learner_tooltip"
 		hidden_effect = { 
