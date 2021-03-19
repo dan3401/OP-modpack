@@ -157,6 +157,7 @@ opinion_ex_decadent_conglomerate_civic = {
 				has_ethic = "ethic_xenophile"
 				has_ethic = "ethic_fanatic_xenophile"
 			}
+			}
 		}
 	}
 }

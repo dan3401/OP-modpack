@@ -27,6 +27,11 @@ district_mining = {
             energy = 1
         }
     }
+        upkeep = {
+            trigger = {
+                owner = {
+                    or = {
+                        has_valid_civic = civic_mining_guilds
     planet_modifier = {
         planet_housing_add = 2
     }
@@ -59,7 +64,6 @@ district_mining = {
             planet_housing_add = 1
             job_mining_drone_add = 1
         }
-    }
     planet_modifier = {
         planet_housing_add = 2
     }

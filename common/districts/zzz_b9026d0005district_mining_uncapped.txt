@@ -66,15 +66,16 @@ district_mining_uncapped = {
             job_mining_drone_add = 1
         }
     }
-    upkeep = {
-        trigger = {
-            owner = {
-                or = {
-                    has_valid_civic = civic_mining_guilds
+        upkeep = {
+            trigger = {
+                owner = {
+                    or = {
+                        has_valid_civic = civic_mining_guilds
+                    }
                 }
             }
+            energy = 0.2
         }
-        energy = 0.2
     }
     planet_modifier = {
         planet_housing_add = 2

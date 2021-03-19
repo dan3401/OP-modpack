@@ -471,7 +471,6 @@ building_system_capital = {
             }
         }
         text = job_noble_effect_desc
-    }
     triggered_desc = {
         trigger = {
             exists = owner

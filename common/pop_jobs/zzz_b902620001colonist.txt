@@ -80,6 +80,7 @@ colonist = {
             has_trait = trait_repugnant
                 has_trait = trait_robot_uncanny
             }
+        }
         modifier = {
             planet_amenities_add = -1
         }

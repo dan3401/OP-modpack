@@ -234,6 +234,7 @@ kosmopolis_eee = {
 	on_build_cancel = {}
 	
 	on_build_complete = {
+		}
 		fromfrom.planet = {
 			is_planet_class = pc_ringworld_habitable 
 			remove_planet = yes 
