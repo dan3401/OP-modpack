@@ -15,7 +15,6 @@ voor = {
 		plural = "PRESCRIPTED_species_plural_voor"
 		adjective = "PRESCRIPTED_species_adjective_voor"
 		name_list = "HUM2"
-		trait = "trait_primitive_cybernetic"
 		trait = "trait_quick_learners"
 		trait = "trait_talented"
 		trait = "trait_adaptive"
@@ -26,11 +25,14 @@ voor = {
 	
 	ethic = ethic_authoritarian
 	ethic = ethic_fanatic_materialist
+	ethic = ethic_capitalism
+	ethic = ethic_industrial
 	flags = { the_voor }
 	authority = "auth_dictatorial"
 	government = gov_technocratic_dictatorship
-	civics = { "civic_technocracy" "civic_environmentalist" }
-	origin = "origin_primitive_cyborgs"
+	civics = { "civic_industrial_economy" "civic_cyber_dictatorship" "civic_consumerism" }
+	
+	origin = "origin_default"
 	
 	planet_name = PRESCRIPTED_planet_name_voor
 	planet_class = "pc_arctic"

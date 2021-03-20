@@ -6,7 +6,7 @@ buffer = {
 country = {
 	hidden = yes
 	generate_mult_modifiers = {
-		produces 
+		produces
 	}
 
 	generate_add_modifiers = {
@@ -46,8 +46,9 @@ edicts = {
 }
 
 rare_edicts = {
-	parent = edicts
 	use_for_ai_budget = yes
+	parent = edicts
+
 	generate_mult_modifiers = {
 		cost
 	}
@@ -131,19 +132,6 @@ ships = {
 	}
 
 	triggered_cost_modifier = {
-		key = ship_colonizer
-		use_parent_icon = yes
-		modifier_types = {
-			mult
-		}
-
-		trigger = {
-			is_scope_valid = yes #When called from ship designer the design is not valid yet.
-			is_ship_class = shipclass_colonizer
-		}
-	}
-
-	triggered_cost_modifier = {
 		key = ship_corvette
 		use_parent_icon = yes
 		modifier_types = {
@@ -168,7 +156,7 @@ ships = {
 			is_ship_size = destroyer
 		}
 	}
-	
+
 	triggered_cost_modifier = {
 		key = ship_cruiser
 		use_parent_icon = yes
@@ -181,7 +169,7 @@ ships = {
 			is_ship_size = cruiser
 		}
 	}
-	
+
 	triggered_cost_modifier = {
 		key = ship_battleship
 		use_parent_icon = yes
@@ -194,7 +182,7 @@ ships = {
 			is_ship_size = battleship
 		}
 	}
-	
+
 	triggered_cost_modifier = {
 		key = ship_military_station_small
 		use_parent_icon = yes
@@ -226,7 +214,7 @@ ship_components = {
 	parent = ships
     generate_mult_modifiers = {
 		cost
-	}                        
+	}
 }
 
 ship_sections = {
@@ -265,24 +253,16 @@ station_researchers = {
 
 	generate_mult_modifiers = {
 		produces
-		cost
+		upkeep
 	}
 }
 
 station_observers = {
 	parent = stations
-
-	generate_add_modifiers = {
-		produces
-	}
 }
 
 station_observer_missions = {
 	parent = station_observers
-
-	generate_mult_modifiers = {
-		produces
-	}
 }
 
 starbases = {
@@ -303,18 +283,6 @@ starbase_stations = {
 	parent = starbases
 
 	triggered_cost_modifier = {
-		key = starbase_outpost
-		modifier_types = {
-			mult
-		}
-
-		trigger = {
-			is_scope_valid = yes #When called from ship designer the design is not valid yet.
-			is_ship_size = starbase_outpost
-		}
-	}
-
-	triggered_upkeep_modifier = {
 		key = starbase_outpost
 		modifier_types = {
 			mult
@@ -349,10 +317,6 @@ planets = {
 	ai_use_parent_for_resources_upkeep = {
 		energy
 	}
-	
-	generate_mult_modifiers = {
-		produces
-	}
 
 	hidden = yes
 }
@@ -360,7 +324,6 @@ planets = {
 planet_structures = {
 	parent = planets
 	hidden = yes
-	
 	generate_mult_modifiers = {
 		cost
 		upkeep
@@ -383,7 +346,6 @@ planet_buildings_strongholds = {
 		cost
 	}
 }
-
 planet_branch_offices = {
 	parent = planets
 
@@ -410,27 +372,11 @@ planet_districts = {
 }
 
 planet_districts_cities = {
-	parent = planet_structures
+	parent = planet_districts
 
-	generate_add_modifiers = {
-		produces
+	generate_mult_modifiers = {
+		cost
 		upkeep
-	}
-
-	generate_mult_modifiers = {
-		cost
-	}
-}
-
-planet_districts_farming = {
-	parent = planet_structures
-
-	generate_add_modifiers = {
-		produces
-	}
-
-	generate_mult_modifiers = {
-		cost
 	}
 }
 
@@ -473,7 +419,6 @@ planet_districts_hab_leisure = {
 		cost
 	}
 }
-
 planet_jobs = {
 	parent = planets
 
@@ -524,16 +469,6 @@ planet_jobs = {
 		}
 	}
 
-	triggered_upkeep_modifier = {
-		key = planet_jobs_specialist
-		modifier_types = {
-			mult
-		}
-		trigger = {
-			is_pop_category = specialist
-		}
-	}
-    
     triggered_produces_modifier = {
 		key = planet_jobs_ruler
 		modifier_types = {
@@ -544,7 +479,7 @@ planet_jobs = {
 			is_pop_category = ruler
 		}
 	}
-    
+
 	triggered_produces_modifier = {
 		key = planet_jobs_simple_drone
 		modifier_types = {
@@ -554,8 +489,8 @@ planet_jobs = {
 		trigger = {
 			is_pop_category = simple_drone
 		}
-	}	
-    
+	}
+
 	triggered_produces_modifier = {
 		key = planet_jobs_complex_drone
 		modifier_types = {
@@ -576,7 +511,7 @@ planet_jobs = {
 		trigger = {
 			is_robot_pop = yes
 		}
-	}	
+	}
 }
 
 planet_bio_trophies = {
@@ -627,10 +562,15 @@ planet_miners = {
 	}
 }
 
-planet_livestock  = {
+planet_livestock = {
 	parent = planet_jobs
 	generate_add_modifiers = {
 		produces
+        upkeep
+	}
+	generate_mult_modifiers = {
+		produces
+		upkeep
 	}
 }
 
@@ -685,10 +625,6 @@ planet_administrators = {
 planet_bureaucrats = {
 	icon = "job_bureaucrat"
 	parent = planet_jobs
-	generate_add_modifiers = {
-		produces
-        upkeep
-	}
 	generate_mult_modifiers = {
 		produces
 		upkeep
@@ -742,13 +678,8 @@ planet_evaluators = {
 
 planet_synapse_drones = {
 	parent = planet_jobs
-	generate_add_modifiers = {
-		produces
-        upkeep
-	}
 	generate_mult_modifiers = {
 		produces
-        upkeep
 	}
 }
 
@@ -885,6 +816,7 @@ planet_chemists = {
 }
 
 planet_artisans = {
+	icon = "job_artisan"
 	parent = planet_jobs
 	generate_add_modifiers = {
 		produces
@@ -911,7 +843,7 @@ planet_pops = {
 			is_robot_pop = yes
 		}
 	}
-	
+
 	triggered_upkeep_modifier = {
 		key = planet_pops_organics
 		modifier_types = {
@@ -1012,7 +944,7 @@ pop_category_robot = {
 		upkeep
 	}
     generate_mult_modifiers = {
-        produces  
+        produces
 		upkeep
 	}
 }
@@ -1063,6 +995,13 @@ pop_category_rulers = {
 
 pop_category_assimilation = {
 	parent = planet_pops
+	generate_add_modifiers = {
+		upkeep
+	}
+    generate_mult_modifiers = {
+        produces
+		upkeep
+	}
 }
 
 planet_deposits = {
@@ -1141,9 +1080,6 @@ leader_scientists = {
 		cost
 		upkeep
 	}
-	generate_add_modifiers = {
-		produces
-	}
 }
 
 leader_governors = {
@@ -1159,9 +1095,6 @@ diplomacy = {
 	parent = country
 	generate_mult_modifiers = {
 		upkeep
-	}
-	generate_add_modifiers = {
-		produces
 	}
 }
 
@@ -1182,31 +1115,32 @@ subjects = {
 
 federation = {
 	parent = diplomacy
+	generate_add_modifiers = {
+		produces
+	}
 }
 
 rivalries = {
 	parent = diplomacy
     generate_mult_modifiers = {
 		produces
-	}                        
+	}
 }
 
 non_aggression_pacts = {
 	parent = diplomacy
 }
 
+migration_pacts = {
+	parent = diplomacy
+}
+
 research_agreements = {
 	parent = diplomacy
-    generate_mult_modifiers = {
-		upkeep
-	}              
 }
 
 commercial_pacts = {
 	parent = diplomacy
-    generate_mult_modifiers = {
-		upkeep
-	}
 }
 
 defensive_pacts = {
@@ -1229,7 +1163,6 @@ claims = {
 }
 
 subject_tax = {
-	parent = diplomacy
 }
 
 envoy_costs = {
@@ -1243,11 +1176,16 @@ diplo_closed_borders = {
 subject_integration = {
 }
 
+
+
 relics = {
+
 }
 
 artifact_actions = {
+
 }
 
 sector = {
+
 }

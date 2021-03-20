@@ -7,7 +7,7 @@ head_researcher = {
 	building_icon = building_institute
 	clothes_texture_index = 1
 	icon = researcher
-	
+
 	possible_pre_triggers = {
 		has_owner = yes
 		is_enslaved = no
@@ -18,31 +18,13 @@ head_researcher = {
 	possible = {
 		ruler_job_check_trigger = yes
 	}
-	
+
 	resources = {
 		category = planet_researchers
 		produces = {
 			physics_research = 5
 			engineering_research = 5
 			society_research = 5
-		}
-		produces = {
-			trigger = { 
-				owner = { has_valid_civic = civic_technocracy }
-			}
-			unity = 1
-			physics_research = 1
-			engineering_research = 1
-			society_research = 1
-		}
-		produces = {
-			trigger = { 
-				owner = {
-					has_authority = auth_imperial
-					has_origin = origin_ancient_dynasty
-				}
-			}
-			unity = 1
 		}
 		upkeep = {
 			trigger = {
@@ -52,136 +34,18 @@ head_researcher = {
 				}
 			}
 			energy = 1
-		}
+		}		
 	}
-	
-	triggered_pop_modifier = {
-		potential = {
-			is_enslaved = no
-			owner = {
-				has_edict = research_subsidies
-			}
-		}
-		modifier = {
-			pop_happiness = 0.05
-		}
-	}
-	
-	triggered_pop_modifier = {
-		potential = {
-			is_enslaved = no
-			owner = {
-				has_edict = research_subsidies
-				is_materialist = yes
-			}
-		}
-		modifier = {
-			pop_happiness = 0.05
-		}
-	}
-	
-	triggered_pop_modifier = {
-		potential = {
-			is_enslaved = no
-			owner = {
-				OR = {
-					has_civic = civic_iron_despot
-					has_civic = civic_corp_iron_despot
-				}
-			}
-		}
-		modifier = {
-			pop_political_power = 2
-		}
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			owner = { has_valid_civic = civic_technocracy_corp } 
-		}
-		modifier = {
-			trade_value_add = 4
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_valid_civic = civic_shadow_council_megacorp
-				has_valid_civic = civic_technocracy_corp
-			}
-		}
-		modifier = {
-			trade_value_add = 0.4
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			owner = { has_civic = civic_technocracy_corp }
-			OR = { has_trait = trait_thrifty has_trait = trait_thrifty_synth }
-		}
-		modifier = {
-			trade_value_add = 1
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			owner = { has_civic = civic_technocracy_corp }
-			has_trait = trait_nuumismatic_administration
-		}
-		modifier = {
-			trade_value_add = 1
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			owner = { has_civic = civic_technocracy_corp }
-			OR = {
-				has_trait = trait_adaptable_evolution
-				has_trait = trait_adaptable_evolution_robot
-				has_trait = trait_robust
-			}
-		}
-		modifier = {
-			trade_value_add = 0.2
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			owner = { has_civic = civic_technocracy_corp }
-			has_trait = trait_ageless
-		}
-		modifier = {
-			trade_value_add = 0.4
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			owner = { has_civic = civic_technocracy_corp }
-			has_trait = trait_sleepless
-		}
-		modifier = {
-			trade_value_add = 1
-		}
-	}
-	
+
 	planet_modifier = {
 		planet_amenities_add = 5
 	}
-	triggered_planet_modifier = {
-		potential = {
-			OR = { has_trait = trait_pheremones has_trait = trait_lithoid_shiny }
-		}
-		modifier = {
-			planet_amenities_add = 2
-		}
-	}
+
 	triggered_planet_modifier = {
 		potential = {
 			OR = {
 				has_trait = trait_robot_domestic_protocols
 				has_trait = trait_charismatic
-				has_trait = trait_robot_emotion_emulators
 			}
 		}
 		modifier = {
@@ -190,72 +54,23 @@ head_researcher = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			has_global_flag = expanded_pops_active
-			is_robot_pop = yes
-			exists = owner
-			owner = { has_relic = r_three_londor }
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { OR = { has_valid_civic = civic_shadow_council has_valid_civic = civic_shadow_council_megacorp } }
-		}
-		modifier = {
-			planet_amenities_add = 0.5
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			OR = {
-				has_trait = trait_repugnant
-				has_trait = trait_robot_uncanny
-			}
+			has_trait = trait_repugnant
 		}
 		modifier = {
 			planet_amenities_add = -1
 		}
 	}
-	
+
 	weight = {
 		weight = @ruler_job_weight
 		modifier = {
-			factor = 1.25
-			OR = {
-				has_trait = trait_adaptable_evolution
-				has_trait = trait_robot_efficient_processors
-			}
-		}
-		modifier = {
-			factor = 1.5
-			OR = {
-				has_trait = trait_robust
-				has_trait = trait_adaptable_evolution_robot
-			}
-		}
-		modifier = {
-			factor = 2
-			has_trait = trait_ageless
-		}
-		modifier = {
-			factor = 2.5
-			has_trait = trait_sleepless
-		}
-		modifier = {
 			factor = 0.2
-			has_citizenship_rights = no	
+			has_citizenship_rights = no
 			NOT = { has_trait = trait_mechanical }
 		}
 		modifier = {
 			factor = 2
 			has_living_standard = { type = living_standard_academic_privilege }
-		}
-		modifier = {
-			factor = 0
-			has_living_standard = { type = living_standard_chemical_bliss }
 		}
 		modifier = {
 			factor = 3
@@ -266,19 +81,7 @@ head_researcher = {
 			OR = {
 				has_trait = trait_robot_logic_engines
 				has_trait = trait_intelligent
-				has_trait = trait_enigmatic_intelligence
-				has_trait = trait_enigmatic_intelligence_poor
-				has_trait = trait_presapient_natural_intellectuals
-				has_trait = trait_mem_surveyor_freebotomites
 			}
-		}
-		modifier = {
-			factor = 2
-			has_trait = trait_brainslug
-		}
-		modifier = {
-			factor = 2
-			has_trait = trait_psionic
 		}
 		modifier = {
 			factor = 1.5
@@ -289,67 +92,67 @@ head_researcher = {
 			}
 		}
 		modifier = {
+			factor = 5
+			has_job = head_researcher
+		}
+		modifier = {
+			factor = 0.65
+			has_trait = trait_presapient_proles
+		}
+		modifier = {
+			factor = 1.5
+			has_trait = trait_latent_psionic
+		}
+		modifier = {
+			factor = 2
+			has_trait = trait_psionic
+		}
+		modifier = {
 			factor = 0.1
+			has_trait = trait_enigmatic_intelligence_failed
+		}
+		modifier = {
+			factor = 2
 			OR = {
-				has_trait = trait_enigmatic_intelligence_failed
-				has_trait = trait_presapient_proles
+				has_trait = trait_enigmatic_intelligence
+				has_trait = trait_enigmatic_intelligence_poor
 			}
+		}
+		modifier = {
+			factor = 2
+				has_trait = trait_presapient_natural_intellectuals
+		}
+		modifier = {
+			factor = 2
+				has_trait = trait_brainslug
+		}
+		modifier = {
+			factor = 1.5
+			has_trait = trait_robust
 		}
 		modifier = {
 			factor = 1.25
 			OR = {
 				has_trait = trait_robot_domestic_protocols
 				has_trait = trait_charismatic
-				has_trait = trait_robot_emotion_emulators
 			}
-		}
-		modifier = {
-			factor = 1.5
-			OR = { has_trait = trait_pheremones has_trait = trait_lithoid_shiny }
 		}
 		modifier = {
 			factor = 0.75
-			OR = {
-				has_trait = trait_repugnant
-				has_trait = trait_robot_uncanny
-			}
+			has_trait = trait_repugnant
 		}
 		modifier = {
 			factor = 1.5
 			has_trait = trait_necrophage
 		}
 		modifier = {
-			factor = 2
-			has_job = researcher
-		}
-		modifier = {
-			factor = 5
-			has_job = head_researcher
-		}
-
-		modifier = {
-			factor = 1.2
-			is_unemployed = yes
-			is_pop_category = ruler
-		}
-		modifier = {
-			factor = 1.1
-			is_unemployed = yes
-			is_pop_category = specialist
-		}
-		modifier = {
 			factor = 0.01
+			exists = planet
+			exists = planet.controller
 			planet.controller = {
 				OR = {
 					is_country_type = swarm
 					is_country_type = ai_empire
-				}
-			}
-			OR = { # contingency won't purge itself
-				NOT = { exists = event_target:custodian_bot }
-				AND = {
-					exists = event_target:custodian_bot
-					NOT = { species = { is_same_value = event_target:custodian_bot } }
 				}
 			}
 		}
@@ -361,84 +164,64 @@ high_priest = {
 	condition_string = RULER_JOB_TRIGGER
 	building_icon = building_citadel_of_faith
 	clothes_texture_index = 1
-	
+
 	possible_pre_triggers = {
 		has_owner = yes
 		is_enslaved = no
 		is_being_purged = no
 		is_being_assimilated = no
 	}
-	
+
 	possible = {
 		ruler_job_check_trigger = yes
+		NOT = { has_ethic = ethic_materialist }
 	}
 
 	resources = {
 		category = planet_priests
 		produces = {
-			unity = 5
-		}
-		produces = {
-			trigger = { 
-				owner = { NOT = { has_valid_civic = civic_crusaders } }
-			}
+			unity = 7
 			society_research = 2
 		}
 		produces = {
-           trigger = {
+			trigger = {
+				exists = owner
 				owner = { has_valid_civic = civic_exalted_priesthood }
-           }
-           unity = 2
-       }
-		produces = {
-			trigger = { 
-				owner = {
-					has_authority = auth_imperial
-					has_origin = origin_ancient_dynasty
-				}
 			}
-			unity = 1
-		}
-	}
-	
-	triggered_country_modifier = {
-		potential = {
-			planet = {
-				exists = owner 
-				owner = { has_valid_civic = civic_crusaders }
-			}
-		}
-		modifier = {
-			country_naval_cap_add = 2
+			society_research = 2
 		}
 	}
 
 	planet_modifier = {
 		planet_amenities_add = 5
 	}
-	
+
 	triggered_planet_modifier = {
 		potential = {
-			owner = { has_valid_civic = civic_exalted_priesthood }
+		    exists = owner
+			owner = { has_valid_civic = civic_machine_cult }
+		}
+		modifier = {
+			planet_jobs_robotic_produces_mult = 0.05
+			planet_jobs_engineering_research_produces_mult = 0.05
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+		    exists = owner
+			owner = { has_valid_civic = civic_spiritual_democracy }
 		}
 		modifier = {
 			planet_amenities_add = 2
 		}
 	}
-	triggered_planet_modifier = {
-		potential = {
-			OR = { has_trait = trait_pheremones has_trait = trait_lithoid_shiny }
-		}
-		modifier = {
-			planet_amenities_add = 2
-		}
-	}
+
 	triggered_planet_modifier = {
 		potential = {
 			OR = {
 				has_trait = trait_robot_domestic_protocols
 				has_trait = trait_charismatic
-				has_trait = trait_robot_emotion_emulators
 			}
 		}
 		modifier = {
@@ -447,106 +230,37 @@ high_priest = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			has_global_flag = expanded_pops_active
-			is_robot_pop = yes
-			exists = owner
-			owner = { has_relic = r_three_londor }
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { OR = { has_valid_civic = civic_shadow_council has_valid_civic = civic_shadow_council_megacorp } }
-		}
-		modifier = {
-			planet_amenities_add = 0.5
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			OR = {
-				has_trait = trait_repugnant
-				has_trait = trait_robot_uncanny
-			}
+			has_trait = trait_repugnant
 		}
 		modifier = {
 			planet_amenities_add = -1
 		}
 	}
-	
+
 	weight = {
 		weight = @ruler_job_weight
 		modifier = {
-			factor = 1.25
-			OR = {
-				has_trait = trait_adaptable_evolution
-				has_trait = trait_robot_efficient_processors
-			}
-		}
-		modifier = {
-			factor = 1.5
-			OR = {
-				has_trait = trait_robust
-				has_trait = trait_adaptable_evolution_robot
-			}
-		}
-		modifier = {
-			factor = 2
-			has_trait = trait_ageless
-		}
-		modifier = {
-			factor = 2.5
-			has_trait = trait_sleepless
-		}		
-		modifier = {
 			factor = 0.1
-			has_citizenship_rights = no	
-			NOT = { has_trait = trait_mechanical }	
-		}		
+			has_citizenship_rights = no
+			NOT = { has_trait = trait_mechanical }
+		}
 		modifier = {
 			factor = 1.25
 			OR = {
 				has_trait = trait_robot_domestic_protocols
 				has_trait = trait_charismatic
-				has_trait = trait_robot_emotion_emulators
 			}
-		}
-		modifier = {
-			factor = 1.5
-			OR = { has_trait = trait_pheremones has_trait = trait_lithoid_shiny }
 		}
 		modifier = {
 			factor = 0.75
-			OR = {
-				has_trait = trait_repugnant
-				has_trait = trait_robot_uncanny
-			}
-		}
-		modifier = {
-			factor = 1.5
-			has_trait = trait_necrophage
-		}
-		modifier = {
-			factor = 1.5 
-			has_trait = trait_brainslug
-		}
-		modifier = {
-			factor = 1.2
-			OR = {
-				has_trait = trait_presapient_natural_intellectuals
-				has_trait = trait_mem_surveyor_freebotomites
-				has_trait = mem_ashes_survivors
-			}
+			has_trait = trait_repugnant
 		}
 		modifier = {
 			factor = 1.5
 			OR = {
-			   has_trait = trait_robot_propaganda_machines
-			   has_trait = trait_traditional
-			}     
+				has_trait = trait_robot_propaganda_machines
+				has_trait = trait_traditional
+			}
 		}
 		modifier = {
 			factor = 0.5
@@ -555,62 +269,60 @@ high_priest = {
 		modifier = {
 			factor = 1.2
 			has_ethic = ethic_spiritualist
-		}	
+		}
 		modifier = {
-			factor = 2
-			has_job = priest
+			factor = 0.1
+			has_ethic = ethic_materialist
+			NOT = { has_job = high_priest }
 		}
 		modifier = {
 			factor = 5
 			has_job = high_priest
 		}
-
 		modifier = {
-			factor = 1.2
-			is_unemployed = yes
-			is_pop_category = ruler
+			factor = 1.5
+			has_trait = trait_brainslug
 		}
 		modifier = {
-			factor = 1.1
-			is_unemployed = yes
-			is_pop_category = specialist
+			factor = 1.25
+			has_trait = trait_presapient_natural_intellectuals
 		}
 		modifier = {
-			factor = 0
-			has_living_standard = { type = living_standard_chemical_bliss }
+			factor = 1.25
+			has_trait = trait_robust
 		}
+		modifier = {
+			factor = 1.5
+			has_trait = trait_necrophage
+		}
+		# crisis purge
 		modifier = {
 			factor = 0.01
+			exists = planet
+			exists = planet.controller
 			planet.controller = {
 				OR = {
 					is_country_type = swarm
 					is_country_type = ai_empire
 				}
 			}
-			OR = { # contingency won't purge itself
-				NOT = { exists = event_target:custodian_bot }
-				AND = {
-					exists = event_target:custodian_bot
-					NOT = { species = { is_same_value = event_target:custodian_bot } }
-				}
-			}
 		}
 	}
 }
 
-administrator = {	
+administrator = {
 	category = ruler
 	condition_string = RULER_JOB_TRIGGER
 	building_icon = building_capital
 	clothes_texture_index = 1
-	
+
 	possible_pre_triggers = {
 		has_owner = yes
 		is_enslaved = no
 		is_being_purged = no
 		is_being_assimilated = no
 	}
-	
+
 	possible = {
 		ruler_job_check_trigger = yes
 	}
@@ -620,35 +332,29 @@ administrator = {
 		produces = {
 			unity = 3
 		}
-		produces = {
-			trigger = { 
-				owner = {
-					has_authority = auth_imperial
-					has_origin = origin_ancient_dynasty
-				}
-			}
-			unity = 1
-		}
 	}
-	
+
 	planet_modifier = {
 		planet_amenities_add = 8
 	}
-	
+
+	#
+
 	triggered_planet_modifier = {
 		potential = {
-			OR = { has_trait = trait_pheremones has_trait = trait_lithoid_shiny }
+		    exists = owner
+			owner = { or = { has_valid_civic = civic_welfare_state } }
 		}
 		modifier = {
-			planet_amenities_add = 2.4
+			planet_amenities_add = 5
 		}
 	}
+
 	triggered_planet_modifier = {
 		potential = {
 			OR = {
 				has_trait = trait_robot_domestic_protocols
 				has_trait = trait_charismatic
-				has_trait = trait_robot_emotion_emulators
 			}
 		}
 		modifier = {
@@ -657,143 +363,71 @@ administrator = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			has_global_flag = expanded_pops_active
-			is_robot_pop = yes
-			exists = owner
-			owner = { has_relic = r_three_londor }
-		}
-		modifier = {
-			planet_amenities_add = 1.6
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { OR = { has_valid_civic = civic_shadow_council has_valid_civic = civic_shadow_council_megacorp } }
-		}
-		modifier = {
-			planet_amenities_add = 0.8
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			OR = {
-				has_trait = trait_repugnant
-				has_trait = trait_robot_uncanny
-			}
+			has_trait = trait_repugnant
 		}
 		modifier = {
 			planet_amenities_add = -1.6
 		}
 	}
-	
+
 	weight = {
 		weight = @ruler_job_weight
 		modifier = {
-			factor = 1.25
-			OR = {
-				has_trait = trait_adaptable_evolution
-				has_trait = trait_robot_efficient_processors
-			}
-		}
-		modifier = {
-			factor = 1.5
-			OR = {
-				has_trait = trait_robust
-				has_trait = trait_adaptable_evolution_robot
-			}
-		}
-		modifier = {
-			factor = 2
-			has_trait = trait_ageless
-		}
-		modifier = {
-			factor = 2.5
-			has_trait = trait_sleepless
-		}
-		modifier = {
 			factor = 0.1
-			has_citizenship_rights = no	
-			NOT = { has_trait = trait_mechanical }	
-		}		
+			has_citizenship_rights = no
+			NOT = { has_trait = trait_mechanical }
+		}
 		modifier = {
 			factor = 1.5
 			OR = {
 				has_trait = trait_robot_domestic_protocols
 				has_trait = trait_charismatic
-				has_trait = trait_robot_emotion_emulators
 			}
-		}
-		modifier = {
-			factor = 2
-			OR = { has_trait = trait_pheremones has_trait = trait_lithoid_shiny }
 		}
 		modifier = {
 			factor = 0.5
+			has_trait = trait_repugnant
+		}
+		modifier = {
+			factor = 1.25
 			OR = {
-				has_trait = trait_repugnant
-				has_trait = trait_robot_uncanny
+				has_trait = trait_robot_propaganda_machines
+				has_trait = trait_traditional
 			}
+		}
+		modifier = {
+			factor = 0.75
+			has_trait = trait_quarrelsome
+		}
+		modifier = {
+			factor = 5
+			has_job = administrator
+		}
+		modifier = {
+			factor = 1.25
+			has_trait = trait_brainslug
+		}
+		modifier = {
+			factor = 1.125
+			has_trait = trait_presapient_natural_intellectuals
+		}
+		modifier = {
+			factor = 1.125
+			has_trait = trait_robust
 		}
 		modifier = {
 			factor = 1.5
 			has_trait = trait_necrophage
 		}
-		modifier = {
-			factor = 1.25 
-			has_trait = trait_brainslug
-		}
-		modifier = {
-			factor = 1.1
-			OR = {
-				has_trait = trait_presapient_natural_intellectuals
-				has_trait = trait_mem_surveyor_freebotomites
-				has_trait = mem_ashes_survivors
-			}
-		}
-		modifier = {
-			factor = 1.25
-			OR = {
-			   has_trait = trait_robot_propaganda_machines
-			   has_trait = trait_traditional
-			}     
-		}
-		modifier = {
-			factor = 0.75
-			has_trait = trait_quarrelsome
-		}	
-		modifier = {
-			factor = 5
-			has_job = administrator
-		}		
-
-		modifier = {
-			factor = 1.2
-			is_unemployed = yes
-			is_pop_category = ruler
-		}
-		modifier = {
-			factor = 1.1
-			is_unemployed = yes
-			is_pop_category = specialist
-		}
+		# crisis purge
 		modifier = {
 			factor = 0.01
-			has_living_standard = { type = living_standard_chemical_bliss }
-		}
-		modifier = {
-			factor = 0.01
+			exists = planet
+			exists = planet.controller
 			planet.controller = {
 				OR = {
 					is_country_type = swarm
 					is_country_type = ai_empire
-				}
-			}
-			OR = { # contingency won't purge itself
-				NOT = { exists = event_target:custodian_bot }
-				AND = {
-					exists = event_target:custodian_bot
-					NOT = { species = { is_same_value = event_target:custodian_bot } }
 				}
 			}
 		}
@@ -805,7 +439,7 @@ noble = {
 	condition_string = RULER_JOB_TRIGGER
 	building_icon = building_palace
 	clothes_texture_index = 1
-	
+
 	possible_pre_triggers = {
 		has_owner = yes
 		is_enslaved = no
@@ -816,200 +450,54 @@ noble = {
 	possible = {
 		ruler_job_check_trigger = yes
 	}
-	
+
 	resources = {
 		category = planet_nobles
 		produces = {
-			unity = 2
-		}
-		produces = {
-			trigger = { 
-				owner = {
-					has_authority = auth_imperial
-					has_origin = origin_ancient_dynasty
-				}
-			}
-			unity = 2
+			unity = 3
 		}
 	}
-	
+
 	planet_modifier = {
 		planet_stability_add = 5
-		planet_amenities_add = 5
 	}
-	triggered_planet_modifier = {
-		potential = {
-			OR = { has_trait = trait_pheremones has_trait = trait_lithoid_shiny }
-		}
-		modifier = {
-			planet_amenities_add = 2
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			OR = {
-				has_trait = trait_robot_domestic_protocols
-				has_trait = trait_charismatic
-				has_trait = trait_robot_emotion_emulators
-			}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			has_global_flag = expanded_pops_active
-			is_robot_pop = yes
-			exists = owner
-			owner = { has_relic = r_three_londor }
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { OR = { has_valid_civic = civic_shadow_council has_valid_civic = civic_shadow_council_megacorp } }
-		}
-		modifier = {
-			planet_amenities_add = 0.5
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			OR = {
-				has_trait = trait_repugnant
-				has_trait = trait_robot_uncanny
-			}
-		}
-		modifier = {
-			planet_amenities_add = -1
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			owner = { has_civic = civic_royal_trading_company }
-		}
-		modifier = {
-			trade_value_add = 4
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_valid_civic = civic_shadow_council_megacorp
-				has_valid_civic = civic_royal_trading_company
-			}
-		}
-		modifier = {
-			trade_value_add = 0.4
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			owner = { has_civic = civic_royal_trading_company }
-			OR = { has_trait = trait_thrifty has_trait = trait_thrifty_synth }
-		}
-		modifier = {
-			trade_value_add = 1
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			owner = { has_civic = civic_royal_trading_company }
-			has_trait = trait_nuumismatic_administration
-		}
-		modifier = {
-			trade_value_add = 1
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			owner = { has_civic = civic_royal_trading_company }
-			OR = {
-				has_trait = trait_adaptable_evolution
-				has_trait = trait_adaptable_evolution_robot
-				has_trait = trait_robust
-			}
-		}
-		modifier = {
-			trade_value_add = 0.2
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			owner = { has_civic = civic_royal_trading_company }
-			has_trait = trait_ageless
-		}
-		modifier = {
-			trade_value_add = 0.4
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			owner = { has_civic = civic_royal_trading_company }
-			has_trait = trait_sleepless
-		}
-		modifier = {
-			trade_value_add = 1
-		}
-	}
-		
+
 	weight = {
-		weight = @ruler_job_weight	
+		weight = @ruler_job_weight
 		modifier = {
 			factor = 0.1
-			has_citizenship_rights = no	
-			NOT = { has_trait = trait_mechanical }	
-		}		
+			has_citizenship_rights = no
+			NOT = { has_trait = trait_mechanical }
+		}
 		modifier = {
 			factor = 1.5
 			OR = {
-				has_trait = trait_robot_domestic_protocols
-				has_trait = trait_charismatic
-				has_trait = trait_robot_emotion_emulators
+				has_trait = trait_robot_propaganda_machines
+				has_trait = trait_traditional
 			}
-		}
-		modifier = {
-			factor = 2
-			OR = { has_trait = trait_pheremones has_trait = trait_lithoid_shiny }
 		}
 		modifier = {
 			factor = 0.5
-			OR = {
-				has_trait = trait_repugnant
-				has_trait = trait_robot_uncanny
-			}
-		}
-		modifier = {
-			factor = 1.5
-			has_trait = trait_necrophage
+			has_trait = trait_quarrelsome
 		}
 		modifier = {
 			factor = 0.1
 			is_egalitarian = yes
 			NOT = { has_job = noble }
-		}	
+		}
 		modifier = {
 			factor = 5
 			has_job = noble
 		}
-
 		modifier = {
-			factor = 1.2
-			is_unemployed = yes
-			is_pop_category = ruler
+			factor = 1.5
+			has_trait = trait_necrophage
 		}
-		modifier = {
-			factor = 1.1
-			is_unemployed = yes
-			is_pop_category = specialist
-		}
+		# crisis purge
 		modifier = {
 			factor = 0.01
+			exists = planet
+			exists = planet.controller
 			planet.controller = {
 				OR = {
 					is_country_type = swarm
@@ -1027,167 +515,57 @@ noble = {
 	}
 }
 
+#merchant -> specialist
 merchant = {
-	category = ruler
-	condition_string = RULER_JOB_TRIGGER
-	building_icon = building_galactic_stock_exchange
-	clothes_texture_index = 1
-	
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	building_icon = building_commercial_megaplex
+	clothes_texture_index = 3
+
 	possible_pre_triggers = {
 		has_owner = yes
 		is_enslaved = no
 		is_being_purged = no
 		is_being_assimilated = no
 	}
-		
+
 	possible = {
 		ruler_job_check_trigger = yes
 	}
-	
+
+	planet_modifier = {
+		planet_amenities_add = 4
+		trade_value_add = 5
+	}
+
 	resources = {
-		category = planet_administrators
+		category = planet_merchants
 		produces = {
-			trigger = { 
-				owner = { has_valid_civic = civic_merchant_guilds }
-			}
-			unity = 2
-		}
-		produces = {
-			trigger = { 
-				owner = {
-					has_authority = auth_imperial
-					has_origin = origin_ancient_dynasty
-				}
+			trigger = {
+				exists = owner
+				owner = { has_civic = civic_merchant_guilds	}
 			}
 			unity = 1
 		}
+		produces = {
+			trigger = {
+				owner = { has_civic = civic_consumerism	}
+			}
+			consumer_goods = 1
+		}		
 	}
 	
-	triggered_planet_modifier = {
-		potential = {
-			planet = {
-				pop_percentage = {
-					percentage >= 0.50
-					limit = {
-						has_very_high_living_standard_type = yes
-					}
-				}
-			}
-		}
-		modifier = {
-			trade_value_add = 0.25
-		}
-	}
 	
-	triggered_planet_modifier = {
-		potential = {
-			planet = {
-				pop_percentage = {
-					percentage >= 0.50
-					limit = {
-						OR = {
-							has_very_high_living_standard_type = yes
-							has_high_living_standard_type = yes
-							has_academic_living_standard_type = yes
-						}
-					}
-				}
-			}
-		}
-		modifier = {
-			trade_value_add = 0.25
-		}
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			planet = {
-				pop_percentage = {
-					percentage >= 0.50
-					limit = {
-						OR = {
-							has_very_high_living_standard_type = yes
-							has_high_living_standard_type = yes
-							has_academic_living_standard_type = yes
-							has_shared_burden_living_standard_type = yes
-						}
-					}
-				}
-			}
-		}
-		modifier = {
-			trade_value_add = 0.5
-		}
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = planet
-			planet = {
-				num_pops > 99
-			}
-		}
-		modifier = {
-			trade_value_add = 0.5
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = planet
-			planet = {
-				num_pops > 199
-			}
-		}
-		modifier = {
-			trade_value_add = 0.5
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = planet
-			planet = {
-				num_pops > 299
-			}
-		}
-		modifier = {
-			trade_value_add = 0.5
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = planet
-			planet = {
-				num_pops > 399
-			}
-		}
-		modifier = {
-			trade_value_add = 0.5
-		}
-	}
-	
-	planet_modifier = {
-		planet_amenities_add = 5
-		trade_value_add = 8
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { OR = { has_valid_civic = civic_shadow_council has_valid_civic = civic_shadow_council_megacorp } }
-		}
-		modifier = {
-			trade_value_add = 0.8
-		}
-	}
 
 	triggered_planet_modifier = {
 		potential = {
-			OR = { has_trait = trait_thrifty has_trait = trait_thrifty_synth }
+			has_trait = trait_thrifty
 		}
 		modifier = {
 			trade_value_add = 2
 		}
 	}
+
 	triggered_planet_modifier = {
 		potential = {
 			has_trait = trait_nuumismatic_administration
@@ -1196,49 +574,12 @@ merchant = {
 			trade_value_add = 2
 		}
 	}
-	triggered_planet_modifier = {
-		potential = {
-			OR = {
-				has_trait = trait_adaptable_evolution
-				has_trait = trait_adaptable_evolution_robot
-				has_trait = trait_robust
-			}
-		}
-		modifier = {
-			trade_value_add = 0.4
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			has_trait = trait_ageless
-		}
-		modifier = {
-			trade_value_add = 0.8
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			has_trait = trait_sleepless
-		}
-		modifier = {
-			trade_value_add = 2
-		}
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			OR = { has_trait = trait_pheremones has_trait = trait_lithoid_shiny }
-		}
-		modifier = {
-			planet_amenities_add = 2
-		}
-	}
+
 	triggered_planet_modifier = {
 		potential = {
 			OR = {
 				has_trait = trait_robot_domestic_protocols
 				has_trait = trait_charismatic
-				has_trait = trait_robot_emotion_emulators
 			}
 		}
 		modifier = {
@@ -1247,63 +588,18 @@ merchant = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			has_global_flag = expanded_pops_active
-			is_robot_pop = yes
-			exists = owner
-			owner = { has_relic = r_three_londor }
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { OR = { has_valid_civic = civic_shadow_council has_valid_civic = civic_shadow_council_megacorp } }
-		}
-		modifier = {
-			planet_amenities_add = 0.5
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			OR = {
-				has_trait = trait_repugnant
-				has_trait = trait_robot_uncanny
-			}
+			has_trait = trait_repugnant
 		}
 		modifier = {
 			planet_amenities_add = -1
 		}
-	}	
-	
+	}
+
 	weight = {
 		weight = @ruler_job_weight
 		modifier = {
-			factor = 1.25
-			OR = {
-				has_trait = trait_adaptable_evolution
-				has_trait = trait_robot_efficient_processors
-			}
-		}
-		modifier = {
-			factor = 1.5
-			OR = {
-				has_trait = trait_robust
-				has_trait = trait_adaptable_evolution_robot
-			}
-		}
-		modifier = {
-			factor = 2
-			has_trait = trait_ageless
-		}
-		modifier = {
-			factor = 2.5
-			has_trait = trait_sleepless
-		}
-		modifier = {
 			factor = 2.0
-			OR = { has_trait = trait_thrifty has_trait = trait_thrifty_synth }
+			has_trait = trait_thrifty
 		}
 		modifier = {
 			factor = 2.0
@@ -1314,68 +610,36 @@ merchant = {
 			OR = {
 				has_trait = trait_robot_domestic_protocols
 				has_trait = trait_charismatic
-				has_trait = trait_robot_emotion_emulators
 			}
-		}
-		modifier = {
-			factor = 2
-			OR = { has_trait = trait_pheremones has_trait = trait_lithoid_shiny }
 		}
 		modifier = {
 			factor = 0.5
-			OR = {
-				has_trait = trait_repugnant
-				has_trait = trait_robot_uncanny
-			}
-		}
-		modifier = {
-			factor = 1.25 
-			owner = { has_civic = civic_merchant_guilds   }
-			has_trait = trait_brainslug
-		}
-		modifier = {
-			factor = 1.1
-			owner = { has_civic = civic_merchant_guilds   }
-			OR = {
-				has_trait = trait_presapient_natural_intellectuals
-				has_trait = trait_mem_surveyor_freebotomites
-				has_trait = mem_ashes_survivors
-			}
-		}
-		modifier = {
-			factor = 1.25
-			owner = { has_civic = civic_merchant_guilds   }
-			OR = {
-			   has_trait = trait_robot_propaganda_machines
-			   has_trait = trait_traditional
-			}     
-		}
-		modifier = {
-			factor = 0.75
-			owner = { has_civic = civic_merchant_guilds   }
-			has_trait = trait_quarrelsome
+			has_trait = trait_repugnant
 		}
 		modifier = {
 			factor = 5
 			has_job = merchant
-		}		
-
-		modifier = {
-			factor = 1.2
-			is_unemployed = yes
-			is_pop_category = ruler
 		}
 		modifier = {
-			factor = 1.1
-			is_unemployed = yes
-			is_pop_category = specialist
+			factor = 1.25
+			owner = { has_civic = civic_corporate_dominion	}
+			has_trait = trait_brainslug
 		}
 		modifier = {
-			factor = 0
-			has_living_standard = { type = living_standard_chemical_bliss }
+			factor = 1.125
+			owner = { has_civic = civic_corporate_dominion	}
+			has_trait = trait_presapient_natural_intellectuals
 		}
+		modifier = {
+			factor = 1.125
+			owner = { has_civic = civic_corporate_dominion	}
+			has_trait = trait_robust
+		}
+		# crisis purge
 		modifier = {
 			factor = 0.01
+			exists = planet
+			exists = planet.controller
 			planet.controller = {
 				OR = {
 					is_country_type = swarm
@@ -1398,161 +662,39 @@ executive = {
 	condition_string = RULER_JOB_TRIGGER
 	building_icon = building_capital
 	clothes_texture_index = 1
-	
+
 	possible_pre_triggers = {
 		has_owner = yes
 		is_enslaved = no
 		is_being_purged = no
 		is_being_assimilated = no
 	}
-		
+
 	possible = {
 		ruler_job_check_trigger = yes
 	}
-	
+
 	resources = {
 		category = planet_executives
 		produces = {
 			unity = 2
 		}
 	}
-	
+
 	planet_modifier = {
 		planet_amenities_add = 5
 		trade_value_add = 4
 	}
-	
+
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { OR = { has_valid_civic = civic_shadow_council has_valid_civic = civic_shadow_council_megacorp } }
-		}
-		modifier = {
-			trade_value_add = 0.4
-		}
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			planet = {
-				has_modifier = "planet_manager_awards"
-			}
-		}
-		modifier = {
-			trade_value_add = 0.5
-		}
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			planet = {
-				pop_percentage = {
-					percentage >= 0.50
-					limit = {
-						has_very_high_living_standard_type = yes
-					}
-				}
-			}
-		}
-		modifier = {
-			trade_value_add = 0.25
-		}
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			planet = {
-				pop_percentage = {
-					percentage >= 0.50
-					limit = {
-						OR = {
-							has_very_high_living_standard_type = yes
-							has_high_living_standard_type = yes
-							has_academic_living_standard_type = yes
-						}
-					}
-				}
-			}
-		}
-		modifier = {
-			trade_value_add = 0.25
-		}
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			planet = {
-				pop_percentage = {
-					percentage >= 0.50
-					limit = {
-						OR = {
-							has_very_high_living_standard_type = yes
-							has_high_living_standard_type = yes
-							has_academic_living_standard_type = yes
-							has_shared_burden_living_standard_type = yes
-						}
-					}
-				}
-			}
-		}
-		modifier = {
-			trade_value_add = 0.5
-		}
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = planet
-			planet = {
-				num_pops > 99
-			}
-		}
-		modifier = {
-			trade_value_add = 0.5
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = planet
-			planet = {
-				num_pops > 199
-			}
-		}
-		modifier = {
-			trade_value_add = 0.5
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = planet
-			planet = {
-				num_pops > 299
-			}
-		}
-		modifier = {
-			trade_value_add = 0.5
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = planet
-			planet = {
-				num_pops > 399
-			}
-		}
-		modifier = {
-			trade_value_add = 0.5
-		}
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			OR = { has_trait = trait_thrifty has_trait = trait_thrifty_synth }
+			has_trait = trait_thrifty
 		}
 		modifier = {
 			trade_value_add = 1
 		}
 	}
+
 	triggered_planet_modifier = {
 		potential = {
 			has_trait = trait_nuumismatic_administration
@@ -1561,41 +703,12 @@ executive = {
 			trade_value_add = 1
 		}
 	}
-	triggered_planet_modifier = {
-		potential = {
-			OR = {
-				has_trait = trait_adaptable_evolution
-				has_trait = trait_adaptable_evolution_robot
-				has_trait = trait_robust
-			}
-		}
-		modifier = {
-			trade_value_add = 0.2
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			has_trait = trait_ageless
-		}
-		modifier = {
-			trade_value_add = 0.4
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			has_trait = trait_sleepless
-		}
-		modifier = {
-			trade_value_add = 1
-		}
-	}
-	
+
 	triggered_planet_modifier = {
 		potential = {
 			OR = {
 				has_trait = trait_robot_domestic_protocols
 				has_trait = trait_charismatic
-				has_trait = trait_robot_emotion_emulators
 			}
 		}
 		modifier = {
@@ -1604,115 +717,50 @@ executive = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			has_global_flag = expanded_pops_active
-			is_robot_pop = yes
-			exists = owner
-			owner = { has_relic = r_three_londor }
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			OR = { has_trait = trait_pheremones has_trait = trait_lithoid_shiny }
-		}
-		modifier = {
-			planet_amenities_add = 2
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { OR = { has_valid_civic = civic_shadow_council has_valid_civic = civic_shadow_council_megacorp } }
-		}
-		modifier = {
-			planet_amenities_add = 0.5
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			OR = {
-				has_trait = trait_repugnant
-				has_trait = trait_robot_uncanny
-			}
+			has_trait = trait_repugnant
 		}
 		modifier = {
 			planet_amenities_add = -1
 		}
 	}
-	
+
 	weight = {
 		weight = @ruler_job_weight
 		modifier = {
-			factor = 1.25
-			OR = {
-				has_trait = trait_adaptable_evolution
-				has_trait = trait_robot_efficient_processors
-			}
-		}
-		modifier = {
-			factor = 1.5
-			OR = {
-				has_trait = trait_robust
-				has_trait = trait_adaptable_evolution_robot
-			}
-		}
-		modifier = {
-			factor = 2
-			has_trait = trait_ageless
-		}
-		modifier = {
-			factor = 2.5
-			has_trait = trait_sleepless
-		}
-		modifier = {
 			factor = 2.0
-			OR = { has_trait = trait_thrifty has_trait = trait_thrifty_synth }
-		}
-		modifier = {
-			factor = 2.0
+			OR = {
+			has_trait = trait_thrifty
 			has_trait = trait_nuumismatic_administration
+		}
 		}
 		modifier = {
 			factor = 1.5
 			OR = {
 				has_trait = trait_robot_domestic_protocols
 				has_trait = trait_charismatic
-				has_trait = trait_robot_emotion_emulators
 			}
 		}
 		modifier = {
-			factor = 2
-			OR = { has_trait = trait_pheremones has_trait = trait_lithoid_shiny }
+			factor = 1.25
+			has_trait = trait_brainslug
+		}
+		modifier = {
+			factor = 1.2
+			has_trait = trait_presapient_natural_intellectuals
 		}
 		modifier = {
 			factor = 0.5
-			OR = {
-				has_trait = trait_repugnant
-				has_trait = trait_robot_uncanny
-			}
+			has_trait = trait_repugnant
 		}
 		modifier = {
 			factor = 5
-			has_job = merchant
-		}		
-		modifier = {
-			factor = 1.2
-			is_unemployed = yes
-			is_pop_category = ruler
+			has_job = executive
 		}
-		modifier = {
-			factor = 1.1
-			is_unemployed = yes
-			is_pop_category = specialist
-		}
+		# crisis purge
 		modifier = {
 			factor = 0.01
-			has_living_standard = { type = living_standard_chemical_bliss }
-		}
-		modifier = {
-			factor = 0.01
+			exists = planet
+			exists = planet.controller
 			planet.controller = {
 				OR = {
 					is_country_type = swarm

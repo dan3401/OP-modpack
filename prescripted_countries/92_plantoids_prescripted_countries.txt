@@ -14,7 +14,6 @@ maweer = {
 		plural = "PRESCRIPTED_species_plural_maweer"
 		adjective = "PRESCRIPTED_species_adjective_maweer"
 		name_list = "PLANT"
-		trait="trait_photosynthetic"
 		trait="trait_agrarian"
 		trait="trait_enduring"
 		trait="trait_conservational"
@@ -23,14 +22,19 @@ maweer = {
 
 	room = "personality_xenophobic_isolationists_room"
 	ethic = "ethic_xenophobe"
-	ethic = "ethic_fanatic_pacifist"
+	ethic = "ethic_pacifist"
+	ethic = "ethic_socialism"
+	ethic = "ethic_authoritarian"
+	ethic = "ethic_green"
 	authority="auth_dictatorial"
 	civics = {
 		"civic_inwards_perfection"
-		"civic_agrarian_idyll"
+		"civic_ultimate_collective"
+		"civic_environmentalist"
 	}
 	government="gov_irenic_dictatorship"
-	origin = "origin_terraformer"
+	
+	origin = "origin_default"
 
 	adjective = "PRESCRIPTED_adjective_maweer"
 	planet_name = "PRESCRIPTED_planet_name_maweer"

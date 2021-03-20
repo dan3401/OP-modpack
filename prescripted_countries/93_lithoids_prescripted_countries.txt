@@ -21,15 +21,18 @@ khennet = {
 	}
 
 	room = "lithoid_room"
-	ethic = "ethic_pacifist"
-	ethic = "ethic_fanatic_spiritualist"
+	ethic = "ethic_fanatic_pacifist"
+	ethic = "ethic_spiritualist"
+	ethic = "ethic_green"
+	ethic = "ethic_capitalism"
 	authority = "auth_imperial"
 	civics = {
 		"civic_philosopher_king"
-		"civic_environmentalist"
+		"civic_keepers_harmony"
+		"civic_distributism"
 	}
 	government="gov_theocratic_monarchy"
-	origin = "origin_holy_mountain"
+	origin = "origin_default"
 
 	adjective = "PRESCRIPTED_adjective_khennet"
 	planet_name = "PRESCRIPTED_planet_name_khennet"

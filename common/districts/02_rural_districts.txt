@@ -228,6 +228,8 @@ district_generator = {
 		}
 	}
 }
+
+
 district_mining = {
 	base_buildtime = 240
 
@@ -259,65 +261,19 @@ district_mining = {
 		upkeep = {
 			energy = 1
 		}
+
+		upkeep = {
+		  	trigger = {
+				owner = { or = { has_valid_civic = civic_mining_guilds	}	}
+			}
+			energy = 0.2
+		}
 	}
 
 	planet_modifier = {
 		planet_housing_add = 2
 	}
 
-#### plentiful traditions
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_tradition = tr_plentiful_industry_3 }
-			owner = { is_hive_empire = yes }
-		}
-		modifier = {
-			planet_housing_add = 1
-			job_mining_drone_add = 1
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_tradition = tr_plentiful_industry_3 }
-			owner = { is_machine_empire = yes }
-		}
-		modifier = {
-			planet_housing_add = 1
-			job_mining_drone_add = 1
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_tradition = tr_plentiful_industry_3 }
-			owner = { 
-				is_gestalt = no
-				is_fallen_empire_spiritualist = no
-			}
-		}
-		modifier = {
-			planet_housing_add = 1
-			job_miner_add = 1
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_tradition = tr_plentiful_industry_3 }
-			owner = { is_fallen_empire_spiritualist = yes }
-		}
-		modifier = {
-			planet_housing_add = 1
-			job_fe_acolyte_mine_add = 1
-		}
-	}
-#### plentiful traditions
-	
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -327,6 +283,34 @@ district_mining = {
 		}
 		modifier = {
 			planet_housing_add = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_mining_guilds
+			}
+		}
+		modifier = {
+			planet_housing_add = 1
+			job_miner_add = 1
+		}
+	}	
+
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+              or = {
+				has_valid_civic = civic_keepers_harmony
+				}
+			}
+		}
+		modifier = {
+			planet_amenities_add = -1
 		}
 	}
 
@@ -363,6 +347,10 @@ district_mining = {
 			job_miner_add = 2
 		}
 	}
+
+
+
+
 
 	triggered_planet_modifier = {
 		potential = {
@@ -543,6 +531,8 @@ district_farming = {
 		}
 	}
 
+
+
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -633,13 +623,7 @@ district_farming = {
 		weight = 0
 		modifier = {
 			weight = 3
-			owner = {
-				country_uses_food = yes
-				has_monthly_income = {
-					resource = food
-					value < 100
-				}
-			}
+			owner = { country_uses_food = yes }
 			num_free_districts = { type = district_mining value = 0 }
 			num_free_districts = { type = district_generator value = 0 }
 			OR = {
@@ -706,13 +690,6 @@ district_farming = {
 				has_deficit = food
 			}
 		}
-		modifier = {
-			factor = 0
-			owner = {
-				country_uses_food = no
-				NOT = { has_deficit = food }
-			}
-		}
 	}
 
 	ai_resource_production = {
@@ -722,6 +699,8 @@ district_farming = {
 		}
 	}
 }
+
+
 
 district_generator_uncapped = {
 	base_buildtime = 240
@@ -777,6 +756,7 @@ district_generator_uncapped = {
 		}
 	}
 
+
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -810,6 +790,7 @@ district_generator_uncapped = {
 			job_technician_add = 2
 		}
 	}
+
 
 	triggered_planet_modifier = {
 		potential = {
@@ -922,44 +903,24 @@ district_mining_uncapped = {
 		upkeep = {
 			energy = 1
 		}
+
+		upkeep = {
+		  	trigger = {
+				owner = { or = { has_valid_civic = civic_mining_guilds	}	}
+			}
+			energy = 0.2
+		}
 	}
 
 	planet_modifier = {
 		planet_housing_add = 2
 	}
 
-#### plentiful traditions
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_tradition = tr_plentiful_industry_3 }
-			owner = { is_hive_empire = yes }
-		}
-		modifier = {
-			planet_housing_add = 1
-			job_mining_drone_add = 1
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_tradition = tr_plentiful_industry_3 }
-			owner = { is_machine_empire = yes }
-		}
-		modifier = {
-			planet_housing_add = 1
-			job_mining_drone_add = 1
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_tradition = tr_plentiful_industry_3 }
-			owner = { 
-				is_gestalt = no
-				is_fallen_empire_spiritualist = no
+			owner = {
+				has_valid_civic = civic_mining_guilds
 			}
 		}
 		modifier = {
@@ -971,19 +932,6 @@ district_mining_uncapped = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_tradition = tr_plentiful_industry_3 }
-			owner = { is_fallen_empire_spiritualist = yes }
-		}
-		modifier = {
-			planet_housing_add = 1
-			job_fe_acolyte_mine_add = 1
-		}
-	}
-#### plentiful traditions
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
 			owner = {
 				has_valid_civic = civic_agrarian_idyll
 			}
@@ -992,6 +940,21 @@ district_mining_uncapped = {
 			planet_housing_add = 1
 		}
 	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+              or = {
+				has_valid_civic = civic_keepers_harmony
+				}
+			}
+		}
+		modifier = {
+			planet_amenities_add = -1
+		}
+	}
+
 
 	triggered_planet_modifier = {
 		potential = {
@@ -1168,6 +1131,8 @@ district_farming_uncapped = {
 			planet_housing_add = 1
 		}
 	}
+
+
 
 	triggered_planet_modifier = {
 		potential = {
