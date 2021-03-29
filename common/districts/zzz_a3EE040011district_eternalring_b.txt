@@ -1,0 +1,39 @@
+district_eternalring_b = {
+    base_buildtime = 400
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        is_planet_class = pc_eternalring
+    }
+    potential = {
+        is_planet_class = pc_eternalring
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = 1000
+            alloys = 1000
+            energy = 1000
+        }
+        upkeep = {
+            energy = 20
+        }
+        produces = {
+            food = 300
+        }
+    }
+    planet_modifier = {
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_government = gov_eternal_continuum
+            }
+        }
+        modifier = {
+        }
+    }
+    ai_weight = {
+        weight = 1
+    }
+}

@@ -1,0 +1,44 @@
+entity = {
+    name = "eternal_light_construction_01_eternalring_entity_01_entity"
+    default_state = "idle"
+    state = {
+        name = "idle"
+        state_time = 5
+    }
+    locator = {
+        name = "loc101"
+        position = {
+            0
+            0
+            0
+        }
+        rotation = {
+            0
+            40
+            0
+        }
+    }
+    locator = {
+        name = "loctw"
+        position = {
+            0
+            0
+            0
+        }
+        rotation = {
+            0
+            135
+            0
+        }
+    }
+    attach = {
+        "loc101" = "eternal_light_diffrentthing_entity"
+    }
+    attach = {
+        "loctw" = "eternal_light_diffrentthing_entity"
+    }
+    game_data = {
+        shader_type = ship
+        emissive_recolor_crunch = 1
+    }
+}

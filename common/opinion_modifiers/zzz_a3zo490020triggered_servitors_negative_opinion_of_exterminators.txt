@@ -1,0 +1,15 @@
+triggered_servitors_negative_opinion_of_exterminators = {
+    trigger = {
+        OR = {
+        is_country_type = default
+        is_country_type = ascended_empire
+        }
+        has_civic = civic_machine_servitor
+        FROM = {
+            has_civic = civic_machine_terminator
+        }
+    }
+    opinion = {
+        base = -1000
+    }
+}

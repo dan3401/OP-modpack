@@ -1,0 +1,34 @@
+ascension_protocol = {
+    length = 3600
+    is_ambition = yes
+    resources = {
+        category = campaigns
+        cost = {
+            energy = 20000
+        }
+    }
+    modifier = {
+        country_energy_produces_mult = -0.25
+        country_base_influence_produces_add = 4
+        all_technology_research_speed = 0.2
+        country_unity_produces_mult = 0.3
+        planet_jobs_produces_mult = 0.2
+        country_base_influence_produces_add = 2
+    }
+    potential = {
+        has_technology = tech_ascension_theory
+        NOT = {
+            has_ethic = ethic_gestalt_consciousness
+        }
+        has_civic = civic_sapient_intervention
+        has_megastructure = dyson_sphere_5
+        has_ascension_perk = ap_synthetic_evolution
+    }
+    ai_weight = {
+        weight = 1
+        modifier = {
+            factor = 0
+            energy < 45000
+        }
+    }
+}

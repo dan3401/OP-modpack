@@ -1,0 +1,1940 @@
+namespace = EthicUnityEvents
+country_event = {
+    id = EthicUnityEvents.4
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        OR = {
+            has_ethic = ethic_spiritualist
+            has_ethic = ethic_fanatic_spiritualist
+        }
+        has_ascension_perk = ap_advanced_government_2
+        any_owned_pop = {
+            is_enslaved = no
+            is_being_purged = no
+            is_robot_pop = no
+            happiness > 0.7
+        }
+    }
+    immediate = {
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 1
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 10
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 20
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 30
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 40
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 50
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 60
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 70
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 80
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 90
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 100
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 110
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 120
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 130
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 140
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 150
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 160
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 170
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 180
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 190
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 200
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 210
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 220
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 230
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 240
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 250
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 260
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 270
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 280
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 290
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 300
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 310
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 320
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 330
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 340
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 350
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 360
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 370
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 380
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 390
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 400
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 410
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 420
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 430
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 440
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 450
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 460
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 470
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 480
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 490
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 500
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 510
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 520
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 530
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 540
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 550
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 560
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 570
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 580
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 590
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 600
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 610
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 620
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 630
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 640
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 650
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 660
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 670
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 680
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 690
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 700
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 710
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 720
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 730
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 740
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 750
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 760
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 770
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 780
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 790
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 800
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 810
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 820
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 830
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 840
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 850
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 860
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 870
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 880
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 890
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 900
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 910
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 920
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 930
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 940
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 950
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 960
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 970
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 980
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 990
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+        if = {
+            limit = {
+                count_owned_pops = {
+                    limit = {
+                        is_enslaved = no
+                        is_being_purged = no
+                        is_robot_pop = no
+                        happiness > 0.7
+                    }
+                    count >= 900
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 2
+                min = 2
+                max = 500
+            }
+        }
+    }
+}

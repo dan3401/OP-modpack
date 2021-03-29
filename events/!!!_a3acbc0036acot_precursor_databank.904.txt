@@ -1,0 +1,312 @@
+namespace = acot_precursor_databank
+country_event = {
+    id = acot_precursor_databank.904
+    title = acot_precursor_databank.904.name
+    desc = {
+        trigger = {
+            has_country_flag = project_escort_selected
+        }
+        text = acot_precursor_databank.904.desc.escort
+    }
+    desc = {
+        trigger = {
+            has_country_flag = project_bc_selected
+        }
+        text = acot_precursor_databank.904.desc.bc
+    }
+    desc = {
+        trigger = {
+            has_country_flag = project_guard_selected
+        }
+        text = acot_precursor_databank.904.desc.guard
+    }
+    desc = {
+        trigger = {
+            has_country_flag = project_initi_selected
+        }
+        text = acot_precursor_databank.904.desc.initi
+    }
+    desc = {
+        trigger = {
+            has_country_flag = project_emiss_selected
+        }
+        text = acot_precursor_databank.904.desc.emiss
+    }
+    desc = {
+        trigger = {
+            has_country_flag = project_oracle_selected
+        }
+        text = acot_precursor_databank.904.desc.oracle
+    }
+    desc = {
+        trigger = {
+            has_country_flag = project_titan_selected
+        }
+        text = acot_precursor_databank.904.desc.titan
+    }
+    desc = {
+        trigger = {
+            has_country_flag = project_pac_selected
+        }
+        text = acot_precursor_databank.904.desc.pac
+    }
+    desc = {
+        trigger = {
+            has_country_flag = project_sentinel_selected
+        }
+        text = acot_precursor_databank.904.desc.sentinel
+    }
+    desc = {
+        trigger = {
+            has_country_flag = project_citadel_selected
+        }
+        text = acot_precursor_databank.904.desc.citadel
+    }
+    desc = {
+        trigger = {
+            has_country_flag = project_colos_selected
+        }
+        text = acot_precursor_databank.904.desc.colos
+    }
+    desc = {
+        trigger = {
+            has_country_flag = project_enigmalith_selected
+        }
+        text = acot_precursor_databank.904.desc.enigmalith
+    }
+    desc = {
+        trigger = {
+            has_country_flag = project_dm_hab_selected
+        }
+        text = acot_precursor_databank.904.desc.dm_hab
+    }
+    desc = {
+        trigger = {
+            has_country_flag = project_dm_jugg_selected
+        }
+        text = acot_precursor_databank.904.desc.dm_jugg
+    }
+    desc = {
+        trigger = {
+            has_country_flag = project_aot_gatekeeper_selected
+        }
+        text = acot_precursor_databank.904.desc.aot_gatekeeper
+    }
+    picture = GFX_evt_physics_research
+    show_sound = event_completed
+    is_triggered_only = yes
+    trigger = {
+    }
+    immediate = {
+    }
+    option = {
+        trigger = {
+            has_country_flag = project_escort_selected
+        }
+        name = acot_precursor_databank.904.escort
+        remove_country_flag = project_escort_selected
+        end_event_chain = acot_precursor_design_chain
+        remove_country_flag = precuursor_design_project_active
+        add_research_option = tech_precursor_escort
+        add_tech_progress = {
+            tech = tech_precursor_escort
+            progress = 0.2
+        }
+    }
+    option = {
+        trigger = {
+            has_country_flag = project_bc_selected
+        }
+        name = acot_precursor_databank.904.bc
+        remove_country_flag = project_bc_selected
+        end_event_chain = acot_precursor_design_chain
+        remove_country_flag = precuursor_design_project_active
+        add_research_option = tech_precursor_bc
+        add_tech_progress = {
+            tech = tech_precursor_bc
+            progress = 0.2
+        }
+    }
+    option = {
+        trigger = {
+            has_country_flag = project_guard_selected
+        }
+        name = acot_precursor_databank.904.guard
+        remove_country_flag = project_guard_selected
+        end_event_chain = acot_precursor_design_chain
+        remove_country_flag = precuursor_design_project_active
+        add_research_option = tech_precursor_guardian
+        add_tech_progress = {
+            tech = tech_precursor_guardian
+            progress = 0.2
+        }
+    }
+    option = {
+        trigger = {
+            has_country_flag = project_oracle_selected
+        }
+        name = acot_precursor_databank.904.oracle
+        remove_country_flag = project_oracle_selected
+        end_event_chain = acot_precursor_design_chain
+        remove_country_flag = precuursor_design_project_active
+        add_research_option = tech_precursor_science
+        add_tech_progress = {
+            tech = tech_precursor_science
+            progress = 0.2
+        }
+    }
+    option = {
+        trigger = {
+            has_country_flag = project_initi_selected
+        }
+        name = acot_precursor_databank.904.initi
+        remove_country_flag = project_initi_selected
+        end_event_chain = acot_precursor_design_chain
+        remove_country_flag = precuursor_design_project_active
+        add_research_option = tech_precursor_construcor
+        add_tech_progress = {
+            tech = tech_precursor_construcor
+            progress = 0.2
+        }
+    }
+    option = {
+        trigger = {
+            has_country_flag = project_emiss_selected
+        }
+        name = acot_precursor_databank.904.emiss
+        remove_country_flag = project_emiss_selected
+        end_event_chain = acot_precursor_design_chain
+        remove_country_flag = precuursor_design_project_active
+        add_research_option = tech_precursor_colonizer
+        add_tech_progress = {
+            tech = tech_precursor_colonizer
+            progress = 0.2
+        }
+    }
+    option = {
+        trigger = {
+            has_country_flag = project_titan_selected
+        }
+        name = acot_precursor_databank.904.titan
+        remove_country_flag = project_titan_selected
+        end_event_chain = acot_precursor_design_chain
+        remove_country_flag = precuursor_design_project_active
+        add_research_option = tech_precursor_titan
+        add_tech_progress = {
+            tech = tech_precursor_titan
+            progress = 0.2
+        }
+    }
+    option = {
+        trigger = {
+            has_country_flag = project_pac_selected
+        }
+        name = acot_precursor_databank.904.pac
+        remove_country_flag = project_pac_selected
+        end_event_chain = acot_precursor_design_chain
+        remove_country_flag = precuursor_design_project_active
+        add_research_option = tech_fe_assault_carrier
+        add_tech_progress = {
+            tech = tech_fe_assault_carrier
+            progress = 0.2
+        }
+    }
+    option = {
+        trigger = {
+            has_country_flag = project_sentinel_selected
+        }
+        name = acot_precursor_databank.904.sentinel
+        remove_country_flag = project_sentinel_selected
+        end_event_chain = acot_precursor_design_chain
+        remove_country_flag = precuursor_design_project_active
+        add_research_option = tech_fe_tower_offense
+        add_tech_progress = {
+            tech = tech_fe_tower_offense
+            progress = 0.2
+        }
+    }
+    option = {
+        trigger = {
+            has_country_flag = project_enigmalith_selected
+        }
+        name = acot_precursor_databank.904.enigmalith
+        remove_country_flag = project_enigmalith_selected
+        end_event_chain = acot_precursor_design_chain
+        remove_country_flag = precuursor_design_project_active
+        add_research_option = tech_precursor_enigmalith
+        add_tech_progress = {
+            tech = tech_precursor_enigmalith
+            progress = 0.2
+        }
+    }
+    option = {
+        trigger = {
+            has_country_flag = project_dm_hab_selected
+        }
+        name = acot_precursor_databank.904.dm_hab
+        remove_country_flag = project_dm_hab_selected
+        end_event_chain = acot_precursor_design_chain
+        remove_country_flag = precuursor_design_project_active
+        add_research_option = tech_dm_habitat
+        add_tech_progress = {
+            tech = tech_dm_habitat
+            progress = 0.2
+        }
+    }
+    option = {
+        trigger = {
+            has_country_flag = project_aot_gatekeeper_selected
+        }
+        name = acot_precursor_databank.904.aot_gatekeeper
+        remove_country_flag = project_aot_gatekeeper_selected
+        end_event_chain = acot_precursor_design_chain
+        remove_country_flag = precuursor_design_project_active
+        add_research_option = tech_gatekeepers
+        add_tech_progress = {
+            tech = tech_gatekeepers
+            progress = 0.2
+        }
+    }
+    option = {
+        trigger = {
+            has_country_flag = project_dm_jugg_selected
+        }
+        name = acot_precursor_databank.904.dm_jugg
+        remove_country_flag = project_dm_jugg_selected
+        end_event_chain = acot_precursor_design_chain
+        remove_country_flag = precuursor_design_project_active
+        add_research_option = tech_precursor_juggernaut
+        add_tech_progress = {
+            tech = tech_precursor_juggernaut
+            progress = 0.2
+        }
+    }
+    option = {
+        trigger = {
+            has_country_flag = project_citadel_selected
+        }
+        name = acot_precursor_databank.904.citadel
+        remove_country_flag = project_citadel_selected
+        end_event_chain = acot_precursor_design_chain
+        remove_country_flag = precuursor_design_project_active
+        add_research_option = tech_precursor_citadel
+        add_tech_progress = {
+            tech = tech_precursor_citadel
+            progress = 0.2
+        }
+    }
+    option = {
+        trigger = {
+            has_country_flag = project_colos_selected
+        }
+        name = acot_precursor_databank.904.colos
+        remove_country_flag = project_colos_selected
+        end_event_chain = acot_precursor_design_chain
+        remove_country_flag = precuursor_design_project_active
+        add_research_option = tech_precursor_colossus
+        add_tech_progress = {
+            tech = tech_precursor_colossus
+            progress = 0.2
+        }
+    }
+}

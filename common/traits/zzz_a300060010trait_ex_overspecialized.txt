@@ -1,0 +1,22 @@
+trait_ex_overspecialized = {
+    cost = 0
+    initial = yes
+    randomized = no
+    modification = yes
+    ai_weight = {
+        weight = 0
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    icon = "gfx/interface/icons/traits/trait_ex_overspecialized.dds"
+    modifier = {
+        army_health = 0.3
+        army_damage_mult = 0.3
+        army_morale = 0.4
+        pop_government_ethic_attraction = 0.15
+        leader_age = 20
+        pop_environment_tolerance = -0.15
+    }
+}

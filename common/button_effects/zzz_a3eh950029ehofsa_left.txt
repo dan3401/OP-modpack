@@ -1,0 +1,17 @@
+ehofsa_left = {
+    potential = {
+        hidden_trigger = {
+            exists = from
+            is_discoverer = yes
+            exists = event_target:urmazin_country
+            has_country_flag = ehof_traders_first_time
+        }
+    }
+    allow = {
+        hidden_trigger = {
+            always = yes
+        }
+    }
+    effect = {
+    }
+}

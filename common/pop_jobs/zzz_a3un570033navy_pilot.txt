@@ -1,0 +1,35 @@
+navy_pilot = {
+    category = worker
+    condition_string = WORKER_JOB_TRIGGER
+    building_icon = building_fortress
+    clothes_texture_index = 2
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible = {
+        complex_worker_job_check_trigger = yes
+    }
+    resources = {
+        category = planet_jobs
+        produces = {
+            unity = 1
+        }
+    }
+    country_modifier = {
+        country_naval_cap_add = 6
+        country_command_limit_add = 1
+    }
+    pop_modifier = {
+        pop_defense_armies_add = 1
+    }
+    weight = {
+        weight = @worker_job_weight
+        modifier = {
+            factor = 0.25
+            is_enslaved = yes
+            can_take_servant_job = no
+        }
+    }
+}

@@ -1,0 +1,40 @@
+ap_eternal_vigilance = {
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_technology_starbase_4"
+            has_technology = tech_starbase_4
+        }
+    }
+    modifier = {
+        shipclass_starbase_damage_mult = 0.5
+        shipclass_starbase_hull_mult = 0.5
+        shipclass_military_station_damage_mult = 0.5
+        starbase_defense_platform_capacity_add = 100
+        army_defense_damage_mult = 0.33
+        country_starbase_capacity_add = 25
+    }
+    on_enabled = {
+        custom_tooltip = "ap_eternal_vigilance_tooltip"
+        hidden_effect = {
+            country_event = {
+                id = UniqueAscensionPerksEvents.129
+            }
+        }
+    }
+    potential = {
+        NOT = {
+            has_ascension_perk = ap_eternal_vigilance
+        }
+    }
+    ai_weight = {
+        factor = 5
+        modifier = {
+            factor = 2
+            has_civic = civic_inwards_perfection
+        }
+        modifier = {
+            factor = 1.5
+            is_xenophobe = yes
+        }
+    }
+}

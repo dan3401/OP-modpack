@@ -1,0 +1,22 @@
+trait_intelligent_biorobot = {
+    cost = 2
+    potential_crossbreeding_chance = 1
+    initial = no
+    randomized = no
+    allowed_archetypes = {
+        BIOMACHINE
+        ROBOT
+    }
+    icon = gfx/interface/icons/traits/trait_intelligent.dds
+    species_potential_add = {
+        OR = {
+            has_trait = trait_biorobot
+            has_trait = trait_biorobot_2
+        }
+    }
+    modifier = {
+        planet_jobs_engineering_research_produces_mult = 0.1
+        planet_jobs_physics_research_produces_mult = 0.1
+        planet_jobs_society_research_produces_mult = 0.1
+    }
+}

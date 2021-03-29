@@ -1,0 +1,20 @@
+trait_extremely_divided = {
+    cost = -3
+    potential_crossbreeding_chance = 1
+    allowed_archetypes = {
+        BIOLOGICAL
+        MACHINE
+        ROBOT
+        LITHOID
+        PLANTOID
+    }
+    opposites = {
+        "trait_nerve_stapled"
+        "trait_extremely_united"
+        "trait_united"
+        "trait_divided"
+    }
+    modifier = {
+        planet_jobs_unity_produces_mult = -0.3
+    }
+}

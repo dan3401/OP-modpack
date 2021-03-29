@@ -1,0 +1,23 @@
+planet_buildings = {
+    parent = planet_structures
+    generate_mult_modifiers = {
+        cost
+        upkeep
+        produces
+    }
+    generate_add_modifiers = {
+        cost
+        upkeep
+        produces
+    }
+    triggered_cost_modifier = {
+        key = planet_buildings_foundry
+        modifier_types = {
+            mult
+            add
+        }
+        trigger = {
+            type = building_foundry_1
+        }
+    }
+}

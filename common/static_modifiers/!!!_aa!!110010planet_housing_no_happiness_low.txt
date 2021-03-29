@@ -1,0 +1,4 @@
+planet_housing_no_happiness_low = {
+    planet_stability_add = -20
+    planet_crime_no_happiness_add = 10
+}

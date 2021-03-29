@@ -1,0 +1,47 @@
+@entity_x = 0
+@entity_y = -20
+acot_amerigo_oe = {
+    entity = "precursor_amerigo_oe_entity"
+    construction_entity = "precursor_amerigo_oe_entity"
+    portrait = "GFX_acot_acot_precursor_amerigo_oe_background"
+    place_entity_on_planet_plane = no
+    entity_offset = {
+        x = @entity_x
+        y = @entity_y
+    }
+    prerequisites = {
+        tech_precursor_amerigo_oe
+    }
+    potential = {
+    }
+    upgrade_from = {
+        acot_amerigo_se
+    }
+    country_modifier = {
+    }
+    ship_modifier = {
+        ship_starting_experience_add = 6000
+    }
+    station_modifier = {
+        starbase_shipyard_capacity_add = 60
+    }
+    build_time = 5
+    resources = {
+        category = megastructures
+        upkeep = {
+        }
+        cost = {
+            acot_sr_light_matter = 10000
+        }
+        produces = {
+            sr_dark_matter = 5000
+            acot_sr_dark_energy = 5000
+            physics_research = 6000
+            engineering_research = 6000
+            society_research = 6000
+            minor_artifacts = 500
+            acot_sr_stellarite = 5000
+            acot_sr_light_matter = 2500
+        }
+    }
+}

@@ -1,0 +1,85 @@
+namespace = crisis
+fleet_event = {
+    id = crisis.1203
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = {
+        event_target:extradimensional_trespassers = {
+            random_list = {
+                25 = {
+                    create_leader = {
+                        class = admiral
+                        species = event_target:extradimensional_trespassers_species
+                        name = random
+                        skill = 3
+                        traits = {
+                            trait = leader_trait_ethereal
+                        }
+                    }
+                }
+                25 = {
+                    create_leader = {
+                        class = admiral
+                        species = event_target:extradimensional_trespassers_species
+                        name = random
+                        skill = 3
+                        traits = {
+                            trait = leader_trait_dimensional_stutter
+                        }
+                    }
+                }
+                50 = {
+                    create_leader = {
+                        class = admiral
+                        species = event_target:extradimensional_trespassers_species
+                        name = random
+                        skill = 3
+                    }
+                }
+            }
+            create_fleet = {
+                effect = {
+                    set_owner = PREV
+                    create_ship = {
+                        name = random
+                        design = "NAME_Eradicator"
+                        graphical_culture = "extra_dimensional_03"
+                    }
+                    assign_leader = last_created_leader
+                    while = {
+                        count = 8
+                        create_ship = {
+                            name = random
+                            design = "NAME_Eradicator"
+                            graphical_culture = "extra_dimensional_03"
+                        }
+                    }
+                    while = {
+                        count = 12
+                        create_ship = {
+                            name = random
+                            design = "NAME_Annihilator"
+                            graphical_culture = "extra_dimensional_03"
+                        }
+                    }
+                    while = {
+                        count = 20
+                        create_ship = {
+                            name = random
+                            design = "NAME_Obliterator"
+                            graphical_culture = "extra_dimensional_03"
+                        }
+                    }
+                    set_location = {
+                        target = ROOT
+                        distance = 5
+                        angle = random
+                    }
+                    set_fleet_stance = aggressive
+                    set_aggro_range = 500
+                    set_aggro_range_measure_from = self
+                }
+            }
+        }
+    }
+}

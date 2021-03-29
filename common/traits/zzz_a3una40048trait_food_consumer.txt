@@ -1,0 +1,15 @@
+trait_food_consumer = {
+    opposites = {
+        "trait_harvester"
+        "trait_extreme_harvester"
+    }
+    cost = -2
+    potential_crossbreeding_chance = 1
+    allowed_archetypes = {
+        BIOLOGICAL
+        PLANTOID
+    }
+    modifier = {
+        planet_jobs_food_produces_mult = -0.15
+    }
+}

@@ -1,0 +1,23 @@
+trait_robot_nextgen_processors = {
+    cost = 3
+    initial = yes
+    opposites = {
+        "trait_robot_efficient_processors"
+        "trait_robot_efficient_processors_biorobot"
+    }
+    allowed_archetypes = {
+        MACHINE
+        BIOMACHINE
+    }
+    species_potential_add = {
+        exists = from
+        from = {
+            NOT = {
+                has_country_flag = synthetic_empire
+            }
+        }
+    }
+    modifier = {
+        planet_jobs_simple_drone_produces_mult = 0.1
+    }
+}

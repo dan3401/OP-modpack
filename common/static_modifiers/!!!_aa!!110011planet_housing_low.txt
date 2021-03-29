@@ -1,0 +1,5 @@
+planet_housing_low = {
+    planet_stability_add = -20
+    planet_emigration_push_add = 50
+    planet_crime_add = 15
+}

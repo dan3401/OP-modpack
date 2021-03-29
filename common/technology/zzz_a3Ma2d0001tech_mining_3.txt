@@ -1,0 +1,39 @@
+tech_mining_3 = {
+    cost = @tier4cost2
+    area = engineering
+    tier = 4
+    category = {
+        industry
+    }
+    prerequisites = {
+        "tech_mining_2"
+    }
+    weight = @tier4weight2
+    modifier = {
+        planet_miners_minerals_produces_mult = 0.1
+    }
+    prereqfor_desc = {
+        custom = {
+            title = "subterranean_city_unlock"
+            desc = "subterranean_city_effect"
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+}

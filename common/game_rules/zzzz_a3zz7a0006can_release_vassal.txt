@@ -1,0 +1,54 @@
+can_release_vassal = {
+    custom_tooltip = {
+        fail_text = default
+        NOT = {
+            has_valid_civic = civic_fanatic_purifiers
+        }
+    }
+    custom_tooltip = {
+        fail_text = default
+        NOT = {
+            has_valid_civic = civic_machine_terminator
+        }
+    }
+    custom_tooltip = {
+        fail_text = default
+        NOT = {
+            has_valid_civic = civic_machine_assimilator
+        }
+    }
+    custom_tooltip = {
+        fail_text = default
+        NOT = {
+            has_valid_civic = civic_hive_devouring_swarm
+        }
+    }
+    Root = {
+        exists = owner
+        owner = {
+            NOR = {
+                is_country_type = fallen_empire
+                is_country_type = awakened_fallen_empire
+            }
+        }
+    }
+    custom_tooltip = {
+        fail_text = default
+        NOR = {
+            is_country_type = ascended_empire
+            is_country_type = lost_empire
+        }
+    }
+    custom_tooltip = {
+        fail_text = default
+        NOT = {
+            is_country_type = eternal_empire
+        }
+    }
+    custom_tooltip = {
+        fail_text = default
+        NOT = {
+            is_country_type = original_empire_active
+        }
+    }
+}

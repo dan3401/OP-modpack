@@ -1,0 +1,26 @@
+trait_machine_super_rapid_assembly = {
+    cost = 4
+    initial = no
+    randomized = no
+    opposites = {
+        "trait_robot_custom_made"
+    }
+    allowed_archetypes = {
+        MACHINE
+        BIOMACHINE
+    }
+    icon = gfx/interface/icons/traits/trait_fertile.dds
+    species_potential_add = {
+        exists = from
+        from = {
+            NOT = {
+                has_country_flag = synthetic_empire
+            }
+            has_technology = tech_ap_mechanical_evolution
+        }
+    }
+    modifier = {
+        pop_assembly_speed = 0.3
+        pop_housing_usage_mult = -0.1
+    }
+}

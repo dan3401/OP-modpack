@@ -1,0 +1,109 @@
+namespace = acot_precursor_databank
+country_event = {
+    id = acot_precursor_databank.903
+    title = acot_precursor_databank.903.name
+    desc = acot_precursor_databank.903.desc
+    picture = GFX_evt_exploding_ship
+    show_sound = event_ship_explosion
+    is_triggered_only = yes
+    trigger = {
+    }
+    immediate = {
+    }
+    option = {
+        name = acot_precursor_databank.903.a
+        custom_tooltip = acot_precursor_databank.903.a.explain
+        if = {
+            limit = {
+                has_country_flag = project_escort_selected
+            }
+            remove_country_flag = project_escort_selected
+        }
+        if = {
+            limit = {
+                has_country_flag = project_bc_selected
+            }
+            remove_country_flag = project_bc_selected
+        }
+        if = {
+            limit = {
+                has_country_flag = project_guard_selected
+            }
+            remove_country_flag = project_guard_selected
+        }
+        if = {
+            limit = {
+                has_country_flag = project_sentinel_selected
+            }
+            remove_country_flag = project_sentinel_selected
+        }
+        if = {
+            limit = {
+                has_country_flag = project_titan_selected
+            }
+            remove_country_flag = project_titan_selected
+        }
+        if = {
+            limit = {
+                has_country_flag = project_pac_selected
+            }
+            remove_country_flag = project_pac_selected
+        }
+        if = {
+            limit = {
+                has_country_flag = project_colos_selected
+            }
+            remove_country_flag = project_colos_selected
+        }
+        if = {
+            limit = {
+                has_country_flag = project_citadel_selected
+            }
+            remove_country_flag = project_citadel_selected
+        }
+        if = {
+            limit = {
+                has_country_flag = project_initi_selected
+            }
+            remove_country_flag = project_initi_selected
+        }
+        if = {
+            limit = {
+                has_country_flag = project_oracle_selected
+            }
+            remove_country_flag = project_oracle_selected
+        }
+        if = {
+            limit = {
+                has_country_flag = project_emiss_selected
+            }
+            remove_country_flag = project_emiss_selected
+        }
+        if = {
+            limit = {
+                has_country_flag = project_enigmalith_selected
+            }
+            remove_country_flag = project_enigmalith_selected
+        }
+        if = {
+            limit = {
+                has_country_flag = project_dm_hab_selected
+            }
+            remove_country_flag = project_dm_hab_selected
+        }
+        if = {
+            limit = {
+                has_country_flag = project_dm_jugg_selected
+            }
+            remove_country_flag = project_dm_jugg_selected
+        }
+        if = {
+            limit = {
+                has_country_flag = project_aot_gatekeeper_selected
+            }
+            remove_country_flag = project_aot_gatekeeper_selected
+        }
+        end_event_chain = acot_precursor_design_chain
+        remove_country_flag = precuursor_design_project_active
+    }
+}

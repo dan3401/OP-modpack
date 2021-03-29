@@ -1,0 +1,24 @@
+ehofsa_toggle_perm = {
+    potential = {
+        hidden_trigger = {
+            exists = from
+            check_variable = {
+                which = ehof_phase
+                value = 4
+            }
+            is_discoverer = yes
+            has_country_flag = ehof_permanent
+        }
+    }
+    allow = {
+        hidden_trigger = {
+            always = yes
+        }
+    }
+    effect = {
+        custom_tooltip = "ehof_toggle_temp_tooltip"
+        hidden_effect = {
+            remove_country_flag = ehof_permanent
+        }
+    }
+}

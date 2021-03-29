@@ -1,0 +1,12 @@
+trait_robot_power_drills_biorobot = {
+    cost = 2
+    icon = gfx/interface/icons/traits/trait_robot_power_drills.dds
+    allowed_archetypes = {
+        BIOMACHINE
+    }
+    initial = no
+    randomized = no
+    modifier = {
+        planet_jobs_minerals_produces_mult = 0.15
+    }
+}

@@ -1,0 +1,121 @@
+namespace = crisis
+country_event = {
+    id = crisis.71
+    title = "sentinel_title"
+    desc = "crisis.71.desc"
+    diplomatic = yes
+    picture_event_data = {
+        portrait = event_target:sentinels
+        room = "ethic_spaceship_room"
+    }
+    trigger = {
+        OR = {
+            is_country_type = default
+            is_country_type = ascended_empire
+            is_country_type = lost_empire
+        }
+        has_global_flag = sentinels_founded
+        NOT = {
+            has_country_flag = sentinel_donation
+        }
+        check_variable = {
+            which = "swarm_fleet_kills"
+            value > 6
+        }
+        any_country = {
+            is_country_type = sentinels
+            count_owned_ship = {
+                count > 30
+            }
+            ROOT = {
+                NOT = {
+                    is_at_war_with = PREV
+                }
+            }
+        }
+    }
+    mean_time_to_happen = {
+        months = 100
+    }
+    immediate = {
+        set_country_flag = sentinel_donation
+    }
+    option = {
+        name = crisis.71.a
+        response_text = crisis.71.a.response
+        custom_tooltip = sentinel_fleet_gift
+        hidden_effect = {
+            capital_scope = {
+                create_fleet = {
+                    name = "NAME_Sentinel_Auxiliary_Fleet"
+                    effect = {
+                        set_owner = event_target:sentinels
+                        while = {
+                            count = 1
+                            create_ship = {
+                                name = random
+                                design = "NAME_Spearhead"
+                                graphical_culture = "reptilian_01"
+                            }
+                        }
+                        while = {
+                            count = 1
+                            create_ship = {
+                                name = random
+                                design = "NAME_Deaths_Head"
+                                graphical_culture = "mammalian_01"
+                            }
+                        }
+                        while = {
+                            count = 1
+                            create_ship = {
+                                name = random
+                                design = NAME_Beta
+                                graphical_culture = "fallen_empire_03"
+                            }
+                        }
+                        while = {
+                            count = 4
+                            create_ship = {
+                                name = random
+                                design = "NAME_Bug_Crusher"
+                                graphical_culture = "avian_01"
+                            }
+                        }
+                        while = {
+                            count = 4
+                            create_ship = {
+                                name = random
+                                design = NAME_Gamma
+                                graphical_culture = "fallen_empire_03"
+                            }
+                        }
+                        while = {
+                            count = 8
+                            create_ship = {
+                                name = random
+                                design = "NAME_Blade"
+                                graphical_culture = "reptilian_01"
+                            }
+                        }
+                        set_owner = root
+                        set_location = {
+                            target = PREV
+                            distance = 45
+                            angle = random
+                        }
+                    }
+                    settings = {
+                        can_upgrade = no
+                        can_change_composition = no
+                        uses_naval_capacity = no
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = crisis.71.b
+        response_text = crisis.71.b.response
+    }
+}

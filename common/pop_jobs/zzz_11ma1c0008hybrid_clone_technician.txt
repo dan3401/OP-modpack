@@ -1,0 +1,43 @@
+hybrid_clone_technician = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = building_hybrid_maintenance_station
+    clothes_texture_index = 2
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible = {
+        specialist_job_check_trigger = yes
+    }
+    planet_modifier = {
+        planet_pops_upkeep_mult = -0.1
+    }
+    resources = {
+        category = planet_doctors
+        upkeep = {
+            food = 6
+            minerals = 4
+        }
+    }
+    weight = {
+        weight = @spawner_drone_job_weight
+        modifier = {
+            factor = 0.2
+            has_citizenship_rights = no
+            NOT = {
+                has_trait = trait_mechanical
+            }
+        }
+        modifier = {
+            factor = 0.1
+            can_take_servant_job = yes
+        }
+        modifier = {
+            factor = 1.5
+            has_job = hybrid_clone_technician
+        }
+    }
+}

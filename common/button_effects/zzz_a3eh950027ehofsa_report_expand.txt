@@ -1,0 +1,99 @@
+ehofsa_report_expand = {
+    potential = {
+        hidden_trigger = {
+            exists = from
+            check_variable = {
+                which = ehof_phase
+                value >= 1
+            }
+            is_discoverer = yes
+            OR = {
+                has_country_flag = ehof_report_quest
+                has_country_flag = ehof_report_standard
+                has_country_flag = ehof_report_cohesive
+                has_country_flag = ehof_report_bountiful
+            }
+        }
+    }
+    allow = {
+        hidden_trigger = {
+            always = yes
+        }
+    }
+    effect = {
+        hidden_effect = {
+            if = {
+                limit = {
+                    has_country_flag = ehof_report_standard
+                }
+                if = {
+                    limit = {
+                        is_discoverer = no
+                    }
+                    country_event = {
+                        id = ehof_megastructure.401
+                    }
+                }
+                else = {
+                    country_event = {
+                        id = ehof_megastructure.4011
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    has_country_flag = ehof_report_cohesive
+                }
+                if = {
+                    limit = {
+                        is_discoverer = no
+                    }
+                    country_event = {
+                        id = ehof_megastructure.402
+                    }
+                }
+                else = {
+                    country_event = {
+                        id = ehof_megastructure.4021
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    has_country_flag = ehof_report_bountiful
+                }
+                if = {
+                    limit = {
+                        is_discoverer = no
+                    }
+                    country_event = {
+                        id = ehof_megastructure.403
+                    }
+                }
+                else = {
+                    country_event = {
+                        id = ehof_megastructure.4031
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    has_country_flag = ehof_report_quest
+                }
+                if = {
+                    limit = {
+                        is_discoverer = no
+                    }
+                    country_event = {
+                        id = ehof_megastructure.404
+                    }
+                }
+                else = {
+                    country_event = {
+                        id = ehof_megastructure.4041
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,12 @@
+trait_war_machine_machinedlc = {
+    cost = 1
+    initial = yes
+    allowed_archetypes = {
+        ROBOT
+        MACHINE
+        BIOMACHINE
+    }
+    modifier = {
+        army_damage_mult = 0.25
+    }
+}

@@ -1,0 +1,28 @@
+acot_dark_matter_obelisk_core_pe = {
+    entity = "precursor_dark_obelisk_pe_entity"
+    construction_entity = "precursor_dark_obelisk_pe_entity"
+    portrait = "GFX_acot_dark_obelisk_background"
+    place_entity_on_planet_plane = no
+    entity_offset = {
+        x = 0
+        y = 0
+    }
+    potential = {
+        always = no
+    }
+    country_modifier = {
+    }
+    build_time = 1800
+    resources = {
+        category = megastructures
+        cost = {
+            alloys = 5000
+        }
+        upkeep = {
+        }
+        produces = {
+            energy = 2000
+            alloys = 2000
+        }
+    }
+}

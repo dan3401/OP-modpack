@@ -1,0 +1,23 @@
+ehof_left = {
+    potential = {
+        hidden_trigger = {
+            exists = from
+            check_variable = {
+                which = ehof_phase
+                value >= 1
+            }
+            NOT = {
+                has_country_flag = annihilator_discoverer
+            }
+            exists = event_target:urmazin_country
+            has_country_flag = ehof_traders_first_time
+        }
+    }
+    allow = {
+        hidden_trigger = {
+            always = yes
+        }
+    }
+    effect = {
+    }
+}

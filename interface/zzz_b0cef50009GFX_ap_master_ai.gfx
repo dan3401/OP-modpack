@@ -1,0 +1,7 @@
+spriteTypes = {
+    SpriteType = {
+        name = "GFX_ap_master_ai"
+        texturefile = "gfx/interface/icons/ascension_perks/ap_master_ai.dds"
+        alwaystransparent = yes
+    }
+}

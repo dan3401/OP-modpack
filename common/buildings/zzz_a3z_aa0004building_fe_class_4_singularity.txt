@@ -1,0 +1,49 @@
+building_fe_class_4_singularity = {
+    base_buildtime = 360
+    can_build = yes
+    can_demolish = yes
+    icon = building_class_4_singularity
+    category = resource
+    potential = {
+        exists = owner
+        owner = {
+            has_technology = tech_fe_class_4_singularity
+        }
+        has_global_flag = zofe_activated
+    }
+    allow = {
+        has_enigmatic_capital = yes
+    }
+    planet_modifier = {
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 1000
+            sr_dark_matter = 150
+        }
+        upkeep = {
+            sr_dark_matter = 3
+        }
+        produces = {
+            energy = 250
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_modifier = pm_planet_fe_buildings_boost
+                }
+            }
+            energy = 50
+        }
+    }
+    upgrades = {
+        building_ae_class_4_singularity
+    }
+    prerequisites = {
+        "tech_fe_class_4_singularity"
+    }
+    ai_weight = {
+        weight = 10000
+    }
+}

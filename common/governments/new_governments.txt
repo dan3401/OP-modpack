@@ -1,0 +1,42 @@
+#Royal figurehead governments
+gov_constitutional_monarchy = {
+	ruler_title = RT_PRIME_MINISTER
+	ruler_title_female = RT_PRIME_MINISTER_FEMALE
+
+	possible = {
+		has_authority = auth_democratic
+		has_valid_civic = civic_royal_figurehead
+	}
+
+	weight = {
+		base = 1000
+	}
+}
+
+gov_puppet_monarchy = {
+	ruler_title = RT_FIRST_LORD
+	ruler_title_female = RT_FIRST_LORD_FEMALE
+
+	possible = {
+		has_authority = auth_oligarchic
+		has_valid_civic = civic_royal_figurehead
+	}
+
+	weight = {
+		base = 1000
+	}
+}
+
+gov_shogunate = {
+	ruler_title = RT_SHOGUN
+	ruler_title_female = RT_SHOGUN_FEMALE
+
+	possible = {
+		has_authority = auth_dictatorial
+		has_valid_civic = civic_royal_figurehead
+	}
+
+	weight = {
+		base = 1000
+	}
+}

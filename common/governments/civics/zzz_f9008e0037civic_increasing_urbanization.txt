@@ -1,0 +1,19 @@
+civic_increasing_urbanization = {
+    modification = no
+    icon = "gfx/interface/icons/governments/civics/civic_agrarian_idyll.dds"
+    potential = {
+        country_type = {
+            value = primitive
+        }
+        ethics = {
+            NOT = {
+                value = ethic_hive_mind
+            }
+        }
+    }
+    random_weight = {
+        base = 1
+    }
+    modifier = {
+    }
+}

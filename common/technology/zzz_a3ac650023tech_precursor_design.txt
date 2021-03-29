@@ -1,0 +1,42 @@
+tech_precursor_design = {
+    area = engineering
+    cost = 125000
+    tier = 5
+    is_rare = yes
+    category = {
+        voidcraft
+    }
+    ai_update_type = military
+    weight = 0
+    potential = {
+        NOT = {
+            has_country_flag = twinks_fallen
+        }
+    }
+    prereqfor_desc = {
+        hide_prereq_for_desc = component
+        hide_prereq_for_desc = custom
+        custom = {
+            title = "TECH_UNLOCK_FE_SHIP_TITLE"
+            desc = "TECH_UNLOCK_FE_SHIP_DESC"
+        }
+    }
+    ai_weight = {
+        factor = 5
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+}

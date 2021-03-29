@@ -1,0 +1,16 @@
+trait_biorobot = {
+    cost = 0
+    potential_crossbreeding_chance = 0
+    allowed_archetypes = {
+        BIOMACHINE
+    }
+    sorting_priority = 20
+    initial = no
+    randomized = no
+    modification = no
+    modifier = {
+    }
+    slave_cost = {
+        energy = 100
+    }
+}

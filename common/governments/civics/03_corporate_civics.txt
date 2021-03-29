@@ -18,28 +18,74 @@
 # Corporate
 
 civic_franchising = {
-	potential = { authority = { value = auth_corporate } }
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = {
+			OR = {
+				value = auth_corporate
+				value = auth_cooperative
+				value = auth_private
+			}
+		}
+	}
 	random_weight = { base = 5 }
 	description = "civic_tooltip_franchising_effects"
 	modifier = {
 		country_subject_power_penalty_mult = -0.33
-		empire_size_branch_office_mult = -0.25
+		empire_size_branch_office_mult = -0.33
 	}
 }
 
-
-civic_media_conglomerate = {
-	potential = { authority = { value = auth_corporate } }
+civic_trading_posts = {
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = {
+			OR = {
+				value = auth_corporate
+				value = auth_cooperative
+				value = auth_private
+			}
+		}
+	}
 	random_weight = { base = 5 }
 	modifier = {
-		country_war_exhaustion_mult = -0.1
+		country_starbase_capacity_add = 4
+		starbase_buildings_cost_mult = -0.10
+		starbase_modules_cost_mult = -0.10
+	}
+	description = "civic_tooltip_trading_post_effects"
+}
+
+civic_media_conglomerate = {
+	description = "civic_tooltip_media_conglomerate_effects"
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = {
+			OR = {
+				value = auth_corporate
+				value = auth_cooperative
+				value = auth_private
+			}
+		}
+	}
+	random_weight = { base = 5 }
+	modifier = {
+		country_war_exhaustion_mult = -0.05
 		pop_citizen_happiness = 0.05
-		pop_government_ethic_attraction = 0.1
 	}
 }
 
 civic_naval_contractors = {
-	potential = { authority = { value = auth_corporate } }
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = {
+			OR = {
+				value = auth_corporate
+				value = auth_cooperative
+				value = auth_private
+			}
+		}
+	}
 	random_weight = { base = 5 }
 	possible = {
 		ethics = {
@@ -51,28 +97,58 @@ civic_naval_contractors = {
 		}
 	}
 	modifier = {
-		country_naval_cap_mult = 0.25
+		country_naval_cap_mult = 0.15
+		admiral_skill_levels = 1
+		country_command_limit_add = 10
 	}
 }
 
 civic_free_traders = {
-	potential = { authority = { value = auth_corporate } }
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = {
+			OR = {
+				value = auth_corporate
+				value = auth_cooperative
+				value = auth_private
+			}
+		}
+	}
+	possible = {
+		authority = {
+			OR = {
+				value = auth_corporate
+				value = auth_cooperative
+			}
+		}
+		civics = {
+			NOT = {
+				value = civic_corvee_system_megacorp
+				value = civic_shadow_council_megacorp
+			}
+		}
+	}
 	random_weight = { base = 5 }
-
-
-
 	modifier = {
-		trade_value_mult = 0.15
-		branch_office_value_mult = 0.15
-
+		trade_value_mult = 0.10
+		branch_office_value_mult = 0.10
 	}
 }
 
 civic_private_prospectors = {
-	potential = { authority = { value = auth_corporate } }
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = {
+			OR = {
+				value = auth_corporate
+				value = auth_cooperative
+				value = auth_private
+			}
+		}
+	}
 	random_weight = { base = 5 }
 	modifier = {
-		country_admin_cap_add = 20
+		empire_size_systems_mult = -0.33
 	}
 
 	# unlocks sponsored_colonizer ship size
@@ -80,9 +156,25 @@ civic_private_prospectors = {
 }
 
 civic_gospel_of_the_masses = {
-	potential = { authority = { value = auth_corporate } }
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = {
+			OR = {
+				value = auth_corporate
+				value = auth_cooperative
+				value = auth_private
+			}
+		}
+	}
 	random_weight = { base = 5 }
 	possible = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = {
+			OR = {
+				value = auth_corporate
+				value = auth_private
+			}
+		}
 		ethics = {
 			OR = {
 				text = civic_tooltip_spiritualist
@@ -90,84 +182,174 @@ civic_gospel_of_the_masses = {
 				value = ethic_fanatic_spiritualist
 			}
 		}
+		civics = {
+			NOT = {
+				value = civic_royal_trading_company
+				value = civic_worker_coop
+				value = civic_byzantine_bureaucracy_corp
+			}
+		}
 	}
 	modifier = {
 		pop_ethic_spiritualist_attraction_mult = 0.5
     }
-
+	
 	description = "civic_tooltip_gospel_of_the_masses_effects"
 }
 
 civic_ruthless_competition = {
-	potential = { authority = { value = auth_corporate } }
-	random_weight = { base = 5 }
-	possible = {
-		ethics = {
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = {
 			OR = {
-				value = ethic_fanatic_capitalism
+				value = auth_corporate
+				value = auth_cooperative
+				value = auth_private
 			}
-			NOR = {
-				 value = ethic_fanatic_pluralist
-			}				
 		}
 	}
+	random_weight = { base = 5 }
 	modifier = {
         leader_skill_levels = 1
-		species_leader_exp_gain = 0.25
+		species_leader_exp_gain = 0.1
+		pop_demotion_time_mult = -0.25
     }
+	description = "civic_tooltip_cutthroat_politics_effects"
 }
 
 civic_criminal_heritage = {
 	modification = no
-	potential = { authority = { value = auth_corporate } }
-	random_weight = { base = 5 }
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = {
+			OR = {
+				value = auth_corporate
+				value = auth_cooperative
+				value = auth_private
+			}
+		}
+	}
+	possible = {
+		civics = {
+			NOR = {
+				value = civic_corp_security
+				value = civic_royal_trading_company
+				value = civic_worker_coop
+				value = civic_byzantine_bureaucracy_corp
+				value = civic_corp_iron_despot
+				value = civic_corp_philosopher_king
+			}
+		}
+		origin = {
+			NOR = {
+				value = origin_common_ground_npc
+				value = origin_private_colony
+			}
+		}
+	}
+	random_weight = { base = 5 }	
 	modifier = {
-			planet_branch_offices_cost_mult = -0.25
-			empire_size_branch_office_mult = -0.20
-			pop_factions_influence_produces_mult = 0.50
-				}
-
+	}
+	
 	description = "civic_tooltip_criminal_heritage_effects"
 }
 
-
-
-civic_indentured_assets = {
-	potential = { authority = { value = auth_corporate } }
+civic_private_military_companies = {
+	description = "civic_tooltip_private_military_companies_effects"
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = {
+			OR = {
+				value = auth_corporate
+				value = auth_cooperative
+				value = auth_private
+			}
+		}
+	}
 	random_weight = { base = 5 }
 	possible = {
-	
 		ethics = {
-			NOR = {
-				 value = ethic_fanatic_pluralist
-			}				
-		}	
-
-		civics = {
-		NOR = {
-				value = civic_reeducated_labor
-            }
+			OR = {
+				text = civic_tooltip_militarist
+				value = ethic_militarist
+				value = ethic_fanatic_militarist
+			}
 		}
+		civics = {
+			NOT = {
+				value = civic_corp_iron_despot
+			}
+		}
+	}
+	modifier = {
+		army_starting_experience_add = 100
+		army_damage_mult = 0.2
+	}
+}
 
+civic_indentured_assets = {
+	description = "civic_tooltip_indentured_assets_effects"
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = {
+			OR = {
+				value = auth_corporate
+				value = auth_cooperative
+				value = auth_private
+			}
+		}
+	}
+	random_weight = { base = 5 }
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_authoritarian
+				value = ethic_authoritarian
+				value = ethic_fanatic_authoritarian
+			}
+		}
+		civics = {
+			NOT = {
+				value = civic_free_haven_corp
+			}
+		}
 	}
 	modifier = {
 		planet_jobs_slave_produces_mult = 0.10
-		slave_market_cost_mult = -0.25
-		country_pop_enslaved_mult = 0.25
-		planet_stability_add = -5
+		country_pop_enslaved_mult = 0.40
 	}
 }
 
 civic_brand_loyalty = {
-	potential = { authority = { value = auth_corporate } }
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = {
+			OR = {
+				value = auth_corporate
+				value = auth_cooperative
+				value = auth_private
+			}
+		}
+	}
 	random_weight = { base = 5 }
 	modifier = {
-		country_unity_produces_mult = 0.2
+		country_unity_produces_mult = 0.15
+		pop_government_ethic_attraction = 0.2
 	}
 }
 
 civic_public_relations_specialists = {
-	potential = { authority = { value = auth_corporate } }
+	playable = { host_has_dlc = "Federations" }
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = {
+			OR = {
+				value = auth_corporate
+				value = auth_cooperative
+				value = auth_private
+			}
+		}
+	}
 	random_weight = { base = 5 }
 	modifier = {
 		envoys_add = 2
@@ -175,153 +357,42 @@ civic_public_relations_specialists = {
 	}
 }
 
-
-#Welfare State
-civic_welfare_state = {
-	potential = {
-		ethics = { NOT = {  value = ethic_gestalt_consciousness } }
-		authority = { NOT = {  value = auth_corporate } }
-	}
-
-	possible = {
-
-		ethics = {
-
-			NOR = {
-			     text = civic_tooltip_not_capitalism
-			     value = ethic_capitalism
-				 value = ethic_fanatic_capitalism
-			}
-			
-			OR = {
-			    text = civic_tooltip_pluralist
-				has_ethic = ethic_pluralist
-				has_ethic = ethic_fanatic_pluralist
-			}			
-
-		}
-
-		civics = {
-			NOR = {
-			     value = civic_slaver_guilds
-				 value = civic_consumerism
-				 value = civic_shared_burden
-				 value = civic_merchant_guilds
-			}
-		}
-
-
-	}
-	random_weight = { base = 5 }
-	modifier = {
-
-                pop_growth_speed = 0.05
-                country_leader_pool_size = 1
-				pop_demotion_time_mult = -0.5
-				planet_pops_unemployed_consumer_goods_upkeep_add = 1
-				planet_districts_cities_upkeep_mult = 0.1
-				pop_ethic_socialism_attraction_mult = 0.1
-				pop_ethic_elitist_attraction_mult = -0.1
-
-
-	}
-}
-
-
-
-
-
-#Corporate Socialism		#By Hypno and Broad
-civic_shared_profits = {
-	potential = {
-		authority = {
-			NOR = {
-				 value = auth_hive_mind
-				 value = auth_machine_intelligence
-			}
-		}
-	}
-	possible = {
-		ethics = {
-			
-            OR = {
-				 value = ethic_fanatic_socialism
-			}				 
-			 
-             OR = {
-			    text = civic_tooltip_pluralist
-				has_ethic = ethic_pluralist
-				has_ethic = ethic_fanatic_pluralist
-			 }			 
-		}
-
-		authority = {
-			OR = {
-				 value = auth_corporate
-			}
-		}
-		civics = {
-			NOR = {
-				 value = civic_welfare_state
-			}
-		}
-	}
-	modifier = {
-	            pop_growth_speed = 0.1
-                pop_demotion_time_mult = -1
-				planet_pops_unemployed_consumer_goods_upkeep_add = 2
-				planet_districts_cities_upkeep_mult = 0.2
-				job_socialist_trader_per_pop = 0.05
-	}
-	random_weight = {
-		base = 5
-	}
-
-	#description = civic_tooltip_shared_burden_effects
-}
-
-civic_bank_corp = {			#By Hypno
-	description = civic_tooltip_bank_corp_effects
-	potential = {
-		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-	}
-	possible = {
-		ethics = {
-			value = ethic_fanatic_materialist
-		}
-		civics = {
-		}
-		authority = {
-			OR = {
-				 value = auth_corporate
-			}
-		}
-	}
-	random_weight = { base = 5 }
-	modifier = {
-	job_bank_manager_per_pop = 0.05
-	}
-}
-
 civic_death_cult_corporate = {
 	playable = { host_has_dlc = "Necroids Species Pack" }
 	description = "civic_tooltip_death_cult_effects"
-	potential = { authority = { value = auth_corporate } }
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = {
+			OR = {
+				value = auth_corporate
+				value = auth_cooperative
+				value = auth_private
+			}
+		}
+	}
 	random_weight = { base = 5 }
 	possible = {
 		origin = { NOT = { value = origin_necrophage } }
 		civics = {
 			NOR = {
-				value = civic_fanatic_purifiers
-				value = civic_inwards_perfection
-				value = civic_ancient_preservers
+				value = civic_corp_philosopher_king
 			}
 		}
 		ethics = {
 			OR = {
+				text = civic_tooltip_spiritualist
 				value = ethic_spiritualist
 				value = ethic_fanatic_spiritualist
 			}
 		}
+		authority = {
+			OR = {
+				value = auth_corporate
+				value = auth_private
+			}
+		}
+	}
+	modifier = {
+		pop_growth_speed = 0.05
 	}
 }

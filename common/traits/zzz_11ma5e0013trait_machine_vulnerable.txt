@@ -1,0 +1,16 @@
+trait_machine_vulnerable = {
+    cost = -1
+    initial = yes
+    opposites = {
+        "trait_robot_durable"
+        "trait_machinedlc_machine_vulnerable"
+        "trait_robot_durable_biorobot"
+    }
+    allowed_archetypes = {
+        ROBOT
+        MACHINE
+    }
+    modifier = {
+        pop_environment_tolerance = -1
+    }
+}

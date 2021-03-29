@@ -1,0 +1,20 @@
+civic_lethargic_leadership = {
+    modification = no
+    icon = "gfx/interface/icons/governments/civics/civic_agrarian_idyll.dds"
+    potential = {
+        country_type = {
+            value = fallen_empire
+        }
+        ethics = {
+            NOT = {
+                value = ethic_hive_mind
+            }
+        }
+    }
+    random_weight = {
+        base = 1
+    }
+    description = FALLEN_EMPIRE_LETHARGY_1
+    modifier = {
+    }
+}

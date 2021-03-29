@@ -1,0 +1,7 @@
+law_category_FEDEXP_political_union = {
+    laws = {
+        FEDEXP_political_union_low
+        FEDEXP_political_union_medium
+        FEDEXP_political_union_high
+    }
+}

@@ -1,0 +1,20 @@
+trait_robot = {
+    cost = 6
+    potential_crossbreeding_chance = 1
+    allowed_archetypes = {
+        BIOLOGICAL
+        PLANTOID
+    }
+    opposites = {
+        "trait_naturalist"
+        "trait_cyborg"
+    }
+    modifier = {
+        pop_environment_tolerance = 0.3
+        planet_jobs_energy_produces_mult = -0.3
+        planet_jobs_minerals_produces_mult = 0.3
+    }
+    slave_cost = {
+        energy = 100
+    }
+}

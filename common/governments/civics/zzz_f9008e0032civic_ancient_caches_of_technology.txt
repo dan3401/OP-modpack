@@ -1,0 +1,21 @@
+civic_ancient_caches_of_technology = {
+    modification = no
+    icon = "gfx/interface/icons/governments/civics/civic_agrarian_idyll.dds"
+    potential = {
+        country_type = {
+            value = awakened_fallen_empire
+        }
+        ethics = {
+            NOT = {
+                value = ethic_hive_mind
+            }
+        }
+    }
+    random_weight = {
+        base = 1
+    }
+    modifier = {
+        tile_resource_energy_mult = 0.5
+        tile_resource_minerals_mult = 0.5
+    }
+}

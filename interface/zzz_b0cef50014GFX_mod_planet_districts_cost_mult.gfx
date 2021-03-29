@@ -1,0 +1,6 @@
+spriteTypes = {
+    SpriteType = {
+        name = "GFX_mod_planet_districts_cost_mult"
+        texturefile = "gfx/interface/icons/modifiers/mod_planet_districts_cost_mult.dds"
+    }
+}

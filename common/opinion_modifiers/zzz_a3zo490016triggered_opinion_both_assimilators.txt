@@ -1,0 +1,16 @@
+triggered_opinion_both_assimilators = {
+    trigger = {
+        OR = {
+        is_country_type = default
+            is_country_type = ascended_empire
+            is_country_type = eternal_empire
+        }
+        has_civic = civic_machine_assimilator
+        FROM = {
+            has_civic = civic_machine_assimilator
+        }
+    }
+    opinion = {
+        base = 40
+    }
+}

@@ -1,0 +1,60 @@
+tech_precursor_guardian_sigma = {
+    area = engineering
+    cost = 200000
+    tier = 5
+    is_rare = yes
+    category = {
+        voidcraft
+    }
+    ai_update_type = military
+    weight = 5
+    potential = {
+        NOT = {
+            is_country_type = fallen_empire
+        }
+        NOT = {
+            has_country_flag = twinks_fallen
+        }
+    }
+    modifier = {
+        shipsize_precursor_guardian_hull_add = 2500
+        shipsize_precursor_guardian_build_speed_mult = 0.25
+    }
+    prereqfor_desc = {
+        custom = {
+            title = "TECH_UNLOCK_SIGMA_GUARDIAN_TITLE"
+            desc = "TECH_UNLOCK_SIGMA_GUARDIAN_DESC"
+        }
+    }
+    prerequisites = {
+        tech_precursor_guardian
+        tech_precursor_guardian_alpha
+        tech_stellarite_reactor
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_country_flag = stellarite_section_learned
+            }
+        }
+    }
+    ai_weight = {
+        factor = 5
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+}

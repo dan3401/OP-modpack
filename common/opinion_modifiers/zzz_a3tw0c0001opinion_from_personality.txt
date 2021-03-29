@@ -1,0 +1,27 @@
+opinion_from_personality = {
+    opinion = {
+        modifier = {
+            add = -1000
+            has_ai_personality = eternal_empire_xenophobe
+            FROM = {
+                is_country_type = eternal_empire
+            }
+        }
+        modifier = {
+            add = -1000
+            has_ai_personality = eternal_empire_death
+        }
+        modifier = {
+            add = 100
+            has_ai_personality = fanatic_befrienders
+        }
+        modifier = {
+            add = -1000
+            has_ai_personality = metalhead
+        }
+        modifier = {
+            add = 100
+            has_ai_personality = fanatic_befrienders
+        }
+    }
+}

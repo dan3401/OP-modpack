@@ -1,0 +1,21 @@
+sa_comm = {
+    potential = {
+        hidden_trigger = {
+            exists = from
+            is_discoverer = yes
+        }
+    }
+    allow = {
+        hidden_trigger = {
+            always = yes
+        }
+    }
+    effect = {
+        custom_tooltip = "ehof_sa_comm"
+        hidden_effect = {
+            country_event = {
+                id = annihilator_dialog.007
+            }
+        }
+    }
+}

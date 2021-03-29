@@ -1,0 +1,43 @@
+hybrid_clone_maker = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = building_clone_vats
+    clothes_texture_index = 3
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible = {
+        specialist_job_check_trigger = yes
+    }
+    planet_modifier = {
+        pop_growth_speed = 0.25
+    }
+    resources = {
+        category = planet_doctors
+        upkeep = {
+            food = 5
+            minerals = 5
+        }
+    }
+    weight = {
+        weight = @spawner_drone_job_weight
+        modifier = {
+            factor = 0.2
+            has_citizenship_rights = no
+            NOT = {
+                has_trait = trait_mechanical
+            }
+        }
+        modifier = {
+            factor = 0.1
+            can_take_servant_job = yes
+        }
+        modifier = {
+            factor = 1.5
+            has_job = hybrid_clone_maker
+        }
+    }
+}

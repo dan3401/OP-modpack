@@ -1,0 +1,12 @@
+trait_robot_durable_biorobot = {
+    cost = 1
+    icon = gfx/interface/icons/traits/trait_robot_durable.dds
+    allowed_archetypes = {
+        BIOMACHINE
+    }
+    initial = no
+    randomized = no
+    modifier = {
+        planet_pops_upkeep_mult = -0.1
+    }
+}

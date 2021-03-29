@@ -1,0 +1,50 @@
+district_machinedlc_drone_storage_auto = {
+    base_buildtime = 480
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        is_planet_class = pc_machine_auto
+    }
+    potential = {
+        is_planet_class = pc_machine_auto
+    }
+    conversion_ratio = 1
+    convert_to = {
+        district_arcology_housing
+        district_city
+        district_hive
+        district_nexus
+    }
+    resources = {
+        category = planet_districts_machinedlc
+        cost = {
+            minerals = 500
+        }
+        upkeep = {
+            energy = 3
+        }
+    }
+    planet_modifier = {
+        job_machinedlc_drone_inactive_add = 20
+    }
+    triggered_desc = {
+        text = job_machinedlc_drone_inactive_effect_desc
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 500
+            count_pops = {
+                limit = {
+                    is_unemployed = yes
+                }
+                count >= 20
+            }
+        }
+    }
+    ai_resource_production = {
+        energy = 1
+        trigger = {
+            always = yes
+        }
+    }
+}

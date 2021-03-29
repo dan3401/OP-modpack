@@ -1,0 +1,13 @@
+trait_obnoxious = {
+    cost = -4
+    potential_crossbreeding_chance = 0.3
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+        PLANTOID
+    }
+    modifier = {
+        pop_amenities_usage_mult = 0.2
+        planet_jobs_unity_produces_mult = -0.2
+    }
+}

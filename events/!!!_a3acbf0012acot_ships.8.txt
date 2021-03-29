@@ -1,0 +1,686 @@
+namespace = acot_ships
+planet_event = {
+    id = acot_ships.8
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        from = {
+            is_ship_size = precursor_colonizer
+        }
+        from = {
+            OR = {
+                has_fleet_flag = precursor_colonizer_delta
+                has_fleet_flag = precursor_colonizer_alpha
+                has_fleet_flag = precursor_colonizer_sigma
+                has_fleet_flag = precursor_colonizer_omega
+            }
+        }
+    }
+    immediate = {
+        IF = {
+            limit = {
+                has_owner = no
+            }
+            create_colony = {
+                owner = from.owner
+            }
+            if = {
+                limit = {
+                    FROM = {
+                        has_fleet_flag = precursor_colonizer_alpha
+                    }
+                    owner = {
+                        is_regular_empire = yes
+                    }
+                }
+                remove_building = building_colony_shelter
+                add_building = building_ae_ancient_palace
+            }
+            if = {
+                limit = {
+                    FROM = {
+                        has_fleet_flag = precursor_colonizer_sigma
+                    }
+                    owner = {
+                        is_regular_empire = yes
+                    }
+                }
+                remove_building = building_colony_shelter
+                add_building = building_stellarite_palace
+            }
+            if = {
+                limit = {
+                    FROM = {
+                        has_fleet_flag = precursor_colonizer_alpha
+                    }
+                    owner = {
+                        is_hive_empire = yes
+                    }
+                }
+                remove_building = building_colony_shelter
+                add_building = building_ae_ancient_hive_cluster
+            }
+            if = {
+                limit = {
+                    FROM = {
+                        has_fleet_flag = precursor_colonizer_sigma
+                    }
+                    owner = {
+                        is_hive_empire = yes
+                    }
+                }
+                remove_building = building_colony_shelter
+                add_building = building_stellarite_hive_cluster
+            }
+            if = {
+                limit = {
+                    FROM = {
+                        has_fleet_flag = precursor_colonizer_alpha
+                    }
+                    owner = {
+                        is_machine_empire = yes
+                    }
+                }
+                remove_building = building_deployment_post
+                add_building = building_ae_ancient_control_center
+            }
+            if = {
+                limit = {
+                    FROM = {
+                        has_fleet_flag = precursor_colonizer_sigma
+                    }
+                    owner = {
+                        is_machine_empire = yes
+                    }
+                }
+                remove_building = building_deployment_post
+                add_building = building_stellarite_control_center
+            }
+            if = {
+                limit = {
+                    FROM = {
+                        has_fleet_flag = precursor_colonizer_delta
+                    }
+                }
+                while = {
+                    count = 5
+                    create_pop = {
+                        species = from.owner.species
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM = {
+                        has_fleet_flag = precursor_colonizer_alpha
+                    }
+                }
+                while = {
+                    count = 10
+                    create_pop = {
+                        species = from.owner.species
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM = {
+                        has_fleet_flag = precursor_colonizer_sigma
+                    }
+                }
+                while = {
+                    count = 15
+                    create_pop = {
+                        species = from.owner.species
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM = {
+                        has_fleet_flag = precursor_colonizer_omega
+                    }
+                }
+                while = {
+                    count = 20
+                    create_pop = {
+                        species = from.owner.species
+                    }
+                }
+            }
+        }
+        if = {
+            limit = {
+                from = {
+                    has_fleet_flag = precursor_colonizer_extra_pop
+                }
+            }
+            while = {
+                count = 10
+                create_pop = {
+                    species = from.owner.species
+                }
+            }
+        }
+        if = {
+            limit = {
+                from = {
+                    has_fleet_flag = precursor_colonizer_extra_stellarite_pop
+                }
+            }
+            while = {
+                count = 20
+                create_pop = {
+                    species = from.owner.species
+                }
+            }
+        }
+        if = {
+            limit = {
+                from = {
+                    has_fleet_flag = precursor_colonizer_extra_troop
+                }
+            }
+            while = {
+                count = 10
+                create_army = {
+                    owner = from.owner
+                    type = acot_garrison_army
+                    species = from.owner.species
+                }
+            }
+        }
+        if = {
+            limit = {
+                from = {
+                    has_fleet_flag = precursor_colonizer_extra_stellarite_troop
+                }
+            }
+            while = {
+                count = 20
+                create_army = {
+                    owner = from.owner
+                    type = acot_garrison_army
+                    species = from.owner.species
+                }
+            }
+        }
+        if = {
+            limit = {
+                from = {
+                    has_fleet_flag = precursor_colonizer_extra_droid
+                }
+            }
+            while = {
+                count = 10
+                create_army = {
+                    owner = from.owner
+                    type = acot_garrison_army_droid
+                    species = from.owner.species
+                }
+            }
+        }
+        if = {
+            limit = {
+                from = {
+                    has_fleet_flag = precursor_colonizer_extra_stellarite_droid
+                }
+            }
+            while = {
+                count = 20
+                create_army = {
+                    owner = from.owner
+                    type = acot_garrison_army_droid
+                    species = from.owner.species
+                }
+            }
+        }
+        if = {
+            limit = {
+                from = {
+                    has_fleet_flag = precursor_colonizer_extra_giga
+                }
+            }
+            add_building = building_giga_fortress
+        }
+        if = {
+            limit = {
+                from = {
+                    has_fleet_flag = precursor_colonizer_extra_lab
+                }
+            }
+            add_building = building_ae_enigmatic_lab
+        }
+        if = {
+            limit = {
+                from = {
+                    has_fleet_flag = precursor_colonizer_extra_skyshield
+                }
+            }
+            add_building = building_ae_dark_energy_psg
+        }
+        if = {
+            limit = {
+                from = {
+                    has_fleet_flag = precursor_colonizer_extra_nexus
+                }
+            }
+            add_building = building_ae_dark_matter_synthersizer
+        }
+        if = {
+            limit = {
+                from = {
+                    has_fleet_flag = precursor_colonizer_extra_assembly
+                }
+            }
+            if = {
+                limit = {
+                    is_machine_empire = no
+                }
+                add_building = building_ae_super_assembly
+            }
+            if = {
+                limit = {
+                    is_machine_empire = yes
+                }
+                add_building = building_ae_super_assembly_machine
+            }
+        }
+        if = {
+            limit = {
+                from = {
+                    has_fleet_flag = precursor_colonizer_extra_stellarite_giga
+                }
+            }
+            add_building = building_stellarite_giga_fortress_obelisk
+        }
+        if = {
+            limit = {
+                from = {
+                    has_fleet_flag = precursor_colonizer_extra_stellarite_lab
+                }
+            }
+            add_building = building_stellarite_enigmatic_lab
+        }
+        if = {
+            limit = {
+                from = {
+                    has_fleet_flag = precursor_colonizer_extra_stellarite_skyshield
+                }
+            }
+            add_building = building_stellarite_psg
+        }
+        if = {
+            limit = {
+                from = {
+                    has_fleet_flag = precursor_colonizer_extra_stellarite_nexus
+                }
+            }
+            add_building = building_stellarite_nexus
+        }
+        if = {
+            limit = {
+                from = {
+                    has_fleet_flag = precursor_colonizer_extra_stellarite_assembly
+                }
+            }
+            if = {
+                limit = {
+                    is_machine_empire = no
+                }
+                add_building = building_stellarite_super_assembly
+            }
+            if = {
+                limit = {
+                    is_machine_empire = yes
+                }
+                add_building = building_stellarite_super_assembly_machine
+            }
+        }
+        IF = {
+            limit = {
+                habitable_structure = no
+                NOT = {
+                    is_planet_class = pc_habitat
+                }
+            }
+            planet_event = {
+                id = acot_ships.9
+                days = 1
+            }
+        }
+        FROM = {
+            delete_fleet = this
+        }
+        IF = {
+            limit = {
+                planet_is_hostile = yes
+            }
+            if = {
+                limit = {
+                    FROM = {
+                        has_fleet_flag = precursor_colonizer_delta
+                    }
+                }
+                set_planet_flag = will_have_delta_emis
+                if = {
+                    limit = {
+                        owner = {
+                            is_machine_empire = no
+                        }
+                    }
+                    while = {
+                        count = 10
+                        create_army = {
+                            owner = from.owner
+                            type = acot_garrison_army
+                            species = from.owner.species
+                        }
+                    }
+                }
+                if = {
+                    limit = {
+                        owner = {
+                            is_machine_empire = yes
+                        }
+                    }
+                    while = {
+                        count = 10
+                        create_army = {
+                            owner = from.owner
+                            type = acot_garrison_army_droid
+                            species = from.owner.species
+                        }
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM = {
+                        has_fleet_flag = precursor_colonizer_alpha
+                    }
+                }
+                set_planet_flag = will_have_alpha_emis
+                if = {
+                    limit = {
+                        owner = {
+                            is_machine_empire = no
+                        }
+                    }
+                    while = {
+                        count = 15
+                        create_army = {
+                            owner = from.owner
+                            type = acot_garrison_army
+                            species = from.owner.species
+                        }
+                    }
+                }
+                if = {
+                    limit = {
+                        owner = {
+                            is_machine_empire = yes
+                        }
+                    }
+                    while = {
+                        count = 15
+                        create_army = {
+                            owner = from.owner
+                            type = acot_garrison_army_droid
+                            species = from.owner.species
+                        }
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM = {
+                        has_fleet_flag = precursor_colonizer_sigma
+                    }
+                }
+                set_planet_flag = will_have_sigma_emis
+                if = {
+                    limit = {
+                        owner = {
+                            is_machine_empire = no
+                        }
+                    }
+                    while = {
+                        count = 20
+                        create_army = {
+                            owner = from.owner
+                            type = acot_garrison_army
+                            species = from.owner.species
+                        }
+                    }
+                }
+                if = {
+                    limit = {
+                        owner = {
+                            is_machine_empire = yes
+                        }
+                    }
+                    while = {
+                        count = 20
+                        create_army = {
+                            owner = from.owner
+                            type = acot_garrison_army_droid
+                            species = from.owner.species
+                        }
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM = {
+                        has_fleet_flag = precursor_colonizer_omega
+                    }
+                }
+                set_planet_flag = will_have_omega_emis
+                if = {
+                    limit = {
+                        owner = {
+                            is_machine_empire = no
+                        }
+                    }
+                    while = {
+                        count = 25
+                        create_army = {
+                            owner = from.owner
+                            type = acot_garrison_army
+                            species = from.owner.species
+                        }
+                    }
+                }
+                if = {
+                    limit = {
+                        owner = {
+                            is_machine_empire = yes
+                        }
+                    }
+                    while = {
+                        count = 25
+                        create_army = {
+                            owner = from.owner
+                            type = acot_garrison_army_droid
+                            species = from.owner.species
+                        }
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM = {
+                        has_fleet_flag = precursor_colonizer_extra_pop
+                    }
+                }
+                set_planet_flag = will_have_additional_pop
+            }
+            if = {
+                limit = {
+                    FROM = {
+                        has_fleet_flag = precursor_colonizer_extra_stellarite_pop
+                    }
+                }
+                set_planet_flag = will_have_additional_stellarite_pop
+            }
+            if = {
+                limit = {
+                    FROM = {
+                        has_fleet_flag = precursor_colonizer_extra_troop
+                    }
+                }
+                while = {
+                    count = 10
+                    create_army = {
+                        owner = from.owner
+                        type = acot_garrison_army
+                        species = from.owner.species
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM = {
+                        has_fleet_flag = precursor_colonizer_extra_stellarite_troop
+                    }
+                }
+                while = {
+                    count = 20
+                    create_army = {
+                        owner = from.owner
+                        type = acot_garrison_army
+                        species = from.owner.species
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM = {
+                        has_fleet_flag = precursor_colonizer_extra_droid
+                    }
+                }
+                while = {
+                    count = 10
+                    create_army = {
+                        owner = from.owner
+                        type = acot_garrison_army_droid
+                        species = from.owner.species
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM = {
+                        has_fleet_flag = precursor_colonizer_extra_stellarite_droid
+                    }
+                }
+                while = {
+                    count = 20
+                    create_army = {
+                        owner = from.owner
+                        type = acot_garrison_army_droid
+                        species = from.owner.species
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM = {
+                        has_fleet_flag = precursor_colonizer_extra_giga
+                    }
+                }
+                set_planet_flag = will_have_giga
+                while = {
+                    count = 3
+                    create_army = {
+                        owner = from.owner
+                        type = acot_garrison_army_giga
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM = {
+                        has_fleet_flag = precursor_colonizer_extra_stellarite_giga
+                    }
+                }
+                set_planet_flag = will_have_stellarite_giga
+                while = {
+                    count = 6
+                    create_army = {
+                        owner = from.owner
+                        type = acot_garrison_army_giga
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM = {
+                        has_fleet_flag = precursor_colonizer_extra_lab
+                    }
+                }
+                set_planet_flag = will_have_lab
+            }
+            if = {
+                limit = {
+                    FROM = {
+                        has_fleet_flag = precursor_colonizer_extra_stellarite_lab
+                    }
+                }
+                set_planet_flag = will_have_stellarite_lab
+            }
+            if = {
+                limit = {
+                    FROM = {
+                        has_fleet_flag = precursor_colonizer_extra_skyshield
+                    }
+                }
+                set_planet_flag = will_have_psg
+            }
+            if = {
+                limit = {
+                    FROM = {
+                        has_fleet_flag = precursor_colonizer_extra_stellarite_skyshield
+                    }
+                }
+                set_planet_flag = will_have_stellarite_psg
+            }
+            if = {
+                limit = {
+                    FROM = {
+                        has_fleet_flag = precursor_colonizer_extra_nexus
+                    }
+                }
+                set_planet_flag = will_have_nexus
+            }
+            if = {
+                limit = {
+                    FROM = {
+                        has_fleet_flag = precursor_colonizer_extra_stellarite_nexus
+                    }
+                }
+                set_planet_flag = will_have_stellarite_nexus
+            }
+            if = {
+                limit = {
+                    FROM = {
+                        has_fleet_flag = precursor_colonizer_extra_assembly
+                    }
+                }
+                set_planet_flag = will_have_assembly
+            }
+            if = {
+                limit = {
+                    FROM = {
+                        has_fleet_flag = precursor_colonizer_extra_stellarite_assembly
+                    }
+                }
+                set_planet_flag = will_have_stellarite_assembly
+            }
+            FROM = {
+                delete_fleet = this
+            }
+        }
+    }
+}

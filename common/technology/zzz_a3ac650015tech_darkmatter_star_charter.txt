@@ -1,0 +1,45 @@
+tech_darkmatter_star_charter = {
+    area = physics
+    cost = @tier5cost1
+    tier = 5
+    category = {
+        computing
+    }
+    ai_update_type = all
+    prerequisites = {
+        "tech_sensor_fe"
+    }
+    weight = @tier5weight1
+    is_rare = yes
+    potential = {
+        NOT = {
+            has_global_flag = acot_shipcom_forbidden
+        }
+        NOT = {
+            is_country_type = fallen_empire
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            has_tradition = tr_discovery_adopt
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+    ai_weight = {
+        factor = 1.25
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+}

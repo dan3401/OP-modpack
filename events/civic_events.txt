@@ -1,3 +1,10 @@
+################################
+#
+# Civic Events
+#
+# Written by MadeinCanada10
+#
+###############################
 namespace = civic
 
 #CS into Alloys Edict: Activation

@@ -1,0 +1,22 @@
+trait_robot_nextgen_processors_2 = {
+    cost = 3
+    initial = yes
+    randomized = no
+    icon = gfx/interface/icons/traits/trait_robot_nextgen_processors.dds
+    opposites = {
+        "trait_robot_efficient_processors"
+        "trait_robot_efficient_processors_biorobot"
+    }
+    allowed_archetypes = {
+        ROBOT
+    }
+    species_potential_add = {
+        exists = from
+        from = {
+            has_country_flag = synthetic_empire
+        }
+    }
+    modifier = {
+        planet_jobs_worker_produces_mult = 0.1
+    }
+}

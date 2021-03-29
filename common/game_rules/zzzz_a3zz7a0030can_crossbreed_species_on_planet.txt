@@ -1,0 +1,47 @@
+can_crossbreed_species_on_planet = {
+    exists = owner
+    NAND = {
+        owner = {
+            is_ai = yes
+        }
+        has_global_flag = z_pf2_no_ai_hybird
+    }
+    NOT = {
+        has_global_flag = has_wsg_mod
+        any_owned_species = {
+            OR = {
+                has_trait = wsg_trait_warshipgirls
+                has_trait = wsg_trait_warshipgirls1
+                has_trait = wsg_trait_warshipgirls2
+                has_trait = sh_trait_shenhai
+                has_trait = sh_trait_shenhai1
+                has_trait = sh_trait_shenhai2
+                has_trait = sh_trait_shenhai3
+            }
+        }
+    }
+    OR = {
+        AND = {
+            owner = {
+                has_ascension_perk = ap_xeno_compatibility
+            }
+            count_species = {
+                limit = {
+                    is_crossbreeding_possible = yes
+                }
+                count >= 2
+            }
+        }
+        AND = {
+            owner = {
+                has_ascension_perk = ap_life_masters
+            }
+            count_species = {
+                limit = {
+                    has_trait = trait_hive_mind
+                }
+                count >= 2
+            }
+        }
+    }
+}

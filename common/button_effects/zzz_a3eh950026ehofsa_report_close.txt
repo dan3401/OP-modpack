@@ -1,0 +1,31 @@
+ehofsa_report_close = {
+    potential = {
+        hidden_trigger = {
+            exists = from
+            check_variable = {
+                which = ehof_phase
+                value >= 1
+            }
+            is_discoverer = yes
+            OR = {
+                has_country_flag = ehof_report_quest
+                has_country_flag = ehof_report_standard
+                has_country_flag = ehof_report_cohesive
+                has_country_flag = ehof_report_bountiful
+            }
+        }
+    }
+    allow = {
+        hidden_trigger = {
+            always = yes
+        }
+    }
+    effect = {
+        hidden_effect = {
+            remove_country_flag = ehof_report_quest
+            remove_country_flag = ehof_report_standard
+            remove_country_flag = ehof_report_cohesive
+            remove_country_flag = ehof_report_bountiful
+        }
+    }
+}

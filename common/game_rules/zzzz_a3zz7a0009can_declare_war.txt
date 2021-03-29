@@ -1,0 +1,85 @@
+can_declare_war = {
+    custom_tooltip = {
+        fail_text = "ACTION_DECLARE_WAR_OVERLORD_ON_SUBJECT"
+        NOT = {
+            AND = {
+                OR = {
+                    is_subject_type = "vassal"
+                    is_subject_type = "duchy"
+                    is_subject_type = "charter"
+                    is_subject_type = "protectorate"
+                    is_subject_type = "signatory"
+                    is_subject_type = "scion_signatory"
+                    is_subject_type = "fe_clan_member"
+                    is_subject_type = "fe_demilitarized_state"
+                    is_subject_type = "fe_union_state"
+                    is_subject_type = "fe_symbiote"
+                    is_subject_type = "fe_auxiliary"
+                    is_subject_type = "banished_ascendancy"
+                    is_subject_type = "eternal_vassal"
+                    is_subject_type = "promising_race"
+                    is_subject_type = "pacified_race"
+                    is_subject_type = "object_use"
+                }
+                overlord = {
+                    is_same_value = root
+                }
+            }
+        }
+    }
+    if = {
+        limit = {
+            exists = root
+            ROOT = {
+                has_policy_flag = no_wars
+                OR = {
+                    is_subject = no
+                    overlord = {
+                        is_same_value = root
+                    }
+                }
+            }
+        }
+        custom_tooltip = {
+            text = "CAN_DECLARE_WAR_POLICY"
+            always = no
+        }
+    }
+    if = {
+        limit = {
+            has_global_flag = nyblax_no_wars
+        }
+        custom_tooltip = {
+            text = "NYBLAX_NO_WARS"
+            always = no
+        }
+    }
+    if = {
+        limit = {
+            exists = root
+            ROOT = {
+                is_ai = yes
+            }
+        }
+        ROOT = {
+            is_at_war = no
+            OR = {
+                NOT = {
+                    has_country_flag = ai_no_fed_wars
+                }
+                NOT = {
+                    any_country = {
+                        is_in_federation_with = ROOT
+                        is_ai = no
+        }
+    }
+    if = {
+        limit = {
+            has_global_flag = nyblax_no_wars
+        }
+        custom_tooltip = {
+            text = "NYBLAX_NO_WARS"
+            always = no
+        }
+    }
+}

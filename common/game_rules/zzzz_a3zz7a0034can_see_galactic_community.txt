@@ -1,0 +1,13 @@
+can_see_galactic_community = {
+    NOT = {
+        is_country_type = teif_primitive
+    }
+    OR = {
+        has_country_flag = galcom_form_aye
+        has_country_flag = galcom_form_nay
+        is_galactic_community_member = yes
+        is_country_type = lost_empire
+        is_country_type = original_empire_active
+        has_country_flag = dark_side
+    }
+}

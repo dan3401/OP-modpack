@@ -1,0 +1,50 @@
+district_living_metal_foundry = {
+    base_buildtime = 240
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        uses_district_set = legendary_forge_world
+    }
+    potential = {
+        uses_district_set = legendary_forge_world
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_living_metal_extractor_add = 3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_living_metal_extractor_drone_add = 3
+        }
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = 500
+        }
+        upkeep = {
+            energy = 3
+        }
+    }
+    ai_weight = {
+        weight = 2
+    }
+    ai_resource_production = {
+        energy = 3
+        trigger = {
+            always = yes
+        }
+    }
+}

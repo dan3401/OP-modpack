@@ -1,0 +1,34 @@
+tw_hedonist = {
+    category = philosopher
+    is_capped_by_modifier = yes
+    building_icon = building_eternal_entertainment
+    clothes_texture_index = 1
+    possible = {
+        hidden_trigger = {
+            exists = owner
+        }
+        owner = {
+            NOT = {
+                has_country_flag = path_of_eternos
+            }
+            has_civic = civic_eternal_stability
+        }
+        is_same_species = owner
+        NOR = {
+            has_trait = trait_mechanical
+            has_trait = trait_machine_unit
+        }
+    }
+    resources = {
+        category = planet_jobs
+        produces = {
+            virtue = 5
+            ancient_knowldege = 0.5
+        }
+    }
+    pop_modifier = {
+    }
+    weight = {
+        weight = 1
+    }
+}

@@ -1,0 +1,5 @@
+entity = {
+    name = "eternal_empire_yellow_orbital_station_habitat_section_entity"
+    pdxmesh = "eternal_empire_yellow_station_small_mesh"
+    scale = 1.5
+}

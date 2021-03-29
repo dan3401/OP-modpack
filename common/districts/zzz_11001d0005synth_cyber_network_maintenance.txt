@@ -1,0 +1,59 @@
+synth_cyber_network_maintenance = {
+    base_buildtime = 0
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        from = {
+            has_ascension_perk = ap_synth_cyber_worlds
+        }
+        is_planet_class = pc_synth_cyber
+    }
+    potential = {
+        exists = owner
+        owner = {
+            has_ascension_perk = ap_synth_cyber_worlds
+            has_authority = auth_machine_intelligence
+        }
+        is_planet_class = pc_synth_cyber
+    }
+    allow = {
+        num_districts = {
+            type = synth_cyber_city
+            value > 0
+        }
+    }
+    conversion_ratio = 1
+    convert_to = {
+        district_metal_dismantle
+        synth_cyber_amenity
+    }
+    resources = {
+        category = planet_districts_machinedlc
+        cost = {
+            energy = 500
+            rare_crystals = @planetary_system_strategic_resources_cost
+        }
+        upkeep = {
+            energy = 10
+            rare_crystals = 1
+        }
+    }
+    planet_modifier = {
+        job_synth_world_network_maintenance_drone_add = 15
+    }
+    triggered_desc = {
+        text = job_synth_world_network_maintenance_drone_effect_desc
+    }
+    ai_weight = {
+        weight = 10
+        modifier = {
+            weight = 0
+            free_amenities > 1
+        }
+    }
+    ai_resource_production = {
+        consumer_goods = 8
+        trigger = {
+            always = yes
+        }
+    }
+}

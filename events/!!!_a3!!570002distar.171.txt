@@ -1,0 +1,111 @@
+namespace = distar
+ship_event = {
+    id = distar.171
+    title = "distar.171.name"
+    desc = {
+        trigger = {
+            owner = {
+                NOT = {
+                    has_origin = origin_symbiote
+                }
+            }
+        }
+        text = "distar.171.desc"
+    }
+    desc = {
+        trigger = {
+            owner = {
+                has_origin = origin_symbiote
+            }
+        }
+        text = "distar.171.desc.symbiote"
+    }
+    desc = "distar.171.desc"
+    picture = GFX_evt_society_research
+    show_sound = event_alien_nature
+    location = from
+    is_triggered_only = yes
+    immediate = {
+        leader = {
+            save_event_target_as = brainslug_scientist
+        }
+    }
+    option = {
+        name = "distar.171.a"
+        trigger = {
+            owner = {
+                NOT = {
+                    has_origin = origin_symbiote
+                }
+            }
+        }
+        owner = {
+            add_monthly_resource_mult = {
+                resource = society_research
+                value = @tier4researchreward
+                min = @tier4researchmin
+                max = @tier4researchmax
+            }
+        }
+    }
+    option = {
+        name = "distar.171.b"
+        trigger = {
+            owner = {
+                NOT = {
+                    has_origin = origin_symbiote
+                }
+            }
+        }
+        hidden_effect = {
+            ship_event = {
+                id = distar.172
+                days = 30
+            }
+        }
+        owner = {
+            add_monthly_resource_mult = {
+                resource = society_research
+                value = @tier4researchreward
+                min = @tier4researchmin
+                max = @tier4researchmax
+            }
+        }
+    }
+    option = {
+        name = "distar.171.a.alt"
+        trigger = {
+            owner = {
+                has_origin = origin_symbiote
+            }
+        }
+        owner = {
+            add_monthly_resource_mult = {
+                resource = society_research
+                value = @tier4researchreward
+                min = @tier4researchmin
+                max = @tier4researchmax
+            }
+        }
+    }
+    option = {
+        name = "distar.171.c"
+        trigger = {
+            owner = {
+                has_origin = origin_symbiote
+            }
+        }
+        add_modifier = {
+            modifier = brain_slug_union
+            days = -1
+        }
+        owner = {
+            add_monthly_resource_mult = {
+                resource = society_research
+                value = @tier4researchreward
+                min = @tier4researchmin
+                max = @tier4researchmax
+            }
+        }
+    }
+}

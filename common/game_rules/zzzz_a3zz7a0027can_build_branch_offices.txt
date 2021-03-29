@@ -1,0 +1,14 @@
+can_build_branch_offices = {
+    custom_tooltip = {
+        fail_text = BRANCH_OFFICE_NOT_MEGACORP
+        OR = {
+            has_authority = auth_corporate
+            has_authority = auth_warshipgirls
+            has_civic = civic_gk
+            has_authority = auth_azur_lane_0
+            has_authority = auth_azur_lane_1
+            has_authority = auth_azur_lane_2
+            has_valid_civic = civic_mutualistic_behavior
+        }
+    }
+}

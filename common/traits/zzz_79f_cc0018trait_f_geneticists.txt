@@ -1,0 +1,19 @@
+trait_f_geneticists = {
+    cost = 4
+    potential_crossbreeding_chance = 0
+    icon = "gfx/interface/icons/traits/trait_f_geneticists.dds"
+    modification = no
+    opposites = {
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        ROBOT
+        MACHINE
+    }
+    ai_weight = {
+        weight = 0
+    }
+    modifier = {
+        modify_species_cost_mult = -0.66
+    }
+}

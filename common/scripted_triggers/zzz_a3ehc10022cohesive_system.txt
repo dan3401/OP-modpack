@@ -1,0 +1,3 @@
+cohesive_system = {
+    has_star_flag = cohesive_system
+}

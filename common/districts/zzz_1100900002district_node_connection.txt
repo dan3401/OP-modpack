@@ -1,0 +1,46 @@
+district_node_connection = {
+    base_buildtime = 720
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        from = {
+            has_ascension_perk = ap_planetary_system
+        }
+        is_planet_class = pc_central_network
+    }
+    potential = {
+        exists = owner
+        owner = {
+            has_ascension_perk = ap_planetary_system
+        }
+        is_planet_class = pc_central_network
+    }
+    conversion_ratio = 1
+    convert_to = {
+        district_metal_dismantle
+    }
+    resources = {
+        category = planet_districts_machinedlc
+        cost = {
+            minerals = @planetary_system_minerals_cost
+            rare_crystals = @planetary_system_strategic_resources_cost
+        }
+        produces = {
+            unity = 70
+        }
+        upkeep = {
+            energy = 50
+            rare_crystals = 1
+        }
+    }
+    planet_modifier = {
+        planet_amenities_no_happiness_add = -10
+        planet_districts_machinedlc_produces_mult = -0.1
+    }
+    ai_weight = {
+        weight = 10
+        modifier = {
+            weight = 0
+            free_amenities < 2
+        }
+    }
+}

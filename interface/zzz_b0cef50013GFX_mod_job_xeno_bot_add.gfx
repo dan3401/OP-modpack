@@ -1,0 +1,6 @@
+spriteTypes = {
+    SpriteType = {
+        name = "GFX_mod_job_xeno_bot_add"
+        texturefile = "gfx/interface/icons/modifiers/mod_job_xeno_bot_add.dds"
+    }
+}

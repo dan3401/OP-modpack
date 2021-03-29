@@ -1,0 +1,25 @@
+trait_perfection = {
+    cost = 0
+    opposites = {
+        "trait_hive_mind"
+    }
+    randomized = no
+    modification = no
+    allowed_archetypes = {
+        ASCENDED
+        BIOLOGICAL
+    }
+    modifier = {
+        pop_environment_tolerance = 1
+        country_energy_produces_mult = 0.2
+        country_minerals_produces_mult = 0.2
+        army_damage_mult = 5
+        army_morale_damage_mult = 5
+        army_health = 5
+        army_defense_health_mult = 10
+        army_defense_damage_mult = 10
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

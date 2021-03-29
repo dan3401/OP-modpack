@@ -1,0 +1,16 @@
+triggered_terminators_opinion_of_servitors = {
+    trigger = {
+        OR = {
+        is_country_type = default
+            is_country_type = ascended_empire
+            is_country_type = eternal_empire
+        }
+        has_civic = civic_machine_terminator
+        FROM = {
+            has_civic = civic_machine_servitor
+        }
+    }
+    opinion = {
+        base = -200
+    }
+}

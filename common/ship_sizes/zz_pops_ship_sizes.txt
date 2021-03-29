@@ -60,7 +60,7 @@ colonizer = {
 				}
 			}
 			alloys = 200
-			food = 200
+			food = 500
 			consumer_goods = 200
 		}
 		cost = {

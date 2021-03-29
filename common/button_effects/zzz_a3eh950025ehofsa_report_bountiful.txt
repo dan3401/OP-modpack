@@ -1,0 +1,20 @@
+ehofsa_report_bountiful = {
+    potential = {
+        hidden_trigger = {
+            exists = from
+            check_variable = {
+                which = ehof_phase
+                value >= 1
+            }
+            is_discoverer = yes
+            has_country_flag = ehof_report_bountiful
+        }
+    }
+    allow = {
+        hidden_trigger = {
+            always = yes
+        }
+    }
+    effect = {
+    }
+}

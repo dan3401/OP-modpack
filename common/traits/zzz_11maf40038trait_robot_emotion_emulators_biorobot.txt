@@ -1,0 +1,8 @@
+trait_robot_emotion_emulators_biorobot = {
+    cost = 1
+    icon = gfx/interface/icons/traits/trait_robot_emotion_emulators.dds
+    allowed_archetypes = {
+        BIOMACHINE
+    }
+    custom_tooltip = TRAIT_EMOTION_EMULATORS_EFFECT
+}

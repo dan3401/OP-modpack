@@ -1,0 +1,113 @@
+namespace = crisis
+fleet_event = {
+    id = crisis.60
+    hide_window = yes
+    trigger = {
+        has_global_flag = ongoing_prethoryn_invasion
+        has_global_flag = sentinels_founded
+        owner = {
+            is_country_type = sentinels
+        }
+        owner = {
+            num_ships < 200
+        }
+        is_same_value = event_target:sentinel_alpha
+    }
+    mean_time_to_happen = {
+        months = 100
+    }
+    immediate = {
+        random_country = {
+            limit = {
+                OR = {
+                    is_country_type = default
+                    is_country_type = ascended_empire
+                    is_country_type = lost_empire
+                }
+            }
+            owner_species = {
+                save_event_target_as = random_species
+            }
+        }
+        owner = {
+            create_leader = {
+                class = admiral
+                species = event_target:random_species
+                name = random
+                skill = 3
+                traits = {
+                    trait = leader_trait_sentinel
+                    trait = random_trait
+                }
+            }
+            create_fleet = {
+                name = "NAME_Sentinel_Battle_Fleet"
+                effect = {
+                    set_owner = root.owner
+                    create_ship = {
+                        name = random
+                        design = "NAME_Spearhead"
+                        graphical_culture = "mammalian_01"
+                    }
+                    assign_leader = last_created_leader
+                    while = {
+                        count = 2
+                        create_ship = {
+                            name = random
+                            design = "NAME_Spearhead"
+                            graphical_culture = "reptilian_01"
+                        }
+                    }
+                    while = {
+                        count = 4
+                        create_ship = {
+                            name = random
+                            design = "NAME_Deaths_Head"
+                            graphical_culture = "mammalian_01"
+                        }
+                    }
+                    while = {
+                        count = 2
+                        create_ship = {
+                            name = random
+                            design = NAME_Beta
+                            graphical_culture = "fallen_empire_03"
+                        }
+                    }
+                    while = {
+                        count = 6
+                        create_ship = {
+                            name = random
+                            design = "NAME_Bug_Crusher"
+                            graphical_culture = "avian_01"
+                        }
+                    }
+                    while = {
+                        count = 6
+                        create_ship = {
+                            name = random
+                            design = NAME_Gamma
+                            graphical_culture = "fallen_empire_03"
+                        }
+                    }
+                    while = {
+                        count = 12
+                        create_ship = {
+                            name = random
+                            design = "NAME_Blade"
+                            graphical_culture = "reptilian_01"
+                        }
+                    }
+                    set_location = {
+                        target = root
+                        distance = 20
+                        angle = random
+                    }
+                    set_aggro_range = 500
+                    set_fleet_stance = aggressive
+                    set_aggro_range_measure_from = self
+                }
+            }
+        }
+    }
+}

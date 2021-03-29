@@ -1,0 +1,26 @@
+leader_trait_general_universal_language = {
+    cost = 1
+    modification = no
+    initial = no
+    randomized = no
+    icon = "gfx/interface/icons/traits/trait_universal_language.dds"
+    allowed_archetypes = {
+        ASCENDED
+    }
+    modifier = {
+        army_health = 0.5
+        army_morale = 0.5
+        army_morale_damage_mult = 0.5
+    }
+    leader_potential_add = {
+        from = {
+            has_authority = "auth_enigmatic"
+        }
+    }
+    leader_trait = {
+        general
+    }
+    leader_class = {
+        general
+    }
+}

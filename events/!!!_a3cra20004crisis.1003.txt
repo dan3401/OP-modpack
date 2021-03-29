@@ -1,0 +1,85 @@
+namespace = crisis
+fleet_event = {
+    id = crisis.1003
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = {
+        event_target:extradimensionals = {
+            random_list = {
+                25 = {
+                    create_leader = {
+                        class = admiral
+                        species = event_target:extradimensional_species
+                        name = random
+                        skill = 3
+                        traits = {
+                            trait = leader_trait_ethereal
+                        }
+                    }
+                }
+                25 = {
+                    create_leader = {
+                        class = admiral
+                        species = event_target:extradimensional_species
+                        name = random
+                        skill = 3
+                        traits = {
+                            trait = leader_trait_dimensional_stutter
+                        }
+                    }
+                }
+                50 = {
+                    create_leader = {
+                        class = admiral
+                        species = event_target:extradimensional_species
+                        name = random
+                        skill = 3
+                    }
+                }
+            }
+            create_fleet = {
+                effect = {
+                    set_owner = PREV
+                    create_ship = {
+                        name = random
+                        design = "NAME_Revenant"
+                        graphical_culture = "extra_dimensional_01"
+                    }
+                    assign_leader = last_created_leader
+                    while = {
+                        count = 8
+                        create_ship = {
+                            name = random
+                            design = "NAME_Revenant"
+                            graphical_culture = "extra_dimensional_01"
+                        }
+                    }
+                    while = {
+                        count = 12
+                        create_ship = {
+                            name = random
+                            design = "NAME_Phantom"
+                            graphical_culture = "extra_dimensional_01"
+                        }
+                    }
+                    while = {
+                        count = 20
+                        create_ship = {
+                            name = random
+                            design = "NAME_Wraith"
+                            graphical_culture = "extra_dimensional_01"
+                        }
+                    }
+                    set_location = {
+                        target = ROOT
+                        distance = 5
+                        angle = random
+                    }
+                    set_fleet_stance = aggressive
+                    set_aggro_range = 500
+                    set_aggro_range_measure_from = self
+                }
+            }
+        }
+    }
+}

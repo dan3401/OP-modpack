@@ -1,0 +1,40 @@
+ehof_deactivate = {
+    potential = {
+        hidden_trigger = {
+            exists = from
+            check_variable = {
+                which = ehof_phase
+                value >= 1
+            }
+            has_country_flag = ehof_can_deactivate
+            NOR = {
+                has_country_flag = ehof_is_upgrading
+                has_country_flag = ehof_activating
+                has_country_flag = ehof_on_cooldown
+                has_country_flag = ehof_can_activate
+                has_country_flag = ehof_is_upgrading
+                has_country_flag = annihilator_discoverer
+            }
+        }
+    }
+    allow = {
+        hidden_trigger = {
+            always = yes
+        }
+    }
+    effect = {
+        custom_tooltip = "ehof_deactivate_tooltip"
+        hidden_effect = {
+            country_event = {
+                id = ehof_megastructure.307
+            }
+            remove_country_flag = ehof_can_deactivate
+            random_system = {
+                limit = {
+                    has_star_flag = ehof_permanent_connection@root
+                }
+                remove_star_flag = ehof_permanent_connection@root
+            }
+        }
+    }
+}

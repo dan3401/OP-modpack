@@ -1,0 +1,30 @@
+decision_upgrade_hive_growth = {
+    owned_planets_only = yes
+    icon = decision_divine_algorithm
+    enactment_time = 360
+    resources = {
+        category = decisions
+        cost = {
+            food = 5000
+            sr_dark_matter = 500
+            acot_sr_dark_energy = 500
+        }
+    }
+    potential = {
+        OR = {
+            has_building = building_stellarite_hive_evochamber
+            has_building = building_ae_hive_evochamber
+        }
+        NOT = {
+            has_modifier = acot_modifier_upgrade_hive_growth
+        }
+    }
+    effect = {
+        add_modifier = {
+            modifier = acot_modifier_upgrade_hive_growth
+        }
+    }
+    ai_weight = {
+        weight = 100
+    }
+}

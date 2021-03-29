@@ -1,0 +1,41 @@
+tech_precursor_bc = {
+    area = engineering
+    cost = 50000
+    tier = 5
+    is_rare = yes
+    category = {
+        voidcraft
+    }
+    ai_update_type = military
+    weight = 0
+    icon = tech_precursor_bc_delta
+    potential = {
+        NOT = {
+            is_country_type = fallen_empire
+        }
+        NOT = {
+            has_country_flag = twinks_fallen
+        }
+    }
+    prerequisites = {
+        tech_precursor_design
+    }
+    ai_weight = {
+        factor = 5
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+}

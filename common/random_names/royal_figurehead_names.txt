@@ -1,0 +1,116 @@
+### Copy of Imperial generic for royal figurehead
+
+# Imperial Generic 1
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1
+			OR = {
+				has_government = "gov_constitutional_monarchy"
+				has_government = "gov_puppet_monarchy"
+				has_government = "gov_shogunate"
+			}
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "format.imp_gen.1"
+	noun = "[This.Capital.System.GetName]"
+	prefix_format = "[This.Capital.System.GetName] <imperial_gen>"
+	# Empire of Sol
+}
+
+# Imperial Generic 2
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1
+			OR = {
+				has_government = "gov_constitutional_monarchy"
+				has_government = "gov_puppet_monarchy"
+				has_government = "gov_shogunate"
+			}
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "format.imp_gen.2"
+	noun = "[This.Capital.GetName]"
+	prefix_format = "[This.Capital.GetName] <imperial_gen>"
+	# Empire of Earth
+}
+
+# Imperial Generic 3
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 5
+			OR = {
+				has_government = "gov_constitutional_monarchy"
+				has_government = "gov_puppet_monarchy"
+				has_government = "gov_shogunate"
+			}
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "format.imp_gen.3"
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "[This.GetSpeciesName] <imperial_gen>"
+	# Human Empire
+}
+
+# Imperial Generic 4
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 2
+			OR = {
+				has_government = "gov_constitutional_monarchy"
+				has_government = "gov_puppet_monarchy"
+				has_government = "gov_shogunate"
+			}
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "format.imp_gen.4"
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "[This.GetSpeciesName] <imperial_gen>"
+	# Great Human Empire
+}
+
+# Imperial Generic 5
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 2
+			OR = {
+				has_government = "gov_constitutional_monarchy"
+				has_government = "gov_puppet_monarchy"
+				has_government = "gov_shogunate"
+			}
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "format.imp_gen.5"
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "[This.GetSpeciesName] <imperial_gen>"
+	# Human Star Empire
+}

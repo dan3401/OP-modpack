@@ -1,0 +1,123 @@
+decision_subterranean_expansion = {
+    owned_planets_only = yes
+    icon = decision_mastery_of_nature
+    resources = {
+        category = decisions
+        cost = {
+            influence = 50
+            energy = 2000
+            minerals = 2000
+        }
+    }
+    potential = {
+        exists = owner
+        owner = {
+            has_origin = origin_subterranean_evolution
+        }
+        habitable_structure = no
+        NOT = {
+            is_planet_class = pc_machine
+        }
+        NOT = {
+            is_planet_class = pc_city
+        }
+        NOT = {
+            has_planet_flag = seismic_disturbance
+        }
+        OR = {
+            NOT = {
+                has_planet_flag = planet_sub_expanded
+            }
+            AND = {
+                owner = {
+                    has_ascension_perk = ap_mastery_of_nature
+                }
+                NOT = {
+                    has_planet_flag = planet_sub_expanded_2
+                }
+            }
+        }
+    }
+    effect = {
+        custom_tooltip = decision_subterranean_expansion_effects
+        hidden_effect = {
+            if = {
+                limit = {
+                    NOT = {
+                        has_planet_flag = planet_sub_expanded
+                    }
+                }
+                set_planet_flag = planet_sub_expanded
+            }
+            else_if = {
+                limit = {
+                    NOT = {
+                        has_planet_flag = planet_sub_expanded_2
+                    }
+                }
+                set_planet_flag = planet_sub_expanded_2
+            }
+            random_list = {
+                1 = {
+                    planet_event = {
+                        id = civicsexpanded.1
+                        days = 170
+                        random = 30
+                    }
+                    modifier = {
+                        factor = 0
+                        has_deposit = d_underground_farm
+                    }
+                    modifier = {
+                        factor = 0
+                        exists = owner
+                        owner = {
+                            OR = {
+                                is_machine_empire = yes
+                                is_lithoid_empire = yes
+                            }
+                            country_uses_food = no
+                        }
+                        NAND = {
+                            has_deposit = d_underground_mine
+                            has_deposit = d_underground_generator
+                        }
+                    }
+                }
+                2 = {
+                    planet_event = {
+                        id = civicsexpanded.3
+                        days = 170
+                        random = 30
+                    }
+                    modifier = {
+                        factor = 0
+                        has_deposit = d_underground_mine
+                    }
+                }
+                2 = {
+                    planet_event = {
+                        id = civicsexpanded.5
+                        days = 170
+                        random = 30
+                    }
+                    modifier = {
+                        factor = 0
+                        has_deposit = d_underground_generator
+                    }
+                }
+            }
+        }
+    }
+    ai_weight = {
+        weight = 1
+        modifier = {
+            factor = 0
+            num_pops < 20
+        }
+        modifier = {
+            factor = 0
+            colony_age < 10
+        }
+    }
+}

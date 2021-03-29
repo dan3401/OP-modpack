@@ -1,0 +1,60 @@
+district_bank_uncapped = {
+    icon = district_bank
+    base_buildtime = 600
+    is_capped_by_modifier = no
+    conversion_ratio = 1
+    convert_to = {
+        district_bank
+    }
+    show_on_uncolonized = {
+        uses_district_set = city_world
+        from = {
+            OR = {
+                has_ascension_perk = ap_pyramidal_society
+                has_country_flag = ap_pyramidal_society
+            }
+            is_megacorp = yes
+        }
+    }
+    potential = {
+        uses_district_set = city_world
+        exists = owner
+        owner = {
+            OR = {
+                has_ascension_perk = ap_pyramidal_society
+                has_country_flag = ap_pyramidal_society
+            }
+            is_megacorp = yes
+        }
+    }
+    allow = {
+        NOR = {
+            has_modifier = resort_colony
+            has_modifier = slave_colony
+        }
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = 1000
+        }
+        produces = {
+            energy = 6
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 12
+        job_banker_add = 4
+        job_treasurer_add = 4
+        job_tax_controller_add = 2
+    }
+    ai_weight = {
+        weight = 2
+    }
+    ai_resource_production = {
+        energy = 4
+        trigger = {
+            always = yes
+        }
+    }
+}

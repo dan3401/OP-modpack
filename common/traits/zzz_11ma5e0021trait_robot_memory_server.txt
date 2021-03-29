@@ -1,0 +1,19 @@
+trait_robot_memory_server = {
+    cost = 1
+    initial = yes
+    allowed_archetypes = {
+        MACHINE
+        BIOMACHINE
+    }
+    species_potential_add = {
+        exists = from
+        from = {
+            NOT = {
+                has_country_flag = synthetic_empire
+            }
+        }
+    }
+    modifier = {
+        planet_jobs_unity_produces_mult = 0.15
+    }
+}

@@ -1,0 +1,12 @@
+trait_machine_introspective = {
+    cost = 2
+    initial = yes
+    allowed_archetypes = {
+        ROBOT
+        MACHINE
+        BIOMACHINE
+    }
+    modifier = {
+        planet_jobs_engineering_research_produces_mult = 0.2
+    }
+}

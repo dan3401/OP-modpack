@@ -1,0 +1,21 @@
+triggered_negative_opinion_of_assimilators = {
+    trigger = {
+        OR = {
+            is_country_type = ascended_empire
+            is_country_type = eternal_empire
+        }
+        NOR = {
+            has_ethic = ethic_spiritualist
+            has_ethic = ethic_fanatic_spiritualist
+            has_ethic = ethic_gestalt_consciousness
+            has_ai_personality = democratic_crusaders
+            has_ai_personality = egalitarian_imperialists
+        }
+        FROM = {
+            has_civic = civic_machine_assimilator
+        }
+    }
+    opinion = {
+        base = -100
+    }
+}

@@ -1,0 +1,116 @@
+ruler_hobby_button_effect = {
+    potential = {
+        always = yes
+    }
+    allow = {
+        if = {
+            limit = {
+                NOR = {
+                    has_authority = auth_hive_mind
+                    has_authority = auth_machine_intelligence
+                    has_authority = auth_ancient_machine_intelligence
+                }
+            }
+            custom_tooltip = tab_ruler_hobbies_tooltip
+        }
+        if = {
+            limit = {
+                OR = {
+                    has_authority = auth_hive_mind
+                }
+            }
+            custom_tooltip = tab_ruler_hobbies_tooltip_hivemind
+        }
+        if = {
+            limit = {
+                OR = {
+                    has_authority = auth_machine_intelligence
+                    has_authority = auth_ancient_machine_intelligence
+                }
+            }
+            custom_tooltip = tab_ruler_hobbies_tooltip_machine
+        }
+        custom_tooltip = {
+            fail_text = play_as_ruler.9499.tooltip2
+            hidden_trigger = {
+                any_owned_leader = {
+                    leader_class = ruler
+                    has_leader_flag = play_as_ruler_ruler_itself
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = play_as_ruler.9499.tooltip3
+            hidden_trigger = {
+                NOT = {
+                    has_country_flag = ruler_hobby_view_opened
+                }
+            }
+        }
+    }
+    effect = {
+        if = {
+            limit = {
+                NOR = {
+                    has_authority = auth_hive_mind
+                    has_authority = auth_machine_intelligence
+                    has_authority = auth_ancient_machine_intelligence
+                }
+            }
+            custom_tooltip = tab_ruler_hobbies_tooltip
+        }
+        if = {
+            limit = {
+                OR = {
+                    has_authority = auth_hive_mind
+                }
+            }
+            custom_tooltip = tab_ruler_hobbies_tooltip_hivemind
+        }
+        if = {
+            limit = {
+                OR = {
+                    has_authority = auth_machine_intelligence
+                    has_authority = auth_ancient_machine_intelligence
+                }
+            }
+            custom_tooltip = tab_ruler_hobbies_tooltip_machine
+        }
+        hidden_effect = {
+            set_country_flag = ruler_hobby_view_opened
+            if = {
+                limit = {
+                    NOR = {
+                        has_authority = auth_hive_mind
+                        has_authority = auth_machine_intelligence
+                        has_authority = auth_ancient_machine_intelligence
+                    }
+                }
+                country_event = {
+                    id = play_as_ruler.42689
+                }
+            }
+            if = {
+                limit = {
+                    OR = {
+                        has_authority = auth_hive_mind
+                    }
+                }
+                country_event = {
+                    id = play_as_ruler.42690
+                }
+            }
+            if = {
+                limit = {
+                    OR = {
+                        has_authority = auth_machine_intelligence
+                        has_authority = auth_ancient_machine_intelligence
+                    }
+                }
+                country_event = {
+                    id = play_as_ruler.42691
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+trait_f_archivist = {
+    cost = 5
+    potential_crossbreeding_chance = 0
+    icon = "gfx/interface/icons/traits/trait_f_archivist.dds"
+    modification = no
+    opposites = {
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        ROBOT
+        MACHINE
+    }
+    ai_weight = {
+        weight = 0
+    }
+    modifier = {
+        science_ship_survey_speed = 1
+        ship_anomaly_research_speed_mult = 0.33
+        ship_archaeological_site_excavation_speed_mult = 0.5
+    }
+}

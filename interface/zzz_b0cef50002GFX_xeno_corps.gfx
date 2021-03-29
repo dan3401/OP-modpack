@@ -1,0 +1,6 @@
+spriteTypes = {
+    SpriteType = {
+        name = "GFX_xeno_corps"
+        texturefile = "gfx/interface/icons/buildings/building_xeno_corps.dds"
+    }
+}

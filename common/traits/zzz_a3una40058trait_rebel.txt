@@ -1,0 +1,27 @@
+trait_rebel = {
+    cost = -2
+    potential_crossbreeding_chance = 1
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+        PLANTOID
+    }
+    opposites = {
+        "trait_deviants"
+        "trait_unpredictable"
+        "trait_loyalist"
+        "trait_clone"
+        "trait_hive"
+        "trait_collectivist"
+        "trait_individualist"
+        "trait_collectivist"
+        "trait_hive_mind"
+    }
+    modifier = {
+        pop_government_ethic_attraction = -0.3
+        species_empire_size_mult = 0.05
+        planet_jobs_engineering_research_produces_mult = 0.07
+        planet_jobs_physics_research_produces_mult = 0.07
+        planet_jobs_society_research_produces_mult = 0.07
+    }
+}

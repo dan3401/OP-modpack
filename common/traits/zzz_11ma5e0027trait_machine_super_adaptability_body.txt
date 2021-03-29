@@ -1,0 +1,24 @@
+trait_machine_super_adaptability_body = {
+    cost = 4
+    initial = no
+    randomized = no
+    allowed_archetypes = {
+        MACHINE
+        BIOMACHINE
+    }
+    icon = gfx/interface/icons/traits/trait_robust.dds
+    species_potential_add = {
+        exists = from
+        from = {
+            NOT = {
+                has_country_flag = synthetic_empire
+            }
+            has_technology = tech_ap_mechanical_evolution
+        }
+    }
+    modifier = {
+        planet_pops_upkeep_mult = -0.2
+        pop_amenities_usage_no_happiness_mult = -0.2
+        planet_jobs_produces_mult = 0.05
+    }
+}

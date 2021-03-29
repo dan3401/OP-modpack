@@ -1,0 +1,25 @@
+namespace = begin
+country_event = {
+    id = begin.4
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        owner = {
+            NOT = {
+                has_country_flag = ceg_set_up_complete
+            }
+            has_valid_civic = civic_crystalline_energy_grid
+        }
+    }
+    immediate = {
+        capital_scope = {
+            add_building = building_crystal_prospecting_machine
+            set_planet_flag = crystal_prospecting_built
+        }
+        give_technology = {
+            message = no
+            tech = tech_mine_rare_crystals
+        }
+        set_country_flag = ceg_set_up_complete
+    }
+}

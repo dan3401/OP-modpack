@@ -1,0 +1,29 @@
+leader_trait_electric_type_Energy_system_optimization_2 = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/EeveelutionTypes/electric_type.png"
+    modifier = {
+        ship_fire_rate_mult = 0.15
+        ship_shield_mult = 0.15
+        ship_speed_mult = 0.1
+    }
+    leader_trait = {
+        admiral
+    }
+    leader_class = {
+        admiral
+    }
+    opposites = {
+        "leader_trait_electric_type_Energy_system_optimization_1"
+        "leader_trait_electric_type_Energy_system_optimization_3"
+        "leader_trait_electric_type_Energy_system_optimization_4"
+        "leader_trait_electric_type_Energy_system_optimization_5"
+    }
+    leader_potential_add = {
+        from = {
+            any_owned_pop = {
+                pop_has_trait = trait_electric_type_mega_evolution
+            }
+        }
+    }
+}

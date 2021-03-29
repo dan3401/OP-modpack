@@ -1,0 +1,20 @@
+leader_trait_warbot_tinkerer_machinedlc = {
+    icon = "gfx/interface/icons/traits/leader_traits/leader_trait_hammer.dds"
+    cost = 1
+    modification = no
+    initial = no
+    randomized = no
+    leader_class = {
+        ruler
+    }
+    leader_trait = {
+        ruler
+    }
+    prerequisites = {
+        tech_central_core_modifying
+    }
+    modifier = {
+        planet_army_build_speed_mult = 0.2
+        armies_cost_mult = -0.2
+    }
+}

@@ -1,0 +1,57 @@
+district_node_security = {
+    base_buildtime = 600
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        from = {
+            has_ascension_perk = ap_planetary_system
+            has_authority = auth_machine_intelligence
+        }
+        is_planet_class = pc_central_network
+    }
+    potential = {
+        exists = owner
+        owner = {
+            has_ascension_perk = ap_planetary_system
+            has_authority = auth_machine_intelligence
+        }
+        is_planet_class = pc_central_network
+    }
+    conversion_ratio = 1
+    convert_to = {
+        district_metal_dismantle
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = @planetary_system_minerals_cost
+        }
+        upkeep = {
+            energy = @planetary_system_energy_upkeep
+        }
+    }
+    planet_modifier = {
+        planet_amenities_no_happiness_add = 15
+        planet_housing_add = 10
+        job_security_drone_add = 10
+    }
+    triggered_desc = {
+        text = job_security_drone_effect_desc
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 0
+            free_amenities < 2
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                any_owned_planet = {
+                    planet = {
+                        planet_crime > 22
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+civic_syncretic_evolution = {
+    modification = no
+    playable = {
+        host_has_dlc = "Utopia"
+    }
+    potential = {
+        ethics = {
+            NOT = {
+                value = ethic_hive_mind
+            }
+        }
+    }
+    possible = {
+        civics = {
+            NOR = {
+                value = civic_mechanists
+                value = civic_fanatic_purifiers
+            }
+        }
+    }
+    random_weight = {
+        base = 1
+        modifier = {
+            factor = 0
+            NOT = {
+                host_has_dlc = "Utopia"
+            }
+        }
+        modifier = {
+            factor = 0
+            has_global_flag = game_started
+        }
+    }
+    description = civic_tooltip_syncretic_evolution_effects
+}

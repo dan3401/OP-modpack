@@ -1,0 +1,3 @@
+everchanging_system = {
+    has_star_flag = everchanging_system
+}

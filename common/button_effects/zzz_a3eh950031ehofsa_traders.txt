@@ -1,0 +1,25 @@
+ehofsa_traders = {
+    potential = {
+        hidden_trigger = {
+            exists = from
+            is_discoverer = yes
+            exists = event_target:urmazin_country
+            has_country_flag = ehof_traders_first_time
+        }
+    }
+    allow = {
+        hidden_trigger = {
+            NOT = {
+                has_global_flag = compound_invasion_ongoing
+            }
+        }
+    }
+    effect = {
+        custom_tooltip = "ehof_traders_tooltip"
+        hidden_effect = {
+            country_event = {
+                id = ehof_mega_trader.006
+            }
+        }
+    }
+}

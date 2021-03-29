@@ -1,0 +1,35 @@
+namespace = crisis
+fleet_event = {
+    id = crisis.106
+    hide_window = yes
+    trigger = {
+        has_fleet_flag = pet_queen
+        num_ships < 30
+        any_ship = {
+            is_ship_size = queen_swarm
+        }
+    }
+    mean_time_to_happen = {
+        months = 2
+    }
+    immediate = {
+        random_list = {
+            33 = {
+                create_ship = {
+                    name = "NAME_Domesticated_Warrior"
+                    design = "NAME_Swarm_Large"
+                    graphical_culture = "swarm_01"
+                    upgradable = no
+                }
+            }
+            66 = {
+                create_ship = {
+                    name = "NAME_Domesticated_Swarmling"
+                    design = "NAME_Swarm_Small"
+                    graphical_culture = "swarm_01"
+                    upgradable = no
+                }
+            }
+        }
+    }
+}

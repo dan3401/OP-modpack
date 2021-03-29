@@ -1,0 +1,61 @@
+ehof_report_expand = {
+    potential = {
+        hidden_trigger = {
+            exists = from
+            check_variable = {
+                which = ehof_phase
+                value >= 1
+            }
+            NOT = {
+                has_country_flag = annihilator_discoverer
+            }
+            OR = {
+                has_country_flag = ehof_report_quest
+                has_country_flag = ehof_report_standard
+                has_country_flag = ehof_report_cohesive
+                has_country_flag = ehof_report_bountiful
+            }
+        }
+    }
+    allow = {
+        hidden_trigger = {
+            always = yes
+        }
+    }
+    effect = {
+        hidden_effect = {
+            if = {
+                limit = {
+                    has_country_flag = ehof_report_standard
+                }
+                country_event = {
+                    id = ehof_megastructure.401
+                }
+            }
+            else_if = {
+                limit = {
+                    has_country_flag = ehof_report_cohesive
+                }
+                country_event = {
+                    id = ehof_megastructure.402
+                }
+            }
+            else_if = {
+                limit = {
+                    has_country_flag = ehof_report_bountiful
+                }
+                country_event = {
+                    id = ehof_megastructure.403
+                }
+            }
+            else_if = {
+                limit = {
+                    has_country_flag = ehof_report_quest
+                }
+                country_event = {
+                    id = ehof_megastructure.404
+                }
+            }
+        }
+    }
+}

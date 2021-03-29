@@ -1,0 +1,43 @@
+decision_upgrade_synth_extra_space = {
+    owned_planets_only = yes
+    icon = decision_cybernetics
+    enactment_time = 360
+    resources = {
+        category = decisions
+        cost = {
+            minerals = 5000
+            sr_dark_matter = 500
+            acot_sr_dark_energy = 500
+        }
+    }
+    potential = {
+        OR = {
+            has_building = building_stellarite_synt_center
+            has_building = building_ae_synt_center
+        }
+        NOT = {
+            has_modifier = acot_modifier_upgrade_synth_extra_space
+        }
+    }
+    effect = {
+        IF = {
+            limit = {
+                is_ringworld = no
+            }
+            add_modifier = {
+                modifier = acot_modifier_upgrade_synth_extra_space
+            }
+        }
+        IF = {
+            limit = {
+                is_ringworld = yes
+            }
+            add_modifier = {
+                modifier = acot_modifier_upgrade_synth_extra_space_ringworld
+            }
+        }
+    }
+    ai_weight = {
+        weight = 100
+    }
+}

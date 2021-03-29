@@ -1,0 +1,45 @@
+spriteTypes = {
+    SpriteType = {
+        name = "GFX_shivkonian_implant"
+        texturefile = "gfx/interface/icons/relics/r_shivkonian_implant.dds"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/interface/icons/relics/r_shivkonian_implant_shine_2.dds"
+            animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds"
+            animationrotation = -90
+            animationlooping = yes
+            animationtime = 4
+            animationdelay = 3
+            animationblendmode = "add"
+            animationtype = "pulsing"
+            animationrotationoffset = {
+                x = 0
+                y = 0
+            }
+            animationtexturescale = {
+                x = 1
+                y = 1
+            }
+        }
+        legacy_lazy_load = no
+        animation = {
+            animationmaskfile = "gfx/interface/icons/relics/r_shivkonian_implant_shine.dds"
+            animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds"
+            animationrotation = 90
+            animationlooping = yes
+            animationtime = 12
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "rotating"
+            animationrotationoffset = {
+                x = 0
+                y = 0
+            }
+            animationtexturescale = {
+                x = 1
+                y = 1
+            }
+        }
+        legacy_lazy_load = no
+    }
+}

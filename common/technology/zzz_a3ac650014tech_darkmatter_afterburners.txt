@@ -1,0 +1,32 @@
+tech_darkmatter_afterburners = {
+    area = engineering
+    category = {
+        propulsion
+    }
+    tier = 5
+    cost = @tier5cost2
+    weight = @tier5weight2
+    ai_update_type = all
+    is_rare = yes
+    potential = {
+        NOT = {
+            has_global_flag = acot_shipcom_forbidden
+        }
+        NOT = {
+            is_country_type = fallen_empire
+        }
+    }
+    prerequisites = {
+        "tech_fe_thruster_2"
+        "tech_afterburners_2"
+    }
+    prereqfor_desc = {
+        hide_prereq_for_desc = component
+        custom = {
+            title = "TECH_UNLOCK_FE_THRUSTER_TITLE"
+            desc = "TECH_UNLOCK_FE_THRUSTER_DESC"
+        }
+    }
+    weight_modifier = {
+    }
+}

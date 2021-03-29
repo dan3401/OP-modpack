@@ -1,0 +1,30 @@
+decision_upgrade_machine_cyberspace = {
+    owned_planets_only = yes
+    icon = decision_glitchy_matrix
+    enactment_time = 360
+    resources = {
+        category = decisions
+        cost = {
+            minerals = 5000
+            sr_dark_matter = 500
+            acot_sr_dark_energy = 500
+        }
+    }
+    potential = {
+        OR = {
+            has_building = building_stellarite_machine_dome
+            has_building = building_ae_machine_dome
+        }
+        NOT = {
+            has_modifier = acot_modifier_upgrade_machine_cyberspace
+        }
+    }
+    effect = {
+        add_modifier = {
+            modifier = acot_modifier_upgrade_machine_cyberspace
+        }
+    }
+    ai_weight = {
+        weight = 100
+    }
+}

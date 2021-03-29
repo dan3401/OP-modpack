@@ -1,0 +1,33 @@
+leader_trait_natural_physicist = {
+    cost = 1
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/leader_trait_natural_physicist.dds"
+    modifier = {
+        category_field_manipulation_research_speed_mult = 0.33
+        category_particles_research_speed_mult = 0.33
+        category_computing_research_speed_mult = 0.33
+    }
+    leader_trait = {
+        scientist
+    }
+    leader_class = {
+        scientist
+    }
+    opposites = {
+        "leader_trait_carefree"
+    }
+    leader_potential_add = {
+        OR = {
+            from = {
+                has_technology = tech_expandable_brain_1
+            }
+            has_global_flag = ap_expandable_brain_1
+        }
+    }
+    ai_categories = {
+        physics
+    }
+    ai_weight = {
+        weight = 50
+    }
+}

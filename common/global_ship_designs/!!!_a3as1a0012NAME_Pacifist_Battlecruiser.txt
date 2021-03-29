@@ -1,0 +1,97 @@
+ship_design = {
+    name = "NAME_Pacifist_Battlecruiser"
+    ship_size = fe_battlecruiser
+    section = {
+        template = "FE_BATTLECRUISER_BOW_KEY"
+        slot = "bow"
+        component = {
+            slot = "EXTRA_LARGE_01"
+            template = "ACOT_PARTICLE_LANCE_DM"
+        }
+        component = {
+            slot = "LARGE_GUN_01"
+            template = "ACOT_ENERGY_TORPEDO_DM"
+        }
+        component = {
+            slot = "LARGE_GUN_02"
+            template = "ACOT_ENERGY_TORPEDO_DM"
+        }
+        component = {
+            slot = "LARGE_UTILITY_1"
+            template = "LARGE_DARK_MATTER_DEFLECTOR"
+        }
+        component = {
+            slot = "LARGE_UTILITY_2"
+            template = "LARGE_DARK_MATTER_DEFLECTOR"
+        }
+        component = {
+            slot = "LARGE_UTILITY_3"
+            template = "LARGE_DARK_MATTER_DEFLECTOR"
+        }
+        component = {
+            slot = "AUX_UTILITY_1"
+            template = "ACOT_SHIELD_BOOSTER_DM"
+        }
+    }
+    section = {
+        template = "FE_BATTLECRUISER_KEY"
+        slot = "mid"
+        component = {
+            slot = "MEDIUM_GUN_01"
+            template = "MEDIUM_ACOT_MASS_DRIVER_DM"
+        }
+        component = {
+            slot = "MEDIUM_GUN_02"
+            template = "MEDIUM_ACOT_MASS_DRIVER_DM"
+        }
+        component = {
+            slot = "MEDIUM_GUN_03"
+            template = "MEDIUM_ACOT_MASS_DRIVER_DM"
+        }
+        component = {
+            slot = "LARGE_UTILITY_1"
+            template = "LARGE_DARK_MATTER_DEFLECTOR"
+        }
+        component = {
+            slot = "LARGE_UTILITY_2"
+            template = "LARGE_ACOT_ARMOR_DM"
+        }
+        component = {
+            slot = "LARGE_UTILITY_3"
+            template = "LARGE_ACOT_ARMOR_DM"
+        }
+        component = {
+            slot = "AUX_UTILITY_1"
+            template = "AFTERBURNER_2"
+        }
+    }
+    section = {
+        template = "FE_BATTLECRUISER_STERN_KEY"
+        slot = "stern"
+        component = {
+            slot = "MEDIUM_GUN_01"
+            template = "MEDIUM_ACOT_MASS_DRIVER_DM"
+        }
+        component = {
+            slot = "STRIKE_CRAFT_01"
+            template = "ACOT_FIGHTERS_HANGAR_DM"
+        }
+        component = {
+            slot = "STRIKE_CRAFT_02"
+            template = "ACOT_FIGHTERS_HANGAR_DM"
+        }
+        component = {
+            slot = "LARGE_UTILITY_1"
+            template = "LARGE_ACOT_ARMOR_DM"
+        }
+        component = {
+            slot = "LARGE_UTILITY_2"
+            template = "LARGE_ACOT_ARMOR_DM"
+        }
+    }
+    required_component = "DM_SENSOR_SHIP"
+    required_component = "ENIGMATIC_DRIVE_DM"
+    required_component = "AE_COMBAT_COMPUTER_LARGE_3"
+    required_component = "BATTLESHIP_DARK_MATTER_REACTOR"
+    required_component = "BATTLESHIP_SHIP_THRUSTER_5"
+}

@@ -1,0 +1,51 @@
+tech_precursor_titan_cost = {
+    area = engineering
+    cost = 200000
+    tier = 5
+    is_rare = yes
+    category = {
+        voidcraft
+    }
+    ai_update_type = military
+    weight = 0
+    icon = tech_precursor_titan_alpha
+    prereqfor_desc = {
+        custom = {
+            title = "TECH_UNLOCK_ALPHA_TITAN_TITLE"
+            desc = "TECH_UNLOCK_ALPHA_TITAN_DESC"
+        }
+    }
+    potential = {
+        NOT = {
+            is_country_type = fallen_empire
+        }
+        NOT = {
+            has_country_flag = twinks_fallen
+        }
+    }
+    modifier = {
+        shipsize_precursor_titan_build_speed_mult = 0.25
+        shipsize_precursor_titan_hull_add = 5000
+    }
+    prerequisites = {
+        tech_precursor_titan
+    }
+    ai_weight = {
+        factor = 5
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+}

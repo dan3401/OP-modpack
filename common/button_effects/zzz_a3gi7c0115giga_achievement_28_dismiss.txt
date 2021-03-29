@@ -1,0 +1,16 @@
+giga_achievement_28_dismiss = {
+    potential = {
+        exists = from
+        has_country_flag = giga_achievement_28_notification
+    }
+    allow = {
+        hidden_trigger = {
+            always = yes
+        }
+    }
+    effect = {
+        hidden_effect = {
+            remove_country_flag = giga_achievement_28_notification
+        }
+    }
+}

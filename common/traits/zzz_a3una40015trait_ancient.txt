@@ -1,0 +1,29 @@
+trait_ancient = {
+    potential_crossbreeding_chance = 0.25
+    cost = 4
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/trait_ruler_fertility_preacher.dds"
+    allowed_archetypes = {
+        BIOLOGICAL
+        MACHINE
+        ROBOT
+        LITHOID
+        PLANTOID
+        half_species
+    }
+    opposites = {
+        "trait_immortal"
+    }
+    modifier = {
+        leader_age = 300
+        planet_jobs_physics_research_produces_mult = 0.2
+        planet_jobs_society_research_produces_mult = -0.05
+    }
+    opposites = {
+        "trait_venerable"
+        "trait_enduring"
+        "trait_fleeting"
+        "trait_seasonal"
+        "trait_ageless"
+    }
+}

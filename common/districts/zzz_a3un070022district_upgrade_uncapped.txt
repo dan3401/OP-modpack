@@ -1,0 +1,60 @@
+district_upgrade_uncapped = {
+    icon = district_upgrade
+    base_buildtime = 240
+    is_capped_by_modifier = no
+    conversion_ratio = 1
+    convert_to = {
+        district_upgrade
+    }
+    show_on_uncolonized = {
+        uses_district_set = machine_world
+        from = {
+            OR = {
+                has_ascension_perk = ap_pyramidal_society
+                has_country_flag = ap_pyramidal_society
+            }
+            is_machine_empire = yes
+        }
+    }
+    potential = {
+        uses_district_set = machine_world
+        exists = owner
+        owner = {
+            OR = {
+                has_ascension_perk = ap_pyramidal_society
+                has_country_flag = ap_pyramidal_society
+            }
+            is_machine_empire = yes
+        }
+    }
+    allow = {
+        NOR = {
+            has_modifier = resort_colony
+            has_modifier = slave_colony
+        }
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = 500
+        }
+        upkeep = {
+            energy = 2
+        }
+        produces = {
+        }
+    }
+    planet_modifier = {
+        planet_amenities_no_happiness_add = 5
+        job_improver_add = 3
+    }
+    ai_weight = {
+        weight = 2
+    }
+    ai_resource_production = {
+        energy = 4
+        trigger = {
+            always = yes
+        }
+    }
+}

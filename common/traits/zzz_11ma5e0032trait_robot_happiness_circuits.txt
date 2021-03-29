@@ -1,0 +1,20 @@
+trait_robot_happiness_circuits = {
+    cost = 3
+    initial = yes
+    randomized = no
+    allowed_archetypes = {
+        ROBOT
+    }
+    species_potential_add = {
+        exists = from
+        from = {
+            has_country_flag = synthetic_empire
+        }
+    }
+    modifier = {
+        pop_happiness = 0.3
+    }
+    slave_cost = {
+        energy = 200
+    }
+}

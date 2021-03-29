@@ -1,0 +1,180 @@
+create_biomorph_species = {
+    create_species = {
+        name = "Bio-Thrall"
+        namelist = this
+        plural = "Bio-Thralls"
+        class = Biomorphic
+        portrait = "pre_mam6"
+        homeworld = this
+        traits = {
+            trait = "trait_biomorph"
+        }
+        effect = {
+            if = {
+                limit = {
+                    root.owner = {
+                        has_country_flag = biomorph_mam
+                    }
+                }
+                change_species_portrait = pre_mam6
+            }
+            if = {
+                limit = {
+                    root.owner = {
+                        has_country_flag = biomorph_rep
+                    }
+                }
+                change_species_portrait = pre_rep12
+            }
+            if = {
+                limit = {
+                    root.owner = {
+                        has_country_flag = biomorph_avi
+                    }
+                }
+                change_species_portrait = pre_avi12
+            }
+            if = {
+                limit = {
+                    root.owner = {
+                        has_country_flag = biomorph_art
+                    }
+                }
+                change_species_portrait = pre_art11
+            }
+            if = {
+                limit = {
+                    root.owner = {
+                        has_country_flag = biomorph_mol
+                    }
+                }
+                change_species_portrait = pre_mol3
+            }
+            if = {
+                limit = {
+                    root.owner = {
+                        has_country_flag = biomorph_fun
+                    }
+                }
+                change_species_portrait = pre_fun9
+            }
+            if = {
+                limit = {
+                    root.owner = {
+                        has_country_flag = biomorph_pla
+                    }
+                }
+                change_species_portrait = pla5
+            }
+        }
+    }
+    capital_scope = {
+        create_pop = {
+            species = last_created_species
+        }
+        if = {
+            limit = {
+                root.owner = {
+                    has_country_flag = biomorph_serviles
+                }
+            }
+            modify_species = {
+                species = last_created_species
+                base = none
+                add_trait = trait_syncretic_proles
+            }
+        }
+        if = {
+            limit = {
+                root.owner = {
+                    has_country_flag = biomorph_livestock
+                }
+            }
+            modify_species = {
+                species = last_created_species
+                base = none
+                add_trait = trait_presapient_docile_livestock
+            }
+        }
+        if = {
+            limit = {
+                root.owner = {
+                    has_country_flag = biomorph_starborn
+                }
+            }
+            modify_species = {
+                species = last_created_species
+                base = none
+                add_trait = trait_presapient_starborn
+            }
+        }
+        if = {
+            limit = {
+                root.owner = {
+                    has_country_flag = biomorph_earthbound
+                }
+            }
+            modify_species = {
+                species = last_created_species
+                base = none
+                add_trait = trait_presapient_earthbound
+            }
+        }
+        if = {
+            limit = {
+                root.owner = {
+                    has_country_flag = biomorph_intellectual
+                }
+            }
+            modify_species = {
+                species = last_created_species
+                base = none
+                add_trait = trait_presapient_natural_intellectuals
+            }
+        }
+        if = {
+            limit = {
+                root.owner = {
+                    has_country_flag = biomorph_conservative
+                }
+            }
+            modify_species = {
+                species = last_created_species
+                base = none
+                add_trait = trait_presapient_conservative
+            }
+        }
+        if = {
+            limit = {
+                root.owner = {
+                    has_authority = auth_hive_mind
+                }
+            }
+            modify_species = {
+                species = last_created_species
+                base = none
+                add_trait = trait_hive_mind
+            }
+        }
+        if = {
+            limit = {
+                root.owner = {
+                    NOR = {
+                        has_country_flag = biomorph_serviles
+                        has_country_flag = biomorph_livestock
+                        has_country_flag = biomorph_starborn
+                        has_country_flag = biomorph_earthbound
+                        has_country_flag = biomorph_intellectual
+                        has_country_flag = biomorph_conservative
+                    }
+                }
+            }
+            modify_species = {
+                species = last_created_species
+                base = none
+                add_trait = trait_syncretic_proles
+            }
+        }
+    }
+    set_built_species = last_created_species
+}

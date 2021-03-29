@@ -1,0 +1,30 @@
+giga_contact_ezic = {
+    potential = {
+        exists = from
+        has_global_flag = ezic_resistance_active
+        has_country_flag = contacted_ezic_rebels
+        NOR = {
+            has_global_flag = katzenartig_imperium_defeated
+            has_country_flag = katzen_vassal
+        }
+        any_country = {
+            is_country_type = katzenartig_imperium
+        }
+    }
+    allow = {
+        hidden_trigger = {
+            NOR = {
+                has_country_flag = katzen_diplomacy_engaged
+                has_global_flag = ezic_rebellion_ongoing
+            }
+        }
+    }
+    effect = {
+        custom_tooltip = "giga_contact_ezic_tooltip"
+        hidden_effect = {
+            country_event = {
+                id = giga_katrebels.0012
+            }
+        }
+    }
+}

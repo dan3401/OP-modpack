@@ -1,0 +1,11 @@
+triggered_opinion_diplomatic_corp = {
+	trigger = {
+		FROM = {
+			has_civic = civic_diplomatic_tradition
+		}
+	}
+
+	opinion = {
+		base = 10
+	}
+}

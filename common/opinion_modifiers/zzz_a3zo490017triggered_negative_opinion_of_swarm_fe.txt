@@ -1,0 +1,16 @@
+triggered_negative_opinion_of_swarm_fe = {
+    trigger = {
+        OR = {
+        has_ai_personality = fallen_empire_xenophile
+            is_country_type = ascended_empire
+            is_country_type = eternal_empire
+        }
+        has_ai_personality = lost_empire_xenophile
+        FROM = {
+            has_civic = civic_hive_devouring_swarm
+        }
+    }
+    opinion = {
+        base = -80
+    }
+}

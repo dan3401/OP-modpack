@@ -1,0 +1,66 @@
+"The Continuum" = {
+    key = "The Continuum"
+    ship_prefix = ""
+    species = {
+        class = "Eternal"
+        portrait = "cyrian"
+        name = "The Seekers"
+        plural = "The Seeker"
+        adjective = "The Seekers"
+        name_list = "beep_1"
+        trait = "trait_ascended"
+        trait = "trait_immortal"
+        trait = "trait_universal_language"
+        trait = "trait_perfection"
+    }
+    name = "The Continuum"
+    adjective = "Eternal"
+    authority = "auth_enigmatic"
+    flags = {
+        "eternal_1"
+        "custom_start_screen"
+    }
+    species_bio = "After the passing of the 3647391th cycle, The Continuum had enough of the endless search, as they thought of it as a mere dead end. Under the guidance of their own Eternal Keeper, they separated from the rest of the Keepers of Eternos, to take a different approach on the task of unveiling the mysteries of existence. While eternity is a burden as well as a gift, The Continuum sets their gaze upon a new path, a path that certainly leads them away from the old teachings of Eternos. While they remain undeniably strong within society, one cannot deny the differences between the two."
+    government = "gov_eternal_continuum"
+    advisor_voice_type = "l_the_technocrat"
+    planet_name = "Olympos"
+    planet_class = "pc_eternity"
+    system_name = "Chronos"
+    initializer = "EE_ringworld"
+    graphical_culture = "eternal_empire"
+    city_graphical_culture = "eternal_empire"
+    empire_flag = {
+        icon = {
+            category = "eternal"
+            file = "kirin.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "wow.dds"
+        }
+        colors = {
+            "teal"
+            "teal"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = male
+        name = "Platon"
+        portrait = "cyrian_male_012"
+        texture = 0
+        hair = 9
+        clothes = 0
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = no
+    ignore_portrait_duplication = yes
+    room = "personality_fallen_empire_teal_room"
+    spawn_enabled = no
+    ethic = "ethic_fanatic_materialist"
+    civics = {
+        "civic_keepers"
+        "civic_eternal_stability"
+    }
+}

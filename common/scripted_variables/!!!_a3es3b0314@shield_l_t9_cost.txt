@@ -1,0 +1,1 @@
+@shield_l_t9_cost = 112

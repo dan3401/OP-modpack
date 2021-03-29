@@ -1,0 +1,29 @@
+namespace = UniqueAscensionPerksEvents
+country_event = {
+    id = UniqueAscensionPerksEvents.3040
+    title = "UniqueAscensionPerksEvents.3040.Name"
+    desc = "UniqueAscensionPerksEvents.3040.Desc"
+    show_sound = event_engineered_evolution
+    picture = GFX_evt_expandable_brain_6
+    location = capital_scope
+    is_triggered_only = yes
+    trigger = {
+        has_ascension_perk = ap_expandable_brain_2
+        has_country_flag = ap_expandable_brain_2_project_completed
+        NOT = {
+            has_country_flag = ap_expandable_brain_2_project_2
+        }
+    }
+    immediate = {
+        set_country_flag = ap_expandable_brain_2_project_2
+    }
+    option = {
+        name = EXCELLENT
+        enable_special_project = {
+            name = EXPANDABLE_BRAIN_4
+            location = capital_scope
+            owner = root
+        }
+        default_hide_option = yes
+    }
+}

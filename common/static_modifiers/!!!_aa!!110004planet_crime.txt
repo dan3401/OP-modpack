@@ -1,0 +1,3 @@
+planet_crime = {
+    planet_emigration_push_add = 100
+}

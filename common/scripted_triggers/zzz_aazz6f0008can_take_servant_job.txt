@@ -1,0 +1,32 @@
+can_take_servant_job = {
+    OR = {
+        is_domestic_robot = yes
+        is_domestic_servant = yes
+        is_slave_complex_possible = yes
+        AND = {
+            is_enslaved = yes
+            NOT = {
+                has_slavery_type = {
+                    type = slavery_military
+                }
+            }
+            NOT = {
+                has_slavery_type = {
+                    type = slavery_livestock
+                }
+            }
+            OR = {
+                is_unemployed = yes
+                has_job = servant
+            }
+            OR = {
+                owner = {
+                    has_civic = civic_slaver_guilds
+                }
+                owner = {
+                    has_civic = civic_indentured_assets
+                }
+            }
+        }
+    }
+}

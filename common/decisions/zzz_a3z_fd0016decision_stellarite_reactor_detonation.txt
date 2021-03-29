@@ -1,0 +1,268 @@
+decision_stellarite_reactor_detonation = {
+    icon = decision_shattered_planet
+    enactment_time = 10
+    resources = {
+        category = decisions
+        cost = {
+            acot_sr_stellarite = 1000
+            influence = 500
+            unity = 50000
+        }
+    }
+    sound = event_red_alert
+    owned_planets_only = yes
+    potential = {
+        exists = owner
+        owner = {
+            is_same_value = root.owner
+        }
+        from = {
+            has_technology = tech_bombardment_se
+        }
+        is_star = no
+        habitable_structure = no
+        NOR = {
+            is_planet_class = pc_acot_enigmopolis
+        }
+    }
+    allow = {
+        OR = {
+            has_building = building_stellarite_generator
+            has_building = building_stellarite_generator_ae
+            has_building = building_stellarite_nexus
+            has_building = building_stellarite_generator_lvl3
+        }
+    }
+    effect = {
+        custom_tooltip = decision_stellarite_reactor_detonation_effect
+        hidden_effect = {
+            if = {
+                limit = {
+                    num_buildings = {
+                        type = building_stellarite_generator
+                        value = 1
+                    }
+                }
+                solar_system = {
+                    save_event_target_as = imminent_bombing
+                    every_ship = {
+                        limit = {
+                            fleet = {
+                                solar_system = {
+                                    is_same_value = event_target:imminent_bombing
+                                }
+                            }
+                        }
+                        reduce_hp = 10000
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    num_buildings = {
+                        type = building_stellarite_generator
+                        value = 2
+                    }
+                }
+                solar_system = {
+                    save_event_target_as = imminent_bombing
+                    every_ship = {
+                        limit = {
+                            fleet = {
+                                solar_system = {
+                                    is_same_value = event_target:imminent_bombing
+                                }
+                            }
+                        }
+                        reduce_hp = 20000
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    num_buildings = {
+                        type = building_stellarite_generator
+                        value >= 3
+                    }
+                }
+                solar_system = {
+                    save_event_target_as = imminent_bombing
+                    every_ship = {
+                        limit = {
+                            fleet = {
+                                solar_system = {
+                                    is_same_value = event_target:imminent_bombing
+                                }
+                            }
+                        }
+                        reduce_hp = 30000
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    num_buildings = {
+                        type = building_stellarite_generator_ae
+                        value = 1
+                    }
+                }
+                solar_system = {
+                    save_event_target_as = imminent_bombing
+                    every_ship = {
+                        limit = {
+                            fleet = {
+                                solar_system = {
+                                    is_same_value = event_target:imminent_bombing
+                                }
+                            }
+                        }
+                        reduce_hp = 20000
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    num_buildings = {
+                        type = building_stellarite_generator_ae
+                        value = 2
+                    }
+                }
+                solar_system = {
+                    save_event_target_as = imminent_bombing
+                    every_ship = {
+                        limit = {
+                            fleet = {
+                                solar_system = {
+                                    is_same_value = event_target:imminent_bombing
+                                }
+                            }
+                        }
+                        reduce_hp = 40000
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    num_buildings = {
+                        type = building_stellarite_generator_ae
+                        value >= 3
+                    }
+                }
+                solar_system = {
+                    save_event_target_as = imminent_bombing
+                    every_ship = {
+                        limit = {
+                            fleet = {
+                                solar_system = {
+                                    is_same_value = event_target:imminent_bombing
+                                }
+                            }
+                        }
+                        reduce_hp = 60000
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    num_buildings = {
+                        type = building_stellarite_generator_lvl3
+                        value = 1
+                    }
+                }
+                solar_system = {
+                    save_event_target_as = imminent_bombing
+                    every_ship = {
+                        limit = {
+                            fleet = {
+                                solar_system = {
+                                    is_same_value = event_target:imminent_bombing
+                                }
+                            }
+                        }
+                        reduce_hp = 40000
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    num_buildings = {
+                        type = building_stellarite_generator_lvl3
+                        value = 2
+                    }
+                }
+                solar_system = {
+                    save_event_target_as = imminent_bombing
+                    every_ship = {
+                        limit = {
+                            fleet = {
+                                solar_system = {
+                                    is_same_value = event_target:imminent_bombing
+                                }
+                            }
+                        }
+                        reduce_hp = 60000
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    num_buildings = {
+                        type = building_stellarite_generator_lvl3
+                        value >= 3
+                    }
+                }
+                solar_system = {
+                    save_event_target_as = imminent_bombing
+                    every_ship = {
+                        limit = {
+                            fleet = {
+                                solar_system = {
+                                    is_same_value = event_target:imminent_bombing
+                                }
+                            }
+                        }
+                        reduce_hp = 90000
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    num_buildings = {
+                        type = building_stellarite_nexus
+                        value >= 1
+                    }
+                }
+                solar_system = {
+                    save_event_target_as = imminent_bombing
+                    every_ship = {
+                        limit = {
+                            fleet = {
+                                solar_system = {
+                                    is_same_value = event_target:imminent_bombing
+                                }
+                            }
+                        }
+                        reduce_hp = 40000
+                    }
+                }
+            }
+            every_owned_pop = {
+                kill_pop = yes
+            }
+            remove_all_buildings = yes
+            reroll_deposits = yes
+            destroy_colony = yes
+            reset_planet = yes
+            clear_planet_modifiers = yes
+            if = {
+                limit = {
+                    habitable_planet = yes
+                }
+                change_pc = pc_shattered
+            }
+        }
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

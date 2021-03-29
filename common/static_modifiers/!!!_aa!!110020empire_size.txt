@@ -1,0 +1,7 @@
+empire_size = {
+    rare_edicts_cost_mult = 0.01
+    pop_government_ethic_attraction = -0.00167
+    empire_size_systems_mult = 0.001
+    planet_bureaucrats_upkeep_mult = 0.001
+    planet_synapse_drones_upkeep_mult = 0.0005
+}

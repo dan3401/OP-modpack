@@ -1,0 +1,4 @@
+planet_amenities_no_happiness_high = {
+    planet_stability_add = 20
+    planet_jobs_simple_drone_produces_mult = 0.1
+}

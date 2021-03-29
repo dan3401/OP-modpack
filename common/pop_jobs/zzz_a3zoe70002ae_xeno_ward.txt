@@ -1,0 +1,33 @@
+ae_xeno_ward = {
+    category = xeno_ward
+    is_capped_by_modifier = no
+    clothes_texture_index = 2
+    possible = {
+        hidden_trigger = {
+            exists = owner
+        }
+        owner = {
+            OR = {
+                is_country_type = ascended_empire
+                is_country_type = lost_empire
+            }
+            is_xenophile = yes
+        }
+        NOT = {
+            is_same_species = owner
+        }
+        is_robot_pop = no
+        planet = {
+            has_building = building_fe_xeno_preserve
+        }
+    }
+    resources = {
+        category = planet_jobs
+        produces = {
+            unity = 2
+        }
+    }
+    weight = {
+        weight = 10000
+    }
+}

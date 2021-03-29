@@ -1,0 +1,68 @@
+namespace = crisis
+country_event = {
+    id = crisis.2421
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        has_global_flag = ai_invasion_ongoing
+    }
+    immediate = {
+        random_country = {
+            limit = {
+                is_country_type = ai_empire
+            }
+            save_event_target_as = contingency
+        }
+        create_leader = {
+            class = admiral
+            species = owner_main_species
+            name = random
+            skill = 5
+            traits = {
+                trait = leader_trait_cybrex
+            }
+        }
+        last_created_leader = {
+            set_age = 0
+        }
+        capital_scope = {
+            save_event_target_as = cybrex_home
+            create_fleet = {
+                effect = {
+                    set_owner = event_target:cybrex
+                    while = {
+                        count = 15
+                        create_ship = {
+                            name = random
+                            design = "NAME_Taciturn"
+                            graphical_culture = "ai_01"
+                        }
+                    }
+                    assign_leader = last_created_leader
+                    while = {
+                        count = 30
+                        create_ship = {
+                            name = random
+                            design = "NAME_Reticent"
+                            graphical_culture = "ai_01"
+                        }
+                    }
+                    set_location = {
+                        target = prev
+                        distance = 45
+                        angle = random
+                    }
+                    save_event_target_as = cybrex_fleet
+                    set_aggro_range = 500
+                    set_fleet_stance = aggressive
+                    set_aggro_range_measure_from = self
+                    set_fleet_flag = cybrex_attack_fleet
+                }
+            }
+        }
+        country_event = {
+            id = crisis.2421
+            days = 1800
+        }
+    }
+}

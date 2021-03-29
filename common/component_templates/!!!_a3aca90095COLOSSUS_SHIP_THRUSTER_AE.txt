@@ -1,0 +1,45 @@
+utility_component_template = {
+    key = "COLOSSUS_SHIP_THRUSTER_AE"
+    size = small
+    icon = "GFX_ship_part_fe_thruster_2"
+    icon_frame = 1
+    power = -800
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = 100
+            sr_dark_matter = 12
+            acot_sr_dark_energy = 12
+        }
+    }
+    modifier = {
+        ship_base_speed_mult = 1.5
+    }
+    prerequisites = {
+        "tech_fe_thruster_2"
+    }
+    component_set = "thruster_components"
+    size_restriction = {
+        colossus
+        precursor_colossus
+        juggernaut
+        ascended_juggernaut
+        precursor_juggernaut
+        fe_goliath
+    }
+    ai_weight = {
+        weight = 30
+        modifier = {
+            factor = 0
+            has_monthly_income = {
+                resource = sr_dark_matter
+                value <= 2
+            }
+            has_resource = {
+                type = sr_dark_matter
+                amount <= 5
+            }
+        }
+    }
+    upgrades_to = "COLOSSUS_SHIP_THRUSTER_SE"
+}

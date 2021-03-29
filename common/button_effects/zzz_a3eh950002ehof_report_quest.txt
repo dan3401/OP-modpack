@@ -1,0 +1,22 @@
+ehof_report_quest = {
+    potential = {
+        hidden_trigger = {
+            exists = from
+            check_variable = {
+                which = ehof_phase
+                value >= 1
+            }
+            NOT = {
+                has_country_flag = annihilator_discoverer
+            }
+            has_country_flag = ehof_report_quest
+        }
+    }
+    allow = {
+        hidden_trigger = {
+            always = yes
+        }
+    }
+    effect = {
+    }
+}

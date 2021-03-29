@@ -1,0 +1,85 @@
+namespace = crisis
+country_event = {
+    id = crisis.2473
+    title = "TRANSMISSION"
+    desc = "crisis.2473.desc"
+    diplomatic = yes
+    picture_event_data = {
+        portrait = event_target:cybrex
+        room = event_target:cybrex
+    }
+    trigger = {
+        is_ai = no
+        has_global_flag = cybrex_resurface
+        NOT = {
+            has_global_flag = cybrex_destroyed
+        }
+        NOT = {
+            has_country_flag = cybrex_donation
+        }
+        check_variable = {
+            which = "contingency_fleet_kills"
+            value > 100
+        }
+        any_country = {
+            is_country_type = cybrex_empire
+            count_owned_ship = {
+                count > 30
+            }
+            ROOT = {
+                NOT = {
+                    is_at_war_with = PREV
+                }
+            }
+        }
+    }
+    mean_time_to_happen = {
+        months = 22
+    }
+    immediate = {
+        set_country_flag = cybrex_donation
+    }
+    option = {
+        name = crisis.2473.a
+        custom_tooltip = cybrex_fleet_gained
+        hidden_effect = {
+            capital_scope = {
+                create_fleet = {
+                    effect = {
+                        set_owner = event_target:cybrex
+                        while = {
+                            count = 15
+                            create_ship = {
+                                name = random
+                                design = "NAME_Taciturn"
+                                graphical_culture = "ai_01"
+                            }
+                        }
+                        while = {
+                            count = 30
+                            create_ship = {
+                                name = random
+                                design = "NAME_Reticent"
+                                graphical_culture = "ai_01"
+                            }
+                        }
+                        set_location = {
+                            target = prev
+                            distance = 45
+                            angle = random
+                        }
+                        set_owner = root
+                    }
+                    settings = {
+                        can_change_composition = no
+                        uses_naval_capacity = no
+                        can_disband = no
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = crisis.2473.b
+    }
+}

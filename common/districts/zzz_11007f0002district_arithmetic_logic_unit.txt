@@ -1,0 +1,49 @@
+district_arithmetic_logic_unit = {
+    base_buildtime = 720
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        from = {
+            has_ascension_perk = ap_planetary_system
+        }
+        is_planet_class = pc_cpu
+    }
+    potential = {
+        exists = owner
+        owner = {
+            has_ascension_perk = ap_planetary_system
+        }
+        is_planet_class = pc_cpu
+    }
+    conversion_ratio = 1
+    convert_to = {
+        district_metal_dismantle
+    }
+    resources = {
+        category = planet_districts_machinedlc
+        produces = {
+            physics_research = 60
+            society_research = 60
+            engineering_research = 60
+        }
+        cost = {
+            minerals = @planetary_system_minerals_cost
+            exotic_gases = @planetary_system_strategic_resources_cost
+        }
+        upkeep = {
+            minerals = 60
+            energy = @planetary_system_energy_upkeep
+            exotic_gases = 1
+        }
+    }
+    planet_modifier = {
+        planet_amenities_no_happiness_add = -10
+        planet_districts_machinedlc_produces_mult = -0.1
+    }
+    ai_weight = {
+        weight = 10
+        modifier = {
+            factor = 0
+            free_amenities < 2
+        }
+    }
+}

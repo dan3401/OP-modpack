@@ -1,0 +1,12 @@
+trait_robot_learning_algorithms_biorobot = {
+    cost = 1
+    icon = gfx/interface/icons/traits/trait_robot_learning_algorithms.dds
+    allowed_archetypes = {
+        BIOMACHINE
+    }
+    initial = no
+    randomized = no
+    modifier = {
+        species_leader_exp_gain = 0.25
+    }
+}

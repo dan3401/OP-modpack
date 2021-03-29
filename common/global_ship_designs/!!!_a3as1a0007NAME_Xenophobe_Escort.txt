@@ -1,0 +1,89 @@
+ship_design = {
+    name = "NAME_Xenophobe_Escort"
+    ship_size = fe_escort
+    section = {
+        template = "FE_ESCORT_KEY"
+        slot = "bow"
+        component = {
+            slot = "LARGE_GUN_01"
+            template = "ACOT_ARTILLERY_DM"
+        }
+        component = {
+            slot = "AUX_UTILITY_1"
+            template = "AFTERBURNER_2"
+        }
+        component = {
+            slot = "AUX_UTILITY_2"
+            template = "AFTERBURNER_2"
+        }
+    }
+    section = {
+        template = "FE_ESCORT_MID_KEY"
+        slot = "mid"
+        component = {
+            slot = "SMALL_GUN_01"
+            template = "ACOT_AUTOCANNON_DM"
+        }
+        component = {
+            slot = "SMALL_GUN_02"
+            template = "ACOT_AUTOCANNON_DM"
+        }
+        component = {
+            slot = "SMALL_GUN_03"
+            template = "ACOT_AUTOCANNON_DM"
+        }
+        component = {
+            slot = "SMALL_GUN_04"
+            template = "ACOT_AUTOCANNON_DM"
+        }
+        component = {
+            slot = "MEDIUM_UTILITY_1"
+            template = "MEDIUM_DARK_MATTER_DEFLECTOR"
+        }
+        component = {
+            slot = "MEDIUM_UTILITY_2"
+            template = "MEDIUM_DARK_MATTER_DEFLECTOR"
+        }
+        component = {
+            slot = "MEDIUM_UTILITY_3"
+            template = "MEDIUM_DARK_MATTER_DEFLECTOR"
+        }
+    }
+    section = {
+        template = "FE_ESCORT_STERN_KEY"
+        slot = "stern"
+        component = {
+            slot = "PD_01"
+            template = "ACOT_FLAK_CANNON_DM"
+        }
+        component = {
+            slot = "PD_02"
+            template = "ACOT_FLAK_CANNON_DM"
+        }
+        component = {
+            slot = "PD_03"
+            template = "ACOT_FLAK_CANNON_DM"
+        }
+        component = {
+            slot = "PD_04"
+            template = "ACOT_FLAK_CANNON_DM"
+        }
+        component = {
+            slot = "MEDIUM_UTILITY_1"
+            template = "MEDIUM_ACOT_ARMOR_DM"
+        }
+        component = {
+            slot = "MEDIUM_UTILITY_2"
+            template = "MEDIUM_ACOT_ARMOR_DM"
+        }
+        component = {
+            slot = "MEDIUM_UTILITY_3"
+            template = "MEDIUM_ACOT_ARMOR_DM"
+        }
+    }
+    required_component = "DM_SENSOR_SHIP"
+    required_component = "ENIGMATIC_DRIVE_DM"
+    required_component = "AE_COMBAT_COMPUTER_SMALL_2"
+    required_component = "DESTROYER_DARK_MATTER_REACTOR"
+    required_component = "DESTROYER_SHIP_THRUSTER_5"
+}

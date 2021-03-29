@@ -1,0 +1,21 @@
+trait_f_essentials = {
+    cost = 4
+    potential_crossbreeding_chance = 0
+    icon = "gfx/interface/icons/traits/trait_f_essentials.dds"
+    modification = no
+    opposites = {
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        ROBOT
+        MACHINE
+    }
+    ai_weight = {
+        weight = 0
+    }
+    modifier = {
+        country_minerals_produces_mult = 0.1
+        country_energy_produces_mult = 0.1
+        country_food_produces_mult = 0.1
+    }
+}

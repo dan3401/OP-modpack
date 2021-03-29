@@ -1,0 +1,22 @@
+triggered_opinion_democratic_authority = {
+    trigger = {
+        OR = {
+        is_country_type = default
+            is_country_type = ascended_empire
+            is_country_type = eternal_empire
+        }
+        has_authority = auth_democratic
+        FROM = {
+            has_authority = auth_democratic
+            OR = {
+                is_country_type = default
+            has_authority = auth_democratic
+                is_country_type = ascended_empire
+                is_country_type = eternal_empire
+            }
+        }
+    }
+    opinion = {
+        base = 10
+    }
+}

@@ -1,0 +1,57 @@
+namespace = galactic_features
+country_event = {
+    id = galactic_features.304
+    title = "TRANSMISSION"
+    desc = "galactic_features.304.desc"
+    diplomatic = yes
+    picture_event_data = {
+        portrait = event_target:fallen_4_species
+        planet_background = event_target:shield_planet
+        city_level = event_target:shield_planet
+    }
+    is_triggered_only = yes
+    option = {
+        name = "galactic_features.304.a"
+        response_text = "galactic_features.304.a.response"
+        is_dialog_only = yes
+    }
+    option = {
+        name = "galactic_features.304.b"
+        response_text = "galactic_features.304.b.response"
+        is_dialog_only = yes
+    }
+    option = {
+        name = "galactic_features.304.c"
+        response_text = "galactic_features.304.c.response"
+        hidden_effect = {
+            create_leader = {
+                class = admiral
+                species = event_target:fallen_4_species
+                name = "NAME_Tuborek"
+                skill = 10
+                immortal = yes
+                traits = {
+                    trait = leader_trait_acot_tuborek
+                    trait = leader_trait_gale_speed
+                    trait = leader_trait_fleet_logistician
+                    trait = leader_trait_resilient
+                }
+                event_leader = yes
+            }
+            last_created_leader = {
+                add_skill = 10
+                add_skill = 10
+                set_age = 17842965
+            }
+        }
+    }
+    option = {
+        name = "galactic_features.304.d"
+        response_text = "galactic_features.304.d.response"
+        hidden_effect = {
+            event_target:shield_planet = {
+                change_pc = pc_shielded
+            }
+        }
+    }
+}

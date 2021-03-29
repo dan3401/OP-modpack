@@ -1,0 +1,15 @@
+triggered_opinion_both_terminators = {
+    trigger = {
+        OR = {
+        is_country_type = default
+        is_country_type = ascended_empire
+        }
+        has_civic = civic_machine_terminator
+        FROM = {
+            has_civic = civic_machine_terminator
+        }
+    }
+    opinion = {
+        base = 200
+    }
+}

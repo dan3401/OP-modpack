@@ -1,0 +1,37 @@
+@cb_subjugation_length = 360
+action_demand_thrall = {
+    icon = "GFX_diplomacy_status_has_vassal"
+    requires_actor_peace = no
+    requires_recipient_peace = yes
+    diplo_view_acceptance_icon = yes
+    should_notify_all_communications = yes
+    requires_recipient_independence = no
+    AI_acceptance_base_value = -50
+    action_type = aggressive
+    on_decline = {
+        if = {
+            limit = {
+                root = {
+                    is_country_type = awakened_fallen_empire
+                }
+            }
+            add_casus_belli = {
+                type = cb_subjugation
+                who = from
+                days = @cb_subjugation_length
+            }
+        }
+        if = {
+            limit = {
+                root = {
+                    is_country_type = ascended_empire
+                }
+            }
+            add_casus_belli = {
+                type = cb_ascended_empire_subjugation
+                who = from
+                days = @cb_subjugation_length
+            }
+        }
+    }
+}

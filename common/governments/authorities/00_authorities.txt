@@ -22,53 +22,10 @@
 #}
 
 
-#Direct Democracy
-auth_direct_democratic = {
-	election_term_years = 10
-	re_election_allowed = yes
-	can_have_emergency_elections = yes
-	emergency_election_cost = 250
-	max_election_candidates = 12
-	election_type = democratic
-
-	uses_mandates = yes
-
-	possible = {
-		ethics = {
-
-			NOR = {
-				value = ethic_gestalt_consciousness
-				value = ethic_fanatic_elitist
-			}
-			OR = {
-				value = ethic_egalitarian
-				value = ethic_fanatic_egalitarian
-			}
-
-		}
-	}
-
-	country_modifier = {
-		edicts_cost_mult = -0.2
-		pop_cat_worker_political_power = 4
-		pop_cat_specialist_political_power = 4
-		pop_cat_ruler_political_power = 2
-
-	}
-
-	tags = {
-		AUTHORITY_ELECTION_DIRECT_DEMOCRATIC
-	}
-
-
-}
-
-
 auth_democratic = {
 	election_term_years = 10
 	re_election_allowed = yes
 	election_type = democratic
-	max_election_candidates = 8
 
 	uses_mandates = yes
 
@@ -81,14 +38,21 @@ auth_democratic = {
 			}
 		}
 	}
-
-	country_modifier = {
-		 edicts_cost_mult = -0.2
-		 pop_cat_worker_political_power = 3
-		 pop_cat_specialist_political_power = 4
-		 pop_cat_ruler_political_power = 3
+	random_weight = {
+		modifier = {
+			factor = 1.15
+			always = yes
+		}
 	}
-
+	
+	country_modifier = {
+		pop_demotion_time_mult = -0.25
+		pop_citizen_happiness = 0.05
+		diplo_weight_pops_mult = 0.2
+		empire_size_pops_mult = -0.2
+		empire_size_systems_mult = 0.2
+	}
+	
 	tags = {
 		AUTHORITY_ELECTION_DEMOCRATIC
 	}
@@ -97,13 +61,12 @@ auth_democratic = {
 auth_oligarchic = {
 	election_term_years = 20
 	election_type = oligarchic
-	re_election_allowed = yes
 	can_have_emergency_elections = yes
 	emergency_election_cost = 250
 	max_election_candidates = 4
 
 	has_agendas = yes
-
+	
 	possible = {
 		ethics = {
 			NOR = {
@@ -113,14 +76,14 @@ auth_oligarchic = {
 			}
 		}
 	}
-
+	
 	country_modifier = {
-		 governor_skill_levels = 2
-		 pop_cat_worker_political_power = 2
-		 pop_cat_specialist_political_power = 3
-		 pop_cat_ruler_political_power = 5		 
+		pop_factions_produces_mult = 0.15
+		diplo_weight_economy_mult = 0.2
+		empire_size_districts_mult = -0.2
+		empire_size_colonies_mult = 0.2
 	}
-
+	
 	tags = {
 		AUTHORITY_ELECTION_OLIGARCHIC
 	}
@@ -128,10 +91,10 @@ auth_oligarchic = {
 
 auth_dictatorial = {
 	election_type = oligarchic
-	max_election_candidates = 3
+	max_election_candidates = 4
 
 	has_agendas = yes
-
+	
 	possible = {
 		ethics = {
 			NOR = {
@@ -141,14 +104,14 @@ auth_dictatorial = {
 			}
 		}
 	}
-
+	
 	country_modifier = {
-		 country_edict_cap_add = 1
-		 pop_cat_worker_political_power = 1
-		 pop_cat_specialist_political_power = 3
-		 pop_cat_ruler_political_power = 6			 
+		edicts_cost_mult = -0.20
+		diplo_weight_naval_mult = 0.20
+		diplo_weight_pops_mult = -0.20
+		empire_size_mult = -0.1
 	}
-
+	
 	tags = {
 		AUTHORITY_ELECTION_ON_RULER_DEATH
 	}
@@ -158,28 +121,25 @@ auth_imperial = {
 	has_heir = yes
 
 	has_agendas = yes
-
+	
 	possible = {
 		ethics = {
 			NOR = {
 				value = ethic_gestalt_consciousness
-				value = ethic_fanatic_pluralist
-			}		
-			OR = {
-				value = ethic_authoritarian
-				value = ethic_fanatic_authoritarian
-				value = ethic_focused
+				value = ethic_egalitarian
+				value = ethic_fanatic_egalitarian
 			}
 		}
 	}
-
+	
 	country_modifier = {
-		 country_edict_cap_add = 1
-		 pop_cat_worker_political_power = 1
-		 pop_cat_specialist_political_power = 2
-		 pop_cat_ruler_political_power = 7			 
-	}
+		country_edict_cap_add = 1
+		diplo_weight_mult = 0.05
+		empire_size_colonies_mult = -0.2
+		empire_size_pops_mult = 0.2
 
+	}
+	
 	tags = {
 		AUTHORITY_HAS_HEIR
 	}
@@ -191,9 +151,9 @@ auth_hive_mind = {
 	has_factions = no
 	can_reform = no
 	localization_postfix = hive_mind
-
-	valid_for_released_vassal = no
-
+	
+	valid_for_released_vassal = yes
+	
 	playable = { host_has_dlc = "Utopia" }
 	possible = {
 		ethics = {
@@ -213,9 +173,12 @@ auth_hive_mind = {
 
 	country_modifier = {
 		pop_growth_speed = 0.25
+		diplo_weight_pops_mult = 0.2
+		empire_size_systems_mult = -0.2
+		empire_size_pops_mult = 0.2
 		empire_size_penalty_mult = -0.25
 	}
-
+	
 	tags = {
 		AUTH_HIVE_MIND_AI_RESTRICTIONS
 		AUTH_HIVE_MIND_FOREIGN_POP_SURVIVAL
@@ -225,14 +188,13 @@ auth_hive_mind = {
 }
 
 auth_machine_intelligence = {
-	machine_empire = yes
 	has_heir = no
 	election_type = none
 	has_factions = no
 	can_reform = no
 	localization_postfix = machine_intelligence
-
-	valid_for_released_vassal = no
+	
+	valid_for_released_vassal = yes
 
 	playable = {
 		host_has_dlc = "Synthetic Dawn Story Pack"
@@ -252,10 +214,13 @@ auth_machine_intelligence = {
 	traits = {
 		trait = trait_machine_unit
 	}
-
+	
 	country_modifier = {
 		colony_start_num_pops_add = 1
-		station_gatherers_produces_mult = 0.1
+		station_gatherers_produces_mult = 0.25
+		diplo_weight_technology_mult = 0.2
+		empire_size_pops_mult = -0.2
+		empire_size_systems_mult = 0.2
 		empire_size_penalty_mult = 1.0
 		pop_growth_speed_reduction = 0.5
 	}
@@ -274,12 +239,63 @@ auth_ancient_machine_intelligence = {
 	has_heir = no
 	election_type = none
 	can_reform = no
-
+	
 	valid_for_released_vassal = no
 
 	icon = "gfx/interface/icons/governments/authorities/auth_hive_mind.dds"
-
+	
 	potential = { country_type = { value = ai_empire } }
+}
+
+auth_cooperative = {
+	election_term_years = 10
+	re_election_allowed = yes
+	election_type = democratic
+	uses_mandates = yes
+
+	can_have_emergency_elections = yes
+	emergency_election_cost = 500
+
+	localization_postfix = corporate
+	playable = {
+		host_has_dlc = "Megacorp"
+	}
+	random_weight = {
+		modifier = {
+			factor = 0.45 # higher because it has stricter requirements
+			host_has_dlc = "Megacorp"
+		}
+		modifier = {
+			factor = 0
+			NOT = { host_has_dlc = "Megacorp" }
+		}
+	}
+	country_modifier = {
+		pop_demotion_time_mult = -0.25
+		pop_citizen_happiness = 0.05
+		trade_value_mult = 0.1
+		diplo_weight_pops_mult = 0.2
+		country_admin_cap_add = 40
+		empire_size_systems_mult = 0.2
+		empire_size_penalty_mult = 0.4
+	}
+	possible = {
+		ethics = {
+			NOR = {
+				value = ethic_gestalt_consciousness
+				value = ethic_xenophobe
+				value = ethic_fanatic_xenophobe
+			}
+			OR = {
+				value = ethic_egalitarian
+				value = ethic_fanatic_egalitarian
+			}
+		}
+	}
+	
+	tags = {
+		AUTHORITY_ELECTION_DEMOCRATIC
+	}
 }
 
 auth_corporate = {
@@ -291,35 +307,88 @@ auth_corporate = {
 	localization_postfix = corporate
 
 	has_agendas = yes
-
+	
 	playable = {
 		host_has_dlc = "Megacorp"
 	}
 	random_weight = {
 		modifier = {
+			factor = 0.3
+			host_has_dlc = "Megacorp"
+		}
+		modifier = {
 			factor = 0
 			NOT = { host_has_dlc = "Megacorp" }
 		}
 	}
-
+	
 	country_modifier = {
-		country_admin_cap_add = 20
+		pop_factions_produces_mult = 0.15
+		trade_value_mult = 0.1
+		diplo_weight_economy_mult = 0.2
+		country_admin_cap_add = 50
+		empire_size_systems_mult = 0.2
 		empire_size_penalty_mult = 0.5
-		pop_cat_worker_political_power = 2
-		pop_cat_specialist_political_power = 3
-		pop_cat_ruler_political_power = 5			
 	}
-
+	
 	possible = {
 		ethics = {
 			NOR = {
 				value = ethic_gestalt_consciousness
+				value = ethic_fanatic_egalitarian
+				value = ethic_fanatic_authoritarian
+				value = ethic_fanatic_xenophobe
+			}
+		}
+	}
+	
+	tags = {
+		AUTHORITY_ELECTION_OLIGARCHIC
+	}
+}
+
+auth_private = {
+	localization_postfix = corporate
+	has_heir = yes
+	has_agendas = yes
+	
+	playable = {
+		host_has_dlc = "Megacorp"
+	}
+	random_weight = {
+		modifier = {
+			factor = 0.45 # higher because it has stricter requirements
+			host_has_dlc = "Megacorp"
+		}
+		modifier = {
+			factor = 0
+			NOT = { host_has_dlc = "Megacorp" }
+		}
+	}
+	
+	country_modifier = {
+		country_edict_cap_add = 1
+		trade_value_mult = 0.1
+		diplo_weight_mult = 0.05
+		country_admin_cap_add = 50
+		empire_size_pops_mult = 0.2
+		empire_size_penalty_mult = 0.5
+	}
+	
+	possible = {
+		ethics = {
+			NOR = {
+				value = ethic_gestalt_consciousness
+				value = ethic_fanatic_xenophobe
+			}
+			OR = {
+				value = ethic_authoritarian
 				value = ethic_fanatic_authoritarian
 			}
 		}
 	}
-
+	
 	tags = {
-		AUTHORITY_ELECTION_OLIGARCHIC
+		AUTHORITY_HAS_HEIR
 	}
 }

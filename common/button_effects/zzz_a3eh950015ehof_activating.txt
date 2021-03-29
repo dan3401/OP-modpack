@@ -1,0 +1,33 @@
+ehof_activating = {
+    potential = {
+        hidden_trigger = {
+            exists = from
+            check_variable = {
+                which = ehof_phase
+                value >= 1
+            }
+            has_country_flag = ehof_activating
+            NOR = {
+                has_country_flag = ehof_is_upgrading
+                has_country_flag = ehof_activated
+                has_country_flag = ehof_on_cooldown
+                has_country_flag = ehof_can_activate
+                has_country_flag = ehof_can_deactivate
+                has_country_flag = annihilator_discoverer
+            }
+        }
+    }
+    allow = {
+        hidden_trigger = {
+            always = yes
+        }
+    }
+    effect = {
+        custom_tooltip = "ehof_activating_tooltip"
+        hidden_effect = {
+            country_event = {
+                id = ehof_travel.001
+            }
+        }
+    }
+}

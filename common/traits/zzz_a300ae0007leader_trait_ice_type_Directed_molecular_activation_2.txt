@@ -1,0 +1,30 @@
+leader_trait_ice_type_Directed_molecular_activation_2 = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/EeveelutionTypes/ice_type.png"
+    modifier = {
+        ship_hull_mult = 0.2
+        ship_armor_mult = 0.2
+        ship_hull_regen_add_perc = 1
+        ship_armor_regen_add_perc = 1
+    }
+    leader_trait = {
+        admiral
+    }
+    leader_class = {
+        admiral
+    }
+    opposites = {
+        "leader_trait_ice_type_Directed_molecular_activation_1"
+        "leader_trait_ice_type_Directed_molecular_activation_3"
+        "leader_trait_ice_type_Directed_molecular_activation_4"
+        "leader_trait_ice_type_Directed_molecular_activation_5"
+    }
+    leader_potential_add = {
+        from = {
+            any_owned_pop = {
+                pop_has_trait = trait_ice_type_mega_evolution
+            }
+        }
+    }
+}

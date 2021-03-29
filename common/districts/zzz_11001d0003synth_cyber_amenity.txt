@@ -1,0 +1,61 @@
+synth_cyber_amenity = {
+    base_buildtime = 0
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        from = {
+            has_ascension_perk = ap_synth_cyber_worlds
+        }
+        is_planet_class = pc_synth_cyber
+    }
+    potential = {
+        exists = owner
+        owner = {
+            has_ascension_perk = ap_synth_cyber_worlds
+            NOT = {
+                has_authority = auth_machine_intelligence
+            }
+        }
+        is_planet_class = pc_synth_cyber
+    }
+    allow = {
+        num_districts = {
+            type = synth_cyber_city
+            value > 0
+        }
+    }
+    conversion_ratio = 1
+    convert_to = {
+        district_metal_dismantle
+        synth_cyber_network_maintenance
+    }
+    resources = {
+        category = planet_districts_machinedlc
+        cost = {
+            energy = 500
+            exotic_gases = @planetary_system_strategic_resources_cost
+        }
+        upkeep = {
+            energy = 10
+            exotic_gases = 1
+        }
+    }
+    planet_modifier = {
+        job_synth_world_cyber_entertainer_add = 10
+        job_synth_world_cyber_clerk_add = 5
+    }
+    triggered_desc = {
+        text = job_synth_world_cyber_entertainer_effect_desc
+    }
+    triggered_desc = {
+        text = job_synth_world_cyber_clerk_effect_desc
+    }
+    ai_weight = {
+        weight = 0
+    }
+    ai_resource_production = {
+        consumer_goods = 8
+        trigger = {
+            always = yes
+        }
+    }
+}

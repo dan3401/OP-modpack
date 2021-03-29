@@ -1,0 +1,81 @@
+assimilation_effect = {
+    random_owned_pop = {
+        limit = {
+            has_citizenship_type = {
+                type = citizenship_assimilation
+                country = root.owner
+            }
+        }
+        if = {
+            limit = {
+                root.owner = {
+                    has_country_flag = synthetic_empire
+                }
+            }
+            get_ascended_synth_traits = yes
+            change_species = root.owner
+            set_ascended_synth_traits = yes
+        }
+        else_if = {
+            limit = {
+                species = {
+                    has_trait = trait_machine_unit
+                }
+                root.owner = {
+                    is_gestalt = no
+                    has_technology = tech_droid_workers
+                }
+            }
+            modify_species = {
+                species = this
+                remove_trait = trait_machine_unit
+                add_trait = trait_mechanical
+                add_traits_at_start_of_list = yes
+                change_scoped_species = yes
+            }
+        }
+        else = {
+            random_galaxy_species = {
+                limit = {
+                    has_species_flag = assimilation_species_of_species@prev.species
+                    has_species_flag = assimilation_species_of_empire@root.owner
+                }
+                save_event_target_as = convert_to_species
+            }
+            species = {
+                save_event_target_as = old_species
+            }
+            change_species = event_target:convert_to_species
+            root = {
+                change_variable = {
+                    which = assimilation_counter
+                    value = -1
+                }
+                while = {
+                    limit = {
+                        exists = event_target:old_species
+                        check_variable = {
+                            which = assimilation_counter
+                            value > 0
+                        }
+                        any_owned_species = {
+                            is_same_value = event_target:old_species
+                        }
+                    }
+                    random_owned_pop = {
+                        limit = {
+                            is_exact_same_species = event_target:old_species
+                        }
+                        change_species = event_target:convert_to_species
+                        apply_post_assimilation_effects = yes
+                    }
+                    change_variable = {
+                        which = assimilation_counter
+                        value = -1
+                    }
+                }
+            }
+            apply_post_assimilation_effects = yes
+        }
+    }
+}

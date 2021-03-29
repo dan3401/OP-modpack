@@ -1,0 +1,22 @@
+trait_machine_hyper_rock_breaker = {
+    cost = 3
+    initial = no
+    randomized = no
+    allowed_archetypes = {
+        MACHINE
+        BIOMACHINE
+    }
+    icon = gfx/interface/icons/traits/trait_delicious.dds
+    species_potential_add = {
+        exists = from
+        from = {
+            NOT = {
+                has_country_flag = synthetic_empire
+            }
+            has_technology = tech_ap_mechanical_evolution
+        }
+    }
+    modifier = {
+        planet_miners_minerals_produces_add = 2
+    }
+}

@@ -1,0 +1,24 @@
+trait_strong_biorobot = {
+    cost = 3
+    potential_crossbreeding_chance = 1
+    allowed_archetypes = {
+        BIOMACHINE
+        ROBOT
+    }
+    initial = no
+    randomized = no
+    icon = gfx/interface/icons/traits/trait_strong.dds
+    species_potential_add = {
+        OR = {
+            has_trait = trait_biorobot
+            has_trait = trait_biorobot_2
+        }
+    }
+    modifier = {
+        army_damage_mult = 0.2
+        planet_jobs_produces_mult = 0.025
+    }
+    slave_cost = {
+        energy = 50
+    }
+}

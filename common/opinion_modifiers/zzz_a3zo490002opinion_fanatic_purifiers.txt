@@ -1,0 +1,19 @@
+opinion_fanatic_purifiers = {
+    opinion = {
+        modifier = {
+            add = -1000
+            OR = {
+                is_country_type = ascended_empire
+                is_country_type = eternal_empire
+            }
+            NOR = {
+                has_valid_civic = civic_fanatic_purifiers
+                has_valid_civic = civic_hive_devouring_swarm
+                has_valid_civic = civic_machine_terminator
+            }
+            FROM = {
+                has_valid_civic = civic_fanatic_purifiers
+            }
+        }
+    }
+}

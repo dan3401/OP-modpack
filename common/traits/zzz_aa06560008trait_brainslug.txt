@@ -1,0 +1,26 @@
+trait_brainslug = {
+    cost = 0
+    potential_crossbreeding_chance = 0.25
+    icon = "gfx/interface/icons/traits/leader_traits/trait_brainslugged.dds"
+    prerequisites = {
+        tech_tahaByKerhus_brainslug1
+    }
+    opposites = {
+        "trait_brainslug"
+    }
+    improves_leaders = yes
+    initial = no
+    randomized = no
+    advanced_trait = yes
+    modification = no
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    modifier = {
+        planet_jobs_engineering_research_produces_mult = 0.15
+        planet_jobs_physics_research_produces_mult = 0.15
+        planet_jobs_society_research_produces_mult = 0.15
+        planet_jobs_unity_produces_mult = 0.15
+    }
+}

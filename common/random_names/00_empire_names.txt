@@ -1185,6 +1185,33 @@ empire_name_parts_list = {
 	}
 }
 
+# Necrophage Middle Descriptive
+empire_name_parts_list = {
+	key = "necrophagers_start"
+	parts = {
+		"Hungry" = 3
+		"Ravenous" = 3
+		"Esurient" = 1
+		"Insatiable" = 3
+		"Edacious" = 1
+		"Gourmand" = 1
+	}
+}
+
+# Necrophage End
+empire_name_parts_list = {
+	key = "necrophagers"
+	parts = {
+		"Devourers" = 3
+		"Eaters" = 1
+		"Necromages" = 2
+		"Absorbers" = 2
+		"Provisioners" = 2
+		"Masticators" = 1
+		"Cleansers" = 1
+	}
+}
+
 # Megacorporation
 empire_name_parts_list = {
 	key = "oligarchic_corp"
@@ -1214,7 +1241,6 @@ empire_name_parts_list = {
 	}
 }
 
-
 # Communal Parity
 empire_name_parts_list = {
 	key = "communal_parity"
@@ -1229,7 +1255,6 @@ empire_name_parts_list = {
 		"Aggregate" = 1
 	}
 }
-
 
 # Megachurch
 empire_name_parts_list = {
@@ -1275,10 +1300,11 @@ empire_name_parts_list = {
 	key = "monopolistic_syndicate"
 	parts = {
 		"Syndicate" = 6
-		"Consortium" = 2
 		"Cartel" = 4
-		"Combine" = 2
 		"Monopoly" = 3
+		"Mafia" = 3
+		"Consortium" = 2
+		"Combine" = 2
 		"Concern" = 1
 	}
 }
@@ -1587,7 +1613,10 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 1
-			has_government = "gov_theocratic_monarchy"
+			OR = {
+				has_government = "gov_theocratic_monarchy"
+				has_government = "gov_celestial_monarchy"
+			}
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -1606,7 +1635,10 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 1
-			has_government = "gov_theocratic_monarchy"
+			OR = {
+				has_government = "gov_theocratic_monarchy"
+				has_government = "gov_celestial_monarchy"
+			}
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -1625,7 +1657,10 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 5
-			has_government = "gov_theocratic_monarchy"
+			OR = {
+				has_government = "gov_theocratic_monarchy"
+				has_government = "gov_celestial_monarchy"
+			}
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -1644,7 +1679,10 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 2
-			has_government = "gov_theocratic_monarchy"
+			OR = {
+				has_government = "gov_theocratic_monarchy"
+				has_government = "gov_celestial_monarchy"
+			}
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -1663,7 +1701,10 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 2
-			has_government = "gov_theocratic_monarchy"
+			OR = {
+				has_government = "gov_theocratic_monarchy"
+				has_government = "gov_celestial_monarchy"
+			}
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -1722,7 +1763,10 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 5
-			has_government = "gov_divine_empire"
+			OR = {
+				has_government = "gov_divine_empire"
+				has_government = "gov_mortal_empire"
+			}
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -1741,7 +1785,10 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 2
-			has_government = "gov_divine_empire"
+			OR = {
+				has_government = "gov_divine_empire"
+				has_government = "gov_mortal_empire"
+			}
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -1760,7 +1807,10 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 2
-			has_government = "gov_divine_empire"
+			OR = {
+				has_government = "gov_divine_empire"
+				has_government = "gov_mortal_empire"
+			}
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -2241,14 +2291,6 @@ empire_name_format = {
 			OR = {
 				has_government = "gov_despotic_empire"
 				has_government = "gov_feudal_empire"
-				has_government = "gov_peoples_commissariat"
-				has_government = "gov_national_socialism"
-				has_government = "gov_par_monarchy"
-				has_government = "gov_absolute_monarchy"
-				has_government = "gov_enlighted_socialism"
-				has_government = "gov_aristocratic_monarchy"
-				has_government = "gov_strasserism"
-				
 			}
 			is_pirate = no
 			is_primitive = no
@@ -2269,17 +2311,8 @@ empire_name_format = {
 		modifier = {
 			add = 1
 			OR = {
-			has_government = "gov_despotic_empire"
-			has_government = "gov_par_monarchy"
-			has_government = "gov_feudal_empire"
-			has_government = "gov_jingoism"
-			has_government = "gov_peoples_commissariat"
-			has_government = "gov_national_socialism"
-			has_government = "gov_absolute_monarchy"
-			has_government = "gov_enlighted_socialism"
-			has_government = "gov_aristocratic_monarchy"
-			has_government = "gov_strasserism"
-
+				has_government = "gov_despotic_empire"
+				has_government = "gov_feudal_empire"
 			}
 			is_pirate = no
 			is_primitive = no
@@ -2300,17 +2333,8 @@ empire_name_format = {
 		modifier = {
 			add = 5
 			OR = {
-			has_government = "gov_despotic_empire"
-			has_government = "gov_par_monarchy"
-			has_government = "gov_feudal_empire"
-			has_government = "gov_jingoism"
-			has_government = "gov_peoples_commissariat"
-			has_government = "gov_national_socialism"
-			has_government = "gov_absolute_monarchy"
-			has_government = "gov_enlighted_socialism"
-			has_government = "gov_aristocratic_monarchy"
-			has_government = "gov_strasserism"
-
+				has_government = "gov_despotic_empire"
+				has_government = "gov_feudal_empire"
 			}
 			is_pirate = no
 			is_primitive = no
@@ -2333,12 +2357,6 @@ empire_name_format = {
 			OR = {
 				has_government = "gov_despotic_empire"
 				has_government = "gov_feudal_empire"
-				has_government = "gov_peoples_commissariat"
-				has_government =  "gov_par_monarchy"
-				has_government = "gov_absolute_monarchy"
-				has_government = "gov_enlighted_socialism"
-				has_government = "gov_aristocratic_monarchy"
-				has_government = "gov_strasserism"
 			}
 			is_pirate = no
 			is_primitive = no
@@ -2361,8 +2379,6 @@ empire_name_format = {
 			OR = {
 				has_government = "gov_despotic_empire"
 				has_government = "gov_feudal_empire"
-				has_government = "gov_peoples_commissariat"
-				has_government = "gov_strasserism"
 			}
 			is_pirate = no
 			is_primitive = no
@@ -2409,7 +2425,6 @@ empire_name_format = {
 			OR = {
 				has_government = "gov_military_dictatorship"
 				has_government = "gov_martial_dictatorship"
-				has_government = "gov_national_socialism"
 			}
 			is_pirate = no
 			is_primitive = no
@@ -2432,7 +2447,6 @@ empire_name_format = {
 			OR = {
 				has_government = "gov_military_dictatorship"
 				has_government = "gov_martial_dictatorship"
-				has_government = "gov_national_socialism"
 			}
 			is_pirate = no
 			is_primitive = no
@@ -2455,7 +2469,6 @@ empire_name_format = {
 			OR = {
 				has_government = "gov_military_dictatorship"
 				has_government = "gov_martial_dictatorship"
-				has_government = "gov_national_socialism"
 			}
 			is_pirate = no
 			is_primitive = no
@@ -2478,7 +2491,6 @@ empire_name_format = {
 			OR = {
 				has_government = "gov_military_dictatorship"
 				has_government = "gov_martial_dictatorship"
-				has_government = "gov_national_socialism"
 			}
 			is_pirate = no
 			is_primitive = no
@@ -2500,7 +2512,10 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 1
-			has_government = "gov_theocratic_dictatorship"
+			OR = {
+				has_government = "gov_theocratic_dictatorship"
+				has_government = "gov_celestial_theocracy"
+			}
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -2519,7 +2534,10 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 1
-			has_government = "gov_theocratic_dictatorship"
+			OR = {
+				has_government = "gov_theocratic_dictatorship"
+				has_government = "gov_celestial_theocracy"
+			}
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -2538,7 +2556,10 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 5
-			has_government = "gov_theocratic_dictatorship"
+			OR = {
+				has_government = "gov_theocratic_dictatorship"
+				has_government = "gov_celestial_theocracy"
+			}
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -2557,7 +2578,10 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 2
-			has_government = "gov_theocratic_dictatorship"
+			OR = {
+				has_government = "gov_theocratic_dictatorship"
+				has_government = "gov_celestial_theocracy"
+			}
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -2576,7 +2600,10 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 2
-			has_government = "gov_theocratic_dictatorship"
+			OR = {
+				has_government = "gov_theocratic_dictatorship"
+				has_government = "gov_celestial_theocracy"
+			}
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -2888,14 +2915,7 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 1
-			OR = {
-				has_government = "gov_constitutional_dictatorship"
-				has_government = "gov_enlightened_dictatorship"
-				has_government = "gov_social_nationalism"
-				has_government = "gov_peoples_republic"
-				has_government = "gov_national_socialism"
-				has_government = "gov_republican_dictatorship"
-			}
+			has_government = "gov_constitutional_dictatorship"
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -2907,19 +2927,14 @@ empire_name_format = {
 	prefix_format = "[This.Capital.System.GetName] <dictatorial_gen>"
 	# Empire of Sol
 }
+
 # Dictatorial Generic 2
 empire_name_format = {
 	random_weight = {
 		factor = 0
 		modifier = {
 			add = 1
-			OR = {
-				has_government = "gov_constitutional_dictatorship"
-				has_government = "gov_enlightened_dictatorship"
-				has_government = "gov_peoples_republic"
-				has_government = "gov_national_socialism"
-				has_government = "gov_republican_dictatorship"
-			}
+			has_government = "gov_constitutional_dictatorship"
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -2938,13 +2953,7 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 5
-			OR = {
-				has_government = "gov_constitutional_dictatorship"
-				has_government = "gov_enlightened_dictatorship"
-				has_government = "gov_peoples_republic"
-				has_government = "gov_national_socialism"
-				has_government = "gov_republican_dictatorship"
-			}
+			has_government = "gov_constitutional_dictatorship"
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -2963,12 +2972,7 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 2
-			OR = {
-				has_government = "gov_constitutional_dictatorship"
-				has_government = "gov_enlightened_dictatorship"
-				has_government = "gov_peoples_republic"
-				has_government = "gov_republican_dictatorship"
-			}
+			has_government = "gov_constitutional_dictatorship"
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -3011,7 +3015,6 @@ empire_name_format = {
 			OR = {
 				has_government = "gov_military_junta"
 				has_government = "gov_war_council"
-				has_government = "gov_military_corp"
 			}
 			is_pirate = no
 			is_primitive = no
@@ -3034,7 +3037,6 @@ empire_name_format = {
 			OR = {
 				has_government = "gov_military_junta"
 				has_government = "gov_war_council"
-				has_government = "gov_military_corp"
 			}
 			is_pirate = no
 			is_primitive = no
@@ -3057,7 +3059,6 @@ empire_name_format = {
 			OR = {
 				has_government = "gov_military_junta"
 				has_government = "gov_war_council"
-				has_government = "gov_military_corp"
 			}
 			is_pirate = no
 			is_primitive = no
@@ -3080,7 +3081,6 @@ empire_name_format = {
 			OR = {
 				has_government = "gov_military_junta"
 				has_government = "gov_war_council"
-				has_government = "gov_military_corp"
 			}
 			is_pirate = no
 			is_primitive = no
@@ -3103,7 +3103,6 @@ empire_name_format = {
 			OR = {
 				has_government = "gov_military_junta"
 				has_government = "gov_war_council"
-				has_government = "gov_military_corp"
 			}
 			is_pirate = no
 			is_primitive = no
@@ -3185,6 +3184,10 @@ empire_name_format = {
 		modifier = {
 			add = 1
 			has_government = "gov_theocratic_oligarchy"
+			OR = {
+				has_government = "gov_theocratic_oligarchy"
+				has_government = "gov_celestial_choir"
+			}
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -3203,7 +3206,10 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 1
-			has_government = "gov_theocratic_oligarchy"
+			OR = {
+				has_government = "gov_theocratic_oligarchy"
+				has_government = "gov_celestial_choir"
+			}
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -3222,7 +3228,10 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 5
-			has_government = "gov_theocratic_oligarchy"
+			OR = {
+				has_government = "gov_theocratic_oligarchy"
+				has_government = "gov_celestial_choir"
+			}
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -3241,7 +3250,10 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 2
-			has_government = "gov_theocratic_oligarchy"
+			OR = {
+				has_government = "gov_theocratic_oligarchy"
+				has_government = "gov_celestial_choir"
+			}
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -3260,7 +3272,10 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 2
-			has_government = "gov_theocratic_oligarchy"
+			OR = {
+				has_government = "gov_theocratic_oligarchy"
+				has_government = "gov_celestial_choir"
+			}
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -3669,22 +3684,7 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 1
-			OR = {
 			has_government = "gov_plutocratic_oligarchy"
-			has_government = "gov_capitalist_oligarchy"
-			has_government = "gov_corporate_nationalism"
-			has_government = "gov_social_nationalism"
-			has_government = "gov_jingoism"
-			has_government = "gov_timocracy"
-			has_government = "gov_slaver_republic"
-			has_government = "gov_genuine_aristocracy"
-			has_government = "gov_cor_dictatorship"
-			has_government = "gov_bur_collectivism"
-			has_government = "gov_great_houses"
-			has_government = "gov_noble_aristocracy"
-			has_government = "gov_oligarchic_republic"
-			has_government = "gov_minarchy"
-			}
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -3703,21 +3703,7 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 1
-			OR = {
 			has_government = "gov_plutocratic_oligarchy"
-			has_government = "gov_capitalist_oligarchy"
-			has_government = "gov_corporate_nationalism"
-			has_government = "gov_jingoism"
-			has_government = "gov_timocracy"
-			has_government = "gov_genuine_aristocracy"
-			has_government = "gov_slaver_republic"
-			has_government = "gov_cor_dictatorship"
-			has_government = "gov_bur_collectivism"
-			has_government = "gov_great_houses"
-			has_government = "gov_noble_aristocracy"
-			has_government = "gov_oligarchic_republic"	
-            has_government = "gov_minarchy"			
-			}
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -3736,20 +3722,7 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 5
-			OR = {
 			has_government = "gov_plutocratic_oligarchy"
-			has_government = "gov_capitalist_oligarchy"
-			has_government = "gov_jingoism"
-			has_government ="gov_timocracy"
-			has_government = "gov_genuine_aristocracy"
-			has_government = "gov_slaver_republic"
-			has_government = "gov_cor_dictatorship"
-			has_government = "gov_bur_collectivism"
-			has_government = "gov_great_houses"
-			has_government = "gov_noble_aristocracy"
-			has_government = "gov_oligarchic_republic"
-            has_government = "gov_minarchy"			
-			}
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -3768,19 +3741,7 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 2
-			OR = {
 			has_government = "gov_plutocratic_oligarchy"
-			has_government = "gov_capitalist_oligarchy"
-			has_government = "gov_timocracy"
-			has_government = "gov_genuine_aristocracy"
-			has_government = "gov_slaver_republic"
-			has_government = "gov_cor_dictatorship"
-			has_government = "gov_bur_collectivism"
-			has_government = "gov_great_houses"
-			has_government = "gov_noble_aristocracy"
-			has_government = "gov_oligarchic_republic"
-            has_government = "gov_minarchy"			
-			}
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -3814,27 +3775,22 @@ empire_name_format = {
 
 ### Democratic Militarist 
 
-
 # Democratic Militarist 1
 empire_name_format = {
 	random_weight = {
 		factor = 0
 		modifier = {
 			add = 1
-			OR = {
-			has_government = "gov_assembly_of_clans"
-			has_government = "gov_anarch_capitalism"
-                        has_government = "gov_military_commissariat"
-			}
+			has_government = "gov_military_commissariat"
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "format.dem_war_cul.1"
+	format = "format.dem_mil.1"
 	noun = "[This.Capital.System.GetName]"
-	prefix_format = "[This.Capital.System.GetName] <democratic_war_cul>"
+	prefix_format = "[This.Capital.System.GetName] <democratic_mil>"
 	# Empire of Sol
 }
 
@@ -3844,20 +3800,16 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 1
-			OR = {
-			has_government = "gov_assembly_of_clans"
-			has_government = "gov_anarch_capitalism"
-                        has_government = "gov_military_commissariat"
-			}
+			has_government = "gov_military_commissariat"
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "format.dem_war_cul.2"
+	format = "format.dem_mil.2"
 	noun = "[This.Capital.GetName]"
-	prefix_format = "[This.Capital.GetName] <democratic_war_cul>"
+	prefix_format = "[This.Capital.GetName] <democratic_mil>"
 	# Empire of Earth
 }
 
@@ -3867,20 +3819,16 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 5
-			OR = {
-			has_government = "gov_assembly_of_clans"
-			has_government = "gov_anarch_capitalism"
-                        has_government = "gov_military_commissariat"
-			}
+			has_government = "gov_military_commissariat"
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "format.dem_war_cul.3"
+	format = "format.dem_mil.3"
 	noun = "[This.GetSpeciesName]"
-	prefix_format = "[This.GetSpeciesName] <democratic_war_cul>"
+	prefix_format = "[This.GetSpeciesName] <democratic_mil>"
 	# Human Empire
 }
 
@@ -4358,12 +4306,7 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 1
-			OR = {
 			has_government = "gov_moral_democracy"
-			has_government = "gov_social_democracy"
-			has_government = "gov_anarch_pacifism"
-			has_government = "gov_anarch_capitalism"
-			}
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -4382,12 +4325,7 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 1
-			OR = {
 			has_government = "gov_moral_democracy"
-			has_government = "gov_social_democracy"
-			has_government = "gov_anarch_pacifism"
-			has_government = "gov_anarch_capitalism"
-			}
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -4406,11 +4344,7 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 5
-			OR = {
 			has_government = "gov_moral_democracy"
-			has_government = "gov_anarch_pacifism"
-			has_government = "gov_anarch_capitalism"
-			}
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -4429,10 +4363,7 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 2
-			OR = {
 			has_government = "gov_moral_democracy"
-			has_government = "gov_anarch_pacifism"
-			}
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -4444,7 +4375,6 @@ empire_name_format = {
 	prefix_format = "[This.GetSpeciesName] <democratic_pac>"
 	# Great Human Empire
 }
-
 
 # Democratic Pacifist 5
 empire_name_format = {
@@ -4492,16 +4422,7 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 1
-			OR = {
 			has_government = "gov_representative_democracy"
-			has_government = "gov_anarchy_communism"
-			has_government = "gov_congress_republic"
-			has_government = "gov_aristocratic_republic"
-			has_government = "gov_liberal_democracy"
-			has_government = "gov_soviet_republic"
-			has_government = "gov_minarchy"
-			has_government = "gov_xenophile_democracy"
-			}
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -4520,16 +4441,7 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 5
-			OR = {
 			has_government = "gov_representative_democracy"
-			has_government = "gov_anarchy_communism"
-			has_government = "gov_congress_republic"
-			has_government = "gov_aristocratic_republic"
-			has_government = "gov_liberal_democracy"
-			has_government = "gov_soviet_republic"		
-            has_government = "gov_minarchy"	
-            has_government = "gov_xenophile_democracy"			
-			}
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -4548,16 +4460,7 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 2
-			OR = {
 			has_government = "gov_representative_democracy"
-			has_government = "gov_anarchy_communism"
-			has_government = "gov_congress_republic"
-			has_government = "gov_aristocratic_republic"
-			has_government = "gov_liberal_democracy"
-			has_government = "gov_soviet_republic"
-            has_government = "gov_minarchy"		
-            has_government = "gov_xenophile_democracy" 			
-			}
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -4576,16 +4479,7 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 2
-			OR = {
 			has_government = "gov_representative_democracy"
-			has_government = "gov_anarchy_communism"
-			has_government = "gov_congress_republic"
-			has_government = "gov_aristocratic_republic"
-			has_government = "gov_liberal_democracy"
-			has_government = "gov_soviet_republic"	
-            has_government = "gov_minarchy"	
-            has_government = "gov_xenophile_democracy"			
-			}
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -4612,9 +4506,6 @@ empire_name_format = {
 				has_government = "gov_despotic_hegemony"
 				has_government = "gov_irenic_monarchy"
 				has_government = "gov_despotic_empire"
-				has_government = "gov_communist_dictatorship"
-				has_government = "gov_social_nationalism"
-				has_government = "gov_strasserism"
 			}
 			is_pirate = no
 			is_primitive = no
@@ -4640,9 +4531,6 @@ empire_name_format = {
 				has_government = "gov_despotic_hegemony"
 				has_government = "gov_irenic_monarchy"
 				has_government = "gov_despotic_empire"
-				has_government = "gov_communist_dictatorship"
-				has_government = "gov_social_nationalism"
-				has_government = "gov_strasserism"
 			}
 			is_pirate = no
 			is_primitive = no
@@ -4668,7 +4556,6 @@ empire_name_format = {
 				has_government = "gov_executive_committee"
 				has_government = "gov_irenic_bureaucracy"
 				has_government = "gov_plutocratic_oligarchy"
-				has_government = "gov_strasserism"
 			}
 			is_pirate = no
 			is_primitive = no
@@ -4694,7 +4581,6 @@ empire_name_format = {
 				has_government = "gov_executive_committee"
 				has_government = "gov_irenic_bureaucracy"
 				has_government = "gov_plutocratic_oligarchy"
-				has_government = "gov_strasserism"
 			}
 			is_pirate = no
 			is_primitive = no
@@ -4720,13 +4606,6 @@ empire_name_format = {
 				has_government = "gov_direct_democracy"
 				has_government = "gov_moral_democracy"
 				has_government = "gov_representative_democracy"
-				has_government = "gov_demos_cratos"
-				has_government = "gov_anarchy_state"
-				has_government = "gov_anarchy_communism"
-				has_government = "gov_liberal_democracy"
-				has_government = "gov_soviet_republic"
-			has_government = "gov_congress_republic"
-			has_government = "gov_aristocratic_republic"		
 			}
 			is_pirate = no
 			is_primitive = no
@@ -4752,13 +4631,6 @@ empire_name_format = {
 				has_government = "gov_direct_democracy"
 				has_government = "gov_moral_democracy"
 				has_government = "gov_representative_democracy"
-				has_government = "gov_demos_cratos"
-				has_government = "gov_anarchy_state"
-				has_government = "gov_anarchy_communism"
-				has_government = "gov_liberal_democracy"
-				has_government = "gov_soviet_republic"
-			has_government = "gov_congress_republic"
-			has_government = "gov_aristocratic_republic"				
 			}
 			is_pirate = no
 			is_primitive = no
@@ -4770,8 +4642,7 @@ empire_name_format = {
 	noun = "[This.GetSpeciesName]"
 	prefix_format = "[This.GetSpeciesName] <generic_states>"
 	# Human Federated Colonies
-}	
-	
+}
 
 # Hive Mind
 empire_name_format = {
@@ -4818,7 +4689,10 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 5
-			has_government = "gov_megacorporation"
+			OR = {
+				has_government = "gov_megacorporation"
+				has_government = "gov_private"
+			}
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -4837,7 +4711,12 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 5
-			has_government = "gov_megachurch"
+			OR = {
+				has_government = "gov_megachurch"
+				has_government = "gov_private_megachurch"
+				has_government = "gov_sacrificial_megachurch"
+				has_government = "gov_private_sacrificial_megachurch"
+			}
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -4856,7 +4735,10 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 5
-			has_government = "gov_trade_league"
+			OR = {
+				has_government = "gov_trade_league"
+				has_government = "gov_cooperative"
+			}
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -4875,7 +4757,10 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 5
-			has_government = "gov_criminal_syndicate"
+			OR = {
+				has_government = "gov_criminal_syndicate"
+				has_government = "gov_private_criminal_syndicate"
+			}
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -4894,7 +4779,11 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 5
-			has_government = "gov_subversive_cult"
+			OR = {
+				has_government = "gov_subversive_cult"
+				has_government = "gov_private_subversive_cult"
+				has_government = "gov_grim_council"
+			}
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -4913,7 +4802,11 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 5
-			has_government = "gov_subversive_cult"
+			OR = {
+				has_government = "gov_subversive_cult"
+				has_government = "gov_private_subversive_cult"
+				has_government = "gov_grim_council"
+			}
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -4992,6 +4885,7 @@ empire_name_format = {
 			OR = {
 				has_government = "gov_bandit_kingdom"
 				has_government = "gov_bandit_commune"
+				has_government = "gov_band_blood"
 			}
 			is_pirate = no
 			is_primitive = no
@@ -5016,7 +4910,6 @@ empire_name_format = {
 				has_government = "gov_purity_order"
 				has_government = "gov_purification_committee"
 				has_government = "gov_purity_assembly"
-				has_government = "gov_dread_brotherhood"
 			}
 			is_pirate = no
 			is_primitive = no
@@ -5988,6 +5881,68 @@ empire_name_format = {
 	format = "format.machine.6"
 	noun = "[This.GetSpeciesName]"
 	# Mechanoid Network
+}
+
+### Necrophages
+
+# Necrophages 1
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 2
+			has_origin = origin_necrophage
+		}
+	}
+	format = "format.necrophage.1"
+	prefix_format = "[This.Capital.System.GetName] <necrophagers>"
+	noun = "[This.Capital.System.GetName]"
+	# Empire of Sol
+}
+
+# Necrophages 2
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 2
+			has_origin = origin_necrophage
+		}
+	}
+	format = "format.necrophage.2"
+	prefix_format = "[This.Capital.GetName] <necrophagers>"
+	noun = "[This.Capital.GetName]"
+	# Empire of Earth
+}
+
+# Necrophages 3
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 8
+			has_origin = origin_necrophage
+		}
+	}
+	format = "format.necrophage.3"
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "[This.GetSpeciesName] <necrophagers>"
+	# Human Empire
+}
+
+# Necrophages 4
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 4
+			has_origin = origin_necrophage
+		}
+	}
+	format = "format.necrophage.4"
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "[This.GetSpeciesName] <necrophagers>"
+	# Great Human Empire
 }
 
 

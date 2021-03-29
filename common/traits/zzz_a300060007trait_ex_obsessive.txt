@@ -1,0 +1,27 @@
+trait_ex_obsessive = {
+    cost = 0
+    opposites = {
+        "trait_ex_unscientific"
+        "trait_ex_hedonistic"
+        "trait_ex_disciplined"
+        "trait_syncretic_proles"
+    }
+    initial = yes
+    randomized = no
+    modification = yes
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    ai_weight = {
+        weight = 0
+    }
+    icon = "gfx/interface/icons/traits/trait_ex_obsessive.dds"
+    modifier = {
+        planet_jobs_engineering_research_produces_mult = 0.1
+        planet_jobs_physics_research_produces_mult = 0.1
+        planet_jobs_society_research_produces_mult = 0.1
+        pop_happiness = -0.05
+        pop_growth_speed = -0.15
+    }
+}

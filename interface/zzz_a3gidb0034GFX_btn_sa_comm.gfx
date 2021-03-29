@@ -1,0 +1,31 @@
+spriteTypes = {
+    spriteType = {
+        name = "GFX_btn_sa_comm"
+        texturefile = "gfx/interface/buttons/ehof_ui_comm.dds"
+        effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+        noOfFrames = 3
+        animation = {
+            animationmaskfile = "gfx/interface/buttons/ehof_ui_comm_mask.dds"
+            animationtexturefile = "gfx/interface/buttons/button_268_animated_texture.dds"
+            animationrotation = 180
+            animationlooping = yes
+            animationtime = 20
+            animationdelay = 0
+            animationblendmode = "overlay"
+            animationtype = "scrolling"
+            animationrotationoffset = {
+                x = 0
+                y = 0
+            }
+            animationtexturescale = {
+                x = 1
+                y = 1
+            }
+            animationframes = {
+                1
+                2
+                3
+            }
+        }
+    }
+}

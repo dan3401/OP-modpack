@@ -1,0 +1,75 @@
+opinion_repugnant_species = {
+    opinion = {
+        base = 0
+        modifier = {
+            add = -25
+            FROM = {
+                OR = {
+                    is_country_type = lost_empire
+                    is_country_type = ascended_empire
+                    is_country_type = eternal_empire
+                }
+                exists = ruler
+                ruler = {
+                    species = {
+                        has_trait = "trait_repugnant"
+                    }
+                    NOT = {
+                        is_same_species = root
+                    }
+                }
+            }
+            OR = {
+                is_country_type = lost_empire
+                is_country_type = ascended_empire
+                is_country_type = eternal_empire
+            }
+            NOT = {
+                AND = {
+                    exists = ruler
+                    ruler = {
+                        species = {
+                            has_trait = "trait_repugnant"
+                        }
+                        NOT = {
+                            is_same_species = root
+                        }
+                    }
+                }
+            }
+        }
+        modifier = {
+            add = -10
+            FROM = {
+                OR = {
+                    is_country_type = lost_empire
+                    is_country_type = ascended_empire
+                    is_country_type = eternal_empire
+                }
+                exists = ruler
+                ruler = {
+                    species = {
+                        has_trait = "trait_repugnant"
+                    }
+                    NOT = {
+                        is_same_species = root
+                    }
+                }
+            }
+            OR = {
+                is_country_type = lost_empire
+                is_country_type = ascended_empire
+                is_country_type = eternal_empire
+            }
+            exists = ruler
+            ruler = {
+                species = {
+                    has_trait = "trait_repugnant"
+                }
+                NOT = {
+                    is_same_species = root
+                }
+            }
+        }
+    }
+}

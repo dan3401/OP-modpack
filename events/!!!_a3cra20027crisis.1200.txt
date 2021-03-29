@@ -1,0 +1,299 @@
+namespace = crisis
+country_event = {
+    id = crisis.1200
+    hide_window = yes
+    fire_only_once = yes
+    trigger = {
+        has_global_flag = extradimensionals_fight
+        NOT = {
+            has_global_flag = extradimensional_third_portal
+        }
+        is_country_type = extradimensional_2
+        any_country = {
+            is_country_type = extradimensional
+        }
+    }
+    mean_time_to_happen = {
+        months = 40
+    }
+    immediate = {
+        set_global_flag = extradimensional_third_portal
+        random_country = {
+            limit = {
+                is_country_type = extradimensional
+            }
+            random_system_within_border = {
+                limit = {
+                    NOR = {
+                        has_star_flag = extradimensional_origin_system
+                        has_star_flag = extradimensional_second_portal_system
+                    }
+                }
+                set_star_flag = extradimensional_third_portal_system
+                save_event_target_as = third_portal_system
+                random_system_planet = {
+                    create_species = {
+                        name = "NAME_Vehement"
+                        class = EXD
+                        portrait = exd3
+                        traits = random
+                        effect = {
+                            save_event_target_as = extradimensional_trespassers_species
+                        }
+                    }
+                    create_country = {
+                        name = "NAME_Vehement"
+                        type = "extradimensional_3"
+                        species = event_target:extradimensional_trespassers_species
+                        name_list = "Extradimensional"
+                        flag = {
+                            icon = {
+                                category = "special"
+                                file = "extradimensional_03.dds"
+                            }
+                            background = {
+                                category = "backgrounds"
+                                file = "stripe.dds"
+                            }
+                            colors = {
+                                "green"
+                                "teal"
+                                "null"
+                                "null"
+                            }
+                        }
+                        effect = {
+                            set_country_flag = vehement
+                            save_global_event_target_as = extradimensionals3
+                            create_ship_design = {
+                                design = "NAME_Void_Weaver"
+                            }
+                            add_ship_design = last_created_design
+                            create_ship_design = {
+                                design = "NAME_Vehement_Anchor"
+                            }
+                            add_ship_design = last_created_design
+                            create_ship_design = {
+                                design = "NAME_Unbidden_Starbase"
+                            }
+                            add_ship_design = last_created_design
+                            establish_communications_no_message = event_target:portal_holder_1
+                            set_faction_hostility = {
+                                target = event_target:portal_holder_1
+                                set_hostile = no
+                            }
+                            set_graphical_culture = extra_dimensional_03
+                            save_event_target_as = extradimensional_trespassers
+                        }
+                    }
+                    event_target:extradimensional_trespassers = {
+                        create_fleet = {
+                            name = "NAME_Dimensional_Portal"
+                            effect = {
+                                set_owner = PREV
+                                create_ship = {
+                                    name = random
+                                    design = "NAME_Vehement_Portal"
+                                    graphical_culture = "extra_dimensional_03"
+                                    effect = {
+                                        set_ship_flag = vehement_portal
+                                    }
+                                }
+                                set_location = {
+                                    target = PREVPREV
+                                    distance = 40
+                                    angle = random
+                                }
+                                save_event_target_as = third_portal
+                                fleet_event = {
+                                    id = crisis.1203
+                                    days = 1
+                                }
+                                fleet_event = {
+                                    id = crisis.1203
+                                    days = 5
+                                }
+                                fleet_event = {
+                                    id = crisis.1203
+                                    days = 15
+                                }
+                                fleet_event = {
+                                    id = crisis.1203
+                                    days = 30
+                                }
+                                fleet_event = {
+                                    id = crisis.1203
+                                    days = 45
+                                }
+                                fleet_event = {
+                                    id = crisis.1203
+                                    days = 60
+                                }
+                                fleet_event = {
+                                    id = crisis.1203
+                                    days = 150
+                                }
+                                fleet_event = {
+                                    id = crisis.1203
+                                    days = 350
+                                }
+                                fleet_event = {
+                                    id = crisis.1206
+                                    days = 20
+                                }
+                                fleet_event = {
+                                    id = crisis.1206
+                                    days = 25
+                                }
+                                fleet_event = {
+                                    id = crisis.1206
+                                    days = 90
+                                }
+                                fleet_event = {
+                                    id = crisis.1206
+                                    days = 210
+                                }
+                                event_target:extradimensional_trespassers = {
+                                    country_event = {
+                                        id = crisis.1260
+                                        days = 550
+                                    }
+                                }
+                            }
+                        }
+                        random_list = {
+                            25 = {
+                                create_leader = {
+                                    class = admiral
+                                    species = event_target:extradimensional_trespassers_species
+                                    name = random
+                                    skill = 3
+                                    traits = {
+                                        trait = leader_trait_ethereal
+                                    }
+                                }
+                            }
+                            25 = {
+                                create_leader = {
+                                    class = admiral
+                                    species = event_target:extradimensional_trespassers_species
+                                    name = random
+                                    skill = 3
+                                    traits = {
+                                        trait = leader_trait_dimensional_stutter
+                                    }
+                                }
+                            }
+                            50 = {
+                                create_leader = {
+                                    class = admiral
+                                    species = event_target:extradimensional_trespassers_species
+                                    name = random
+                                    skill = 3
+                                }
+                            }
+                        }
+                        create_fleet = {
+                            effect = {
+                                set_owner = PREV
+                                create_ship = {
+                                    name = random
+                                    design = "NAME_Eradicator"
+                                    graphical_culture = "extra_dimensional_03"
+                                }
+                                assign_leader = last_created_leader
+                                while = {
+                                    count = 20
+                                    create_ship = {
+                                        name = random
+                                        design = "NAME_Eradicator"
+                                        graphical_culture = "extra_dimensional_03"
+                                    }
+                                }
+                                while = {
+                                    count = 30
+                                    create_ship = {
+                                        name = random
+                                        design = "NAME_Annihilator"
+                                        graphical_culture = "extra_dimensional_03"
+                                    }
+                                }
+                                while = {
+                                    count = 45
+                                    create_ship = {
+                                        name = random
+                                        design = "NAME_Obliterator"
+                                        graphical_culture = "extra_dimensional_03"
+                                    }
+                                }
+                                set_location = {
+                                    target = event_target:third_portal
+                                    distance = 5
+                                    angle = random
+                                }
+                                set_fleet_stance = aggressive
+                                set_aggro_range = 500
+                                set_aggro_range_measure_from = self
+                            }
+                        }
+                    }
+                }
+                if = {
+                    limit = {
+                        exists = starbase
+                    }
+                    starbase = {
+                        fleet = {
+                            destroy_fleet = this
+                        }
+                    }
+                }
+                create_starbase = {
+                    size = starbase_exd
+                    owner = event_target:extradimensionals3
+                }
+                star = {
+                    create_ambient_object = {
+                        type = "extradimensional_2"
+                        location = this
+                    }
+                    last_created_ambient_object = {
+                        set_ambient_object_flag = extradimensional_system_effect_2
+                        set_location = {
+                            target = prev
+                            distance = 0
+                            angle = random
+                        }
+                    }
+                }
+            }
+            establish_communications_no_message = event_target:extradimensional_trespassers
+        }
+        observer_event = {
+            id = observer.38
+        }
+        event_target:extradimensionals3 = {
+            random_owned_ship = {
+                ship_event = {
+                    id = crisis.1280
+                }
+            }
+        }
+        every_country = {
+            limit = {
+                OR = {
+                    is_country_type = default
+                    is_country_type = ascended_empire
+                    is_country_type = lost_empire
+                    is_country_type = fallen_empire
+                    is_country_type = awakened_fallen_empire
+                }
+            }
+            country_event = {
+                id = crisis.1210
+                days = 1
+            }
+        }
+        establish_communications_no_message = event_target:extradimensional_trespassers
+    }
+}

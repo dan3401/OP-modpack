@@ -1,0 +1,62 @@
+district_queen_uncapped = {
+    icon = district_queen
+    base_buildtime = 240
+    is_capped_by_modifier = no
+    conversion_ratio = 1
+    convert_to = {
+        district_queen
+    }
+    show_on_uncolonized = {
+        uses_district_set = hive_world
+        from = {
+            OR = {
+                has_ascension_perk = ap_pyramidal_society
+                has_country_flag = ap_pyramidal_society
+            }
+            is_hive_empire = yes
+        }
+    }
+    potential = {
+        uses_district_set = hive_world
+        exists = owner
+        owner = {
+            OR = {
+                has_ascension_perk = ap_pyramidal_society
+                has_country_flag = ap_pyramidal_society
+            }
+            is_hive_empire = yes
+        }
+    }
+    allow = {
+        NOR = {
+            has_modifier = resort_colony
+            has_modifier = slave_colony
+        }
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            food = 500
+        }
+        upkeep = {
+            food = 4
+        }
+        produces = {
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 2
+        planet_amenities_no_happiness_add = 4
+        job_hive_queen_add = 1
+        job_royal_guard_add = 2
+    }
+    ai_weight = {
+        weight = 2
+    }
+    ai_resource_production = {
+        food = 4
+        trigger = {
+            always = yes
+        }
+    }
+}

@@ -1,0 +1,20 @@
+no_ehof_sa = {
+    potential = {
+        hidden_trigger = {
+            exists = from
+            check_variable = {
+                which = ehof_phase
+                value <= 0
+            }
+            is_discoverer = yes
+        }
+    }
+    allow = {
+        hidden_trigger = {
+            always = yes
+        }
+    }
+    effect = {
+        custom_tooltip = "no_ehof_sa_tooltip"
+    }
+}

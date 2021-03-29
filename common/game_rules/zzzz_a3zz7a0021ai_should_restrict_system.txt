@@ -1,0 +1,141 @@
+ai_should_restrict_system = {
+    OR = {
+        AND = {
+            root = {
+                OR = {
+                    is_country_type = fallen_empire
+                    is_country_type = lost_empire
+                    is_country_type = eternal_empire
+                    is_country_type = original_empire_active
+                }
+            }
+            exists = owner
+            owner = {
+                OR = {
+                    is_country_type = awakened_marauders
+                    is_country_type = dormant_marauders
+                }
+        }
+        AND = {
+            root = {
+                is_country_type = default
+            }
+            exists = owner
+            owner = {
+                is_country_type = original_empire
+            }
+        }
+        AND = {
+            root = {
+                OR = {
+                    is_country_type = awakened_marauders
+                    is_country_type = marauder_raiders
+                }
+            }
+            exists = owner
+            owner = {
+                OR = {
+                    is_country_type = fallen_empire
+                    is_country_type = lost_empire
+                    is_country_type = eternal_empire
+                    is_country_type = original_empire_active
+                    is_progenitor_empires = yes
+                }
+            }
+        }
+        AND = {
+            root = {
+                OR = {
+                    is_country_type = fallen_empire
+                    is_country_type = awakened_marauders
+                    is_country_type = marauder_raiders
+                    is_country_type = lost_empire
+                    is_country_type = awakened_marauders
+                    is_country_type = eternal_empire
+                    is_country_type = original_empire_active
+                }
+            }
+            any_ship_in_system = {
+                exists = owner
+                owner = {
+                    OR = {
+                        is_country_type = guardian_dragon
+                        is_country_type = guardian_stellarite
+                        is_country_type = guardian_wraith
+                        is_country_type = guardian_horror
+                        is_country_type = guardian_fortress
+                        is_country_type = guardian_dreadnought
+                        is_country_type = guardian_elderly_tiyanki
+                        is_country_type = guardian_hatchling
+                        is_country_type = guardian_scavenger_bot
+                        is_country_type = sofe_sentinel_active
+                    }
+                }
+            }
+        }
+        AND = {
+            root = {
+                OR = {
+                    is_country_type = fallen_empire
+                    is_country_type = awakened_marauders
+                    is_country_type = marauder_raiders
+                    is_country_type = original_empire
+                    is_country_type = eternal_empire
+                }
+            }
+            OR = {
+                AND = {
+                    has_star_flag = crystal_home_system
+                    any_fleet_in_system = {
+                        exists = owner
+                        owner = {
+                            is_country_type = crystal
+                        }
+                    }
+                }
+                AND = {
+                    has_star_flag = amoeba_home_system
+                    any_fleet_in_system = {
+                        exists = owner
+                        owner = {
+                            is_country_type = amoeba_garrison
+                        }
+                    }
+                }
+                AND = {
+                    has_star_flag = drone_home_system
+                    any_fleet_in_system = {
+                        exists = owner
+                        owner = {
+                            is_country_type = drone
+                        }
+                    }
+                }
+            }
+        }
+        AND = {
+            root = {
+                OR = {
+                    is_country_type = default
+                    is_country_type = fallen_empire
+                    is_country_type = awakened_fallen_empire
+                    is_country_type = awakened_marauders
+                    is_country_type = ag_ancient_psi_guardian
+                }
+            }
+            OR = {
+                has_star_flag = ag_zeta_crisis_psionic_storm_system
+                has_star_flag = ag_zeta_crisis_psionic_singularity_system
+            }
+        }
+        AND = {
+            root = {
+                is_country_type = default
+            }
+            exists = owner
+            owner = {
+                is_country_type = original_empire
+            }
+        }
+    }
+}

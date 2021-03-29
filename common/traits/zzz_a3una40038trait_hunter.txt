@@ -1,0 +1,35 @@
+trait_hunter = {
+    opposites = {
+        "trait_solitary"
+    }
+    potential_crossbreeding_chance = 1
+    allowed_archetypes = {
+        BIOLOGICAL
+        PLANTOID
+    }
+    cost = 3
+    modifier = {
+        pop_happiness = 0.05
+        pop_growth_from_immigration = 0.2
+        planet_jobs_food_produces_mult = 0.2
+    }
+    valid_for_all_ethics = no
+    allowed_ethics = {
+        ethic_authoritarian
+        ethic_fanatic_authoritarian
+        ethic_egalitarian
+        ethic_fanatic_egalitarian
+        ethic_xenophobe
+        ethic_fanatic_xenophobe
+        ethic_xenophile
+        ethic_fanatic_xenophile
+        ethic_materialist
+        ethic_fanatic_materialist
+        ethic_spiritualist
+        ethic_fanatic_spiritualist
+        ethic_militarist
+        ethic_fanatic_militarist
+        ethic_pacifist
+        ethic_fanatic_pacifist
+    }
+}

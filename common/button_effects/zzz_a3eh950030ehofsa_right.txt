@@ -1,0 +1,19 @@
+ehofsa_right = {
+    potential = {
+        hidden_trigger = {
+            exists = from
+            is_discoverer = yes
+            check_variable = {
+                which = ehof_phase
+                value >= 1
+            }
+        }
+    }
+    allow = {
+        hidden_trigger = {
+            always = yes
+        }
+    }
+    effect = {
+    }
+}

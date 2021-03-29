@@ -1,0 +1,75 @@
+can_generate_leader_from_pop = {
+    has_citizenship_rights = yes
+    NOR = {
+        has_trait = trait_syncretic_proles
+        has_trait = trait_nerve_stapled
+        has_trait = trait_slave_gene
+        root = {
+            has_origin = origin_hive_overmind
+        }
+        has_trait = trait_plentiful_traditions_cocoon
+    }
+    OR = {
+        is_robot_pop = no
+        AND = {
+            NOT = {
+                has_global_flag = stability_MOD_installed
+            }
+            OR = {
+                root = {
+                    has_technology = tech_synthetic_leaders
+                }
+                root = {
+                    has_authority = auth_machine_intelligence
+                }
+                root = {
+                    is_mechanical_empire = yes
+                }
+    NOR = {
+        has_trait = trait_slave_gene
+        has_trait = trait_memorex_comatos
+        has_trait = trait_nerve_stapled
+        has_trait = trait_infested_basic
+    }
+            }
+        }
+        root = {
+            has_technology = tech_mind_plus
+        }
+        AND = {
+            has_global_flag = stability_MOD_installed
+            has_trait = "trait_mechanical"
+            OR = {
+        is_robot_pop = no
+                root = {
+                    has_technology = tech_synthetic_leaders
+                }
+                root = {
+                    has_authority = auth_machine_intelligence
+                }
+                root = {
+                    is_mechanical_empire = yes
+                }
+            }
+            root = {
+                has_policy_flag = ai_full_rights
+            }
+        }
+        AND = {
+            has_global_flag = stability_MOD_installed
+            has_trait = trait_machine_unit
+            has_citizenship_type = {
+                type = citizenship_full_machine
+            }
+        }
+    }
+    OR = {
+        is_same_species = root
+        root = {
+            NAND = {
+                has_origin = origin_necrophage
+                has_trait = trait_necrophage
+            }
+        }
+    }
+}

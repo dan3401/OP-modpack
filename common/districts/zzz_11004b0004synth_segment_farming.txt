@@ -1,0 +1,138 @@
+synth_segment_farming = {
+    base_buildtime = 240
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        from = {
+            NOT = {
+                is_country_type = fallen_empire
+            }
+        }
+        OR = {
+            from = {
+                has_ascension_perk = ap_synth_artificial_worlds
+            }
+            has_planet_flag = planet_synth_artificial
+        }
+        is_planet_class = pc_synth_artificial
+    }
+    potential = {
+        exists = owner
+        owner = {
+            NOT = {
+                is_country_type = fallen_empire
+            }
+        }
+        OR = {
+            owner = {
+                has_ascension_perk = ap_synth_artificial_worlds
+            }
+            has_planet_flag = planet_synth_artificial
+        }
+        is_planet_class = pc_synth_artificial
+    }
+    allow = {
+        NOT = {
+            has_modifier = resort_colony
+        }
+    }
+    conversion_ratio = 1
+    convert_to = {
+        district_metal_dismantle
+    }
+    resources = {
+        category = planet_districts
+        produces = {
+            food = 10
+        }
+        cost = {
+            alloys = 150
+        }
+        upkeep = {
+            energy = 2
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 3
+    }
+    triggered_planet_modifier = {
+        potential = {
+            owner = {
+                NOT = {
+                    has_ethic = ethic_gestalt_consciousness
+                }
+            }
+        }
+        job_farmer_add = 3
+    }
+    triggered_planet_modifier = {
+        potential = {
+            owner = {
+                has_ethic = ethic_gestalt_consciousness
+            }
+        }
+        job_agri_drone_add = 3
+    }
+    triggered_desc = {
+        trigger = {
+            owner = {
+                NOT = {
+                    has_ethic = ethic_gestalt_consciousness
+                }
+            }
+        }
+        text = job_farmer_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            owner = {
+                has_ethic = ethic_gestalt_consciousness
+            }
+        }
+        text = job_agri_drone_effect_desc
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 9500
+            districts_build_district = yes
+            owner = {
+                has_monthly_income = {
+                    resource = food
+                    value < 15
+                }
+            }
+        }
+        modifier = {
+            weight = 9500
+            any_owned_pop = {
+                is_unemployed = yes
+                NOT = {
+                    has_citizenship_type = {
+                        type = citizenship_organic_trophy
+                    }
+                }
+            }
+            owner = {
+                has_monthly_income = {
+                    resource = food
+                    value < 50
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = food
+                    value > 80
+                }
+            }
+        }
+    }
+    ai_resource_production = {
+        food = 6
+        trigger = {
+            always = yes
+        }
+    }
+}

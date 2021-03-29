@@ -1,0 +1,43 @@
+can_generate_military_leader_from_pop = {
+    can_be_military_leader = yes
+    NOT = {
+        root = {
+            has_origin = origin_hive_overmind
+        }
+    }
+    OR = {
+        is_robot_pop = no
+        root = {
+            has_technology = tech_synthetic_leaders
+        }
+        root = {
+            has_authority = auth_machine_intelligence
+        }
+        root = {
+            is_mechanical_empire = yes
+        }
+        root = {
+            has_technology = tech_mind_plus
+        }
+        AND = {
+            has_trait = trait_machine_unit
+            has_citizenship_type = {
+                type = citizenship_full_machine
+            }
+        }
+    }
+    OR = {
+        is_same_species = root
+        root = {
+            NAND = {
+                has_origin = origin_necrophage
+                has_trait = trait_necrophage
+            }
+        }
+    }
+    NOT = {
+        root = {
+            has_origin = origin_hive_overmind
+        }
+    }
+}

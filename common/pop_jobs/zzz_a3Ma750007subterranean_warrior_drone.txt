@@ -1,0 +1,95 @@
+subterranean_warrior_drone = {
+    category = simple_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = building_stronghold
+    clothes_texture_index = 4
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible = {
+        drone_job_check_trigger = yes
+    }
+    country_modifier = {
+        country_naval_cap_add = 4
+        leaders_upkeep_mult = -0.01
+    }
+    triggered_country_modifier = {
+        potential = {
+            planet = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_ground_defense_planning"
+                }
+            }
+        }
+        modifier = {
+            country_naval_cap_add = 2
+        }
+    }
+    pop_modifier = {
+        pop_defense_armies_add = 4
+    }
+    resources = {
+        category = planet_soldiers
+        produces = {
+            trigger = {
+                owner = {
+                    has_valid_civic = civic_citizen_service
+                }
+            }
+            unity = 1.5
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            planet = {
+                OR = {
+                    has_modifier = compliance_protocols
+                    has_modifier = hunter_killer_drones
+                }
+            }
+        }
+        modifier = {
+            planet_stability_add = 5
+        }
+    }
+    weight = {
+        weight = @warrior_drone_job_weight
+        modifier = {
+            factor = 10
+            planet = {
+                OR = {
+                    has_modifier = compliance_protocols
+                    has_modifier = hunter_killer_drones
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            has_trait = trait_resilient
+        }
+        modifier = {
+            factor = 2
+            has_trait = trait_very_strong
+        }
+        modifier = {
+            factor = 1.5
+            has_trait = trait_strong
+        }
+        modifier = {
+            factor = 0.5
+            has_trait = trait_weak
+        }
+        modifier = {
+            factor = 0.9
+            exists = owner
+            years_passed < 1
+            owner = {
+                has_valid_civic = civic_machine_assimilator
+            }
+            has_trait = trait_cybernetic
+        }
+    }
+}

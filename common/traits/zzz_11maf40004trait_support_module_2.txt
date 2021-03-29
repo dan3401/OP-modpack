@@ -1,0 +1,14 @@
+trait_support_module_2 = {
+    cost = -2
+    allowed_archetypes = {
+        BIOMACHINE
+    }
+    initial = no
+    randomized = no
+    modifier = {
+        planet_pops_upkeep_mult = 0.2
+    }
+    slave_cost = {
+        energy = 100
+    }
+}

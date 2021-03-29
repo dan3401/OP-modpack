@@ -1,0 +1,203 @@
+namespace = acot_precursor_databank
+country_event = {
+    id = acot_precursor_databank.905
+    title = acot_precursor_databank.905.name
+    desc = acot_precursor_databank.905.desc
+    picture = GFX_evt_matter_decompressor
+    show_sound = event_completed
+    is_triggered_only = yes
+    trigger = {
+        OR = {
+            AND = {
+                has_country_flag = project_escort_selected
+                last_increased_tech = tech_precursor_escort
+            }
+            AND = {
+                has_country_flag = project_bc_selected
+                last_increased_tech = tech_precursor_bc
+            }
+            AND = {
+                has_country_flag = project_guard_selected
+                last_increased_tech = tech_precursor_guardian
+            }
+            AND = {
+                has_country_flag = project_initi_selected
+                last_increased_tech = tech_precursor_construcor
+            }
+            AND = {
+                has_country_flag = project_oracle_selected
+                last_increased_tech = tech_precursor_science
+            }
+            AND = {
+                has_country_flag = project_emiss_selected
+                last_increased_tech = tech_precursor_colonizer
+            }
+            AND = {
+                has_country_flag = project_sentinel_selected
+                last_increased_tech = tech_fe_tower_offense
+            }
+            AND = {
+                has_country_flag = project_pac_selected
+                last_increased_tech = tech_fe_assault_carrier
+            }
+            AND = {
+                has_country_flag = project_titan_selected
+                last_increased_tech = tech_precursor_titan
+            }
+            AND = {
+                has_country_flag = project_colos_selected
+                last_increased_tech = tech_precursor_colossus
+            }
+            AND = {
+                has_country_flag = project_citadel_selected
+                last_increased_tech = tech_precursor_citadel
+            }
+            AND = {
+                has_country_flag = project_enigmalith_selected
+                last_increased_tech = tech_precursor_enigmalith
+            }
+            AND = {
+                has_country_flag = project_dm_hab_selected
+                last_increased_tech = tech_dm_habitat
+            }
+            AND = {
+                has_country_flag = project_dm_jugg_selected
+                last_increased_tech = tech_precursor_juggernaut
+            }
+            AND = {
+                has_country_flag = project_aot_gatekeeper_selected
+                last_increased_tech = tech_gatekeepers
+            }
+        }
+    }
+    immediate = {
+        if = {
+            limit = {
+                has_country_flag = project_escort_selected
+            }
+            remove_country_flag = project_escort_selected
+        }
+        if = {
+            limit = {
+                has_country_flag = project_bc_selected
+            }
+            remove_country_flag = project_bc_selected
+        }
+        if = {
+            limit = {
+                has_country_flag = project_guard_selected
+            }
+            remove_country_flag = project_guard_selected
+        }
+        if = {
+            limit = {
+                has_country_flag = project_sentinel_selected
+            }
+            remove_country_flag = project_sentinel_selected
+        }
+        if = {
+            limit = {
+                has_country_flag = project_titan_selected
+            }
+            remove_country_flag = project_titan_selected
+        }
+        if = {
+            limit = {
+                has_country_flag = project_pac_selected
+            }
+            remove_country_flag = project_pac_selected
+        }
+        if = {
+            limit = {
+                has_country_flag = project_colos_selected
+            }
+            remove_country_flag = project_colos_selected
+        }
+        if = {
+            limit = {
+                has_country_flag = project_citadel_selected
+            }
+            remove_country_flag = project_citadel_selected
+        }
+        if = {
+            limit = {
+                has_country_flag = project_initi_selected
+            }
+            remove_country_flag = project_initi_selected
+        }
+        if = {
+            limit = {
+                has_country_flag = project_oracle_selected
+            }
+            remove_country_flag = project_oracle_selected
+        }
+        if = {
+            limit = {
+                has_country_flag = project_emiss_selected
+            }
+            remove_country_flag = project_emiss_selected
+        }
+        if = {
+            limit = {
+                has_country_flag = project_enigmalith_selected
+            }
+            remove_country_flag = project_enigmalith_selected
+        }
+        if = {
+            limit = {
+                has_country_flag = project_dm_hab_selected
+            }
+            remove_country_flag = project_dm_hab_selected
+        }
+        if = {
+            limit = {
+                has_country_flag = project_dm_jugg_selected
+            }
+            remove_country_flag = project_dm_jugg_selected
+        }
+        if = {
+            limit = {
+                has_country_flag = project_aot_gatekeeper_selected
+            }
+            remove_country_flag = project_aot_gatekeeper_selected
+        }
+        if = {
+            limit = {
+                has_special_project = RESEARCH_PRECURSOR_ATTEMPT
+            }
+            abort_special_project = {
+                type = RESEARCH_PRECURSOR_ATTEMPT
+            }
+        }
+        if = {
+            limit = {
+                has_special_project = RESEARCH_PRECURSOR_ATTEMPT_HIGH
+            }
+            abort_special_project = {
+                type = RESEARCH_PRECURSOR_ATTEMPT_HIGH
+            }
+        }
+        if = {
+            limit = {
+                has_special_project = RESEARCH_PRECURSOR_ATTEMPT_EXTREME
+            }
+            abort_special_project = {
+                type = RESEARCH_PRECURSOR_ATTEMPT_EXTREME
+            }
+        }
+        if = {
+            limit = {
+                has_special_project = RESEARCH_PRECURSOR_ATTEMPT_INSANE
+            }
+            abort_special_project = {
+                type = RESEARCH_PRECURSOR_ATTEMPT_INSANE
+            }
+        }
+        end_event_chain = acot_precursor_design_chain
+        remove_country_flag = precuursor_design_project_active
+    }
+    option = {
+        name = acot_precursor_databank.905.a
+        default_hide_option = yes
+    }
+}

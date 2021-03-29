@@ -1,0 +1,19 @@
+trait_docile_biorobot = {
+    cost = 2
+    allowed_archetypes = {
+        BIOMACHINE
+        ROBOT
+    }
+    initial = no
+    randomized = no
+    icon = gfx/interface/icons/traits/trait_docile.dds
+    species_potential_add = {
+        OR = {
+            has_trait = trait_biorobot
+            has_trait = trait_biorobot_2
+        }
+    }
+    modifier = {
+        species_empire_size_mult = -0.1
+    }
+}

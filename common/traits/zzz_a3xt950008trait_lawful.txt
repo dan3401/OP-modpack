@@ -1,0 +1,29 @@
+trait_lawful = {
+    cost = 3
+    potential_crossbreeding_chance = 1
+    initial = yes
+    randomized = yes
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+        PLANTOID
+    }
+    opposites = {
+        "trait_nerve_stapled"
+        "trait_syncretic_proles"
+        "trait_unruly"
+        "trait_deviants"
+        "trait_hive_mind"
+    }
+    potential_crossbreeding_chance = 1
+    modifier = {
+        pop_growth_from_immigration = 0.15
+        pop_happiness = 0.05
+        planet_jobs_energy_produces_mult = 0.08
+        species_empire_size_mult = -0.05
+        pop_government_ethic_attraction = 0.15
+    }
+    slave_cost = {
+        energy = 50
+    }
+}

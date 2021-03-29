@@ -1,0 +1,1 @@
+@shield_l_t8_upkeep_energy = 0.92

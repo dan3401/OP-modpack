@@ -1,0 +1,53 @@
+utility_component_template = {
+    key = "TITAN_SHIP_THRUSTER_AE"
+    size = small
+    icon = "GFX_ship_part_fe_thruster_2"
+    icon_frame = 1
+    power = -640
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = 80
+            sr_dark_matter = 12
+            acot_sr_dark_energy = 12
+        }
+    }
+    modifier = {
+        ship_base_speed_mult = 1.5
+        ship_evasion_add = 8
+    }
+    prerequisites = {
+        "tech_fe_thruster_2"
+    }
+    component_set = "thruster_components"
+    size_restriction = {
+        movable_fortress
+        titan
+        SCX_Dreadnought
+        Flagship
+        dcv
+        ultradreadnought
+        SCX_Dreadnought
+        fe_titan
+        precursor_titan
+        sofe_gatekeeper_warden
+        fe_assault_carrier
+        progenitor_carrier
+        aot_gatekeeper
+    }
+    ai_weight = {
+        weight = 30
+        modifier = {
+            factor = 0
+            has_monthly_income = {
+                resource = sr_dark_matter
+                value <= 2
+            }
+            has_resource = {
+                type = sr_dark_matter
+                amount <= 5
+            }
+        }
+    }
+    upgrades_to = "TITAN_SHIP_THRUSTER_SE"
+}

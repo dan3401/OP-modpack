@@ -1,0 +1,211 @@
+lost_empire = {
+    has_difficulty_bonuses = yes
+    counts_for_victory = yes
+    sub_title = "COUNTRY_LOST_EMPIRE"
+    sub_title_desc = "COUNTRY_LOST_EMPIRE_DESC"
+    share_survey_data = no
+    relations = yes
+    fallen_empire = yes
+    needs_survey = no
+    diplomatic_wars = yes
+    ship_disengagement = yes
+    army_disengagement = yes
+    uses_special_buildables = no
+    observable = yes
+    playable = yes
+    shuffle_pop_ethos = no
+    can_use_invalid_technology = no
+    pop_growth = no
+    faction = {
+        needs_border_access = no
+    }
+    ai = {
+        enabled = yes
+        declare_war = yes
+        min_navy_for_wars = 0
+        min_assault_armies_for_wars = 6
+        colonizer = no
+        internal_policies = yes
+        starbase_upgrade = yes
+        modification = no
+        traditions = yes
+        government = no
+        tech = yes
+        construction = yes
+        modules = {
+            military_minister_module
+            foreign_minister_module
+            interior_minister_module
+        }
+        army_data = {
+            gene_warrior_army = {
+                fraction = {
+                    factor = 75
+                    modifier = {
+                        factor = 0
+                        NOR = {
+                            has_ethic = ethic_fanatic_xenophile
+                            has_ethic = ethic_fanatic_egalitarian
+                            has_ethic = ethic_fanatic_pacifist
+                        }
+                    }
+                }
+            }
+            psionic_army = {
+                fraction = {
+                    factor = 75
+                    modifier = {
+                        factor = 0
+                        NOT = {
+                            has_ethic = ethic_fanatic_spiritualist
+                        }
+                    }
+                }
+            }
+            xenomorph_army = {
+                fraction = {
+                    factor = 75
+                    modifier = {
+                        factor = 0
+                        NOR = {
+                            has_ethic = ethic_fanatic_xenophobe
+                            has_ethic = ethic_fanatic_militarist
+                            has_ethic = ethic_fanatic_authoritarian
+                        }
+                    }
+                }
+            }
+            robotic_army = {
+                fraction = {
+                    factor = 75
+                    modifier = {
+                        factor = 0
+                        NOT = {
+                            has_ethic = ethic_fanatic_materialist
+                        }
+                    }
+                }
+            }
+            machine_assault_2 = {
+                fraction = {
+                    factor = 50
+                    modifier = {
+                        factor = 0
+                        NOT = {
+                            has_authority = auth_machine_intelligence
+                        }
+                    }
+                }
+            }
+            machine_assault_3 = {
+                fraction = {
+                    factor = 25
+                    modifier = {
+                        factor = 0
+                        NOT = {
+                            has_authority = auth_machine_intelligence
+                        }
+                    }
+                }
+            }
+        }
+    }
+    faction = {
+        hostile = no
+        needs_border_access = no
+        generate_borders = no
+        needs_colony = no
+    }
+    trade_routes_available = {
+        is_gestalt = no
+    }
+    modules = {
+        standard_technology_module = {
+        }
+        standard_event_module = {
+        }
+        standard_leader_module = {
+        }
+        standard_economy_module = {
+        }
+        standard_species_rights_module = {
+        }
+        standard_expansion_module = {
+        }
+        standard_pop_factions_module = {
+        }
+        exclusive_diplomacy_module = {
+            can_receive = {
+                action_declare_war
+                action_offer_peace
+                action_make_rival
+                action_end_rivalry
+                action_offer_trade_deal
+                action_cancel_trade_deal
+                action_insult
+            }
+            can_send = {
+                action_declare_war
+                action_make_rival
+                action_end_rivalry
+                action_offer_peace
+                action_offer_trade_deal
+                action_cancel_trade_deal
+                action_open_borders
+                action_close_borders
+            }
+        }
+    }
+    resources = {
+        category = country_base
+        produces = {
+            energy = 1000
+            minerals = 250
+            food = 100
+            alloys = 100
+            consumer_goods = 200
+            rare_crystals = 10
+            exotic_gases = 10
+            volatile_motes = 10
+            sr_dark_matter = 2
+            sr_living_metal = 2
+            influence = 3
+        }
+        produces = {
+            trigger = {
+                OR = {
+                    is_gestalt = no
+                    has_valid_civic = civic_machine_servitor
+                }
+            }
+            consumer_goods = 10
+        }
+        produces = {
+            trigger = {
+                OR = {
+                    is_regular_empire = yes
+                    is_hive_empire = yes
+                }
+                is_lithoid_empire = no
+            }
+            food = 10
+        }
+        produces = {
+            trigger = {
+                OR = {
+                    is_regular_empire = yes
+                    is_hive_empire = yes
+                }
+                is_lithoid_empire = yes
+            }
+            minerals = 10
+        }
+        produces = {
+            trigger = {
+                is_machine_empire = yes
+            }
+            energy = 10
+            minerals = 10
+        }
+    }
+}

@@ -1,0 +1,3 @@
+urmazin_system = {
+    has_star_flag = urmazin_system
+}

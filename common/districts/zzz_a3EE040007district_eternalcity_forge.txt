@@ -1,0 +1,38 @@
+district_eternalcity_forge = {
+    base_buildtime = 400
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        OR = {
+            is_planet_class = pc_eternal_city
+            is_planet_class = pc_eternal_ringworld_habitable
+        }
+    }
+    potential = {
+        OR = {
+            is_planet_class = pc_eternal_city
+            is_planet_class = pc_eternal_ringworld_habitable
+        }
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = 1000
+            energy = 1000
+            ambrosia = 100
+            virtue = 1000
+        }
+        upkeep = {
+            minerals = 50
+            energy = 50
+        }
+        produces = {
+            alloys = 100
+        }
+    }
+    planet_modifier = {
+        job_twlightweaver_add = 1
+    }
+    ai_weight = {
+        weight = 1
+    }
+}

@@ -1,0 +1,24 @@
+namespace = crisis
+planet_event = {
+    id = crisis.2053
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        is_planet_class = pc_ai
+        NOT = {
+            has_planet_flag = machine_lair
+        }
+        owner = {
+            is_country_type = "ai_empire"
+        }
+    }
+    immediate = {
+        owner = {
+            save_event_target_as = AI_crisis
+        }
+        create_ai_armies_acot = yes
+        planet_event = {
+            id = crisis.2052
+        }
+    }
+}

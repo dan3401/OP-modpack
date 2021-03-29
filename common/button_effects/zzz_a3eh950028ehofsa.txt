@@ -1,0 +1,15 @@
+ehofsa = {
+    potential = {
+        hidden_trigger = {
+            exists = from
+            is_discoverer = yes
+        }
+    }
+    allow = {
+        hidden_trigger = {
+            always = yes
+        }
+    }
+    effect = {
+    }
+}

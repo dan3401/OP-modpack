@@ -9,7 +9,6 @@ once = {
 	federation = {
 		trigger = {
 			has_federation = yes
-			NOR = { has_valid_civic = civic_peacekeepers }
 		}
 		resources = {
 			category = federation
@@ -38,16 +37,27 @@ per_relation = {
 	non_aggression_pact = {
 		trigger = {
 			has_non_aggression_pact = FROM
-			NOR = { has_valid_civic = civic_peacekeepers }
+			NOR = {
+				has_valid_civic = civic_inwards_perfection
+				has_valid_civic = civic_closed_collective
+				has_valid_civic = civic_closed_network
+			}
+			FROM = {
+				NOR = {
+					has_valid_civic = civic_inwards_perfection
+					has_valid_civic = civic_closed_collective
+					has_valid_civic = civic_closed_network
+				}
+			}
 		}
 		resources = {
 			category = non_aggression_pacts
 			upkeep = {
-				influence = 0.05
+				influence = 0.25
 			}
-		}
+		} 
 	}
-
+	
 	migration_pact = {
 		trigger = {
 			has_diplo_migration_treaty = FROM
@@ -63,7 +73,6 @@ per_relation = {
 					has_federation = yes
 					federation = { has_federation_law = free_migration_yes }
 					federation = { any_member = { is_same_value = FROM } }
-					has_ethic = ethic_fanatic_xenophobe
 				}
 			}
 		}
@@ -78,7 +87,6 @@ per_relation = {
 	research_agreement = {
 		trigger = {
 			has_research_agreement = FROM
-			NOR = { has_valid_civic = civic_peacekeepers }
 			NOT = {
 				AND = {
 					has_federation = yes
@@ -99,7 +107,7 @@ per_relation = {
 	commercial_pact = {
 		trigger = {
 			has_commercial_pact = FROM
-			NOR = { has_ascension_perk = ap_universal_transactions   has_valid_civic = civic_globalism }
+			NOT = { has_ascension_perk = ap_universal_transactions }
 		}
 
 		resources = {
@@ -113,7 +121,6 @@ per_relation = {
 	defensive_pact = {
 		trigger = {
 			has_defensive_pact = FROM
-			NOT = { has_valid_civic = civic_xeno_militarist }
 		}
 
 		resources = {
@@ -127,7 +134,6 @@ per_relation = {
 	guarantee = {
 		trigger = {
 			is_guaranteeing = FROM
-			NOR = { has_valid_civic = civic_xeno_militarist }
 		}
 		resources = {
 			category = guarantees

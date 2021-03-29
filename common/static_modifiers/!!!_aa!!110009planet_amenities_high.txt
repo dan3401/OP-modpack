@@ -1,0 +1,4 @@
+planet_amenities_high = {
+    pop_citizen_happiness = 0.2
+    trade_value_mult = 0.2
+}

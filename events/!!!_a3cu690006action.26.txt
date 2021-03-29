@@ -1,0 +1,92 @@
+namespace = action
+country_event = {
+    id = action.26
+    title = "action.10.name"
+    desc = "action.15.desc"
+    picture = GFX_evt_star_chart
+    location = FROMFROMFROM
+    trackable = yes
+    is_triggered_only = yes
+    trigger = {
+        FROM = {
+            is_country_type = dormant_marauders
+        }
+        OR = {
+            is_country_type = default
+            is_country_type = eternal_empire
+            is_country_type = ascended_empire
+            is_country_type = psionic_empire
+        }
+        NOR = {
+            AND = {
+                has_country_flag = marauder_encountered_1
+                from = {
+                    has_country_flag = marauder_1
+                }
+            }
+            AND = {
+                has_country_flag = marauder_encountered_2
+                from = {
+                    has_country_flag = marauder_2
+                }
+            }
+            AND = {
+                has_country_flag = marauder_encountered_3
+                from = {
+                    has_country_flag = marauder_3
+                }
+            }
+        }
+    }
+    immediate = {
+        from = {
+            save_event_target_as = encountered_marauder
+        }
+        capital_scope = {
+            save_event_target_as = pc_home
+        }
+        from = {
+            enable_special_project = {
+                name = "INVESTIGATE_MARAUDERS"
+                location = event_target:pc_home
+                owner = ROOT
+            }
+        }
+        if = {
+            limit = {
+                from = {
+                    has_country_flag = marauder_1
+                }
+            }
+            set_country_flag = marauder_encountered_1
+            break = yes
+        }
+        if = {
+            limit = {
+                from = {
+                    has_country_flag = marauder_2
+                }
+            }
+            set_country_flag = marauder_encountered_2
+            break = yes
+        }
+        if = {
+            limit = {
+                from = {
+                    has_country_flag = marauder_3
+                }
+            }
+            set_country_flag = marauder_encountered_3
+        }
+    }
+    option = {
+        name = "action.10.a"
+        tooltip = {
+            enable_special_project = {
+                name = "INVESTIGATE_MARAUDERS"
+                location = event_target:pc_home
+                owner = ROOT
+            }
+        }
+    }
+}

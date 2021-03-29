@@ -1,0 +1,65 @@
+district_defense = {
+    base_buildtime = 240
+    min_for_deposits_on_planet = 1
+    max_for_deposits_on_planet = 6
+    conversion_ratio = 1
+    convert_to = {
+        district_defense_uncapped
+    }
+    show_on_uncolonized = {
+        uses_district_set = standard
+        from = {
+            OR = {
+                has_ascension_perk = ap_pyramidal_society
+                has_country_flag = ap_pyramidal_society
+            }
+            is_default_empire = yes
+        }
+    }
+    potential = {
+        uses_district_set = standard
+        exists = owner
+        owner = {
+            OR = {
+                has_ascension_perk = ap_pyramidal_society
+                has_country_flag = ap_pyramidal_society
+            }
+            is_default_empire = yes
+        }
+    }
+    allow = {
+        NOR = {
+            has_modifier = resort_colony
+            has_modifier = slave_colony
+        }
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = 500
+        }
+        upkeep = {
+            energy = 2
+        }
+        produces = {
+            engineering_research = 2
+            unity = 1
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 2
+        job_ambassador_add = 1
+        job_military_expert_add = 2
+        job_border_controller_add = 2
+        job_soldier_add = 2
+    }
+    ai_weight = {
+        weight = 2
+    }
+    ai_resource_production = {
+        consumer_goods = 3
+        trigger = {
+            always = yes
+        }
+    }
+}

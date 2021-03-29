@@ -1,0 +1,19 @@
+giga_achievement_kaiser2 = {
+    potential = {
+        exists = from
+        has_country_flag = giga_achievement_kaiser2_notification
+    }
+    allow = {
+        hidden_trigger = {
+            always = yes
+        }
+    }
+    effect = {
+        custom_tooltip = "giga_achievement_kaiser2_tooltip"
+        hidden_effect = {
+            country_event = {
+                id = giga_achievements.001
+            }
+        }
+    }
+}

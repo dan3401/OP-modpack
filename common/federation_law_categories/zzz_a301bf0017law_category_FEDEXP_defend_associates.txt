@@ -1,0 +1,9 @@
+law_category_FEDEXP_defend_associates = {
+    laws = {
+        FEDEXP_defend_associates_none
+        FEDEXP_defend_associates_rivals
+        FEDEXP_defend_associates_all
+        FEDEXP_defend_associates_rivals_defensive_coalition
+        FEDEXP_defend_associates_all_defensive_coalition
+    }
+}

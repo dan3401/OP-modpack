@@ -1,0 +1,45 @@
+spriteTypes = {
+    SpriteType = {
+        name = "GFX_dna_engine_prototype"
+        texturefile = "gfx/interface/icons/relics/r_dna_engine_prototype.dds"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/interface/icons/relics/r_dna_engine_prototype_shine_1.dds"
+            animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds"
+            animationrotation = 0
+            animationlooping = yes
+            animationtime = 2
+            animationdelay = 10
+            animationblendmode = "add"
+            animationtype = "pulsing"
+            animationrotationoffset = {
+                x = 0
+                y = 0
+            }
+            animationtexturescale = {
+                x = 1
+                y = 1
+            }
+        }
+        legacy_lazy_load = no
+        animation = {
+            animationmaskfile = "gfx/interface/icons/relics/r_dna_engine_prototype_shine_2.dds"
+            animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds"
+            animationrotation = -60
+            animationlooping = yes
+            animationtime = 2
+            animationdelay = 1
+            animationblendmode = "add"
+            animationtype = "pulsing"
+            animationrotationoffset = {
+                x = 0
+                y = 0
+            }
+            animationtexturescale = {
+                x = 1
+                y = 1
+            }
+        }
+        legacy_lazy_load = no
+    }
+}

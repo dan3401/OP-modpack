@@ -1,0 +1,60 @@
+namespace = akx
+planet_event = {
+    id = akx.9100
+    title = akx.9100.name
+    desc = {
+        trigger = {
+            owner = {
+                NOT = {
+                    has_origin = origin_void_dwellers
+                }
+            }
+        }
+        text = akx.9100.desc
+    }
+    desc = {
+        trigger = {
+            owner = {
+                has_origin = origin_void_dwellers
+            }
+        }
+        text = akx.9100.desc.void
+    }
+    picture = GFX_evt_in_the_dark
+    show_sound = event_mystic_reveal
+    location = root
+    trackable = yes
+    is_triggered_only = yes
+    after = {
+        enable_special_project = {
+            name = LOOP_TEMPLE_PROJECT
+            location = this
+            owner = root.owner
+        }
+    }
+    option = {
+        name = akx.9100.spiritual.a
+        trigger = {
+            owner = {
+                OR = {
+                    has_ethic = ethic_fanatic_spiritualist
+                    has_ethic = ethic_spiritualist
+                }
+            }
+        }
+    }
+    option = {
+        name = akx.9100.neutral.a
+        trigger = {
+            owner = {
+                NOR = {
+                    has_ethic = ethic_fanatic_spiritualist
+                    has_ethic = ethic_spiritualist
+                }
+            }
+        }
+    }
+    option = {
+        name = akx.9100.b
+    }
+}

@@ -1,10 +1,55 @@
-#_[外交拓展]
-#_[杰兰特_ist]
-#_[rs_ss]
-#_[uhd_fq]	1715190550	<Unofficial Hive DLC: Forgotten Queens>
-#_[ag]
+#message_type = {
+#	key = "CONSTRUCTION_MESSAGE_TYPE"				# Message key, used from code.
+#	icon = "GFX_message_other_construction"			# Sprite to use for gui item "message_icon_button"
+#	icon_frame = 1									# Frame index to use for gui item "message_frame"
+#
+#	name = "MESSAGE_DECLARE_WAR_TITLE"			# Localization key to use for title, if impty it will use "MESSAGE_<key>_TITLE instead.
+#	sound = "advisor_notification_construction_complete"	# Sound to play on message creation
+#
+#	sound_is_advisor = yes							# Depricated and does nothing.
+#	auto_opens = others								# Specifies if the message should be auto opened or not, valid: 'none', 'player', 'others' and 'all' (default: 'player). Some messages as events are ignoring this since thay have their own option.
+#	ping = "ping_notification_green"					# Ping map to use for map visualization.
+#}
 
+message_type = {
+	key = MESSAGE_TYPE_TIMELESS_SHIFT
+	icon = "GFX_message_timeless_shift"
+	icon_frame = 1
 
+	name = "MESSAGE_TIMELESS_SHIFT_TITLE"
+	sound = "notification"
+	ping = "ping_notification_green"
+}
+
+message_type = {
+	key = MESSAGE_TYPE_STARVING_MOONS
+	icon = "GFX_message_starving_moons"
+	icon_frame = 1
+
+	name = "MESSAGE_STARVING_MOONS_TITLE"
+	sound = "notification"
+	ping = "ping_notification_red"
+}
+
+message_type = {
+	key = MESSAGE_TYPE_TRAIT_GAINED
+	icon = "GFX_message_trait_gained"
+	icon_frame = 1
+
+	name = "MESSAGE_TRAIT_GAINED_TITLE"
+	sound = "notification"
+	ping = "ping_notification_green"
+}
+
+message_type = {
+	key = MESSAGE_TYPE_PARASITE_COMPLETE
+	icon = "GFX_message_parasite_complete"
+	icon_frame = 1
+
+	name = "MESSAGE_PARASITE_COMPLETE_TITLE"
+	sound = "notification"
+	ping = "ping_notification_green"
+}
 
 message_type = {
 	key = "CONSTRUCTION_MESSAGE_TYPE"
@@ -1772,261 +1817,4 @@ message_type = {
 	sound = "diplomatic_notification"
 	ping = "ping_notification_yellow"
 	auto_opens = others
-}
-
-
-
-
-###_[外交拓展]
-message_type = {
-	key = "DE_HAS_INTERNATIONAL_COUNTRY"
-	icon = "GFX_message_DE_has_international_country"
-	icon_frame = 1
-	
-	name = "MESSAGE_DE_HAS_INTERNATIONAL_COUNTRY_TITLE"
-	#sound = "spaceport_complete_alert"
-	#sound = "advisor_notification_construction_complete"
-	sound = "diplomatic_notification"
-	ping = "ping_notification_yellow"
-	auto_opens = others
-}
-
-message_type = {
-	key = "DE_NO_INTERNATIONAL_COUNTRY"
-	icon = "GFX_message_DE_no_international_country"
-	icon_frame = 1
-	
-	name = "MESSAGE_DE_NO_INTERNATIONAL_COUNTRY_TITLE"
-	#sound = "spaceport_complete_alert"
-	#sound = "advisor_notification_construction_complete"
-	sound = "diplomatic_notification"
-	ping = "ping_notification_yellow"
-	auto_opens = others
-}
-
-
-message_type = {
-	key = "DE_HAS_INFLUENCE_COUNTRY"
-	icon = "GFX_message_DE_has_influence_country"
-	icon_frame = 1
-
-	name = "MESSAGE_DE_HAS_INFLUENCE_COUNTRY_TITLE"
-	sound = "diplomatic_notification"
-	ping = "ping_notification_green"
-}
-
-
-message_type = {
-	key = "DE_BREAK_REPUTATION"
-	icon = "GFX_message_DE_break_reputation"
-	icon_frame = 1
-
-	name = "MESSAGE_DE_BREAK_REPUTATION_TITLE"
-	sound = "diplomatic_notification"
-	ping = "ping_notification_green"
-}
-
-message_type = {
-	key = "DE_UP_REPUTATION"
-	icon = "GFX_message_DE_up_reputation"
-	icon_frame = 1
-
-	name = "MESSAGE_DE_UP_REPUTATION_TITLE"
-	sound = "diplomatic_notification"
-	ping = "ping_notification_green"
-}
-message_type = {
-	icon = "GFX_message_mde_spy_mission"
-	icon_frame = 1
-	key = "mde_spy_push"
-	name = "MESSAGE_MDE_SPY_PUSH_TITLE"
-	sound = "diplomatic_notification"
-	ping = "ping_notification_green"
-}
-message_type = {
-	icon = "GFX_message_mde_spy_mission"
-	icon_frame = 1
-	key = "mdeq_group_leader_change"
-	name = "MESSAGE_MDEQ_GROUP_LEADER_CHANGE_TITLE"
-	sound = "diplomatic_notification"
-	ping = "ping_notification_green"
-}
-message_type = {
-	icon = "GFX_message_mde_spy_warning"
-	icon_frame = 1
-	key = "mde_spy_warning"
-	name = "MESSAGE_MDE_SPY_WARNING_TITLE"
-	sound = "diplomatic_notification"
-	ping = "ping_notification_green"
-}
-
-
-
-
-###_[杰兰特_ist]
-message_type = {
-	key = "LOW_STABILITY_MESSAGE_TYPE"
-	icon = "GFX_message_stability"
-	icon_frame = 2
-
-	name = "MESSAGE_LOW_STABILITY_MESSAGE_TYPE_TITLE"
-	sound = "unrest_alert"
-	ping = "ping_notification_red"
-}
-
-message_type = {
-	key = "MEDIUM_REVOLT_RISK_MESSAGE_TYPE"
-	icon = "GFX_message_medium_revolt_risk"
-	icon_frame = 2
-
-	name = "MESSAGE_MEDIUM_REVOLT_RISK_MESSAGE_TYPE_TITLE"
-	sound = "unrest_alert"
-	ping = "ping_notification_yellow"
-}
-
-message_type = {
-	key = "HIGH_REVOLT_RISK_MESSAGE_TYPE"
-	icon = "GFX_message_high_revolt_risk"
-	icon_frame = 2
-
-	name = "MESSAGE_HIGH_REVOLT_RISK_MESSAGE_TYPE_TITLE"
-	sound = "rebels_revolt_alert"
-	ping = "ping_notification_red"
-}
-
-
-
-
-###_[rs_ss]
-message_type = {
-	key = "SHIFT_STORM_OCCURRED"
-	icon = "GFX_message_shift_storm"
-	icon_frame = 1
-
-	name = "MESSAGE_SHIFT_STORM_OCCURRED_TITLE"
-	sound = "notification"
-	ping = "ping_notification_yellow"
-}
-
-message_type = {
-	key = "RIFT_STORM_OPEN"
-	icon = "GFX_message_rift_open"
-	icon_frame = 1
-
-	name = "MESSAGE_RIFT_STORM_OPEN_TITLE"
-	sound = "notification"
-	ping = "ping_notification_yellow"
-}
-
-message_type = {
-	key = "RIFT_STORM_CLOSE"
-	icon = "GFX_message_rift_close"
-	icon_frame = 1
-
-	name = "MESSAGE_RIFT_STORM_CLOSE_TITLE"
-	sound = "notification"
-	ping = "ping_notification_yellow"
-}
-
-message_type = {
-	key = "BRIGE_STORM_OPEN"
-	icon = "GFX_message_brige_open"
-	icon_frame = 1
-
-	name = "MESSAGE_BRIGE_STORM_OPEN_TITLE"
-	sound = "notification"
-	ping = "ping_notification_yellow"
-}
-
-message_type = {
-	key = "BRIGE_STORM_CLOSE"
-	icon = "GFX_message_brige_close"
-	icon_frame = 1
-
-	name = "MESSAGE_BRIGE_STORM_CLOSE_TITLE"
-	sound = "notification"
-	ping = "ping_notification_yellow"
-}
-
-message_type = {
-	key = "NEW_WORMHOLE_FORMED"
-	icon = "GFX_message_wormhole_formed"
-	icon_frame = 1
-
-	name = "MESSAGE_NEW_WORMHOLE_FORMED_TITLE"
-	sound = "notification"
-	ping = "ping_notification_yellow"
-}
-
-
-
-
-###_[uhd_fq]
-message_type = {
-	key = MESSAGE_TYPE_TIMELESS_SHIFT
-	icon = "GFX_message_timeless_shift"
-	icon_frame = 1
-
-	name = "MESSAGE_TIMELESS_SHIFT_TITLE"
-	sound = "notification"
-	ping = "ping_notification_green"
-}
-
-message_type = {
-	key = MESSAGE_TYPE_STARVING_MOONS
-	icon = "GFX_message_starving_moons"
-	icon_frame = 1
-
-	name = "MESSAGE_STARVING_MOONS_TITLE"
-	sound = "notification"
-	ping = "ping_notification_red"
-}
-
-message_type = {
-	key = MESSAGE_TYPE_TRAIT_GAINED
-	icon = "GFX_message_trait_gained"
-	icon_frame = 1
-
-	name = "MESSAGE_TRAIT_GAINED_TITLE"
-	sound = "notification"
-	ping = "ping_notification_green"
-}
-
-message_type = {
-	key = MESSAGE_TYPE_PARASITE_COMPLETE
-	icon = "GFX_message_parasite_complete"
-	icon_frame = 1
-
-	name = "MESSAGE_PARASITE_COMPLETE_TITLE"
-	sound = "notification"
-	ping = "ping_notification_green"
-}
-
-
-
-
-###_[ag]	############################################################
-message_type = {
-	key = "message_ag_research_project_completed"
-	icon = "GFX_ag_research_project_completed"
-	icon_frame = 1
-	name = "message_ag_research_project_completed_title"
-	sound = "notification"
-	ping = "ping_notification_green"
-}
-message_type = {
-	key = "message_ag_research_project_in_progress"
-	icon = "GFX_ag_research_project_in_progress"
-	icon_frame = 1
-	name = "message_ag_research_project_in_progress_title"
-	sound = "notification"
-	ping = "ping_notification_yellow"
-}
-message_type = {
-	key = "message_ag_research_project_abort"
-	icon = "GFX_ag_research_project_abort"
-	icon_frame = 1
-	name = "message_ag_research_project_abort_title"
-	sound = "notification"
-	ping = "ping_notification_red"
 }

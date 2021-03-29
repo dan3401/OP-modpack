@@ -1,0 +1,110 @@
+namespace = acot_precursor_databank
+country_event = {
+    id = acot_precursor_databank.2
+    title = acot_precursor_databank.2.name
+    desc = acot_precursor_databank.2.desc.a
+    desc = acot_precursor_databank.2.desc.b
+    desc = acot_precursor_databank.2.desc.c
+    desc = acot_precursor_databank.2.desc.d
+    is_triggered_only = yes
+    diplomatic = yes
+    custom_gui = "enclave_curator_window"
+    picture_event_data = {
+        room = acot_databank_room
+    }
+    trigger = {
+        from = {
+            is_country_type = acot_databank
+        }
+        has_country_flag = acot_databank_installed
+        NOT = {
+            has_country_flag = acot_databank_diplomacy_engaged
+        }
+    }
+    immediate = {
+        set_country_flag = acot_databank_diplomacy_engaged
+    }
+    after = {
+        hidden_effect = {
+            remove_country_flag = acot_databank_diplomacy_engaged
+        }
+    }
+    option = {
+        trigger = {
+            NOR = {
+                has_tech_option = tech_dark_matter_power_core_ae
+                has_technology = tech_dark_matter_power_core_ae
+                has_country_flag = learned_dm_alpha_existence
+            }
+        }
+        name = acot_precursor_databank.2.a
+        hidden_effect = {
+            country_event = {
+                id = acot_precursor_databank.3
+            }
+        }
+    }
+    option = {
+        name = acot_precursor_databank.2.b
+        hidden_effect = {
+            country_event = {
+                id = acot_precursor_databank.4
+            }
+        }
+    }
+    option = {
+        trigger = {
+            is_country_type = swarm
+        }
+        name = acot_precursor_databank.2.c
+    }
+    option = {
+        name = acot_precursor_databank.2.d
+        hidden_effect = {
+            country_event = {
+                id = acot_precursor_databank.6
+            }
+        }
+    }
+    option = {
+        name = acot_precursor_databank.2.e
+        hidden_effect = {
+            country_event = {
+                id = acot_precursor_databank.6
+            }
+        }
+    }
+    option = {
+        name = acot_precursor_databank.2.g
+        trigger = {
+            has_ascension_perk = ap_precursor_dream
+            NAND = {
+                has_technology = tech_precursor_escort
+                has_technology = tech_precursor_bc
+                has_technology = tech_precursor_titan
+                has_technology = tech_fe_assault_carrier
+                has_technology = tech_fe_tower_offense
+                has_technology = tech_precursor_guardian
+                has_technology = tech_precursor_colossus
+                has_technology = tech_precursor_construcor
+                has_technology = tech_precursor_science
+                has_technology = tech_precursor_colonizer
+                has_technology = tech_precursor_citadel
+                has_technology = tech_dm_habitat
+                has_technology = tech_precursor_enigmalith
+                has_technology = tech_gatekeepers
+                has_technology = tech_precursor_juggernaut
+            }
+        }
+        hidden_effect = {
+            country_event = {
+                id = acot_precursor_databank.9
+            }
+        }
+    }
+    option = {
+        name = acot_precursor_databank.2.f
+        response_text = EXCELLENT
+        default_hide_option = yes
+    }
+}

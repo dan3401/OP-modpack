@@ -1,0 +1,109 @@
+synth_world_cyber_merchant = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = building_galactic_stock_exchange
+    clothes_texture_index = 1
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible = {
+        specialist_job_check_trigger = yes
+    }
+    planet_modifier = {
+        planet_amenities_add = 3
+        trade_value_add = 8
+        pop_housing_usage_add = -1
+    }
+    resources = {
+        category = planet_merchants
+        produces = {
+            consumer_goods = 4
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_trait = trait_thrifty
+        }
+        modifier = {
+            trade_value_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_trait = trait_nuumismatic_administration
+        }
+        modifier = {
+            trade_value_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            OR = {
+                has_trait = trait_robot_domestic_protocols
+                has_trait = trait_charismatic
+            }
+        }
+        modifier = {
+            planet_amenities_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_trait = trait_repugnant
+        }
+        modifier = {
+            planet_amenities_add = -1
+        }
+    }
+    weight = {
+        weight = @ruler_job_weight
+        modifier = {
+            factor = 2
+            has_trait = trait_thrifty
+        }
+        modifier = {
+            factor = 2
+            has_trait = trait_nuumismatic_administration
+        }
+        modifier = {
+            factor = 1.5
+            OR = {
+                has_trait = trait_robot_domestic_protocols
+                has_trait = trait_charismatic
+            }
+        }
+        modifier = {
+            factor = 0.5
+            has_trait = trait_repugnant
+        }
+        modifier = {
+            factor = 5
+            has_job = synth_world_cyber_merchant
+        }
+        modifier = {
+            factor = 0.01
+            planet.controller = {
+                OR = {
+                    is_country_type = swarm
+                    is_country_type = ai_empire
+                }
+            }
+            OR = {
+                NOT = {
+                    exists = event_target:custodian_bot
+                }
+                AND = {
+                    exists = event_target:custodian_bot
+                    NOT = {
+                        species = {
+                            is_same_value = event_target:custodian_bot
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

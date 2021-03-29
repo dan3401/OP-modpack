@@ -1,0 +1,34 @@
+leader_trait_water_type_Steady_Stream_10 = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/EeveelutionTypes/water_type.png"
+    self_modifier = {
+        leader_age = 50
+    }
+    leader_potential_add = {
+        NOT = {
+            from = {
+                has_ethic = "ethic_gestalt_consciousness"
+            }
+        }
+    }
+    leader_trait = all
+    opposites = {
+        "leader_trait_water_type_Steady_Stream_2"
+        "leader_trait_water_type_Steady_Stream_3"
+        "leader_trait_water_type_Steady_Stream_4"
+        "leader_trait_water_type_Steady_Stream_5"
+        "leader_trait_water_type_Steady_Stream_6"
+        "leader_trait_water_type_Steady_Stream_7"
+        "leader_trait_water_type_Steady_Stream_8"
+        "leader_trait_water_type_Steady_Stream_9"
+        "leader_trait_water_type_Steady_Stream_1"
+    }
+    leader_potential_add = {
+        from = {
+            any_owned_pop = {
+                pop_has_trait = trait_water_type_mega_evolution
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+ruler_trait_ingenious_machinedlc = {
+    icon = "gfx/interface/icons/traits/leader_traits/ruler_trait_ingenious_machinedlc.dds"
+    cost = 1
+    modification = no
+    initial = no
+    randomized = no
+    leader_class = {
+        ruler
+    }
+    leader_trait = {
+        ruler
+    }
+    prerequisites = {
+        tech_central_core_modifying
+    }
+    modifier = {
+        country_energy_produces_mult = 0.2
+    }
+}

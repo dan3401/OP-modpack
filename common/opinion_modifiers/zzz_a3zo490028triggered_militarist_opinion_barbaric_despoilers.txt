@@ -1,0 +1,18 @@
+triggered_militarist_opinion_barbaric_despoilers = {
+    trigger = {
+        OR = {
+        is_country_type = default
+        is_country_type = ascended_empire
+        }
+        is_militarist = yes
+        NOT = {
+            has_civic = civic_barbaric_despoilers
+        }
+        FROM = {
+            has_civic = civic_barbaric_despoilers
+        }
+    }
+    opinion = {
+        base = -20
+    }
+}

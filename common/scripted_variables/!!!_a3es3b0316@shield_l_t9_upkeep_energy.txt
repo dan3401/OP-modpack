@@ -1,0 +1,1 @@
+@shield_l_t9_upkeep_energy = 1.12

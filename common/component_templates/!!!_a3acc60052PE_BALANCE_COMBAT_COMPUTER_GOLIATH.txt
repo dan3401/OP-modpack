@@ -1,0 +1,51 @@
+@armor_s_pe_cost = 10
+@armor_s_pe_cost = 15
+utility_component_template = {
+    key = "PE_BALANCE_COMBAT_COMPUTER_GOLIATH"
+    size = small
+    icon = "GFX_ship_part_computer_phi_balanced"
+    icon_frame = 1
+    power = -80
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @armor_s_pe_cost
+        }
+    }
+    class_restriction = {
+        shipclass_military
+        shipclass_starbase
+    }
+    size_restriction = {
+        giga_planet_behemoth
+        juggernaut
+        ascended_juggernaut
+        precursor_juggernaut
+        movable_fortress
+        fe_goliath
+        Carrier
+        dcv
+        Flagship
+        sofe_aegis_guard
+        fe_assault_carrier
+        sofe_gatekeeper_warden
+        aot_gatekeeper
+        ultradreadnought
+        progenitor_avatar
+    }
+    component_set = "combat_computers"
+    ship_behavior = "origin_balance_goliath"
+    ship_modifier = {
+        ship_fire_rate_mult = 0.5
+        ship_tracking_add = 50
+        ship_weapon_damage = 0.5
+        ship_accuracy_mult = 0.5
+        ship_evasion_mult = 0.5
+    }
+    prerequisites = {
+        "tech_computer_phi"
+    }
+    ai_weight = {
+        weight = 400
+    }
+}

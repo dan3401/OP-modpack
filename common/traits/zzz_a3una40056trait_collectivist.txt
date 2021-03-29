@@ -1,0 +1,24 @@
+trait_collectivist = {
+    cost = 1
+    potential_crossbreeding_chance = 1
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+        PLANTOID
+    }
+    opposites = {
+        "trait_unpredictable"
+        "trait_loyalist"
+        "trait_clone"
+        "trait_hive"
+        "trait_conformists"
+        "trait_deviants"
+        "trait_individualist"
+        "trait_hive_mind"
+    }
+    modifier = {
+        planet_pops_consumer_goods_upkeep_mult = -0.1
+        planet_jobs_energy_produces_mult = -0.08
+        pop_housing_usage_mult = -0.1
+    }
+}

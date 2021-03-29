@@ -1,0 +1,74 @@
+district_minerals_convert = {
+    base_buildtime = 720
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        from = {
+            has_ascension_perk = ap_planetary_system
+        }
+        is_planet_class = pc_smart_factory
+    }
+    potential = {
+        exists = owner
+        owner = {
+            has_ascension_perk = ap_planetary_system
+        }
+        is_planet_class = pc_smart_factory
+    }
+    conversion_ratio = 1
+    convert_to = {
+        district_metal_dismantle
+    }
+    resources = {
+        category = planet_districts_machinedlc
+        produces = {
+            volatile_motes = 4
+            rare_crystals = 4
+            exotic_gases = 4
+        }
+        cost = {
+            minerals = @planetary_system_minerals_cost
+        }
+        upkeep = {
+            minerals = 60
+            energy = @planetary_system_energy_upkeep
+        }
+    }
+    planet_modifier = {
+        planet_amenities_no_happiness_add = -10
+        planet_districts_machinedlc_produces_mult = -0.1
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 600
+            owner = {
+                has_monthly_income = {
+                    resource = volatile_motes
+                    value < 2
+                }
+            }
+        }
+        modifier = {
+            weight = 600
+            owner = {
+                has_monthly_income = {
+                    resource = exotic_gases
+                    value < 2
+                }
+            }
+        }
+        modifier = {
+            weight = 600
+            owner = {
+                has_monthly_income = {
+                    resource = rare_crystals
+                    value < 2
+                }
+            }
+        }
+        modifier = {
+            weight = 0
+            free_amenities < 2
+        }
+    }
+}

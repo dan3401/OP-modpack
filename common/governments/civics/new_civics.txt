@@ -1,0 +1,261 @@
+civic_church_senate = {
+	#description = "approved_by_traditionalist_faction"
+	potential = { ethics = { NOT = { value = ethic_hive_mind } } }
+	possible = {
+		authority = {
+			value = auth_democratic
+		}
+		ethics = {
+			OR = {
+				text = civic_tooltip_spiritualist
+				value = ethic_fanatic_spiritualist
+				value = ethic_spiritualist
+			}
+		}
+	}
+	random_weight = { base = 1 }
+	modifier = {
+		pop_government_ethic_attraction = 0.10
+		edict_influence_cost = -0.10
+	}
+}
+
+civic_pioneer_foundation = {
+	potential = { ethics = { NOT = { value = ethic_hive_mind } } }
+	random_weight = { base = 1 }
+	modifier = {
+		science_ship_survey_speed = 0.30
+		planet_colony_development_speed_mult = 0.50
+	}
+}
+
+civic_diplomatic_tradition = {
+	#description = "diplomatic_general_opinion"
+	potential = { ethics = { NOT = { value = ethic_hive_mind } } }
+	possible = {
+		ethics = {
+			NOR = {
+				text = civic_tooltip_not_xenophobe
+				value = ethic_fanatic_xenophobe
+				value = ethic_xenophobe
+			}
+		}
+	}
+	random_weight = { base = 1 }
+	modifier = {
+		country_trust_growth = 0.15
+		country_trust_cap_add = 25
+		#custom_tooltip = diplomatic_general_opinion
+	}
+}
+
+civic_food_rationing = {
+	potential = { ethics = { NOT = { value = ethic_hive_mind } } }
+	random_weight = { base = 1 }
+	modifier = {
+		pop_growth_speed = 0.10
+	}
+}
+
+civic_efficient_power_regulation = {
+	potential = { ethics = { NOT = { value = ethic_hive_mind } } }
+	random_weight = { base = 1 }
+	modifier = {
+		planet_building_upkeep_mult = -0.20
+	}
+}
+
+civic_military_industrial_complex = {
+	potential = { ethics = { NOT = { value = ethic_hive_mind } } }
+	random_weight = { base = 1 }
+	possible = {
+		ethics = {
+			NOR = {
+				text = civic_tooltip_not_pacifist
+				value = ethic_fanatic_pacifist
+				value = ethic_pacifist
+			}
+		}
+	}
+	modifier = {
+		shipsize_corvette_build_cost_mult = -0.15
+		shipsize_corvette_construction_speed_mult = 0.15
+		shipsize_destroyer_build_cost_mult = -0.15
+		shipsize_destroyer_construction_speed_mult = 0.15
+		shipsize_cruiser_build_cost_mult = -0.15
+		shipsize_cruiser_construction_speed_mult = 0.15
+		shipsize_battleship_build_cost_mult = -0.15
+		shipsize_battleship_construction_speed_mult = 0.15
+		planet_army_build_cost_mult = -0.20
+	}
+}
+
+civic_offworld_engineering_complex = {
+	potential = { ethics = { NOT = { value = ethic_hive_mind } } }
+	random_weight = { base = 1 }
+	modifier = {
+		shipsize_orbital_station_build_cost_mult = -0.50
+		#shipsize_orbital_station_construction_speed_mult = 0.20
+		spaceport_module_cost_mult = -0.25
+		#spaceport_module_construction_speed_mult = 0.20
+		shipsize_military_station_small_build_cost_mult = -0.15
+		shipsize_military_station_medium_build_cost_mult = -0.15
+		shipsize_military_station_large_build_cost_mult = -0.15
+	}
+}
+
+civic_geniocracy = {
+	potential = { ethics = { NOT = { value = ethic_hive_mind } } }
+	possible = {
+		civics = {
+			NOR = {
+				value = civic_aristocratic_elite
+			}
+		}
+	}
+	random_weight = { base = 1 }
+	modifier = {
+		species_leader_exp_gain = 0.10
+	}
+	
+}
+
+civic_gerontocracy = {
+	potential = { ethics = { NOT = { value = ethic_hive_mind } } }
+	random_weight = { base = 1 }
+	modifier = {
+		leader_age = 15
+	}
+}
+
+civic_pluralistic_tradition = {
+	#description = "approved_by_traditionalist_faction"
+	potential = { ethics = { NOT = { value = ethic_hive_mind } } }
+	possible = {
+		ethics = {
+			NOR = {
+				text = civic_tooltip_not_xenophobe
+				value = ethic_fanatic_xenophobe
+				value = ethic_xenophobe
+			}
+			NOR = {
+				text = civic_tooltip_not_materialist
+				value = ethic_fanatic_materialist
+				value = ethic_materialist
+			}
+		}
+	}
+	random_weight = { base = 1 }
+	modifier = {
+		species_leader_exp_gain = 0.05
+		planet_unrest_add = -10
+	}
+}
+
+civic_keys_to_the_future = {
+	potential = { ethics = { NOT = { value = ethic_hive_mind } } }
+	random_weight = { base = 1 }
+	modifier = {
+		all_technology_research_speed = 0.05
+	}
+}
+
+civic_royal_figurehead = {
+	#description = "approved_by_totalitarian_faction"
+	potential = { ethics = { NOT = { value = ethic_hive_mind } } }
+	possible = {	
+		ethics = {
+			NOT = {
+				value = ethic_fanatic_egalitarian
+			}
+		}
+		
+		authority = {
+			NOT = { 
+				value = auth_imperial
+			}
+		}
+	
+		civics = {
+			NOR = {
+				value = civic_beacon_of_liberty
+				value = civic_idealistic_foundation
+			}
+		}
+	}
+	random_weight = { base = 1 }
+	modifier = {
+		country_resource_unity_mult = 0.10
+		country_resource_influence_add = 0.25
+	}
+}
+
+civic_temple_gardens = {
+	description = "civic_tooltip_temple_gardens_effects"
+	potential = { ethics = { NOT = { value = ethic_hive_mind } } }
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_spiritualist
+				value = ethic_fanatic_spiritualist
+				value = ethic_spiritualist
+			}
+		}
+		civics = {
+			NOR = {
+				value = civic_temple_workshops
+			}
+		}
+	}
+	random_weight = { base = 1 }
+}
+
+civic_temple_workshops = {
+	description = "civic_tooltip_temple_workshops_effects"
+	potential = { ethics = { NOT = { value = ethic_hive_mind } } }
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_spiritualist
+				value = ethic_fanatic_spiritualist
+				value = ethic_spiritualist
+			}
+		}
+		civics = {
+			NOR = {
+				value = civic_temple_gardens
+			}
+		}
+	}
+	random_weight = { base = 1 }
+}
+
+#civic_fanatical_befrienders = {
+#	potential = { ethics = { NOT = { value = ethic_hive_mind } } }
+#	possible = {
+#		ethics = {
+#			value = ethic_fanatic_xenophile
+#			value = ethic_militarist
+#		}
+#		civics = {
+#			NOR = {
+#				value = civic_diplomatic_tradition
+#			}
+#		}
+#		traits = {
+#			value = trait_repugnant
+#		}
+#	}
+#	random_weight = {
+#		base = 0
+#	}
+#
+#	#description = "civic_tooltip_fanatic_befrienders_effects"
+#	modifier = {
+#		ship_weapon_range_mult = 0.1
+#		army_morale = 0.20
+#		diplomacy_influence_cost = -2.00
+#		rivalry_influence_gain = -1.00
+#		max_rivalries = -3
+#	}
+#}

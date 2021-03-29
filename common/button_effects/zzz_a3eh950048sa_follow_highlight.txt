@@ -1,0 +1,20 @@
+sa_follow_highlight = {
+    potential = {
+        hidden_trigger = {
+            has_global_flag = sa_target_follow
+            exists = from
+            is_discoverer = yes
+        }
+    }
+    allow = {
+        hidden_trigger = {
+            exists = event_target:ehof_annihilator
+        }
+    }
+    effect = {
+        custom_tooltip = "ehof_sa_follow"
+        hidden_effect = {
+            annihilator_follow = yes
+        }
+    }
+}

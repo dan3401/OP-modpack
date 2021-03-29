@@ -1,0 +1,21 @@
+triggered_opinion_imperial_authority = {
+    trigger = {
+        OR = {
+        is_country_type = default
+            is_country_type = ascended_empire
+            is_country_type = eternal_empire
+        }
+        has_authority = auth_imperial
+        FROM = {
+            OR = {
+                is_country_type = default
+                is_country_type = ascended_empire
+                is_country_type = eternal_empire
+            }
+            has_authority = auth_imperial
+        }
+    }
+    opinion = {
+        base = 10
+    }
+}

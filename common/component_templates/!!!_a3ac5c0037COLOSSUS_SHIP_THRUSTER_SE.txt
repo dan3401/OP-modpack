@@ -1,0 +1,47 @@
+utility_component_template = {
+    key = "COLOSSUS_SHIP_THRUSTER_SE"
+    size = small
+    icon = "GFX_ship_part_stellarite_thruste"
+    icon_frame = 1
+    power = -800
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = 150
+            energy = 450
+            acot_sr_stellarite = 3.5
+        }
+    }
+    modifier = {
+        ship_base_speed_mult = 1.75
+        ship_evasion_add = 12
+    }
+    prerequisites = {
+        "tech_stellarite_thruster"
+    }
+    component_set = "thruster_components"
+    size_restriction = {
+        colossus
+        precursor_colossus
+        fe_goliath
+        Flagship
+        ultradreadnought
+        juggernaut
+        ascended_juggernaut
+        precursor_juggernaut
+    }
+    ai_weight = {
+        weight = 40
+        modifier = {
+            factor = 0
+            has_resource = {
+                type = acot_sr_stellarite
+                amount <= 5
+            }
+            has_monthly_income = {
+                resource = acot_sr_stellarite
+                value <= 3
+            }
+        }
+    }
+}

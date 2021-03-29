@@ -1,0 +1,27 @@
+sa_defend = {
+    potential = {
+        hidden_trigger = {
+            NOT = {
+                has_global_flag = sa_target_defend
+            }
+            exists = from
+            is_discoverer = yes
+        }
+    }
+    allow = {
+        hidden_trigger = {
+            exists = event_target:ehof_annihilator
+        }
+    }
+    effect = {
+        custom_tooltip = "ehof_sa_defend"
+        hidden_effect = {
+            annihilator_defend = yes
+            remove_global_flag = annihilator_returned
+            set_timed_global_flag = {
+                flag = annihilator_returning
+                days = @ehof_ui_notification_time
+            }
+        }
+    }
+}

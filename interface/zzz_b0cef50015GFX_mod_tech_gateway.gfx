@@ -1,0 +1,6 @@
+spriteTypes = {
+    SpriteType = {
+        name = "GFX_mod_tech_gateway"
+        texturefile = "gfx/interface/icons/modifiers/mod_tech_gateway.dds"
+    }
+}

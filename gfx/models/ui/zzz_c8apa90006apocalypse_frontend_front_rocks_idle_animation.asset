@@ -1,0 +1,4 @@
+animation = {
+    name = "apocalypse_frontend_front_rocks_idle_animation"
+    file = "apocalypse_frontend_front_rocks_idle.anim"
+}

@@ -1,0 +1,162 @@
+acot_dark_matter_obelisk_core = {
+    entity = "precursor_dark_obelisk_entity"
+    construction_entity = "precursor_dark_obelisk_entity"
+    portrait = "GFX_acot_dark_obelisk_background"
+    prerequisites = {
+        "tech_precursor_enigmalith"
+    }
+    place_entity_on_planet_plane = no
+    entity_offset = {
+        x = 0
+        y = 0
+    }
+    potential = {
+    }
+    placement_rules = {
+        planet_possible = {
+            custom_tooltip = {
+                fail_text = "requires_surveyed_planet"
+                is_surveyed = {
+                    who = prev.from
+                    status = yes
+                }
+            }
+            custom_tooltip = {
+                fail_text = "requires_no_anomaly"
+                NOT = {
+                    has_anomaly = yes
+                }
+            }
+            custom_tooltip = {
+                fail_text = "requires_no_existing_megastructure"
+                NOR = {
+                    AND = {
+                        OR = {
+                            has_planet_flag = megastructure
+                            has_planet_flag = has_megastructure
+                        }
+                        NOR = {
+                            is_planet_class = pc_ringworld_habitable_damaged
+                            is_memeable_ringworld = yes
+                        }
+                    }
+                    is_planet_class = pc_ringworld_tech
+                    is_planet_class = pc_ringworld_tech_damaged
+                    is_planet_class = pc_ringworld_seam
+                    is_planet_class = pc_ringworld_seam_damaged
+                    is_planet_class = pc_habitat
+                    is_planet_class = pc_dm_habitat
+                    is_planet_class = pc_ae_habitat
+                    is_planet_class = pc_sigma_habitat
+                }
+            }
+            custom_tooltip = {
+                fail_text = "requires_not_minor_planetary_body"
+                NOR = {
+                    is_asteroid = yes
+                    is_moon = yes
+                }
+            }
+            custom_tooltip = {
+                fail_text = "requires_not_star"
+                is_star = no
+            }
+        }
+    }
+    country_modifier = {
+    }
+    construction_blocks_others = no
+    construction_blocked_by_others = no
+    build_time = 720
+    resources = {
+        category = megastructures
+        cost = {
+            alloys = 30000
+        }
+        upkeep = {
+        }
+        produces = {
+            energy = 100
+            alloys = 50
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = tech_mine_dark_matter
+                }
+            }
+            sr_dark_matter = 25
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = tech_mine_dark_energy
+                }
+            }
+            acot_sr_dark_energy = 25
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = tech_precursor_design
+                }
+            }
+            energy = 100
+            alloys = 100
+            acot_sr_dark_energy = 50
+            sr_dark_matter = 50
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = tech_dark_matter_power_core_ae
+                }
+            }
+            acot_sr_dark_energy = 100
+            sr_dark_matter = 100
+        }
+    }
+    ai_weight = {
+        factor = 10
+        modifier = {
+            factor = 0.1
+            starbase = {
+                NOT = {
+                    has_starbase_size >= starbase_starfortress
+                }
+            }
+        }
+        modifier = {
+            factor = 0.1
+            any_neighbor_system = {
+                exists = owner
+                NOT = {
+                    owner = {
+                        is_same_value = from
+                    }
+                }
+            }
+        }
+    }
+    on_build_start = {
+    }
+    on_build_cancel = {
+    }
+    on_build_complete = {
+        fromfrom.planet = {
+            set_planet_flag = has_megastructure
+            if = {
+                limit = {
+                    has_orbital_station = yes
+                }
+                orbital_station = {
+                    dismantle = yes
+                }
+            }
+        }
+    }
+}

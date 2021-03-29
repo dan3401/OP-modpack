@@ -1,0 +1,12 @@
+trait_robot_harvesters_biorobot = {
+    cost = 2
+    icon = gfx/interface/icons/traits/trait_robot_harvesters.dds
+    allowed_archetypes = {
+        BIOMACHINE
+    }
+    initial = no
+    randomized = no
+    modifier = {
+        planet_jobs_food_produces_mult = 0.15
+    }
+}

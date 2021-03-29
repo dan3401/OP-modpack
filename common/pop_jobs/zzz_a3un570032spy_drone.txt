@@ -1,0 +1,34 @@
+spy_drone = {
+    category = complex_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = building_residence
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible = {
+        drone_job_check_trigger = yes
+    }
+    resources = {
+        category = planet_jobs
+        produces = {
+            physics_research = 2
+            society_research = 2
+            engineering_research = 2
+            unity = 1
+        }
+        upkeep = {
+            minerals = 2
+        }
+    }
+    country_modifier = {
+        all_technology_research_speed = 0.02
+        empire_size_penalty_mult = -0.005
+        megastructure_build_speed_mult = 0.02
+    }
+    weight = {
+        weight = @synapse_drone_job_weight
+    }
+}

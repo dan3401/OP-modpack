@@ -1,0 +1,15 @@
+trait_robot_super_inefficient_processors = {
+    cost = -2
+    allowed_archetypes = {
+        MACHINE
+        ROBOT
+    }
+    opposites = {
+        "trait_robot_efficient_processors"
+        "trait_robot_super_efficient_processors"
+        "trait_robot_inefficient_processors"
+    }
+    modifier = {
+        planet_pops_robotics_upkeep_mult = 0.15
+    }
+}

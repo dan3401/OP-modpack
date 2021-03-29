@@ -1,0 +1,26 @@
+ehof_toggle_temp = {
+    potential = {
+        hidden_trigger = {
+            exists = from
+            check_variable = {
+                which = ehof_phase
+                value = 4
+            }
+            NOR = {
+                has_country_flag = annihilator_discoverer
+                has_country_flag = ehof_permanent
+            }
+        }
+    }
+    allow = {
+        hidden_trigger = {
+            always = yes
+        }
+    }
+    effect = {
+        custom_tooltip = "ehof_toggle_perm_tooltip"
+        hidden_effect = {
+            set_country_flag = ehof_permanent
+        }
+    }
+}

@@ -1,0 +1,32 @@
+spriteTypes = {
+    spriteType = {
+        name = "GFX_btn_main_red"
+        texturefile = "gfx/interface/buttons/ehof_btn_main_red.dds"
+        effectFile = "gfx/FX/buttonstate.lua"
+        noOfFrames = 1
+        animation = {
+            animationmaskfile = "gfx/interface/buttons/ehof_btn_main_mask.dds"
+            animationtexturefile = "gfx/interface/icons/relics/shine_overlay_02.dds"
+            animationrotation = 90
+            animationlooping = yes
+            animationtime = 2
+            animationdelay = 0
+            animationblendmode = "overlay"
+            animationtype = "pulsing"
+            animationrotationoffset = {
+                x = 0
+                y = 0
+            }
+            animationtexturescale = {
+                x = 1
+                y = 1
+            }
+            animationframes = {
+                1
+                2
+                3
+            }
+        }
+        legacy_lazy_load = no
+    }
+}

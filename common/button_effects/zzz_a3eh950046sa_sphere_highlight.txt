@@ -1,0 +1,20 @@
+sa_sphere_highlight = {
+    potential = {
+        hidden_trigger = {
+            has_global_flag = sa_target_sphere
+            exists = from
+            is_discoverer = yes
+        }
+    }
+    allow = {
+        hidden_trigger = {
+            exists = event_target:ehof_annihilator
+        }
+    }
+    effect = {
+        custom_tooltip = "ehof_sa_sphere"
+        hidden_effect = {
+            annihilator_sphere = yes
+        }
+    }
+}

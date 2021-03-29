@@ -1,0 +1,9 @@
+law_category_FEDEXP_diplomatic_contribution = {
+    laws = {
+        FEDEXP_diplomatic_contribution_none
+        FEDEXP_diplomatic_contribution_low
+        FEDEXP_diplomatic_contribution_medium
+        FEDEXP_diplomatic_contribution_high
+        FEDEXP_diplomatic_contribution_very_high
+    }
+}

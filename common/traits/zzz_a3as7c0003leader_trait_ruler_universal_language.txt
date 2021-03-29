@@ -1,0 +1,27 @@
+leader_trait_ruler_universal_language = {
+    cost = 1
+    modification = no
+    initial = no
+    randomized = no
+    icon = "gfx/interface/icons/traits/trait_universal_language.dds"
+    allowed_archetypes = {
+        ASCENDED
+    }
+    modifier = {
+        country_command_limit_add = 200
+    }
+    leader_potential_add = {
+        from = {
+            has_authority = "auth_enigmatic"
+        }
+    }
+    leader_trait = {
+        ruler
+    }
+    leader_class = {
+        ruler
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

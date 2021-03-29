@@ -1,0 +1,21 @@
+guiTypes = {
+    containerWindowType = {
+        name = "color_entry"
+        size = {
+            width = 40
+            height = 40
+        }
+        buttonType = {
+            name = "select_color"
+            quadTextureSprite = "GFX_ui_gamesetup_colorpicker"
+            scale = 0.95
+            clicksound = "select_click"
+        }
+        iconType = {
+            name = "highlight"
+            spriteType = "GFX_ui_gamesetup_colorpicker_highlight"
+            scale = 0.94
+            alwaysTransparent = yes
+        }
+    }
+}

@@ -1,0 +1,19 @@
+leader_trait_reformer_machinedlc = {
+    icon = "gfx/interface/icons/traits/leader_traits/trait_ruler_reformer.dds"
+    cost = 1
+    modification = no
+    initial = no
+    randomized = no
+    leader_class = {
+        ruler
+    }
+    leader_trait = {
+        ruler
+    }
+    prerequisites = {
+        tech_central_core_modifying
+    }
+    modifier = {
+        country_unity_produces_mult = 0.1
+    }
+}

@@ -1,0 +1,35 @@
+action_close_borders = {
+    icon = "GFX_diplomacy_status_closed_borders"
+    auto_accepted = yes
+    requires_actor_independence = no
+    requires_recipient_independence = no
+    should_show_auto_accept_message_recipient = yes
+    action_type = negative
+    possible = {
+        hidden_trigger = {
+            OR = {
+                can_control_access_for = from
+                AND = {
+                    OR = {
+                        is_country_type = ascended_empire
+                        is_country_type = lost_empire
+                    }
+                    OR = {
+                        from = {
+                            is_country_type = ascended_empire
+                        }
+                        from = {
+                            is_country_type = awakened_fallen_empire
+                        }
+                        from = {
+                            is_country_type = lost_empire
+                        }
+                        from = {
+                            is_country_type = fallen_empire
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

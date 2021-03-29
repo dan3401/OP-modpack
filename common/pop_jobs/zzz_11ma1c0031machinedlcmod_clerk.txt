@@ -1,0 +1,151 @@
+machinedlcmod_clerk = {
+    category = simple_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = building_residence
+    clothes_texture_index = 2
+    icon = clerk
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible = {
+        drone_job_check_trigger = yes
+    }
+    planet_modifier = {
+        planet_amenities_add = 2
+    }
+    resources = {
+        category = planet_jobs_machinedlcmod_clerk
+        produces = {
+            trigger = {
+                owner = {
+                    has_policy_flag = machinedlcmod_trade_policy_default
+                }
+            }
+            energy = 4
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_policy_flag = machinedlcmod_trade_policy_consumer_goods
+                }
+            }
+            energy = 2
+            consumer_goods = 1
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_policy_flag = machinedlcmod_trade_policy_unity
+                }
+            }
+            energy = 2
+            unity = 1
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_policy_flag = machinedlcmod_trade_policy_research_points
+                }
+            }
+            physics_research = 1
+            society_research = 1
+            engineering_research = 1
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    has_policy_flag = machinedlcmod_trade_policy_research_points
+                }
+            }
+            energy = 0.5
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_policy_flag = machinedlcmod_trade_policy_strategic_resources
+                }
+            }
+            volatile_motes = 0.4
+            exotic_gases = 0.4
+            rare_crystals = 0.4
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    has_policy_flag = machinedlcmod_trade_policy_research_points
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_policy_flag = machinedlcmod_trade_policy_processing_capacity
+                }
+            }
+            machinedlc_processing_capacity = 1
+            machinedlc_processing_capacity_supply = 1
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    has_policy_flag = machinedlcmod_trade_policy_research_points
+                }
+            }
+            energy = 0.5
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            OR = {
+                has_trait = trait_robot_domestic_protocols
+                has_trait = trait_charismatic
+            }
+        }
+        modifier = {
+            planet_amenities_add = 0.4
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_trait = trait_repugnant
+        }
+        modifier = {
+            planet_amenities_add = -0.4
+        }
+    }
+    weight = {
+        weight = @clerk_job_weight
+        modifier = {
+            factor = 0.25
+            is_enslaved = yes
+            can_take_servant_job = no
+        }
+        modifier = {
+            factor = 2
+            OR = {
+                is_non_sapient_robot = yes
+                is_shackled_robot = yes
+            }
+            can_take_servant_job = no
+        }
+        modifier = {
+            factor = 0.1
+            can_take_servant_job = yes
+        }
+        modifier = {
+            factor = 1.5
+            OR = {
+                has_trait = trait_robot_domestic_protocols
+                has_trait = trait_charismatic
+            }
+        }
+        modifier = {
+            factor = 0.5
+            has_trait = trait_repugnant
+        }
+    }
+}

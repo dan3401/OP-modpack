@@ -1,0 +1,20 @@
+trait_communal_biorobot = {
+    cost = 1
+    potential_crossbreeding_chance = 1
+    allowed_archetypes = {
+        BIOMACHINE
+        ROBOT
+    }
+    initial = no
+    randomized = no
+    icon = gfx/interface/icons/traits/trait_communal.dds
+    species_potential_add = {
+        OR = {
+            has_trait = trait_biorobot
+            has_trait = trait_biorobot_2
+        }
+    }
+    modifier = {
+        pop_housing_usage_mult = -0.1
+    }
+}

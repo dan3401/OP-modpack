@@ -1,0 +1,7 @@
+is_progenitor_empires = {
+    OR = {
+        is_country_type = original_empire
+        is_country_type = original_empire_passive
+        is_country_type = original_empire_active
+    }
+}

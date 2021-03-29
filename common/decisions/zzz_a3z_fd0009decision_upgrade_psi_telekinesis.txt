@@ -1,0 +1,29 @@
+decision_upgrade_psi_telekinesis = {
+    owned_planets_only = yes
+    icon = decision_wormhole
+    enactment_time = 360
+    resources = {
+        category = decisions
+        cost = {
+            energy = 5000
+            unity = 5000
+        }
+    }
+    potential = {
+        OR = {
+            has_building = building_stellarite_psi_altar
+            has_building = building_ae_psi_altar
+        }
+        NOT = {
+            has_modifier = acot_modifier_upgrade_psi_telekinesis
+        }
+    }
+    effect = {
+        add_modifier = {
+            modifier = acot_modifier_upgrade_psi_telekinesis
+        }
+    }
+    ai_weight = {
+        weight = 100
+    }
+}

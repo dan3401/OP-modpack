@@ -1,0 +1,19 @@
+trait_abomination = {
+    cost = -7
+    potential_crossbreeding_chance = 0.15
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+        PLANTOID
+    }
+    opposites = {
+        "trait_mutant"
+        "trait_ghoul"
+        "trait_immortal"
+    }
+    modifier = {
+        pop_growth_speed = -0.2
+        leader_age = -10
+        pop_amenities_usage_mult = 0.2
+    }
+}

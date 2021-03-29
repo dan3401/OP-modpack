@@ -1,0 +1,22 @@
+triggered_opinion_dictatorial_authority = {
+    trigger = {
+        OR = {
+        is_country_type = default
+            is_country_type = ascended_empire
+            is_country_type = eternal_empire
+        }
+        has_authority = auth_dictatorial
+        FROM = {
+            has_authority = auth_dictatorial
+            OR = {
+                is_country_type = default
+                is_country_type = ascended_empire
+            has_authority = auth_dictatorial
+                is_country_type = eternal_empire
+            }
+        }
+    }
+    opinion = {
+        base = 10
+    }
+}

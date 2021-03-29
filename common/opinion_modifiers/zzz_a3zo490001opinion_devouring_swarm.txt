@@ -1,0 +1,24 @@
+opinion_devouring_swarm = {
+    trigger = {
+        OR = {
+            is_country_type = ascended_empire
+            is_country_type = eternal_empire
+        }
+        OR = {
+            has_valid_civic = "civic_hive_devouring_swarm"
+            AND = {
+                from = {
+                    has_valid_civic = "civic_hive_devouring_swarm"
+                }
+                NOT = {
+                    has_valid_civic = civic_fanatic_purifiers
+                }
+            }
+        }
+    }
+    opinion = {
+        modifier = {
+            add = -1000
+        }
+    }
+}

@@ -1,0 +1,43 @@
+nhsc_mod_control_edict2 = {
+    length = 0
+    resources = {
+        category = edicts
+        cost = {
+            energy = 0
+        }
+    }
+    allow = {
+        NOT = {
+            has_global_flag = ESC_MENU_ACTIVE
+        }
+    }
+    edict_cap_usage = 0
+    potential = {
+        exists = owner
+        owner = {
+            is_ai = no
+        }
+        has_global_flag = nhsc_v30
+        NOT = {
+            has_country_flag = z_fw_flg_cntr_edt_hide
+        }
+    }
+    allow = {
+        is_ai = no
+        NOT = {
+            has_global_flag = ESC_MENU_ACTIVE
+        }
+        custom_tooltip = {
+            hidden_trigger = {
+                z_fw_trgr_cntr_host_mp = yes
+            }
+            fail_text = z_mm_tips_mp_not_host
+        }
+    }
+    effect = {
+        country_event = {
+            id = esc_options.1
+            days = 0
+        }
+    }
+}

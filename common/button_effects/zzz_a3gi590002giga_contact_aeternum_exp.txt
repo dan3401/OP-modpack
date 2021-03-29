@@ -1,0 +1,22 @@
+giga_contact_aeternum_exp = {
+    potential = {
+        exists = from
+        has_country_flag = doing_aiondia_expedition
+    }
+    allow = {
+        hidden_trigger = {
+            NOT = {
+                has_country_flag = monitoring_aeternum
+            }
+        }
+    }
+    effect = {
+        custom_tooltip = "giga_contact_aeternum_exp_tooltip"
+        hidden_effect = {
+            set_country_flag = monitoring_aeternum
+            country_event = {
+                id = giga_aeternum.4321
+            }
+        }
+    }
+}

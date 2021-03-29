@@ -1,0 +1,69 @@
+@cost2 = 10
+utility_component_template = {
+    key = "AE_COMBAT_COMPUTER_CAPITAL_1"
+    size = small
+    icon = "GFX_ship_part_computer_role_artillery_bionic"
+    icon_frame = 1
+    power = -20
+    class_restriction = {
+        shipclass_military
+        shipclass_starbase
+    }
+    size_restriction = {
+        movable_fortress
+        juggernaut
+        titan
+        Dreadnought
+        Flagship
+        ultradreadnought
+        Carrier
+        fe_goliath
+        sofe_gatekeeper_warden
+        fe_assault_carrier
+        progenitor_carrier
+        sofe_aegis_guard
+    }
+    component_set = "combat_computers"
+    ship_behavior = "artillery"
+    prerequisites = {
+        "tech_dm_combat_computer"
+    }
+    upgrades_to = "AE_OFFENSIVE_COMBAT_COMPUTER_GOLIATH"
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @cost2
+            sr_dark_matter = 1
+            acot_sr_dark_energy = 1
+        }
+    }
+    ship_modifier = {
+        ship_fire_rate_mult = 0.25
+        ship_weapon_range_mult = 0.2
+    }
+    ai_weight = {
+        weight = 205
+        modifier = {
+            factor = 0
+            has_monthly_income = {
+                resource = sr_dark_matter
+                value <= 2
+            }
+            has_resource = {
+                type = sr_dark_matter
+                amount <= 5
+            }
+        }
+        modifier = {
+            factor = 0
+            has_resource = {
+                type = acot_sr_dark_energy
+                amount <= 5
+            }
+            has_monthly_income = {
+                resource = acot_sr_dark_energy
+                value <= 2
+            }
+        }
+    }
+}

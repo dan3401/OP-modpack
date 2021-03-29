@@ -1,0 +1,24 @@
+trait_enhanced_cpu = {
+    cost = 3
+    initial = yes
+    opposites = {
+        "trait_robot_logic_engines"
+        "trait_simple_circuit"
+        "trait_robot_logic_engines_biorobot"
+    }
+    allowed_archetypes = {
+        MACHINE
+        BIOMACHINE
+    }
+    species_potential_add = {
+        exists = from
+        from = {
+            NOT = {
+                has_country_flag = synthetic_empire
+            }
+        }
+    }
+    modifier = {
+        planet_jobs_complex_drone_produces_mult = 0.1
+    }
+}

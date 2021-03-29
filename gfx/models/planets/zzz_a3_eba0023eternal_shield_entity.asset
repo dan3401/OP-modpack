@@ -1,0 +1,49 @@
+entity = {
+    name = "eternal_shield_entity"
+    pdxmesh = "shielded_planet_mesh"
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "eternal_shield_clouds.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+    meshsettings = {
+        name = "polesShape"
+        texture_diffuse = "eternal_shield_clouds.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+    meshsettings = {
+        name = "clouds_geosphereShape"
+        texture_diffuse = "eternal_shield_clouds.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+    meshsettings = {
+        name = "clouds_shadow_geosphereShape"
+        texture_diffuse = "eternal_shield_clouds.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+    default_state = "idle"
+    state = {
+        name = "idle"
+        animation = "idle"
+        time_offset = {
+            0
+            100
+        }
+        start_event = {
+            trigger_once = yes
+            sound = {
+                soundeffect = "amb_planet_class"
+            }
+        }
+        start_event = {
+            trigger_once = yes
+            sound = {
+                soundeffect = "amb_planet_class_02"
+            }
+        }
+    }
+}

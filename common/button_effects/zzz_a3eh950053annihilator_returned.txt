@@ -1,0 +1,15 @@
+annihilator_returned = {
+    potential = {
+        hidden_trigger = {
+            exists = from
+            has_global_flag = annihilator_returned
+        }
+    }
+    allow = {
+        hidden_trigger = {
+            always = yes
+        }
+    }
+    effect = {
+    }
+}

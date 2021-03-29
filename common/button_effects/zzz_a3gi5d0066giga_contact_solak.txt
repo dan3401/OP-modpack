@@ -1,0 +1,29 @@
+giga_contact_solak = {
+    potential = {
+        exists = from
+        has_global_flag = solak_resistance_active
+        has_country_flag = contacted_solak_rebels
+        NOR = {
+            has_global_flag = katzenartig_imperium_defeated
+            has_country_flag = katzen_vassal
+        }
+        any_country = {
+            is_country_type = katzenartig_imperium
+        }
+    }
+    allow = {
+        hidden_trigger = {
+            NOT = {
+                has_country_flag = flusion_map_active
+            }
+        }
+    }
+    effect = {
+        custom_tooltip = "giga_contact_solak_tooltip"
+        hidden_effect = {
+            country_event = {
+                id = giga_katrebels.2002
+            }
+        }
+    }
+}

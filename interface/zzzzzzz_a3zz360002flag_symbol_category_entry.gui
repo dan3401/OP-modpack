@@ -1,0 +1,37 @@
+guiTypes = {
+    containerWindowType = {
+        name = "flag_symbol_category_entry"
+        size = {
+            width = 150
+            height = 30
+        }
+        background = {
+            name = "bg"
+            spriteType = "GFX_invisible"
+            clicksound = "click_outliner"
+        }
+        instantTextBoxType = {
+            name = "name"
+            font = "malgun_goth_24"
+            position = {
+                x = 10
+                y = 3
+            }
+            maxWidth = 140
+            text = "CATEGORY"
+            format = left
+            alwaysTransparent = yes
+        }
+        containerWindowType = {
+            name = "selected"
+            size = {
+                width = 150
+                height = 35
+            }
+            background = {
+                name = "bg"
+                spriteType = "GFX_glow_tile_orange"
+            }
+        }
+    }
+}

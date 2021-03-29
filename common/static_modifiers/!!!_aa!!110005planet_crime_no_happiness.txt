@@ -1,0 +1,3 @@
+planet_crime_no_happiness = {
+    planet_jobs_unity_produces_mult = -0.33
+}

@@ -1,0 +1,27 @@
+trait_conservational = {
+    cost = 1
+    potential_crossbreeding_chance = 1
+    opposites = {
+        "trait_wasteful"
+        "trait_hive_mind"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+        BIOMACHINE
+        ROBOT
+    }
+    initial = no
+    randomized = no
+    icon = gfx/interface/icons/traits/trait_conservational.dds
+    species_potential_add = {
+        OR = {
+            has_trait = trait_biorobot
+            has_trait = trait_biorobot_2
+        }
+    }
+    modifier = {
+        planet_pops_consumer_goods_upkeep_mult = -0.1
+        planet_pops_upkeep_mult = -0.1
+    }
+}

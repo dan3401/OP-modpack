@@ -1,0 +1,32 @@
+tw_aisymneter = {
+    category = philosopher
+    is_capped_by_modifier = yes
+    building_icon = building_eternal_entertainment
+    clothes_texture_index = 1
+    possible = {
+        hidden_trigger = {
+            exists = owner
+        }
+        owner = {
+            has_civic = civic_eternal_stability
+        }
+        is_same_species = owner
+        NOR = {
+            has_trait = trait_mechanical
+            has_trait = trait_machine_unit
+        }
+    }
+    resources = {
+        category = planet_jobs
+        produces = {
+            influence = 0.1
+        }
+    }
+    pop_modifier = {
+        pop_housing_usage_add = 2
+        pop_defense_armies_add = 1
+    }
+    weight = {
+        weight = 1
+    }
+}

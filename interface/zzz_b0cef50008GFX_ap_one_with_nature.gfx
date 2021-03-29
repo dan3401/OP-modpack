@@ -1,0 +1,7 @@
+spriteTypes = {
+    SpriteType = {
+        name = "GFX_ap_one_with_nature"
+        texturefile = "gfx/interface/icons/ascension_perks/ap_one_with_nature.dds"
+        alwaystransparent = yes
+    }
+}
