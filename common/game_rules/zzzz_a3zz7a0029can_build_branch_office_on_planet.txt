@@ -32,39 +32,41 @@ can_build_branch_office_on_planet = {
                         is_country_type = lost_empire
                     }
                 }
-                OR = {
-            root = {
-                is_criminal_syndicate = yes
             }
-            owner = {
-                has_commercial_pact = root
-            }
-            owner = {
-                is_in_federation_with = root
-            }
-            root = {
-                has_valid_civic = civic_mutualistic_behavior
-            }
-            root = {
-                has_authority = auth_azur_lane_1
-            }
-            root = {
-                is_subject = yes
-                is_subject_type = subsidiary
-                overlord = {
-                    is_same_value = owner
+            OR = {
+                root = {
+                    is_criminal_syndicate = yes
                 }
-            }
-            owner = {
-                is_subject = yes
-                OR = {
+                owner = {
+                    has_commercial_pact = root
+                }
+                owner = {
+                    is_in_federation_with = root
+                }
+                root = {
+                    has_valid_civic = civic_mutualistic_behavior
+                }
+                root = {
+                    has_authority = auth_azur_lane_1
+                }
+                root = {
+                    is_subject = yes
                     is_subject_type = subsidiary
                     overlord = {
-                        has_authority = auth_warshipgirls
+                        is_same_value = owner
                     }
                 }
-                overlord = {
-                    is_same_value = root
+                owner = {
+                    is_subject = yes
+                    OR = {
+                        is_subject_type = subsidiary
+                        overlord = {
+                            has_authority = auth_warshipgirls
+                        }
+                    }
+                    overlord = {
+                        is_same_value = root
+                    }
                 }
             }
             AND = {
@@ -75,6 +77,7 @@ can_build_branch_office_on_planet = {
                     }
                 }
             }
+        }
         OR = {
             owner = {
                 NOT = {
@@ -98,8 +101,6 @@ can_build_branch_office_on_planet = {
                     is_same_value = root
                 }
             }
-        }
-    }
             AND = {
                 owner = {
                     has_ethic = ethic_gestalt_consciousness
@@ -108,8 +109,6 @@ can_build_branch_office_on_planet = {
                     has_ascension_perk = ap_megacorp
                 }
             }
-        }
-    }
             AND = {
                 has_authority = auth_azur_lane_2
                 owner = {

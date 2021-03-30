@@ -42,6 +42,7 @@ can_spawn_debris = {
             NOT = {
                 has_valid_civic = civic_sofe_pursuit_answer
             }
+        }
         NOR = {
             has_ascension_perk = ap_enigmatic_engineering
             has_ethic = ethic_fanatic_communism

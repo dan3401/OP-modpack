@@ -71,6 +71,9 @@ can_declare_war = {
                     any_country = {
                         is_in_federation_with = ROOT
                         is_ai = no
+                    }
+                }
+            }
         }
     }
     if = {

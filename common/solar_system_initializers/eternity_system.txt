@@ -48,9 +48,9 @@ eternity_system_initializer = {
 		orbit_distance = 100
 		size = 30
 			
-		init_effect = {	prevent_anomaly = yes
+		init_effect = {	
+			prevent_anomaly = yes
 			save_event_target_as = nexus_planet
-			}
 		}
 		init_effect = {
 		spawn_megastructure = { 
@@ -65,4 +65,6 @@ eternity_system_initializer = {
 					}
 				}
 			}
+		}
+	}
 }	

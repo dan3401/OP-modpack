@@ -40,6 +40,7 @@ civic_corporate_dominion = {
         modifier = {
             factor = 0
             host_has_dlc = "Megacorp"
+        }
     }
     modifier = {
         country_starbase_capacity_add = 5

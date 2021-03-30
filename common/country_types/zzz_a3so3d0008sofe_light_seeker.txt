@@ -92,11 +92,12 @@ sofe_light_seeker = {
             influence = 3
             unity = 10
             alloys = 10
-    }
+        }
         standard_event_module = {
         }
         exclusive_diplomacy_module = {
         }
+    }
     branch_office_resources = {
         category = planet_branch_offices
         cost = {

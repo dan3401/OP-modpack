@@ -228,7 +228,6 @@ event = {
                                     has_ethic = ethic_gestalt_consciousness
                                     has_country_flag = synthetic_empire
                                     has_country_flag = flesh_weakened
-                                NOT = {
                                     has_trait = trait_psionic
                                 }
                                 has_trait = trait_latent_psionic
@@ -258,6 +257,7 @@ event = {
                                         days = 30
                                     }
                                 }
+                            }
                         modify_species = {
                             species = this
                             remove_trait = trait_hive_mind
@@ -368,6 +368,7 @@ event = {
                                     has_trait = trait_cybernetic
                                 }
                             }
+                        }
                         else = {
                             modify_species = {
                                 species = this

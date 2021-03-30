@@ -47,8 +47,6 @@ building_military_contractors = {
             }
             energy = 10
         }
-            minerals = 500
-        }
         upkeep = {
             energy = 2
         }

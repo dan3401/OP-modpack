@@ -49,6 +49,7 @@ space_storm_2
 # Create Storm
 country_event = {
 	id = galactic_features.401
+}
 psi_storm_1
 turbulent_nebula_2
 turbulent_nebula_1

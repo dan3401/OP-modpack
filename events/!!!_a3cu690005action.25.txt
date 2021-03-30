@@ -12,6 +12,7 @@ country_event = {
             OR = {
                 is_country_type = tiyanki
                 is_country_type = tiyanki_garrison
+            }
         }
         OR = {
             is_country_type = default

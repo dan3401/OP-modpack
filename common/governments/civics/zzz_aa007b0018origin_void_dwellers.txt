@@ -34,8 +34,6 @@ origin_void_dwellers = {
     traits = {
         trait = trait_void_dweller_1
     }
-        custom_start_screen
-    }
     random_weight = {
         base = 3
     }

@@ -44,8 +44,9 @@ economic_policy = {
                             value < 10000
                         }
                     }
-               }
-         }
+                }
+            }
+        }
     }
     option = {
         name = "economic_policy_balanced"

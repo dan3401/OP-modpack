@@ -12,6 +12,7 @@ country_event = {
             OR = {
                 is_country_type = crystal
                 has_country_flag = crystal_country
+            }
         }
         OR = {
             is_country_type = default

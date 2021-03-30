@@ -82,7 +82,6 @@ planet_event = {
                     }
                     modify_species = {
                         species = this
-                        }
                     }
                     if = {
                         limit = {

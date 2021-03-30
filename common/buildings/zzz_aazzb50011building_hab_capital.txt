@@ -143,6 +143,7 @@ building_hab_capital = {
         modifier = {
             planet_max_buildings_add = 2
         }
+    }
     triggered_planet_modifier = {
         potential = {
             exists = owner

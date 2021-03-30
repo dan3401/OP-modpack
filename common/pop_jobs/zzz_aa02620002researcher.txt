@@ -150,7 +150,6 @@ researcher = {
         upkeep = {
             consumer_goods = 2
         }
-    }
         upkeep = {
             trigger = {
                 exists = owner

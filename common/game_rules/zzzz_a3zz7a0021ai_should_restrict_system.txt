@@ -15,6 +15,7 @@ ai_should_restrict_system = {
                     is_country_type = awakened_marauders
                     is_country_type = dormant_marauders
                 }
+            }
         }
         AND = {
             root = {

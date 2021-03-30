@@ -65,6 +65,7 @@ civic_aristocratic_elite = {
     }
     random_weight = {
         base = 5
+    }
     modifier = {
         leader_governor_influence_cost = -0.5
         country_leader_cap = 4

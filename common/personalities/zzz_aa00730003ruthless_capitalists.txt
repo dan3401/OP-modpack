@@ -53,6 +53,7 @@ ruthless_capitalists = {
                 has_ethic = "ethic_fanatic_xenophile"
             }
         }
+    }
     weight_modifier = {
         weight = 300
         modifier = {

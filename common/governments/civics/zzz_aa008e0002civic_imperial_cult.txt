@@ -17,7 +17,8 @@ civic_imperial_cult = {
         authority = {
             OR = {
                 value = auth_dictatorial
-            value = auth_imperial
+                value = auth_imperial
+            }
         }
         ethics = {
             OR = {

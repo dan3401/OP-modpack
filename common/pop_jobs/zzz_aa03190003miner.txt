@@ -156,15 +156,6 @@ miner = {
             planet_amenities_add = -0.4
         }
     }
-        produces = {
-            trigger = {
-                owner = {
-                    is_lithoid_empire = yes
-                }
-            }
-            minerals = 2
-        }
-    }
     weight = {
         weight = @worker_job_weight
         modifier = {

@@ -12,6 +12,7 @@ country_event = {
             OR = {
                 is_country_type = drone
                 has_country_flag = drone_country
+            }
         }
         OR = {
             is_country_type = default

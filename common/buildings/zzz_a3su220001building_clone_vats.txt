@@ -15,6 +15,8 @@ building_clone_vats = {
         owner = {
             is_machine_empire = yes
             is_mechanical_empire = yes
+        }
+    }
     allow = {
         custom_tooltip = {
             text = "requires_building_capital_2"
@@ -28,7 +30,6 @@ building_clone_vats = {
     }
     prerequisites = {
         "tech_cloning"
-    }
     }
     triggered_planet_modifier = {
         potential = {

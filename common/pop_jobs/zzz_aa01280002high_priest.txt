@@ -47,7 +47,6 @@ high_priest = {
             }
             society_research = 2
         }
-    }
         produces = {
             trigger = {
                 owner = {

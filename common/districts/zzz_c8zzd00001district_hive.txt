@@ -187,6 +187,7 @@ district_hive = {
                     }
                 }
             }
+        }
         modifier = {
             weight = 100
             planet = {
@@ -201,6 +202,7 @@ district_hive = {
                 type = district_mining
                 value = 0
             }
+        }
         modifier = {
             weight = 1
             num_free_districts = {
@@ -295,9 +297,9 @@ district_hive = {
                 type = district_farming_uncapped
                 value = 0
             }
-            }
             free_jobs > 1
             free_housing > 1
+            }
         }
     }
 }

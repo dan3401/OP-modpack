@@ -13,6 +13,7 @@ country_event = {
                 is_country_type = amoeba
                 is_country_type = amoeba_borderless
                 is_country_type = amoeba_garrison
+            }
         }
         OR = {
             is_country_type = default

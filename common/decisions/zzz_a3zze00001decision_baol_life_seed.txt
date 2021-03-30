@@ -65,12 +65,12 @@ decision_baol_life_seed = {
                         }
                     }
                 }
+            }
             if = {
                 limit = {
                     has_planet_flag = grunur_prime
                 }
                 reroll_deposits = yes
-            }
                 create_species = {
                     name = "NAME_Nu_Baol"
                     plural = "NAME_Nu_Baol"
@@ -91,6 +91,8 @@ decision_baol_life_seed = {
                     effect = {
                         save_global_event_target_as = nu_baol_species
                     }
+                }
+            }
             if = {
                 limit = {
                     NOT = {

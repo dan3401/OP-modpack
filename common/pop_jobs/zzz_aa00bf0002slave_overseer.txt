@@ -25,6 +25,15 @@ slave_overseer = {
             }
             energy = 2
         }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_valid_civic = civic_reeducated_labor
+                }
+            }
+            unity = 1
+        }
     }
     triggered_planet_modifier = {
         potential = {
@@ -41,16 +50,6 @@ slave_overseer = {
                 is_active_resolution = "resolution_lawandorder_informed_governance"
             }
         }
-        produces = {
-            trigger = {
-                exists = owner
-                owner = {
-                    has_valid_civic = civic_reeducated_labor
-                }
-            }
-            unity = 1
-        }
-    }
         modifier = {
             planet_stability_add = -1
         }
