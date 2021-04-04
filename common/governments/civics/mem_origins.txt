@@ -32,41 +32,6 @@ origin_mem_from_the_ashes = {
 	}
 }
 
-origin_mem_fainthearted = {
-	is_origin = yes
-	icon = "gfx/interface/icons/origins/unused/origins_escaped_slaves.dds"
-	picture = GFX_origin_mem_fainthearted
-
-	max_once_global = yes
-
-	playable = {
-		always = yes
-	}
-
-	possible = {
-		ethics = {
-			OR = {
-				value = ethic_fanatic_pacifist
-				value = ethic_pacifist
-			}
-		}
-	}
-
-	description = "origin_tooltip_mem_fainthearted_effects"
-	flags = { custom_start_screen }
-
-	modifier = {
-		
-	}
-
-	traits = {
-	}
-	
-	random_weight = {
-		base = 0
-	}
-}
-
 origin_mem_ceaseless_gaze = {
 	is_origin = yes
 	icon = "gfx/interface/icons/origins/origins_mem_ceaseless_gaze.dds"
@@ -96,29 +61,6 @@ origin_mem_ceaseless_gaze = {
 
 	traits = {
 		
-	}
-
-	random_weight = {
-		base = 0
-	}
-}
-
-origin_mem_exiles = {
-	is_origin = yes
-	icon = "gfx/interface/icons/origins/origins_gateway.dds"
-
-	playable = {
-		always = no
-	}
-
-	possible = {
-
-	}
-
-	modifier = {
-		pop_housing_usage_mult = -0.2
-		planet_pops_upkeep_mult = -0.25
-		pop_amenities_usage_mult = -0.25
 	}
 
 	random_weight = {
