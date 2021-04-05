@@ -6,6 +6,7 @@ leader_trait_admiral_brainslug = {
         ship_fire_rate_mult = 0.05
         ship_evasion_mult = 0.05
         ships_upkeep_mult = -0.1
+        ship_emergency_ftl_min_days_mult = -0.20
     }
     initial = no
     randomized = no

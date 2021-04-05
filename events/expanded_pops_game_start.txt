@@ -433,6 +433,12 @@ country_event = {
 			capital_scope = {
 				add_deposit = d_ancient_palace
 			}
+        }		
+		if = {
+            limit = {
+               has_origin = origin_ascension_unity
+            }
+			give_technology = { message = no tech = tech_mine_dark_matter }
         }
 		if = {
             limit = {

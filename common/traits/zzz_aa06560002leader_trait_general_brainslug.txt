@@ -3,8 +3,8 @@ leader_trait_general_brainslug = {
     modification = no
     icon = "gfx/interface/icons/traits/leader_traits/trait_brainslugged.dds"
     modifier = {
-        armies_upkeep_mult = -0.15
-        army_disengage_chance_mult = 0.15
+        armies_upkeep_mult = -0.70
+        army_disengage_chance_mult = 0.70
     }
     initial = no
     randomized = no

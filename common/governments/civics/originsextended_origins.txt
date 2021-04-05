@@ -192,7 +192,6 @@ originsextended_engineered = {
 	is_origin = yes
 	icon = "gfx/interface/icons/origins/originsextended_engineered.dds"
 	picture = GFX_originsextended_engineered
-	max_once_global = yes
 	possible = {
 		ethics = {
 			NOT = {
@@ -201,9 +200,6 @@ originsextended_engineered = {
 			NOT = {
 				value = ethic_fanatic_spiritualist	
 			}
-		}
-		species = {
-			NOT = { value = LITHOID }
 		}
 	}
 	description = "originsextended_tooltip_engineered"

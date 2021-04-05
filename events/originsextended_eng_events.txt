@@ -31,17 +31,6 @@ country_event = {
 			species = this
 			add_trait = trait_originsextended_eng_evolution
 		}
-		allow = {
-			has_origin = originsextended_engineered
-		}
-	}
-	option = {
-		name = "eng.0.option2"
-		#custom_tooltip = "eng.0.tooltip2"
-		modify_species = {
-			species = this
-			add_trait = trait_originsextended_eng_hunters
-		}
 		hidden_effect = {
 			modify_species = {
 				species = this
@@ -59,29 +48,7 @@ country_event = {
 				species = this
 				remove_trait = trait_weak
 			}
-		}
-		allow = {
-			has_origin = originsextended_engineered
-		}
-	}
-	option = {
-		name = "eng.0.option3"
-		#custom_tooltip = "eng.0.tooltip3"
-		modify_species = {
-			species = this
-			add_trait = trait_originsextended_eng_nutrients
-		}
-		allow = {
-			has_origin = originsextended_engineered
-		}
-	}
-	option = {
-		name = "eng.0.option4"
-		#custom_tooltip = "eng.0.tooltip4"
-		modify_species = {
-			species = this
-			add_trait = trait_originsextended_eng_regen	
-		}
+		}		
 		allow = {
 			has_origin = originsextended_engineered
 		}
