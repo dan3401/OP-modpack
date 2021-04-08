@@ -17,20 +17,6 @@ building_clone_vats = {
             is_mechanical_empire = yes
         }
     }
-    allow = {
-        custom_tooltip = {
-            text = "requires_building_capital_2"
-            planet = {
-                OR = {
-                    has_building = "building_capital_2"
-                    has_building = "building_capital_3"
-                }
-            }
-        }
-    }
-    prerequisites = {
-        "tech_cloning"
-    }
     triggered_planet_modifier = {
         potential = {
             exists = owner

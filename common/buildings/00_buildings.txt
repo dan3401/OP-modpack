@@ -937,25 +937,8 @@ building_mineral_silo_1 = {
 		max_minerals = 2000
 	}
 	
-	adjacency_bonus = {
-		tile_building_resource_minerals_add = 1
-	}
-	
 	upgrades = {
 		building_mineral_silo_2
-	}
-
-	ai_allow = {
-		NOR = {
-			has_resource = {
-				type = sr_betharian
-				amount > 0
-			}	
-			has_resource = {
-				type = sr_alien_pets
-				amount > 0
-			}				
-		}
 	}
 
 	ai_weight = {
