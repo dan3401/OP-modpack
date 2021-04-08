@@ -646,28 +646,20 @@ can_be_hostile_towards = {
 # This = Species
 # Root = Planet
 can_species_procreate = {
-	is_sapient = yes
+	always = yes
+    is_sapient = yes
 	NOR = {
 		has_trait = trait_machine_unit
 		has_trait = trait_mechanical
 	}
-	NAND = {
-		root = { has_modifier = slave_colony }
-		NOT = { has_citizenship_type = { type = citizenship_slavery country = root.owner } }
-	}
-	if = {
-		limit = {
-			has_trait = trait_necrophage
-		}
-		NOT = {
-			root = {
-				any_owned_species = {
-					species_can_be_necrophaged = yes
-				}
-			}
-		}
-	}
+    NAND = {
+        hfe_trigger_population_procreate_housing_block_enabled = yes
+        root = {
+            free_housing <= -1
+        }
+    }
 }
+
 
 # Checks if a pop can be assembled
 # This = Species
