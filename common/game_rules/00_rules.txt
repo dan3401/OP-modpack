@@ -675,8 +675,26 @@ can_species_procreate = {
 can_species_be_assembled = {
 	is_sapient = yes
 	OR = {
-		has_trait = trait_machine_unit
-		has_trait = trait_mechanical
+		if = {
+			limit = {
+				root = {
+					has_planet_flag = ss_cloning_flag
+				}
+			}
+			OR = {
+				is_archetype = BIOLOGICAL
+				is_archetype = BIOMORPH
+			}
+		}
+		else_if = {
+			limit = {
+				root = {
+					has_planet_flag = ss_assembly_flag
+				}
+			}
+			is_archetype = ROBOT
+		}
+		is_archetype = MACHINE
 	}
 }
 
