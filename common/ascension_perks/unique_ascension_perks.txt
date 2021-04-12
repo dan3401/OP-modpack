@@ -105,7 +105,7 @@ ap_void_expedition = {
 ap_transcendent_learning = {
 	modifier = {
 		leader_skill_levels = 2
-		species_leader_exp_gain = 0.50
+		species_leader_exp_gain = 1
 	}
 	on_enabled = {
 		custom_tooltip = "ap_transcendent_learning_tooltip"
@@ -115,36 +115,36 @@ ap_transcendent_learning = {
 	ai_weight = { factor = 2 }
 }
 
-ap_expandable_brain_1 = {
-	possible = {
-		custom_tooltip = { fail_text = "ap_expandable_brain_1_req_1" has_ascension_perk = ap_transcendent_learning }
-		custom_tooltip = { fail_text = "ap_expandable_brain_1_req_2" has_modifier = expandable_brain_1 }
-	}
-	on_enabled = {
-		custom_tooltip = "ALLOW_LEADER_MIN_LVL_3"
-		custom_tooltip = "ALLOW_LEADER_MIN_TRAIT_2"
-		hidden_effect = { country_event = { id = UniqueAscensionPerksEvents.33 } }
-	}
-	potential = { NOT = { has_ascension_perk = ap_expandable_brain_1 } }
-	ai_weight = { factor = 5 }
-}
+# ap_expandable_brain_1 = {
+# 	possible = {
+# 		custom_tooltip = { fail_text = "ap_expandable_brain_1_req_1" has_ascension_perk = ap_transcendent_learning }
+# 		custom_tooltip = { fail_text = "ap_expandable_brain_1_req_2" has_modifier = expandable_brain_1 }
+# 	}
+# 	on_enabled = {
+# 		custom_tooltip = "ALLOW_LEADER_MIN_LVL_3"
+# 		custom_tooltip = "ALLOW_LEADER_MIN_TRAIT_2"
+# 		hidden_effect = { country_event = { id = UniqueAscensionPerksEvents.33 } }
+# 	}
+# 	potential = { NOT = { has_ascension_perk = ap_expandable_brain_1 } }
+# 	ai_weight = { factor = 5 }
+# }
 
-ap_expandable_brain_2 = {
-	possible = {
-		custom_tooltip = { fail_text = "ap_expandable_brain_2_req_1" has_ascension_perk = ap_expandable_brain_1 }
-		custom_tooltip = { fail_text = "ap_expandable_brain_2_req_2" has_technology = tech_expandable_brain_1 }
-		custom_tooltip = { fail_text = "ap_expandable_brain_2_req_3" has_modifier = expandable_brain_2 }
-		custom_tooltip = { fail_text = "ap_expandable_brain_2_req_4" has_technology = tech_expandable_brain_2 }	
-	}
-	on_enabled = {
-		custom_tooltip = "ALLOW_LEADER_MIN_LVL_5"
-		custom_tooltip = "ALLOW_LEADER_MIN_TRAIT_3"
-		custom_tooltip = "ap_expandable_brain_2_tooltip"	
-		hidden_effect = { country_event = { id = UniqueAscensionPerksEvents.37 } }
-	}
-	potential = { NOT = { has_ascension_perk = ap_expandable_brain_2 } }
-	ai_weight = { factor = 5 }
-}
+# ap_expandable_brain_2 = {
+# 	possible = {
+# 		custom_tooltip = { fail_text = "ap_expandable_brain_2_req_1" has_ascension_perk = ap_expandable_brain_1 }
+# 		custom_tooltip = { fail_text = "ap_expandable_brain_2_req_2" has_technology = tech_expandable_brain_1 }
+# 		custom_tooltip = { fail_text = "ap_expandable_brain_2_req_3" has_modifier = expandable_brain_2 }
+# 		custom_tooltip = { fail_text = "ap_expandable_brain_2_req_4" has_technology = tech_expandable_brain_2 }	
+# 	}
+# 	on_enabled = {
+# 		custom_tooltip = "ALLOW_LEADER_MIN_LVL_5"
+# 		custom_tooltip = "ALLOW_LEADER_MIN_TRAIT_3"
+# 		custom_tooltip = "ap_expandable_brain_2_tooltip"	
+# 		hidden_effect = { country_event = { id = UniqueAscensionPerksEvents.37 } }
+# 	}
+# 	potential = { NOT = { has_ascension_perk = ap_expandable_brain_2 } }
+# 	ai_weight = { factor = 5 }
+# }
 
 ap_ai_cortana = {
 	possible = {
@@ -342,7 +342,7 @@ ap_economic_prospertity = {
 		trade_value_mult = 0.15
 		country_energy_produces_mult = 0.05
 		country_resource_max_energy_add = 10000
-		#branch_office_value_mult = 0.75
+		branch_office_value_mult = 0.75
 	}
 	on_enabled = { 
 		custom_tooltip = "ap_economic_prospertity_tooltip"
