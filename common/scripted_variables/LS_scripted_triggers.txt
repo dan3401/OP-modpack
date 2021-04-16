@@ -1,0 +1,8 @@
+@ls_district_upkeep = 3
+@ls_district_cost = 400
+@ls_district_build_time = 500
+@ls_arco_district_upkeep = 7
+@ls_arco_district_cost = 900
+@ls_arco_district_build_time = 1000
+@ls_arco_district_upkeep_t1 = 1.5
+@ls_arco_district_upkeep_t2 = 3
